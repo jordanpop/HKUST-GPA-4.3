@@ -79,16 +79,18 @@ Notes:
 User drops PDF/PPTX → say which subject and lecture number
 
 Steps:
-1. Read `CLAUDE.md` only (do not re-read the full HTML)
-2. Open `data/{code}.json` to check existing lecture IDs (do NOT open the HTML for this)
-3. Generate notes HTML using the Notes Format below — inject as a new `<div id="notes-N">` section in the HTML file
-4. Generate exactly 30 questions using the Question Format below
-5. Edit the HTML file only to:
+1. **Scan the actual PDF structure** — read through the PDF to identify the real topics, sections, and ordering. Do NOT rely on CLAUDE.md's lecture breakdown table (it may be stale or incorrect).
+2. Confirm with user: "This PDF covers [topics in actual order], right?" — get explicit confirmation before proceeding.
+3. Open `data/{code}.json` to check existing lecture IDs (do NOT open the HTML for this)
+4. Generate notes HTML using the Notes Format below, following the PDF's actual structure exactly — inject as a new `<div id="notes-N">` section in the HTML file
+5. Generate exactly 30 questions using the Question Format below (all questions must be answerable from this lecture's PDF only)
+6. Edit the HTML file only to:
    - Add a lecture card on the home page section
    - Add a `<div id="notes-N">` block
    - Add a `<div id="quiz-N">` block
-6. Edit `data/{code}.json` to append the new lecture object (with all 30 questions) and any new topic→section mappings
-7. Ask user to approve before committing
+7. Edit `data/{code}.json` to append the new lecture object (with all 30 questions) and any new topic→section mappings
+8. Update CLAUDE.md's reference table only after confirming the PDF structure matches
+9. Ask user to approve before committing
 
 ### Case 2: Adding a new subject
 User drops PDF/PPTX for a new course.
