@@ -1196,7 +1196,7 @@ async function loadQuizData() {
 
 function initQuizStateFromLectures() {
   lectures.forEach(l => {
-    quizState[l.id] = { answered:0, correct:0, wrongQuestions:[], completed:false, choices:{}, filteredIndices:null, total:30, weakSections:[], weakTopics:[] };
+    quizState[l.id] = { answered:0, correct:0, wrongQuestions:[], completed:false, choices:{}, filteredIndices:null, total:30, weakSections:[], weakTopics:[], optionOrders:{} };
   });
 }
 
@@ -1205,7 +1205,7 @@ function saveState() {
     const out = {};
     Object.keys(quizState).forEach(k => {
       const s = quizState[k];
-      out[k] = { answered:s.answered, correct:s.correct, wrongQuestions:s.wrongQuestions, completed:s.completed, choices:s.choices, filteredIndices:s.filteredIndices, total:s.total, weakSections:s.weakSections, weakTopics:s.weakTopics };
+      out[k] = { answered:s.answered, correct:s.correct, wrongQuestions:s.wrongQuestions, completed:s.completed, choices:s.choices, filteredIndices:s.filteredIndices, total:s.total, weakSections:s.weakSections, weakTopics:s.weakTopics, optionOrders:s.optionOrders };
     });
     localStorage.setItem(STORAGE_KEY, JSON.stringify(out));
   } catch(e){ console.warn("save failed", e); }
@@ -1219,7 +1219,26 @@ function loadState() {
     Object.keys(data).forEach(k => {
       if (quizState[k]) Object.assign(quizState[k], data[k]);
     });
+    // Migration: old saved states without optionOrders → reset to avoid silent correctness errors
+    lectures.forEach(lec => {
+      const s = quizState[lec.id];
+      if (s.answered > 0 && (!s.optionOrders || Object.keys(s.optionOrders).length === 0)) {
+        resetLectureState(lec.id);
+      }
+    });
   } catch(e){ console.warn("load failed", e); }
+}
+
+function getOptionOrder(lid, qi) {
+  const state = quizState[lid];
+  if (!state.optionOrders) state.optionOrders = {};
+  if (state.optionOrders[qi]) return state.optionOrders[qi];
+  const lec = lectures.find(l => l.id === lid);
+  const n = lec.questions[qi].options.length;
+  const order = Array.from({length: n}, (_, i) => i);
+  shuffle(order);
+  state.optionOrders[qi] = order;
+  return order;
 }
 
 function resetAllProgress() {
@@ -1329,6 +1348,7 @@ function startQuiz(lid) {
     state.completed = false;
     state.weakSections = [];
     state.weakTopics = [];
+    state.optionOrders = {};
     saveState();
     const body = document.getElementById('quizbody-'+lid);
     if (body) body.dataset.rendered = "";
@@ -1341,7 +1361,7 @@ function startQuiz(lid) {
 }
 
 function resetLectureState(lid) {
-  quizState[lid] = { answered:0, correct:0, wrongQuestions:[], completed:false, choices:{}, filteredIndices:null, total:30, weakSections:[], weakTopics:[] };
+  quizState[lid] = { answered:0, correct:0, wrongQuestions:[], completed:false, choices:{}, filteredIndices:null, total:30, weakSections:[], weakTopics:[], optionOrders:{} };
   saveState();
 }
 
@@ -1418,11 +1438,13 @@ function renderQuiz(lid) {
   let h = '';
   state.filteredIndices.forEach((qi, displayIdx) => {
     const q = lec.questions[qi];
+    const order = getOptionOrder(lid, qi);
     h += '<div class="q-block reveal-on-scroll" id="q-'+lid+'-'+qi+'">';
     h += '<div class="q-num">Question ' + (displayIdx+1) + ' of ' + state.filteredIndices.length + ' <span style="margin-left:8px;padding:1px 6px;background:var(--accent-soft);border-radius:3px;font-size:.85em">'+q.difficulty+'</span></div>';
     h += '<div class="q-text">' + escapeHtml(q.q) + '</div>';
-    q.options.forEach((opt, oi) => {
-      h += '<label class="opt" id="opt-'+lid+'-'+qi+'-'+oi+'"><input type="radio" name="q-'+lid+'-'+qi+'" value="'+oi+'"> '+String.fromCharCode(65+oi)+'. '+escapeHtml(opt)+'</label>';
+    order.forEach((origIdx, displayPos) => {
+      const opt = q.options[origIdx];
+      h += '<label class="opt" id="opt-'+lid+'-'+qi+'-'+displayPos+'"><input type="radio" name="q-'+lid+'-'+qi+'" value="'+displayPos+'"> '+String.fromCharCode(65+displayPos)+'. '+escapeHtml(opt)+'</label>';
     });
     h += '<button class="btn submit-q" onclick="submitQ('+lid+','+qi+')">Submit</button>';
     h += '<div class="explain" id="exp-'+lid+'-'+qi+'" style="display:none"></div>';
@@ -1447,20 +1469,22 @@ function restoreAnswered(lid, qi) {
   const lec = lectures.find(l => l.id === lid);
   const q = lec.questions[qi];
   const chosen = state.choices[qi];
-  for (let oi=0; oi<q.options.length; oi++) {
-    const el = document.getElementById('opt-'+lid+'-'+qi+'-'+oi);
+  const order = state.optionOrders[qi] || q.options.map((_,i)=>i);
+  const correctPos = order.indexOf(q.answer);
+  for (let displayPos=0; displayPos<order.length; displayPos++) {
+    const el = document.getElementById('opt-'+lid+'-'+qi+'-'+displayPos);
     if (!el) continue;
     el.classList.add('disabled');
-    if (oi === q.answer) el.classList.add('correct');
-    if (oi === chosen && chosen !== q.answer) el.classList.add('wrong');
+    if (displayPos === correctPos) el.classList.add('correct');
+    if (displayPos === chosen && chosen !== correctPos) el.classList.add('wrong');
     const input = el.querySelector('input');
-    if (input) input.checked = (oi === chosen);
+    if (input) input.checked = (displayPos === chosen);
     if (input) input.disabled = true;
   }
   const exp = document.getElementById('exp-'+lid+'-'+qi);
   if (exp) {
     exp.style.display = 'block';
-    exp.innerHTML = '<b>'+(chosen===q.answer?"Correct.":"Incorrect.")+'</b> '+escapeHtml(q.explain);
+    exp.innerHTML = '<b>'+(chosen===correctPos?"Correct.":"Incorrect.")+'</b> '+escapeHtml(q.explain);
   }
   const btn = document.querySelector('#q-'+lid+'-'+qi+' .submit-q');
   if (btn) { btn.disabled = true; btn.textContent = 'Submitted'; }
@@ -1477,19 +1501,21 @@ function submitQ(lid, qi) {
   let chosen = -1;
   radios.forEach(r => { if (r.checked) chosen = parseInt(r.value); });
   if (chosen === -1) { alert("Please select an option."); return; }
+  const order = state.optionOrders[qi] || q.options.map((_,i)=>i);
+  const correctPos = order.indexOf(q.answer);
   state.choices[qi] = chosen;
   state.answered += 1;
-  for (let oi=0; oi<q.options.length; oi++) {
-    const el = document.getElementById('opt-'+lid+'-'+qi+'-'+oi);
+  for (let displayPos=0; displayPos<order.length; displayPos++) {
+    const el = document.getElementById('opt-'+lid+'-'+qi+'-'+displayPos);
     el.classList.add('disabled');
-    if (oi === q.answer) el.classList.add('correct');
-    if (oi === chosen && chosen !== q.answer) el.classList.add('wrong');
+    if (displayPos === correctPos) el.classList.add('correct');
+    if (displayPos === chosen && chosen !== correctPos) el.classList.add('wrong');
   }
-  if (chosen === q.answer) state.correct += 1;
+  if (chosen === correctPos) state.correct += 1;
   else state.wrongQuestions.push(qi);
   const exp = document.getElementById('exp-'+lid+'-'+qi);
   exp.style.display = 'block';
-  exp.innerHTML = '<b>'+(chosen===q.answer?"Correct.":"Incorrect.")+'</b> '+escapeHtml(q.explain);
+  exp.innerHTML = '<b>'+(chosen===correctPos?"Correct.":"Incorrect.")+'</b> '+escapeHtml(q.explain);
   const btn = document.querySelector('#q-'+lid+'-'+qi+' .submit-q');
   btn.disabled = true;
   btn.textContent = 'Submitted';
@@ -1551,15 +1577,18 @@ function renderPostQuiz(lid) {
     s.wrongQuestions.forEach((qi, idx) => {
       const q = lec.questions[qi];
       const chosen = s.choices[qi];
+      const order = s.optionOrders[qi] || q.options.map((_,i)=>i);
+      const correctPos = order.indexOf(q.answer);
       const delay = ['','reveal-delay-1','reveal-delay-2','reveal-delay-3'][idx%4];
       h += '<div class="review-card reveal-on-scroll '+delay+'">';
       h += '<div class="q-num">Question '+(qi+1)+'</div>';
       h += '<div class="q-text">'+escapeHtml(q.q)+'</div>';
-      q.options.forEach((opt, oi) => {
+      order.forEach((origIdx, displayPos) => {
+        const opt = q.options[origIdx];
         let cls = "opt disabled";
-        if (oi === q.answer) cls += " correct";
-        if (oi === chosen && chosen !== q.answer) cls += " wrong";
-        h += '<div class="'+cls+'">'+String.fromCharCode(65+oi)+'. '+escapeHtml(opt)+'</div>';
+        if (displayPos === correctPos) cls += " correct";
+        if (displayPos === chosen && chosen !== correctPos) cls += " wrong";
+        h += '<div class="'+cls+'">'+String.fromCharCode(65+displayPos)+'. '+escapeHtml(opt)+'</div>';
       });
       h += '<div class="explain"><b>Explanation:</b> '+escapeHtml(q.explain)+'</div>';
       h += '</div>';
@@ -1654,7 +1683,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ===== PWA Service Worker (inline via Blob) =====
 if ('serviceWorker' in navigator) {
   const swCode = `
-    const CACHE = 'endo-study-v3';
+    const CACHE = 'endo-study-v4';
     self.addEventListener('install', e => { self.skipWaiting(); });
     self.addEventListener('activate', e => { e.waitUntil(self.clients.claim()); });
     self.addEventListener('fetch', e => {
