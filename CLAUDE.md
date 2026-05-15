@@ -180,8 +180,8 @@ Already implemented in all subject files as `buildBalancedSet(lid, count)`. Dist
 | 3040.html | `endoQuizState` | `data/3040.json` (`storageKey`) |
 | 2921.html | `huma2921_quiz_state` | `data/2921.json` (`storageKey`) |
 
-## Service Worker (3040.html only)
-3040.html registers an inline service worker that caches all GET fetches (including `data/3040.json`). When data changes, bump the `CACHE` constant (e.g. `endo-study-v2` → `endo-study-v3`) so old caches are invalidated on next reload.
+## Service Worker (all subject HTML files)
+Every subject HTML registers an inline service worker that caches all GET fetches (including the subject's JSON). When data changes, bump the `CACHE` constant (e.g. `huma2921-v1` → `huma2921-v2`) so old caches are invalidated on next reload. Cache name format: `{subject-slug}-v{N}`. Template already includes this block — new subjects get it automatically.
 
 ## CSS Variables (never change)
 `--bg, --paper, --ink, --muted, --accent, --accent-soft, --wrong, --wrong-soft, --border`
