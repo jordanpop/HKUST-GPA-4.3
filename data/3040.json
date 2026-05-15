@@ -1,0 +1,2041 @@
+{
+  "storageKey": "endoQuizState",
+  "lectures": [
+    {
+      "id": 6,
+      "title": "Lecture 6: GI Physiology I \u2014 Overview & Upper GI",
+      "questions": [
+        {
+          "q": "Which of the following is NOT a function of the digestive system?",
+          "options": [
+            "Ingestion of food",
+            "Chemical digestion of proteins",
+            "Synthesis of digestive enzymes",
+            "Absorption of nutrients"
+          ],
+          "answer": 2,
+          "topic": "basic-concepts",
+          "explain": "The digestive system ingests, digests, and absorbs nutrients. Synthesis of enzymes occurs in the pancreas and salivary glands, but the system itself does not synthesize\u2014it secretes pre-made enzymes.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which type of digestion is primarily responsible for reducing the number of molecules?",
+          "options": [
+            "Mechanical digestion",
+            "Enzymatic digestion",
+            "Mixing digestion",
+            "Segmentation"
+          ],
+          "answer": 1,
+          "topic": "basic-concepts",
+          "explain": "Chemical (enzymatic) digestion breaks large molecules into smaller ones. Mechanical digestion prepares food for enzyme action but does not reduce the number of molecules.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which nutrient type is primarily broken down into monosaccharides in the digestive system?",
+          "options": [
+            "Proteins",
+            "Carbohydrates",
+            "Lipids",
+            "Nucleic acids"
+          ],
+          "answer": 1,
+          "topic": "nutrient-classes",
+          "explain": "Carbohydrates are hydrolyzed into monosaccharides (glucose, fructose, galactose) by amylase and disaccharidases.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "What is the primary end product of protein digestion?",
+          "options": [
+            "Peptides only",
+            "Amino acids and small peptides",
+            "Polypeptides",
+            "Triglycerides"
+          ],
+          "answer": 1,
+          "topic": "nutrient-classes",
+          "explain": "Proteases break proteins into amino acids and small peptides for absorption. Complete digestion yields amino acids; partial digestion yields peptides.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "The four main layers of the GI tract wall, from innermost to outermost, are:",
+          "options": [
+            "Serosa, muscularis, submucosa, mucosa",
+            "Mucosa, submucosa, muscularis, serosa",
+            "Mucosa, muscularis, submucosa, serosa",
+            "Submucosa, mucosa, serosa, muscularis"
+          ],
+          "answer": 1,
+          "topic": "gi-wall-structure",
+          "explain": "From innermost to outermost: mucosa (secretion/absorption), submucosa (connective tissue and vessels), muscularis (smooth muscle), serosa (outer covering).",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which structure of the mouth is primarily responsible for manipulating the food bolus during chewing?",
+          "options": [
+            "Teeth",
+            "Tongue",
+            "Salivary glands",
+            "Hard palate"
+          ],
+          "answer": 1,
+          "topic": "mouth-function",
+          "explain": "Teeth mechanically break food; the tongue manipulates and moves the bolus, preparing it for swallowing.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Salivary amylase begins starch digestion, but pancreatic amylase is responsible for most starch hydrolysis. Why is this the case?",
+          "options": [
+            "Salivary amylase is denatured in the stomach",
+            "Pancreatic amylase is much more efficient",
+            "Salivary amylase acts for only a short time in the mouth and early esophagus",
+            "Pancreatic amylase is activated by gastric juice"
+          ],
+          "answer": 2,
+          "topic": "secretion-volumes",
+          "explain": "Salivary amylase functions only briefly\u2014about 5\u201310 minutes in the mouth and early esophagus before being inactivated by gastric acid. Pancreatic amylase in the small intestine (pH 7\u20138, optimal for amylase) handles the majority of starch digestion.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following is the CORRECT match between a GI secretion and its primary source?",
+          "options": [
+            "Bile acid: pancreas",
+            "Pepsinogen: salivary glands",
+            "Pancreatic amylase: stomach",
+            "Mucus: stomach and salivary glands"
+          ],
+          "answer": 3,
+          "topic": "secretion-volumes",
+          "explain": "Bile is from the liver, pepsinogen from the stomach's chief cells, pancreatic amylase from the pancreas, and mucus is secreted by salivary glands and stomach mucous cells.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "The total daily GI secretion is 7\u201310 liters, yet fecal water loss is only ~100 mL/day. Which of the following explains this?",
+          "options": [
+            "Most water is lost through urine",
+            "The small intestine and colon reabsorb ~99% of secreted water",
+            "Water is not actually secreted in large amounts",
+            "Most water evaporates in the stomach"
+          ],
+          "answer": 1,
+          "topic": "secretion-volumes",
+          "explain": "Despite large secretion, the small intestine and colon reabsorb most water passively following active ion absorption, leaving only ~100 mL in feces.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following best describes peristalsis?",
+          "options": [
+            "Rhythmic local constrictions that mix food without net forward movement",
+            "Coordinated waves of muscular contraction that propel food forward",
+            "Churning motion confined to the stomach",
+            "Random muscular contractions of the esophagus"
+          ],
+          "answer": 1,
+          "topic": "motility-types",
+          "explain": "Peristalsis is a coordinated wave propelling food forward. Segmentation (rhythmic local constrictions) mixes without net forward movement\u2014they are distinct.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which region of the small intestine is the shortest?",
+          "options": [
+            "Duodenum",
+            "Jejunum",
+            "Ileum",
+            "Pylorus"
+          ],
+          "answer": 0,
+          "topic": "small-intestine-anatomy",
+          "explain": "The duodenum is ~26 cm (5% of small intestine length); jejunum is ~2.5 m (40%); ileum is ~3.5 m (55%).",
+          "difficulty": "easy"
+        },
+        {
+          "q": "The gross surface area of the small intestine is approximately 0.33 m\u00b2. Which adaptations amplify this to ~200 m\u00b2?",
+          "options": [
+            "Circular folds only",
+            "Villi only",
+            "Microvilli only",
+            "Circular folds, villi, and microvilli together"
+          ],
+          "answer": 3,
+          "topic": "surface-area",
+          "explain": "All three levels of structure (circular folds, villi, microvilli) contribute to a ~600-fold amplification of surface area.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following is an example of secondary active transport (cotransport) in the small intestine?",
+          "options": [
+            "Glucose via GLUT2 at the basolateral membrane",
+            "Glucose via SGLT1 (Na+ glucose symporter) at the apical membrane",
+            "Fructose via GLUT5 at the apical membrane",
+            "Water via aquaporins"
+          ],
+          "answer": 1,
+          "topic": "absorption-mechanisms",
+          "explain": "SGLT1 is a Na+-coupled glucose symporter (secondary active transport, using the Na+ gradient created by the Na+/K+ ATPase). GLUT2 and GLUT5 are facilitated diffusion; aquaporins are passive.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Amino acids are absorbed primarily via:",
+          "options": [
+            "Simple diffusion down their concentration gradient",
+            "Active transport similar to glucose",
+            "Passive channels",
+            "Paracellular transport between cells"
+          ],
+          "answer": 1,
+          "topic": "absorption-mechanisms",
+          "explain": "Amino acids cross the apical membrane via active transport mechanisms coupled to Na+ entry, similar to glucose absorption.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In fat absorption, why is lipid re-esterification in the epithelial cell important?",
+          "options": [
+            "To store energy for the epithelial cell",
+            "To increase the lipid's solubility for transport into chylomicrons and lacteals",
+            "To prevent fat malabsorption",
+            "To slow down digestion"
+          ],
+          "answer": 1,
+          "topic": "fat-absorption",
+          "explain": "Pancreatic lipase breaks triglycerides down to monoglycerides and fatty acids (hydrophilic). Re-esterification in the epithelial cell converts them back to triglycerides (hydrophobic), allowing packaging into chylomicrons for lymphatic transport.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Chylomicrons enter the bloodstream via:",
+          "options": [
+            "Blood capillaries in the intestinal villi",
+            "Lacteals (lymphatic vessels) in the villi",
+            "The portal vein directly",
+            "Paracellular transport"
+          ],
+          "answer": 1,
+          "topic": "fat-absorption",
+          "explain": "Fats packaged in chylomicrons enter lacteals (lymph), not blood capillaries initially\u2014they bypass first-pass hepatic metabolism.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following is NOT a function of the colon?",
+          "options": [
+            "Reabsorption of water and electrolytes",
+            "Fermentation of undigested carbohydrates by bacteria",
+            "Production of short-chain fatty acids for energy",
+            "Digestion of proteins into amino acids"
+          ],
+          "answer": 3,
+          "topic": "large-intestine",
+          "explain": "The colon absorbs water and electrolytes, hosts bacterial fermentation, and bacteria produce SCFAs. Protein digestion is complete in the small intestine.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "The bacterial flora of the colon produce short-chain fatty acids (SCFAs) from:",
+          "options": [
+            "Proteins",
+            "Undigested carbohydrates",
+            "Fats",
+            "Nucleic acids"
+          ],
+          "answer": 1,
+          "topic": "large-intestine",
+          "explain": "Bacterial fermentation of undigested carbohydrates produces SCFAs (acetate, butyrate, propionate), which are absorbed as an energy source.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which of the following is a reason the pancreatic enzymes are secreted as inactive zymogens?",
+          "options": [
+            "To prevent self-digestion of the pancreatic tissue",
+            "To allow for better absorption in the small intestine",
+            "To reduce the osmotic load in the pancreatic ducts",
+            "To increase enzyme specificity"
+          ],
+          "answer": 0,
+          "topic": "pancreas-role",
+          "explain": "Zymogens (inactive enzyme precursors) prevent the pancreas from digesting itself. They are activated in the duodenum by enterokinase and other proteases.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which segment of the small intestine is specialized for vitamin B12 absorption?",
+          "options": [
+            "Duodenum",
+            "Jejunum",
+            "Ileum",
+            "All segments equally"
+          ],
+          "answer": 2,
+          "topic": "small-intestine-anatomy",
+          "explain": "The ileum has specific receptors for the intrinsic factor\u2013B12 complex, enabling B12 absorption in this distal region.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "The major sites of nutrient absorption in the small intestine are:",
+          "options": [
+            "Duodenum only",
+            "Duodenum and jejunum only",
+            "Jejunum and ileum",
+            "Distributed equally across all three segments"
+          ],
+          "answer": 2,
+          "topic": "small-intestine-anatomy",
+          "explain": "The duodenum is primarily for neutralization and enzyme entry. The jejunum and ileum are the major absorption sites.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following correctly describes the movement of ions and water in the colon?",
+          "options": [
+            "Water is actively transported; ions follow passively",
+            "Ions are actively reabsorbed; water follows passively via osmosis",
+            "Both are actively transported",
+            "Both move passively via simple diffusion"
+          ],
+          "answer": 1,
+          "topic": "large-intestine",
+          "explain": "Active Na+ and Cl- reabsorption in the colon creates an osmotic gradient, driving passive water reabsorption.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Bile salts are essential for fat absorption because they:",
+          "options": [
+            "Hydrolyze triglycerides into fatty acids and glycerol",
+            "Break down cholesterol",
+            "Emulsify fats and form micelles",
+            "Activate pancreatic lipase"
+          ],
+          "answer": 2,
+          "topic": "bile-role",
+          "explain": "Bile salts emulsify fats into small droplets and form micelles with lipid digestion products, facilitating their approach to the brush border for absorption.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "A patient with impaired bile production would have difficulty absorbing:",
+          "options": [
+            "Carbohydrates and amino acids",
+            "Water-soluble vitamins",
+            "Fat-soluble vitamins (A, D, E, K) and lipids",
+            "Minerals like calcium and iron"
+          ],
+          "answer": 2,
+          "topic": "bile-role",
+          "explain": "Bile is essential for fat and fat-soluble vitamin absorption. Carbohydrates, amino acids, and water-soluble vitamins are unaffected by bile deficiency.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following is a correct sequence of carbohydrate digestion and absorption?",
+          "options": [
+            "Disaccharides \u2192 monosaccharides \u2192 absorbed via SGLT1 and GLUT5 \u2192 GLUT2 at basolateral side",
+            "Polysaccharides \u2192 amylase breaks to oligosaccharides \u2192 disaccharidases break to monosaccharides \u2192 absorption",
+            "Starches \u2192 glucose \u2192 absorbed in stomach \u2192 enters blood",
+            "Fructose \u2192 glucose \u2192 absorbed via SGLT1 \u2192 GLUT2"
+          ],
+          "answer": 1,
+          "topic": "absorption-mechanisms",
+          "explain": "Amylase breaks polysaccharides to oligosaccharides; brush-border disaccharidases complete hydrolysis to monosaccharides for absorption.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Exam-style: In a patient with pancreatic insufficiency (low enzyme secretion), which nutrient would be most severely malabsorbed?",
+          "options": [
+            "Carbohydrates (due to low amylase)",
+            "Amino acids (due to low proteases)",
+            "Fats (due to low lipase)",
+            "Water (due to low fluid secretion)"
+          ],
+          "answer": 2,
+          "topic": "pancreas-role",
+          "explain": "Although all are affected, fats are most severely affected because pancreatic lipase is the primary fat-digesting enzyme, and bile salts alone cannot accomplish hydrolysis.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following is a major difference between the duodenum and the jejunum?",
+          "options": [
+            "The duodenum is longer than the jejunum",
+            "The duodenum receives pancreatic and biliary secretions; the jejunum does not",
+            "The jejunum is where most nutrient absorption occurs",
+            "The duodenum has more villi than the jejunum"
+          ],
+          "answer": 2,
+          "topic": "small-intestine-anatomy",
+          "explain": "While the duodenum receives and processes secretions from pancreas and liver, the jejunum and ileum are the major sites of nutrient absorption. The duodenum is actually shorter.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following best describes the relationship between digestion and absorption?",
+          "options": [
+            "Digestion and absorption occur simultaneously",
+            "Digestion must occur before absorption can happen",
+            "Absorption can occur without digestion",
+            "They are independent processes"
+          ],
+          "answer": 1,
+          "topic": "absorption-intro",
+          "explain": "Absorption requires molecules to be reduced to absorbable size via digestion first.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "The esophagus contributes to digestion by:",
+          "options": [
+            "Secreting enzymes",
+            "Continuing starch digestion with salivary amylase",
+            "Serving as a conduit for food transport",
+            "Absorbing small peptides"
+          ],
+          "answer": 2,
+          "topic": "gi-wall-structure",
+          "explain": "The esophagus has no significant secretion, digestion, or absorption\u2014its role is purely mechanical transport of food.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which ion is reabsorbed in the large intestine, creating the osmotic gradient that draws water with it?",
+          "options": [
+            "Potassium",
+            "Sodium",
+            "Calcium",
+            "Magnesium"
+          ],
+          "answer": 1,
+          "topic": "large-intestine",
+          "explain": "Active reabsorption of Na+ (and Cl\u2212) in the colon creates an osmotic gradient that drives passive water reabsorption.",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Lecture 7: GI Physiology II \u2014 Small Intestine & Absorption",
+      "questions": [
+        {
+          "q": "Which of the following is a PRIMARY function of saliva?",
+          "options": [
+            "Protein digestion",
+            "Fat digestion",
+            "Starch digestion and lubrication",
+            "Calcium absorption"
+          ],
+          "answer": 2,
+          "topic": "saliva-roles",
+          "explain": "Salivary amylase breaks down starch, and water and mucus lubricate the mouth and food for swallowing and taste.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Salivary amylase is inactivated in the stomach primarily due to:",
+          "options": [
+            "Enzymes from the pancreas",
+            "Low pH (acidic environment)",
+            "Proteolysis by pepsin",
+            "Lack of substrate (starch) in the stomach"
+          ],
+          "answer": 1,
+          "topic": "saliva-roles",
+          "explain": "Salivary amylase has an optimal pH of ~6\u20137 and is denatured by stomach HCl (pH 1\u20133).",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Serous cells and mucous cells in salivary glands produce, respectively:",
+          "options": [
+            "Mucus and enzymes",
+            "Watery secretion with enzymes and viscous mucus",
+            "Only saliva without distinction",
+            "Enzymes and ions"
+          ],
+          "answer": 1,
+          "topic": "mouth-function",
+          "explain": "Serous cells secrete watery, enzyme-rich fluid; mucous cells secrete mucins that mix with serous secretion to form saliva.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which antibacterial component of saliva is particularly important for preventing tooth decay?",
+          "options": [
+            "Lysozyme and peroxidase",
+            "Defensins",
+            "Salivary amylase",
+            "Mucins"
+          ],
+          "answer": 0,
+          "topic": "saliva-roles",
+          "explain": "Lysozyme and peroxidase are antimicrobial proteins in saliva. Saliva's alkalinity also neutralizes oral acids from bacteria and acid reflux.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "The epiglottis during swallowing serves to:",
+          "options": [
+            "Increase saliva production",
+            "Seal the nasopharynx",
+            "Protect the airway by covering the tracheal opening",
+            "Propel food into the esophagus"
+          ],
+          "answer": 2,
+          "topic": "swallowing",
+          "explain": "The epiglottis folds down to protect the trachea during swallowing, preventing aspiration. The soft palate seals the nasopharynx.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "The upper esophageal sphincter is controlled by:",
+          "options": [
+            "Parasympathetic nervous system (involuntary)",
+            "Sympathetic nervous system",
+            "Skeletal (voluntary) muscle via the vagus nerve",
+            "The swallowing reflex only"
+          ],
+          "answer": 2,
+          "topic": "swallowing",
+          "explain": "The upper esophageal sphincter is skeletal muscle and can be voluntarily relaxed during swallowing via the vagus nerve, though swallowing is primarily a reflex.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which cells of the stomach secrete hydrochloric acid?",
+          "options": [
+            "Chief cells",
+            "Parietal cells",
+            "Mucous cells",
+            "G cells"
+          ],
+          "answer": 1,
+          "topic": "stomach-secretions",
+          "explain": "Parietal cells secrete HCl and intrinsic factor. Chief cells secrete pepsinogen.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Pepsinogen is activated to pepsin by:",
+          "options": [
+            "Bicarbonate from the pancreas",
+            "Hydrochloric acid in the stomach",
+            "Gastrin from G cells",
+            "Enterokinase in the duodenum"
+          ],
+          "answer": 1,
+          "topic": "stomach-secretions",
+          "explain": "HCl in the stomach lowers pH to ~1.5\u20132, which activates pepsinogen by autoproteolysis (self-cleavage) to pepsin. This is a classic two-stage activation.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the PRIMARY substrate and product of gastric lipase?",
+          "options": [
+            "Starch \u2192 glucose",
+            "Proteins \u2192 peptides",
+            "Triglycerides \u2192 fatty acids and glycerol",
+            "Triglycerides \u2192 2-monoglycerides and fatty acids"
+          ],
+          "answer": 3,
+          "topic": "gastric-digestion",
+          "explain": "Gastric lipase is a mild lipase that partially digests triglycerides to 2-monoglycerides and fatty acids in the stomach. However, it accounts for only ~10\u201330% of total fat digestion.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following correctly ranks the contribution of different amylases to total starch digestion?",
+          "options": [
+            "Salivary >> pancreatic",
+            "Pancreatic >> salivary",
+            "Salivary = pancreatic",
+            "Stomach amylase is the major contributor"
+          ],
+          "answer": 1,
+          "topic": "saliva-roles",
+          "explain": "Salivary amylase contributes ~5\u201310% of total starch digestion; pancreatic amylase in the optimal pH environment of the small intestine handles ~90%.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "The pyloric sphincter regulates:",
+          "options": [
+            "The entry of food into the mouth",
+            "The rate at which chyme enters the small intestine",
+            "The entry of pancreatic juice into the stomach",
+            "The movement of food through the esophagus"
+          ],
+          "answer": 1,
+          "topic": "stomach-anatomy",
+          "explain": "The pyloric sphincter controls gastric emptying, regulating the rate of chyme entry into the duodenum based on duodenal hormonal and neural signals.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Intrinsic factor, secreted by parietal cells, is essential for:",
+          "options": [
+            "Protein digestion",
+            "Vitamin B12 absorption in the ileum",
+            "Gastric acid production",
+            "Mucus protection"
+          ],
+          "answer": 1,
+          "topic": "stomach-secretions",
+          "explain": "Intrinsic factor is a glycoprotein that binds B12 in the stomach, protecting it from degradation and enabling absorption in the ileum.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which hormone is primarily responsible for stimulating gastric secretion?",
+          "options": [
+            "Secretin",
+            "Cholecystokinin (CCK)",
+            "Gastrin",
+            "Motilin"
+          ],
+          "answer": 2,
+          "topic": "gastric-digestion",
+          "explain": "Gastrin, released by G cells in response to food (especially protein), stimulates gastric acid and pepsinogen secretion.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "The three main layers of muscle in the stomach wall are:",
+          "options": [
+            "Longitudinal, circular, oblique",
+            "Circular, radial, longitudinal",
+            "Superficial, middle, deep",
+            "Peristaltic, segmental, tonic"
+          ],
+          "answer": 0,
+          "topic": "stomach-anatomy",
+          "explain": "The stomach wall has three muscle layers: longitudinal (outer), circular (middle), and oblique (inner), enabling thorough churning and mixing.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following is the correct match between a pancreatic enzyme (as a zymogen) and its main substrate?",
+          "options": [
+            "Trypsinogen \u2192 starch",
+            "Chymotrypsinogen \u2192 proteins",
+            "Procarboxypeptidase \u2192 lipids",
+            "Pancreatic amylase \u2192 proteins"
+          ],
+          "answer": 1,
+          "topic": "pancreas-role",
+          "explain": "Chymotrypsinogen is activated to chymotrypsin, a protease. Trypsinogen \u2192 trypsin (protease); pancreatic amylase (carbohydrate); lipase (fats).",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Bile salts are produced by:",
+          "options": [
+            "The pancreas",
+            "The liver",
+            "The gallbladder",
+            "The duodenum"
+          ],
+          "answer": 1,
+          "topic": "bile-role",
+          "explain": "The liver synthesizes bile salts from cholesterol. The gallbladder stores and concentrates bile but does not produce it.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which of the following correctly describes the composition of gastric juice?",
+          "options": [
+            "Water, electrolytes, pepsinogen, and lipase",
+            "Water, electrolytes, HCl, pepsinogen, and gastric lipase",
+            "Water, electrolytes, HCl, and amylase",
+            "Purely hydrochloric acid"
+          ],
+          "answer": 1,
+          "topic": "stomach-secretions",
+          "explain": "Gastric juice contains water, electrolytes, HCl (from parietal cells), pepsinogen (from chief cells), and gastric lipase (from chief cells).",
+          "difficulty": "medium"
+        },
+        {
+          "q": "A patient with pernicious anemia has a deficiency of:",
+          "options": [
+            "Vitamin C",
+            "Vitamin B12 (due to lack of intrinsic factor)",
+            "Iron (due to low HCl)",
+            "Vitamin A"
+          ],
+          "answer": 1,
+          "topic": "stomach-secretions",
+          "explain": "Pernicious anemia results from lack of intrinsic factor (often due to autoimmune destruction of parietal cells), preventing B12 absorption.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "The pH of gastric juice is approximately:",
+          "options": [
+            "6\u20137 (neutral)",
+            "3\u20135 (moderately acidic)",
+            "1\u20133 (highly acidic)",
+            "8\u20139 (alkaline)"
+          ],
+          "answer": 2,
+          "topic": "stomach-secretions",
+          "explain": "Gastric juice has a pH of 1\u20133 due to high HCl concentration, creating an acidic environment for pepsin (optimal pH ~1.5\u20132) and protein denaturation.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which of the following is the PRIMARY reason the stomach must secrete mucus?",
+          "options": [
+            "To aid in enzyme synthesis",
+            "To protect the stomach lining from HCl and pepsin",
+            "To increase nutrient absorption",
+            "To regulate gastric motility"
+          ],
+          "answer": 1,
+          "topic": "stomach-secretions",
+          "explain": "Mucus, secreted by mucous cells and mixed with bicarbonate from parietal cells, forms a protective layer preventing autodigestion of the stomach wall.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Gastric emptying is accelerated by high-protein meals but slowed by fatty or acidic meals. This is controlled by:",
+          "options": [
+            "The pyloric sphincter only",
+            "Duodenal hormones (CCK, secretin) and neural signals",
+            "Gastrin release",
+            "Salivary reflex"
+          ],
+          "answer": 1,
+          "topic": "gastric-digestion",
+          "explain": "The duodenum senses chyme composition and releases hormones (CCK delays emptying when fats are present; secretin when pH is low) and sends neural signals to regulate pyloric sphincter opening.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "If pancreatic juice did not contain bicarbonate, which of the following would most likely occur?",
+          "options": [
+            "Fat digestion would be impaired",
+            "Protein digestion would be enhanced",
+            "Pepsin would continue digesting proteins in the small intestine",
+            "Vitamin absorption would increase"
+          ],
+          "answer": 2,
+          "topic": "pancreas-role",
+          "explain": "Bicarbonate neutralizes stomach acid, raising duodenal pH. Without it, acidic chyme would inactivate pancreatic enzymes and pepsin would continue (wrongly) digesting in the small intestine.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "The major difference between bile salts and pancreatic lipase is that:",
+          "options": [
+            "Bile salts are enzymes; lipase is not",
+            "Lipase hydrolyzes fats; bile salts emulsify them",
+            "Bile salts are produced by the pancreas; lipase by the liver",
+            "Lipase works in the stomach; bile salts in the small intestine"
+          ],
+          "answer": 1,
+          "topic": "bile-role",
+          "explain": "Lipase is an enzyme that catalyzes hydrolysis; bile salts are not enzymes but emulsify fats (increase surface area for lipase action). Both are essential but work via different mechanisms.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Exam-style: A patient has a gallbladder removed. What is the most likely consequence?",
+          "options": [
+            "Immediate loss of bile production",
+            "Continuous slow release of bile rather than meal-stimulated release; modest fat absorption impairment",
+            "Complete inability to absorb fats",
+            "Increased protein digestion"
+          ],
+          "answer": 1,
+          "topic": "bile-role",
+          "explain": "Bile is still produced by the liver but cannot be concentrated in the gallbladder. Bile enters the intestine continuously rather than in meal-triggered surges, reducing but not eliminating fat absorption efficiency.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following is an example of a protease enzyme secreted by the pancreas?",
+          "options": [
+            "Salivary amylase",
+            "Trypsin (from trypsinogen)",
+            "Gastric lipase",
+            "Sucrase"
+          ],
+          "answer": 1,
+          "topic": "pancreas-role",
+          "explain": "Trypsin, activated from trypsinogen in the duodenum, is a major protease. Salivary amylase and sucrase are from other sources; gastric lipase is a lipase.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Chief cells of the stomach secrete pepsinogen. What activates pepsinogen to the active enzyme pepsin?",
+          "options": [
+            "Gastrin from G cells",
+            "Secretin from the duodenum",
+            "HCl in the stomach",
+            "Enterokinase"
+          ],
+          "answer": 2,
+          "topic": "stomach-secretions",
+          "explain": "HCl lowers pH to ~1.5\u20132, causing pepsinogen to undergo autoproteolysis (self-cleavage) to form pepsin.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "The swallowing reflex involves coordination between all of the following EXCEPT:",
+          "options": [
+            "Pharynx",
+            "Esophagus",
+            "Stomach",
+            "Soft palate"
+          ],
+          "answer": 2,
+          "topic": "swallowing",
+          "explain": "Swallowing involves pharynx (propulsion), esophagus (transit), and soft palate (nasopharynx sealing). The stomach is not involved in the swallowing reflex.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Why does the stomach need to produce gastric lipase if pancreatic lipase will eventually digest the fat?",
+          "options": [
+            "Gastric lipase is more efficient",
+            "Gastric lipase begins fat digestion in the acidic stomach; pancreatic lipase continues in the small intestine",
+            "Pancreatic lipase cannot function without gastric lipase",
+            "They have different substrates"
+          ],
+          "answer": 1,
+          "topic": "gastric-digestion",
+          "explain": "Gastric lipase (optimal at pH 3\u20136) initiates fat digestion in the stomach. Pancreatic lipase (optimal pH 7\u20138) continues in the small intestine.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Exam-style: A patient takes an antacid that neutralizes stomach acid. What would be the immediate consequence?",
+          "options": [
+            "All digestion would stop",
+            "Pepsinogen would not be activated to pepsin; protein digestion in the stomach would be impaired",
+            "Pancreatic juice would not be secreted",
+            "Bile would not be released"
+          ],
+          "answer": 1,
+          "topic": "stomach-secretions",
+          "explain": "Pepsinogen activation requires HCl. Neutralizing acid prevents pepsin formation and gastric protein digestion.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following is the correct sequence of pancreatic protease activation?",
+          "options": [
+            "Trypsinogen \u2192 trypsin \u2192 chymotrypsinogen \u2192 chymotrypsin \u2192 carboxypeptidase A",
+            "Pepsinogen \u2192 pepsin \u2192 trypsinogen \u2192 trypsin",
+            "Carboxypeptidase \u2192 procarboxypeptidase \u2192 trypsin",
+            "Enterokinase \u2192 trypsinogen \u2192 pepsin"
+          ],
+          "answer": 0,
+          "topic": "pancreas-role",
+          "explain": "Enterokinase (duodenal) activates trypsinogen to trypsin; trypsin then activates chymotrypsinogen and procarboxypeptidases.",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Lecture 8: GI Physiology III \u2014 Large Intestine, Liver & Pancreas",
+      "questions": [
+        {
+          "q": "Absorption differs from digestion in that absorption:",
+          "options": [
+            "Breaks large molecules into small ones",
+            "Moves digested molecules across the intestinal epithelium into blood/lymph",
+            "Occurs only in the stomach",
+            "Requires mechanical action only"
+          ],
+          "answer": 1,
+          "topic": "absorption-intro",
+          "explain": "Digestion breaks molecules down; absorption moves the products across the epithelium into circulation. Absorption requires prior digestion.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which of the following is the PRIMARY site of nutrient absorption?",
+          "options": [
+            "Stomach",
+            "Small intestine",
+            "Large intestine",
+            "Esophagus"
+          ],
+          "answer": 1,
+          "topic": "absorption-intro",
+          "explain": "The small intestine is the major site of nutrient absorption. The large intestine absorbs mainly water and electrolytes.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "The duodenum accounts for approximately ______ % of the small intestine's total length but is where ______ begins.",
+          "options": [
+            "5; most nutrient absorption",
+            "5; neutralization and enzyme entry",
+            "40; major nutrient absorption",
+            "55; water reabsorption"
+          ],
+          "answer": 1,
+          "topic": "small-intestine-anatomy",
+          "explain": "The duodenum is ~5% of small intestine length and is where gastric acid is neutralized and pancreatic/biliary secretions enter; nutrient absorption is minimal here.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "How long does chyme typically take to transit the entire small intestine?",
+          "options": [
+            "<30 minutes",
+            "2\u20134 hours",
+            "8\u201312 hours",
+            "24 hours"
+          ],
+          "answer": 1,
+          "topic": "small-intestine-anatomy",
+          "explain": "Chyme transit time through the small intestine is typically 2\u20134 hours, allowing time for digestion and absorption.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Circular folds (plicae circulares) in the small intestine are composed of:",
+          "options": [
+            "Mucosa and muscularis layers",
+            "Mucosa and submucosa layers",
+            "Submucosa and muscularis layers",
+            "Serosa only"
+          ],
+          "answer": 1,
+          "topic": "surface-area",
+          "explain": "Circular folds are ridges of mucosa and submucosa; villi are mucosal projections only; microvilli are on epithelial cell surfaces.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "If the gross surface area of the small intestine is ~0.33 m\u00b2, what is the true absorptive surface area after accounting for folds, villi, and microvilli?",
+          "options": [
+            "~3 m\u00b2",
+            "~33 m\u00b2",
+            "~180\u2013200 m\u00b2 (tennis court-sized)",
+            "~2000 m\u00b2"
+          ],
+          "answer": 2,
+          "topic": "surface-area",
+          "explain": "Circular folds, villi, and microvilli amplify surface area ~600-fold, increasing it from 0.33 m\u00b2 to ~180\u2013200 m\u00b2.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which nutrient is absorbed primarily via active transport at the apical membrane?",
+          "options": [
+            "Fructose",
+            "Fatty acids",
+            "Glucose (via SGLT1)",
+            "Water"
+          ],
+          "answer": 2,
+          "topic": "absorption-mechanisms",
+          "explain": "SGLT1 is a Na+-glucose symporter (secondary active transport). Fructose uses facilitated diffusion (GLUT5); fatty acids use simple diffusion.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "GLUT2, a glucose transporter at the basolateral membrane, mediates:",
+          "options": [
+            "Active transport into the cell",
+            "Exit of glucose from the epithelial cell into blood",
+            "Entry of glucose from the lumen",
+            "Absorption of fructose"
+          ],
+          "answer": 1,
+          "topic": "absorption-mechanisms",
+          "explain": "GLUT2 is a facilitated diffusion transporter at the basolateral side, allowing glucose (and fructose) to exit the epithelial cell into blood.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following is a carrier (transporter) protein, NOT a channel?",
+          "options": [
+            "K+ leak channel",
+            "Voltage-gated Na+ channel",
+            "GLUT1 (glucose transporter)",
+            "Mechanically-gated ion channel"
+          ],
+          "answer": 2,
+          "topic": "absorption-mechanisms",
+          "explain": "GLUT1 is a carrier (facilitated diffusion); the others are channels. Channels only allow passive transport; carriers mediate both passive and active transport.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Pancreatic proteases break proteins into amino acids and peptides. Which of the following is the FINAL step?",
+          "options": [
+            "Trypsin cleaves peptide bonds",
+            "Chymotrypsin cleaves peptide bonds",
+            "Brush-border peptidases (dipeptidases, tripeptidases) cleave small peptides to amino acids",
+            "Stomach pepsin completes digestion"
+          ],
+          "answer": 2,
+          "topic": "absorption-mechanisms",
+          "explain": "Pancreatic proteases generate peptides; brush-border peptidases complete hydrolysis to amino acids for absorption.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Amino acids are absorbed via:",
+          "options": [
+            "Simple diffusion down their concentration gradient",
+            "Paracellular transport only",
+            "Active transport mechanisms similar to glucose (Na+-coupled)",
+            "Passive facilitated diffusion"
+          ],
+          "answer": 2,
+          "topic": "protein-absorption",
+          "explain": "Most amino acids are absorbed via active transport coupled to Na+ entry, similar to SGLT1-mediated glucose absorption.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In fat absorption, the role of colipase is to:",
+          "options": [
+            "Emulsify lipids",
+            "Hydrolyze triglycerides",
+            "Bind to pancreatic lipase and help it act on emulsified fat droplets",
+            "Form micelles"
+          ],
+          "answer": 2,
+          "topic": "fat-absorption",
+          "explain": "Colipase is a cofactor that binds both lipase and fat droplets, positioning the enzyme properly on the emulsified fat surface for efficient hydrolysis.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Micelles are formed by:",
+          "options": [
+            "Pancreatic lipase acting on triglycerides",
+            "Bile salts surrounding lipid digestion products",
+            "Epithelial cells during lipid absorption",
+            "The liver to transport lipids"
+          ],
+          "answer": 1,
+          "topic": "fat-absorption",
+          "explain": "Bile salts aggregate around monoglycerides and fatty acids to form micelles (amphipathic structures with hydrophobic cores), facilitating their approach to the brush border.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Why are fats packaged into chylomicrons before absorption?",
+          "options": [
+            "To increase their solubility for packaging and transport",
+            "To prevent them from being re-digested by lipase",
+            "To allow absorption via simple diffusion",
+            "To slow down fat absorption"
+          ],
+          "answer": 0,
+          "topic": "fat-absorption",
+          "explain": "Fats are re-esterified in the epithelial cell (reversing lipolysis) to form chylomicrons\u2014large, lipoprotein particles that can enter lacteals and travel via lymph.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Chylomicrons enter the bloodstream via:",
+          "options": [
+            "Portal blood directly",
+            "Blood capillaries in the villi",
+            "Lacteals, which drain into the lymphatic system",
+            "The liver"
+          ],
+          "answer": 2,
+          "topic": "fat-absorption",
+          "explain": "Chylomicrons are too large for blood capillaries; they enter lacteals (lymph) and eventually reach blood via the thoracic duct, bypassing first-pass hepatic metabolism.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which vitamin is specifically absorbed in the ileum?",
+          "options": [
+            "Vitamin A",
+            "Vitamin B12",
+            "Vitamin C",
+            "Vitamin E"
+          ],
+          "answer": 1,
+          "topic": "small-intestine-anatomy",
+          "explain": "The ileum has specific receptors for intrinsic factor\u2013B12 complex, enabling B12 absorption in this region. Bile salts for fat absorption are also reabsorbed in the ileum.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "The large intestine (colon) is distinguished from the small intestine by:",
+          "options": [
+            "The presence of villi",
+            "Lack of microvilli",
+            "Wider diameter and the absence of villi",
+            "A longer length"
+          ],
+          "answer": 2,
+          "topic": "large-intestine",
+          "explain": "The colon is wider (~5\u20138 cm vs. ~4 cm for small intestine), shorter (~1.5 m total), and lacks villi (though retains microvilli). It absorbs mainly water and electrolytes.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following is reabsorbed in the large intestine?",
+          "options": [
+            "Undigested proteins",
+            "Glucose",
+            "Water and electrolytes (Na+, Cl\u2212)",
+            "Amino acids"
+          ],
+          "answer": 2,
+          "topic": "large-intestine",
+          "explain": "The colon reabsorbs water (100\u2013200 mL daily out of 7\u201310 L secreted) and electrolytes; it does not digest or absorb proteins, glucose, or amino acids.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Short-chain fatty acids (SCFAs) in the colon are produced by:",
+          "options": [
+            "Pancreatic lipase acting on dietary fats",
+            "Bacterial fermentation of undigested carbohydrates",
+            "Epithelial cells during water reabsorption",
+            "The liver as metabolic byproducts"
+          ],
+          "answer": 1,
+          "topic": "large-intestine",
+          "explain": "Colonic bacteria ferment undigested carbohydrates (fiber), producing SCFAs (acetate, butyrate, propionate), which are absorbed as an energy source.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following CANNOT be absorbed if the small intestine is severely damaged?",
+          "options": [
+            "Glucose (if digested)",
+            "Amino acids (if digested)",
+            "All nutrients requiring prior digestion",
+            "All of the above"
+          ],
+          "answer": 3,
+          "topic": "absorption-intro",
+          "explain": "Absorption requires both digestion AND an intact epithelium. Severe small intestine damage would impair absorption of all nutrients, regardless of prior digestion.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "A patient with bile acid malabsorption (due to ileal disease) would likely experience:",
+          "options": [
+            "Protein malabsorption",
+            "Fat malabsorption (steatorrhea)",
+            "Carbohydrate malabsorption",
+            "Water malabsorption"
+          ],
+          "answer": 1,
+          "topic": "bile-role",
+          "explain": "The ileum reabsorbs bile acids (~95%) for recycling. Loss of this recycling impairs bile salt-dependent fat emulsification and absorption.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "The liver's role in fat digestion is to:",
+          "options": [
+            "Produce pancreatic lipase",
+            "Synthesize and secrete bile salts",
+            "Hydrolyze triglycerides in the stomach",
+            "Transport glucose to the small intestine"
+          ],
+          "answer": 1,
+          "topic": "liver-role",
+          "explain": "The liver synthesizes bile (including bile salts) continuously; the gallbladder stores and concentrates it. Bile (not synthesized lipase) is the liver's contribution to fat digestion.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "If a patient's pancreatic enzyme secretion is severely reduced, which nutrient class would be MOST affected?",
+          "options": [
+            "Carbohydrates (due to low amylase)",
+            "Proteins (due to low proteases)",
+            "Fats (due to low lipase)",
+            "Vitamins"
+          ],
+          "answer": 2,
+          "topic": "pancreas-role",
+          "explain": "Although all macronutrients would be affected, fats depend almost entirely on pancreatic lipase; carbohydrates and proteins have some intestinal compensation. Lipase deficiency is most severe.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Exam-style: A patient with celiac disease has villous atrophy (flattening of intestinal villi). Which of the following would occur?",
+          "options": [
+            "Decreased surface area for absorption",
+            "Inability to digest gluten",
+            "Increased mucus production",
+            "Loss of pancreatic enzyme secretion"
+          ],
+          "answer": 0,
+          "topic": "surface-area",
+          "explain": "Villous atrophy dramatically reduces absorptive surface area. While the patient cannot properly tolerate gluten (triggering immune damage), the primary consequence is malabsorption due to reduced surface area.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following is correctly paired?",
+          "options": [
+            "Duodenum: major site of nutrient absorption",
+            "Jejunum: ~40% of small intestine length; major absorption",
+            "Ileum: ~26 cm long; neutralization of stomach acid",
+            "Colon: villi for nutrient absorption"
+          ],
+          "answer": 1,
+          "topic": "small-intestine-anatomy",
+          "explain": "The jejunum is ~2.5 m (~40%) and is a major absorption site. The duodenum is short (5%); the ileum is long (55%). The colon lacks villi.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "The transporters SGLT1 and GLUT5 are located on the ______ membrane of the intestinal epithelial cell.",
+          "options": [
+            "Apical (luminal)",
+            "Basolateral",
+            "Either apical or basolateral",
+            "Mitochondrial"
+          ],
+          "answer": 0,
+          "topic": "absorption-mechanisms",
+          "explain": "SGLT1 (glucose + Na+) and GLUT5 (fructose) are on the apical side, facing the lumen. GLUT2 (all three sugars) is on the basolateral side.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In the small intestine, amino acids and glucose both use Na+-coupled active transport. Why is Na+ cotransportation necessary?",
+          "options": [
+            "Na+ provides the chemical energy for transport",
+            "The Na+ gradient (high outside, low inside) drives the uphill transport of glucose/amino acids",
+            "Na+ neutralizes the negative charge of these molecules",
+            "Na+ is the primary absorptive nutrient"
+          ],
+          "answer": 1,
+          "topic": "absorption-mechanisms",
+          "explain": "The Na+/K+ ATPase maintains a steep Na+ gradient. Secondary active transporters use this gradient to drive uphill nutrient absorption.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Why is it necessary for lipids to be re-esterified in the epithelial cell AFTER being hydrolyzed by pancreatic lipase?",
+          "options": [
+            "To increase their energy content",
+            "To reduce their toxicity",
+            "To make them hydrophobic enough to be packaged into chylomicrons and enter lacteals",
+            "To prevent them from being re-digested"
+          ],
+          "answer": 2,
+          "topic": "fat-absorption",
+          "explain": "Monoglycerides and fatty acids (products of lipolysis) are hydrophilic and cannot form large particles. Re-esterification makes them hydrophobic.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "A patient with severely damaged duodenum might experience malabsorption of all nutrients. However, if only the duodenum were affected, which nutrient would be LEAST affected?",
+          "options": [
+            "Amino acids",
+            "Glucose",
+            "Fats",
+            "Vitamins"
+          ],
+          "answer": 0,
+          "topic": "small-intestine-anatomy",
+          "explain": "The jejunum and ileum can absorb amino acids and glucose. Fats require bile and lipase (duodenal entry). Duodenal damage least problematic for protein/carbs.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Exam-style: Why would a patient with Crohn's disease affecting the ileum be at high risk for vitamin B12 deficiency?",
+          "options": [
+            "The ileum is the only site of B12 absorption (via intrinsic factor\u2013B12 receptor)",
+            "B12 is synthesized in the ileum",
+            "The ileum absorbs bile acids needed for B12 absorption",
+            "The ileum produces intrinsic factor"
+          ],
+          "answer": 0,
+          "topic": "small-intestine-anatomy",
+          "explain": "The ileum has specific receptors for the intrinsic factor\u2013B12 complex. Ileal damage or resection prevents B12 absorption.",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Lecture 9: Neuroscience I \u2014 Neurons, Glia & Membrane Potentials",
+      "questions": [
+        {
+          "q": "Ion channels are distinguished from other membrane transport proteins by:",
+          "options": [
+            "They require ATP",
+            "They have very high ion flux rates (>10^6 ions/sec) and operate passively",
+            "They actively pump ions against their gradient",
+            "They are found only in neurons"
+          ],
+          "answer": 1,
+          "topic": "ion-channels",
+          "explain": "Ion channels are passive, high-flux devices (~10^6 ions/sec); they do not require ATP. This distinguishes them from active pumps and slower facilitated transporters.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following is an example of PASSIVE transport?",
+          "options": [
+            "Na+ being pumped out by Na+/K+ ATPase",
+            "Glucose entering via SGLT1 (Na+-glucose symporter)",
+            "K+ flowing through K+ leak channels",
+            "Ca2+ being pumped into the sarcoplasmic reticulum"
+          ],
+          "answer": 2,
+          "topic": "transport-basics",
+          "explain": "K+ leak through channels is passive (down the gradient, no ATP). The others: Na+/K+ ATPase is active; SGLT1 is secondary active (Na+ gradient); Ca2+ pump is active.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "The Na+/K+ ATPase pumps:",
+          "options": [
+            "3 Na+ in, 2 K+ out (uses ATP)",
+            "3 Na+ out, 2 K+ in (uses ATP)",
+            "Na+ and K+ in equal amounts",
+            "Na+ out only"
+          ],
+          "answer": 1,
+          "topic": "membrane-potential",
+          "explain": "The Na+/K+ ATPase actively pumps 3 Na+ out and 2 K+ in per ATP molecule, creating and maintaining the ion gradients that establish the resting potential.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "What is the approximate resting membrane potential in a typical neuron?",
+          "options": [
+            "+70 mV",
+            "\u201370 mV",
+            "+30 mV",
+            "0 mV"
+          ],
+          "answer": 1,
+          "topic": "membrane-potential",
+          "explain": "The resting potential is ~\u201370 mV (inside negative). This is near the K+ equilibrium potential (~\u201390 mV) but slightly less negative due to some Na+ permeability.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "The K+ equilibrium potential is ~\u201390 mV. If a neuron's resting potential is \u201370 mV (less negative), this indicates:",
+          "options": [
+            "The neuron is at K+ equilibrium",
+            "The membrane is more permeable to Na+ than K+ at rest",
+            "The cell is being hyperpolarized",
+            "The Na+/K+ ATPase has stopped working"
+          ],
+          "answer": 1,
+          "topic": "membrane-potential",
+          "explain": "If resting potential (\u201370 mV) is less negative than K+ equilibrium (\u201390 mV), it means Na+ (equilibrium ~+60 mV) is contributing\u2014the membrane is slightly permeable to Na+.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "The Nernst equation calculates:",
+          "options": [
+            "The resting membrane potential",
+            "The equilibrium potential for a single ion",
+            "The rate of ion channel opening",
+            "The ATP consumption by Na+/K+ ATPase"
+          ],
+          "answer": 1,
+          "topic": "membrane-potential",
+          "explain": "The Nernst equation gives the voltage at which diffusion and electrical forces balance for one ion (equilibrium potential). The resting potential is a weighted average of all ion equilibria.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "During the depolarization phase of an action potential:",
+          "options": [
+            "Voltage-gated K+ channels open; K+ efflux repolarizes the cell",
+            "Voltage-gated Na+ channels open; Na+ influx makes the membrane potential more positive",
+            "Hyperpolarization begins due to K+ leaving",
+            "The membrane potential reaches its most negative value"
+          ],
+          "answer": 1,
+          "topic": "action-potential",
+          "explain": "Depolarization is caused by Na+ influx opening voltage-gated Na+ channels, driving the potential toward the Na+ equilibrium (~+60 mV), often overshooting to ~+30 mV.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "The all-or-nothing principle states that:",
+          "options": [
+            "All neurons fire action potentials simultaneously",
+            "Once threshold is reached, an action potential proceeds to completion",
+            "Smaller stimuli produce smaller action potentials",
+            "The nervous system operates only if all conditions are met"
+          ],
+          "answer": 1,
+          "topic": "action-potential",
+          "explain": "Once threshold is reached, an action potential proceeds fully regardless of stimulus strength. Stronger stimuli do not produce larger potentials; they produce more frequent ones.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Sodium channel inactivation is distinct from deactivation (closure) because:",
+          "options": [
+            "Inactivation is slower than deactivation",
+            "Inactivated channels cannot open again immediately; this creates the refractory period",
+            "Inactivation only occurs in sensory neurons",
+            "Deactivation allows the channel to reopen immediately"
+          ],
+          "answer": 1,
+          "topic": "action-potential",
+          "explain": "Inactivation is a process where the channel is closed but also resistant to reopening until repolarization occurs; this creates the refractory period preventing immediate re-firing.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "During repolarization of an action potential:",
+          "options": [
+            "Na+ channels open and depolarize the cell",
+            "Na+ channels inactivate; K+ channels open; K+ efflux repolarizes the cell",
+            "Hyperpolarization begins immediately",
+            "The membrane potential stabilizes at resting level"
+          ],
+          "answer": 1,
+          "topic": "action-potential",
+          "explain": "Repolarization: Na+ channels inactivate (blocking further Na+ entry), voltage-gated K+ channels open (delayed), K+ flows out, restoring negative potential.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "The refractory period exists because:",
+          "options": [
+            "ATP is depleted",
+            "K+ channels are open",
+            "Na+ channels are inactivated and cannot reopen immediately",
+            "Neurotransmitter is depleted"
+          ],
+          "answer": 2,
+          "topic": "action-potential",
+          "explain": "During the refractory period, Na+ channels are inactivated (a state distinct from simple closure), preventing another action potential from being initiated until channels recover.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Continuous conduction (as in unmyelinated axons) is slower than saltatory conduction because:",
+          "options": [
+            "Unmyelinated axons have fewer ion channels",
+            "Each region of the entire axon must depolarize to threshold sequentially",
+            "Myelin prevents ion movement entirely",
+            "Saltatory conduction uses faster ions"
+          ],
+          "answer": 1,
+          "topic": "ap-propagation",
+          "explain": "Continuous conduction requires the entire membrane to regenerate the action potential at each step (~0.5\u20132 m/s). Saltatory conduction skips myelinated regions (~1\u2013100 m/s).",
+          "difficulty": "medium"
+        },
+        {
+          "q": "The Nodes of Ranvier are:",
+          "options": [
+            "Sites of myelin synthesis",
+            "Gaps in the myelin sheath where ion channels are concentrated",
+            "Regions of continuous myelin",
+            "Areas of the spinal cord"
+          ],
+          "answer": 1,
+          "topic": "ap-propagation",
+          "explain": "Nodes are unmyelinated gaps between myelin segments where Na+ and K+ channels cluster, enabling saltatory conduction (jumping between nodes).",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Saltatory conduction is more energy-efficient than continuous conduction because:",
+          "options": [
+            "It uses less ATP",
+            "Fewer regions need to regenerate the action potential, so fewer ions must be pumped back by Na+/K+ ATPase",
+            "Myelin prevents ion leakage",
+            "Saltatory axons do not fire action potentials"
+          ],
+          "answer": 1,
+          "topic": "ap-propagation",
+          "explain": "Saltatory conduction depolarizes only at nodes; continuous conduction depolarizes the entire membrane. Less ion flow means less work for the Na+/K+ ATPase to restore gradients.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "In the PNS, myelin is produced by:",
+          "options": [
+            "Oligodendrocytes",
+            "Astrocytes",
+            "Schwann cells",
+            "Microglia"
+          ],
+          "answer": 2,
+          "topic": "neuron-structure",
+          "explain": "In the PNS, Schwann cells produce myelin. One Schwann cell wraps one axon segment. In the CNS, oligodendrocytes produce myelin (one cell wraps multiple axons).",
+          "difficulty": "medium"
+        },
+        {
+          "q": "A single oligodendrocyte (CNS) differs from a single Schwann cell (PNS) in that it:",
+          "options": [
+            "Produces thicker myelin",
+            "Myelinates multiple axons simultaneously",
+            "Is larger in size",
+            "Cannot conduct action potentials as quickly"
+          ],
+          "answer": 1,
+          "topic": "neuron-structure",
+          "explain": "One oligodendrocyte myelinates multiple axon segments; one Schwann cell myelinates only one axon segment. This is an important anatomical distinction.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following is primarily responsible for establishing the K+/Na+ gradient at rest?",
+          "options": [
+            "Voltage-gated channels",
+            "Leak channels",
+            "The Na+/K+ ATPase",
+            "The resting potential"
+          ],
+          "answer": 2,
+          "topic": "membrane-potential",
+          "explain": "The Na+/K+ ATPase actively pumps ions to establish and maintain the gradient (3 Na+ out, 2 K+ in per ATP). Leak channels allow diffusion but do not establish gradients.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Exam-style: If Na+/K+ ATPase function were blocked:",
+          "options": [
+            "The resting potential would become less negative (depolarize)",
+            "Na+ would accumulate inside; K+ would accumulate outside",
+            "The ionic gradients would gradually dissipate",
+            "All of the above"
+          ],
+          "answer": 3,
+          "topic": "membrane-potential",
+          "explain": "With the pump blocked, Na+ accumulates inside, K+ outside, gradients dissipate, and the resting potential depolarizes toward 0 mV over time.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following best explains why myelin increases conduction velocity?",
+          "options": [
+            "Myelin makes the axon thicker",
+            "Myelin concentrates ion channels at the nodes, requiring fewer sites to regenerate the action potential",
+            "Myelin is a superconductor",
+            "Myelin prevents all ion movement"
+          ],
+          "answer": 1,
+          "topic": "ap-propagation",
+          "explain": "Myelin insulates the axon, confining ion channels to nodes. Only nodes need to depolarize to threshold, allowing the action potential to \"jump\" between them, greatly speeding conduction.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "The hyperpolarization (afterhyperpolarization) phase of an action potential occurs because:",
+          "options": [
+            "Na+ channels remain open too long",
+            "K+ channels remain open slightly too long, driving potential below resting level",
+            "The Na+/K+ ATPase works excessively",
+            "The stimulus intensity is too high"
+          ],
+          "answer": 1,
+          "topic": "action-potential",
+          "explain": "K+ channels close slightly slower than needed to return to resting potential, causing a brief overshoot below resting level (hyperpolarization) before stabilization.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "In an unmyelinated axon, local current flows:",
+          "options": [
+            "Only inside the axon along the cytoplasm",
+            "Only across the axon membrane",
+            "Both inside and across the membrane, depolarizing adjacent regions",
+            "Not at all"
+          ],
+          "answer": 2,
+          "topic": "ap-propagation",
+          "explain": "Local current flows inside the axon (longitudinal resistance) and across the membrane (transmembrane current), depolarizing adjacent regions to threshold in continuous conduction.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which ion equilibrium potential is closest to the resting membrane potential?",
+          "options": [
+            "Na+ equilibrium (~+60 mV)",
+            "K+ equilibrium (~\u201390 mV)",
+            "Cl\u2013 equilibrium (~\u201370 mV)",
+            "Ca2+ equilibrium (~+120 mV)"
+          ],
+          "answer": 1,
+          "topic": "membrane-potential",
+          "explain": "The resting potential (~\u201370 mV) is closest to K+ equilibrium (~\u201390 mV) because the membrane is most permeable to K+ at rest, though Na+ permeability shifts it slightly less negative.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following correctly describes the relationship between stimulus strength and action potential frequency?",
+          "options": [
+            "Stronger stimuli produce larger action potentials",
+            "Stronger stimuli produce action potentials with faster rising phases",
+            "Stronger stimuli produce more frequent action potentials (higher firing rate)",
+            "Stimulus strength does not affect action potential properties"
+          ],
+          "answer": 2,
+          "topic": "action-potential",
+          "explain": "The all-or-nothing principle: action potential size is constant. Stronger stimuli trigger more frequent firing (higher frequency), not larger potentials.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Exam-style: If a neuron's membrane became more permeable to Na+ at rest:",
+          "options": [
+            "The resting potential would become more positive (depolarize)",
+            "The resting potential would become more negative",
+            "The Na+ equilibrium potential would become more negative",
+            "The K+ leak would increase"
+          ],
+          "answer": 0,
+          "topic": "membrane-potential",
+          "explain": "The resting potential is a weighted average of ion equilibria. Increased Na+ permeability shifts the potential toward Na+ equilibrium (~+60 mV), causing depolarization.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following is an example of a passive transporter (carrier)?",
+          "options": [
+            "SGLT1 (Na+-glucose symporter)",
+            "GLUT1 (glucose transporter using facilitated diffusion)",
+            "Na+/K+ ATPase",
+            "Voltage-gated Na+ channel"
+          ],
+          "answer": 1,
+          "topic": "transport-basics",
+          "explain": "GLUT1 is facilitated diffusion (passive); others are active or channels.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "The fact that the resting potential (~\u201370 mV) is less negative than the K+ equilibrium potential (~\u201390 mV) indicates:",
+          "options": [
+            "The cell has lost K+ to the outside",
+            "Na+ permeability contributes to the resting potential",
+            "The Na+/K+ ATPase has stopped",
+            "K+ channels are open"
+          ],
+          "answer": 1,
+          "topic": "membrane-potential",
+          "explain": "Less negative potential means Na+ inward current is contributing.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "During an action potential, the membrane potential reaches a peak of ~+30 mV (overshoot) rather than stopping at the Na+ equilibrium potential (~+60 mV) because:",
+          "options": [
+            "Repolarization begins before Na+ equilibrium is reached",
+            "K+ channels open before Na+ channels fully open",
+            "The stimulus drives the potential past equilibrium",
+            "Sodium channels are inactivated before equilibrium"
+          ],
+          "answer": 0,
+          "topic": "action-potential",
+          "explain": "K+ channels open as Na+ channels inactivate, beginning repolarization before equilibrium.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following would cause the absolute refractory period to be longer?",
+          "options": [
+            "Faster Na+ channel inactivation recovery",
+            "Higher extracellular K+",
+            "Lower extracellular Na+",
+            "Slower Na+ channel inactivation recovery"
+          ],
+          "answer": 3,
+          "topic": "action-potential",
+          "explain": "Slower recovery from inactivation = longer refractory period.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "In saltatory conduction, the distance between nodes of Ranvier affects:",
+          "options": [
+            "The type of myelin sheath",
+            "Conduction velocity (larger distance = faster conduction)",
+            "The diameter of the axon only",
+            "Neurotransmitter release"
+          ],
+          "answer": 1,
+          "topic": "ap-propagation",
+          "explain": "Longer internodal distances = faster conduction.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Astrocytes in the CNS primarily function to:",
+          "options": [
+            "Produce myelin sheaths",
+            "Provide metabolic support and regulate extracellular ion concentrations",
+            "Conduct action potentials",
+            "Release neurotransmitters"
+          ],
+          "answer": 1,
+          "topic": "neuron-structure",
+          "explain": "Astrocytes provide metabolic support and buffer extracellular K+.",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Lecture 10: Neuroscience II \u2014 Synaptic Transmission & Neural Circuits",
+      "questions": [
+        {
+          "q": "A sensory receptor is best defined as:",
+          "options": [
+            "Any nerve ending in the skin",
+            "A specialized cell that detects a stimulus and converts it into an electrical signal",
+            "A synapse between two neurons",
+            "A region of the spinal cord"
+          ],
+          "answer": 1,
+          "topic": "sensory-receptors",
+          "explain": "A sensory receptor detects a specific stimulus (via a receptor protein) and transduces it into an electrical signal (receptor potential) the nervous system can process.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which of the following is an example of a mechanoreceptor?",
+          "options": [
+            "Rod or cone in the retina",
+            "Taste bud cell",
+            "Hair cell in the cochlea",
+            "Olfactory receptor neuron"
+          ],
+          "answer": 2,
+          "topic": "sensory-receptors",
+          "explain": "Hair cells (mechanoreceptors in the inner ear) detect sound and acceleration. Rods/cones are photoreceptors; taste buds are chemoreceptors; olfactory cells detect chemicals.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Sensory transduction involves:",
+          "options": [
+            "Amplification of a weak stimulus into an action potential",
+            "Conversion of stimulus energy into a receptor potential",
+            "Transmission of information directly to the cerebral cortex",
+            "The release of neurotransmitter"
+          ],
+          "answer": 1,
+          "topic": "transduction",
+          "explain": "Transduction is the process of converting a stimulus (energy) into an electrical signal (receptor potential). This is the first step in sensory processing.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Adaptation in sensory receptors means that:",
+          "options": [
+            "The receptor becomes sensitive to other stimuli",
+            "Prolonged stimulation causes a decreased receptor response",
+            "The receptor integrates multiple signals",
+            "The receptor loses its ability to function"
+          ],
+          "answer": 1,
+          "topic": "transduction",
+          "explain": "Adaptation is a reduction in receptor response to sustained stimuli\u2014the receptor produces a smaller signal even though the stimulus continues, allowing detection of changes.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "A sensory receptor adapts because:",
+          "options": [
+            "The stimulus is removed",
+            "The nervous system stops paying attention",
+            "Changes in intracellular signaling cascade (e.g., phosphorylation of ion channels) reduce the response to sustained stimuli",
+            "The receptor protein is degraded"
+          ],
+          "answer": 2,
+          "topic": "transduction",
+          "explain": "Adaptation is a molecular property of the receptor itself\u2014sustained stimulation triggers negative feedback (phosphorylation, desensitization, channel closure) that reduces the response.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following correctly describes the order of neurons in a sensory pathway?",
+          "options": [
+            "First-order: periphery to spinal cord; second-order: spinal cord to thalamus; third-order: thalamus to cortex",
+            "First-order: cortex to thalamus; second-order: thalamus to spinal cord; third-order: spinal cord to periphery",
+            "The order varies by sensory modality with no consistent pattern",
+            "All neurons are equivalent in sensory pathways"
+          ],
+          "answer": 0,
+          "topic": "transmission-pathways",
+          "explain": "The canonical pathway: first-order (sensory receptors/axons), second-order (spinal cord/brainstem), third-order (thalamus) \u2192 cortex.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "An exception to the typical three-neuron sensory pathway is:",
+          "options": [
+            "Touch (via dorsal column-medial lemniscal pathway)",
+            "Pain (via spinothalamic tract)",
+            "Vision (via optic nerve to lateral geniculate nucleus)",
+            "Smell (olfactory receptors send directly to the olfactory cortex, bypassing the thalamus)"
+          ],
+          "answer": 3,
+          "topic": "transmission-pathways",
+          "explain": "Olfaction is unique: olfactory receptors (first-order) synapse directly in the olfactory bulb, which projects to olfactory cortex, bypassing the thalamus.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Rate coding in sensory systems refers to:",
+          "options": [
+            "The speed of action potentials along an axon",
+            "The coding of stimulus intensity by the frequency of action potentials",
+            "The temporal pattern of synaptic transmission",
+            "The number of neurons responding to a stimulus"
+          ],
+          "answer": 1,
+          "topic": "sensory-coding",
+          "explain": "Rate coding: stimulus intensity is encoded by action potential frequency. A stronger stimulus produces a larger receptor potential, triggering action potentials at higher frequency.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Temporal coding is particularly important in:",
+          "options": [
+            "Vision, where color is encoded by firing rate",
+            "Touch, where pressure is encoded by firing rate",
+            "Audition, where sound location is encoded by the precise timing of action potentials in auditory neurons",
+            "Taste, where bitter is encoded by timing"
+          ],
+          "answer": 2,
+          "topic": "sensory-coding",
+          "explain": "Phase locking in auditory neurons uses timing to encode sound location\u2014neurons fire in synchrony with specific phases of sound waves, providing timing information.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "A sensory neuron cannot increase its firing rate indefinitely because of:",
+          "options": [
+            "The refractory period limiting how frequently action potentials can fire",
+            "Depletion of neurotransmitter at the sensory ending",
+            "Loss of sensitivity due to adaptation",
+            "All of the above"
+          ],
+          "answer": 0,
+          "topic": "sensory-coding",
+          "explain": "The absolute refractory period sets a limit on maximum firing frequency (~500\u20131000 Hz max, but typically lower). Adaptation and transmitter limits also exist but are secondary.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "A receptive field is:",
+          "options": [
+            "The region of a receptor protein where stimuli bind",
+            "The region of sensory space that activates a neuron",
+            "The synapse between a sensory receptor and a second-order neuron",
+            "The threshold voltage for action potential generation"
+          ],
+          "answer": 1,
+          "topic": "receptive-fields",
+          "explain": "A receptive field is the spatial or sensory region (skin area, visual field, etc.) to which a neuron responds. It has an excitatory center and often an inhibitory surround.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Center-surround receptive field organization means:",
+          "options": [
+            "The receptive field is always circular",
+            "Stimulation in the center excites the neuron; stimulation in the surround inhibits it",
+            "All neurons have center-surround organization",
+            "The receptive field is organized by the cortex"
+          ],
+          "answer": 1,
+          "topic": "receptive-fields",
+          "explain": "Center-surround: central excitatory region (stimulus increases firing) surrounded by inhibitory region (stimulus decreases firing). This sharpens contrast at stimulus edges.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Lateral inhibition enhances perception by:",
+          "options": [
+            "Amplifying the stimulus signal",
+            "Sharpening contrast at the edges of a stimulus",
+            "Broadening the receptive field",
+            "Increasing the overall sensitivity of all neurons"
+          ],
+          "answer": 1,
+          "topic": "receptive-fields",
+          "explain": "Lateral inhibition suppresses responses at the edges of a stimulus (via nearby inhibitory neurons), sharpening the perceptual contrast and edge definition.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "The phenomenon of Mach bands (illusory bright and dark bands near stimulus edges) is caused by:",
+          "options": [
+            "Optical defects in the eye",
+            "Lateral inhibition creating artificial contrast enhancement",
+            "Adaptation of photoreceptors",
+            "Increased firing of neurons at the stimulus boundary"
+          ],
+          "answer": 1,
+          "topic": "receptive-fields",
+          "explain": "Mach bands are an illusion where lateral inhibition creates artificial dark bands on the dark side of a boundary and bright bands on the light side, demonstrating neural processing distorts perception.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "When a sensory neuron's action potential reaches the axon terminal:",
+          "options": [
+            "The action potential directly opens channels in the postsynaptic cell",
+            "Voltage-gated Ca2+ channels open, triggering vesicle release of neurotransmitter",
+            "Neurotransmitter is always glutamate",
+            "The postsynaptic cell fires an action potential immediately"
+          ],
+          "answer": 1,
+          "topic": "synaptic-transmission",
+          "explain": "Ca2+ influx triggers synaptic vesicle fusion and neurotransmitter release into the synaptic cleft, where it binds postsynaptic receptors (chemical transmission, not electrical).",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Excitatory synapses in sensory systems typically use:",
+          "options": [
+            "GABA",
+            "Glycine",
+            "Glutamate",
+            "Acetylcholine only"
+          ],
+          "answer": 2,
+          "topic": "synaptic-transmission",
+          "explain": "Glutamate is the primary excitatory neurotransmitter in the nervous system. GABA and glycine are inhibitory.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Inhibitory synapses typically use:",
+          "options": [
+            "Glutamate and acetylcholine",
+            "GABA and glycine",
+            "Dopamine and serotonin",
+            "Acetylcholine and norepinephrine"
+          ],
+          "answer": 1,
+          "topic": "synaptic-transmission",
+          "explain": "GABA (CNS, \u810a\u9ad3) and glycine (spinal cord, \u810a\u9ad3) are the primary inhibitory neurotransmitters.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "A major advantage of chemical synaptic transmission over electrical transmission is:",
+          "options": [
+            "Chemical transmission is faster",
+            "Chemical transmission allows signal amplification and processing (summation, inhibition)",
+            "Chemical transmission is more reliable",
+            "Chemical transmission requires less ATP"
+          ],
+          "answer": 1,
+          "topic": "synaptic-transmission",
+          "explain": "Chemical transmission is slower (~1 ms delay) but allows filtering (inhibition can override excitation), summation (temporal and spatial), and complex signal processing before the postsynaptic cell responds.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Temporal summation refers to:",
+          "options": [
+            "Multiple neurons firing at different times",
+            "Multiple inputs arriving at the postsynaptic cell at different times, with overlapping effects",
+            "The timing of action potential propagation along an axon",
+            "The duration of the refractory period"
+          ],
+          "answer": 1,
+          "topic": "synaptic-transmission",
+          "explain": "Temporal summation: multiple EPSCs (excitatory postsynaptic currents) arriving within a short window summate and can reach threshold if the postsynaptic potential reaches threshold.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Spatial summation refers to:",
+          "options": [
+            "The size of the receptive field",
+            "Multiple synaptic inputs from different locations on the postsynaptic cell that summate to produce a larger response",
+            "The distance action potentials travel along an axon",
+            "The spread of neurotransmitter in the synaptic cleft"
+          ],
+          "answer": 1,
+          "topic": "synaptic-transmission",
+          "explain": "Spatial summation: EPSCs from multiple synapses (different regions of the cell) summate. If total depolarization reaches threshold, an action potential fires.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Exam-style: How does a sensory system detect a very weak stimulus despite neuronal noise?",
+          "options": [
+            "Sensory receptors amplify weak signals before synaptic transmission",
+            "Multiple sensory neurons converge on the same postsynaptic neuron, allowing temporal and spatial summation of weak inputs",
+            "Inhibitory synapses filter out noise",
+            "Weak stimuli activate only a few neurons, which is sufficient"
+          ],
+          "answer": 1,
+          "topic": "sensory-coding",
+          "explain": "Weak stimuli activate multiple sensory neurons with overlapping receptive fields; their summed input at a postsynaptic cell can reach threshold, allowing detection of weak signals.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "If a sensory receptor's G-protein signaling cascade is blocked:",
+          "options": [
+            "Action potentials would fire immediately",
+            "The receptor potential would be reduced or absent",
+            "Neurotransmitter would still be released",
+            "The stimulus would be perceived more intensely"
+          ],
+          "answer": 1,
+          "topic": "transduction",
+          "explain": "Many receptors use G-protein cascades (\u2192 second messengers \u2192 ion channels). Blocking this cascade prevents ion channel opening and receptor potential generation.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Exam-style: In the dorsal column-medial lemniscal pathway (proprioception and touch):",
+          "options": [
+            "First-order neurons bypass the thalamus and project directly to cortex",
+            "First-order neurons ascend the spinal cord in the dorsal columns; second-order neurons are in the medulla",
+            "Second-order neurons project directly to the spinal cord from the cortex",
+            "All three orders of neurons are in the spinal cord"
+          ],
+          "answer": 1,
+          "topic": "transmission-pathways",
+          "explain": "First-order: peripheral receptor \u2192 dorsal column (ascending ipsilaterally); second-order: medial lemniscus (crossing in medulla) \u2192 thalamus; third-order: thalamus \u2192 cortex.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following is a G-protein\u2013coupled receptor mechanism?",
+          "options": [
+            "Direct ion channel opening by neurotransmitter",
+            "Receptor protein \u2192 G protein \u2192 adenylyl cyclase \u2192 cAMP \u2192 ion channel opening",
+            "Receptor protein forms a channel directly",
+            "Neurotransmitter opening a ligand-gated ion channel"
+          ],
+          "answer": 1,
+          "topic": "transduction",
+          "explain": "G-protein coupling uses second messengers (cAMP, IP3).",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Why would a sensory system with a small receptive field be better at detecting small, localized stimuli?",
+          "options": [
+            "Smaller receptive fields are more sensitive",
+            "Localization of the stimulus is more precise with small receptive fields",
+            "Small receptive fields do not require adaptation",
+            "Small receptive fields respond to all stimuli equally"
+          ],
+          "answer": 1,
+          "topic": "receptive-fields",
+          "explain": "Small receptive fields provide better spatial resolution.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "A patient with damage to the dorsal root ganglion would lose:",
+          "options": [
+            "Pain sensation only",
+            "All sensation from the body region supplied by that ganglion",
+            "Only proprioception",
+            "Motor function only"
+          ],
+          "answer": 1,
+          "topic": "transmission-pathways",
+          "explain": "First-order neurons in the dorsal root ganglion are the primary sensory pathway.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Synaptic plasticity allows sensory systems to:",
+          "options": [
+            "Amplify weak signals",
+            "Learn which stimuli are important and which are irrelevant",
+            "Fire action potentials faster",
+            "Absorb more neurotransmitter"
+          ],
+          "answer": 1,
+          "topic": "synaptic-transmission",
+          "explain": "LTP and LTD allow learning: frequently used synapses strengthen.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "If all inhibitory synapses in a sensory system were blocked:",
+          "options": [
+            "The system would be more sensitive to all stimuli",
+            "Lateral inhibition would be lost, reducing contrast sharpening",
+            "Adaptation would occur faster",
+            "Only excitatory synapses would remain functional"
+          ],
+          "answer": 1,
+          "topic": "synaptic-transmission",
+          "explain": "Loss of lateral inhibition reduces contrast sharpening.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Exam-style: A person is exposed to a constant odor. Why do they stop noticing it after a few minutes even though the odor is still present?",
+          "options": [
+            "The odor molecules are depleted",
+            "Olfactory receptor adaptation reduces the receptor potential to sustained stimuli",
+            "The brain chooses to ignore the odor",
+            "Olfactory neurons die"
+          ],
+          "answer": 1,
+          "topic": "transduction",
+          "explain": "Olfactory receptor adaptation reduces response to sustained odors.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Why is the ~1 ms synaptic delay (chemical transmission) beneficial compared to faster electrical transmission?",
+          "options": [
+            "Chemical transmission allows inhibition to override excitation",
+            "Chemical transmission allows temporal and spatial summation",
+            "Chemical transmission allows neural processing and computation",
+            "All of the above"
+          ],
+          "answer": 3,
+          "topic": "synaptic-transmission",
+          "explain": "Chemical transmission's delay enables filtering, summation, and processing.",
+          "difficulty": "hard"
+        }
+      ]
+    }
+  ],
+  "topicSectionMap": {
+    "6": {
+      "basic-concepts": 0,
+      "nutrient-classes": 1,
+      "gi-wall-structure": 2,
+      "mouth-function": 3,
+      "secretion-volumes": 4,
+      "motility-types": 5,
+      "small-intestine-anatomy": 6,
+      "surface-area": 7,
+      "absorption-mechanisms": 8,
+      "fat-absorption": 9,
+      "large-intestine": 10,
+      "pancreas-role": 11,
+      "bile-role": 12,
+      "absorption-intro": 13
+    },
+    "7": {
+      "saliva-roles": 0,
+      "mouth-function": 1,
+      "swallowing": 2,
+      "stomach-secretions": 3,
+      "gastric-digestion": 4,
+      "stomach-anatomy": 5,
+      "pancreas-role": 6,
+      "bile-role": 7
+    },
+    "8": {
+      "absorption-intro": 0,
+      "small-intestine-anatomy": 1,
+      "surface-area": 2,
+      "absorption-mechanisms": 3,
+      "protein-absorption": 4,
+      "fat-absorption": 5,
+      "large-intestine": 6,
+      "bile-role": 7,
+      "liver-role": 8,
+      "pancreas-role": 9
+    },
+    "9": {
+      "ion-channels": 0,
+      "transport-basics": 1,
+      "membrane-potential": 2,
+      "action-potential": 3,
+      "ap-propagation": 4,
+      "neuron-structure": 5
+    },
+    "10": {
+      "sensory-receptors": 0,
+      "transduction": 1,
+      "transmission-pathways": 2,
+      "sensory-coding": 3,
+      "receptive-fields": 4,
+      "synaptic-transmission": 5
+    }
+  }
+}
