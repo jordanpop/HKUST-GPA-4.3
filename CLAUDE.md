@@ -5,6 +5,7 @@
 ## Quick Overview
 HKUST study guide website with subject selection → lecture → notes/quiz flow.
 - **Tech stack:** Pure HTML/CSS/JS, no frameworks, localStorage for progress
+- **Data:** Lecture questions/notes-metadata live in `data/*.json` and are loaded at runtime via `fetch()`
 - **Hosted:** https://jordanpop.github.io/HKUST-GPA-4.3/
 - **Git rule: NEVER commit or push without explicit user approval**
 
@@ -12,8 +13,12 @@ HKUST study guide website with subject selection → lecture → notes/quiz flow
 ```
 /GPA4.3 website/HKUST-GPA-4.3/   ← git repo root
 ├── index.html          (homepage: subject selection cards)
-├── 3040.html           (LIFS3040 — Lectures 1–5)
-├── 2921.html           (HUMA2921 — Lectures 3, 4, 5)
+├── template.html       (UNIVERSAL TEMPLATE — copy this to start a new subject)
+├── 3040.html           (LIFS3040 — UI/logic only)
+├── 2921.html           (HUMA2921 — UI/logic only)
+├── data/
+│   ├── 3040.json       (LIFS3040 lecture data: storageKey, lectures[], topicSectionMap)
+│   └── 2921.json       (HUMA2921 lecture data — currently placeholders)
 ├── CLAUDE.md           (this file)
 └── QUESTION_TEMPLATE.md
 ```
@@ -24,6 +29,48 @@ index.html → 3040.html or 2921.html → lecture card → notes / quiz
 ```
 Back button on subject pages points to `index.html`.
 
+## Local Preview
+The HTML files use `fetch('data/xxxx.json')` and do NOT work over the `file://` protocol. Serve via a local HTTP server:
+```bash
+cd HKUST-GPA-4.3 && python3 -m http.server 8080
+# Open http://localhost:8080/
+```
+GitHub Pages serves over HTTPS, so production deployment is unaffected.
+
+---
+
+## Data File Schema (`data/{code}.json`)
+
+```json
+{
+  "storageKey": "endoQuizState",
+  "lectures": [
+    {
+      "id": 1,
+      "title": "Lecture 1: ...",
+      "questions": [
+        {
+          "q": "...",
+          "options": ["A","B","C","D","E"],
+          "answer": 2,
+          "topic": "short-topic-name",
+          "explain": "...",
+          "difficulty": "easy"
+        }
+      ]
+    }
+  ],
+  "topicSectionMap": {
+    "1": { "topic-name": 0, "another-topic": 1 }
+  }
+}
+```
+
+Notes:
+- `lectures[].title` is the canonical field (do **not** use `name`)
+- `difficulty` is inline on each question (no separate map)
+- `topicSectionMap` keys are stringified lecture ids; values map `topic → notes-section-index`
+
 ---
 
 ## Update Workflow (follow this every time)
@@ -33,27 +80,36 @@ User drops PDF/PPTX → say which subject and lecture number
 
 Steps:
 1. Read `CLAUDE.md` only (do not re-read the full HTML)
-2. Read only the target HTML file's `const lectures = [` array to check existing lecture IDs
-3. Generate notes HTML using the Notes Format below
+2. Open `data/{code}.json` to check existing lecture IDs (do NOT open the HTML for this)
+3. Generate notes HTML using the Notes Format below — inject as a new `<div id="notes-N">` section in the HTML file
 4. Generate exactly 30 questions using the Question Format below
-5. Inject into the target HTML:
-   - Add lecture card to home page section
-   - Add notes div (`notes-N`)
-   - Add quiz div (`quiz-N`)
-   - Add entry to `const lectures = [...]`
-   - Add entry to `const quizState = {...}`
-6. Ask user to approve before committing
+5. Edit the HTML file only to:
+   - Add a lecture card on the home page section
+   - Add a `<div id="notes-N">` block
+   - Add a `<div id="quiz-N">` block
+6. Edit `data/{code}.json` to append the new lecture object (with all 30 questions) and any new topic→section mappings
+7. Ask user to approve before committing
 
 ### Case 2: Adding a new subject
-User drops PDF/PPTX for a new course
+User drops PDF/PPTX for a new course.
+
+**ALWAYS start from `template.html`. Never copy an existing subject HTML — they may have drifted.**
 
 Steps:
-1. Create a new HTML file (copy 2921.html as template)
-2. Update localStorage key to `[COURSECODE]QuizState`
-3. Update `const lectures = [...]` with correct lecture ids/names
-4. Add a new subject card to `index.html`
-5. Update this CLAUDE.md content status table
-6. Ask user to approve before committing
+1. `cp template.html {code}.html` (e.g. `cp template.html 3015.html`)
+2. In the new file, find-and-replace these five placeholders:
+   - `__SUBJECT_TITLE__` — display title (e.g. `Endocrine Study Guide`)
+   - `__SUBJECT_CODE__` — course code (e.g. `LIFS3040`)
+   - `__SUBJECT_SUBTITLE__` — short scope description (e.g. `Lectures 1-10`)
+   - `__JSON_NAME__` — JSON file basename (e.g. `3040` → `data/3040.json`). Appears TWICE.
+   - `__CACHE_NAME__` — service-worker cache namespace (e.g. `lifs3040`)
+3. Create `data/{code}.json` with the schema described below. Set `storageKey` to something unique (e.g. `lifs3040_quiz_state`).
+4. For EACH lecture you add to the JSON, also add a `<div id="notes-N" class="page">` block to the new HTML at the location marked `NOTES PAGES go here`. The notes-div pattern is documented in the template's bottom comment block.
+5. Add a new subject card to `index.html`.
+6. Update this CLAUDE.md Content Status table.
+7. Ask user to approve before committing.
+
+**Do NOT hand-write the home-page lecture cards or `<div id="quiz-N">` blocks.** They are generated at runtime by `renderHomeCards()` / `renderQuizContainers()` from the JSON data. Hand-writing them will cause duplicates.
 
 ---
 
@@ -92,12 +148,12 @@ Steps:
 
 ```javascript
 {
-  q: "Question text?",
-  options: ["A", "B", "C", "D", "E"],  // always exactly 5 options
-  answer: 2,                             // 0-indexed (0–4)
-  explain: "Why correct. Flag exam traps where relevant.",
-  topic: "short-topic-name",
-  difficulty: "easy" | "medium" | "hard"
+  "q": "Question text?",
+  "options": ["A", "B", "C", "D", "E"],
+  "answer": 2,
+  "explain": "Why correct. Flag exam traps where relevant.",
+  "topic": "short-topic-name",
+  "difficulty": "easy"
 }
 ```
 
@@ -112,18 +168,21 @@ Steps:
 - Distractors must be plausible (drawn from related concepts)
 - Vary correct answer position across the set
 - Always append to END of array — never reorder/delete (localStorage uses indices)
-- Use double quotes for strings containing apostrophes (e.g. `"You've"` not `'You've'`)
+- Use proper JSON escaping for quotes inside strings (`\"`)
 
 ---
 
 ## Balanced Sampling Algorithm
-Already implemented in all subject files. `getBalancedSample(questions, total)` distributes across easy/medium/hard proportionally. User selects 10/20/30 via dropdown. Do not modify this function.
+Already implemented in all subject files as `buildBalancedSet(lid, count)`. Distributes across easy/medium/hard proportionally. User selects 10/20/30 via dropdown. Do not modify this function.
 
 ## localStorage Keys
-| File | Key |
-|------|-----|
-| 3040.html | `3040QuizState` |
-| 2921.html | `2921QuizState` |
+| File | Key | Defined in |
+|------|-----|------------|
+| 3040.html | `endoQuizState` | `data/3040.json` (`storageKey`) |
+| 2921.html | `huma2921_quiz_state` | `data/2921.json` (`storageKey`) |
+
+## Service Worker (3040.html only)
+3040.html registers an inline service worker that caches all GET fetches (including `data/3040.json`). When data changes, bump the `CACHE` constant (e.g. `endo-study-v2` → `endo-study-v3`) so old caches are invalidated on next reload.
 
 ## CSS Variables (never change)
 `--bg, --paper, --ink, --muted, --accent, --accent-soft, --wrong, --wrong-soft, --border`
@@ -134,15 +193,15 @@ Font: Georgia / Times New Roman, serif. Beige/green palette. No external librari
 ## Content Status
 | Subject | File | Notes | Questions |
 |---------|------|-------|-----------|
-| LIFS3040 | 3040.html | ✅ Complete (L1–L10) | ✅ Complete |
-| HUMA2921 | 2921.html | 🚧 Placeholder (L3,4,5) | 🚧 Empty arrays |
+| LIFS3040 | 3040.html + data/3040.json | ✅ Complete (L1–L10) | ✅ Complete (300 Qs) |
+| HUMA2921 | 2921.html + data/2921.json | 🚧 Placeholder (L3,4,5) | 🚧 Empty arrays |
 
 ### LIFS3040 Lecture Breakdown
 | Lecture | Topic | Source |
 |---------|-------|--------|
 | L1–L5 | Endocrine System | Endo1_2-26.pdf, Endo3&4-26.pdf, Endo5-26.pdf |
 | L6 | GI Overview & Upper GI | GI1-26.pdf |
-| L7 | Small Intestine & Absorption | GI2-26.pdf |
-| L8 | Large Intestine, Liver & Pancreas | GI3-26.pdf |
+| L7 | GI Digestion — Pancreas & Liver | GI2-26.pdf |
+| L8 | GI Absorption — Small & Large Intestine | GI3-26.pdf |
 | L9 | Neurons, Glia & Membrane Potentials | Neuro1-26.pdf |
 | L10 | Synaptic Transmission & Neural Circuits | Neuro2-26.pdf |

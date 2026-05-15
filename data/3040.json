@@ -3,7 +3,7 @@
   "lectures": [
     {
       "id": 6,
-      "title": "Lecture 6: GI Physiology I \u2014 Overview & Upper GI",
+      "title": "Lecture 6: GI Physiology I — Overview & Upper GI",
       "questions": [
         {
           "q": "Which of the following is NOT a function of the digestive system?",
@@ -15,7 +15,7 @@
           ],
           "answer": 2,
           "topic": "basic-concepts",
-          "explain": "The digestive system ingests, digests, and absorbs nutrients. Synthesis of enzymes occurs in the pancreas and salivary glands, but the system itself does not synthesize\u2014it secretes pre-made enzymes.",
+          "explain": "The digestive system ingests, digests, and absorbs nutrients. Synthesis of enzymes occurs in the pancreas and salivary glands, but the system itself does not synthesize—it secretes pre-made enzymes.",
           "difficulty": "easy"
         },
         {
@@ -93,7 +93,7 @@
           ],
           "answer": 2,
           "topic": "secretion-volumes",
-          "explain": "Salivary amylase functions only briefly\u2014about 5\u201310 minutes in the mouth and early esophagus before being inactivated by gastric acid. Pancreatic amylase in the small intestine (pH 7\u20138, optimal for amylase) handles the majority of starch digestion.",
+          "explain": "Salivary amylase functions only briefly—about 5–10 minutes in the mouth and early esophagus before being inactivated by gastric acid. Pancreatic amylase in the small intestine (pH 7–8, optimal for amylase) handles the majority of starch digestion.",
           "difficulty": "medium"
         },
         {
@@ -110,7 +110,7 @@
           "difficulty": "medium"
         },
         {
-          "q": "The total daily GI secretion is 7\u201310 liters, yet fecal water loss is only ~100 mL/day. Which of the following explains this?",
+          "q": "The total daily GI secretion is 7–10 liters, yet fecal water loss is only ~100 mL/day. Which of the following explains this?",
           "options": [
             "Most water is lost through urine",
             "The small intestine and colon reabsorb ~99% of secreted water",
@@ -132,7 +132,7 @@
           ],
           "answer": 1,
           "topic": "motility-types",
-          "explain": "Peristalsis is a coordinated wave propelling food forward. Segmentation (rhythmic local constrictions) mixes without net forward movement\u2014they are distinct.",
+          "explain": "Peristalsis is a coordinated wave propelling food forward. Segmentation (rhythmic local constrictions) mixes without net forward movement—they are distinct.",
           "difficulty": "easy"
         },
         {
@@ -149,7 +149,7 @@
           "difficulty": "easy"
         },
         {
-          "q": "The gross surface area of the small intestine is approximately 0.33 m\u00b2. Which adaptations amplify this to ~200 m\u00b2?",
+          "q": "The gross surface area of the small intestine is approximately 0.33 m². Which adaptations amplify this to ~200 m²?",
           "options": [
             "Circular folds only",
             "Villi only",
@@ -210,7 +210,7 @@
           ],
           "answer": 1,
           "topic": "fat-absorption",
-          "explain": "Fats packaged in chylomicrons enter lacteals (lymph), not blood capillaries initially\u2014they bypass first-pass hepatic metabolism.",
+          "explain": "Fats packaged in chylomicrons enter lacteals (lymph), not blood capillaries initially—they bypass first-pass hepatic metabolism.",
           "difficulty": "hard"
         },
         {
@@ -262,7 +262,7 @@
           ],
           "answer": 2,
           "topic": "small-intestine-anatomy",
-          "explain": "The ileum has specific receptors for the intrinsic factor\u2013B12 complex, enabling B12 absorption in this distal region.",
+          "explain": "The ileum has specific receptors for the intrinsic factor–B12 complex, enabling B12 absorption in this distal region.",
           "difficulty": "medium"
         },
         {
@@ -320,10 +320,10 @@
         {
           "q": "Which of the following is a correct sequence of carbohydrate digestion and absorption?",
           "options": [
-            "Disaccharides \u2192 monosaccharides \u2192 absorbed via SGLT1 and GLUT5 \u2192 GLUT2 at basolateral side",
-            "Polysaccharides \u2192 amylase breaks to oligosaccharides \u2192 disaccharidases break to monosaccharides \u2192 absorption",
-            "Starches \u2192 glucose \u2192 absorbed in stomach \u2192 enters blood",
-            "Fructose \u2192 glucose \u2192 absorbed via SGLT1 \u2192 GLUT2"
+            "Disaccharides → monosaccharides → absorbed via SGLT1 and GLUT5 → GLUT2 at basolateral side",
+            "Polysaccharides → amylase breaks to oligosaccharides → disaccharidases break to monosaccharides → absorption",
+            "Starches → glucose → absorbed in stomach → enters blood",
+            "Fructose → glucose → absorbed via SGLT1 → GLUT2"
           ],
           "answer": 1,
           "topic": "absorption-mechanisms",
@@ -379,7 +379,7 @@
           ],
           "answer": 2,
           "topic": "gi-wall-structure",
-          "explain": "The esophagus has no significant secretion, digestion, or absorption\u2014its role is purely mechanical transport of food.",
+          "explain": "The esophagus has no significant secretion, digestion, or absorption—its role is purely mechanical transport of food.",
           "difficulty": "easy"
         },
         {
@@ -392,806 +392,806 @@
           ],
           "answer": 1,
           "topic": "large-intestine",
-          "explain": "Active reabsorption of Na+ (and Cl\u2212) in the colon creates an osmotic gradient that drives passive water reabsorption.",
+          "explain": "Active reabsorption of Na+ (and Cl−) in the colon creates an osmotic gradient that drives passive water reabsorption.",
           "difficulty": "medium"
         }
       ]
     },
     {
       "id": 7,
-      "title": "Lecture 7: GI Physiology II \u2014 Small Intestine & Absorption",
+      "title": "Lecture 7: GI Physiology II — Digestion & Pancreas/Liver",
       "questions": [
         {
-          "q": "Which of the following is a PRIMARY function of saliva?",
+          "q": "Which of the following accurately describes the composition of pancreatic juice?",
           "options": [
-            "Protein digestion",
-            "Fat digestion",
-            "Starch digestion and lubrication",
-            "Calcium absorption"
+            "Water and mucus only",
+            "Water, electrolytes, and digestive enzymes",
+            "Bile salts and cholesterol",
+            "Gastric acid and pepsin"
           ],
-          "answer": 2,
-          "topic": "saliva-roles",
-          "explain": "Salivary amylase breaks down starch, and water and mucus lubricate the mouth and food for swallowing and taste.",
+          "answer": 1,
+          "topic": "pancreas-structure",
+          "explain": "Pancreatic juice contains water, electrolytes (bicarbonate, sodium, potassium, chloride), and digestive enzymes (trypsin, lipase, amylase). It does not contain mucus or bile.",
           "difficulty": "easy"
         },
         {
-          "q": "Salivary amylase is inactivated in the stomach primarily due to:",
+          "q": "What is the primary role of pancreatic bicarbonate in the small intestine?",
           "options": [
-            "Enzymes from the pancreas",
-            "Low pH (acidic environment)",
-            "Proteolysis by pepsin",
-            "Lack of substrate (starch) in the stomach"
+            "Activate pancreatic enzymes",
+            "Neutralize gastric acid and raise intestinal pH",
+            "Emulsify fats",
+            "Stimulate bile production"
           ],
           "answer": 1,
-          "topic": "saliva-roles",
-          "explain": "Salivary amylase has an optimal pH of ~6\u20137 and is denatured by stomach HCl (pH 1\u20133).",
+          "topic": "pancreas-digestion",
+          "explain": "Pancreatic bicarbonate neutralizes acidic chyme from the stomach, raising small intestinal pH to the optimal range (7-8) for pancreatic enzyme activity.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Trypsin is secreted by the pancreas as trypsinogen. Why is this inactive precursor form necessary?",
+          "options": [
+            "To reduce production costs",
+            "To prevent autolysis of the pancreas itself",
+            "To increase enzyme efficiency",
+            "To enhance fat digestion"
+          ],
+          "answer": 1,
+          "topic": "pancreas-digestion",
+          "explain": "Trypsinogen is the inactive form. If active trypsin were secreted, it would digest the pancreas's own proteins. Enterokinase in the small intestine converts trypsinogen to active trypsin.",
           "difficulty": "medium"
         },
         {
-          "q": "Serous cells and mucous cells in salivary glands produce, respectively:",
+          "q": "Which hormone stimulates pancreatic bicarbonate secretion in response to acidic chyme entering the small intestine?",
           "options": [
-            "Mucus and enzymes",
-            "Watery secretion with enzymes and viscous mucus",
-            "Only saliva without distinction",
-            "Enzymes and ions"
+            "Cholecystokinin (CCK)",
+            "Secretin",
+            "Gastrin",
+            "Motilin"
           ],
           "answer": 1,
-          "topic": "mouth-function",
-          "explain": "Serous cells secrete watery, enzyme-rich fluid; mucous cells secrete mucins that mix with serous secretion to form saliva.",
+          "topic": "pancreas-regulation",
+          "explain": "Secretin is released by S cells in the duodenum when pH drops below 4.5. It directly stimulates the pancreas to secrete bicarbonate-rich juice.",
           "difficulty": "medium"
         },
         {
-          "q": "Which antibacterial component of saliva is particularly important for preventing tooth decay?",
+          "q": "Which of the following pancreatic enzymes is responsible for breaking down proteins into amino acids and small peptides?",
           "options": [
-            "Lysozyme and peroxidase",
-            "Defensins",
-            "Salivary amylase",
-            "Mucins"
+            "Pancreatic amylase",
+            "Pancreatic lipase",
+            "Trypsin and chymotrypsin",
+            "Nuclease"
+          ],
+          "answer": 2,
+          "topic": "pancreas-digestion",
+          "explain": "Trypsin and chymotrypsin are endopeptidases that cleave peptide bonds within proteins. Carboxypeptidases then trim amino acids from the ends.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Why does pancreatic amylase require pancreatic bicarbonate to function optimally in the small intestine?",
+          "options": [
+            "The enzyme is inactive below pH 7",
+            "Salivary amylase inhibits pancreatic amylase",
+            "Gastric acid denatures pancreatic amylase in the stomach",
+            "Bicarbonate activates the zymogen form"
           ],
           "answer": 0,
-          "topic": "saliva-roles",
-          "explain": "Lysozyme and peroxidase are antimicrobial proteins in saliva. Saliva's alkalinity also neutralizes oral acids from bacteria and acid reflux.",
+          "topic": "pancreas-digestion",
+          "explain": "Pancreatic amylase has an optimal pH of 7-8 and is inactivated by the acidic environment of the stomach. Pancreatic bicarbonate neutralizes the acid, allowing the enzyme to function.",
           "difficulty": "medium"
         },
         {
-          "q": "The epiglottis during swallowing serves to:",
+          "q": "Pancreatic lipase is the primary enzyme for fat digestion. Under which pH condition does it work most effectively?",
           "options": [
-            "Increase saliva production",
-            "Seal the nasopharynx",
-            "Protect the airway by covering the tracheal opening",
-            "Propel food into the esophagus"
+            "pH 2-3",
+            "pH 4-5",
+            "pH 7-8",
+            "pH 9-10"
           ],
           "answer": 2,
-          "topic": "swallowing",
-          "explain": "The epiglottis folds down to protect the trachea during swallowing, preventing aspiration. The soft palate seals the nasopharynx.",
+          "topic": "pancreas-digestion",
+          "explain": "Pancreatic lipase functions optimally at pH 7-8 (neutral to slightly alkaline), which is the environment of the small intestine after pancreatic bicarbonate has neutralized gastric acid.",
           "difficulty": "easy"
         },
         {
-          "q": "The upper esophageal sphincter is controlled by:",
-          "options": [
-            "Parasympathetic nervous system (involuntary)",
-            "Sympathetic nervous system",
-            "Skeletal (voluntary) muscle via the vagus nerve",
-            "The swallowing reflex only"
-          ],
-          "answer": 2,
-          "topic": "swallowing",
-          "explain": "The upper esophageal sphincter is skeletal muscle and can be voluntarily relaxed during swallowing via the vagus nerve, though swallowing is primarily a reflex.",
-          "difficulty": "hard"
-        },
-        {
-          "q": "Which cells of the stomach secrete hydrochloric acid?",
-          "options": [
-            "Chief cells",
-            "Parietal cells",
-            "Mucous cells",
-            "G cells"
-          ],
-          "answer": 1,
-          "topic": "stomach-secretions",
-          "explain": "Parietal cells secrete HCl and intrinsic factor. Chief cells secrete pepsinogen.",
-          "difficulty": "easy"
-        },
-        {
-          "q": "Pepsinogen is activated to pepsin by:",
-          "options": [
-            "Bicarbonate from the pancreas",
-            "Hydrochloric acid in the stomach",
-            "Gastrin from G cells",
-            "Enterokinase in the duodenum"
-          ],
-          "answer": 1,
-          "topic": "stomach-secretions",
-          "explain": "HCl in the stomach lowers pH to ~1.5\u20132, which activates pepsinogen by autoproteolysis (self-cleavage) to pepsin. This is a classic two-stage activation.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "What is the PRIMARY substrate and product of gastric lipase?",
-          "options": [
-            "Starch \u2192 glucose",
-            "Proteins \u2192 peptides",
-            "Triglycerides \u2192 fatty acids and glycerol",
-            "Triglycerides \u2192 2-monoglycerides and fatty acids"
-          ],
-          "answer": 3,
-          "topic": "gastric-digestion",
-          "explain": "Gastric lipase is a mild lipase that partially digests triglycerides to 2-monoglycerides and fatty acids in the stomach. However, it accounts for only ~10\u201330% of total fat digestion.",
-          "difficulty": "hard"
-        },
-        {
-          "q": "Which of the following correctly ranks the contribution of different amylases to total starch digestion?",
-          "options": [
-            "Salivary >> pancreatic",
-            "Pancreatic >> salivary",
-            "Salivary = pancreatic",
-            "Stomach amylase is the major contributor"
-          ],
-          "answer": 1,
-          "topic": "saliva-roles",
-          "explain": "Salivary amylase contributes ~5\u201310% of total starch digestion; pancreatic amylase in the optimal pH environment of the small intestine handles ~90%.",
-          "difficulty": "hard"
-        },
-        {
-          "q": "The pyloric sphincter regulates:",
-          "options": [
-            "The entry of food into the mouth",
-            "The rate at which chyme enters the small intestine",
-            "The entry of pancreatic juice into the stomach",
-            "The movement of food through the esophagus"
-          ],
-          "answer": 1,
-          "topic": "stomach-anatomy",
-          "explain": "The pyloric sphincter controls gastric emptying, regulating the rate of chyme entry into the duodenum based on duodenal hormonal and neural signals.",
-          "difficulty": "easy"
-        },
-        {
-          "q": "Intrinsic factor, secreted by parietal cells, is essential for:",
-          "options": [
-            "Protein digestion",
-            "Vitamin B12 absorption in the ileum",
-            "Gastric acid production",
-            "Mucus protection"
-          ],
-          "answer": 1,
-          "topic": "stomach-secretions",
-          "explain": "Intrinsic factor is a glycoprotein that binds B12 in the stomach, protecting it from degradation and enabling absorption in the ileum.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "Which hormone is primarily responsible for stimulating gastric secretion?",
+          "q": "Which hormone stimulates the pancreas to secrete digestive enzymes in response to the presence of food (especially fats and proteins) in the small intestine?",
           "options": [
             "Secretin",
             "Cholecystokinin (CCK)",
             "Gastrin",
             "Motilin"
           ],
-          "answer": 2,
-          "topic": "gastric-digestion",
-          "explain": "Gastrin, released by G cells in response to food (especially protein), stimulates gastric acid and pepsinogen secretion.",
+          "answer": 1,
+          "topic": "pancreas-regulation",
+          "explain": "CCK is released by I cells in the duodenum and jejunum in response to fats and amino acids. It stimulates the pancreas to secrete enzyme-rich juice.",
           "difficulty": "medium"
         },
         {
-          "q": "The three main layers of muscle in the stomach wall are:",
+          "q": "What is the functional role of colipase in lipid digestion?",
           "options": [
-            "Longitudinal, circular, oblique",
-            "Circular, radial, longitudinal",
-            "Superficial, middle, deep",
-            "Peristaltic, segmental, tonic"
+            "Break down triglycerides into glycerol and fatty acids",
+            "Emulsify fats for easier enzyme access",
+            "Facilitate pancreatic lipase attachment to fat droplets",
+            "Neutralize gastric acid"
+          ],
+          "answer": 2,
+          "topic": "pancreas-digestion",
+          "explain": "Colipase is a cofactor for pancreatic lipase. It binds to lipase and helps anchor the enzyme to fat droplets, increasing the enzyme's efficiency.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Approximately how much pancreatic juice is secreted per day in response to meals?",
+          "options": [
+            "0.5 L",
+            "1 L",
+            "2 L",
+            "3-4 L"
+          ],
+          "answer": 2,
+          "topic": "pancreas-structure",
+          "explain": "The pancreas secretes approximately 2 L of juice per day, containing both bicarbonate (for pH control) and digestive enzymes.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which of the following is NOT a function of the liver in digestion?",
+          "options": [
+            "Produce bile for fat emulsification",
+            "Synthesize digestive enzymes",
+            "Regulate blood glucose and amino acid levels",
+            "Store fat-soluble vitamins"
+          ],
+          "answer": 1,
+          "topic": "liver-function",
+          "explain": "The liver produces bile (not enzymes), regulates metabolism, stores vitamins, and has many other functions. Digestive enzymes are produced by the pancreas and salivary glands, not the liver.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "What is the primary component of bile that aids in fat digestion?",
+          "options": [
+            "Bile pigments",
+            "Bile salts (bile acids)",
+            "Cholesterol",
+            "Bile phospholipids"
+          ],
+          "answer": 1,
+          "topic": "bile-role",
+          "explain": "Bile salts are amphipathic molecules that emulsify fats, breaking them into smaller droplets to increase the surface area available for pancreatic lipase action.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Bile is continuously produced by the liver and stored in the gallbladder. What is the trigger for gallbladder contraction and bile release?",
+          "options": [
+            "Presence of carbohydrates in the mouth",
+            "Acidic chyme entering the duodenum",
+            "Presence of fats and amino acids in the duodenum",
+            "Increased saliva production"
+          ],
+          "answer": 2,
+          "topic": "bile-regulation",
+          "explain": "Cholecystokinin (CCK) is released in response to fats and proteins (amino acids) in the duodenum, causing the gallbladder to contract and release stored bile into the small intestine.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Under the microscope, how would you distinguish bile salts from other components of bile based on their chemical properties?",
+          "options": [
+            "They are the only hydrophobic component",
+            "They are amphipathic (containing both hydrophobic and hydrophilic regions)",
+            "They form crystals at room temperature",
+            "They have a yellow color"
+          ],
+          "answer": 1,
+          "topic": "bile-role",
+          "explain": "Bile salts are amphipathic: the hydrophobic side interacts with fat, while the hydrophilic side faces the aqueous environment. This structure makes them ideal emulsifiers.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Approximately how much bile is produced by the liver per day?",
+          "options": [
+            "0.3 L",
+            "0.6-1.2 L",
+            "2-3 L",
+            "4-5 L"
+          ],
+          "answer": 1,
+          "topic": "bile-structure",
+          "explain": "The liver produces 0.6-1.2 L of bile per day. This bile is either released directly into the duodenum or stored in the gallbladder for later release.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "What happens to bile salts after they have completed their function in fat emulsification?",
+          "options": [
+            "They are degraded by intestinal bacteria",
+            "They are excreted in feces",
+            "They are reabsorbed in the terminal ileum and returned to the liver via the portal blood",
+            "They are converted into cholesterol"
+          ],
+          "answer": 2,
+          "topic": "bile-recycling",
+          "explain": "Bile salts are efficiently recycled through enterohepatic circulation: ~95% are reabsorbed in the terminal ileum and returned to the liver, where they are re-secreted. This conserves bile salts.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which component of bile serves no direct digestive role but is a breakdown product of hemoglobin metabolism?",
+          "options": [
+            "Bile salts",
+            "Bile pigments (bilirubin and biliverdin)",
+            "Cholesterol",
+            "Phospholipids"
+          ],
+          "answer": 1,
+          "topic": "bile-structure",
+          "explain": "Bile pigments (bilirubin, biliverdin) are waste products from the breakdown of old red blood cells. They give bile its color but don't participate in fat digestion.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Why is cholesterol present in bile even though it doesn't directly aid in digestion?",
+          "options": [
+            "It emulsifies fats alongside bile salts",
+            "It is a waste product eliminated through bile",
+            "It increases bile viscosity",
+            "It protects the intestinal epithelium"
+          ],
+          "answer": 1,
+          "topic": "bile-structure",
+          "explain": "Cholesterol in bile is a waste product and a means of excretion. The liver uses bile to eliminate cholesterol from the body, which is why cholesterol levels are one measure of liver health.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "If the gallbladder is removed, how would fat digestion be affected?",
+          "options": [
+            "Fat digestion would be completely blocked",
+            "Fat digestion would proceed normally because the liver still produces bile",
+            "Fat digestion would be slower and less efficient due to lack of stored, concentrated bile",
+            "Fat digestion would increase because bile would be released continuously"
+          ],
+          "answer": 2,
+          "topic": "bile-role",
+          "explain": "Without a gallbladder, bile cannot be stored and concentrated. Dilute bile from the liver drips continuously into the intestine, so fat digestion is slower and less efficient, especially after fatty meals.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following correctly pairs a pancreatic enzyme with its substrate?",
+          "options": [
+            "Trypsin → glucose molecules",
+            "Pancreatic lipase → starch",
+            "Pancreatic amylase → triglycerides",
+            "Nuclease → nucleic acids"
+          ],
+          "answer": 3,
+          "topic": "pancreas-digestion",
+          "explain": "Nuclease breaks down nucleic acids (DNA/RNA). Trypsin breaks peptide bonds in proteins, lipase breaks triglycerides, and amylase breaks starch.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is an exam trap regarding pancreatic enzyme secretion timing?",
+          "options": [
+            "Enzymes are secreted only during meals",
+            "Enzymes are secreted in response to CCK, not Secretin",
+            "Pancreatic amylase is the only enzyme secreted in response to starch",
+            "The pancreas produces ALL enzymes as inactive zymogens to prevent self-digestion"
+          ],
+          "answer": 3,
+          "topic": "pancreas-regulation",
+          "explain": "Exam trap: Most pancreatic proteases are secreted as inactive zymogens, but pancreatic amylase and lipase are secreted in their active forms. This is a common test question.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Why must bile salts be amphipathic for effective fat emulsification?",
+          "options": [
+            "Amphipathic molecules are larger and thus more effective",
+            "They can interact with both the fat (hydrophobic) and water (hydrophilic) environments",
+            "Amphipathic structure increases their pH-buffering capacity",
+            "They allow the liver to produce less bile"
+          ],
+          "answer": 1,
+          "topic": "bile-role",
+          "explain": "Amphipathic structure is essential: the hydrophobic region inserts into fat droplets while the hydrophilic region points toward the aqueous solution, stabilizing emulsified droplets.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "A 45-year-old patient has a gallstone blocking the common bile duct. Which of the following would MOST LIKELY occur?",
+          "options": [
+            "Excess bile pigments in the blood, leading to jaundice",
+            "Inability to digest carbohydrates",
+            "Rapid starch digestion",
+            "Increased pancreatic enzyme secretion"
           ],
           "answer": 0,
-          "topic": "stomach-anatomy",
-          "explain": "The stomach wall has three muscle layers: longitudinal (outer), circular (middle), and oblique (inner), enabling thorough churning and mixing.",
-          "difficulty": "medium"
+          "topic": "bile-clinical",
+          "explain": "Blockage prevents bile (including pigments) from reaching the intestine, so it backs up into the blood → jaundice. Fat digestion is impaired, not carbohydrate digestion.",
+          "difficulty": "hard"
         },
         {
-          "q": "Which of the following is the correct match between a pancreatic enzyme (as a zymogen) and its main substrate?",
+          "q": "Pancreatic insufficiency (loss of pancreatic function) would result in impaired digestion of which nutrients?",
           "options": [
-            "Trypsinogen \u2192 starch",
-            "Chymotrypsinogen \u2192 proteins",
-            "Procarboxypeptidase \u2192 lipids",
-            "Pancreatic amylase \u2192 proteins"
+            "Carbohydrates only",
+            "Proteins only",
+            "Fats only",
+            "Carbohydrates, proteins, and fats"
           ],
-          "answer": 1,
-          "topic": "pancreas-role",
-          "explain": "Chymotrypsinogen is activated to chymotrypsin, a protease. Trypsinogen \u2192 trypsin (protease); pancreatic amylase (carbohydrate); lipase (fats).",
-          "difficulty": "medium"
-        },
-        {
-          "q": "Bile salts are produced by:",
-          "options": [
-            "The pancreas",
-            "The liver",
-            "The gallbladder",
-            "The duodenum"
-          ],
-          "answer": 1,
-          "topic": "bile-role",
-          "explain": "The liver synthesizes bile salts from cholesterol. The gallbladder stores and concentrates bile but does not produce it.",
+          "answer": 3,
+          "topic": "pancreas-digestion",
+          "explain": "The pancreas secretes amylase (carbs), proteases (proteins), and lipase (fats). Loss of pancreatic function impairs digestion of all three macronutrients.",
           "difficulty": "easy"
         },
         {
-          "q": "Which of the following correctly describes the composition of gastric juice?",
+          "q": "Which of the following accurately describes the difference between salivary and pancreatic amylase in terms of their sites of action?",
           "options": [
-            "Water, electrolytes, pepsinogen, and lipase",
-            "Water, electrolytes, HCl, pepsinogen, and gastric lipase",
-            "Water, electrolytes, HCl, and amylase",
-            "Purely hydrochloric acid"
+            "Both act in the stomach",
+            "Salivary amylase acts in the mouth; pancreatic amylase acts in the small intestine",
+            "Both act in the small intestine",
+            "Pancreatic amylase acts in the mouth; salivary amylase acts in the small intestine"
           ],
           "answer": 1,
-          "topic": "stomach-secretions",
-          "explain": "Gastric juice contains water, electrolytes, HCl (from parietal cells), pepsinogen (from chief cells), and gastric lipase (from chief cells).",
-          "difficulty": "medium"
-        },
-        {
-          "q": "A patient with pernicious anemia has a deficiency of:",
-          "options": [
-            "Vitamin C",
-            "Vitamin B12 (due to lack of intrinsic factor)",
-            "Iron (due to low HCl)",
-            "Vitamin A"
-          ],
-          "answer": 1,
-          "topic": "stomach-secretions",
-          "explain": "Pernicious anemia results from lack of intrinsic factor (often due to autoimmune destruction of parietal cells), preventing B12 absorption.",
-          "difficulty": "hard"
-        },
-        {
-          "q": "The pH of gastric juice is approximately:",
-          "options": [
-            "6\u20137 (neutral)",
-            "3\u20135 (moderately acidic)",
-            "1\u20133 (highly acidic)",
-            "8\u20139 (alkaline)"
-          ],
-          "answer": 2,
-          "topic": "stomach-secretions",
-          "explain": "Gastric juice has a pH of 1\u20133 due to high HCl concentration, creating an acidic environment for pepsin (optimal pH ~1.5\u20132) and protein denaturation.",
+          "topic": "pancreas-digestion",
+          "explain": "Salivary amylase works briefly in the mouth and early esophagus before being denatured by gastric acid. Pancreatic amylase functions in the small intestine at optimal pH (7-8).",
           "difficulty": "easy"
         },
         {
-          "q": "Which of the following is the PRIMARY reason the stomach must secrete mucus?",
+          "q": "An exam trap about pancreatic secretion: Which statement is INCORRECT?",
           "options": [
-            "To aid in enzyme synthesis",
-            "To protect the stomach lining from HCl and pepsin",
-            "To increase nutrient absorption",
-            "To regulate gastric motility"
+            "Secretin stimulates bicarbonate secretion",
+            "CCK stimulates enzyme secretion",
+            "The pancreas secretes both aqueous and enzymatic components",
+            "Pancreatic juice is always acidic to match the stomach environment"
           ],
-          "answer": 1,
-          "topic": "stomach-secretions",
-          "explain": "Mucus, secreted by mucous cells and mixed with bicarbonate from parietal cells, forms a protective layer preventing autodigestion of the stomach wall.",
-          "difficulty": "easy"
-        },
-        {
-          "q": "Gastric emptying is accelerated by high-protein meals but slowed by fatty or acidic meals. This is controlled by:",
-          "options": [
-            "The pyloric sphincter only",
-            "Duodenal hormones (CCK, secretin) and neural signals",
-            "Gastrin release",
-            "Salivary reflex"
-          ],
-          "answer": 1,
-          "topic": "gastric-digestion",
-          "explain": "The duodenum senses chyme composition and releases hormones (CCK delays emptying when fats are present; secretin when pH is low) and sends neural signals to regulate pyloric sphincter opening.",
+          "answer": 3,
+          "topic": "pancreas-regulation",
+          "explain": "Exam trap: Pancreatic juice is ALKALINE (due to bicarbonate), not acidic. Its role is to neutralize stomach acid, not match it.",
           "difficulty": "hard"
         },
         {
-          "q": "If pancreatic juice did not contain bicarbonate, which of the following would most likely occur?",
+          "q": "Why is the enterohepatic circulation of bile salts considered an efficient system?",
           "options": [
-            "Fat digestion would be impaired",
-            "Protein digestion would be enhanced",
-            "Pepsin would continue digesting proteins in the small intestine",
-            "Vitamin absorption would increase"
+            "It reduces the workload of the liver",
+            "It conserves ~95% of bile salts, reducing the need for new synthesis",
+            "It speeds up fat digestion",
+            "It prevents bacteria from accessing bile salts"
           ],
-          "answer": 2,
-          "topic": "pancreas-role",
-          "explain": "Bicarbonate neutralizes stomach acid, raising duodenal pH. Without it, acidic chyme would inactivate pancreatic enzymes and pepsin would continue (wrongly) digesting in the small intestine.",
+          "answer": 1,
+          "topic": "bile-recycling",
+          "explain": "The body recycles bile salts 6-8 times daily. This efficient recycling means the liver only needs to synthesize ~0.5g of new bile salts daily to replace losses, conserving energy and resources.",
           "difficulty": "hard"
         },
         {
-          "q": "The major difference between bile salts and pancreatic lipase is that:",
+          "q": "Under normal conditions, which TWO hormones regulate pancreatic secretion in response to a meal?",
           "options": [
-            "Bile salts are enzymes; lipase is not",
-            "Lipase hydrolyzes fats; bile salts emulsify them",
-            "Bile salts are produced by the pancreas; lipase by the liver",
-            "Lipase works in the stomach; bile salts in the small intestine"
+            "Gastrin and Motilin",
+            "Secretin and Cholecystokinin (CCK)",
+            "Insulin and Glucagon",
+            "GIP and VIP"
           ],
           "answer": 1,
-          "topic": "bile-role",
-          "explain": "Lipase is an enzyme that catalyzes hydrolysis; bile salts are not enzymes but emulsify fats (increase surface area for lipase action). Both are essential but work via different mechanisms.",
-          "difficulty": "hard"
-        },
-        {
-          "q": "Exam-style: A patient has a gallbladder removed. What is the most likely consequence?",
-          "options": [
-            "Immediate loss of bile production",
-            "Continuous slow release of bile rather than meal-stimulated release; modest fat absorption impairment",
-            "Complete inability to absorb fats",
-            "Increased protein digestion"
-          ],
-          "answer": 1,
-          "topic": "bile-role",
-          "explain": "Bile is still produced by the liver but cannot be concentrated in the gallbladder. Bile enters the intestine continuously rather than in meal-triggered surges, reducing but not eliminating fat absorption efficiency.",
-          "difficulty": "hard"
-        },
-        {
-          "q": "Which of the following is an example of a protease enzyme secreted by the pancreas?",
-          "options": [
-            "Salivary amylase",
-            "Trypsin (from trypsinogen)",
-            "Gastric lipase",
-            "Sucrase"
-          ],
-          "answer": 1,
-          "topic": "pancreas-role",
-          "explain": "Trypsin, activated from trypsinogen in the duodenum, is a major protease. Salivary amylase and sucrase are from other sources; gastric lipase is a lipase.",
-          "difficulty": "easy"
-        },
-        {
-          "q": "Chief cells of the stomach secrete pepsinogen. What activates pepsinogen to the active enzyme pepsin?",
-          "options": [
-            "Gastrin from G cells",
-            "Secretin from the duodenum",
-            "HCl in the stomach",
-            "Enterokinase"
-          ],
-          "answer": 2,
-          "topic": "stomach-secretions",
-          "explain": "HCl lowers pH to ~1.5\u20132, causing pepsinogen to undergo autoproteolysis (self-cleavage) to form pepsin.",
+          "topic": "pancreas-regulation",
+          "explain": "Secretin (in response to acid) stimulates bicarbonate secretion; CCK (in response to fats/proteins) stimulates enzyme secretion. Both hormones work together for complete pancreatic response.",
           "difficulty": "medium"
         },
         {
-          "q": "The swallowing reflex involves coordination between all of the following EXCEPT:",
+          "q": "Which of the following correctly describes the relationship between pancreatic enzyme secretion and meal composition?",
           "options": [
-            "Pharynx",
-            "Esophagus",
-            "Stomach",
-            "Soft palate"
+            "Enzymes are secreted equally in response to all meals",
+            "Fat and protein meals trigger more enzyme secretion than carbohydrate meals",
+            "Carbohydrate meals trigger more enzyme secretion than fat meals",
+            "Enzyme secretion is independent of meal composition"
           ],
-          "answer": 2,
-          "topic": "swallowing",
-          "explain": "Swallowing involves pharynx (propulsion), esophagus (transit), and soft palate (nasopharynx sealing). The stomach is not involved in the swallowing reflex.",
+          "answer": 1,
+          "topic": "pancreas-regulation",
+          "explain": "CCK (triggered by fats/proteins) stimulates greater pancreatic enzyme secretion. Secretin (triggered by acid) stimulates bicarbonate. Fat-rich meals produce the strongest pancreatic response.",
           "difficulty": "medium"
         },
         {
-          "q": "Why does the stomach need to produce gastric lipase if pancreatic lipase will eventually digest the fat?",
+          "q": "What is the significance of the hepatic portal circulation in relation to bile salt recycling?",
           "options": [
-            "Gastric lipase is more efficient",
-            "Gastric lipase begins fat digestion in the acidic stomach; pancreatic lipase continues in the small intestine",
-            "Pancreatic lipase cannot function without gastric lipase",
-            "They have different substrates"
+            "It allows bile salts to reach the intestine",
+            "It returns reabsorbed bile salts from the terminal ileum back to the liver for re-secretion",
+            "It prevents bile salts from reaching the bloodstream",
+            "It dilutes bile salts to reduce their potency"
           ],
           "answer": 1,
-          "topic": "gastric-digestion",
-          "explain": "Gastric lipase (optimal at pH 3\u20136) initiates fat digestion in the stomach. Pancreatic lipase (optimal pH 7\u20138) continues in the small intestine.",
-          "difficulty": "hard"
-        },
-        {
-          "q": "Exam-style: A patient takes an antacid that neutralizes stomach acid. What would be the immediate consequence?",
-          "options": [
-            "All digestion would stop",
-            "Pepsinogen would not be activated to pepsin; protein digestion in the stomach would be impaired",
-            "Pancreatic juice would not be secreted",
-            "Bile would not be released"
-          ],
-          "answer": 1,
-          "topic": "stomach-secretions",
-          "explain": "Pepsinogen activation requires HCl. Neutralizing acid prevents pepsin formation and gastric protein digestion.",
-          "difficulty": "hard"
-        },
-        {
-          "q": "Which of the following is the correct sequence of pancreatic protease activation?",
-          "options": [
-            "Trypsinogen \u2192 trypsin \u2192 chymotrypsinogen \u2192 chymotrypsin \u2192 carboxypeptidase A",
-            "Pepsinogen \u2192 pepsin \u2192 trypsinogen \u2192 trypsin",
-            "Carboxypeptidase \u2192 procarboxypeptidase \u2192 trypsin",
-            "Enterokinase \u2192 trypsinogen \u2192 pepsin"
-          ],
-          "answer": 0,
-          "topic": "pancreas-role",
-          "explain": "Enterokinase (duodenal) activates trypsinogen to trypsin; trypsin then activates chymotrypsinogen and procarboxypeptidases.",
+          "topic": "bile-recycling",
+          "explain": "The portal blood carries reabsorbed bile salts directly from the terminal ileum back to the liver, where they are re-secreted into bile. This efficient recycling is the basis of enterohepatic circulation.",
           "difficulty": "hard"
         }
       ]
     },
     {
       "id": 8,
-      "title": "Lecture 8: GI Physiology III \u2014 Large Intestine, Liver & Pancreas",
+      "title": "Lecture 8: GI Physiology III — Absorption — Small & Large Intestine",
       "questions": [
         {
-          "q": "Absorption differs from digestion in that absorption:",
+          "q": "Which of the following is the primary structural adaptation of the small intestine that increases surface area for absorption?",
           "options": [
-            "Breaks large molecules into small ones",
-            "Moves digested molecules across the intestinal epithelium into blood/lymph",
-            "Occurs only in the stomach",
-            "Requires mechanical action only"
-          ],
-          "answer": 1,
-          "topic": "absorption-intro",
-          "explain": "Digestion breaks molecules down; absorption moves the products across the epithelium into circulation. Absorption requires prior digestion.",
-          "difficulty": "easy"
-        },
-        {
-          "q": "Which of the following is the PRIMARY site of nutrient absorption?",
-          "options": [
-            "Stomach",
-            "Small intestine",
-            "Large intestine",
-            "Esophagus"
-          ],
-          "answer": 1,
-          "topic": "absorption-intro",
-          "explain": "The small intestine is the major site of nutrient absorption. The large intestine absorbs mainly water and electrolytes.",
-          "difficulty": "easy"
-        },
-        {
-          "q": "The duodenum accounts for approximately ______ % of the small intestine's total length but is where ______ begins.",
-          "options": [
-            "5; most nutrient absorption",
-            "5; neutralization and enzyme entry",
-            "40; major nutrient absorption",
-            "55; water reabsorption"
+            "Thick muscular walls",
+            "Villi and microvilli (brush border)",
+            "Abundant goblet cells",
+            "Circular muscle fibers"
           ],
           "answer": 1,
           "topic": "small-intestine-anatomy",
-          "explain": "The duodenum is ~5% of small intestine length and is where gastric acid is neutralized and pancreatic/biliary secretions enter; nutrient absorption is minimal here.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "How long does chyme typically take to transit the entire small intestine?",
-          "options": [
-            "<30 minutes",
-            "2\u20134 hours",
-            "8\u201312 hours",
-            "24 hours"
-          ],
-          "answer": 1,
-          "topic": "small-intestine-anatomy",
-          "explain": "Chyme transit time through the small intestine is typically 2\u20134 hours, allowing time for digestion and absorption.",
+          "explain": "Villi (finger-like projections) and microvilli (brush border on epithelial cells) dramatically increase surface area. A 3-4 meter small intestine has a surface area equivalent to a tennis court.",
           "difficulty": "easy"
         },
         {
-          "q": "Circular folds (plicae circulares) in the small intestine are composed of:",
+          "q": "Approximately how many-fold does the brush border (microvilli) increase the absorptive surface area compared to a flat epithelium?",
           "options": [
-            "Mucosa and muscularis layers",
-            "Mucosa and submucosa layers",
-            "Submucosa and muscularis layers",
-            "Serosa only"
+            "2-5 fold",
+            "10 fold",
+            "20-40 fold",
+            "600+ fold combined with villi"
+          ],
+          "answer": 3,
+          "topic": "small-intestine-anatomy",
+          "explain": "Villi increase surface area 10-fold; microvilli increase it another 20-40 fold; total combined increase is approximately 300-600 fold compared to a flat epithelium.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which nutrient is primarily absorbed in the duodenum and jejunum of the small intestine?",
+          "options": [
+            "Water",
+            "Glucose and amino acids",
+            "Vitamin B12 (cobalamin)",
+            "Bile salts"
           ],
           "answer": 1,
-          "topic": "surface-area",
-          "explain": "Circular folds are ridges of mucosa and submucosa; villi are mucosal projections only; microvilli are on epithelial cell surfaces.",
+          "topic": "small-intestine-anatomy",
+          "explain": "Glucose and amino acids (products of carbohydrate and protein digestion) are actively absorbed in the duodenum and jejunum. Other nutrients are absorbed further along.",
           "difficulty": "medium"
         },
         {
-          "q": "If the gross surface area of the small intestine is ~0.33 m\u00b2, what is the true absorptive surface area after accounting for folds, villi, and microvilli?",
+          "q": "What is the primary role of the intestinal epithelial cells in absorption?",
           "options": [
-            "~3 m\u00b2",
-            "~33 m\u00b2",
-            "~180\u2013200 m\u00b2 (tennis court-sized)",
-            "~2000 m\u00b2"
+            "Secrete digestive enzymes",
+            "Protect against pathogens",
+            "Transport nutrients from the lumen into the bloodstream",
+            "Produce mucus"
           ],
           "answer": 2,
-          "topic": "surface-area",
-          "explain": "Circular folds, villi, and microvilli amplify surface area ~600-fold, increasing it from 0.33 m\u00b2 to ~180\u2013200 m\u00b2.",
-          "difficulty": "hard"
+          "topic": "small-intestine-anatomy",
+          "explain": "Enterocytes (epithelial cells) have apical membranes (facing the lumen) with transporters and basolateral membranes (facing the blood) to actively move absorbed nutrients across.",
+          "difficulty": "easy"
         },
         {
-          "q": "Which nutrient is absorbed primarily via active transport at the apical membrane?",
+          "q": "Which absorption mechanism is used for glucose in the small intestine?",
           "options": [
-            "Fructose",
-            "Fatty acids",
-            "Glucose (via SGLT1)",
-            "Water"
+            "Simple diffusion",
+            "Facilitated diffusion",
+            "Active transport (SGLT1) coupled with sodium ions",
+            "Pinocytosis"
           ],
           "answer": 2,
           "topic": "absorption-mechanisms",
-          "explain": "SGLT1 is a Na+-glucose symporter (secondary active transport). Fructose uses facilitated diffusion (GLUT5); fatty acids use simple diffusion.",
-          "difficulty": "hard"
-        },
-        {
-          "q": "GLUT2, a glucose transporter at the basolateral membrane, mediates:",
-          "options": [
-            "Active transport into the cell",
-            "Exit of glucose from the epithelial cell into blood",
-            "Entry of glucose from the lumen",
-            "Absorption of fructose"
-          ],
-          "answer": 1,
-          "topic": "absorption-mechanisms",
-          "explain": "GLUT2 is a facilitated diffusion transporter at the basolateral side, allowing glucose (and fructose) to exit the epithelial cell into blood.",
+          "explain": "Glucose is absorbed via SGLT1 (sodium-glucose transporter), which couples glucose uptake to sodium ion movement down its electrochemical gradient. This is active transport.",
           "difficulty": "medium"
         },
         {
-          "q": "Which of the following is a carrier (transporter) protein, NOT a channel?",
+          "q": "How are long-chain fatty acids (products of fat digestion) absorbed across the intestinal epithelium?",
           "options": [
-            "K+ leak channel",
-            "Voltage-gated Na+ channel",
-            "GLUT1 (glucose transporter)",
-            "Mechanically-gated ion channel"
-          ],
-          "answer": 2,
-          "topic": "absorption-mechanisms",
-          "explain": "GLUT1 is a carrier (facilitated diffusion); the others are channels. Channels only allow passive transport; carriers mediate both passive and active transport.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "Pancreatic proteases break proteins into amino acids and peptides. Which of the following is the FINAL step?",
-          "options": [
-            "Trypsin cleaves peptide bonds",
-            "Chymotrypsin cleaves peptide bonds",
-            "Brush-border peptidases (dipeptidases, tripeptidases) cleave small peptides to amino acids",
-            "Stomach pepsin completes digestion"
-          ],
-          "answer": 2,
-          "topic": "absorption-mechanisms",
-          "explain": "Pancreatic proteases generate peptides; brush-border peptidases complete hydrolysis to amino acids for absorption.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "Amino acids are absorbed via:",
-          "options": [
-            "Simple diffusion down their concentration gradient",
-            "Paracellular transport only",
-            "Active transport mechanisms similar to glucose (Na+-coupled)",
-            "Passive facilitated diffusion"
-          ],
-          "answer": 2,
-          "topic": "protein-absorption",
-          "explain": "Most amino acids are absorbed via active transport coupled to Na+ entry, similar to SGLT1-mediated glucose absorption.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "In fat absorption, the role of colipase is to:",
-          "options": [
-            "Emulsify lipids",
-            "Hydrolyze triglycerides",
-            "Bind to pancreatic lipase and help it act on emulsified fat droplets",
-            "Form micelles"
-          ],
-          "answer": 2,
-          "topic": "fat-absorption",
-          "explain": "Colipase is a cofactor that binds both lipase and fat droplets, positioning the enzyme properly on the emulsified fat surface for efficient hydrolysis.",
-          "difficulty": "hard"
-        },
-        {
-          "q": "Micelles are formed by:",
-          "options": [
-            "Pancreatic lipase acting on triglycerides",
-            "Bile salts surrounding lipid digestion products",
-            "Epithelial cells during lipid absorption",
-            "The liver to transport lipids"
+            "By simple diffusion into the epithelial cell",
+            "By formation of micelles with bile salts, then passive diffusion into cells",
+            "By active transport using ATP",
+            "By phagocytosis"
           ],
           "answer": 1,
           "topic": "fat-absorption",
-          "explain": "Bile salts aggregate around monoglycerides and fatty acids to form micelles (amphipathic structures with hydrophobic cores), facilitating their approach to the brush border.",
+          "explain": "Bile salts form micelles around fatty acids and monoglycerides. These micelles approach the brush border, and fatty acids passively diffuse into enterocytes.",
           "difficulty": "medium"
         },
         {
-          "q": "Why are fats packaged into chylomicrons before absorption?",
+          "q": "What happens to absorbed fatty acids inside the intestinal epithelial cell?",
           "options": [
-            "To increase their solubility for packaging and transport",
-            "To prevent them from being re-digested by lipase",
-            "To allow absorption via simple diffusion",
-            "To slow down fat absorption"
+            "They are immediately released into the bloodstream",
+            "They are re-esterified into triglycerides and packaged into chylomicrons",
+            "They are converted to glucose",
+            "They are stored as glycogen"
+          ],
+          "answer": 1,
+          "topic": "fat-absorption",
+          "explain": "Enterocytes re-synthesize triglycerides from absorbed fatty acids and monoglycerides, package them into chylomicrons with fat-soluble vitamins and cholesterol, then release them into the lymphatic system.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following vitamins requires bile salts for absorption?",
+          "options": [
+            "Vitamin C",
+            "Vitamin B1 (thiamine)",
+            "Vitamins A, D, E, K (fat-soluble)",
+            "Vitamin B12 (cobalamin)"
+          ],
+          "answer": 2,
+          "topic": "fat-absorption",
+          "explain": "Fat-soluble vitamins (A, D, E, K) are incorporated into micelles along with fatty acids. Without bile salts, their absorption is severely impaired.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Where in the small intestine is vitamin B12 (cobalamin) primarily absorbed?",
+          "options": [
+            "Duodenum",
+            "Jejunum",
+            "Terminal ileum",
+            "Throughout the small intestine"
+          ],
+          "answer": 2,
+          "topic": "small-intestine-anatomy",
+          "explain": "Vitamin B12 is specifically absorbed in the terminal ileum through a receptor-mediated process involving intrinsic factor (from the stomach). This is a unique, specialized absorption site.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following mechanisms explains why the large intestine absorbs water so efficiently?",
+          "options": [
+            "The large intestine has more villi than the small intestine",
+            "Water is actively pumped from the lumen into the blood",
+            "Osmotic gradients created by sodium and chloride absorption drive water reabsorption",
+            "The large intestine secretes additional water to stimulate absorption"
+          ],
+          "answer": 2,
+          "topic": "large-intestine",
+          "explain": "The large intestine absorbs sodium and chloride via active transport and exchange mechanisms. This creates an osmotic gradient that drives water reabsorption via aquaporins (water channels).",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Approximately how much water is absorbed by the large intestine per day?",
+          "options": [
+            "0.5 L",
+            "1-2 L",
+            "5-6 L",
+            "10+ L"
+          ],
+          "answer": 2,
+          "topic": "large-intestine",
+          "explain": "The large intestine absorbs approximately 5-6 liters of water daily. Without this absorption, severe diarrhea would result. This makes the large intestine critical for water homeostasis.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "What is the primary role of colonic bacteria in the large intestine?",
+          "options": [
+            "Digest proteins completely",
+            "Produce short-chain fatty acids (SCFAs) by fermenting undigested carbohydrates",
+            "Synthesize vitamin K",
+            "Both B and C"
+          ],
+          "answer": 3,
+          "topic": "large-intestine",
+          "explain": "Colonic bacteria ferment undigestible carbohydrates (fiber) to produce SCFAs (butyrate, propionate, acetate), which nourish colonocytes. Bacteria also synthesize vitamin K and some B vitamins.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which electrolytes are actively reabsorbed by the large intestine?",
+          "options": [
+            "Calcium and magnesium only",
+            "Sodium, chloride, and potassium",
+            "Bicarbonate only",
+            "Phosphate and sulfate"
+          ],
+          "answer": 1,
+          "topic": "large-intestine",
+          "explain": "The large intestine actively absorbs sodium via epithelial sodium channels (ENaC) and the sodium-chloride cotransporter. Potassium reabsorption also occurs. This maintains electrolyte balance.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "A patient with diarrhea has dramatically increased stool frequency and water loss. Which absorption defect is occurring?",
+          "options": [
+            "Failure to absorb glucose in the small intestine",
+            "Reduced water reabsorption in the large intestine due to osmotic or secretory factors",
+            "Lack of pancreatic bicarbonate",
+            "Absence of bile salt circulation"
+          ],
+          "answer": 1,
+          "topic": "large-intestine",
+          "explain": "Diarrhea indicates impaired water reabsorption (osmotic diarrhea: unabsorbed solutes retain water; secretory: excess electrolyte secretion). Normal large intestine absorption is critical for stool consistency.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "How do amino acids and dipeptides enter intestinal epithelial cells after protein digestion?",
+          "options": [
+            "Simple diffusion only",
+            "Active transport via specific amino acid transporters and peptide transporters (PepT1)",
+            "Facilitated diffusion only",
+            "Pinocytosis"
+          ],
+          "answer": 1,
+          "topic": "absorption-mechanisms",
+          "explain": "Amino acids use specific transporters (e.g., neutral, acidic, basic amino acid transporters). Dipeptides and tripeptides use PepT1 (proton-coupled cotransporter). Both are active transport mechanisms.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Why is the terminal ileum particularly important for nutrient absorption despite being only 1-2 meters long?",
+          "options": [
+            "It has more villi than other regions",
+            "It is the site of vitamin B12 absorption and terminal iron absorption",
+            "It secretes most of the digestive enzymes",
+            "It is where most carbohydrate digestion occurs"
+          ],
+          "answer": 1,
+          "topic": "small-intestine-anatomy",
+          "explain": "The terminal ileum is the specialized site for vitamin B12 (via intrinsic factor receptor) and iron absorption. It's also where remaining nutrients are absorbed before reaching the large intestine.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "An exam trap about intestinal absorption: Which statement is INCORRECT?",
+          "options": [
+            "Monosaccharides are absorbed by active transport",
+            "Fat-soluble vitamins require bile salts for absorption",
+            "Water absorption in the large intestine depends exclusively on osmotic gradients from electrolyte absorption",
+            "Short-chain fatty acids from bacterial fermentation are absorbed by colonocytes"
+          ],
+          "answer": 2,
+          "topic": "absorption-mechanisms",
+          "explain": "Exam trap: While electrolyte absorption drives water absorption, tight junctions and aquaporins (water channels) are also essential. Water can't be absorbed if the epithelial barrier is damaged.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which absorption process would be most severely impaired if the intestinal epithelium were damaged (e.g., in celiac disease or inflammatory bowel disease)?",
+          "options": [
+            "Absorption of fat-soluble vitamins only",
+            "Absorption of water-soluble vitamins only",
+            "Absorption of ALL nutrients due to reduced surface area and transport capacity",
+            "Absorption of electrolytes only"
+          ],
+          "answer": 2,
+          "topic": "absorption-intro",
+          "explain": "Damage to the intestinal epithelium (flattened villi, reduced surface area, damaged transporters) impairs absorption of all nutrients: proteins, carbohydrates, fats, vitamins, minerals, and water.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "What is the functional significance of the mucus layer coating the large intestine?",
+          "options": [
+            "Aids in nutrient absorption",
+            "Protects the epithelium from bacterial acid and abrasive fecal matter",
+            "Increases surface area for absorption",
+            "Neutralizes stomach acid"
+          ],
+          "answer": 1,
+          "topic": "large-intestine",
+          "explain": "Mucus (produced by goblet cells) creates a lubricant layer that protects colonocytes from bacteria, acid produced by fermentation, and mechanical trauma from fecal contents.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "How does the movement of sodium ions from the intestinal lumen into enterocytes create a driving force for other nutrient absorption?",
+          "options": [
+            "Sodium activates enzyme cofactors",
+            "Sodium directly binds to glucose transporters",
+            "Sodium creates an electrochemical gradient that drives secondary active transport of glucose and amino acids",
+            "Sodium neutralizes gastric acid"
+          ],
+          "answer": 2,
+          "topic": "absorption-mechanisms",
+          "explain": "Sodium's movement down its gradient (via Na/K-ATPase on the basolateral side) energizes secondary active transporters (SGLT1 for glucose, PepT1 for peptides) that couple nutrient uptake to sodium co-transport.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which organ system is primarily responsible for transporting absorbed lipids (chylomicrons) away from the small intestine?",
+          "options": [
+            "Arterial blood",
+            "Portal blood",
+            "Lymphatic system",
+            "Cerebrospinal fluid"
+          ],
+          "answer": 2,
+          "topic": "fat-absorption",
+          "explain": "Chylomicrons are too large to enter blood capillaries; they enter lacteals (lymphatic capillaries) and travel via the lymphatic system to the bloodstream, bypassing first-pass hepatic processing.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is an important difference between the absorption of short-chain carbohydrates (glucose) versus long-chain fatty acids in terms of transport into the blood?",
+          "options": [
+            "Glucose enters the portal blood; fatty acids enter the lymphatic system as chylomicrons",
+            "Both enter the portal blood immediately",
+            "Both enter the lymphatic system initially",
+            "Glucose is absorbed by the large intestine; fatty acids by the small intestine"
           ],
           "answer": 0,
-          "topic": "fat-absorption",
-          "explain": "Fats are re-esterified in the epithelial cell (reversing lipolysis) to form chylomicrons\u2014large, lipoprotein particles that can enter lacteals and travel via lymph.",
+          "topic": "absorption-intro",
+          "explain": "Water-soluble nutrients (glucose, amino acids) go directly into portal blood → liver. Lipids go into lymphatic system as chylomicrons, eventually reaching the bloodstream and tissues before the liver.",
           "difficulty": "hard"
         },
         {
-          "q": "Chylomicrons enter the bloodstream via:",
+          "q": "In the large intestine, which microbial metabolite serves as a preferred fuel source for colonocytes?",
           "options": [
-            "Portal blood directly",
-            "Blood capillaries in the villi",
-            "Lacteals, which drain into the lymphatic system",
-            "The liver"
+            "Methane",
+            "Hydrogen sulfide",
+            "Butyrate (short-chain fatty acid)",
+            "Ethanol"
           ],
           "answer": 2,
-          "topic": "fat-absorption",
-          "explain": "Chylomicrons are too large for blood capillaries; they enter lacteals (lymph) and eventually reach blood via the thoracic duct, bypassing first-pass hepatic metabolism.",
+          "topic": "large-intestine",
+          "explain": "Butyrate is produced by bacterial fermentation and is the preferred fuel for colonocytes. It provides ~10% of the body's energy. This is why dietary fiber and healthy microbiota are important.",
           "difficulty": "hard"
         },
         {
-          "q": "Which vitamin is specifically absorbed in the ileum?",
+          "q": "Which of the following would cause decreased absorption in the small intestine? (Select the MOST comprehensive answer)",
           "options": [
-            "Vitamin A",
-            "Vitamin B12",
-            "Vitamin C",
-            "Vitamin E"
-          ],
-          "answer": 1,
-          "topic": "small-intestine-anatomy",
-          "explain": "The ileum has specific receptors for intrinsic factor\u2013B12 complex, enabling B12 absorption in this region. Bile salts for fat absorption are also reabsorbed in the ileum.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "The large intestine (colon) is distinguished from the small intestine by:",
-          "options": [
-            "The presence of villi",
-            "Lack of microvilli",
-            "Wider diameter and the absence of villi",
-            "A longer length"
-          ],
-          "answer": 2,
-          "topic": "large-intestine",
-          "explain": "The colon is wider (~5\u20138 cm vs. ~4 cm for small intestine), shorter (~1.5 m total), and lacks villi (though retains microvilli). It absorbs mainly water and electrolytes.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "Which of the following is reabsorbed in the large intestine?",
-          "options": [
-            "Undigested proteins",
-            "Glucose",
-            "Water and electrolytes (Na+, Cl\u2212)",
-            "Amino acids"
-          ],
-          "answer": 2,
-          "topic": "large-intestine",
-          "explain": "The colon reabsorbs water (100\u2013200 mL daily out of 7\u201310 L secreted) and electrolytes; it does not digest or absorb proteins, glucose, or amino acids.",
-          "difficulty": "easy"
-        },
-        {
-          "q": "Short-chain fatty acids (SCFAs) in the colon are produced by:",
-          "options": [
-            "Pancreatic lipase acting on dietary fats",
-            "Bacterial fermentation of undigested carbohydrates",
-            "Epithelial cells during water reabsorption",
-            "The liver as metabolic byproducts"
-          ],
-          "answer": 1,
-          "topic": "large-intestine",
-          "explain": "Colonic bacteria ferment undigested carbohydrates (fiber), producing SCFAs (acetate, butyrate, propionate), which are absorbed as an energy source.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "Which of the following CANNOT be absorbed if the small intestine is severely damaged?",
-          "options": [
-            "Glucose (if digested)",
-            "Amino acids (if digested)",
-            "All nutrients requiring prior digestion",
+            "Reduced bile salt circulation",
+            "Pancreatic enzyme deficiency",
+            "Intestinal epithelial damage",
             "All of the above"
           ],
           "answer": 3,
           "topic": "absorption-intro",
-          "explain": "Absorption requires both digestion AND an intact epithelium. Severe small intestine damage would impair absorption of all nutrients, regardless of prior digestion.",
+          "explain": "All three factors are critical: bile for fat absorption, enzymes for nutrient breakdown, and epithelial integrity for transport. Loss of any one impairs absorption; combined loss is catastrophic.",
           "difficulty": "hard"
         },
         {
-          "q": "A patient with bile acid malabsorption (due to ileal disease) would likely experience:",
+          "q": "Why are villi and microvilli essential for nutrient absorption despite taking up cellular energy?",
           "options": [
-            "Protein malabsorption",
-            "Fat malabsorption (steatorrhea)",
-            "Carbohydrate malabsorption",
-            "Water malabsorption"
+            "They increase gastric acid production",
+            "They increase surface area for transport, allowing adequate absorption despite short transit time (3-5 hours)",
+            "They neutralize stomach acid",
+            "They prevent bacterial overgrowth"
           ],
           "answer": 1,
-          "topic": "bile-role",
-          "explain": "The ileum reabsorbs bile acids (~95%) for recycling. Loss of this recycling impairs bile salt-dependent fat emulsification and absorption.",
+          "topic": "absorption-intro",
+          "explain": "The small intestine transit time is only 3-5 hours. The massive surface area increase (villi + microvilli = 600-fold) allows complete nutrient extraction before food moves to the colon.",
           "difficulty": "hard"
         },
         {
-          "q": "The liver's role in fat digestion is to:",
+          "q": "How is iron absorption uniquely regulated in the small intestine?",
           "options": [
-            "Produce pancreatic lipase",
-            "Synthesize and secrete bile salts",
-            "Hydrolyze triglycerides in the stomach",
-            "Transport glucose to the small intestine"
+            "Iron is actively transported regardless of body iron status",
+            "Iron absorption is regulated by hepcidin, which responds to body iron stores",
+            "The large intestine absorbs excess iron to prevent overload",
+            "Iron is always excreted in bile"
           ],
           "answer": 1,
-          "topic": "liver-role",
-          "explain": "The liver synthesizes bile (including bile salts) continuously; the gallbladder stores and concentrates it. Bile (not synthesized lipase) is the liver's contribution to fat digestion.",
-          "difficulty": "medium"
+          "topic": "small-intestine-anatomy",
+          "explain": "Hepcidin (produced by the liver) regulates intestinal iron absorption. When iron stores are high, hepcidin blocks iron absorption by internalization of ferroportin. This prevents iron overload.",
+          "difficulty": "hard"
         },
         {
-          "q": "If a patient's pancreatic enzyme secretion is severely reduced, which nutrient class would be MOST affected?",
+          "q": "Which region of the small intestine has the highest concentration of Peyer's patches?",
           "options": [
-            "Carbohydrates (due to low amylase)",
-            "Proteins (due to low proteases)",
-            "Fats (due to low lipase)",
-            "Vitamins"
+            "Duodenum",
+            "Jejunum",
+            "Terminal ileum",
+            "Pyloric sphincter"
           ],
           "answer": 2,
-          "topic": "pancreas-role",
-          "explain": "Although all macronutrients would be affected, fats depend almost entirely on pancreatic lipase; carbohydrates and proteins have some intestinal compensation. Lipase deficiency is most severe.",
-          "difficulty": "hard"
-        },
-        {
-          "q": "Exam-style: A patient with celiac disease has villous atrophy (flattening of intestinal villi). Which of the following would occur?",
-          "options": [
-            "Decreased surface area for absorption",
-            "Inability to digest gluten",
-            "Increased mucus production",
-            "Loss of pancreatic enzyme secretion"
-          ],
-          "answer": 0,
-          "topic": "surface-area",
-          "explain": "Villous atrophy dramatically reduces absorptive surface area. While the patient cannot properly tolerate gluten (triggering immune damage), the primary consequence is malabsorption due to reduced surface area.",
-          "difficulty": "hard"
-        },
-        {
-          "q": "Which of the following is correctly paired?",
-          "options": [
-            "Duodenum: major site of nutrient absorption",
-            "Jejunum: ~40% of small intestine length; major absorption",
-            "Ileum: ~26 cm long; neutralization of stomach acid",
-            "Colon: villi for nutrient absorption"
-          ],
-          "answer": 1,
           "topic": "small-intestine-anatomy",
-          "explain": "The jejunum is ~2.5 m (~40%) and is a major absorption site. The duodenum is short (5%); the ileum is long (55%). The colon lacks villi.",
+          "explain": "The terminal ileum has the highest density of Peyer's patches (lymphoid tissue). These sample intestinal antigens and mount immune responses, protecting against pathogens while allowing nutrient absorption.",
           "difficulty": "medium"
         },
         {
-          "q": "The transporters SGLT1 and GLUT5 are located on the ______ membrane of the intestinal epithelial cell.",
+          "q": "How do intestinal secretions (mucus, water, electrolytes) contribute to digestion and absorption?",
           "options": [
-            "Apical (luminal)",
-            "Basolateral",
-            "Either apical or basolateral",
-            "Mitochondrial"
-          ],
-          "answer": 0,
-          "topic": "absorption-mechanisms",
-          "explain": "SGLT1 (glucose + Na+) and GLUT5 (fructose) are on the apical side, facing the lumen. GLUT2 (all three sugars) is on the basolateral side.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "In the small intestine, amino acids and glucose both use Na+-coupled active transport. Why is Na+ cotransportation necessary?",
-          "options": [
-            "Na+ provides the chemical energy for transport",
-            "The Na+ gradient (high outside, low inside) drives the uphill transport of glucose/amino acids",
-            "Na+ neutralizes the negative charge of these molecules",
-            "Na+ is the primary absorptive nutrient"
-          ],
-          "answer": 1,
-          "topic": "absorption-mechanisms",
-          "explain": "The Na+/K+ ATPase maintains a steep Na+ gradient. Secondary active transporters use this gradient to drive uphill nutrient absorption.",
-          "difficulty": "hard"
-        },
-        {
-          "q": "Why is it necessary for lipids to be re-esterified in the epithelial cell AFTER being hydrolyzed by pancreatic lipase?",
-          "options": [
-            "To increase their energy content",
-            "To reduce their toxicity",
-            "To make them hydrophobic enough to be packaged into chylomicrons and enter lacteals",
-            "To prevent them from being re-digested"
+            "They slow nutrient absorption",
+            "They dilute nutrients and reduce absorption efficiency",
+            "They create the optimal pH and osmotic environment for enzyme action and nutrient dissolution",
+            "They are reabsorbed entirely by the large intestine with no net loss"
           ],
           "answer": 2,
-          "topic": "fat-absorption",
-          "explain": "Monoglycerides and fatty acids (products of lipolysis) are hydrophilic and cannot form large particles. Re-esterification makes them hydrophobic.",
+          "topic": "absorption-intro",
+          "explain": "Intestinal secretions (2 L/day) provide water for nutrient dissolution, electrolytes for osmotic balance, and mucus for lubrication. Most water is reabsorbed, but secretions are essential for absorption.",
           "difficulty": "hard"
         },
         {
-          "q": "A patient with severely damaged duodenum might experience malabsorption of all nutrients. However, if only the duodenum were affected, which nutrient would be LEAST affected?",
+          "q": "What is the relationship between intestinal motility and nutrient absorption?",
           "options": [
-            "Amino acids",
-            "Glucose",
-            "Fats",
-            "Vitamins"
+            "Faster motility increases absorption by exposing more intestinal surface",
+            "Slower motility decreases absorption due to reduced time in intestine",
+            "Motility allows food to mix with digestive juices and maintain contact with absorptive epithelium",
+            "Motility has no direct relationship to absorption efficiency"
           ],
-          "answer": 0,
-          "topic": "small-intestine-anatomy",
-          "explain": "The jejunum and ileum can absorb amino acids and glucose. Fats require bile and lipase (duodenal entry). Duodenal damage least problematic for protein/carbs.",
+          "answer": 2,
+          "topic": "absorption-intro",
+          "explain": "Segmentation and peristalsis mix chyme with digestive juices and move it along slowly enough for absorption (3-5 hours transit time). Too-fast or too-slow motility impairs absorption.",
           "difficulty": "hard"
         },
         {
-          "q": "Exam-style: Why would a patient with Crohn's disease affecting the ileum be at high risk for vitamin B12 deficiency?",
+          "q": "Why does the large intestine primarily absorb water and electrolytes rather than nutrients?",
           "options": [
-            "The ileum is the only site of B12 absorption (via intrinsic factor\u2013B12 receptor)",
-            "B12 is synthesized in the ileum",
-            "The ileum absorbs bile acids needed for B12 absorption",
-            "The ileum produces intrinsic factor"
+            "Nutrients have already been absorbed in the small intestine",
+            "Large intestine epithelial cells lack nutrient transporters",
+            "Water and electrolytes are more important for survival than nutrients",
+            "All of the above"
           ],
           "answer": 0,
-          "topic": "small-intestine-anatomy",
-          "explain": "The ileum has specific receptors for the intrinsic factor\u2013B12 complex. Ileal damage or resection prevents B12 absorption.",
-          "difficulty": "hard"
+          "topic": "large-intestine",
+          "explain": "By the time chyme reaches the large intestine, ~90% of carbs, proteins, and fats have been absorbed. The large intestine's role is to salvage remaining water and electrolytes, and reabsorb short-chain fatty acids from fermentation.",
+          "difficulty": "medium"
         }
       ]
     },
     {
       "id": 9,
-      "title": "Lecture 9: Neuroscience I \u2014 Neurons, Glia & Membrane Potentials",
+      "title": "Lecture 9: Neuroscience I — Neurons, Glia & Membrane Potentials",
       "questions": [
         {
           "q": "Ion channels are distinguished from other membrane transport proteins by:",
@@ -1236,17 +1236,17 @@
           "q": "What is the approximate resting membrane potential in a typical neuron?",
           "options": [
             "+70 mV",
-            "\u201370 mV",
+            "–70 mV",
             "+30 mV",
             "0 mV"
           ],
           "answer": 1,
           "topic": "membrane-potential",
-          "explain": "The resting potential is ~\u201370 mV (inside negative). This is near the K+ equilibrium potential (~\u201390 mV) but slightly less negative due to some Na+ permeability.",
+          "explain": "The resting potential is ~–70 mV (inside negative). This is near the K+ equilibrium potential (~–90 mV) but slightly less negative due to some Na+ permeability.",
           "difficulty": "easy"
         },
         {
-          "q": "The K+ equilibrium potential is ~\u201390 mV. If a neuron's resting potential is \u201370 mV (less negative), this indicates:",
+          "q": "The K+ equilibrium potential is ~–90 mV. If a neuron's resting potential is –70 mV (less negative), this indicates:",
           "options": [
             "The neuron is at K+ equilibrium",
             "The membrane is more permeable to Na+ than K+ at rest",
@@ -1255,7 +1255,7 @@
           ],
           "answer": 1,
           "topic": "membrane-potential",
-          "explain": "If resting potential (\u201370 mV) is less negative than K+ equilibrium (\u201390 mV), it means Na+ (equilibrium ~+60 mV) is contributing\u2014the membrane is slightly permeable to Na+.",
+          "explain": "If resting potential (–70 mV) is less negative than K+ equilibrium (–90 mV), it means Na+ (equilibrium ~+60 mV) is contributing—the membrane is slightly permeable to Na+.",
           "difficulty": "hard"
         },
         {
@@ -1346,7 +1346,7 @@
           ],
           "answer": 1,
           "topic": "ap-propagation",
-          "explain": "Continuous conduction requires the entire membrane to regenerate the action potential at each step (~0.5\u20132 m/s). Saltatory conduction skips myelinated regions (~1\u2013100 m/s).",
+          "explain": "Continuous conduction requires the entire membrane to regenerate the action potential at each step (~0.5–2 m/s). Saltatory conduction skips myelinated regions (~1–100 m/s).",
           "difficulty": "medium"
         },
         {
@@ -1470,13 +1470,13 @@
           "q": "Which ion equilibrium potential is closest to the resting membrane potential?",
           "options": [
             "Na+ equilibrium (~+60 mV)",
-            "K+ equilibrium (~\u201390 mV)",
-            "Cl\u2013 equilibrium (~\u201370 mV)",
+            "K+ equilibrium (~–90 mV)",
+            "Cl– equilibrium (~–70 mV)",
             "Ca2+ equilibrium (~+120 mV)"
           ],
           "answer": 1,
           "topic": "membrane-potential",
-          "explain": "The resting potential (~\u201370 mV) is closest to K+ equilibrium (~\u201390 mV) because the membrane is most permeable to K+ at rest, though Na+ permeability shifts it slightly less negative.",
+          "explain": "The resting potential (~–70 mV) is closest to K+ equilibrium (~–90 mV) because the membrane is most permeable to K+ at rest, though Na+ permeability shifts it slightly less negative.",
           "difficulty": "hard"
         },
         {
@@ -1519,7 +1519,7 @@
           "difficulty": "medium"
         },
         {
-          "q": "The fact that the resting potential (~\u201370 mV) is less negative than the K+ equilibrium potential (~\u201390 mV) indicates:",
+          "q": "The fact that the resting potential (~–70 mV) is less negative than the K+ equilibrium potential (~–90 mV) indicates:",
           "options": [
             "The cell has lost K+ to the outside",
             "Na+ permeability contributes to the resting potential",
@@ -1587,7 +1587,7 @@
     },
     {
       "id": 10,
-      "title": "Lecture 10: Neuroscience II \u2014 Synaptic Transmission & Neural Circuits",
+      "title": "Lecture 10: Neuroscience II — Synaptic Transmission & Neural Circuits",
       "questions": [
         {
           "q": "A sensory receptor is best defined as:",
@@ -1638,7 +1638,7 @@
           ],
           "answer": 1,
           "topic": "transduction",
-          "explain": "Adaptation is a reduction in receptor response to sustained stimuli\u2014the receptor produces a smaller signal even though the stimulus continues, allowing detection of changes.",
+          "explain": "Adaptation is a reduction in receptor response to sustained stimuli—the receptor produces a smaller signal even though the stimulus continues, allowing detection of changes.",
           "difficulty": "medium"
         },
         {
@@ -1651,7 +1651,7 @@
           ],
           "answer": 2,
           "topic": "transduction",
-          "explain": "Adaptation is a molecular property of the receptor itself\u2014sustained stimulation triggers negative feedback (phosphorylation, desensitization, channel closure) that reduces the response.",
+          "explain": "Adaptation is a molecular property of the receptor itself—sustained stimulation triggers negative feedback (phosphorylation, desensitization, channel closure) that reduces the response.",
           "difficulty": "hard"
         },
         {
@@ -1664,7 +1664,7 @@
           ],
           "answer": 0,
           "topic": "transmission-pathways",
-          "explain": "The canonical pathway: first-order (sensory receptors/axons), second-order (spinal cord/brainstem), third-order (thalamus) \u2192 cortex.",
+          "explain": "The canonical pathway: first-order (sensory receptors/axons), second-order (spinal cord/brainstem), third-order (thalamus) → cortex.",
           "difficulty": "medium"
         },
         {
@@ -1703,7 +1703,7 @@
           ],
           "answer": 2,
           "topic": "sensory-coding",
-          "explain": "Phase locking in auditory neurons uses timing to encode sound location\u2014neurons fire in synchrony with specific phases of sound waves, providing timing information.",
+          "explain": "Phase locking in auditory neurons uses timing to encode sound location—neurons fire in synchrony with specific phases of sound waves, providing timing information.",
           "difficulty": "hard"
         },
         {
@@ -1716,7 +1716,7 @@
           ],
           "answer": 0,
           "topic": "sensory-coding",
-          "explain": "The absolute refractory period sets a limit on maximum firing frequency (~500\u20131000 Hz max, but typically lower). Adaptation and transmitter limits also exist but are secondary.",
+          "explain": "The absolute refractory period sets a limit on maximum firing frequency (~500–1000 Hz max, but typically lower). Adaptation and transmitter limits also exist but are secondary.",
           "difficulty": "hard"
         },
         {
@@ -1807,7 +1807,7 @@
           ],
           "answer": 1,
           "topic": "synaptic-transmission",
-          "explain": "GABA (CNS, \u810a\u9ad3) and glycine (spinal cord, \u810a\u9ad3) are the primary inhibitory neurotransmitters.",
+          "explain": "GABA (CNS, 脊髓) and glycine (spinal cord, 脊髓) are the primary inhibitory neurotransmitters.",
           "difficulty": "easy"
         },
         {
@@ -1872,7 +1872,7 @@
           ],
           "answer": 1,
           "topic": "transduction",
-          "explain": "Many receptors use G-protein cascades (\u2192 second messengers \u2192 ion channels). Blocking this cascade prevents ion channel opening and receptor potential generation.",
+          "explain": "Many receptors use G-protein cascades (→ second messengers → ion channels). Blocking this cascade prevents ion channel opening and receptor potential generation.",
           "difficulty": "hard"
         },
         {
@@ -1885,14 +1885,14 @@
           ],
           "answer": 1,
           "topic": "transmission-pathways",
-          "explain": "First-order: peripheral receptor \u2192 dorsal column (ascending ipsilaterally); second-order: medial lemniscus (crossing in medulla) \u2192 thalamus; third-order: thalamus \u2192 cortex.",
+          "explain": "First-order: peripheral receptor → dorsal column (ascending ipsilaterally); second-order: medial lemniscus (crossing in medulla) → thalamus; third-order: thalamus → cortex.",
           "difficulty": "hard"
         },
         {
-          "q": "Which of the following is a G-protein\u2013coupled receptor mechanism?",
+          "q": "Which of the following is a G-protein–coupled receptor mechanism?",
           "options": [
             "Direct ion channel opening by neurotransmitter",
-            "Receptor protein \u2192 G protein \u2192 adenylyl cyclase \u2192 cAMP \u2192 ion channel opening",
+            "Receptor protein → G protein → adenylyl cyclase → cAMP → ion channel opening",
             "Receptor protein forms a channel directly",
             "Neurotransmitter opening a ligand-gated ion channel"
           ],
