@@ -6,423 +6,423 @@
       "title": "Lecture 3: Moral Relativism",
       "questions": [
         {
-          "q": "On moral relativism (MR), what is an action A performed by a member of culture C if it is required by C's basic moral norms?",
+          "q": "In the relativist theory of right conduct, an action A by a member of culture C is OBLIGATORY iff:",
           "options": [
-            "Optional",
-            "Wrong",
-            "Obligatory",
-            "Supererogatory",
-            "Forbidden"
+            "A produces good consequences for C",
+            "A is required by the basic moral norms of C",
+            "A is permitted by some other culture",
+            "A maximises overall utility",
+            "A is prohibited by C's norms"
           ],
-          "answer": 2,
+          "answer": 1,
           "topic": "right-conduct",
-          "explain": "MR defines obligatory acts as those required by the basic moral norms of the agent's culture. Wrong = prohibited; optional = neither required nor prohibited.",
+          "explain": "MR fixes obligatoriness by what C's basic moral norms REQUIRE. Other options describe alternative theories.",
           "difficulty": "easy"
         },
         {
           "q": "Which best states Moral Relativism (MR) as defined in the lecture?",
           "options": [
-            "No moral norms are correct.",
-            "All moral disagreements are merely apparent.",
-            "What is right or wrong for members of a culture is ultimately determined by the basic moral norms of their culture.",
-            "All cultures share the same moral norms.",
-            "Moral norms apply to individuals only."
+            "What is right or wrong for the members of a culture is ultimately determined by the basic moral norms of their culture",
+            "No moral claims are ever correct",
+            "Every culture accepts the same basic moral norms",
+            "Moral norms apply only to isolated individuals, never to cultures",
+            "Moral claims report mere personal preference"
           ],
-          "answer": 2,
+          "answer": 0,
           "topic": "right-conduct",
-          "explain": "MR makes a culture's basic moral norms the ultimate determinant of right and wrong for its members.",
+          "explain": "MR's core thesis: the basic moral norms of a culture are the ultimate standard for that culture.",
           "difficulty": "easy"
         },
         {
-          "q": "Which best states Moral Objectivism (MO)?",
+          "q": "Moral Objectivism (MO) holds that:",
           "options": [
-            "All moral norms are accepted by all cultures.",
-            "At least some moral norms are correct independently of what any culture accepts and apply to all cultures.",
-            "Moral norms vary across cultures.",
-            "Moral norms are private preferences.",
-            "Moral norms reduce to natural laws."
+            "All cultures in fact accept the same norms",
+            "At least some moral norms are correct independently of what any culture accepts and apply to all cultures",
+            "Only one culture has the correct moral code",
+            "Moral norms reduce to natural regularities",
+            "Moral norms are determined by majority vote within a culture"
           ],
           "answer": 1,
           "topic": "moral-objectivism",
-          "explain": "MO holds that at least some norms are objectively true for all cultures regardless of whether the cultures recognize them.",
+          "explain": "MO's hallmark is culture-INDEPENDENT correctness with universal scope.",
           "difficulty": "easy"
         },
         {
-          "q": "Which best characterizes the Context Sensitivity thesis (CS)?",
+          "q": "The Moral Diversity Thesis (MD) claims:",
           "options": [
-            "Right and wrong are entirely culture-dependent.",
-            "What one ought to do often depends on one's circumstances, including facts about one's culture.",
-            "No general moral principles exist.",
-            "Moral norms apply only to one's own culture.",
-            "Moral judgments are merely emotional."
+            "Every culture has its own dialect",
+            "Moral codes are uniform across cultures",
+            "The moral codes of some cultures include basic moral norms that conflict with those of other cultures, and such conflicts are widespread",
+            "Different cultures use different languages to express the same norms",
+            "Cultures sometimes disagree about non-moral facts"
           ],
-          "answer": 1,
-          "topic": "context-sensitivity",
-          "explain": "CS says context can affect what is right to do without making rightness itself culture-relative.",
-          "difficulty": "easy"
-        },
-        {
-          "q": "Why is CS not equivalent to MR?",
-          "options": [
-            "Because CS denies that morality varies.",
-            "Because CS is compatible with MO while MR is not.",
-            "Because CS is incompatible with MD.",
-            "Because CS applies only to individuals.",
-            "Because CS denies free will."
-          ],
-          "answer": 1,
-          "topic": "context-sensitivity",
-          "explain": "A single objective principle can prescribe different actions in different contexts; CS is therefore compatible with MO, whereas MR is not.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "In the swimmer example, why do you and the narrator have different obligations?",
-          "options": [
-            "Different cultures, different norms.",
-            "One principle ('help those in need when you can do so without serious risk') applies to both but yields different verdicts because of differing non-moral facts.",
-            "No principle applies to both.",
-            "Only the swimmer has any obligation; non-moral facts are irrelevant.",
-            "Each individual creates her own norms."
-          ],
-          "answer": 1,
-          "topic": "context-sensitivity",
-          "explain": "The same objective principle can issue different prescriptions because the non-moral facts (ability to swim) differ.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "Which best states the Moral Diversity thesis (MD)?",
-          "options": [
-            "All cultures' moral codes are identical.",
-            "The moral codes of some cultures include basic moral norms that conflict with those of other cultures, and such conflicts are widespread.",
-            "All moral disagreement is irresolvable.",
-            "Moral codes change over time.",
-            "Moral norms are imposed by power."
-          ],
-          "answer": 1,
+          "answer": 2,
           "topic": "moral-diversity",
-          "explain": "MD asserts that fundamental conflicts between cultures' basic moral norms are widespread.",
+          "explain": "MD has TWO components — conflict in BASIC norms, and that such conflict is WIDESPREAD.",
           "difficulty": "easy"
         },
         {
-          "q": "Does MR entail MD?",
+          "q": "Context Sensitivity (CS) says:",
           "options": [
-            "Yes, MR logically requires MD.",
-            "No, even if all cultures shared the same basic norms, MR could still be true.",
-            "Yes, but only for fundamental disagreements.",
-            "No, because MD is incoherent.",
-            "Only when MO is also false."
+            "What is right depends on majority opinion",
+            "What is right depends on the basic norms of a culture",
+            "All actions are right in some context",
+            "What is right or wrong for someone often depends on circumstances, including facts about their culture",
+            "Right and wrong are illusions"
+          ],
+          "answer": 3,
+          "topic": "context-sensitivity",
+          "explain": "CS is about circumstances; importantly it is COMPATIBLE with MO, unlike MR.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "What is the Principle of Tolerance as stated in the lecture?",
+          "options": [
+            "Cultures should compete openly",
+            "It is morally wrong for any culture to interfere with the moral practices of another culture",
+            "Tolerance is a personal virtue, not a moral rule",
+            "No culture should ever change its norms",
+            "All cultures are equally praiseworthy"
           ],
           "answer": 1,
+          "topic": "tolerance",
+          "explain": "The principle of tolerance is presented as a universal prohibition on cross-cultural interference.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "On MR, when a member of a culture publicly opposes its practice in order to reform its code, that reformer is:",
+          "options": [
+            "Morally heroic",
+            "Morally optional",
+            "In the wrong",
+            "Acting outside morality altogether",
+            "Necessarily correct"
+          ],
+          "answer": 2,
+          "topic": "moral-reformer",
+          "explain": "By MR, the reformer's act conflicts with C's current basic norms, so it is wrong by MR's own standard.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "In the relativist theory of right conduct, an action A is OPTIONAL iff:",
+          "options": [
+            "A is forbidden by some culture",
+            "A is neither required nor prohibited by the basic moral norms of C",
+            "A maximises utility",
+            "A is required by every culture",
+            "A is required by some culture"
+          ],
+          "answer": 1,
+          "topic": "right-conduct",
+          "explain": "Optional = neither obligatory nor wrong on C's code.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which of the following statements about MR and MD is correct?",
+          "options": [
+            "MR entails MD",
+            "MD entails MR",
+            "MR can be true even if all cultures happen to share the same basic norms",
+            "MR is identical to MD",
+            "MD is identical to CS"
+          ],
+          "answer": 2,
           "topic": "moral-diversity",
-          "explain": "The lecture uses the right-hand driving analogy: universal convergence on a norm is compatible with that norm still being merely conventional.",
-          "difficulty": "medium"
+          "explain": "Lecture analogy: everyone might drive on the right and it still be conventional. Universality of practice does not refute relativism.",
+          "difficulty": "easy"
         },
         {
-          "q": "Version 1 of the anthropologist's argument concludes MR from which premises?",
+          "q": "Which thinker's name is most closely associated with the formulation of the principle of utility?",
           "options": [
-            "MO and MD.",
-            "MD, the claim that MD entails no objective norms, and the claim that absence of objective norms entails MR.",
-            "CS alone.",
-            "The principle of tolerance.",
-            "Universal convergence of norms."
+            "Plato",
+            "Aquinas",
+            "Hobbes",
+            "Confucius",
+            "Bentham"
           ],
-          "answer": 1,
-          "topic": "anthropologist-v1",
-          "explain": "Version 1: MD → no objective norms → MR.",
-          "difficulty": "medium"
+          "answer": 4,
+          "topic": "right-conduct",
+          "explain": "Decoy/orientation question — Bentham is the utilitarian touchstone introduced in Lecture 5, included here as a recall distractor to keep MR from being confused with utilitarianism.",
+          "difficulty": "easy"
         },
         {
-          "q": "What is the challenge to premise 2 of Version 1 of the anthropologist's argument?",
+          "q": "The expert-swimmer-vs-non-swimmer beach example is used in the lecture to illustrate that:",
           "options": [
-            "P2 is incoherent.",
-            "Mere difference of belief does not imply there is no single correct belief — e.g., past disagreement about the shape of the earth.",
-            "P2 contradicts MO.",
-            "P2 misuses the term 'culture.'",
-            "P2 assumes psychological egoism."
+            "MR is true",
+            "Cultures all share basic norms",
+            "CS is not equivalent to MR — different actions can be required by a single objective principle when non-moral facts differ",
+            "Swimming is a moral obligation",
+            "Drowning children are not moral patients"
           ],
-          "answer": 1,
-          "topic": "challenge-p2",
-          "explain": "The earth-shape analogy shows that disagreement is consistent with there being a single correct answer.",
+          "answer": 2,
+          "topic": "context-sensitivity",
+          "explain": "The same objective norm ('help those in need when you can without serious risk') prescribes different actions to different agents.",
           "difficulty": "medium"
         },
         {
-          "q": "What is the challenge to premise 1 of Version 1 of the anthropologist's argument?",
+          "q": "In the lecture, a NON-FUNDAMENTAL moral disagreement is one in which:",
           "options": [
-            "MD is undefined.",
-            "Cross-cultural differences in moral belief can occur without fundamental moral disagreement — they may stem from different non-moral beliefs.",
-            "Cultures do not have moral codes.",
-            "Cultures are illusory.",
-            "The argument is circular."
+            "The parties accept different basic moral norms",
+            "The parties accept the SAME basic moral norm but differ in their non-moral beliefs",
+            "The parties have no real disagreement at all",
+            "Both parties are lying",
+            "Both parties believe contradictories simultaneously"
           ],
           "answer": 1,
           "topic": "challenge-p1",
-          "explain": "Two cultures can share the same basic norm and disagree only on non-moral facts — a nonfundamental disagreement.",
+          "explain": "Same norm + different non-moral beliefs (e.g., effects of capital punishment) — in principle resolvable by empirical evidence.",
           "difficulty": "medium"
         },
         {
-          "q": "In the capital-punishment example, why is the disagreement classified as nonfundamental?",
+          "q": "A FUNDAMENTAL moral disagreement is distinguished from a non-fundamental one by:",
           "options": [
-            "Because both parties share the same basic moral norm but disagree on the non-moral question of consequences.",
-            "Because neither party holds any moral principle.",
-            "Because capital punishment is morally neutral.",
-            "Because the parties belong to the same culture.",
-            "Because the disagreement is about the law, not morality."
+            "Its emotional intensity",
+            "Whether the parties speak the same language",
+            "Its resolvability by rational means — fundamental disagreements cannot be settled even with full agreement on non-moral facts",
+            "Whether it concerns punishment",
+            "Whether it concerns adults"
+          ],
+          "answer": 2,
+          "topic": "fundamental-disagreement",
+          "explain": "The criterion is resolvability: fundamental disagreements remain even after non-moral facts are agreed upon.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In the Anthropologist's Argument version 1, the most direct response to premise P2 ('if MD is true, no universal moral norms') is:",
+          "options": [
+            "Reject MR for being inconsistent",
+            "Note that mere difference of BELIEF over some issue does not imply absence of a single correct belief",
+            "Argue that MD is false",
+            "Show that CS holds",
+            "Show that the principle of tolerance is universal"
+          ],
+          "answer": 1,
+          "topic": "challenge-p2",
+          "explain": "Analogy with disagreement over the earth's shape: belief-difference doesn't refute objectivity.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "The Anthropologist's Argument version 2 differs from version 1 chiefly by:",
+          "options": [
+            "Adding that intercultural conflicts cannot be resolved by rational means",
+            "Replacing MD with CS",
+            "Adding a tolerance premise",
+            "Dropping the conclusion that MR is true",
+            "Adding that all cultures use the same language"
           ],
           "answer": 0,
-          "topic": "fundamental-disagreement",
-          "explain": "Both accept 'a society ought to use only punishments with uniquely beneficial consequences'; they disagree only about whether capital punishment has such consequences.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "Which feature most reliably distinguishes fundamental from nonfundamental moral disagreements?",
-          "options": [
-            "Whether the parties live in the same country.",
-            "Resolvability by rational means: nonfundamental disagreements can in principle be settled by gathering evidence; fundamental ones cannot.",
-            "Whether either party has religious commitments.",
-            "Whether the disagreement is about action or character.",
-            "Whether either side appeals to consequences."
-          ],
-          "answer": 1,
-          "topic": "fundamental-disagreement",
-          "explain": "Nonfundamental disagreements turn on non-moral beliefs and so can be rationally adjudicated; fundamental ones rest on differing basic norms.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "Version 2 of the anthropologist's argument differs from Version 1 mainly because it...",
-          "options": [
-            "Drops MD altogether.",
-            "Adds that intercultural conflicts cannot be resolved by rational means and uses 'best explanation' reasoning.",
-            "Assumes MO.",
-            "Replaces MD with CS.",
-            "Reduces morality to convention."
-          ],
-          "answer": 1,
           "topic": "anthropologist-v2",
-          "explain": "Version 2 supplements MD with the irresolvability claim and reasons that absence of objective norms is the best explanation of widespread, rationally irresolvable conflicts.",
-          "difficulty": "hard"
+          "explain": "Version 2 strengthens the inference by claiming the conflicts are rationally irresolvable — best-explained by absence of objective norms.",
+          "difficulty": "medium"
         },
         {
-          "q": "In the 'chicken pull' objectivist response, the proper reaction is to...",
+          "q": "The 'chicken pull' case is offered to:",
           "options": [
-            "Accept the practice as right-for-them.",
-            "Insist the individual is mistaken and urge sympathy.",
-            "Stay neutral on the grounds of MR.",
-            "Defer to legal authority.",
-            "Treat the disagreement as merely verbal."
+            "Defend MR",
+            "Show that animals have rights",
+            "Illustrate an objectivist response: insist the agent is mistaken and urge sympathy",
+            "Illustrate the principle of tolerance",
+            "Refute MD"
           ],
-          "answer": 1,
+          "answer": 2,
           "topic": "objectivist-response",
-          "explain": "Sharing the relevant non-moral beliefs but rejecting cruelty is precisely the case the objectivist takes to show that some norms are mistaken.",
+          "explain": "Disagreement does not show no fact of the matter; the right response can be to call the practice wrong.",
           "difficulty": "medium"
         },
         {
-          "q": "Susan belongs both to the Roman Catholic Church (forbids abortion) and the Democratic Party (permits it). What problem does this generate for MR?",
+          "q": "The 'Susan' example (Catholic + Democrat) is used to argue that MR has a problem of:",
           "options": [
-            "A demandingness problem.",
-            "A consistency problem: her abortion would be both right and wrong.",
-            "A free-rider problem.",
-            "An incommensurability problem.",
-            "No problem; her cultures cancel out."
-          ],
-          "answer": 1,
-          "topic": "consistency-problem",
-          "explain": "If individuals belong to multiple cultures with conflicting basic norms, MR can deliver contradictory verdicts on the same action.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "The 'usability and determinacy' problem for MR is that...",
-          "options": [
-            "MR does not specify which actions count as morally relevant.",
-            "Without a determinate account of what counts as a culture (language? ethnicity? religion? politics?), MR cannot specify what makes an action right or wrong.",
-            "MR conflicts with biology.",
-            "MR conflicts with all known legal systems.",
-            "MR fails to define 'right.'"
-          ],
-          "answer": 1,
-          "topic": "usability-determinacy",
-          "explain": "MR presupposes that 'a culture' has clear boundaries, but the basis for individuating cultures is itself unclear.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "What is the problem of intercultural evaluation for MR?",
-          "options": [
-            "MR forbids any cross-cultural comparison.",
-            "On MR, a culture's basic norms are the ultimate standard, so it makes no sense to question them from outside — yet it clearly does make sense.",
-            "Different cultures use different languages.",
-            "Some cultures have no morality.",
-            "Cultures evolve too quickly to be evaluated."
-          ],
-          "answer": 1,
-          "topic": "intercultural-evaluation",
-          "explain": "If C's norms set the very standard for right/wrong, there is no further standpoint from which to assess them, conflicting with our practice of moral criticism.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "The problem of intracultural evaluation concerns...",
-          "options": [
-            "Internal contradictions in a single norm.",
-            "Whether MR can make sense of claims like 'our moral code has improved over time on race and gender.'",
-            "Why cultures resist change.",
-            "How to define an individual.",
-            "Whether intuitions are reliable."
-          ],
-          "answer": 1,
-          "topic": "intracultural-evaluation",
-          "explain": "MR has trouble explaining comparative judgments about a culture's own moral progress or decline, because the evaluative standard itself shifts with the code.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "On MR, what verdict does the moral reformer receive while opposing her culture's practice?",
-          "options": [
-            "Heroic.",
-            "She is in the wrong, because she opposes her culture's basic norms.",
-            "Indeterminate.",
-            "She is right only if she succeeds.",
-            "She is right only if her audience agrees."
-          ],
-          "answer": 1,
-          "topic": "moral-reformer",
-          "explain": "Public opposition to the prevailing code conflicts with the very norms MR uses to define right action, so reformers come out wrong — a counterintuitive result.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "What does the lecture mean by saying restricted MR provides 'internal support'?",
-          "options": [
-            "It uses internal psychological evidence.",
-            "It accommodates the intuition that a culture's basic norms can be assessed against universal constraints (so we can say Nazi antisemitism is wrong).",
-            "It only applies inside one culture.",
-            "It restricts MR to economic norms.",
-            "It restricts moral debate to philosophers."
-          ],
-          "answer": 1,
-          "topic": "internal-support",
-          "explain": "By admitting universal constraints, restricted MR can rule out norms (e.g., Nazi antisemitism) that fail those constraints.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "Restricted MR adds which kind of constraint to the standard MR view?",
-          "options": [
-            "Constraints from religious revelation.",
-            "Universal constraints reflecting the functions of morality and facts about human nature.",
-            "Constraints imposed by international law.",
-            "Constraints from majority opinion.",
-            "No constraints — just a stylistic restriction."
-          ],
-          "answer": 1,
-          "topic": "restricted-mr",
-          "explain": "Restricted MR limits the relativistic claim to cases where a culture's basic norms are consistent with culture-independent constraints.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "Which of the following is identified as a fact about human nature that grounds restricted MR's constraints?",
-          "options": [
-            "A capacity for telepathy.",
-            "Satisfaction of physical needs; goods of intimacy, sociability, and social status; knowledge of the physical and human world.",
-            "Innate religiosity.",
-            "Innate tribalism.",
-            "A universal preference for hierarchy."
-          ],
-          "answer": 1,
-          "topic": "restricted-mr",
-          "explain": "The lecture lists these as facts about human nature that ground universal constraints on adequate moralities.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "Which norm follows from the interpersonal function of morality on restricted MR?",
-          "options": [
-            "A norm of self-interest.",
-            "A norm of reciprocity (returning good for good).",
-            "A norm of strict equality.",
-            "A norm of obedience.",
-            "A norm of revenge."
-          ],
-          "answer": 1,
-          "topic": "restricted-mr",
-          "explain": "The interpersonal function yields reciprocity, encourages other-regarding behaviour, allows personal freedom, and requires norms to be justifiable.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "In what sense is restricted MR pluralistic?",
-          "options": [
-            "It accepts any code at all.",
-            "Different codes that imply different moral verdicts can be equally correct, provided they satisfy the universal constraints.",
-            "It treats all individuals as cultures.",
-            "It requires no moral norms.",
-            "It abandons rightness altogether."
-          ],
-          "answer": 1,
-          "topic": "restricted-mr",
-          "explain": "Pluralism allows multiple acceptable codes within the constraints — 'not anything goes.'",
-          "difficulty": "medium"
-        },
-        {
-          "q": "What is the Principle of Tolerance discussed in this lecture?",
-          "options": [
-            "It is morally wrong for any culture to interfere with the moral practices of another culture.",
-            "Every individual must accept every other individual's opinion.",
-            "No one should criticize anyone.",
-            "Cultures must adopt majority opinion.",
-            "Cultures are obligated to assimilate."
-          ],
-          "answer": 0,
-          "topic": "tolerance",
-          "explain": "The Principle of Tolerance is given as a candidate moral norm forbidding intercultural interference.",
-          "difficulty": "easy"
-        },
-        {
-          "q": "Is unrestricted MR compatible with the Principle of Tolerance?",
-          "options": [
-            "Yes, trivially.",
-            "No: the principle purports to apply universally, but unrestricted MR cannot endorse universal norms.",
-            "Yes, but only inside one culture.",
-            "Only if all cultures share it.",
-            "Only if MO is false."
-          ],
-          "answer": 1,
-          "topic": "tolerance",
-          "explain": "Unrestricted MR cannot accommodate the universal scope of the tolerance principle without contradicting its relativistic core.",
-          "difficulty": "hard"
-        },
-        {
-          "q": "Which version of MR is compatible with the Principle of Tolerance?",
-          "options": [
-            "Unrestricted MR.",
-            "Restricted MR.",
-            "Hedonistic MR.",
-            "Kantian MR.",
-            "No version of MR."
-          ],
-          "answer": 1,
-          "topic": "tolerance",
-          "explain": "Only restricted MR can endorse a universally applicable principle, since it admits universal constraints.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "Does rejecting MR commit one to intolerance?",
-          "options": [
-            "Yes.",
-            "No; one can reject MR and still endorse tolerance for independent reasons.",
-            "Yes, but only on Aquinas's view.",
-            "Only if one accepts consequentialism.",
-            "Only if one is a moral nihilist."
-          ],
-          "answer": 1,
-          "topic": "tolerance",
-          "explain": "The lecture explicitly notes that other views can support tolerance without endorsing MR.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "Which is NOT among the formulation problems for MR discussed in the lecture?",
-          "options": [
-            "Consistency (individuals in multiple cultures).",
-            "Usability and determinacy ('what is a culture?').",
-            "Intercultural evaluation.",
-            "Felicific calculus.",
-            "Moral reformer problem."
+            "Determinacy",
+            "Tolerance",
+            "Reformer status",
+            "Consistency: the action would be both right and wrong",
+            "Hedonism"
           ],
           "answer": 3,
           "topic": "consistency-problem",
-          "explain": "The felicific calculus belongs to Bentham's hedonistic utilitarianism (Lecture 5), not to the discussion of moral relativism.",
+          "explain": "A member of multiple cultures with conflicting basic norms gets contradictory verdicts on the same action.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "The Usability & Determinacy problem for MR is that:",
+          "options": [
+            "MR is too vague about what counts as a culture (by language? ethnicity? religion? politics?), so it cannot specify what makes an action right",
+            "MR allows too much tolerance",
+            "MR has too few applications",
+            "MR is empirically false",
+            "MR cannot accommodate context sensitivity"
+          ],
+          "answer": 0,
+          "topic": "usability-determinacy",
+          "explain": "Without a determinate account of 'culture', MR cannot fix any verdict.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "The Intercultural Evaluation Problem for MR is:",
+          "options": [
+            "That every culture is internally consistent",
+            "That MR makes it incoherent to question the correctness of a culture's norms from outside, even though such questioning clearly makes sense",
+            "That MR conflicts with the principle of tolerance",
+            "That MR cannot apply to nomads",
+            "That MR requires cultural homogeneity"
+          ],
+          "answer": 1,
+          "topic": "intercultural-evaluation",
+          "explain": "On MR a culture's norms ARE the ultimate standard, so external criticism would be confused — but we evidently engage in such criticism intelligibly.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "The Intracultural Evaluation Problem for MR concerns:",
+          "options": [
+            "Refugees moving between cultures",
+            "Comparative claims like 'our morality has improved' or 'declined', which MR struggles to make sense of because the standard itself changes with the code",
+            "The translation of moral terms",
+            "Disagreements among cultural elites only",
+            "Mass media's role in morality"
+          ],
+          "answer": 1,
+          "topic": "intracultural-evaluation",
+          "explain": "Comparative judgments over time need a standpoint stable enough to compare past and present codes — MR provides none.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "The capital-punishment example with shared utilitarian framework but disagreement about consequences shows that:",
+          "options": [
+            "Capital punishment is morally permissible",
+            "Capital punishment is morally wrong",
+            "A surface moral disagreement can be NON-fundamental — same basic norm, different non-moral beliefs about consequences",
+            "MD is true",
+            "MR is false"
+          ],
+          "answer": 2,
+          "topic": "challenge-p1",
+          "explain": "This is the textbook case for re-describing 'moral' disagreement as empirical disagreement.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Suppose two parties share NO non-moral disagreements yet still disagree about whether an action is right. By the lecture's classification this is:",
+          "options": [
+            "Trivial",
+            "A misunderstanding of language",
+            "A non-fundamental disagreement",
+            "A fundamental moral disagreement",
+            "Evidence for MR by itself"
+          ],
+          "answer": 3,
+          "topic": "fundamental-disagreement",
+          "explain": "Fundamental disagreements survive agreement on non-moral facts. (Note: fundamental disagreement does not by itself entail MR.)",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following is the BEST objection to inferring MR from widespread fundamental disagreement?",
+          "options": [
+            "MD is empirically certain",
+            "MD is not even meaningfully formulated",
+            "Widespread fundamental disagreement is not firmly established and many surface disagreements are non-fundamental",
+            "Tolerance entails objectivism",
+            "Cultures do not actually exist"
+          ],
+          "answer": 2,
+          "topic": "challenge-p1",
+          "explain": "Most intercultural disputes can be plausibly re-described as non-fundamental, so the empirical premise of MD is shaky.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Restricted Moral Relativism (Restricted MR) holds that:",
+          "options": [
+            "MR is rejected",
+            "Right and wrong depend on a culture's norms only insofar as those norms satisfy universal constraints from the functions of morality and facts about human nature",
+            "Right and wrong depend purely on individual choice",
+            "All cultures must accept the same basic norms",
+            "Only restricted MR can accept MD"
+          ],
+          "answer": 1,
+          "topic": "restricted-mr",
+          "explain": "Restricted MR is pluralistic but not 'anything goes': culture-independent constraints filter admissible codes.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "In Restricted MR, the interpersonal function of morality is said to yield which norm in particular?",
+          "options": [
+            "A norm of self-interest",
+            "A norm of equality of outcome",
+            "A norm of reciprocity (returning good for good) that encourages other-regarding behaviour",
+            "A norm of absolute tolerance",
+            "A norm of universal love"
+          ],
+          "answer": 2,
+          "topic": "restricted-mr",
+          "explain": "Reciprocity is highlighted as the central interpersonal norm flowing from morality's social function.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Why is UNRESTRICTED MR INCOMPATIBLE with the universal Principle of Tolerance?",
+          "options": [
+            "Because tolerance is itself a culture-specific value, yet the principle presents itself as universal — and unrestricted MR cannot endorse any universal norm",
+            "Because tolerance is a non-moral value",
+            "Because tolerance contradicts itself",
+            "Because tolerance requires force",
+            "Because tolerance is non-rational"
+          ],
+          "answer": 0,
+          "topic": "tolerance",
+          "explain": "A universal 'don't interfere' norm is precisely the kind of culture-independent norm unrestricted MR denies.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which statement about the relation between MR, MO, and CS is correct?",
+          "options": [
+            "MR entails CS and MO",
+            "CS entails MR",
+            "CS is incompatible with MO",
+            "CS is compatible with MO; CS is NOT equivalent to MR",
+            "MO entails MR"
+          ],
+          "answer": 3,
+          "topic": "context-sensitivity",
+          "explain": "A single objective principle can prescribe different actions to differently situated agents — CS rides happily on MO.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "The 'internal support' problem for MR is best illustrated by:",
+          "options": [
+            "Nazi Germany's antisemitism conflicting with one's considered moral beliefs — MR cannot adequately explain why we treat the cultural code as wrong",
+            "A culture failing to teach its norms to children",
+            "A society lacking written laws",
+            "Disputes about etiquette",
+            "Cross-cultural translation difficulties"
+          ],
+          "answer": 0,
+          "topic": "internal-support",
+          "explain": "MR fails to support our considered judgement that the cultural code itself was wrong; this failure of internal support is also a failure of explanation.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Restricted MR is described as pluralistic in the sense that:",
+          "options": [
+            "Anything goes",
+            "Only one code is true and all others are merely tolerated",
+            "Multiple codes that yield different verdicts can be equally correct, PROVIDED they satisfy the culture-independent constraints",
+            "All codes are equally true without restriction",
+            "Codes are true only relative to political parties"
+          ],
+          "answer": 2,
+          "topic": "restricted-mr",
+          "explain": "Pluralism with filters — not relativism without limits.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following best refutes the inference 'unresolved disagreement implies no objective norms'?",
+          "options": [
+            "The mere existence of a disagreement",
+            "Pointing to historical disputes that LATER turned out to have an objectively correct answer (e.g., the earth's shape), showing that unresolved-at-time does not imply no-fact-of-the-matter",
+            "The fact that some disagreements are fundamental",
+            "The principle of tolerance",
+            "The chicken-pull case"
+          ],
+          "answer": 1,
+          "topic": "challenge-p2",
+          "explain": "From 'we haven't resolved it' you cannot validly infer 'there is no answer'. Past disputes show otherwise.",
           "difficulty": "hard"
         }
       ]
@@ -432,422 +432,423 @@
       "title": "Lecture 4: Natural Law Theory",
       "questions": [
         {
-          "q": "Why are moral laws called 'natural' in Natural Law Theory (NLT)?",
+          "q": "In Natural Law Theory, moral laws are called 'natural' because:",
           "options": [
-            "Because they describe regularities in physical nature.",
-            "Because they are grounded in human nature.",
-            "Because they are taught by nature spirits.",
-            "Because they are unwritten.",
-            "Because animals follow them."
+            "They describe regularities in physical nature",
+            "They are grounded in human nature",
+            "They are not written down",
+            "They are obeyed by animals",
+            "They are decided by majority vote"
           ],
           "answer": 1,
           "topic": "senses-of-law",
-          "explain": "NLT distinguishes descriptive law from normative law and calls moral laws 'natural' in the second sense: they are grounded in human nature.",
+          "explain": "NLT uses the normative sense of 'law', anchored in features of human nature, not the descriptive sense.",
           "difficulty": "easy"
         },
         {
           "q": "Which of the following is NOT one of the three components of NLT?",
           "options": [
-            "Perfectionist theory of value.",
-            "Principle of Double Effect (PDE).",
-            "Moral absolutism.",
-            "Hedonistic calculus."
+            "A perfectionist theory of value",
+            "The Principle of Double Effect (PDE)",
+            "Moral absolutism",
+            "Hedonistic calculus"
           ],
           "answer": 3,
           "topic": "three-components",
-          "explain": "NLT's three components are perfectionism, PDE, and moral absolutism. The hedonistic calculus belongs to utilitarianism.",
+          "explain": "Hedonistic calculus belongs to Bentham's utilitarianism, not NLT.",
           "difficulty": "easy"
         },
         {
-          "q": "For Aquinas, the value of a thing consists in...",
+          "q": "On Aquinas's view, the value of a thing consists in:",
           "options": [
-            "Its market price.",
-            "The perfection of its state to perform its function (its purpose).",
-            "Its pleasure-producing capacity.",
-            "Its conformity to law.",
-            "Its rarity."
+            "Its rarity",
+            "Its hedonic intensity",
+            "The perfection of its state in performing its function (its purpose)",
+            "Its market price",
+            "Its symmetry"
           ],
-          "answer": 1,
+          "answer": 2,
           "topic": "aquinas-perfectionism",
-          "explain": "Aquinas's teleological view links essence to purpose; value lies in fully achieving that purpose.",
+          "explain": "Aquinas links essence to purpose; goodness is the perfection of an item's function.",
           "difficulty": "easy"
         },
         {
-          "q": "Aquinas's worldview is described as teleological because...",
+          "q": "Which list correctly names the four basic human goods in NLT?",
           "options": [
-            "It denies free will.",
-            "All things in nature have purposes (ends).",
-            "It is based on observation.",
-            "It rejects metaphysics.",
-            "It is non-rational."
-          ],
-          "answer": 1,
-          "topic": "aquinas-perfectionism",
-          "explain": "Teleology holds that natural things have ends or purposes — the basis of Aquinas's account of value.",
-          "difficulty": "easy"
-        },
-        {
-          "q": "Value Perfectionism (VP) says...",
-          "options": [
-            "The good is whatever pleases the agent.",
-            "The goodness of a thing is a matter of that thing fully developing the capacities essential to it.",
-            "The good is whatever a culture endorses.",
-            "Only humans have value.",
-            "Goodness is constructed by social agreement."
-          ],
-          "answer": 1,
-          "topic": "vp-mp",
-          "explain": "VP grounds the good in the full development of essential capacities.",
-          "difficulty": "easy"
-        },
-        {
-          "q": "On NLT, a state of affairs S is intrinsically good iff...",
-          "options": [
-            "S maximizes pleasure.",
-            "Realizing S is part of what perfects human nature.",
-            "S is desired by a majority.",
-            "S is permitted by law.",
-            "S has positive consequences only."
-          ],
-          "answer": 1,
-          "topic": "intrinsic-value",
-          "explain": "NLT defines intrinsic value in perfectionist terms tied to human nature.",
-          "difficulty": "easy"
-        },
-        {
-          "q": "Which is NOT one of the four basic human goods on NLT?",
-          "options": [
-            "Life.",
-            "Procreation.",
-            "Knowledge.",
-            "Sociability.",
-            "Pleasure."
-          ],
-          "answer": 4,
-          "topic": "basic-goods",
-          "explain": "The four basic goods are Life, Procreation, Knowledge, and Sociability. Pleasure is not on the list.",
-          "difficulty": "easy"
-        },
-        {
-          "q": "On NLT, what is the Fundamental Principle of Right Conduct?",
-          "options": [
-            "Maximize expected pleasure.",
-            "Preserve and promote the four basic goods; avoid their hindrance and destruction.",
-            "Follow the categorical imperative.",
-            "Act so as to flourish.",
-            "Follow the basic norms of your culture."
+            "Pleasure, Power, Wealth, Honor",
+            "Life, Procreation, Knowledge, Sociability",
+            "Justice, Mercy, Wisdom, Courage",
+            "Faith, Hope, Love, Charity",
+            "Liberty, Equality, Fraternity, Solidarity"
           ],
           "answer": 1,
           "topic": "basic-goods",
-          "explain": "The principle directs preservation/promotion of the basic goods and avoidance of their hindrance.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "Which obligation follows from the basic good of Sociability?",
-          "options": [
-            "Obligation to pursue knowledge.",
-            "Obligation to form friendship, marriage, and civil society.",
-            "Obligation to have children.",
-            "Obligation to maximize utility.",
-            "Obligation to maximize one's own welfare."
-          ],
-          "answer": 1,
-          "topic": "basic-goods",
-          "explain": "Sociability implies obligations to form friendship, marriage, and civil society.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "On NLT, when is one ever permitted to do or bring about evil to promote good? NLT's distinctive position is that...",
-          "options": [
-            "Only consequences matter.",
-            "Intentions also count: bad effects may be foreseen but must not be intended.",
-            "Evil acts are always permitted if they have good results.",
-            "Evil acts are never relevant to morality.",
-            "Bad effects are mere illusions."
-          ],
-          "answer": 1,
-          "topic": "moral-conflict",
-          "explain": "NLT rejects pure consequentialism: it builds intentions into the evaluation of right action via PDE.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "Which is NOT one of the three conditions of the Principle of Double Effect (PDE)?",
-          "options": [
-            "Intrinsic permissibility of the action.",
-            "Non-intentionality of the bad effect.",
-            "Proportionality.",
-            "Universal acceptance by all cultures."
-          ],
-          "answer": 3,
-          "topic": "pde",
-          "explain": "PDE's three conditions are intrinsic permissibility, non-intentionality, and proportionality.",
+          "explain": "The four basic goods anchor the fundamental principle of right conduct in NLT.",
           "difficulty": "easy"
         },
         {
-          "q": "PDE's non-intentionality condition is violated when the bad effect is...",
+          "q": "The Principle of Double Effect (PDE) applies to:",
           "options": [
-            "Foreseen.",
-            "Merely possible.",
-            "Either the chosen end of action or a means for bringing about an intended end.",
-            "Unintended but undesired.",
-            "Felt with regret."
+            "Actions with only good effects",
+            "Actions with only bad effects",
+            "Actions that have at least one good effect and one evil effect",
+            "Actions performed in groups",
+            "Actions in war only"
           ],
           "answer": 2,
           "topic": "pde",
-          "explain": "An effect can be intended as the end or as a means; both violate non-intentionality.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "On NLT, why is the hysterectomy (removing a cancerous uterus from a pregnant patient) permissible?",
-          "options": [
-            "Because the procedure is part of standard medicine.",
-            "Because the operation itself is not wrong, the death of the unborn is neither the purpose nor a means, and proportionality is satisfied.",
-            "Because consequentialism approves it.",
-            "Because the patient consents.",
-            "Because the unborn lacks moral status."
-          ],
-          "answer": 1,
-          "topic": "pde-hysterectomy",
-          "explain": "All three PDE conditions are satisfied: intrinsic permissibility, non-intentionality of the death, and proportionality.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "On NLT, what does Moral Absolutism (MA) claim?",
-          "options": [
-            "Some moral norms admit of exceptions but only rarely.",
-            "Certain very general types of action are always morally wrong, even when performing them would bring about good results.",
-            "Moral norms are imposed by authority.",
-            "All moral rules are absolute and known to everyone.",
-            "Moral rules apply only within a culture."
-          ],
-          "answer": 1,
-          "topic": "moral-absolutism",
-          "explain": "MA asserts exceptionless prohibitions on certain action types; the paradigm case is intentional killing of innocents.",
+          "explain": "PDE is the framework for evaluating an action with mixed (good and evil) effects.",
           "difficulty": "easy"
         },
         {
-          "q": "What distinguishes direct from indirect violations of basic values on NLT?",
+          "q": "Moral Absolutism (MA), as defined in the lecture, holds that:",
           "options": [
-            "Direct violations are committed knowingly; indirect ones are not.",
-            "Direct violations cannot be justified by PDE; indirect ones can.",
-            "Indirect violations are always intentional.",
-            "Direct violations are minor; indirect ones are major.",
-            "No principled distinction."
+            "Some general types of action are always morally wrong, even when they would bring about good results",
+            "All moral judgements depend on culture",
+            "Right action maximises utility",
+            "Killing is sometimes obligatory",
+            "Lying is always required"
           ],
-          "answer": 1,
-          "topic": "direct-indirect",
-          "explain": "Indirect violations satisfy the basic-value-harm clause but are justified by PDE; direct ones are not.",
-          "difficulty": "medium"
+          "answer": 0,
+          "topic": "moral-absolutism",
+          "explain": "MA disallows trade-offs for paradigm cases such as intentionally killing the innocent.",
+          "difficulty": "easy"
         },
         {
-          "q": "On NLT, an action A is wrong iff...",
+          "q": "According to NLT's theory of right conduct, an action A is OBLIGATORY iff:",
           "options": [
-            "A produces less utility than an alternative.",
-            "Performing A would result in a direct violation of one or more of the basic goods.",
-            "A is unpopular.",
-            "A breaks a promise.",
-            "A frustrates a desire."
+            "Performing A would result in a direct violation of a basic good",
+            "Failing to perform A would result in a direct violation of one or more basic goods",
+            "Performing A maximises utility",
+            "A is permitted by every culture",
+            "A is preferred by the agent"
           ],
           "answer": 1,
           "topic": "right-conduct-nlt",
-          "explain": "NLT defines wrongness in terms of direct violation of one or more basic goods.",
+          "explain": "Failure to act is what would yield direct violation, so the act is required.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "The 'Fundamental Principle of Right Conduct' in NLT says:",
+          "options": [
+            "Maximise pleasure",
+            "Follow your culture's norms",
+            "Preserve and promote the basic goods; avoid their hindrance and destruction",
+            "Tolerate other cultures",
+            "Cultivate virtue"
+          ],
+          "answer": 2,
+          "topic": "basic-goods",
+          "explain": "This is NLT's foundational normative principle, stated directly in the lecture.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "In NLT, a DIRECT violation of a basic value is one that:",
+          "options": [
+            "Seriously hinders or destroys a basic value AND cannot be justified by PDE",
+            "Is performed in public",
+            "Is performed without consent",
+            "Maximises overall utility",
+            "Is committed unintentionally"
+          ],
+          "answer": 0,
+          "topic": "direct-indirect",
+          "explain": "Direct violation is the morally impermissible category; indirect violations are PDE-justifiable.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which philosopher's name is most closely associated with NLT in the lecture?",
+          "options": [
+            "Hume",
+            "Kant",
+            "Aquinas",
+            "Mill",
+            "Hobbes"
+          ],
+          "answer": 2,
+          "topic": "aquinas-perfectionism",
+          "explain": "Aquinas is the central figure for the Thomistic Natural Law Theory presented.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which of the following is NOT one of the three PDE conditions?",
+          "options": [
+            "Intrinsic permissibility of the action apart from its effects",
+            "Non-intentionality of the bad effect (not as end or means)",
+            "Proportionality of the good to the evil effect",
+            "Maximisation of expected utility",
+            "All three of the listed PDE conditions are correct"
+          ],
+          "answer": 3,
+          "topic": "pde",
+          "explain": "PDE rejects pure consequentialism. Maximising expected utility is not one of its three conditions.",
           "difficulty": "medium"
         },
         {
-          "q": "Why is craniotomy judged a direct violation on NLT even when it saves the mother?",
+          "q": "In NLT, the hysterectomy case (removing a cancerous uterus from a pregnant patient) is morally permissible because:",
           "options": [
-            "Because the operation is intrinsically wrong.",
-            "Because the death of the unborn child is intended as a means of saving the mother's life.",
-            "Because there is no proportionate reason.",
-            "Because both effects are good.",
-            "Because the mother does not consent."
+            "The operation maximises utility",
+            "The action itself is permissible, the unborn's death is neither end nor means, and proportionality is met",
+            "Saving one life always outweighs another",
+            "The patient consents",
+            "The unborn has no moral status"
           ],
           "answer": 1,
+          "topic": "pde-hysterectomy",
+          "explain": "All three PDE conditions are satisfied — operation is intrinsically permissible, bad effect unintended, proportionate reason.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "The craniotomy case differs from hysterectomy because:",
+          "options": [
+            "The patient's consent is absent",
+            "The hospital lacks resources",
+            "The unborn's death is a MEANS of saving the mother, so the bad effect is intended — PDE condition (Non-intentionality) fails",
+            "Proportionality is not met",
+            "Intrinsic permissibility is not met"
+          ],
+          "answer": 2,
           "topic": "craniotomy",
-          "explain": "In craniotomy the child's death functions as the means to the good effect, violating PDE's non-intentionality condition.",
-          "difficulty": "hard"
-        },
-        {
-          "q": "On NLT, prescribing a life-shortening drug to ease a dying patient's pain is...",
-          "options": [
-            "Always forbidden as a direct violation.",
-            "Permissible: the shortening of life is a foreseen but unintended side effect, satisfying PDE.",
-            "Required by MA.",
-            "Required by consequentialism.",
-            "Forbidden because the patient cannot consent."
-          ],
-          "answer": 1,
-          "topic": "euthanasia",
-          "explain": "The hastened death is not intended as end or means; PDE permits it when proportionate.",
+          "explain": "Killing the child IS the way the mother is saved; the bad effect is intended as a means, blocking PDE.",
           "difficulty": "medium"
         },
         {
-          "q": "Active euthanasia is judged wrong on NLT because...",
+          "q": "Aquinas's perfectionism connects:",
           "options": [
-            "It produces bad consequences.",
-            "It involves the intentional taking of innocent human life, which MA absolutely prohibits.",
-            "It is illegal.",
-            "It violates Procreation.",
-            "It is widely disapproved."
+            "Pleasure with virtue",
+            "A thing's essence with its purpose, valuing its perfection in performing that function",
+            "Custom with law",
+            "Reason with revelation",
+            "Right with utility"
           ],
           "answer": 1,
-          "topic": "euthanasia",
-          "explain": "MA absolutely prohibits intentional killing of innocents, which active euthanasia involves.",
+          "topic": "aquinas-perfectionism",
+          "explain": "Teleological worldview: essence + purpose + perfection in function.",
           "difficulty": "medium"
         },
         {
-          "q": "On NLT, what is permissible in self-defence?",
+          "q": "Value Perfectionism (VP) is best stated as:",
           "options": [
-            "Intending the aggressor's death.",
-            "Using force against an aggressor while not intending his death (his death may be a foreseen but unintended side effect).",
-            "Any action whatever, if necessary.",
-            "Only flight, never force.",
-            "Force only after legal authorization."
+            "Things have value only when desired",
+            "The goodness of a thing is a matter of that thing fully developing the capacities essential to it",
+            "Goodness is reducible to pleasure",
+            "Goodness is whatever a culture says",
+            "Goodness is identical to virtue"
+          ],
+          "answer": 1,
+          "topic": "vp-mp",
+          "explain": "VP grounds value in the development of essential capacities — Aquinas's theory is a version of this.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In end-of-life care, NLT typically holds that:",
+          "options": [
+            "Active euthanasia and pain-relieving life-shortening drugs are both wrong",
+            "Active euthanasia is wrong, but prescribing a life-shortening drug that EASES the patient's pain can be permissible",
+            "Active euthanasia is obligatory in terminal cases",
+            "Both are obligatory",
+            "Both are optional"
+          ],
+          "answer": 1,
+          "topic": "euthanasia",
+          "explain": "Active killing is direct violation; analgesia whose shortening of life is unintended can pass PDE.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In self-defence, NLT holds that:",
+          "options": [
+            "Killing the aggressor is forbidden in all cases",
+            "Using force is permissible (possibly required); intending the aggressor's DEATH is morally wrong",
+            "Force is never permissible",
+            "Intending death is permissible if the cause is just",
+            "Force is permissible only against animals"
           ],
           "answer": 1,
           "topic": "self-defence",
-          "explain": "Force may be used; intending the aggressor's death is wrong because it would be intentional killing.",
+          "explain": "Force is permissible; the agent's death must remain a side effect, not the intended end.",
           "difficulty": "medium"
         },
         {
-          "q": "In the trolley problem, NLT's verdict on the bystander case (pulling the lever) is...",
+          "q": "What is the lecture's verdict on the bystander trolley case vs the footbridge case for the question 'is PDE innate?'",
           "options": [
-            "Wrong, because one death is intended.",
-            "Permissible, because the one worker's death is a foreseen side effect of diverting the trolley.",
-            "Wrong, regardless of intention.",
-            "Required, because total deaths are minimized.",
-            "Indeterminate."
+            "Both judged wrong",
+            "Both judged permissible",
+            "Bystander permissible; footbridge wrong — used as evidence (Harman 1999) that PDE-like principles are built in",
+            "Bystander wrong; footbridge permissible",
+            "Both judged optional"
           ],
-          "answer": 1,
+          "answer": 2,
           "topic": "pde-innate",
-          "explain": "Diverting the trolley aims at saving the five; the death of the one is foreseen but not intended.",
+          "explain": "The contrast in ordinary intuitions tracks the means/side-effect distinction characteristic of PDE.",
           "difficulty": "medium"
         },
         {
-          "q": "NLT's verdict on the footbridge case (pushing the large man) is...",
+          "q": "The 'grounding project' for NLT faces what TWO main problems?",
           "options": [
-            "Permissible, since deaths are minimized.",
-            "Wrong, because the large man's death is used as the means of stopping the trolley.",
-            "Required, since utility is maximized.",
-            "Wrong, only if the agent feels disgust.",
-            "Indeterminate."
+            "Vagueness and tolerance",
+            "Pleasure and pain",
+            "A logical gap between non-moral facts and value (is-ought) AND a circularity in identifying 'good' inclinations",
+            "Cultural relativism and atheism",
+            "Realism and idealism"
           ],
-          "answer": 1,
-          "topic": "pde-innate",
-          "explain": "Pushing the man treats his death as the means; PDE forbids this even though one would die instead of five.",
+          "answer": 2,
+          "topic": "grounding-project",
+          "explain": "You can't validly derive ought from is; and you need a prior conception of human good to flag certain inclinations as good.",
           "difficulty": "medium"
         },
         {
-          "q": "Harman (1999) takes the bystander/footbridge contrast to suggest that...",
+          "q": "NLT's response to moral conflict, given commitment to MA, is to:",
           "options": [
-            "Trolley problems are not morally interesting.",
-            "A PDE-like principle is innate to ordinary moral cognition, because it is unclear how it could have been learned from available examples.",
-            "Moral judgments are merely emotional.",
-            "Cases are too artificial to support any conclusion.",
-            "People are inconsistent."
+            "Allow all options as permissible",
+            "Use the Principle of Double Effect to distinguish permissible from impermissible cases",
+            "Reject MA",
+            "Maximise expected utility",
+            "Follow the majority"
           ],
           "answer": 1,
-          "topic": "pde-innate",
-          "explain": "Harman argues from the unlikelihood of acquisition by exposure to the innateness of the relevant principle.",
+          "topic": "moral-conflict",
+          "explain": "With MA fixed, PDE plays the key role of distinguishing what may and may not be done.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following best captures a CRITICAL difference between the hysterectomy and craniotomy cases?",
+          "options": [
+            "The mother's age",
+            "The hospital's protocol",
+            "Whether the unborn's death is a side effect (hysterectomy) or a means (craniotomy)",
+            "Whether the procedure is publicly funded",
+            "Whether the unborn is viable"
+          ],
+          "answer": 2,
+          "topic": "craniotomy",
+          "explain": "The means/side-effect distinction is what flips PDE's verdict from permissible to impermissible.",
           "difficulty": "hard"
         },
         {
-          "q": "Which of the following is cited as a challenge to Moral Absolutism?",
+          "q": "Suppose an action satisfies intrinsic permissibility and proportionality but the agent intends the bad effect as the means of bringing about the good. By PDE, the action is:",
           "options": [
-            "The case of Tony Bland and intuitions about active voluntary euthanasia and assisted suicide.",
-            "The case of Galileo and the shape of the earth.",
-            "Bentham's calculus.",
-            "The principle of tolerance.",
-            "The chicken-pull case."
+            "Permissible",
+            "Obligatory",
+            "Impermissible — failing Non-intentionality alone is sufficient to block PDE",
+            "Optional",
+            "Permissible only if culturally accepted"
           ],
-          "answer": 0,
-          "topic": "evaluation-ma",
-          "explain": "Cases like Tony Bland are presented to pressure the claim that intentional killing is always wrong.",
-          "difficulty": "medium"
+          "answer": 2,
+          "topic": "pde",
+          "explain": "All three conditions are JOINTLY required; failing any one blocks PDE.",
+          "difficulty": "hard"
         },
         {
-          "q": "The 'grounding project' criticism of NLT charges that...",
+          "q": "Which is the BEST objection to MA as articulated in the lecture?",
           "options": [
-            "NLT denies free will.",
-            "There is a logical gap between non-moral facts (about inclinations) and value statements, plus a circularity worry.",
-            "NLT contradicts itself.",
-            "NLT ignores human nature.",
-            "NLT is too consequentialist."
+            "MA is too easy to apply",
+            "MA fits all our intuitions",
+            "Cases such as active voluntary euthanasia, assisted suicide, and the Tony Bland case strike many as morally justified yet MA prohibits them",
+            "MA is consequentialist",
+            "MA cannot accommodate self-defence at all"
+          ],
+          "answer": 2,
+          "topic": "evaluation-ma",
+          "explain": "The pressure on MA comes from cases where intentional killing of an innocent seems morally permissible to reflective people.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "In Aquinas's argument from natural inclinations, the circularity worry is that:",
+          "options": [
+            "Inclinations themselves are unreal",
+            "Not all inclinations are good, so identifying the 'good' inclinations already presupposes a prior account of the human good",
+            "Inclinations are private",
+            "Inclinations are cultural",
+            "Inclinations conflict with reason"
           ],
           "answer": 1,
           "topic": "grounding-project",
-          "explain": "Aquinas's inference from natural inclinations to value crosses an is-ought gap; identifying 'good' inclinations also presupposes a prior account of the human good.",
+          "explain": "The criterion of selection (which inclinations count) presupposes the very thing the inference was supposed to deliver.",
           "difficulty": "hard"
         },
         {
-          "q": "Which two strategies does NLT consider for resolving moral conflicts without MA and PDE?",
+          "q": "What does the lecture's appeal to moral PERFECTIONISM imply WITHOUT a commitment to MA and PDE?",
           "options": [
-            "Bentham's calculus and Mill's qualitative test.",
-            "A non-arbitrary rank ordering of rules, OR appeal to case details using good moral judgment.",
-            "Skepticism and relativism.",
-            "Egoism and altruism.",
-            "Particularism and pluralism."
+            "NLT must reject value entirely",
+            "NLT becomes hedonistic",
+            "Considerations of value can still come before considerations of rightness, but the central value need not be perfectionistic — welfare/well-being could play that role",
+            "NLT collapses into MR",
+            "Conflict cases become trivial"
           ],
-          "answer": 1,
-          "topic": "conflict-resolution",
-          "explain": "The lecture names rank-ordering of rules and case-by-case judgement as the two options without MA/PDE.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "The lecture notes that one can hold value-before-rightness without holding perfectionism. Which alternative value is suggested?",
-          "options": [
-            "Pleasure alone.",
-            "Welfare/well-being.",
-            "Power.",
-            "Beauty.",
-            "Religious devotion."
-          ],
-          "answer": 1,
+          "answer": 2,
           "topic": "moral-perfectionism",
-          "explain": "Welfare/well-being is offered as an example of a value-first ethics that is not perfectionist.",
-          "difficulty": "medium"
+          "explain": "Value-first does not entail perfectionism-first; e.g., welfarist consequentialism agrees with the order but disagrees on the content.",
+          "difficulty": "hard"
         },
         {
-          "q": "Which best states the difference between PDE's intrinsic-permissibility and non-intentionality conditions?",
+          "q": "Why is the hysterectomy case said to satisfy NON-INTENTIONALITY?",
           "options": [
-            "They are equivalent.",
-            "Intrinsic permissibility concerns the act type apart from its effects; non-intentionality concerns the agent's reasons (end or means).",
-            "Intrinsic permissibility concerns the agent's reasons; non-intentionality concerns outcomes.",
-            "Both concern outcomes.",
-            "Both concern psychological states only."
+            "The unborn's death is the goal of the action",
+            "The unborn's death is the means of saving the mother",
+            "Neither the END nor the MEANS is the unborn's death — it is a foreseen but unintended side effect of removing the cancerous uterus",
+            "No one foresees the death",
+            "The mother does not consent"
+          ],
+          "answer": 2,
+          "topic": "pde-hysterectomy",
+          "explain": "PDE focuses on the agent's intentional structure, not on foreseeability.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Two ways the lecture lists by which an effect can be INTENDED are:",
+          "options": [
+            "By desire or by command",
+            "As the chosen end of action OR as a means for bringing about some intended end",
+            "As a side effect or as a foreseen consequence",
+            "By thought or by speech",
+            "By utility or by virtue"
           ],
           "answer": 1,
           "topic": "pde",
-          "explain": "Intrinsic permissibility is about the act-type; non-intentionality is about whether the bad effect is taken as end or means.",
+          "explain": "Both end-intentions and means-intentions count as 'intending' for PDE purposes.",
           "difficulty": "hard"
         },
         {
-          "q": "On NLT, which of the following is a case of indirect violation justified by PDE?",
+          "q": "Which option correctly distinguishes DIRECT and INDIRECT violation in NLT?",
           "options": [
-            "Craniotomy.",
-            "Hysterectomy that foreseeably ends the unborn's life.",
-            "Framing an innocent to prevent a riot.",
-            "Active euthanasia.",
-            "Intentional killing in revenge."
+            "Direct = severe; Indirect = mild",
+            "Direct = with consent; Indirect = without consent",
+            "Both involve hindering a basic value; Direct is NOT PDE-justifiable, Indirect IS",
+            "Direct is intentional; Indirect is unintentional, regardless of PDE",
+            "Direct violates one good; Indirect violates several"
           ],
-          "answer": 1,
+          "answer": 2,
           "topic": "direct-indirect",
-          "explain": "Hysterectomy hinders Life but is justified by PDE; the death is unintended and proportionate — an indirect violation.",
+          "explain": "Same physical impact on the basic value, different normative status because of PDE-justifiability.",
           "difficulty": "hard"
         },
         {
-          "q": "Which of the following is identified as part of NLT's 'initial appeal'?",
+          "q": "What does the lecture treat as the strongest IMMEDIATE appeal of NLT?",
           "options": [
-            "It is grounded in human nature, its principles are objective, and it fits common moral beliefs.",
-            "It is grounded in consequences.",
-            "It is endorsed by every culture.",
-            "It is the simplest moral theory.",
-            "It avoids all controversial cases."
+            "Its predictive power",
+            "Its mathematical precision",
+            "That its principles are grounded in human nature and present themselves as objective, fitting common beliefs about morality",
+            "Its egalitarianism",
+            "Its tolerance"
           ],
-          "answer": 0,
+          "answer": 2,
           "topic": "evaluation-appeal",
-          "explain": "NLT's appeal lies in its perceived grounding, objectivity, and fit with common moral beliefs.",
-          "difficulty": "medium"
+          "explain": "Grounded objectivity + fit with common moral views is what initially recommends NLT.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Suppose a case where the only way to save five lives is to intentionally kill ONE innocent person as the means. By NLT (with MA and PDE), this is:",
+          "options": [
+            "Obligatory because it maximises lives saved",
+            "Permissible via PDE",
+            "Optional",
+            "Impermissible — intentional killing of an innocent is an absolute prohibition, and PDE fails because the death is the means",
+            "Permissible if the agent regrets it"
+          ],
+          "answer": 3,
+          "topic": "moral-absolutism",
+          "explain": "Quintessential MA case: the intentional means is precisely what MA forbids; PDE cannot rescue it.",
+          "difficulty": "hard"
         }
       ]
     },
@@ -856,421 +857,423 @@
       "title": "Lecture 5: Utilitarianism",
       "questions": [
         {
-          "q": "Which is NOT one of consequentialism's three theses as stated in Lecture 5?",
+          "q": "Consequentialism's three theses, as stated in the lecture, include:",
           "options": [
-            "Value is independent of the right.",
-            "Explanatory priority of value.",
-            "Personal value alone as relevant.",
-            "Maximizing acceptance utility."
+            "Value is independent of the right",
+            "Explanatory priority of value",
+            "Personal value alone is relevant",
+            "All three of the above",
+            "Only (a) and (c)"
           ],
           "answer": 3,
           "topic": "three-theses",
-          "explain": "The three theses are value-independence, explanatory priority of value, and the relevance of personal value. Acceptance utility belongs to rule consequentialism (Lecture 6).",
+          "explain": "The three theses listed jointly characterise consequentialism in the lecture.",
           "difficulty": "easy"
         },
         {
-          "q": "Classical Act Utilitarianism combines maximizing right action with which view of value?",
+          "q": "Classical Act Utilitarianism is best characterised as:",
           "options": [
-            "Perfectionism.",
-            "Welfarism (welfare is the fundamental value).",
-            "Egoism.",
-            "Pluralism.",
-            "Virtue-based value."
+            "Rule-based, satisficing, virtue-based, partial, agent-relative",
+            "Act-evaluative, maximising, welfarist, universalist, impartialist",
+            "Deontological, maximising, welfarist, universalist, impartialist",
+            "Act-evaluative, satisficing, hedonist, partial, agent-relative",
+            "Rule-based, maximising, welfarist, partial, agent-neutral"
           ],
           "answer": 1,
           "topic": "classical-au",
-          "explain": "Classical AU is welfarist: welfare is the fundamental value to be maximized.",
+          "explain": "Five canonical features: ACT + MAX + WELFARIST + UNIVERSAL + IMPARTIAL.",
           "difficulty": "easy"
         },
         {
-          "q": "What does it mean to say classical utilitarianism is universalist and impartialist?",
+          "q": "In classical utilitarianism, 'utility' equals:",
           "options": [
-            "It applies only to one nation.",
-            "The welfare of all affected individuals counts, and the theory is agent-neutral.",
-            "Only the agent's welfare counts.",
-            "Only the welfare of moral agents counts.",
-            "All persons have identical preferences."
+            "The positive value of effects on those positively affected MINUS the negative value of effects on those negatively affected",
+            "The sum of pleasures of the agent only",
+            "Whatever the culture says",
+            "The probability of success",
+            "The intensity of pleasure"
           ],
-          "answer": 1,
-          "topic": "classical-au",
-          "explain": "Universalism: all affected individuals' welfare counts. Impartialism: no special weighting for the agent or her group.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "How is 'utility' defined in the lecture?",
-          "options": [
-            "Pleasure minus pain for the agent only.",
-            "The values of the consequences of actions — positive effects on those positively affected and negative effects on those negatively affected.",
-            "Subjective happiness.",
-            "Money.",
-            "Whatever maximizes preferences."
-          ],
-          "answer": 1,
+          "answer": 0,
           "topic": "utility",
-          "explain": "Utility is the aggregated positive minus negative value across all affected parties.",
+          "explain": "Net value across all affected parties.",
           "difficulty": "easy"
         },
         {
-          "q": "On classical AU, an action A is obligatory iff...",
+          "q": "The Generic Principle of Utility states that A in C is right iff:",
           "options": [
-            "A satisfies the agent's preferences.",
-            "Doing A produces a higher level of utility than any other alternative the agent could perform.",
-            "A is approved by the majority.",
-            "A maximizes the agent's welfare.",
-            "A is recommended by a sage."
-          ],
-          "answer": 1,
-          "topic": "right-conduct-au",
-          "explain": "Obligation requires strictly higher utility than every other alternative.",
-          "difficulty": "easy"
-        },
-        {
-          "q": "On classical AU, an action A is optional iff...",
-          "options": [
-            "A is supererogatory.",
-            "In terms of utility, A is tied for first place with at least one other action.",
-            "A is forbidden.",
-            "A is encouraged but not required.",
-            "A produces moderate utility."
-          ],
-          "answer": 1,
-          "topic": "right-conduct-au",
-          "explain": "Optional acts are those tied for first place in utility production.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "The Generic Principle of Utility (PU) states that A in C is right iff...",
-          "options": [
-            "A produces strictly more utility than any alternative.",
-            "Doing A in C would produce as high a utility as any alternative action.",
-            "A is universally accepted.",
-            "A satisfies the categorical imperative.",
-            "A satisfies an expert judge."
+            "A is required by C's culture",
+            "A produces as high a utility as any alternative the agent could perform instead",
+            "A is virtuous",
+            "A maximises the agent's own pleasure",
+            "A is universally accepted"
           ],
           "answer": 1,
           "topic": "generic-pu",
-          "explain": "'As high as' allows ties, distinguishing the principle from a strict-maximization formulation.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "Bentham and Mill share which two claims about welfare?",
-          "options": [
-            "Welfare is wealth; wealth is virtue.",
-            "Welfare is a matter of one's level of happiness, and happiness is constituted by pleasure and the absence of pain.",
-            "Welfare is preference satisfaction; preferences are revealed.",
-            "Welfare is virtue; virtue is happiness.",
-            "Welfare is autonomy; autonomy is rational."
-          ],
-          "answer": 1,
-          "topic": "hedonism",
-          "explain": "Both ground welfare in happiness understood hedonistically as pleasure minus pain.",
+          "explain": "'At least as high as any alternative' is the maximising test.",
           "difficulty": "easy"
         },
         {
-          "q": "Which best states Ethical Hedonism (EH)?",
+          "q": "Bentham's felicific calculus includes which of the following features?",
           "options": [
-            "Pleasure is the only thing anyone in fact desires.",
-            "Experiences of pleasure are intrinsically good, experiences of pain are intrinsically bad, and these are the only items of intrinsic value relevant to ethics.",
-            "Pleasure is morally indifferent.",
-            "Pleasure should be pursued only privately.",
-            "Pain may be intrinsically good in some cases."
-          ],
-          "answer": 1,
-          "topic": "eh-phu",
-          "explain": "EH is the normative claim that pleasure and pain are the only ethically relevant items of intrinsic value.",
-          "difficulty": "easy"
-        },
-        {
-          "q": "Which is NOT one of the features in Bentham's felicific calculus?",
-          "options": [
-            "Intensity.",
-            "Duration.",
-            "Fecundity.",
-            "Sociability."
+            "Intensity",
+            "Duration",
+            "Certainty/uncertainty",
+            "All of the above",
+            "None of the above"
           ],
           "answer": 3,
           "topic": "felicific-calculus",
-          "explain": "Bentham's seven features are intensity, duration, certainty/uncertainty, propinquity/remoteness, fecundity, purity, and extent. Sociability is a basic good in NLT.",
-          "difficulty": "medium"
+          "explain": "Other features: propinquity/remoteness, fecundity, purity, extent.",
+          "difficulty": "easy"
         },
         {
-          "q": "What is Mill's test for one pleasure being higher in quality than another?",
+          "q": "Ethical Hedonism (EH) holds:",
           "options": [
-            "A philosopher decrees it.",
-            "Those competently acquainted with both prefer one to the other even when the preferred pleasure involves more discontent.",
-            "Whichever is more intense over a longer time.",
-            "Whichever is more popular.",
-            "Whichever requires more education."
+            "Pleasure is one good among many",
+            "Experiences of pleasure are intrinsically good and pain intrinsically bad; they are the only items of intrinsic value relevant to ethics",
+            "Only physical pleasures count",
+            "Only mental pleasures count",
+            "Pleasure is intrinsically bad"
+          ],
+          "answer": 1,
+          "topic": "eh-phu",
+          "explain": "EH is the value theory behind classical hedonistic utilitarianism.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "PHU (Principle of Hedonistic Utilitarianism) says A in C is right iff:",
+          "options": [
+            "A maximises virtue",
+            "A maximises agent's pleasure",
+            "Doing A in C would produce at least as high an overall balance of pleasure over pain as any alternative",
+            "A is intrinsically pleasant",
+            "A is universally accepted"
+          ],
+          "answer": 2,
+          "topic": "eh-phu",
+          "explain": "Same maximising structure as the generic PU, with hedonic content for value.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Mill refines Bentham by:",
+          "options": [
+            "Rejecting hedonism",
+            "Recognising QUALITATIVE differences among pleasures, not just quantitative",
+            "Introducing rules",
+            "Reducing pleasure to virtue",
+            "Rejecting universalism"
           ],
           "answer": 1,
           "topic": "qualitative-hedonism",
-          "explain": "Mill's test rests on the considered preference of competent judges who know both pleasures.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "Objection 1 to Mill's qualitative hedonism is a dilemma. If 'quality' concerns the intrinsic nature of pleasurable mental states, then...",
-          "options": [
-            "Mill is correct.",
-            "The only basis for ranking pleasures is intensity and duration, collapsing the view into quantitative hedonism.",
-            "Mill abandons hedonism.",
-            "Pleasure is preference.",
-            "Pleasure is illusion."
-          ],
-          "answer": 1,
-          "topic": "obj-qualitative-1",
-          "explain": "If quality is intrinsic to the mental state, only quantitative features remain — back to Bentham.",
-          "difficulty": "hard"
-        },
-        {
-          "q": "Objection 1's second horn: if 'quality' does NOT concern the intrinsic nature of mental states, then...",
-          "options": [
-            "Mill is consistent.",
-            "Mill has actually forsaken hedonism.",
-            "Mill must accept moral relativism.",
-            "Mill must accept ethical egoism.",
-            "Mill must abandon ethics."
-          ],
-          "answer": 1,
-          "topic": "obj-qualitative-1",
-          "explain": "If quality lies outside the mental state itself, then non-hedonic features ground value — abandoning hedonism.",
-          "difficulty": "hard"
-        },
-        {
-          "q": "Objection 2 to qualitative hedonism focuses on...",
-          "options": [
-            "The reliability of pleasure as a guide to action.",
-            "Whether 'expert judges' can be expected to reach universal or nearly universal agreement on matters of quality.",
-            "Whether pleasure can be felt.",
-            "Whether pleasures can be aggregated.",
-            "Whether expert judges exist."
-          ],
-          "answer": 1,
-          "topic": "obj-qualitative-2",
-          "explain": "The worry is whether even competent judges will converge on rankings.",
-          "difficulty": "medium"
-        },
-        {
-          "q": "Mill's 'proof' is structured into how many stages?",
-          "options": [
-            "Two.",
-            "Three.",
-            "Four.",
-            "Five.",
-            "One."
-          ],
-          "answer": 1,
-          "topic": "mills-proof",
-          "explain": "Mill's proof proceeds in three stages: (1) each person's happiness is intrinsically good to that person; (2) general happiness is good to the aggregate; (3) happiness is the only intrinsic good.",
+          "explain": "Quality of pleasure is Mill's signature move within hedonistic utilitarianism.",
           "difficulty": "easy"
         },
         {
-          "q": "Which fallacy does the lecture diagnose in Stage 1 of Mill's proof?",
+          "q": "Mill's three-stage 'proof' is supposed to support which conclusion?",
           "options": [
-            "Composition.",
-            "Equivocation on 'desirable' (capable of being desired vs worthy of being desired).",
-            "Affirming the consequent.",
-            "Division.",
-            "Ad hominem."
+            "MR",
+            "NLT",
+            "That happiness is the only intrinsic good",
+            "That virtue is the only good",
+            "That utility is unmeasurable"
           ],
-          "answer": 1,
+          "answer": 2,
+          "topic": "mills-proof",
+          "explain": "Stages 1–3 build toward the strong claim of happiness as the SOLE intrinsic good.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "The Subjective Principle of Utility (SPU) uses which logical connective in its formulation?",
+          "options": [
+            "Iff (biconditional)",
+            "Either/or",
+            "If (one-way conditional)",
+            "Neither/nor",
+            "Only-if"
+          ],
+          "answer": 2,
+          "topic": "spu",
+          "explain": "SPU states a sufficient condition with 'if', not a biconditional — lecture explicitly flags this.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Stage 1 of Mill's proof is diagnosed in the lecture as committing:",
+          "options": [
+            "Fallacy of equivocation on 'desirable'",
+            "Fallacy of composition",
+            "Begging the question",
+            "Affirming the consequent",
+            "Naturalistic fallacy"
+          ],
+          "answer": 0,
           "topic": "fallacy-equivocation",
-          "explain": "Mill slides from 'people desire X' to 'X is worthy of being desired' by equivocating on 'desirable.'",
+          "explain": "Slide from 'able to be desired' to 'worthy of being desired'.",
           "difficulty": "medium"
         },
         {
-          "q": "Which fallacy does the lecture diagnose in Stage 2 of Mill's proof?",
+          "q": "Stage 2 of Mill's proof is diagnosed as committing:",
           "options": [
-            "Equivocation.",
-            "Fallacy of composition.",
-            "False dichotomy.",
-            "Hasty generalization.",
-            "Begging the question."
+            "Fallacy of equivocation",
+            "Fallacy of composition",
+            "Affirming the consequent",
+            "Denying the antecedent",
+            "Equivocation on 'happiness'"
           ],
           "answer": 1,
           "topic": "fallacy-composition",
-          "explain": "From 'each person's happiness is intrinsically good to that person' one cannot infer 'general happiness is intrinsically good to the aggregate' — that mimics inferring the weight of a whole from the weight of its parts.",
+          "explain": "Inferring properties of the aggregate from properties of the parts (lecture's machine analogy).",
           "difficulty": "medium"
         },
         {
-          "q": "What is the problem flagged in Stage 3 of Mill's proof?",
+          "q": "In the Mine Shafts case, what does Expected-Consequences Utilitarianism (ECU) prescribe?",
           "options": [
-            "Mill confuses act and rule utilitarianism.",
-            "It is unclear how things desired in and for themselves are parts of the end of happiness rather than independent goods.",
-            "Mill abandons hedonism explicitly.",
-            "Mill assumes moral relativism.",
-            "Mill changes the meaning of 'good.'"
+            "Close gate 1",
+            "Close gate 2",
+            "Close gate 3 (expected utility 90)",
+            "Refuse to act",
+            "Flip a coin between gates 1 and 2"
           ],
-          "answer": 1,
-          "topic": "stage-3-problem",
-          "explain": "Mill says music or health are 'part of happiness,' but his own quoted passage makes this look ad hoc.",
-          "difficulty": "hard"
+          "answer": 2,
+          "topic": "mine-shafts",
+          "explain": "Gate 3 has the highest expected value: 0.5·90 + 0.5·90 = 90.",
+          "difficulty": "medium"
         },
         {
-          "q": "What is the 'problem of ignorance' for PHU?",
+          "q": "After the Mine Shafts decision, when Phil learns the miners were actually in shaft A, Actual-Consequences Utilitarianism (ACU) implies he OUGHT to have:",
           "options": [
-            "Agents are too lazy to calculate.",
-            "To apply PHU concretely one would have to know utilities of all alternatives — impossible without access to the future and others' experiences.",
-            "Most agents lack moral education.",
-            "Pleasures are unknowable in principle.",
-            "Utility cannot be quantified at all."
+            "Closed gate 3",
+            "Closed gate 1",
+            "Closed gate 2",
+            "Refused to act",
+            "Closed gates 1 and 3"
           ],
           "answer": 1,
+          "topic": "acu-ecu",
+          "explain": "With full knowledge, gate 1 would have saved all 100 — so ACU's verdict is gate 1.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which claim BEST captures the lecture's view of the principle of utility?",
+          "options": [
+            "PU is a step-by-step decision procedure",
+            "PU is identical to Mill's proof",
+            "PU is a CRITERION of rightness, not a decision procedure — usable as a standard even when not directly applied in deliberation",
+            "PU is restricted to one's own culture",
+            "PU only applies to omniscient agents"
+          ],
+          "answer": 2,
           "topic": "problem-of-ignorance",
-          "explain": "The objection is epistemic: applying PHU requires inaccessible information.",
+          "explain": "The criterion/decision-procedure distinction is the standard response to the problem of ignorance.",
           "difficulty": "medium"
         },
         {
-          "q": "A standard response to the problem of ignorance distinguishes...",
+          "q": "Mill's qualitative-hedonism test for ranking pleasures relies on:",
           "options": [
-            "Pleasure from happiness.",
-            "A moral criterion of rightness from a decision procedure.",
-            "Quantity from quality.",
-            "Subjective from objective utility.",
-            "Higher from lower pleasures."
+            "A scientific instrument",
+            "The number of people who experience the pleasure",
+            "The preference of those competently acquainted with BOTH pleasures",
+            "Brain imaging",
+            "The opinion of philosophers"
           ],
-          "answer": 1,
-          "topic": "problem-of-ignorance",
-          "explain": "PU is offered as a criterion of what makes acts right, not as a procedure agents must use to decide.",
+          "answer": 2,
+          "topic": "qualitative-hedonism",
+          "explain": "Competent judges' preference is Mill's criterion of quality.",
           "difficulty": "medium"
         },
         {
-          "q": "In the Mine Shafts case, the expected utility of closing gate 3 is...",
+          "q": "Objection 1 to qualitative hedonism is that:",
           "options": [
-            "50.",
-            "90.",
-            "100.",
-            "45.",
-            "0."
+            "Quality cannot be measured at all",
+            "Either quality concerns the intrinsic nature of pleasure (collapsing into quantitative hedonism) or it does not (then Mill has abandoned hedonism)",
+            "People disagree about quality",
+            "Quality is culturally relative",
+            "Quality is purely subjective"
           ],
           "answer": 1,
-          "topic": "mine-shafts",
-          "explain": "Closing gate 3 saves 90 either way: (0.5×90)+(0.5×90)=90.",
-          "difficulty": "easy"
-        },
-        {
-          "q": "In the Mine Shafts case, the expected utility of closing gate 1 is...",
-          "options": [
-            "100.",
-            "50.",
-            "90.",
-            "0.",
-            "75."
-          ],
-          "answer": 1,
-          "topic": "mine-shafts",
-          "explain": "Closing gate 1: (0.5×100)+(0.5×0)=50.",
-          "difficulty": "easy"
-        },
-        {
-          "q": "In the Mine Shafts case, what does ECU say Phil ought to do?",
-          "options": [
-            "Close gate 1.",
-            "Close gate 3.",
-            "Close gate 2.",
-            "Flip a coin between gates 1 and 2.",
-            "Do nothing."
-          ],
-          "answer": 1,
-          "topic": "mine-shafts",
-          "explain": "Gate 3 has the highest expected utility (90), so ECU says close gate 3.",
+          "topic": "obj-qualitative-1",
+          "explain": "Dilemma: either back to quantity, or no longer hedonism.",
           "difficulty": "medium"
         },
         {
-          "q": "After the miners are revealed to have been in shaft A, ACU implies Phil 'ought to have'...",
+          "q": "What does PHU evaluate to determine rightness?",
           "options": [
-            "Closed gate 3.",
-            "Closed gate 1, since this would have saved all 100.",
-            "Closed gate 2.",
-            "Done nothing.",
-            "Performed all three."
+            "Average pleasure per person",
+            "The OVERALL BALANCE of pleasure over pain produced by the action",
+            "Only intense pleasures",
+            "Only long-lasting pleasures",
+            "Only the agent's pleasures"
           ],
           "answer": 1,
-          "topic": "mine-shafts",
-          "explain": "By actual consequences, gate 1 would have saved all 100 — ACU says that was the right act.",
+          "topic": "eh-phu",
+          "explain": "Aggregate of net hedonic effects across all affected.",
           "difficulty": "medium"
         },
         {
-          "q": "How does SPU's logical form differ from PHU's?",
+          "q": "Which of the following describes 'blameless wrongdoing' in the lecture?",
           "options": [
-            "SPU uses 'iff' while PHU uses 'if.'",
-            "SPU uses 'if' (not 'iff!') and states only a presumptively sufficient condition for subjective rightness.",
-            "SPU collapses into PHU.",
-            "SPU is silent about utility.",
-            "SPU requires knowledge of actual consequences."
-          ],
-          "answer": 1,
-          "topic": "spu",
-          "explain": "The lecture explicitly emphasizes that SPU uses 'if' rather than 'iff' and offers only a presumptively sufficient condition.",
-          "difficulty": "hard"
-        },
-        {
-          "q": "In the variant case where closing gate 3 would save only 50 regardless of shaft, what does the lecture take to follow?",
-          "options": [
-            "All three options are subjectively right since their expected utilities are equal.",
-            "Intuitively closing gate 3 is still the subjectively right act — showing SPU offers only a presumptively sufficient condition.",
-            "Closing gate 1 is subjectively right.",
-            "No action is subjectively right.",
-            "SPU collapses into PHU."
-          ],
-          "answer": 1,
-          "topic": "spu",
-          "explain": "The case shows the bare equality of expected utilities does not always settle subjective rightness — the sufficient condition is only presumptive.",
-          "difficulty": "hard"
-        },
-        {
-          "q": "In the Mine Shafts case, the lecture concludes that...",
-          "options": [
-            "Phil is blameworthy for closing gate 3.",
-            "Phil is not blameworthy, even though he performed an action that was objectively morally wrong (blameless wrongdoing).",
-            "Phil is blameless because his action was objectively right.",
-            "Phil should not have acted at all.",
-            "Phil acted from selfish motives."
+            "A right act done for the wrong reason",
+            "An objectively wrong act for which the agent is NOT blameworthy because she acted conscientiously on her beliefs",
+            "A wrong act done with malice",
+            "An optional act done well",
+            "A right act done out of luck"
           ],
           "answer": 1,
           "topic": "blame-praise",
-          "explain": "Phil acted on the best available evidence; he is morally conscientious, so not blameworthy — yet by actual consequences his act was wrong.",
+          "explain": "Phil in Mine Shafts is the lecture's example — objectively wrong, subjectively right, not blameworthy.",
           "difficulty": "medium"
         },
         {
-          "q": "Which best states the relationship between blame/praise and objective wrong/rightness in the lecture?",
+          "q": "On the lecture's two-level account of moral thought, the INTUITIVE level:",
           "options": [
-            "They are identical.",
-            "Blame-worthiness and praise-worthiness are not the same as objective wrongness and rightness; they are sensitive to how morally conscientious the agent is.",
-            "Blame depends only on outcomes.",
-            "Praise depends only on outcomes.",
-            "Blame and praise are illusions."
-          ],
-          "answer": 1,
-          "topic": "blame-praise",
-          "explain": "The lecture explicitly distinguishes praise/blame (sensitive to conscientiousness) from objective right/wrong (sensitive to outcomes).",
-          "difficulty": "medium"
-        },
-        {
-          "q": "The 'two levels of moral thought' distinction contrasts...",
-          "options": [
-            "Pleasure and pain.",
-            "An intuitive level (rules learned early) with a critical level (where rules conflict and we deliberate).",
-            "Egoism and altruism.",
-            "Theory and practice.",
-            "Action and omission."
+            "Is always reliable",
+            "Proceeds by moral rules learned early on, applied in ordinary cases",
+            "Replaces critical thought",
+            "Is restricted to philosophers",
+            "Is identical to Bentham's calculus"
           ],
           "answer": 1,
           "topic": "two-levels",
-          "explain": "At the intuitive level we apply familiar rules; at the critical level we deliberate when those rules conflict.",
+          "explain": "The critical level engages only when ordinary rules conflict.",
           "difficulty": "medium"
         },
         {
-          "q": "Which of the following is NOT a feature of Classical Act Utilitarianism as set out in this lecture?",
+          "q": "In Mine Shafts, suppose closing gate 3 saved only 50 miners regardless of location. Expected utilities of all three options are now equal at 50. What does the lecture say about subjective rightness?",
           "options": [
-            "Maximizing conception of right action.",
-            "Welfarism.",
-            "Agent-neutrality (impartialism).",
-            "Direct evaluation of acts.",
-            "Rule-acceptance utility."
+            "All three options are subjectively right",
+            "Intuitively, closing gate 3 is STILL the subjectively right act, showing SPU's condition is only PRESUMPTIVELY sufficient, not necessary",
+            "Closing gate 1 is subjectively right",
+            "Closing gate 2 is subjectively right",
+            "No option is subjectively right"
           ],
-          "answer": 4,
+          "answer": 1,
+          "topic": "spu",
+          "explain": "This is the lecture's example showing SPU offers only a presumptively sufficient condition.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Why does the lecture insist that SPU is formulated with 'if', not 'iff'?",
+          "options": [
+            "For literary variety",
+            "To match Mill's wording",
+            "Because the condition is only PRESUMPTIVELY sufficient and there can be cases where the right answer doesn't match the condition",
+            "Because 'iff' is too strong logically in any context",
+            "Because SPU is empirically false"
+          ],
+          "answer": 2,
+          "topic": "spu",
+          "explain": "Cases like the 50-only-saved variant show the condition is not necessary.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "The 'parts of happiness' worry directed at Mill's Stage 3 is:",
+          "options": [
+            "That happiness has no parts",
+            "That Mill's premises beg the question against virtue",
+            "That it is unclear how things desired in and for themselves (e.g., music, health) could be PARTS of happiness rather than independent goods",
+            "That happiness varies across cultures",
+            "That happiness is unmeasurable"
+          ],
+          "answer": 2,
+          "topic": "stage-3-problem",
+          "explain": "Mill's move to fold independent ends into 'happiness' looks ad hoc.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which best captures the structural relation between ECU and ACU?",
+          "options": [
+            "ACU is a special case of ECU when probability is certain",
+            "ECU evaluates by expected outcomes (given evidence); ACU by actual outcomes — they can prescribe DIFFERENT actions in cases of uncertainty",
+            "They always agree",
+            "ACU presupposes ECU",
+            "ECU is identical to PHU"
+          ],
+          "answer": 1,
+          "topic": "acu-ecu",
+          "explain": "Mine Shafts is the textbook divergence: ECU → gate 3; ACU → gate 1 (given the actual location).",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which statement about utilitarian RIGHTNESS and BLAMEWORTHINESS does the lecture endorse?",
+          "options": [
+            "They are identical",
+            "Blameworthiness/praiseworthiness ≠ objective wrongness/rightness — they are tied to the SUBJECTIVE notion of moral obligation",
+            "Blame depends only on outcome",
+            "Praise depends only on intention",
+            "Both are determined solely by the agent's culture"
+          ],
+          "answer": 1,
+          "topic": "blame-praise",
+          "explain": "Hence blameless wrongdoing AND praiseless rightdoing are coherent possibilities.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "The strongest internal way for Mill to push back against Objection 1 (the quality dilemma) is to argue that:",
+          "options": [
+            "Quality just reduces to quantity",
+            "Quality is irrelevant to ethics",
+            "There is a 'middle' notion of quality tied to the intrinsic nature of mental states that is NOT reducible to intensity and duration — though the lecture treats this as still problematic",
+            "Hedonism should be abandoned",
+            "Pleasures are incomparable"
+          ],
+          "answer": 2,
+          "topic": "obj-qualitative-1",
+          "explain": "This is Mill's intended escape route, but it remains uncomfortable per the lecture's diagnosis.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "What is the role of Bentham's felicific calculus in classical hedonistic utilitarianism?",
+          "options": [
+            "A checklist of features (intensity, duration, certainty, propinquity, fecundity, purity, extent) used to calculate utilities of actions",
+            "A list of culturally accepted pleasures",
+            "A taxonomy of virtues",
+            "A rejection of hedonism",
+            "A defense of qualitative hedonism"
+          ],
+          "answer": 0,
+          "topic": "felicific-calculus",
+          "explain": "Bentham's calculus operationalises classical utilitarian comparisons of pleasures and pains.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which scenario is BEST handled by ACU rather than ECU?",
+          "options": [
+            "Mine Shafts where action is taken under genuine uncertainty",
+            "Retrospective evaluation of an action whose actual consequences are now fully known and clearly differ from expectations",
+            "Routine moral deliberation",
+            "Decisions under conditions of perfect information",
+            "Cases where the agent is uncertain about non-moral facts"
+          ],
+          "answer": 1,
+          "topic": "acu-ecu",
+          "explain": "ACU's evaluative pull is strongest when we judge in hindsight against actual outcomes.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "What is the BEST single-sentence summary of the lecture's response to the Problem of Ignorance?",
+          "options": [
+            "Utility is unmeasurable in principle",
+            "The principle of utility is a CRITERION of rightness, not a DECISION PROCEDURE — agents need not compute every alternative to be guided by it",
+            "PU should be abandoned",
+            "Switch to NLT",
+            "Adopt ECU and treat it as a procedure"
+          ],
+          "answer": 1,
+          "topic": "problem-of-ignorance",
+          "explain": "The criterion/procedure distinction allows PU to be normatively authoritative without requiring omniscient calculation.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "On the lecture's view, which combination of features is unique to CLASSICAL utilitarianism, distinguishing it from NLT and MR?",
+          "options": [
+            "Maximisation + welfarism + universalism + impartialism",
+            "Cultural relativism + hedonism",
+            "Perfectionism + double effect",
+            "Virtue + happiness",
+            "Tolerance + pluralism"
+          ],
+          "answer": 0,
           "topic": "classical-au",
-          "explain": "Acceptance utility belongs to rule consequentialism (Lecture 6), not classical AU.",
+          "explain": "NLT is perfectionist + absolutist; MR is culturally indexed; classical utilitarianism is precisely max-welfarist-universalist-impartialist.",
           "difficulty": "hard"
         }
       ]
