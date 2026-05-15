@@ -1048,32 +1048,77 @@ function finishQuiz(lid) {
       </div>`;
     });
   }
-  html += `</div>`;
+  html += `<div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+    <button class="btn" onclick="showPage('notes-${lid}')">Review Notes</button>
+    <button class="btn btn-primary" onclick="showGlobalReport()">Summary Report</button>
+  </div></div>`;
   postEl.innerHTML = html;
+  document.getElementById('globalReportBtn').disabled = false;
+}
+
+function showGlobalReport() {
+  showPage('global-report');
 }
 
 function renderGlobalReport() {
   const body = document.getElementById('report-body');
   if (!body) return;
-  let html = '<h2>Full Summary Report</h2>';
   let totalAnswered = 0, totalCorrect = 0;
+  let lecHtml = '';
   [3,4,5,6,7,8,10,11].forEach(lid => {
     const s = quizState[lid];
-    if (s.answered > 0) {
-      totalAnswered += s.answered;
-      totalCorrect += s.correct;
-      const pct = Math.round(100 * s.correct / s.answered);
-      html += `<div class="summary">
-        <h3>Lecture ${lid}</h3>
-        <div>${s.correct}/${s.answered} correct (${pct}%)</div>
-      </div>`;
+    const lec = lectures.find(l => l.id === lid);
+    if (!lec || s.answered === 0) return;
+    totalAnswered += s.answered;
+    totalCorrect += s.correct;
+    const pct = Math.round(100 * s.correct / s.answered);
+    const bar = Math.round(pct / 5);
+    const barFill = '█'.repeat(bar) + '░'.repeat(20 - bar);
+    let weakHtml = '';
+    if (s.weakTopics && s.weakTopics.length > 0) {
+      weakHtml = `<p style="margin:8px 0 2px;color:var(--wrong);font-size:.9em"><b>Weak topics:</b> ${s.weakTopics.join(', ')}</p>`;
     }
+    let wrongHtml = '';
+    if (s.wrongQuestions && s.wrongQuestions.length > 0) {
+      wrongHtml = `<details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:.93em">Review ${s.wrongQuestions.length} wrong answer${s.wrongQuestions.length > 1 ? 's' : ''}</summary>`;
+      s.wrongQuestions.forEach(qi => {
+        const q = lec.questions[qi];
+        if (!q) return;
+        wrongHtml += `<div class="review-card" style="margin-top:8px">
+          <div class="q-text" style="font-size:.93em">${q.q}</div>
+          <p style="margin:4px 0"><b>Your answer:</b> ${q.options[s.choices[qi]]}</p>
+          <p style="margin:4px 0"><b>Correct:</b> ${q.options[q.answer]}</p>
+          <p style="margin:4px 0;font-size:.9em;color:var(--muted)">${q.explain || ''}</p>
+        </div>`;
+      });
+      wrongHtml += `</details>`;
+    }
+    lecHtml += `<div class="summary" style="margin-bottom:16px">
+      <h3 style="margin-top:0">${lec.title}</h3>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <div class="score-big" style="font-size:1.8em">${s.correct}/${s.answered}</div>
+        <div>
+          <div style="font-family:monospace;font-size:.85em;color:var(--muted)">${barFill}</div>
+          <div style="font-size:1.05em;font-weight:bold;color:${pct>=80?'var(--accent)':pct>=60?'#c9a227':'var(--wrong)'}">${pct}%</div>
+        </div>
+      </div>
+      ${weakHtml}
+      ${wrongHtml}
+    </div>`;
   });
+  let overallHtml = '';
   if (totalAnswered > 0) {
     const pct = Math.round(100 * totalCorrect / totalAnswered);
-    html = `<div class="summary"><h3>Overall</h3><div class="score-big">${totalCorrect}/${totalAnswered}</div><div>${pct}%</div></div>` + html;
+    let verdict = pct >= 80 ? 'Excellent overall!' : pct >= 60 ? 'Good progress — review weak areas.' : 'Keep going — focus on wrong topics.';
+    overallHtml = `<div class="summary" style="border-color:var(--accent);margin-bottom:24px">
+      <h2 style="margin-top:0">Overall Progress</h2>
+      <div class="score-big">${totalCorrect}/${totalAnswered}</div>
+      <div class="verdict">${pct}% — ${verdict}</div>
+    </div>`;
+  } else {
+    overallHtml = `<p style="color:var(--muted)">No quizzes completed yet.</p>`;
   }
-  body.innerHTML = html;
+  body.innerHTML = `<h2>Summary Report</h2>${overallHtml}${lecHtml}`;
 }
 
 function initReveal() {
