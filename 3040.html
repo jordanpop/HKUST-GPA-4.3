@@ -1664,26 +1664,39 @@ function updateHomeStatus() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  initQuizStateFromLectures();
-  loadState();
-  // Migrate older saved states: recompute weak topics/sections if missing
-  lectures.forEach(lec => {
-    const s = quizState[lec.id];
-    const hasTopics = s.weakTopics && s.weakTopics.length > 0;
-    const hasSecs = s.weakSections && s.weakSections.length > 0;
-    if (s.completed && !hasTopics && s.wrongQuestions.length > 0) {
-      computeWeakSections(lec.id);
-    }
-  });
-  saveState();
-  updateHomeStatus();
-  initReveal();
+  fetch('data/3040.json')
+    .then(r => {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(data => {
+      lectures = data.lectures || [];
+      STORAGE_KEY = data.storageKey || STORAGE_KEY;
+      TOPIC_SECTION_MAP = data.topicSectionMap || {};
+      initQuizStateFromLectures();
+      loadState();
+      // Migrate older saved states: recompute weak topics/sections if missing
+      lectures.forEach(lec => {
+        const s = quizState[lec.id];
+        const hasTopics = s.weakTopics && s.weakTopics.length > 0;
+        if (s.completed && !hasTopics && s.wrongQuestions.length > 0) {
+          computeWeakSections(lec.id);
+        }
+      });
+      saveState();
+      updateHomeStatus();
+      initReveal();
+    })
+    .catch(err => {
+      console.error('Failed to load data/3040.json:', err);
+      alert('Failed to load lecture data. If you opened this file directly (file://), please serve via a local HTTP server.');
+    });
 });
 
 // ===== PWA Service Worker (inline via Blob) =====
 if ('serviceWorker' in navigator) {
   const swCode = `
-    const CACHE = 'endo-study-v4';
+    const CACHE = 'endo-study-v5';
     self.addEventListener('install', e => { self.skipWaiting(); });
     self.addEventListener('activate', e => { e.waitUntil(self.clients.claim()); });
     self.addEventListener('fetch', e => {
