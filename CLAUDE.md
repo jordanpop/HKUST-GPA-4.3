@@ -5,7 +5,7 @@
 ## Quick Overview
 HKUST study guide website with subject selection → lecture → notes/quiz flow.
 - **Tech stack:** Pure HTML/CSS/JS, no frameworks, localStorage for progress
-- **Data:** Lecture questions/notes-metadata live in `data/*.json` and are loaded at runtime via `fetch()`
+- **Data architecture:** Lecture questions live in `data/*.json` and are loaded at runtime via `fetch()`; notes HTML are inlined in subject HTML files
 - **Hosted:** https://jordanpop.github.io/HKUST-GPA-4.3/
 - **Git rule: NEVER commit or push without explicit user approval**
 
@@ -81,14 +81,11 @@ User drops PDF/PPTX → say which subject and lecture number
 Steps:
 1. **Scan the actual PDF structure** — read through the PDF to identify the real topics, sections, and ordering. Do NOT rely on CLAUDE.md's lecture breakdown table (it may be stale or incorrect).
 2. Confirm with user: "This PDF covers [topics in actual order], right?" — get explicit confirmation before proceeding.
-3. Open `data/{code}.json` to check existing lecture IDs (do NOT open the HTML for this)
-4. Generate notes HTML using the Notes Format below, following the PDF's actual structure exactly — inject as a new `<div id="notes-N">` section in the HTML file
-5. Generate exactly 30 questions using the Question Format below (all questions must be answerable from this lecture's PDF only)
-6. Edit the HTML file only to:
-   - Add a lecture card on the home page section
-   - Add a `<div id="notes-N">` block
-   - Add a `<div id="quiz-N">` block
-7. Edit `data/{code}.json` to append the new lecture object (with all 30 questions) and any new topic→section mappings
+3. Open `data/{code}.json` to check existing lecture IDs
+4. **Generate exactly 30 questions** using the Question Format below (all questions must be answerable from this lecture's PDF only)
+5. **Generate notes HTML** using the Notes Format below, following the PDF's actual structure exactly
+6. **Update only `data/{code}.json`**: append the new lecture object (with all 30 questions) and any new topic→section mappings. The fetch-based architecture means you do NOT edit the HTML file for data updates.
+7. **If this is the first lecture:** You will need to add a `<div id="notes-N">` and `<div id="quiz-N">` block to the HTML file once. After that, only JSON updates are needed.
 8. Update CLAUDE.md's reference table only after confirming the PDF structure matches
 9. Ask user to approve before committing
 
