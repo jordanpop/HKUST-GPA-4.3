@@ -1227,6 +1227,7 @@ function showPage(id) {
     const lid = parseInt(id.split('-')[1]);
     applyWeakHighlights(lid);
   }
+  if (el) el.querySelectorAll('.reveal-on-scroll').forEach(e => e.classList.add('is-visible'));
   setTimeout(initReveal, 50);
 }
 
