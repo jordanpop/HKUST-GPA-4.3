@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Endo Study Guide — LIFS3040</title>
+<style>
+:root{
+  --bg:#faf6ef; --paper:#fffdf7; --ink:#2b2a26; --muted:#6b6a63;
+  --accent:#4a6b4a; --accent-soft:#d9e4d3;
+  --wrong:#b85042; --wrong-soft:#f3dad6; --border:#d8d2c4;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.6;}
+.wrap{max-width:760px;margin:0 auto;padding:40px 24px 120px;}
+.page{display:none}
+.page.active{display:block}
+h1{font-size:2.2em;margin:0 0 8px;letter-spacing:.5px}
+h2{font-size:1.5em;color:var(--accent);border-bottom:1px solid var(--border);padding-bottom:6px;margin-top:38px}
+h3{font-size:1.15em;color:var(--ink);margin-top:24px}
+.subtitle{color:var(--muted);font-style:italic;margin-bottom:30px}
+.card{background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:22px;margin:14px 0;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.lec-row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.lec-title{font-size:1.15em;font-weight:bold}
+.btn{display:inline-block;padding:8px 18px;border:1px solid var(--accent);background:var(--paper);color:var(--accent);font-family:inherit;font-size:.95em;cursor:pointer;border-radius:4px;text-decoration:none;transition:all .2s}
+.btn:hover{background:var(--accent);color:var(--paper)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn-primary{background:var(--accent);color:var(--paper)}
+.btn-primary:hover{background:#3a5439}
+.back{margin-bottom:20px;font-size:.9em}
+.bigpic{background:var(--accent-soft);border-left:4px solid var(--accent);padding:14px 18px;margin:18px 0;font-style:italic}
+.callout{background:#fdf4d9;border-left:4px solid #c9a227;padding:14px 18px;margin:20px 0;border-radius:3px}
+.callout-title{font-weight:bold;color:#7a5e0a;margin-bottom:6px;font-style:normal}
+table{border-collapse:collapse;width:100%;margin:14px 0;background:var(--paper)}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--accent-soft)}
+.exam-trap-inline{background:#fdf4d9;border-left:3px solid #c9a227;padding:6px 12px;margin:10px 0;font-size:.92em}
+.exam-trap-inline b{color:#7a5e0a}
+.preview-q{background:var(--accent-soft);border-radius:4px;padding:14px 18px;margin:10px 0}
+.preview-q ol{margin:0;padding-left:22px}
+.lower-yield{color:var(--muted);font-size:.93em;border-top:1px dashed var(--border);padding-top:14px;margin-top:24px}
+.lower-yield ul{margin-top:6px}
+.score-bar{position:sticky;top:0;background:var(--paper);border:1px solid var(--border);padding:12px 18px;margin-bottom:20px;border-radius:4px;font-weight:bold;z-index:10;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.q-block{background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:20px;margin:18px 0}
+.q-num{color:var(--muted);font-size:.88em;margin-bottom:6px}
+.q-text{font-weight:bold;margin-bottom:14px}
+.opt{display:block;padding:10px 14px;margin:6px 0;border:1px solid var(--border);border-radius:4px;cursor:pointer;background:var(--paper);transition:background .15s}
+.opt:hover{background:var(--accent-soft)}
+.opt input{margin-right:10px}
+.opt.correct{background:var(--accent-soft);border-color:var(--accent)}
+.opt.wrong{background:var(--wrong-soft);border-color:var(--wrong)}
+.opt.disabled{cursor:default;opacity:.85}
+.opt.disabled:hover{background:var(--paper)}
+.opt.disabled.correct:hover{background:var(--accent-soft)}
+.opt.disabled.wrong:hover{background:var(--wrong-soft)}
+.explain{margin-top:12px;padding:12px;background:#f4efe2;border-radius:4px;font-size:.94em;color:var(--ink)}
+.explain b{color:var(--accent)}
+.summary{background:var(--paper);border:2px solid var(--accent);border-radius:6px;padding:24px;margin:30px 0}
+.summary h2{margin-top:0;color:var(--accent);border-bottom:none}
+.score-big{font-size:2.5em;color:var(--accent);font-weight:bold}
+.verdict{font-size:1.1em;margin:10px 0;font-style:italic}
+.theme-list{margin:12px 0}
+.theme-list li{margin:4px 0}
+.review-card{background:var(--paper);border:1px solid var(--wrong);border-radius:6px;padding:18px;margin:14px 0}
+.review-card .q-text{color:var(--wrong)}
+.memorize ol{padding-left:24px}
+.memorize li{margin:6px 0}
+.reveal-on-scroll{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.4,0,.2,1);will-change:opacity,transform}
+.reveal-on-scroll.is-visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+.submit-q{margin-top:10px}
+.quiz-settings{margin-top:12px;padding:10px 14px;background:var(--accent-soft);border-radius:4px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:.92em}
+.quiz-settings label{display:flex;align-items:center;gap:6px;color:var(--ink)}
+.quiz-settings select{font-family:inherit;font-size:.95em;padding:4px 8px;border:1px solid var(--border);border-radius:3px;background:var(--paper);color:var(--ink)}
+.reset-zone{text-align:center;margin-top:20px}
+.btn-danger{border-color:var(--wrong);color:var(--wrong)}
+.btn-danger:hover{background:var(--wrong);color:var(--paper)}
+.weak-highlight{background:rgba(253,222,90,.45);border-radius:3px;transition:background .3s;box-shadow:inset 3px 0 0 #c9a227}
+p.weak-highlight,li.weak-highlight,ul.weak-highlight,ol.weak-highlight,div.weak-highlight,table.weak-highlight{padding:6px 10px;margin:4px 0}
+tr.weak-highlight td,tr.weak-highlight th{background:rgba(253,222,90,.45)}
+tr.weak-highlight{box-shadow:none}
+.weak-h2{background:linear-gradient(transparent 60%,rgba(253,222,90,.55) 60%);padding:0 6px;border-radius:2px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div id="home" class="page active">
+  <h1>Endo Study Guide</h1>
+  <div class="subtitle">LIFS3040 — The Endocrine System, Lectures 1-5</div>
+  <div class="card reveal-on-scroll reveal-delay-1">
+    <div class="lec-row">
+      <div class="lec-title">Lecture 1: Overview of the Endocrine System</div>
+      <div>
+        <button class="btn" onclick="showPage('notes-1')">Notes</button>
+        <button class="btn btn-primary" onclick="startQuiz(1)">Quiz</button>
+      </div>
+    </div>
+    <div class="quiz-settings">
+      <label>Questions:
+        <select id="count-1"><option value="10">10</option><option value="20">20</option><option value="30" selected>30</option></select>
+      </label>
+      <span id="status-1" style="color:var(--muted);font-size:.9em"></span>
+    </div>
+  </div>
+  <div class="card reveal-on-scroll reveal-delay-2">
+    <div class="lec-row">
+      <div class="lec-title">Lecture 2: Neuroendocrine Systems (Hypothalamus &amp; Pituitary)</div>
+      <div>
+        <button class="btn" onclick="showPage('notes-2')">Notes</button>
+        <button class="btn btn-primary" onclick="startQuiz(2)">Quiz</button>
+      </div>
+    </div>
+    <div class="quiz-settings">
+      <label>Questions:
+        <select id="count-2"><option value="10">10</option><option value="20">20</option><option value="30" selected>30</option></select>
+      </label>
+      <span id="status-2" style="color:var(--muted);font-size:.9em"></span>
+    </div>
+  </div>
+  <div class="card reveal-on-scroll reveal-delay-3">
+    <div class="lec-row">
+      <div class="lec-title">Lecture 3: Metabolic &amp; Developmental Hormones</div>
+      <div>
+        <button class="btn" onclick="showPage('notes-3')">Notes</button>
+        <button class="btn btn-primary" onclick="startQuiz(3)">Quiz</button>
+      </div>
+    </div>
+    <div class="quiz-settings">
+      <label>Questions:
+        <select id="count-3"><option value="10">10</option><option value="20">20</option><option value="30" selected>30</option></select>
+      </label>
+      <span id="status-3" style="color:var(--muted);font-size:.9em"></span>
+    </div>
+  </div>
+  <div class="card reveal-on-scroll reveal-delay-1">
+    <div class="lec-row">
+      <div class="lec-title">Lecture 4: Hormones Regulating Water &amp; Electrolyte Balance</div>
+      <div>
+        <button class="btn" onclick="showPage('notes-4')">Notes</button>
+        <button class="btn btn-primary" onclick="startQuiz(4)">Quiz</button>
+      </div>
+    </div>
+    <div class="quiz-settings">
+      <label>Questions:
+        <select id="count-4"><option value="10">10</option><option value="20">20</option><option value="30" selected>30</option></select>
+      </label>
+      <span id="status-4" style="color:var(--muted);font-size:.9em"></span>
+    </div>
+  </div>
+  <div class="card reveal-on-scroll reveal-delay-2">
+    <div class="lec-row">
+      <div class="lec-title">Lecture 5: Reproductive Hormones</div>
+      <div>
+        <button class="btn" onclick="showPage('notes-5')">Notes</button>
+        <button class="btn btn-primary" onclick="startQuiz(5)">Quiz</button>
+      </div>
+    </div>
+    <div class="quiz-settings">
+      <label>Questions:
+        <select id="count-5"><option value="10">10</option><option value="20">20</option><option value="30" selected>30</option></select>
+      </label>
+      <span id="status-5" style="color:var(--muted);font-size:.9em"></span>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:40px">
+    <button id="globalReportBtn" class="btn" disabled onclick="showGlobalReport()">Full Summary Report</button>
+  </div>
+  <div class="reset-zone">
+    <button class="btn btn-danger" onclick="resetAllProgress()">Reset All Progress</button>
+  </div>
+</div>
+
+<div id="notes-1" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-1" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(1)">Clear Highlights</button>
+  <h1>Lecture 1: Overview of the Endocrine System</h1>
+
+<div class="bigpic reveal-on-scroll">
+The endocrine system (內分泌系統) is the body's slow but far-reaching messaging network. Specialized cells release hormones (荷爾蒙) into the blood; those chemicals travel to distant tissues and bind specific receptors to shape metabolism, growth, reproduction, water balance, and mood. Lecture 1 lays the scaffolding: what counts as a hormone, the four chemical classes (amino-acid derivatives, polypeptides, steroids, prostaglandins), and the two big signaling categories — lipid-soluble hormones acting on nuclear receptors versus lipid-insoluble hormones acting through surface receptors and second messengers. Master this scaffold and every later lecture is just hanging examples on it.
+</div>
+
+<section class="reveal-on-scroll" data-sec="0">
+<h2>1. What is a hormone?</h2>
+<p data-topic="Hormone definition">Working definition for <b>classical hormones</b> (古典荷爾蒙): (1) secreted in very small amounts by specialized cells or glands; (2) carried in the bloodstream to distant tissues; (3) bind specific receptors in target tissues to produce a biological response. Ernest Starling coined the word in 1905 — from Greek meaning "to arouse or excite."</p>
+<p data-topic="Endocrine cells">Endocrine glands (內分泌腺) are not the only source — many tissues contain endocrine cells: heart (atrial natriuretic peptide), kidney (renin, calcitriol), liver (somatomedin/IGF), stomach (gastrin), duodenum (secretin), adipocytes (leptin, estrogen), bone (FGF-23, RANKL, sclerostin), and the enteroendocrine system (GLP-1, GLP-2).</p>
+<p data-topic="Hormone regulation"><b>Three categories of stimuli that trigger hormone secretion:</b></p>
+<ul data-topic="Hormone regulation">
+<li><b>Humoral</b> (體液性) — changes in blood Ca²⁺, glucose, osmolarity.</li>
+<li><b>Neural</b> (神經性) — sympathetic control of the adrenal medulla.</li>
+<li><b>Hormonal</b> (荷爾蒙性) — hypothalamic neurohormones controlling anterior pituitary release.</li>
+</ul>
+<div class="exam-trap-inline" data-topic="Hormone definition Endocrine definition"><b>Exam trap:</b> Hormones are secreted in VERY SMALL amounts. High concentrations are pathological. Also: hormones travel in BLOOD — not via ducts (that is exocrine).</div>
+</section>
+
+<section class="reveal-on-scroll" data-sec="1">
+<h2>2. Endocrine vs nervous system</h2>
+<p data-topic="Endocrine vs nervous Norepinephrine">Both coordinate physiology, but on different timescales. The nervous system is fast and brief; the endocrine system is slow and sustained (minutes to days). They overlap structurally — the hypothalamus contains neurosecretory cells that release hormones, and the adrenal medulla is essentially modified sympathetic ganglion. The same molecule can act as both transmitter and hormone (e.g. norepinephrine, 去甲腎上腺素).</p>
+<table data-topic="Endocrine vs nervous">
+<tr><th></th><th>Nervous</th><th>Endocrine</th></tr>
+<tr><td>Speed</td><td>Milliseconds</td><td>Minutes to days</td></tr>
+<tr><td>Specificity</td><td>Wired to one target</td><td>Anywhere blood reaches; specificity by receptor</td></tr>
+<tr><td>Duration</td><td>Brief</td><td>Sustained</td></tr>
+</table>
+</section>
+
+<section class="reveal-on-scroll" data-sec="2">
+<h2>3. Four chemical classes of hormones</h2>
+<table data-topic="Hormone classes Hormone classification">
+<tr><th>Class</th><th>Built from</th><th>Examples</th><th>Solubility</th></tr>
+<tr data-topic="Amino-acid hormones Hormone synthesis Catecholamine synthesis"><td>Amino-acid derivatives (氨基酸衍生物)</td><td>Tyrosine → thyroxine (T4), epinephrine, norepinephrine; tryptophan → melatonin</td><td>Thyroxine, catecholamines, melatonin</td><td>Thyroxine = lipid-soluble; others lipid-insoluble</td></tr>
+<tr data-topic="Polypeptide hormones GH chemistry"><td>Polypeptides (多肽)</td><td>3 to hundreds of amino acids; often as larger precursors that are cleaved</td><td>TRH (3 aa), insulin (51 aa), GH (191 aa)</td><td>All lipid-insoluble</td></tr>
+<tr data-topic="Steroid biochemistry"><td>Steroids (類固醇)</td><td>All from cholesterol (27 C); differ in ring substituents</td><td>Cortisol, aldosterone, testosterone, estradiol</td><td>All lipid-soluble</td></tr>
+<tr data-topic="Prostaglandins Prostaglandin synthesis"><td>Prostaglandins (前列腺素) / eicosanoids</td><td>Arachidonic acid (20 C polyunsaturated fatty acid), released by phospholipases</td><td>PGA-PGI (9 classes)</td><td>Lipid-soluble BUT use surface receptors</td></tr>
+</table>
+<p>Memory hook: <i>"All steroids start at cholesterol; all steroids are lipid-soluble; almost all steroids signal through nuclear receptors."</i></p>
+<div class="exam-trap-inline" data-topic="Prostaglandins Hormone class comparison"><b>Exam trap:</b> Prostaglandins are lipid-soluble yet bind SURFACE receptors coupled to cAMP — they behave like lipid-insoluble hormones. This is the favorite distractor.</div>
+<div class="exam-trap-inline" data-topic="NSAIDs"><b>Exam trap:</b> Thyroxine is the ONE amino-acid derivative that is lipid-soluble. NSAIDs (aspirin, ibuprofen) inhibit prostaglandin synthesis.</div>
+</section>
+
+<section class="reveal-on-scroll" data-sec="3">
+<h2>4. Mechanisms of hormone action</h2>
+<p data-topic="Hormone mechanism Mechanism">Solubility determines mechanism:</p>
+<table data-topic="Hormone mechanism Mechanism">
+<tr><th></th><th>Lipid-soluble (steroids + T4)</th><th>Lipid-insoluble (peptides + most amino-acid derivatives + prostaglandins)</th></tr>
+<tr><td>Receptor location</td><td>Nucleus or cytoplasm</td><td>Cell surface</td></tr>
+<tr><td>Mechanism</td><td>Hormone-receptor complex binds DNA; modifies transcription</td><td>Second messengers (cAMP, IP3/DAG, Ca²⁺) OR intrinsic enzymatic activity (tyrosine kinase, guanylate cyclase)</td></tr>
+<tr><td>Speed / duration</td><td>Slow onset; long-lasting (hours-days)</td><td>Rapid; short-lived</td></tr>
+</table>
+<p><b>Surface receptor types</b> (細胞表面受體):</p>
+<ul>
+<li data-topic="Receptor types Adrenoreceptors Vasopressin"><b>GPCRs with cAMP signaling</b> — epinephrine (β), TSH, vasopressin (kidney), glucagon, serotonin, PGI (stimulatory); epinephrine (α2) inhibitory.</li>
+<li data-topic="Receptor types Vasopressin"><b>GPCRs with IP3/DAG signaling</b> — vasopressin (liver), growth factors, TRH.</li>
+<li data-topic="RTK Insulin"><b>Receptor tyrosine kinases</b> — insulin, growth factors. Bind ligand → autophosphorylate (positive feedback) → phosphorylate tyrosines on cytoplasmic proteins.</li>
+<li data-topic="Receptor types"><b>Receptor guanylate cyclase</b> — ANP receptor; binding generates cGMP.</li>
+</ul>
+<p data-topic="History"><b>Elwood Jensen</b> (1958): first described the estrogen receptor; later identified the entire nuclear hormone receptor superfamily.</p>
+<div class="exam-trap-inline" data-topic="Insulin Vasopressin"><b>Exam trap:</b> Insulin uses a receptor TYROSINE KINASE, NOT a G-protein coupled receptor. Yet vasopressin uses different mechanisms in different tissues (cAMP in kidney, IP3/DAG in liver).</div>
+</section>
+
+<section class="reveal-on-scroll" data-sec="4">
+<h2>5. Practical implication — solubility in lab work</h2>
+<p data-topic="Solubility/lab">To prepare a concentrated cortisol stock solution (steroid, lipid-soluble), use <b>ethanol</b> as solvent — not water/saline. Steroids dissolve in organic solvents because they cannot dissolve in aqueous solutions at high concentration.</p>
+</section>
+
+<div class="callout reveal-on-scroll reveal-delay-1">
+<div class="callout-title">⚠ Exam Traps Summary</div>
+<ul>
+<li>Hormones are secreted in VERY SMALL amounts via BLOOD (not ducts).</li>
+<li>Thyroxine is the only lipid-soluble amino-acid-derived hormone.</li>
+<li>Prostaglandins are lipid-soluble but use surface receptors with cAMP.</li>
+<li>Insulin uses receptor tyrosine kinase — NOT GPCR.</li>
+<li>All steroids derive from cholesterol; all are lipid-soluble.</li>
+<li>Vasopressin uses cAMP in kidney but IP3/DAG in liver.</li>
+<li>Glucose-derived hormones do NOT exist.</li>
+</ul>
+</div>
+
+<div class="card memorize reveal-on-scroll reveal-delay-2">
+<h3>Top things to memorise</h3>
+<ol>
+<li>3 features of a classical hormone (small amount, blood, specific receptor).</li>
+<li>4 chemical classes + solubility of each class.</li>
+<li>Tyrosine derivatives: thyroxine, epinephrine, norepinephrine. Tryptophan → melatonin.</li>
+<li>Lipid-soluble → nuclear receptor → transcription → slow but long.</li>
+<li>Lipid-insoluble → surface receptor → 2nd messenger or kinase → fast but brief.</li>
+<li>Prostaglandins behave like lipid-insoluble hormones despite being lipid-soluble.</li>
+<li>Insulin = receptor tyrosine kinase, autophosphorylation, positive feedback.</li>
+<li>3 types of hormone-secretion stimuli: humoral, neural, hormonal.</li>
+</ol>
+</div>
+
+<div class="preview-q reveal-on-scroll">
+<h3>Exam-style preview questions</h3>
+<ol>
+<li>Which class is NOT a hormone source? — Glucose derivatives.</li>
+<li>Which mechanism does insulin use? — Receptor tyrosine kinase.</li>
+<li>What dissolves cortisol stock solution? — Ethanol.</li>
+<li>Lipid-soluble hormones act primarily via what mechanism? — Modify gene transcription.</li>
+<li>Which prostaglandin signaling pathway? — Surface receptor + cAMP.</li>
+</ol>
+</div>
+
+<div class="lower-yield reveal-on-scroll">
+<b>Lower-yield / skip if short on time:</b>
+<ul>
+<li>Names of historical figures (Starling, Bayliss, Jensen, Agre) beyond what they discovered.</li>
+<li>Detailed sequence of prostaglandin numbering (PGA→PGI).</li>
+<li>Alzheimer's disease drug testing with NSAIDs.</li>
+<li>Exact dates of Nobel prizes.</li>
+</ul>
+</div>
+
+</div>
+<div id="notes-2" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-2" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(2)">Clear Highlights</button>
+  <h1>Lecture 2: Neuroendocrine Systems (Hypothalamus &amp; Pituitary)</h1>
+
+<div class="bigpic reveal-on-scroll">
+The neuroendocrine system (神經內分泌系統) is where brain meets bloodstream. The hypothalamus contains neurosecretory cells (神經分泌細胞) that release hormones — either directly into the bloodstream (posterior pituitary route) or into a portal system that delivers them to the anterior pituitary (前葉腦垂體). The anterior pituitary then secretes its own glandular hormones — some direct-acting (GH, prolactin, MSH) and some tropic (ACTH, TSH, FSH, LH) that regulate other endocrine glands. Lecture 2 maps this two-tier control circuit and its key feedback loops.
+</div>
+
+<section class="reveal-on-scroll" data-sec="0">
+<h2>1. Neurosecretory cells</h2>
+<p data-topic="Neurosecretory cells Neurohormones"><b>Neurosecretory cells</b> are specialized neurons that release hormones (neurohormones, 神經荷爾蒙) into blood. They are found in two organs:</p>
+<ul>
+<li data-topic="Hypothalamus Hypothalamic anatomy"><b>Hypothalamus</b> (下視丘) — two populations:
+<ul>
+<li data-topic="Neurosecretory anatomy"><b>Magnocellular neurons</b> in the supraoptic nucleus (SON) and paraventricular nucleus (PVN) → project axons to the <b>posterior pituitary</b>.</li>
+<li data-topic="Parvocellular neurons"><b>Parvocellular neurons</b> → project to the median eminence → release hormones into the <b>hypophyseal portal capillaries</b>.</li>
+</ul></li>
+<li><b>Adrenal medulla</b> (腎上腺髓質) — chromaffin cells (same ectodermal origin as neurons).</li>
+</ul>
+<p><b>Neurosecretory cells vs ordinary neurons:</b></p>
+<table data-topic="Neurosecretory cells">
+<tr><th></th><th>Neurosecretory cells</th><th>Ordinary neurons</th></tr>
+<tr data-topic="Neurosecretory cells"><td>Granules</td><td>Large secretory granules 100-400 nm</td><td>Synaptic vesicles 30-60 nm</td></tr>
+<tr><td>Terminal</td><td>Cluster in neurohemal organ (bed of capillaries)</td><td>Synapse onto another cell</td></tr>
+<tr><td>Output</td><td>Hormone into blood</td><td>Neurotransmitter at synapse</td></tr>
+<tr data-topic="Neurosecretory cells"><td>Excitability</td><td>Excitable — fire action potentials</td><td>Excitable</td></tr>
+</table>
+<div class="exam-trap-inline" data-topic="Neurosecretory cells"><b>Exam trap:</b> Neurosecretory cells ARE excitable neurons. Saying "non-excitable" is FALSE.</div>
+</section>
+
+<section class="reveal-on-scroll" data-sec="1">
+<h2>2. Pituitary anatomy</h2>
+<p data-topic="Pituitary anatomy">The pituitary gland (hypophysis, 腦下垂體) sits at the base of the brain, attached to the hypothalamus by the infundibulum. Two functionally distinct lobes:</p>
+<table data-topic="Pituitary anatomy Anterior pituitary Posterior pituitary">
+<tr><th></th><th>Anterior lobe (adenohypophysis, 腺垂體)</th><th>Posterior lobe (neurohypophysis, 神經垂體)</th></tr>
+<tr data-topic="Anterior pituitary Posterior pituitary"><td>Tissue type</td><td>True endocrine epithelium</td><td>Neural — axons of hypothalamic neurosecretory cells (SON & PVN)</td></tr>
+<tr data-topic="Pituitary hormones"><td>Secretes</td><td>Glandular hormones (GH, PRL, MSH, ACTH, TSH, FSH, LH)</td><td>Neurohormones (ADH, oxytocin)</td></tr>
+<tr><td>Control</td><td>Releasing/inhibiting hormones via portal system</td><td>Action potentials from hypothalamic neurons</td></tr>
+</table>
+<p data-topic="Portal system">The <b>hypothalamic-hypophyseal portal system</b> (下視丘-腦垂體門脈系統) is two capillary beds joined by portal vessels — concentrates parvocellular neurosecretions before they reach the anterior pituitary.</p>
+<div class="exam-trap-inline" data-topic="Anterior pituitary Posterior pituitary"><b>Exam trap:</b> The anterior pituitary is NOT composed of neurosecretory axons — that is the posterior pituitary. The anterior is true glandular tissue.</div>
+</section>
+
+<section class="reveal-on-scroll" data-sec="2">
+<h2>3. Anterior pituitary hormones</h2>
+<p>Two functional categories:</p>
+<table data-topic="Pituitary hormones Hormone size">
+<tr><th>Type</th><th>Hormone</th><th>Action</th></tr>
+<tr data-topic="Pituitary hormones"><td rowspan="3"><b>Direct-acting</b></td><td>Growth hormone (GH)</td><td>Tissue growth, metabolic</td></tr>
+<tr><td>Prolactin (PRL, 催乳素)</td><td>Milk protein synthesis, mammary gland growth</td></tr>
+<tr><td>MSH (黑色素細胞刺激素)</td><td>Acts on melanocytes — skin pigmentation</td></tr>
+<tr><td rowspan="4"><b>Tropic (-tropic = growth-promoting)</b></td><td>ACTH</td><td>Stimulates adrenal cortex</td></tr>
+<tr><td>TSH</td><td>Stimulates thyroid</td></tr>
+<tr><td>FSH</td><td>Follicle growth / spermatogenesis</td></tr>
+<tr><td>LH</td><td>Ovulation, testosterone production</td></tr>
+</table>
+<p data-topic="Prolactin regulation Dopamine and prolactin"><b>Prolactin:</b> stimulated by TRH and estrogen, INHIBITED by dopamine (prolactin-inhibiting hormone, PIH).</p>
+<p data-topic="POMC MSH MSH/melasma Addison's POMC pathology"><b>MSH:</b> generated from <b>POMC</b> (proopiomelanocortin), the same precursor that yields ACTH. Also made by skin keratinocytes in response to UV. Elevated by estrogen during pregnancy (melasma — "mask of pregnancy") and in Addison's disease (low cortisol → no negative feedback → high CRH → high MSH).</p>
+<div class="exam-trap-inline" data-topic="POMC POMC pathology Addison's"><b>Exam trap:</b> MSH and ACTH come from the SAME precursor (POMC) — explains why Addison's patients can become hyperpigmented.</div>
+</section>
+
+<section class="reveal-on-scroll" data-sec="3">
+<h2>4. Hypothalamic releasing & inhibiting hormones</h2>
+<p>Secreted by parvocellular neurons → portal blood → anterior pituitary.</p>
+<table data-topic="Hypothalamic regulation">
+<tr><th>Pituitary hormone</th><th>Releasing hormone</th><th>Inhibiting hormone</th></tr>
+<tr data-topic="GH regulation"><td>GH</td><td>GHRH (growth-hormone releasing hormone)</td><td>GIH = Somatostatin (體抑素)</td></tr>
+<tr data-topic="Prolactin regulation Dopamine and prolactin"><td>Prolactin</td><td>PRH (prolactin RH) / TRH</td><td>PIH = Dopamine (多巴胺)</td></tr>
+<tr><td>MSH</td><td>MRH</td><td>MIH</td></tr>
+<tr><td>TSH</td><td>TRH</td><td>—</td></tr>
+<tr><td>ACTH</td><td>CRH</td><td>—</td></tr>
+<tr><td>FSH/LH</td><td>GnRH</td><td>—</td></tr>
+</table>
+<p>Mnemonic: <i>All direct AND tropic hormones have a releasing hormone. ONLY direct hormones have an inhibiting hormone (simplified).</i> MSH and ACTH share POMC precursor.</p>
+<div class="exam-trap-inline" data-topic="Dopamine and prolactin Prolactin regulation"><b>Exam trap:</b> Prolactin's main control is DOPAMINE INHIBITION (PIH). Dopamine antagonists (some antipsychotics) cause hyperprolactinemia.</div>
+</section>
+
+<section class="reveal-on-scroll" data-sec="4">
+<h2>5. Posterior pituitary hormones</h2>
+<p data-topic="Posterior pituitary peptides Hormone size">Two neurohormones — both 9-aa cyclic peptides made in SON/PVN, transported down axons, released from the posterior pituitary:</p>
+<table data-topic="Oxytocin ADH mechanism">
+<tr><th></th><th>ADH / vasopressin / AVP (抗利尿激素)</th><th>Oxytocin (催產素)</th></tr>
+<tr><td>Targets</td><td>Kidney; vascular smooth muscle</td><td>Mammary gland; uterus</td></tr>
+<tr data-topic="ADH mechanism History"><td>Mechanism in kidney</td><td>GPCR + adenylate cyclase → cAMP → ↑ surface aquaporins (Peter Agre, Nobel 2003)</td><td>—</td></tr>
+<tr data-topic="Oxytocin"><td>Actions</td><td>Water reabsorption; vasoconstriction</td><td>Milk ejection during nursing; uterine contraction during labor</td></tr>
+<tr><td>Also acts in brain as</td><td>—</td><td>"Hormone of love and bonding" — social recognition, trust, generosity</td></tr>
+</table>
+<p data-topic="Posterior pituitary peptides">Both ADH and oxytocin share 7 of 9 amino acids — evolutionary cousins.</p>
+<div class="exam-trap-inline" data-topic="Oxytocin Posterior pituitary"><b>Exam trap:</b> Oxytocin is a NEUROHORMONE from the posterior pituitary — not anterior. Prolactin is from the ANTERIOR pituitary and not a neurohormone.</div>
+<div class="exam-trap-inline" data-topic="Oxytocin"><b>Exam trap:</b> Prolactin and oxytocin both work in lactation, but on different targets — prolactin builds milk; oxytocin ejects it.</div>
+</section>
+
+<div class="callout reveal-on-scroll reveal-delay-1">
+<div class="callout-title">⚠ Exam Traps Summary</div>
+<ul>
+<li>Anterior pituitary = glandular tissue. Posterior = neural axons.</li>
+<li>Magnocellular → posterior; parvocellular → anterior via portal.</li>
+<li>MSH + ACTH from same POMC precursor.</li>
+<li>Dopamine inhibits prolactin (PIH).</li>
+<li>ADH uses cAMP in kidney; promotes aquaporin insertion.</li>
+<li>Oxytocin is from posterior pituitary, not anterior.</li>
+<li>Neurosecretory cells ARE excitable.</li>
+</ul>
+</div>
+
+<div class="card memorize reveal-on-scroll reveal-delay-2">
+<h3>Top things to memorise</h3>
+<ol>
+<li>SON/PVN magnocellular → posterior pituitary; parvocellular → portal → anterior.</li>
+<li>3 direct hormones (GH, PRL, MSH) + 4 tropic hormones (ACTH, TSH, FSH, LH).</li>
+<li>Releasing/inhibiting hormone pairs (GHRH/somatostatin, dopamine-PIH for prolactin).</li>
+<li>POMC → MSH + ACTH (explains Addison's hyperpigmentation).</li>
+<li>ADH and oxytocin are 9-aa neurohormones from posterior pituitary.</li>
+<li>ADH inserts aquaporins via cAMP in kidney.</li>
+<li>Oxytocin: milk ejection + uterine contraction.</li>
+<li>Anterior pituitary is endocrine tissue; posterior is neural.</li>
+</ol>
+</div>
+
+<div class="preview-q reveal-on-scroll">
+<h3>Exam-style preview questions</h3>
+<ol>
+<li>Which pair is not closely related? — Growth hormone : GnRH.</li>
+<li>Which is a neurohormone? — ADH.</li>
+<li>Which hormone is inhibited by dopamine? — Prolactin.</li>
+<li>Which inserts aquaporins in the kidney? — ADH/vasopressin.</li>
+<li>Which is true of prolactin and oxytocin? — Different secretion sites, both act on mammary gland.</li>
+</ol>
+</div>
+
+<div class="lower-yield reveal-on-scroll">
+<b>Lower-yield / skip if short on time:</b>
+<ul>
+<li>Exact amino acid sequences of vasopressin variants across species.</li>
+<li>Peter Agre Nobel year (2003) — useful but unlikely to be tested.</li>
+<li>Oxytocin's role in trust/generosity research details.</li>
+<li>Updated hypothalamic-vascular-pituitary unit (Tissier 2017) detail.</li>
+</ul>
+</div>
+
+</div>
+<div id="notes-3" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-3" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(3)">Clear Highlights</button>
+  <h1>Lecture 3: Metabolic &amp; Developmental Hormones</h1>
+
+<div class="bigpic reveal-on-scroll">
+Lecture 3 is the metabolic-hormone tour. Six hormones cover all the big jobs: <b>epinephrine</b> for fight-or-flight, <b>glucocorticoids</b> (cortisol) for sustained stress and gluconeogenesis, <b>thyroid hormones</b> (T3/T4) for basal metabolic rate, <b>insulin and glucagon</b> for blood-sugar control, <b>growth hormone</b> for body growth and lean mass, and <b>leptin</b> for appetite/energy balance. Every disease story you need (Cushing's, Addison's, goiter, diabetes, gigantism/acromegaly, obesity) lives here.
+</div>
+
+<section class="reveal-on-scroll" data-sec="0">
+<h2>1. Epinephrine and norepinephrine</h2>
+<p data-topic="Adrenal medulla Catecholamine actions"><b>Catecholamines</b> (兒茶酚胺) secreted by the <b>adrenal medulla</b> (腎上腺髓質, inner layer). Epinephrine ~80%, norepinephrine ~20%. NE is the synthetic precursor of E.</p>
+<p data-topic="Adrenal medulla Adrenal medulla regulation">The adrenal medulla is essentially modified sympathetic ganglion — chromaffin cells are analogous to postganglionic sympathetic neurons. Activated by the same stimuli (cold, stress, hemorrhage, exercise) and reinforces/prolongs the fight-or-flight response.</p>
+<p><b>Adrenoreceptors</b> (腎上腺素受體):</p>
+<table data-topic="Adrenoreceptors">
+<tr><th>Receptor</th><th>Coupling</th><th>Action</th></tr>
+<tr><td>α1</td><td>Gq → IP3/DAG</td><td>Vasoconstriction</td></tr>
+<tr data-topic="Adrenoreceptors"><td>α2</td><td>Gi → ↓cAMP</td><td>Inhibits insulin release</td></tr>
+<tr><td>β1</td><td>Gs → ↑cAMP</td><td>Increases heart rate/force</td></tr>
+<tr><td>β2</td><td>Gs → ↑cAMP</td><td>Bronchodilation, vasodilation in skeletal muscle</td></tr>
+</table>
+<p><b>Pheochromocytoma</b> (嗜鉻細胞瘤) — adrenal medulla tumor causing episodic hypertension, palpitations, sweating, headaches. Hematidrosis (blood sweat) can occur from extreme adrenaline-driven capillary rupture.</p>
+<p><b>Anaphylaxis treatment:</b> epinephrine is first-aid drug — vasoconstrictor prevents laryngeal edema/hypotension, bronchodilator, positive inotropy/chronotropy.</p>
+<div class="exam-trap-inline" data-topic="Adrenal medulla Adrenal medulla regulation"><b>Exam trap:</b> Adrenal medulla does NOT secrete glucocorticoids (those are from cortex). Adrenal medulla secretion is NOT regulated by ACTH — only by direct sympathetic neural input.</div>
+<div class="exam-trap-inline" data-topic="Catecholamine actions Insulin regulation Hyperglycemic hormones"><b>Exam trap:</b> Epinephrine INHIBITS insulin secretion (via α2) but STIMULATES glucagon — both push blood sugar UP.</div>
+</section>
+
+<section class="reveal-on-scroll" data-sec="1">
+<h2>2. Glucocorticoids (cortisol)</h2>
+<p data-topic="Glucocorticoids">Steroid hormones from the <b>adrenal cortex</b> (外層). Major form in humans = <b>cortisol</b> (= hydrocortisone, 氫化可的松). Others: cortisone, corticosterone.</p>
+<p><b>Regulation:</b></p>
+<ol>
+<li>Stress (including hypoglycemia) + diurnal rhythm (peak in morning).</li>
+<li>Hypothalamus → CRH → anterior pituitary → ACTH → adrenal cortex → cortisol.</li>
+<li>Negative feedback: cortisol inhibits CRH and ACTH.</li>
+</ol>
+<p><b>Major actions:</b></p>
+<ol>
+<li data-topic="Cortisol Hyperglycemic hormones"><b>Gluconeogenesis</b> (糖質新生) — primary effect. Sustains glucose supply to brain during fasting/stress by generating glucose from amino acids and fats.
+<ul>
+<li>Liver: ↑gluconeogenesis</li>
+<li>Skeletal muscle: ↓protein synthesis, ↑protein degradation, ↓glucose uptake</li>
+<li>Adipose: ↓glucose uptake, ↑lipid mobilization</li>
+</ul></li>
+<li>Enhance vascular reactivity.</li>
+<li data-topic="Glucocorticoid uses">Suppress inflammation and immune system (higher doses) — basis for using glucocorticoids as immunosuppressants and anti-inflammatories.</li>
+</ol>
+<p data-topic="Cushing's"><b>Cushing's syndrome</b> (庫欣氏症候群) — excess cortisol. Rapid weight gain (moon face, buffalo hump), moodiness, muscle weakness, immune suppression, thin skin, baldness. Causes: glucocorticoid drugs, or tumors producing cortisol/ACTH/CRH.</p>
+<p data-topic="Addison's"><b>Addison's disease</b> — primary adrenal failure → low cortisol → no negative feedback → high CRH/ACTH → high MSH → hyperpigmentation. Often TB-induced historically.</p>
+<div class="exam-trap-inline" data-topic="Cortisol Glucocorticoid uses Hyperglycemic hormones"><b>Exam trap:</b> Glucocorticoids INCREASE blood glucose (via gluconeogenesis and ↓muscle/adipose glucose uptake). Hydrocortisone given for SARS to suppress immune system, not for glycemia.</div>
+</section>
+
+<section class="reveal-on-scroll" data-sec="2">
+<h2>3. Thyroid hormones (T4, T3)</h2>
+<p data-topic="Goiter">Formed from two iodinated tyrosine precursors in the thyroid. <b>Iodine</b> (碘) deficiency in diet causes <b>goiter</b> (甲狀腺腫).</p>
+<p>Major form released = <b>thyroxine (T4)</b> (tetra-iodothyronine). In target tissues, T4 → more potent <b>T3</b> (tri-iodothyronine).</p>
+<p>Nuclear receptors → transcription factors. T3/T4 also have non-genomic actions.</p>
+<p data-topic="Thyroid actions"><b>Regulation:</b> hypothalamus (CNS inputs: cold, pregnancy energy needs) → TRH → pituitary → TSH → thyroid → T3/T4. Negative feedback on hypothalamus and pituitary. TSH also stimulates thyroid growth.</p>
+<p><b>Actions (whole-body):</b></p>
+<ol>
+<li data-topic="Thyroid actions">Stimulate cellular respiration → ↑basal metabolic rate (BMR), heat production. Acts on ALL tissues EXCEPT brain, spleen, testes/uterus, and thyroid itself.</li>
+<li data-topic="Thyroid actions">Sensitize tissues to epinephrine — explains tachycardia in hyperthyroidism.</li>
+<li>Required for skeletal and nervous system development/maturation (synergistic with GH).</li>
+</ol>
+<div class="exam-trap-inline" data-topic="Thyroid actions"><b>Exam trap:</b> Hyperthyroidism causes increased heart rate by SENSITIZING tissues to epinephrine, not by directly stimulating catecholamine secretion. Brain BMR is NOT affected by T3/T4.</div>
+</section>
+
+<section class="reveal-on-scroll" data-sec="3">
+<h2>4. Insulin and glucagon</h2>
+<p>Both peptide hormones from the <b>islets of Langerhans</b> in the pancreas (胰島).</p>
+<table data-topic="Insulin/glucagon Insulin actions Insulin regulation">
+<tr><th></th><th>Insulin</th><th>Glucagon</th></tr>
+<tr data-topic="Insulin/glucagon"><td>Source</td><td>β cells (51 aa, 2 chains)</td><td>α cells (29 aa, single chain)</td></tr>
+<tr data-topic="Insulin regulation"><td>Stimulated by</td><td>↑blood glucose (major), ↑aa, ↑FA, GIP, parasympathetic</td><td>↑aa, ↓glucose (regulated mainly humorally)</td></tr>
+<tr data-topic="Insulin regulation"><td>Inhibited by</td><td>Sympathetic (NE via α2)</td><td>↑glucose, ↑FA (needs insulin to work!)</td></tr>
+<tr><td>Net effect</td><td>Lowers blood glucose</td><td>Raises blood glucose</td></tr>
+</table>
+<p data-topic="Insulin actions"><b>Insulin actions:</b></p>
+<ol>
+<li>Carbohydrate: ↑glucose uptake/storage (as glycogen) in liver, muscle, adipose.</li>
+<li>Fat: stimulates lipogenesis in liver and adipose.</li>
+<li>Protein: stimulates aa uptake and protein synthesis in liver and muscle.</li>
+</ol>
+<p data-topic="Glucagon"><b>Glucagon actions:</b> ↑glycogenolysis in liver; ↑gluconeogenesis in liver.</p>
+<p data-topic="Insulin actions">Insulin uses <b>receptor tyrosine kinase</b> — NOT GPCR.</p>
+<p><b>Diabetes mellitus</b> (糖尿病):</p>
+<ul data-topic="Diabetes Type 2 diabetes">
+<li data-topic="Diabetes">Type 1 (10%): loss of β cells → no insulin (insulin-dependent).</li>
+<li data-topic="Type 2 diabetes">Type 2 (90%): defective insulin receptors → insulin resistance.</li>
+<li>Gestational: appears in pregnancy.</li>
+</ul>
+<p data-topic="Diabetes Diabetic ketoacidosis"><b>Acute complications:</b> hyperglycemia → glycosuria → polyuria → dehydration. In type 1, low insulin → ↑glucagon → ↑ketones → ketoacidosis → coma/death.</p>
+<p><b>Chronic complications:</b> macrovascular (stroke, MI, limb loss), microvascular (retinopathy, nephropathy), neuropathy (autonomic and peripheral sensory).</p>
+<p data-topic="Diabetes insipidus"><b>Diabetes insipidus</b> (尿崩症) is different — caused by ADH deficiency, no sweet urine.</p>
+<div class="exam-trap-inline" data-topic="Insulin actions Insulin/glucagon Diabetic ketoacidosis"><b>Exam trap:</b> Insulin uses RTK, not GPCR. Insulin is from β cells (NOT α). Type 1 diabetes has HIGH glucagon (not low) because insulin's inhibition is gone.</div>
+</section>
+
+<section class="reveal-on-scroll" data-sec="4">
+<h2>5. Growth hormone (GH)</h2>
+<p data-topic="GH/IGF">Peptide (191 aa) from anterior pituitary. Overall effect: promote tissue growth (anabolic). Has both insulin-like and anti-insulin effects.</p>
+<p><b>Regulation:</b></p>
+<ul data-topic="GH regulation">
+<li data-topic="GH regulation Insulin tolerance test Cortisol rhythm"><b>Stimulators:</b> hypoglycemia, amino acids (especially arginine), deep sleep (peak ~1h after sleep onset), stress (trauma, infection, psychological).</li>
+<li data-topic="GH regulation Cortisol rhythm"><b>Inhibitors:</b> hyperglycemia, REM sleep.</li>
+<li data-topic="GH regulation">Hypothalamus: GHRH (releases) vs GIH/somatostatin (inhibits).</li>
+<li>Pulsatile — frequency/size peak at puberty, decline with aging.</li>
+</ul>
+<p><b>Actions:</b></p>
+<table data-topic="GH metabolism">
+<tr><th>Tissue</th><th>Insulin-like effects</th><th>Anti-insulin effects</th></tr>
+<tr data-topic="GH metabolism"><td>Muscle</td><td>↑aa uptake, ↑RNA, ↑protein synthesis</td><td>↓glucose uptake</td></tr>
+<tr data-topic="GH metabolism"><td>Liver</td><td>↑protein synthesis, ↑somatomedin (IGF)</td><td>↑gluconeogenesis</td></tr>
+<tr data-topic="GH metabolism"><td>Adipose</td><td>↑glucose uptake</td><td>↑lipolysis</td></tr>
+</table>
+<p data-topic="GH/IGF">Most growth-promoting effects are <b>indirect via IGFs</b> (insulin-like growth factors, somatomedins) made by the liver — drive linear bone growth.</p>
+<p data-topic="GH metabolism Hyperglycemic hormones"><b>Hyperglycemic mechanism (3 prongs):</b> ↓glucose uptake by tissues; ↑gluconeogenesis in liver; ↑lipolysis (lipids replace glucose as fuel). GH also stimulates insulin secretion (directly + indirectly via hyperglycemia).</p>
+<p data-topic="Laron syndrome"><b>GH deficiency:</b> in childhood → <b>dwarfism</b> (侏儒症); in adults → no obvious effect. <b>Laron dwarfs</b> have mutated GH receptors and are protected from cancer and diabetes.</p>
+<p data-topic="GH pathology"><b>GH excess:</b> childhood → <b>gigantism</b> (巨人症); adult (after epiphyseal closure) → <b>acromegaly</b> (肢端肥大症, enlarged jaw/nose/hands).</p>
+<p data-topic="Insulin tolerance test"><b>Insulin tolerance test:</b> inject insulin to induce hypoglycemia → if pituitary can release GH, GH should rise. Tests pituitary GH reserve. The "professional doctor" is correct.</p>
+<div class="exam-trap-inline" data-topic="GH/IGF GH regulation"><b>Exam trap:</b> GH's growth-promoting effects are mediated mainly by IGF-1 (not directly). Arginine stimulates GH. Dreaming = REM = INHIBITS GH.</div>
+</section>
+
+<section class="reveal-on-scroll" data-sec="5">
+<h2>6. Leptin</h2>
+<p data-topic="Leptin">Peptide (16 kDa) encoded by the <b>obese gene (ob)</b> — produced mainly by white adipose tissue and many other tissues. From Greek <i>leptos</i>, "thin."</p>
+<p data-topic="Leptin"><b>Action:</b> influences food intake vs energy expenditure. High leptin → reduced appetite, increased energy expenditure.</p>
+<p data-topic="Leptin receptor"><b>Leptin receptor (LepR/OB-R):</b> a cytokine-family receptor associated with JAK tyrosine kinases. Expressed primarily in brain — most leptin effects are indirect via CNS. Also regulates immune-cell function (CNS-mediated and direct).</p>
+<p data-topic="Leptin"><b>Obesity paradox:</b> obese individuals usually have HIGH leptin yet remain obese. Possible reasons:</p>
+<ul>
+<li>More adipose mass → more leptin production.</li>
+<li>Leptin resistance at receptors.</li>
+<li>Perceived starvation state.</li>
+</ul>
+<div class="exam-trap-inline" data-topic="Leptin"><b>Exam trap:</b> Obesity is usually associated with HIGH (not low) leptin — implying leptin resistance.</div>
+</section>
+
+<div class="callout reveal-on-scroll reveal-delay-1">
+<div class="callout-title">⚠ Exam Traps Summary</div>
+<ul>
+<li>Adrenal medulla: catecholamines only, NOT regulated by ACTH.</li>
+<li>Cortisol's primary action = gluconeogenesis (↑blood glucose).</li>
+<li>Cushing's = excess cortisol; Addison's = deficient cortisol with hyperpigmentation.</li>
+<li>T3/T4 do not act on brain BMR; act via sensitizing tissues to epinephrine.</li>
+<li>Insulin = β cells, RTK, lowers glucose. Glucagon = α cells, raises glucose.</li>
+<li>Type 1 DM has HIGH glucagon → ketoacidosis.</li>
+<li>GH effects on growth are indirect via IGF-1; direct effect = anti-insulin.</li>
+<li>Dreaming (REM) INHIBITS GH.</li>
+<li>Leptin is elevated in obesity (resistance).</li>
+</ul>
+</div>
+
+<div class="card memorize reveal-on-scroll reveal-delay-2">
+<h3>Top things to memorise</h3>
+<ol>
+<li>Adrenal layers: medulla (catecholamines) vs cortex (mineralocorticoids/glucocorticoids/androgens).</li>
+<li>CRH → ACTH → cortisol axis + negative feedback.</li>
+<li>Three actions of cortisol: gluconeogenesis, vascular reactivity, immune suppression.</li>
+<li>TRH → TSH → T3/T4; iodine deficiency = goiter.</li>
+<li>Insulin (β, lowers glucose, RTK) vs glucagon (α, raises glucose) and their regulation.</li>
+<li>Type 1 (β-cell loss) vs type 2 DM (receptor defect).</li>
+<li>GH: anabolic, via IGF-1, stimulated by sleep/arginine/hypoglycemia, inhibited by hyperglycemia/REM.</li>
+<li>Gigantism (child) vs acromegaly (adult).</li>
+<li>Leptin from adipose; obesity = high leptin + resistance.</li>
+</ol>
+</div>
+
+<div class="preview-q reveal-on-scroll">
+<h3>Exam-style preview questions</h3>
+<ol>
+<li>What primarily regulates adrenal medulla secretion? — Direct sympathetic neural input (not ACTH).</li>
+<li>Which is NOT a feature of type 1 DM? — Low glucagon (it is HIGH).</li>
+<li>How does hyperthyroidism increase cardiac contractility? — By sensitizing tissues to epinephrine.</li>
+<li>What stimulates GH? — Arginine, deep sleep, hypoglycemia.</li>
+<li>Most growth-promoting effects of GH go through what? — IGF-1.</li>
+</ol>
+</div>
+
+<div class="lower-yield reveal-on-scroll">
+<b>Lower-yield / skip if short on time:</b>
+<ul>
+<li>Sea snail weaponized insulin curiosity.</li>
+<li>Exact prevalence figures of diabetes in HK/global GDP cost.</li>
+<li>Delfina Cedeno's hematidrosis case.</li>
+<li>Exact ages of Froggy's acromegaly progression.</li>
+</ul>
+</div>
+
+</div>
+<div id="notes-4" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-4" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(4)">Clear Highlights</button>
+  <h1>Lecture 4: Hormones Regulating Water &amp; Electrolyte Balance</h1>
+
+<div class="bigpic reveal-on-scroll">
+Lecture 4 zooms in on water and electrolyte balance — three hormones that work together to keep blood volume and osmolarity in range. <b>ADH (vasopressin)</b> drives water reabsorption when plasma is too concentrated or blood pressure drops. <b>Aldosterone</b> (the major mineralocorticoid) drives Na⁺ reabsorption and K⁺ excretion. <b>Atrial natriuretic peptide (ANP)</b> opposes both — it drops blood volume when the heart senses overload. Knowing the trigger, target, and net effect of each is the whole game.
+</div>
+
+<section class="reveal-on-scroll" data-sec="0">
+<h2>1. Antidiuretic hormone (ADH / vasopressin / AVP)</h2>
+<p data-topic="ADH source ADH chemistry ADH">9-aa cyclic peptide synthesized in the <b>supraoptic nucleus</b> (SON) and secreted by the posterior pituitary.</p>
+<p><b>Actions:</b></p>
+<ul>
+<li data-topic="ADH mechanism ADH actions">Kidney: ↑water reabsorption by inserting aquaporin (水通道蛋白) into collecting duct surface.</li>
+<li data-topic="ADH actions BP regulation">Vascular smooth muscle: direct vasoconstriction → ↑blood pressure (hence "vasopressin").</li>
+</ul>
+<p><b>Regulation — two physiological inputs:</b></p>
+<ol>
+<li data-topic="ADH regulation Osmoreceptors"><b>Osmotic regulation</b> — even 5-10 mOsm change is sensed (normal 280 mOsm). Osmoreceptors in anterior hypothalamus (possibly the SON neurons themselves). ↑Plasma osmolarity → ↑ADH → water retention → ↓osmolarity. Eating salty food triggers this.</li>
+<li data-topic="ADH regulation Volume sensing BP regulation"><b>Volume/pressure regulation</b> — requires &gt;10% blood volume change (e.g. hemorrhage). Stretch receptors (TRP channels) in cardiovascular neurons signal via cranial nerves. ↓Volume/pressure → ↑ADH → vasoconstriction + water reabsorption.</li>
+</ol>
+<p data-topic="ADH inhibition"><b>Alcohol</b> potently inhibits ADH release → polyuria and thirst.</p>
+<p data-topic="Diabetes insipidus ADH"><b>Diabetes insipidus</b> (尿崩症): ADH deficiency. Polyuria + thirst but NO sugar in urine (different from diabetes mellitus).</p>
+<div class="exam-trap-inline" data-topic="ADH regulation ADH inhibition"><b>Exam trap:</b> Drinking lots of water LOWERS plasma osmolarity and INHIBITS ADH — not stimulates. Salt and hemorrhage stimulate ADH.</div>
+</section>
+
+<section class="reveal-on-scroll" data-sec="1">
+<h2>2. Mineralocorticoids (aldosterone)</h2>
+<p data-topic="Aldosterone Mineralocorticoid source Aldosterone mechanism Hormone class">Steroids from the adrenal cortex regulating kidney electrolyte balance. Major form = <b>aldosterone</b> (醛固酮).</p>
+<p data-topic="Aldosterone Aldosterone target"><b>Action:</b> in the kidney (distal tubule + collecting duct), aldosterone stimulates Na⁺ reabsorption and K⁺ excretion. Water follows Na⁺ → ↑extracellular fluid volume → ↑blood volume and blood pressure.</p>
+<p><b>Regulation:</b></p>
+<ol>
+<li data-topic="Aldosterone regulation"><b>Humoral:</b> extracellular K⁺ concentration — even a 5% rise triggers aldosterone secretion.</li>
+<li><b>Hormonal:</b>
+<ul>
+<li data-topic="RAAS Aldosterone regulation"><b>Angiotensin II</b> — the primary regulator. Renin-angiotensin-aldosterone system (RAAS) activated when blood pressure drops.</li>
+<li><b>ACTH</b> — minor contribution.</li>
+</ul></li>
+</ol>
+<p data-topic="RAAS BP regulation"><b>RAAS sequence:</b> ↓BP → kidney releases renin → cleaves angiotensinogen to angiotensin I → ACE converts to angiotensin II → adrenal cortex → aldosterone → Na⁺ + water retention → ↑BP.</p>
+<div class="exam-trap-inline" data-topic="Aldosterone regulation"><b>Exam trap:</b> The PRIMARY regulator of aldosterone is angiotensin II, not ACTH. Aldosterone INCREASES Na⁺ reabsorption and K⁺ excretion (note the asymmetry).</div>
+</section>
+
+<section class="reveal-on-scroll" data-sec="2">
+<h2>3. Atrial natriuretic peptide (ANP)</h2>
+<p data-topic="ANP">Secreted by endocrine cells in the <b>atria of the heart</b> in response to mechanical stretch (↑blood volume).</p>
+<p data-topic="ANP"><b>Action:</b> on kidneys, ↑Na⁺ excretion + ↑urine output → ↓blood volume and pressure. Counteracts ADH and aldosterone.</p>
+<p data-topic="ANP receptor">"Natriuretic" = causing natriuresis = excretion of sodium in urine. Receptor is a guanylate cyclase → cGMP.</p>
+<div class="exam-trap-inline" data-topic="ANP"><b>Exam trap:</b> ANP is from the HEART (atria), not the kidney. ANP DECREASES blood pressure — opposite to ADH and aldosterone.</div>
+</section>
+
+<section class="reveal-on-scroll" data-sec="3">
+<h2>4. Comparison summary</h2>
+<table data-topic="Hormone comparison Hormone class">
+<tr><th></th><th>ADH</th><th>Aldosterone</th><th>ANP</th></tr>
+<tr><td>Source</td><td>SON → posterior pituitary</td><td>Adrenal cortex (zona glomerulosa)</td><td>Atria of heart</td></tr>
+<tr><td>Chemistry</td><td>9-aa peptide</td><td>Steroid</td><td>Peptide</td></tr>
+<tr><td>Trigger</td><td>↑Osmolarity, ↓volume/pressure</td><td>↑K⁺, angiotensin II, (ACTH)</td><td>↑Atrial stretch (↑volume)</td></tr>
+<tr><td>Target</td><td>Kidney collecting duct + vessels</td><td>Kidney distal tubule</td><td>Kidney</td></tr>
+<tr><td>Effect</td><td>↑H₂O reabsorption + vasoconstriction</td><td>↑Na⁺ reabsorption, ↑K⁺ excretion, ↑H₂O follows</td><td>↑Na⁺ excretion, ↑urine output</td></tr>
+<tr><td>Net BP effect</td><td>↑</td><td>↑</td><td>↓</td></tr>
+</table>
+<div class="exam-trap-inline" data-topic="Hormone comparison BP regulation"><b>Exam trap:</b> ADH/aldosterone/ANP do NOT all work on the same target or all increase BP. They split — ANP opposes the other two.</div>
+</section>
+
+<div class="callout reveal-on-scroll reveal-delay-1">
+<div class="callout-title">⚠ Exam Traps Summary</div>
+<ul>
+<li>ADH is from SON (posterior pituitary), not anterior.</li>
+<li>Drinking water inhibits ADH; eating salt and bleeding stimulate it.</li>
+<li>Aldosterone's primary regulator is angiotensin II, NOT ACTH.</li>
+<li>Aldosterone: Na⁺ in, K⁺ out (not symmetric).</li>
+<li>ANP comes from the heart, opposes ADH/aldosterone, lowers BP.</li>
+<li>ADH receptor uses cAMP; ANP receptor uses cGMP.</li>
+<li>Alcohol inhibits ADH → polyuria.</li>
+</ul>
+</div>
+
+<div class="card memorize reveal-on-scroll reveal-delay-2">
+<h3>Top things to memorise</h3>
+<ol>
+<li>ADH source (SON), trigger (osmolarity, volume), effect (water retention via aquaporins, vasoconstriction).</li>
+<li>5-10 mOsm sensitivity for osmotic ADH stimulation; ~10% volume change for stretch-mediated.</li>
+<li>Aldosterone: steroid, adrenal cortex, Na⁺ in / K⁺ out.</li>
+<li>Primary regulator of aldosterone = angiotensin II.</li>
+<li>K⁺ rise of just 5% triggers aldosterone.</li>
+<li>ANP from atria, ↑Na⁺ excretion, lowers BP.</li>
+<li>ANP receptor is a guanylate cyclase (cGMP).</li>
+<li>Diabetes insipidus = ADH deficiency (no sweet urine).</li>
+</ol>
+</div>
+
+<div class="preview-q reveal-on-scroll">
+<h3>Exam-style preview questions</h3>
+<ol>
+<li>Which will NOT stimulate ADH? — Drinking lots of water.</li>
+<li>What is the primary hormonal regulator of aldosterone? — Angiotensin II.</li>
+<li>Where is ANP made? — Atria of the heart.</li>
+<li>How does ADH increase water reabsorption molecularly? — Inserts aquaporin into collecting duct membrane via cAMP.</li>
+<li>Which hormone opposes ADH and aldosterone? — ANP.</li>
+</ol>
+</div>
+
+<div class="lower-yield reveal-on-scroll">
+<b>Lower-yield / skip if short on time:</b>
+<ul>
+<li>Etymology of "natriuretic" (from French natron).</li>
+<li>Specific TRP channel identities for stretch receptors.</li>
+<li>Exact details of RAAS enzymatic cascade beyond what is shown.</li>
+</ul>
+</div>
+
+</div>
+<div id="notes-5" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-5" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(5)">Clear Highlights</button>
+  <h1>Lecture 5: Reproductive Hormones</h1>
+
+<div class="bigpic reveal-on-scroll">
+Lecture 5 covers reproductive hormones — the hormonal control of gamete production, sexual development, and pregnancy. The same hypothalamic-pituitary backbone (GnRH → FSH/LH) drives both sexes but the gonads and feedback patterns differ. In men, testosterone is constant; in women, estrogen and progesterone cycle on a ~28-day rhythm built from two synchronized cycles (ovarian and uterine). Pregnancy hijacks the cycle through hCG, which rescues the corpus luteum. Memorize the cell types (Leydig vs Sertoli; granulosa vs theca; follicle vs corpus luteum) and the feedback switches (negative most of the time, positive at mid-cycle), and the rest follows.
+</div>
+
+<section class="reveal-on-scroll" data-sec="0">
+<h2>1. Overview of sex hormones</h2>
+<p>Two categories:</p>
+<ol>
+<li data-topic="Sex steroid synthesis Reproductive hormones"><b>Steroid hormones from cholesterol</b> — pathway: cholesterol → progesterone → androgens → estrogens.
+<ul>
+<li><b>Androgens</b> (雄激素) — mainly testosterone. More important in males.</li>
+<li data-topic="Estrogen forms"><b>Estrogens</b> (雌激素) — mainly 17-β-estradiol. More important in females.</li>
+<li><b>Progesterone</b> (黃體酮) — more important in females.</li>
+</ul></li>
+<li><b>Peptide hormones from pituitary</b> — oxytocin and prolactin (childbirth/lactation).</li>
+</ol>
+<p>Both sexes have androgens AND estrogens — differing only in amount.</p>
+<div class="exam-trap-inline" data-topic="Sex steroid synthesis"><b>Exam trap:</b> Estrogens come FROM androgens (aromatase converts). Androgens are NOT male-only.</div>
+</section>
+
+<section class="reveal-on-scroll" data-sec="1">
+<h2>2. Male reproductive system</h2>
+<p>External organs: penis + scrotum housing two testes. Scrotum is outside abdomen because sperm production needs &lt;body temperature.</p>
+<p><b>Testis structure:</b></p>
+<ul>
+<li data-topic="Sertoli cells Blood-testis barrier Inhibin Spermatogenesis"><b>Seminiferous tubules</b> (生精小管) — site of spermatogenesis. Contain:
+<ul>
+<li><b>Germ cells</b> — divide and differentiate into sperm.</li>
+<li data-topic="Sertoli cells Blood-testis barrier Inhibin"><b>Sertoli cells</b> (支持細胞) — supporting cells. Functions: (a) form blood-testis barrier, (b) produce seminiferous tubular fluid that nourishes germ cells, (c) synthesize <b>inhibin</b>, (d) respond to FSH.</li>
+</ul></li>
+<li data-topic="Leydig cells Testosterone source"><b>Leydig cells</b> (萊狄希氏細胞) — interstitial cells between tubules. Produce <b>testosterone</b> in response to <b>LH</b>.</li>
+</ul>
+<p data-topic="Sperm count">Average sperm count: ~60 million/ml. Fertility markedly impaired below 35 million/ml.</p>
+<p data-topic="Semen composition"><b>Spermatogenesis</b> takes weeks; final maturation occurs in epididymis. Sperm transported via vas deferens through inguinal canal → urethra. Seminal vesicles add 60% of semen fluid (fructose, prostaglandins, coagulating proteins); prostate adds alkaline fluid neutralizing acid.</p>
+<p><b>Neuroendocrine control of spermatogenesis:</b></p>
+<ul>
+<li data-topic="GnRH regulation Spermatogenesis">Hypothalamus → <b>GnRH</b> → pituitary → FSH + LH.</li>
+<li data-topic="Leydig cells Testosterone"><b>LH</b> → Leydig → testosterone (required for spermatogenesis + 2nd sex characteristics).</li>
+<li data-topic="Spermatogenesis"><b>FSH</b> → Sertoli cells → spermatogenesis (with testosterone).</li>
+<li data-topic="Inhibin"><b>Negative feedback:</b> testosterone inhibits GnRH/LH/FSH; <b>inhibin</b> from Sertoli inhibits FSH specifically.</li>
+</ul>
+<p data-topic="GnRH regulation">Stress, protracted aerobic exercise, visual/olfactory/tactile/psychological inputs all modulate GnRH.</p>
+<p><b>Actions of testosterone:</b></p>
+<ol>
+<li data-topic="Testosterone">Prenatal: triggers primary male sex characteristic development.</li>
+<li>Puberty: enlargement of penis/scrotum/testes; secondary sex characteristics (facial hair, voice).</li>
+<li>Spermatogenesis.</li>
+<li>General growth — especially muscle protein synthesis (anabolic).</li>
+<li>Behavioral — aggression.</li>
+</ol>
+<div class="exam-trap-inline" data-topic="Leydig cells Sertoli cells Inhibin"><b>Exam trap:</b> Leydig cells secrete androgens; do NOT secrete inhibin (that's Sertoli). Sertoli cells bind FSH not LH.</div>
+</section>
+
+<section class="reveal-on-scroll" data-sec="2">
+<h2>3. Female reproductive system</h2>
+<p data-topic="Oviduct">Organs: vulva (external) + vagina, uterus, uterine tubes (oviducts/fallopian tubes), two ovaries.</p>
+<ul>
+<li><b>Ovaries</b> (卵巢) — produce ova + estrogens + progesterone within follicles.</li>
+<li data-topic="Oviduct"><b>Oviduct (fallopian tube)</b> — site of fertilization; transports ovum from ovary to uterus.</li>
+<li><b>Uterus</b> — muscular organ for implantation/fetal development. <b>Endometrium</b> = glandular layer.</li>
+</ul>
+<p><b>Oogenesis:</b> in mid-ovulatory cycle (~28 days) one ovum is expelled from one ovary. ~400-500 mature ova in a woman's lifetime (puberty → menopause). Follicle = oocyte + supporting cells. After ovulation, follicle becomes <b>corpus luteum</b> (黃體).</p>
+<div class="exam-trap-inline" data-topic="Oviduct"><b>Exam trap:</b> Site of fertilization is the OVIDUCT (fallopian tube), not the uterus. Uterus is for implantation.</div>
+</section>
+
+<section class="reveal-on-scroll" data-sec="3">
+<h2>4. The reproductive cycle (~28 days)</h2>
+<p>Two synchronized cycles:</p>
+<table data-topic="Reproductive cycle Cycle timing Menstruation Luteal phase">
+<tr><th>Day</th><th>Ovarian cycle</th><th>Uterine cycle</th><th>Hormones</th></tr>
+<tr data-topic="Menstruation"><td>0-5</td><td>Follicular (early) — previous corpus luteum degenerates</td><td>Menses (sloughing endometrium)</td><td>↓E/P → ↑GnRH → ↑FSH/LH</td></tr>
+<tr><td>5-13</td><td>Follicular — follicle grows under FSH, makes estrogen</td><td>Proliferative — endometrium rebuilds</td><td>Rising estrogen</td></tr>
+<tr data-topic="LH surge Cycle timing"><td>~14</td><td>Ovulation</td><td></td><td>Estrogen positive feedback → LH/FSH surge → ovulation</td></tr>
+<tr data-topic="Luteal phase Corpus luteum"><td>14-28</td><td>Luteal — corpus luteum makes progesterone + some estrogen</td><td>Secretory — endometrium becomes secretory under progesterone</td><td>P/E negative feedback → ↓FSH/LH; inhibin ↓FSH</td></tr>
+<tr data-topic="Menstruation"><td>28</td><td>Corpus luteum degenerates if no implantation</td><td>Menses again</td><td>↓E/P → next cycle starts</td></tr>
+</table>
+<p data-topic="hCG Corpus luteum Progesterone"><b>Pregnancy:</b> if fertilization and implantation occur, placenta secretes <b>human chorionic gonadotropin (hCG)</b> within a day. hCG <b>rescues the corpus luteum</b>, preventing its degeneration. Corpus luteum continues producing P/E during the first trimester; placenta takes over thereafter.</p>
+<div class="exam-trap-inline" data-topic="LH surge Reproductive cycle"><b>Exam trap:</b> Estrogen at low levels gives NEGATIVE feedback; at high mid-cycle levels gives POSITIVE feedback → LH surge → ovulation. Inhibin from follicle selectively inhibits FSH.</div>
+</section>
+
+<section class="reveal-on-scroll" data-sec="4">
+<h2>5. Actions of estrogen and progesterone</h2>
+<p data-topic="Estrogen"><b>Estrogen:</b></p>
+<ul>
+<li data-topic="Estrogen">Growth/development: stimulates 1st and 2nd sex characteristics; stimulates long bone growth + early epiphyseal closure.</li>
+<li>Hormonal: stimulates GnRH/LH/FSH release during follicular phase; inhibits same during luteal.</li>
+<li data-topic="Estrogen Gestational diabetes">Metabolic: ↓insulin sensitivity in peripheral tissues; protects against bone loss.</li>
+</ul>
+<p data-topic="Gestational diabetes"><b>Gestational diabetes</b> (妊娠糖尿病) — placental estrogen (and other hormones) reduce insulin sensitivity. Usually appears at 20-24 weeks. Pancreas normally compensates by making more insulin; gestational diabetes appears when it cannot.</p>
+<p data-topic="Progesterone"><b>Progesterone:</b></p>
+<ul>
+<li data-topic="Progesterone">Fully develops endometrium (prepares for pregnancy).</li>
+<li>Further mammary gland development.</li>
+<li>Negative feedback to hypothalamus → prevents ovulation during pregnancy.</li>
+<li data-topic="Progesterone">Antagonizes testosterone/dihydrotestosterone — prevents androgen response in females.</li>
+</ul>
+<div class="exam-trap-inline" data-topic="Gestational diabetes Estrogen"><b>Exam trap:</b> Gestational diabetes is caused by HORMONES (estrogen, etc.), NOT by eating too much. Estrogen causes early epiphyseal closure — explains why women stop growing earlier than men.</div>
+</section>
+
+<section class="reveal-on-scroll" data-sec="5">
+<h2>6. Contraceptives and IVF</h2>
+<p data-topic="Contraception"><b>Combined oral contraceptive ("the pill"):</b> estrogen + progestogen. 99.7% effective. Mechanism: suppresses release of gonadotropins → no ovulation; also increases cervical mucus viscosity → blocks sperm. First-generation pill: FDA-approved 1960.</p>
+<p data-topic="IVF"><b>IVF</b> (in vitro fertilization, 體外受精): Robert Edwards (Nobel 2010) and Patrick Steptoe. Louise Brown was the first IVF baby (1978). IVF protocol uses <b>FSH</b> for ovarian hyperstimulation (multiple follicles) and <b>hCG</b> to trigger final oocyte maturation. Now &gt;8 million babies born via IVF.</p>
+<div class="exam-trap-inline" data-topic="Contraception"><b>Exam trap:</b> Contraceptive pills PREVENT ovulation by suppressing gonadotropin release — they do not "kill" sperm directly.</div>
+</section>
+
+<div class="callout reveal-on-scroll reveal-delay-1">
+<div class="callout-title">⚠ Exam Traps Summary</div>
+<ul>
+<li>Both sexes have all sex hormones — sex differences are quantitative.</li>
+<li>Leydig = testosterone (LH); Sertoli = inhibin + spermatogenesis support (FSH).</li>
+<li>Site of fertilization = oviduct, NOT uterus.</li>
+<li>Estrogen at high mid-cycle = POSITIVE feedback (LH surge).</li>
+<li>Inhibin from follicle/Sertoli specifically inhibits FSH only.</li>
+<li>hCG rescues the corpus luteum during pregnancy.</li>
+<li>Gestational diabetes = hormonal insulin resistance, not overeating.</li>
+<li>Ovulation is prevented by HIGH estrogen + progesterone (i.e. "the pill").</li>
+</ul>
+</div>
+
+<div class="card memorize reveal-on-scroll reveal-delay-2">
+<h3>Top things to memorise</h3>
+<ol>
+<li>GnRH → FSH/LH; LH → Leydig → testosterone; FSH → Sertoli → spermatogenesis.</li>
+<li>Inhibin (Sertoli/follicle) inhibits FSH selectively.</li>
+<li>4 phases of female cycle: follicular, ovulation, luteal + uterine menses/proliferative/secretory.</li>
+<li>Estrogen feedback: negative usually; positive at mid-cycle → LH surge.</li>
+<li>Corpus luteum makes progesterone (and some estrogen) in luteal phase.</li>
+<li>hCG from placenta rescues corpus luteum.</li>
+<li>Estrogen effects: bone growth + early epiphyseal closure; insulin resistance.</li>
+<li>Progesterone effects: prepare endometrium, prevent further ovulation.</li>
+<li>Pill = estrogen + progestogen, blocks gonadotropins.</li>
+<li>IVF: FSH for hyperstimulation, hCG for final maturation.</li>
+</ol>
+</div>
+
+<div class="preview-q reveal-on-scroll">
+<h3>Exam-style preview questions</h3>
+<ol>
+<li>Which cell secretes inhibin in the male? — Sertoli.</li>
+<li>What rescues the corpus luteum during pregnancy? — hCG.</li>
+<li>Where does fertilization occur? — Oviduct (fallopian tube).</li>
+<li>How do contraceptive pills prevent pregnancy? — Suppress gonadotropin release → no ovulation.</li>
+<li>What causes gestational diabetes? — Hormonal insulin resistance (placental estrogen).</li>
+</ol>
+</div>
+
+<div class="lower-yield reveal-on-scroll">
+<b>Lower-yield / skip if short on time:</b>
+<ul>
+<li>Sperm count decline debate / environmental endocrine disruptors.</li>
+<li>Exact ages of Louise Brown and IVF history detail.</li>
+<li>Stem cell ethics around unwanted IVF embryos.</li>
+<li>Etymology of "seminiferous" / classical historical figures.</li>
+</ul>
+</div>
+
+</div>
+
+<div id="quiz-1" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <h1>Lecture 1: Overview of the Endocrine System — Quiz</h1>
+  <div class="score-bar" id="scorebar-1">Score: 0 / 0 (of 30)</div>
+  <div id="quizbody-1"></div>
+  <div id="postquiz-1"></div>
+</div>
+<div id="quiz-2" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <h1>Lecture 2: Neuroendocrine Systems (Hypothalamus &amp; Pituitary) — Quiz</h1>
+  <div class="score-bar" id="scorebar-2">Score: 0 / 0 (of 30)</div>
+  <div id="quizbody-2"></div>
+  <div id="postquiz-2"></div>
+</div>
+<div id="quiz-3" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <h1>Lecture 3: Metabolic &amp; Developmental Hormones — Quiz</h1>
+  <div class="score-bar" id="scorebar-3">Score: 0 / 0 (of 30)</div>
+  <div id="quizbody-3"></div>
+  <div id="postquiz-3"></div>
+</div>
+<div id="quiz-4" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <h1>Lecture 4: Hormones Regulating Water &amp; Electrolyte Balance — Quiz</h1>
+  <div class="score-bar" id="scorebar-4">Score: 0 / 0 (of 30)</div>
+  <div id="quizbody-4"></div>
+  <div id="postquiz-4"></div>
+</div>
+<div id="quiz-5" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <h1>Lecture 5: Reproductive Hormones — Quiz</h1>
+  <div class="score-bar" id="scorebar-5">Score: 0 / 0 (of 30)</div>
+  <div id="quizbody-5"></div>
+  <div id="postquiz-5"></div>
+</div>
+
+<div id="global-report" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <h1>Full Summary Report</h1>
+  <div id="global-body"></div>
+</div>
+
+</div>
+<script>
+const lectures = [{"id": 1, "title": "Lecture 1: Overview of the Endocrine System", "questions": [{"q": "Which of the following is NOT a hormone class?", "options": ["Amino acid derivatives", "Polypeptides", "Steroids", "Prostaglandins", "Glucose derivatives"], "answer": 4, "topic": "Hormone classes", "explain": "There are four classes: amino-acid derivatives, polypeptides, steroids, and prostaglandins. Glucose derivatives are not hormones."}, {"q": "Which mechanism does insulin use?", "options": ["G-protein coupled receptor with cAMP", "Receptor tyrosine kinase", "Nuclear hormone receptor", "Receptor guanylate cyclase", "Ligand-gated ion channel"], "answer": 1, "topic": "Receptor types", "explain": "Insulin binds a receptor tyrosine kinase. The receptor autophosphorylates (positive feedback) and phosphorylates tyrosines on cytoplasmic targets."}, {"q": "All steroid hormones are derived from:", "options": ["Tyrosine", "Tryptophan", "Cholesterol", "Arachidonic acid", "Glycine"], "answer": 2, "topic": "Steroid biochemistry", "explain": "All steroid hormones come from cholesterol (27 C) and differ in ring substituents."}, {"q": "Which amino acid is the precursor for thyroxine?", "options": ["Tryptophan", "Tyrosine", "Phenylalanine", "Histidine", "Glutamine"], "answer": 1, "topic": "Hormone synthesis", "explain": "Thyroxine (T4), epinephrine, and norepinephrine are all tyrosine derivatives. Melatonin uses tryptophan."}, {"q": "Which is unique about prostaglandins?", "options": ["They are made from amino acids", "They are lipid-soluble but use surface receptors", "They are stored in vesicles for hours", "They cross the blood-brain barrier", "They are made by the pituitary"], "answer": 1, "topic": "Prostaglandins", "explain": "Prostaglandins are lipid-soluble (from arachidonic acid) yet bind surface receptors coupled to cAMP — behaving like lipid-insoluble hormones."}, {"q": "NSAIDs such as aspirin work by:", "options": ["Blocking GPCRs", "Inhibiting prostaglandin synthesis", "Activating nuclear receptors", "Stimulating insulin release", "Degrading steroids"], "answer": 1, "topic": "NSAIDs", "explain": "Non-steroidal anti-inflammatory drugs inhibit cyclooxygenase enzymes that make prostaglandins, reducing fever, pain, and inflammation."}, {"q": "A working definition of a classical hormone includes all EXCEPT:", "options": ["Secreted in small amounts", "Carried by blood", "Binds specific receptors", "Acts only on neighboring cells", "Acts on target tissues"], "answer": 3, "topic": "Hormone definition", "explain": "Classical hormones travel via blood to distant targets. Acting only on neighbors is paracrine signaling, not endocrine."}, {"q": "Cortisol is lipid-soluble. To prepare a 100 mM stock solution you should use:", "options": ["Tap water", "Distilled water", "Saline", "Ethanol", "Acidic pH 5 solution"], "answer": 3, "topic": "Solubility/lab", "explain": "Steroids do not dissolve in aqueous solutions at high concentration. Ethanol (an organic solvent) is used to make stock solutions."}, {"q": "Lipid-soluble hormones primarily act by:", "options": ["Activating GPCRs", "Modifying gene transcription", "Opening ion channels", "Triggering exocytosis", "Activating tyrosine kinases"], "answer": 1, "topic": "Hormone mechanism", "explain": "Lipid-soluble hormones cross the membrane, bind nuclear/cytoplasmic receptors, and the complex modulates DNA transcription. Effects are slow but long-lasting."}, {"q": "Which hormone is from tryptophan?", "options": ["Thyroxine", "Epinephrine", "Norepinephrine", "Melatonin", "Insulin"], "answer": 3, "topic": "Hormone synthesis", "explain": "Melatonin from the pineal gland is synthesized from tryptophan. The other listed amino-acid-derived hormones use tyrosine."}, {"q": "Which is FALSE about insulin?", "options": ["It is water soluble", "First synthesized as a larger precursor", "Uses GPCRs", "Has two polypeptide chains", "Lowers blood glucose"], "answer": 2, "topic": "Insulin", "explain": "Insulin uses a receptor tyrosine kinase, NOT a G-protein-coupled receptor. The other statements are all correct."}, {"q": "Hormones derived from amino acids are:", "options": ["All derived from tyrosine", "All coupled to second messengers", "All lipid-insoluble", "None of the above", "All steroids"], "answer": 3, "topic": "Amino-acid hormones", "explain": "Melatonin uses tryptophan (not all tyrosine). Thyroxine is lipid-soluble and uses nuclear receptors. So none of the simple generalizations holds."}, {"q": "The ANP receptor is a:", "options": ["G protein-coupled receptor", "Receptor guanylate cyclase", "Nuclear receptor", "Ligand-gated channel", "Steroid receptor"], "answer": 1, "topic": "Receptor types", "explain": "Atrial natriuretic peptide binds a receptor with intrinsic guanylate cyclase activity → cGMP."}, {"q": "Which is a humoral stimulus for hormone release?", "options": ["Sympathetic input", "Hypothalamic releasing hormone", "Plasma Ca²⁺ change", "Action potential", "Body temperature"], "answer": 2, "topic": "Hormone regulation", "explain": "Humoral stimuli are blood-borne chemical changes — e.g. Ca²⁺, glucose, osmolarity. Neural and hormonal are separate categories."}, {"q": "Which is INCORRECT about TRH?", "options": ["It is a polypeptide", "It has 3 amino acids", "It stimulates TSH release", "It uses IP3/DAG signaling", "It is lipid-soluble"], "answer": 4, "topic": "Polypeptide hormones", "explain": "TRH is a 3-aa polypeptide and like other peptides is lipid-INSOLUBLE; it acts via a GPCR (IP3/DAG)."}, {"q": "Which best describes the endocrine system vs nervous system?", "options": ["Same speed", "Endocrine is faster", "Nervous acts longer", "Endocrine acts longer (minutes-days)", "No overlap"], "answer": 3, "topic": "Endocrine vs nervous", "explain": "Endocrine signaling is slow but sustained (minutes to days); nervous signaling is fast and brief. There IS structural overlap (e.g. hypothalamus)."}, {"q": "Norepinephrine can function as a:", "options": ["Hormone only", "Neurotransmitter only", "Both hormone and neurotransmitter", "Steroid hormone", "Lipid-soluble hormone"], "answer": 2, "topic": "Norepinephrine", "explain": "Norepinephrine acts as a neurotransmitter at sympathetic synapses and as a hormone when released from the adrenal medulla."}, {"q": "Which organ does NOT have endocrine cells?", "options": ["Heart", "Kidney", "Liver", "Adipose tissue", "None — all do"], "answer": 4, "topic": "Endocrine cells", "explain": "All tissues listed contain endocrine cells: heart (ANP), kidney (renin), liver (IGF), adipose (leptin). Endocrine function is not limited to classical glands."}, {"q": "Which is the inhibitor when epinephrine binds α2 adrenoreceptors?", "options": ["Increases cAMP", "Decreases cAMP", "Increases IP3", "Increases Ca²⁺", "Increases cGMP"], "answer": 1, "topic": "Adrenoreceptors", "explain": "α2 receptors couple to Gi → DECREASE cAMP. Most other listed coupling is stimulatory."}, {"q": "The discoverer of estrogen receptor and nuclear hormone receptor superfamily was:", "options": ["Ernest Starling", "Elwood Jensen", "William Bayliss", "Peter Agre", "Robert Edwards"], "answer": 1, "topic": "History", "explain": "Elwood Jensen first described the estrogen receptor in 1958 and helped define the nuclear hormone receptor superfamily."}, {"q": "Receptor tyrosine kinases have which characteristic?", "options": ["G-protein coupling", "Intrinsic kinase activity", "Located in nucleus", "Bind only steroids", "Channel ions"], "answer": 1, "topic": "RTK", "explain": "RTKs (e.g. insulin receptor) have intrinsic kinase activity; ligand binding triggers autophosphorylation and substrate phosphorylation."}, {"q": "Lipid-insoluble hormone responses are characterized by:", "options": ["Slow onset, hours-days", "Rapid, short-lived", "DNA binding", "No receptor needed", "Stored in nucleus"], "answer": 1, "topic": "Mechanism", "explain": "Lipid-insoluble hormones produce rapid, short-lived effects through second messengers or kinase cascades."}, {"q": "Which is true about the chemistry of GH?", "options": ["It is a steroid", "It is a tripeptide", "It is 191 aa polypeptide", "It is derived from cholesterol", "It is lipid-soluble"], "answer": 2, "topic": "GH chemistry", "explain": "Growth hormone is a 191-aa polypeptide (human) and lipid-insoluble. It uses a surface (cytokine-family) receptor."}, {"q": "Vasopressin in the kidney signals through:", "options": ["IP3/DAG", "cAMP", "cGMP", "Nuclear receptor", "Tyrosine kinase"], "answer": 1, "topic": "Vasopressin", "explain": "In the kidney, ADH (vasopressin) binds V2 receptors coupled to adenylate cyclase → cAMP → increases surface aquaporins."}, {"q": "Prostaglandins are produced from:", "options": ["Cholesterol", "Tyrosine", "Arachidonic acid", "Phenylalanine", "Glycerol"], "answer": 2, "topic": "Prostaglandin synthesis", "explain": "Prostaglandins are eicosanoids generated from arachidonic acid (20-C polyunsaturated fatty acid) liberated by phospholipases."}, {"q": "Which is the precursor for epinephrine synthesis?", "options": ["Tryptophan", "Norepinephrine", "Tyramine", "Histidine", "Cysteine"], "answer": 1, "topic": "Catecholamine synthesis", "explain": "Norepinephrine is methylated to become epinephrine. Both ultimately derive from tyrosine."}, {"q": "Which is most diagnostic of an endocrine, NOT exocrine, secretion?", "options": ["Secreted into a duct", "Secreted into the blood", "Acts on adjacent cells", "Acts via diffusion", "Stored long-term"], "answer": 1, "topic": "Endocrine definition", "explain": "Endocrine secretions enter blood, not ducts. Exocrine glands deliver to a surface via ducts."}, {"q": "Which characteristic best differentiates polypeptide hormones from steroid hormones?", "options": ["Polypeptides cross membranes; steroids do not", "Steroids are lipid-soluble; polypeptides are not", "Both are lipid-soluble", "Polypeptides are from cholesterol", "Steroids have surface receptors"], "answer": 1, "topic": "Hormone class comparison", "explain": "Steroids are lipid-soluble (cross membrane to nuclear receptors). Polypeptides are water-soluble and use surface receptors."}, {"q": "Which is TRUE of the four hormone classes?", "options": ["All have nuclear receptors", "Only amino-acid derivatives are lipid-soluble", "All steroids are lipid-soluble", "All peptides are lipid-soluble", "All use cAMP"], "answer": 2, "topic": "Hormone classification", "explain": "Every steroid is lipid-soluble; peptides are all lipid-insoluble; amino-acid derivatives split (thyroxine soluble, catecholamines insoluble)."}, {"q": "Which combination of stimulus categories regulates hormone secretion?", "options": ["Only humoral", "Only neural", "Humoral, neural, and hormonal", "Humoral and electrical", "Mechanical only"], "answer": 2, "topic": "Hormone regulation", "explain": "Three categories: humoral (chemical changes in blood), neural (autonomic input), and hormonal (other hormones)."}]}, {"id": 2, "title": "Lecture 2: Neuroendocrine Systems (Hypothalamus & Pituitary)", "questions": [{"q": "Which statement about the hypothalamus is TRUE?", "options": ["Located above the thalamus and inhibits thalamic activity", "Receives hormones from neurosecretory cells", "Secretes hormones into the hypothalamic-hypophyseal portal system", "Primarily a memory center", "Is a part of the cerebellum"], "answer": 2, "topic": "Hypothalamus", "explain": "Parvocellular hypothalamic neurons secrete releasing/inhibiting hormones into the hypophyseal portal system, controlling the anterior pituitary."}, {"q": "Which statement about the anterior pituitary is FALSE?", "options": ["It is composed of neurosecretory cell axons", "It is true endocrine tissue", "It is also called adenohypophysis", "It connects to the hypothalamic-hypophyseal portal system", "It secretes ACTH, TSH, FSH, LH"], "answer": 0, "topic": "Anterior pituitary", "explain": "The ANTERIOR pituitary is glandular endocrine epithelium. Axons of hypothalamic neurosecretory cells go to the POSTERIOR pituitary."}, {"q": "Magnocellular neurons of the hypothalamus project to:", "options": ["Anterior pituitary", "Median eminence", "Posterior pituitary", "Adrenal medulla", "Spinal cord"], "answer": 2, "topic": "Neurosecretory anatomy", "explain": "Magnocellular neurons in SON and PVN extend axons directly into the posterior pituitary where they release ADH and oxytocin."}, {"q": "Which is a neurohormone?", "options": ["Growth hormone", "Insulin", "Antidiuretic hormone", "Prolactin", "Luteinizing hormone"], "answer": 2, "topic": "Neurohormones", "explain": "ADH is a neurohormone — produced by neurons (SON) and released from the posterior pituitary directly into blood."}, {"q": "Which hormone pair is NOT closely related (in regulation)?", "options": ["Growth hormone : GHRH", "MSH : MIH", "Growth hormone : Somatostatin", "Growth hormone : GnRH", "Prolactin : Dopamine"], "answer": 3, "topic": "Hypothalamic regulation", "explain": "GnRH regulates LH/FSH, not GH. GH is regulated by GHRH (release) and somatostatin (inhibit)."}, {"q": "Which is TRUE about prolactin and oxytocin?", "options": ["Both are neurohormones", "They share the same target tissue", "Both stimulate milk synthesis", "Both are secreted by the anterior pituitary", "They are both peptides"], "answer": 4, "topic": "Pituitary hormones", "explain": "Both are peptides. Prolactin (anterior pituitary) stimulates milk synthesis; oxytocin (posterior) causes milk ejection. Different cells, different mechanisms."}, {"q": "Prolactin secretion is INHIBITED by:", "options": ["TRH", "Estrogen", "Dopamine", "Oxytocin", "Stress"], "answer": 2, "topic": "Prolactin regulation", "explain": "Dopamine acts as prolactin-inhibiting hormone (PIH). TRH and estrogen stimulate prolactin."}, {"q": "Which precursor yields both ACTH and MSH?", "options": ["GH", "POMC (proopiomelanocortin)", "Pro-insulin", "Pro-opiocortin", "Adrenocortin"], "answer": 1, "topic": "POMC", "explain": "POMC is cleaved into multiple peptides including ACTH and MSH, explaining why Addison's patients (high ACTH) can also become hyperpigmented (high MSH)."}, {"q": "A patient with Addison's disease often shows:", "options": ["Pale skin", "Hyperpigmentation", "High cortisol", "Suppressed CRH", "Low ACTH"], "answer": 1, "topic": "Addison's", "explain": "Low cortisol → no negative feedback → high CRH/ACTH → high MSH (from same POMC) → skin darkening. Adrenal cortex damage is the cause."}, {"q": "Neurosecretory cells differ from ordinary neurons by:", "options": ["Lacking action potentials", "Having larger secretory granules (100-400 nm)", "Lacking axons", "Being non-excitable", "Releasing only neurotransmitters"], "answer": 1, "topic": "Neurosecretory cells", "explain": "Neurosecretory cells fire action potentials like neurons but have larger granules and terminate in capillary beds (neurohemal organs) releasing hormones."}, {"q": "Which statement about neurosecretory cells is FALSE?", "options": ["They are excitable neurons", "They are non-excitable cells secreting hormones", "They regulate other endocrine glands", "They are present in the hypothalamus", "Their terminals end on capillaries"], "answer": 1, "topic": "Neurosecretory cells", "explain": "Neurosecretory cells ARE excitable. Calling them non-excitable is the false statement."}, {"q": "Tropic hormones from the anterior pituitary include all EXCEPT:", "options": ["ACTH", "FSH", "LH", "TSH", "GH"], "answer": 4, "topic": "Pituitary hormones", "explain": "GH is a direct-acting hormone (acts on tissues), not tropic. Tropic hormones act on other endocrine glands."}, {"q": "The hypothalamic-hypophyseal portal system carries hormones from:", "options": ["Anterior pituitary to brain", "Hypothalamus to anterior pituitary", "Hypothalamus to posterior pituitary", "Adrenal to pituitary", "Posterior to anterior pituitary"], "answer": 1, "topic": "Portal system", "explain": "It connects two capillary beds — collecting hypothalamic releasing/inhibiting hormones and delivering them concentrated to the anterior pituitary."}, {"q": "MSH is increased during pregnancy because of:", "options": ["Decreased ACTH", "High estrogen", "Low POMC", "Decreased CRH", "Increased dopamine"], "answer": 1, "topic": "MSH", "explain": "During pregnancy, estrogen (and progesterone) elevate MSH, causing the 'mask of pregnancy' (melasma)."}, {"q": "ADH (vasopressin) acts on the kidney by:", "options": ["Reducing aquaporin", "Increasing aquaporin surface expression via cAMP", "Closing Na channels", "Stimulating angiotensin", "Activating renin"], "answer": 1, "topic": "ADH mechanism", "explain": "ADH binds V2 receptors coupled to adenylate cyclase → cAMP → increased aquaporin surface insertion → ↑water reabsorption."}, {"q": "Oxytocin causes all EXCEPT:", "options": ["Milk ejection", "Uterine contraction during labor", "Social bonding (in brain)", "Milk synthesis", "Trust effects"], "answer": 3, "topic": "Oxytocin", "explain": "Oxytocin EJECTS milk; it does not synthesize milk. Synthesis is driven by prolactin."}, {"q": "Which inhibitor controls growth hormone release?", "options": ["Dopamine", "Somatostatin (GIH)", "GnRH", "ACTH", "CRH"], "answer": 1, "topic": "GH regulation", "explain": "Somatostatin (GIH) inhibits GH release. Dopamine inhibits prolactin. GnRH stimulates LH/FSH."}, {"q": "Direct-acting anterior pituitary hormones include:", "options": ["GH, ACTH, TSH", "GH, PRL, MSH", "FSH, LH, TSH", "ACTH, FSH, LH", "Oxytocin, ADH"], "answer": 1, "topic": "Pituitary hormones", "explain": "Direct-acting (act on tissues, not other glands): GH, PRL, MSH. The rest (ACTH, TSH, FSH, LH) are tropic."}, {"q": "Posterior pituitary is composed of:", "options": ["Glandular epithelium", "Axons of hypothalamic neurosecretory cells", "Cartilage", "Connective tissue only", "Smooth muscle"], "answer": 1, "topic": "Posterior pituitary", "explain": "The posterior pituitary (neurohypophysis) is neural tissue — axons of magnocellular hypothalamic neurons in SON/PVN."}, {"q": "Which has the SHORTEST hormone?", "options": ["TRH", "Insulin", "Growth hormone", "ADH", "Oxytocin"], "answer": 0, "topic": "Hormone size", "explain": "TRH has only 3 amino acids. ADH and oxytocin have 9; insulin has 51; GH has 191."}, {"q": "Which is FALSE about Cushing's-like hyperpigmentation in Addison's disease?", "options": ["Linked to high MSH", "Caused by low cortisol", "Caused by high ACTH", "Caused by POMC cleavage products", "Caused by low CRH"], "answer": 4, "topic": "POMC pathology", "explain": "CRH is HIGH (not low) in Addison's because cortisol cannot inhibit it. High CRH drives high ACTH/MSH."}, {"q": "The Nobel Prize in 2003 for discovering aquaporins was awarded to:", "options": ["Robert Edwards", "Peter Agre", "Elwood Jensen", "Ernest Starling", "Patrick Steptoe"], "answer": 1, "topic": "History", "explain": "Peter Agre won the 2003 Nobel Prize in Chemistry for discovering aquaporin water channels."}, {"q": "Oxytocin and vasopressin (ADH) share:", "options": ["Identical sequences", "7 of 9 amino acids", "Different precursors entirely", "Receptors", "All 9 amino acids"], "answer": 1, "topic": "Posterior pituitary peptides", "explain": "Both are 9-aa cyclic peptides differing in only 2 amino acids — they are evolutionary cousins."}, {"q": "Which hypothalamic neurons project to the posterior pituitary?", "options": ["Parvocellular", "Magnocellular in SON and PVN", "Suprachiasmatic", "Arcuate", "Lateral hypothalamic"], "answer": 1, "topic": "Hypothalamic anatomy", "explain": "Magnocellular neurons in supraoptic and paraventricular nuclei send axons directly to the posterior pituitary."}, {"q": "Which is NOT a function of MSH?", "options": ["Acts on melanocytes", "Increases melanin", "Cleaved from POMC", "Stimulates skin pigmentation", "Increases glucose"], "answer": 4, "topic": "MSH", "explain": "MSH acts on melanocytes to increase pigmentation. It does not affect blood glucose directly."}, {"q": "The two lobes of the pituitary differ because:", "options": ["Anterior is neural, posterior is glandular", "Anterior is glandular, posterior is neural", "Both are neural", "Both are glandular", "Anterior secretes ADH"], "answer": 1, "topic": "Pituitary anatomy", "explain": "Anterior (adenohypophysis) is glandular endocrine tissue. Posterior (neurohypophysis) is composed of axon terminals — neural tissue."}, {"q": "Excessive dopamine antagonism (e.g. some antipsychotics) tends to cause:", "options": ["Low prolactin", "High prolactin", "High GH", "Low ACTH", "High oxytocin"], "answer": 1, "topic": "Dopamine and prolactin", "explain": "Dopamine inhibits prolactin (PIH). Blocking dopamine removes this brake → hyperprolactinemia."}, {"q": "Melasma during pregnancy is caused mainly by:", "options": ["Low cortisol", "Estrogen-driven MSH increase", "Hypothyroidism", "Vitamin D deficiency", "Low estrogen"], "answer": 1, "topic": "MSH/melasma", "explain": "Pregnancy estrogen elevates MSH, and sun exposure aggravates pigmentation patches on the face — the 'mask of pregnancy.'"}, {"q": "Parvocellular hypothalamic neurons secrete:", "options": ["ADH and oxytocin", "Releasing/inhibiting hormones into portal blood", "Catecholamines", "Thyroxine", "Insulin"], "answer": 1, "topic": "Parvocellular neurons", "explain": "Parvocellular neurons release hormones (e.g. GHRH, CRH, TRH, GnRH, dopamine, somatostatin) into the hypophyseal portal capillaries."}, {"q": "Stress can stimulate which axes?", "options": ["Only HPA (CRH→ACTH→cortisol)", "Only sympathetic", "HPA, sympathetic-adrenal, and GH", "Only oxytocin", "Only thyroid"], "answer": 2, "topic": "Stress endocrinology", "explain": "Stress activates HPA (cortisol), sympathetic-adrenal medullary axis (catecholamines), and stimulates GH release."}]}, {"id": 3, "title": "Lecture 3: Metabolic & Developmental Hormones", "questions": [{"q": "Which statement about the adrenal medulla is FALSE?", "options": ["Secretes catecholamines", "Inner layer of adrenal gland", "Extension of sympathetic nervous system", "Secretes glucocorticoids and catecholamines", "Contains chromaffin cells"], "answer": 3, "topic": "Adrenal medulla", "explain": "The medulla secretes only catecholamines (epi/norepi). Glucocorticoids come from the adrenal cortex."}, {"q": "Which is NOT an effect of epinephrine?", "options": ["Increased glycogenolysis in liver", "Increased lipolysis in adipose", "Increased insulin secretion", "Increased glucagon secretion", "Tachycardia"], "answer": 2, "topic": "Catecholamine actions", "explain": "Epinephrine INHIBITS insulin secretion (via α2 receptors on β cells). It stimulates glucagon — both raise blood glucose."}, {"q": "Adrenal medulla secretion is regulated mainly by:", "options": ["Growth hormone", "ACTH", "Insulin", "Direct sympathetic neural input", "Aldosterone"], "answer": 3, "topic": "Adrenal medulla regulation", "explain": "Adrenal medulla = modified sympathetic ganglion. Chromaffin cells respond to sympathetic preganglionic neurons. ACTH does NOT regulate medulla."}, {"q": "Most glucocorticoid activity in human adrenocortical secretion comes from:", "options": ["Cortisone", "Cortisol (= hydrocortisone)", "Aldosterone", "Corticosterone", "DHEA"], "answer": 1, "topic": "Glucocorticoids", "explain": "Cortisol, also called hydrocortisone, is the major human glucocorticoid. The other terms are different molecules."}, {"q": "Hydrocortisone used to treat SARS targets:", "options": ["Increasing blood glucose", "Suppressing the immune system", "Increasing amino acid levels", "Increasing glycogen synthesis", "Increasing blood pressure"], "answer": 1, "topic": "Glucocorticoid uses", "explain": "Hydrocortisone was used to dampen inflammatory/immune storm in SARS. Its primary therapeutic role here is immunosuppression."}, {"q": "Hyperthyroidism increases cardiac contractility by:", "options": ["Stimulating adrenal medulla", "Sensitizing tissues to epinephrine", "Stimulating cellular respiration", "Inhibiting parasympathetic activity", "Activating insulin"], "answer": 1, "topic": "Thyroid actions", "explain": "Thyroid hormones sensitize tissues to epinephrine, increasing cardiac response. Direct sympathetic catecholamine increase is not the primary mechanism."}, {"q": "Which statement about insulin and glucagon is FALSE?", "options": ["Both are peptide hormones regulating blood glucose", "Both are stimulated by elevated amino acids", "Both are regulated by blood glucose", "Both are secreted by alpha cells", "They have opposite effects"], "answer": 3, "topic": "Insulin/glucagon", "explain": "Insulin is from BETA cells, glucagon from ALPHA cells of the islets of Langerhans. They are not both from alpha cells."}, {"q": "Which statement about insulin is TRUE?", "options": ["Secreted by alpha cells", "Increases blood glucose", "Acts like glucagon", "Uses GPCR second messengers", "Stimulates lipogenesis in liver"], "answer": 4, "topic": "Insulin actions", "explain": "Insulin from beta cells lowers glucose, opposes glucagon, and uses receptor tyrosine kinase. It stimulates lipogenesis in liver/adipose."}, {"q": "Type 1 diabetes mellitus is NOT typically associated with:", "options": ["High blood glucose", "Excessive urination", "Ketoacidosis", "Low glucagon", "Retinopathy"], "answer": 3, "topic": "Diabetes", "explain": "In Type 1, beta cells are destroyed and insulin is absent — but glucagon is HIGH (insulin no longer suppresses it), driving ketosis."}, {"q": "Diabetes insipidus is caused by:", "options": ["Beta cell destruction", "Insulin resistance", "ADH deficiency", "Cortisol excess", "Aldosterone deficiency"], "answer": 2, "topic": "Diabetes insipidus", "explain": "Diabetes insipidus involves ADH deficiency (or kidney resistance to ADH) — polyuria + thirst but no sugar in urine."}, {"q": "GH is stimulated by:", "options": ["High blood glucose", "Dreaming (REM)", "GIH", "Arginine", "Somatostatin"], "answer": 3, "topic": "GH regulation", "explain": "Amino acids (especially arginine) stimulate GH. Hyperglycemia and REM sleep inhibit it. GIH/somatostatin inhibits."}, {"q": "GH's growth-promoting effects are mediated mainly by:", "options": ["Insulin", "IGF-1", "IGF-2 only", "T4", "Direct GH action on bones"], "answer": 1, "topic": "GH/IGF", "explain": "IGF-1 (somatomedin) made by liver under GH control mediates most growth-promoting effects on the skeleton and organs."}, {"q": "Insulin tolerance test for pituitary GH reserve works because:", "options": ["Insulin directly stimulates GH", "Insulin-induced hypoglycemia triggers GH release", "Insulin inhibits GIH", "Insulin activates IGF-1", "Insulin destroys beta cells"], "answer": 1, "topic": "Insulin tolerance test", "explain": "Injected insulin lowers blood glucose. Hypoglycemia is a strong GH stimulus — if pituitary is competent, GH should rise."}, {"q": "Childhood GH excess causes:", "options": ["Acromegaly", "Dwarfism", "Gigantism", "Cushing's", "Cretinism"], "answer": 2, "topic": "GH pathology", "explain": "Excess GH before epiphyseal closure → gigantism. After closure (adulthood) → acromegaly (enlarged jaw/nose/hands)."}, {"q": "Adult GH excess after epiphyseal closure causes:", "options": ["Acromegaly", "Gigantism", "Dwarfism", "Diabetes insipidus", "Hypothyroidism"], "answer": 0, "topic": "GH pathology", "explain": "Adult GH excess cannot lengthen bones (epiphyses closed) but enlarges soft tissues and acral bones — acromegaly."}, {"q": "Laron dwarfs have:", "options": ["GH-secreting tumor", "GH receptor mutation", "Iodine deficiency", "ACTH deficiency", "Insulin receptor defect"], "answer": 1, "topic": "Laron syndrome", "explain": "Laron dwarfs have inactivating GH receptor mutations → no IGF-1 → short stature. Interestingly, they appear protected from cancer and diabetes."}, {"q": "Cushing's syndrome is caused by:", "options": ["Insulin excess", "Excess cortisol", "ACTH deficiency", "Thyroid excess", "Adrenal medulla tumor"], "answer": 1, "topic": "Cushing's", "explain": "Cushing's syndrome = excess cortisol (steroid drugs, ACTH-producing tumor, cortisol-producing tumor, or CRH-producing tumor)."}, {"q": "Cortisol's primary effect is:", "options": ["Lipolysis", "Gluconeogenesis", "Glycogen synthesis", "Suppress glucagon", "Insulin sensitization"], "answer": 1, "topic": "Cortisol", "explain": "The primary effect of cortisol is gluconeogenesis (forming glucose from non-carbohydrate sources) — sustains brain glucose during stress."}, {"q": "Goiter results from:", "options": ["Iodine deficiency", "Iron deficiency", "Vitamin D excess", "Calcium deficiency", "Selenium toxicity"], "answer": 0, "topic": "Goiter", "explain": "Dietary iodine deficiency reduces T3/T4 synthesis → no negative feedback → high TSH → thyroid hypertrophy → goiter."}, {"q": "Thyroid hormones act on all tissues EXCEPT:", "options": ["Liver", "Muscle", "Brain", "Heart", "Adipose"], "answer": 2, "topic": "Thyroid actions", "explain": "T3/T4 don't increase BMR in brain, spleen, testes/uterus, and the thyroid itself."}, {"q": "Glucagon's main effects on liver are:", "options": ["Glycogen synthesis", "Glycogenolysis and gluconeogenesis", "Lipogenesis", "Protein synthesis", "Bile production"], "answer": 1, "topic": "Glucagon", "explain": "Glucagon stimulates liver glycogen breakdown and gluconeogenesis — both raise blood glucose."}, {"q": "Insulin secretion is INHIBITED by:", "options": ["Elevated blood glucose", "Elevated amino acids", "Sympathetic nervous system activation", "Gastric inhibitory peptide", "Parasympathetic activation"], "answer": 2, "topic": "Insulin regulation", "explain": "Sympathetic nervous system inhibits insulin (via α2 receptors). Parasympathetic and humoral signals (glucose, aa, GIP) stimulate."}, {"q": "Leptin is produced primarily by:", "options": ["Pancreas", "Adipose tissue", "Liver", "Adrenal cortex", "Pituitary"], "answer": 1, "topic": "Leptin", "explain": "Leptin is produced mainly by white adipose tissue (also other tissues). Encoded by the ob gene."}, {"q": "Obese individuals typically have:", "options": ["Low leptin", "Normal leptin", "High leptin with resistance", "No leptin", "Toxic leptin"], "answer": 2, "topic": "Leptin", "explain": "Obesity is usually associated with HIGH leptin levels accompanied by leptin resistance — explaining why high leptin fails to curb appetite."}, {"q": "The leptin receptor (LepR) is a:", "options": ["GPCR", "Cytokine-family receptor associated with JAK tyrosine kinase", "Steroid nuclear receptor", "Ligand-gated ion channel", "Guanylate cyclase"], "answer": 1, "topic": "Leptin receptor", "explain": "LepR/OB-R is a cytokine receptor that uses JAK kinases. It is expressed primarily in brain; most leptin effects are CNS-mediated."}, {"q": "Ketoacidosis in Type 1 diabetes occurs because:", "options": ["Insulin breaks down to ketones", "High glucagon increases ketone formation in liver", "High insulin promotes ketones", "Glucose forms ketones", "Glycogen converts to ketones"], "answer": 1, "topic": "Diabetic ketoacidosis", "explain": "Without insulin, glucagon is unopposed and stimulates hepatic ketone formation. Excess ketones cause acidosis."}, {"q": "Which hormone is anti-insulin / hyperglycemic?", "options": ["Insulin", "Leptin", "Cortisol", "Aldosterone", "ADH"], "answer": 2, "topic": "Hyperglycemic hormones", "explain": "Cortisol, glucagon, epinephrine, and GH all raise blood glucose. Insulin lowers it."}, {"q": "In adipose tissue, GH causes:", "options": ["Lipogenesis", "Lipolysis", "Glycogen storage", "Glucose storage", "No effect"], "answer": 1, "topic": "GH metabolism", "explain": "GH stimulates lipolysis in adipose — part of its anti-insulin (hyperglycemic) effects. Lipids replace glucose as fuel."}, {"q": "The diurnal pattern of cortisol peaks:", "options": ["At midnight", "In the morning", "After exercise", "After meals", "Random"], "answer": 1, "topic": "Cortisol rhythm", "explain": "Cortisol peaks in the early morning and reaches a low at night — the classic diurnal rhythm."}, {"q": "Type 2 diabetes is characterized primarily by:", "options": ["Beta cell destruction", "Defective insulin receptors / resistance", "Pancreatic tumor", "Lack of glucagon", "Excess ADH"], "answer": 1, "topic": "Type 2 diabetes", "explain": "Type 2 diabetes (90% of cases) results from defective insulin signaling — insulin resistance. Type 1 (10%) involves beta-cell destruction."}]}, {"id": 4, "title": "Lecture 4: Hormones Regulating Water & Electrolyte Balance", "questions": [{"q": "Which will NOT stimulate ADH secretion?", "options": ["Eating salty food", "Drinking a lot of water", "Hemorrhage", "Increased plasma osmolality", "Severe dehydration"], "answer": 1, "topic": "ADH regulation", "explain": "Drinking water LOWERS plasma osmolality and INHIBITS ADH. Salt, hemorrhage, and dehydration all stimulate ADH."}, {"q": "ADH, aldosterone, and ANP:", "options": ["All increase blood pressure", "Work on the same target tissue", "All increase Na+ reabsorption", "All increase K+ excretion", "None of these are universally true"], "answer": 4, "topic": "Hormone comparison", "explain": "ANP opposes the others — it lowers BP and increases Na+ excretion. So no single sweeping statement holds."}, {"q": "ADH is synthesized in:", "options": ["Anterior pituitary", "SON / PVN of hypothalamus", "Adrenal cortex", "Atria", "Liver"], "answer": 1, "topic": "ADH source", "explain": "Magnocellular neurons of the SON and PVN make ADH; axons release it from the posterior pituitary."}, {"q": "ADH's effect on the kidney is mediated by:", "options": ["Decreased aquaporin", "Increased aquaporin surface expression via cAMP", "Closing Na+ channels", "Aldosterone synthesis", "Renin release"], "answer": 1, "topic": "ADH mechanism", "explain": "ADH binds V2 GPCR → adenylate cyclase → cAMP → vesicle insertion of aquaporin in collecting duct apical membrane."}, {"q": "Even a small change in osmolarity triggers ADH; what magnitude is sufficient?", "options": ["50 mOsm", "5-10 mOsm", "100 mOsm", "200 mOsm", "Any change"], "answer": 1, "topic": "Osmoreceptors", "explain": "Osmoreceptors are sensitive — even a 5-10 mOsm change from normal (~280) triggers ADH."}, {"q": "Aldosterone's primary regulator is:", "options": ["ACTH", "Angiotensin II", "ADH", "Renin (directly)", "Cortisol"], "answer": 1, "topic": "Aldosterone", "explain": "Angiotensin II is the primary regulator. ACTH plays only a minor role. K+ also stimulates directly."}, {"q": "Aldosterone acts on the kidney to:", "options": ["Excrete Na+, reabsorb K+", "Reabsorb Na+, excrete K+", "Excrete water", "Increase ammonia secretion", "Reduce glucose reabsorption"], "answer": 1, "topic": "Aldosterone", "explain": "Aldosterone increases Na+ reabsorption and K+ excretion in the distal tubule. Water follows Na+."}, {"q": "ANP is secreted by:", "options": ["Kidney", "Atria of the heart", "Adrenal cortex", "Posterior pituitary", "Liver"], "answer": 1, "topic": "ANP", "explain": "Endocrine cells in the cardiac atria release ANP in response to atrial stretch (increased blood volume)."}, {"q": "ANP's net effect on blood pressure is:", "options": ["Increase", "No change", "Decrease", "Variable", "Increase only in dehydration"], "answer": 2, "topic": "ANP", "explain": "ANP increases Na+ excretion and urine output, lowering blood volume and pressure. It opposes ADH and aldosterone."}, {"q": "Aldosterone is a:", "options": ["Polypeptide", "Steroid", "Amino acid derivative", "Prostaglandin", "Glycoprotein"], "answer": 1, "topic": "Hormone class", "explain": "Aldosterone is a steroid mineralocorticoid synthesized from cholesterol in the adrenal cortex (zona glomerulosa)."}, {"q": "What percent change in K+ extracellular concentration can trigger aldosterone release?", "options": ["50%", "20%", "10%", "5%", "No change needed"], "answer": 3, "topic": "Aldosterone regulation", "explain": "Even a 5% rise in extracellular K+ triggers aldosterone — a very sensitive humoral mechanism for K+ homeostasis."}, {"q": "Alcohol causes increased urination because it:", "options": ["Stimulates ANP", "Inhibits ADH release", "Activates aldosterone", "Damages kidney", "Increases blood pressure"], "answer": 1, "topic": "ADH inhibition", "explain": "Alcohol potently inhibits ADH from the posterior pituitary → polyuria and thirst."}, {"q": "How does ADH affect blood vessels?", "options": ["Vasodilates them", "Vasoconstricts them", "No effect", "Stimulates angiogenesis", "Increases permeability only"], "answer": 1, "topic": "ADH actions", "explain": "Beyond water reabsorption, ADH (= vasopressin) constricts vascular smooth muscle → raises blood pressure."}, {"q": "The receptor for ANP is a:", "options": ["GPCR", "Receptor tyrosine kinase", "Nuclear receptor", "Receptor guanylate cyclase (cGMP)", "Ligand-gated channel"], "answer": 3, "topic": "ANP receptor", "explain": "ANP receptor has intrinsic guanylate cyclase activity, producing cGMP. Distinct from the cAMP signaling of ADH V2 receptor."}, {"q": "Approximately how much blood volume loss is needed to trigger stretch-mediated ADH release?", "options": ["1%", "5%", "Greater than 10%", "30%", "Any loss"], "answer": 2, "topic": "ADH regulation", "explain": "Hemorrhage must exceed ~10% blood volume before stretch receptors signal ADH release. Less sensitive than osmotic mechanism."}, {"q": "Mineralocorticoids are synthesized in:", "options": ["Zona glomerulosa of adrenal cortex", "Adrenal medulla", "Posterior pituitary", "Pancreas", "Liver"], "answer": 0, "topic": "Mineralocorticoid source", "explain": "Aldosterone is made in the zona glomerulosa, the outermost layer of the adrenal cortex."}, {"q": "Stretch receptors involved in cardiovascular volume sensing are:", "options": ["GPCRs", "TRP channels", "Aquaporins", "Sodium channels only", "Bicarbonate transporters"], "answer": 1, "topic": "Volume sensing", "explain": "TRP channels in cardiovascular neurons sense mechanical stretch. Signal transmits to the pituitary via cranial nerves."}, {"q": "Which is true about diabetes insipidus?", "options": ["High blood glucose", "Sweet urine", "Excess thirst and urination from ADH deficiency", "Treats with insulin", "Adrenal medulla origin"], "answer": 2, "topic": "Diabetes insipidus", "explain": "Diabetes insipidus has thirst and polyuria but NO sugar (insipid = tasteless). It is due to ADH deficiency or kidney resistance."}, {"q": "Which hormone INCREASES blood pressure most rapidly?", "options": ["ADH (vasoconstriction)", "Aldosterone (slow, via Na+)", "ANP (decreases)", "Insulin", "Leptin"], "answer": 0, "topic": "BP regulation", "explain": "ADH directly vasoconstricts smooth muscle for rapid BP rise. Aldosterone's BP rise via Na+/water reabsorption is slower."}, {"q": "The renin-angiotensin-aldosterone system is triggered by:", "options": ["High blood pressure", "Low blood pressure", "Hyperkalemia only", "High plasma osmolarity", "Stress"], "answer": 1, "topic": "RAAS", "explain": "Falling BP/renal perfusion triggers renin from kidney → angiotensin I → ACE → angiotensin II → aldosterone → Na+/water retention."}, {"q": "Increased atrial stretch most directly stimulates:", "options": ["ADH", "Aldosterone", "ANP", "Cortisol", "TSH"], "answer": 2, "topic": "ANP", "explain": "Mechanical stretch of atrial endocrine cells (from high blood volume) is the direct stimulus for ANP release."}, {"q": "Which hormones do NOT all lower blood pressure?", "options": ["ADH, aldosterone, ANP", "ADH and aldosterone (both raise it)", "ANP alone", "Only ANP", "ANP and aldosterone"], "answer": 1, "topic": "Hormone comparison", "explain": "ADH and aldosterone both INCREASE BP. ANP is the one that lowers BP."}, {"q": "Which is FALSE about ADH?", "options": ["Made in SON", "Cyclic 9 aa peptide", "Increases water reabsorption", "Decreases blood pressure", "Inhibited by alcohol"], "answer": 3, "topic": "ADH", "explain": "ADH RAISES blood pressure via vasoconstriction. The other statements are correct."}, {"q": "Aldosterone is a steroid and acts via:", "options": ["GPCR", "Nuclear receptor (transcription)", "Tyrosine kinase", "Guanylate cyclase", "Cytokine receptor"], "answer": 1, "topic": "Aldosterone mechanism", "explain": "Like other steroids, aldosterone is lipid-soluble and binds intracellular/nuclear receptors that act on DNA."}, {"q": "The chemistry of ADH is:", "options": ["Steroid", "9-aa cyclic peptide", "Single amino acid", "Prostaglandin", "Glycoprotein"], "answer": 1, "topic": "ADH chemistry", "explain": "ADH (vasopressin) is a 9-amino acid cyclic peptide, similar to oxytocin (differing in 2 residues)."}, {"q": "Osmoreceptors are located primarily in the:", "options": ["Adrenal cortex", "Anterior hypothalamus", "Posterior pituitary", "Atria", "Liver"], "answer": 1, "topic": "Osmoreceptors", "explain": "Osmoreceptors are in the anterior hypothalamus and may be the SON neurons themselves that produce ADH."}, {"q": "Drinking large amounts of water leads to:", "options": ["Increased ADH", "Decreased ADH and large dilute urine", "No change", "Vasoconstriction", "Increased aldosterone"], "answer": 1, "topic": "ADH regulation", "explain": "Drinking water lowers plasma osmolarity → osmoreceptors fire less → ADH falls → urine volume rises (dilute urine)."}, {"q": "ANP is named natriuretic because it:", "options": ["Stops sodium", "Promotes natriuresis (Na+ excretion in urine)", "Promotes diuresis only", "Reabsorbs K+", "Reabsorbs water"], "answer": 1, "topic": "ANP", "explain": "Natriuresis = excretion of sodium. ANP increases Na+ loss in urine."}, {"q": "In the kidney, aldosterone primarily acts on:", "options": ["Proximal tubule", "Loop of Henle", "Distal tubule and collecting duct", "Glomerulus", "Renal pelvis"], "answer": 2, "topic": "Aldosterone target", "explain": "Aldosterone acts on principal cells of the distal tubule/collecting duct to drive Na+ reabsorption and K+ secretion."}, {"q": "ANP counteracts the effects of:", "options": ["Insulin", "Cortisol", "ADH and aldosterone", "Glucagon", "Epinephrine"], "answer": 2, "topic": "ANP", "explain": "ANP opposes ADH (less water retention) and aldosterone (less Na+ reabsorption), reducing blood volume and pressure."}]}, {"id": 5, "title": "Lecture 5: Reproductive Hormones", "questions": [{"q": "The function of the oviducts (fallopian tubes) is:", "options": ["Secreting estrogen", "Site of implantation", "Site of fertilization", "Site of ova production", "Sperm production"], "answer": 2, "topic": "Oviduct", "explain": "Fertilization occurs in the fallopian tube. The ovary produces ova; the uterus is where implantation occurs."}, {"q": "Ovulation can be prevented by:", "options": ["High estrogen and progesterone", "FSH", "LH", "GnRH", "Inhibin alone"], "answer": 0, "topic": "Contraception", "explain": "Combined oral contraceptives (estrogen + progestogen) suppress GnRH/gonadotropins → no LH surge → no ovulation."}, {"q": "Which is FALSE concerning the female reproductive cycle?", "options": ["LH inhibited by estrogen and progesterone in luteal phase", "Corpus luteum secretes estradiol and progesterone", "FSH partly responsible for follicular maturation", "Corpus luteum regresses despite hCG", "Ovulation prevented by follicular estrogen"], "answer": 3, "topic": "Reproductive cycle", "explain": "hCG RESCUES the corpus luteum during pregnancy — preventing its regression. Saying it regresses despite hCG is wrong."}, {"q": "Gestational diabetes is caused by:", "options": ["Excessive carbohydrate intake", "High progesterone alone", "High estrogen-driven insulin resistance", "Increased intestinal absorption", "Excess glucagon"], "answer": 2, "topic": "Gestational diabetes", "explain": "Placental hormones, especially estrogen, decrease peripheral insulin sensitivity. When the pancreas cannot compensate, gestational diabetes develops."}, {"q": "All reproductive hormones are:", "options": ["Steroids", "Peptides", "From sex organs", "Found only in one sex", "None of these are universally true"], "answer": 4, "topic": "Reproductive hormones", "explain": "Reproductive hormones include both steroids and peptides; some come from pituitary or placenta; both sexes have both androgens and estrogens."}, {"q": "Leydig cells:", "options": ["Secrete androgens", "Are target of LH", "Are outside seminiferous tubules", "Secrete inhibin", "All except secrete inhibin"], "answer": 3, "topic": "Leydig cells", "explain": "Leydig cells make testosterone in response to LH and sit in the interstitium. They do NOT make inhibin (that's Sertoli)."}, {"q": "Sertoli cells perform all of the following EXCEPT:", "options": ["Bind LH", "Contribute to tubular fluid", "Nourish developing sperm", "Secrete inhibin", "Form blood-testis barrier"], "answer": 0, "topic": "Sertoli cells", "explain": "Sertoli cells bind FSH (not LH). LH binds Leydig cells."}, {"q": "Testosterone is secreted only by:", "options": ["Sertoli cells", "Leydig cells", "Spermatids", "Adrenal medulla", "Pituitary"], "answer": 1, "topic": "Testosterone source", "explain": "Leydig cells in the testis interstitium produce testosterone in response to LH. Sertoli cells support but don't make testosterone."}, {"q": "Which is TRUE about androgens and estrogens?", "options": ["Found only in males vs females", "Androgens are converted to estrogens (aromatase)", "Made from glucose", "Lipid-insoluble", "Peptide hormones"], "answer": 1, "topic": "Sex steroid synthesis", "explain": "Estrogens are synthesized from androgens by aromatase. Both sexes have both — only the amounts differ."}, {"q": "hCG (human chorionic gonadotropin) is secreted by:", "options": ["Ovary", "Placenta after implantation", "Pituitary", "Hypothalamus", "Liver"], "answer": 1, "topic": "hCG", "explain": "After implantation, the developing placenta secretes hCG, which rescues the corpus luteum for the first trimester."}, {"q": "Corpus luteum produces:", "options": ["Only estrogen", "Progesterone and some estrogen", "Only LH", "Only FSH", "Inhibin only"], "answer": 1, "topic": "Corpus luteum", "explain": "After ovulation, the follicle transforms into the corpus luteum, which secretes mainly progesterone (with some estrogen)."}, {"q": "Mid-cycle LH surge is triggered by:", "options": ["High progesterone", "Low estrogen", "High estrogen positive feedback", "FSH alone", "Inhibin"], "answer": 2, "topic": "LH surge", "explain": "Around day 12-14, high estrogen from the mature follicle switches to POSITIVE feedback on the hypothalamus/pituitary, triggering the LH surge → ovulation."}, {"q": "Which prevents androgen action in females?", "options": ["Estrogen", "Progesterone", "Inhibin", "FSH", "LH"], "answer": 1, "topic": "Progesterone", "explain": "Progesterone antagonizes testosterone/DHT effects in females — blocks androgen target-tissue response."}, {"q": "Spermatogenesis requires:", "options": ["FSH only", "LH only", "Both FSH and testosterone", "Estrogen", "Inhibin"], "answer": 2, "topic": "Spermatogenesis", "explain": "FSH (on Sertoli cells) and testosterone (from Leydig under LH) are both required. Testosterone reaches high local concentrations in the tubules."}, {"q": "Inhibin's primary action is:", "options": ["Inhibit LH", "Inhibit FSH selectively", "Stimulate testosterone", "Inhibit GnRH", "Promote spermatogenesis"], "answer": 1, "topic": "Inhibin", "explain": "Inhibin from Sertoli cells (or granulosa cells in the female) selectively inhibits FSH release from the anterior pituitary."}, {"q": "Which is the primary androgen produced in testes?", "options": ["Estradiol", "Cortisol", "Testosterone", "Dihydrotestosterone", "DHEA"], "answer": 2, "topic": "Testosterone", "explain": "Testosterone is the major androgen produced by Leydig cells. DHT is a more potent metabolite in some target tissues."}, {"q": "Estrogen at puberty causes:", "options": ["Late epiphyseal closure", "Early epiphyseal closure", "No effect on bones", "Decreased uterine growth", "Decreased breast development"], "answer": 1, "topic": "Estrogen", "explain": "Estrogen stimulates bone growth but ALSO promotes early epiphyseal closure — explains why women generally stop growing earlier than men."}, {"q": "In the luteal phase, FSH and LH levels are:", "options": ["High", "Low", "Unchanged", "Variable", "Only LH is low"], "answer": 1, "topic": "Luteal phase", "explain": "Progesterone and estrogen from the corpus luteum provide negative feedback on the hypothalamus, suppressing FSH/LH. Inhibin further suppresses FSH."}, {"q": "Menstruation occurs because:", "options": ["Estrogen is high", "Progesterone rises", "Corpus luteum degenerates → fall in estrogen/progesterone", "FSH falls", "hCG falls"], "answer": 2, "topic": "Menstruation", "explain": "Without implantation, corpus luteum degenerates → estrogen and progesterone drop → endometrium sloughs → menses."}, {"q": "Contraceptive pills work by:", "options": ["Killing sperm directly", "Suppressing gonadotropin release → no ovulation", "Increasing FSH", "Stimulating LH surge", "Inducing menses"], "answer": 1, "topic": "Contraception", "explain": "Combined OCP provides constant estrogen/progesterone, suppressing GnRH/FSH/LH → no LH surge → no ovulation. Also thickens cervical mucus."}, {"q": "IVF protocol uses FSH for:", "options": ["Final oocyte maturation", "Ovarian hyperstimulation (multiple follicles)", "Implantation", "Sperm motility", "Embryo selection"], "answer": 1, "topic": "IVF", "explain": "Exogenous FSH causes multiple follicles to mature simultaneously. hCG is then given to trigger final oocyte maturation."}, {"q": "hCG in IVF is used to:", "options": ["Stimulate multiple follicles", "Trigger final oocyte maturation", "Suppress GnRH", "Trigger menses", "Build endometrium"], "answer": 1, "topic": "IVF", "explain": "hCG mimics LH and triggers the final maturation/release of oocytes after FSH-induced follicle growth."}, {"q": "Progesterone's role in pregnancy includes all EXCEPT:", "options": ["Prepare endometrium", "Prevent further ovulation", "Develop mammary glands", "Antagonize testosterone", "Triggers menstruation"], "answer": 4, "topic": "Progesterone", "explain": "Progesterone PREVENTS shedding of the endometrium. Menstruation occurs when progesterone FALLS (corpus luteum dies)."}, {"q": "Which is TRUE of GnRH control in athletes?", "options": ["Heavy aerobic exercise stimulates GnRH", "Heavy aerobic exercise inhibits GnRH", "Estrogen blocks it", "Only nutrition matters", "Light exercise increases GnRH"], "answer": 1, "topic": "GnRH regulation", "explain": "Protracted aerobic exercise inhibits GnRH in both sexes — explains menstrual disruption in female athletes and reduced sperm production in male athletes."}, {"q": "Ovulation typically occurs on:", "options": ["Day 5", "Day 14", "Day 21", "Day 28", "Day 1"], "answer": 1, "topic": "Cycle timing", "explain": "In a 28-day cycle, ovulation typically occurs around day 14 — after the LH surge."}, {"q": "Female sex hormones include:", "options": ["Only progesterone", "Estradiol, estrone, estriol, and progesterone", "Only estradiol", "FSH only", "Testosterone only"], "answer": 1, "topic": "Estrogen forms", "explain": "Estrogens include three main forms: estradiol (most potent), estrone, and estriol. Progesterone is the other major female steroid."}, {"q": "Sertoli cells form the blood-testis barrier — why is this important?", "options": ["Sperm production", "Protects developing germ cells from immune attack", "Provides oxygen", "Removes glucose", "Concentrates inhibin"], "answer": 1, "topic": "Blood-testis barrier", "explain": "Germ cell antigens are 'foreign' to the immune system (developed after immune tolerance was established). The barrier protects them from autoimmune attack."}, {"q": "Which fluid is added to semen by seminal vesicles?", "options": ["Acidic urine", "Fluid with fructose, prostaglandins, coagulating proteins", "Bile", "Lactic acid", "Adrenaline"], "answer": 1, "topic": "Semen composition", "explain": "Seminal vesicles add ~60% of semen volume with fructose (sperm fuel), prostaglandins, and proteins to coagulate semen post-ejaculation."}, {"q": "Average ejaculate sperm concentration in healthy young males is approximately:", "options": ["1 million/ml", "60 million/ml", "6 million/ml", "600 million/ml", "100,000/ml"], "answer": 1, "topic": "Sperm count", "explain": "Average ~60 million/ml in healthy college-age males. Fertility is significantly impaired below ~35 million/ml."}, {"q": "Estrogen during pregnancy contributes to gestational diabetes by:", "options": ["Increasing insulin sensitivity", "Decreasing insulin sensitivity (insulin resistance)", "Killing beta cells", "Inhibiting glucagon", "Activating ketogenesis"], "answer": 1, "topic": "Gestational diabetes", "explain": "Placental estrogen reduces insulin sensitivity in peripheral tissues. If beta cells cannot compensate by making more insulin, gestational diabetes results."}]}];
+
+// ===== Difficulty map (easy=recall, medium=mechanism/comparison, hard=application/clinical) =====
+const DIFFICULTY_MAP = {
+  1: ["easy","medium","easy","easy","medium","medium","easy","hard","medium","easy","medium","medium","easy","easy","medium","medium","easy","medium","hard","easy","easy","medium","easy","medium","easy","easy","easy","medium","medium","easy"],
+  2: ["medium","medium","easy","easy","medium","medium","easy","easy","hard","medium","medium","easy","easy","hard","medium","easy","easy","medium","easy","easy","hard","easy","easy","easy","easy","easy","hard","hard","medium","medium"],
+  3: ["medium","medium","easy","easy","hard","hard","medium","medium","hard","hard","easy","easy","hard","hard","hard","hard","easy","easy","easy","medium","easy","medium","easy","hard","medium","hard","easy","medium","easy","hard"],
+  4: ["medium","medium","easy","medium","easy","easy","medium","easy","medium","easy","easy","hard","medium","easy","easy","easy","medium","hard","medium","medium","easy","medium","medium","easy","easy","easy","medium","easy","easy","medium"],
+  5: ["easy","medium","hard","hard","medium","medium","medium","easy","medium","easy","easy","medium","medium","medium","easy","easy","medium","medium","medium","medium","hard","hard","medium","hard","easy","easy","medium","easy","easy","hard"]
+};
+lectures.forEach(lec => {
+  const diffs = DIFFICULTY_MAP[lec.id] || [];
+  lec.questions.forEach((q, i) => { q.difficulty = diffs[i] || "medium"; });
+});
+
+// ===== State + persistence =====
+const STORAGE_KEY = "endoQuizState";
+const quizState = {};
+lectures.forEach(l => {
+  quizState[l.id] = { answered:0, correct:0, wrongQuestions:[], completed:false, choices:{}, filteredIndices:null, total:30, weakSections:[], weakTopics:[] };
+});
+
+// Maps quiz topic strings to the index of the matching <section data-sec="N"> in each notes page
+const TOPIC_SECTION_MAP = {
+  1: {
+    "Hormone definition":0,"Endocrine definition":0,"Hormone regulation":0,"Endocrine cells":0,"History":0,
+    "Endocrine vs nervous":1,"Norepinephrine":1,
+    "Hormone classes":2,"Steroid biochemistry":2,"Hormone synthesis":2,"Prostaglandins":2,"NSAIDs":2,
+    "Amino-acid hormones":2,"Polypeptide hormones":2,"Hormone class comparison":2,"Hormone classification":2,
+    "Prostaglandin synthesis":2,"Catecholamine synthesis":2,"GH chemistry":2,
+    "Receptor types":3,"Hormone mechanism":3,"Adrenoreceptors":3,"RTK":3,"Mechanism":3,"Vasopressin":3,"Insulin":3,
+    "Solubility/lab":4
+  },
+  2: {
+    "Neurosecretory cells":0,"Neurosecretory anatomy":0,"Neurohormones":0,"Hypothalamus":0,"Hypothalamic anatomy":0,"Parvocellular neurons":0,
+    "Anterior pituitary":1,"Posterior pituitary":1,"Pituitary anatomy":1,"Pituitary hormones":1,"Portal system":1,"Hormone size":1,
+    "POMC":2,"POMC pathology":2,"MSH":2,"MSH/melasma":2,"Addison's":2,"Prolactin regulation":2,"Dopamine and prolactin":2,
+    "Hypothalamic regulation":3,"GH regulation":3,
+    "ADH mechanism":4,"Oxytocin":4,"Posterior pituitary peptides":4,"History":4,"Stress endocrinology":4
+  },
+  3: {
+    "Adrenal medulla":0,"Catecholamine actions":0,"Adrenal medulla regulation":0,"Hyperglycemic hormones":0,
+    "Glucocorticoids":1,"Glucocorticoid uses":1,"Cortisol":1,"Cushing's":1,"Cortisol rhythm":1,
+    "Thyroid actions":2,"Goiter":2,
+    "Insulin/glucagon":3,"Insulin actions":3,"Diabetes":3,"Insulin regulation":3,"Glucagon":3,"Diabetic ketoacidosis":3,"Type 2 diabetes":3,
+    "GH regulation":4,"GH/IGF":4,"Insulin tolerance test":4,"GH pathology":4,"Laron syndrome":4,"GH metabolism":4,"Diabetes insipidus":4,
+    "Leptin":5,"Leptin receptor":5
+  },
+  4: {
+    "ADH regulation":0,"ADH source":0,"ADH mechanism":0,"Osmoreceptors":0,"ADH inhibition":0,"ADH actions":0,
+    "ADH":0,"ADH chemistry":0,"Volume sensing":0,"Diabetes insipidus":0,"BP regulation":0,
+    "Aldosterone":1,"Aldosterone regulation":1,"Aldosterone mechanism":1,"Mineralocorticoid source":1,"RAAS":1,"Aldosterone target":1,
+    "ANP":2,"ANP receptor":2,
+    "Hormone comparison":3,"Hormone class":3
+  },
+  5: {
+    "Reproductive hormones":0,"Sex steroid synthesis":0,"Estrogen forms":0,
+    "Leydig cells":1,"Sertoli cells":1,"Testosterone source":1,"Spermatogenesis":1,"Inhibin":1,"Testosterone":1,
+    "Blood-testis barrier":1,"Semen composition":1,"Sperm count":1,"GnRH regulation":1,
+    "Oviduct":2,"Gestational diabetes":2,
+    "Reproductive cycle":3,"Contraception":3,"LH surge":3,"Luteal phase":3,"Menstruation":3,"Cycle timing":3,"hCG":3,"Corpus luteum":3,
+    "Progesterone":4,"Estrogen":4,
+    "IVF":5
+  }
+};
+
+function saveState() {
+  try {
+    const out = {};
+    Object.keys(quizState).forEach(k => {
+      const s = quizState[k];
+      out[k] = { answered:s.answered, correct:s.correct, wrongQuestions:s.wrongQuestions, completed:s.completed, choices:s.choices, filteredIndices:s.filteredIndices, total:s.total, weakSections:s.weakSections, weakTopics:s.weakTopics };
+    });
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(out));
+  } catch(e){ console.warn("save failed", e); }
+}
+
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return;
+    const data = JSON.parse(raw);
+    Object.keys(data).forEach(k => {
+      if (quizState[k]) Object.assign(quizState[k], data[k]);
+    });
+  } catch(e){ console.warn("load failed", e); }
+}
+
+function resetAllProgress() {
+  if (!confirm("Reset ALL quiz progress? This cannot be undone.")) return;
+  localStorage.removeItem(STORAGE_KEY);
+  location.reload();
+}
+
+// ===== Navigation =====
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const el = document.getElementById(id);
+  if (el) el.classList.add('active');
+  window.scrollTo(0,0);
+  if (id === 'global-report') renderGlobalReport();
+  if (id.startsWith('notes-')) {
+    const lid = parseInt(id.split('-')[1]);
+    applyWeakHighlights(lid);
+  }
+  setTimeout(initReveal, 50);
+}
+
+function computeWeakSections(lid) {
+  const s = quizState[lid];
+  const lec = lectures.find(l => l.id === lid);
+  const map = TOPIC_SECTION_MAP[lid] || {};
+  const topicSet = new Set();
+  const secSet = new Set();
+  s.wrongQuestions.forEach(qi => {
+    const t = lec.questions[qi].topic;
+    if (t) topicSet.add(t);
+    if (map[t] !== undefined) secSet.add(map[t]);
+  });
+  s.weakTopics = Array.from(topicSet);
+  s.weakSections = Array.from(secSet).sort((a,b)=>a-b);
+}
+
+function applyWeakHighlights(lid) {
+  const s = quizState[lid];
+  const weakTopics = new Set(s.weakTopics || []);
+  const weakSecs = new Set(s.weakSections || []);
+  const page = document.getElementById('notes-'+lid);
+  if (!page) return;
+
+  // Clear existing highlights
+  page.querySelectorAll('.weak-highlight, .weak-h2').forEach(el => {
+    el.classList.remove('weak-highlight');
+    el.classList.remove('weak-h2');
+  });
+
+  // Per-element highlighting: substring match of any wrong topic name in the data-topic attribute
+  page.querySelectorAll('[data-topic]').forEach(el => {
+    const attr = el.getAttribute('data-topic') || '';
+    for (const t of weakTopics) {
+      if (attr.includes(t)) { el.classList.add('weak-highlight'); break; }
+    }
+  });
+
+  // Fallback: if a weak section has no inner match, lightly mark its h2
+  page.querySelectorAll('section[data-sec]').forEach(sec => {
+    const idx = parseInt(sec.dataset.sec);
+    if (!weakSecs.has(idx)) return;
+    if (sec.querySelector('.weak-highlight')) return;
+    const h = sec.querySelector('h2');
+    if (h) h.classList.add('weak-h2');
+  });
+
+  const clearBtn = document.getElementById('clear-hl-'+lid);
+  if (clearBtn) clearBtn.style.display = (weakTopics.size > 0 || weakSecs.size > 0) ? 'inline-block' : 'none';
+}
+
+function clearWeakHighlights(lid) {
+  quizState[lid].weakSections = [];
+  quizState[lid].weakTopics = [];
+  saveState();
+  applyWeakHighlights(lid);
+}
+
+function startQuiz(lid) {
+  const state = quizState[lid];
+  const countSel = document.getElementById('count-'+lid);
+  const desiredCount = countSel ? parseInt(countSel.value)||30 : 30;
+
+  // If there is saved progress AND requested count differs from saved, prompt to restart
+  const hasProgress = state.answered > 0 && state.filteredIndices && state.filteredIndices.length > 0;
+  let needNew = !state.filteredIndices;
+  if (hasProgress) {
+    if (state.filteredIndices.length !== desiredCount) {
+      if (confirm("You have saved progress for this lecture with a different question count. Start a new quiz with the new count? (This will erase saved progress for this lecture.)")) {
+        resetLectureState(lid);
+        needNew = true;
+      }
+    }
+  } else if (state.answered === 0) {
+    needNew = true;
+  }
+
+  if (needNew) {
+    const picked = buildBalancedSet(lid, desiredCount);
+    state.filteredIndices = picked;
+    state.total = picked.length;
+    state.answered = 0;
+    state.correct = 0;
+    state.wrongQuestions = [];
+    state.choices = {};
+    state.completed = false;
+    state.weakSections = [];
+    state.weakTopics = [];
+    saveState();
+    const body = document.getElementById('quizbody-'+lid);
+    if (body) body.dataset.rendered = "";
+    const post = document.getElementById('postquiz-'+lid);
+    if (post) post.innerHTML = '';
+  }
+
+  showPage('quiz-'+lid);
+  renderQuiz(lid);
+}
+
+function resetLectureState(lid) {
+  quizState[lid] = { answered:0, correct:0, wrongQuestions:[], completed:false, choices:{}, filteredIndices:null, total:30, weakSections:[], weakTopics:[] };
+  saveState();
+}
+
+// Balanced sampling across easy/medium/hard. Target ratios:
+//   10 → 3 easy, 3 medium, 4 hard
+//   20 → 7 easy, 7 medium, 6 hard
+//   30 → 10 easy, 10 medium, 10 hard
+function buildBalancedSet(lid, count) {
+  const lec = lectures.find(l => l.id === lid);
+  const pools = { easy: [], medium: [], hard: [] };
+  lec.questions.forEach((q, i) => {
+    if (pools[q.difficulty]) pools[q.difficulty].push(i);
+  });
+  shuffle(pools.easy); shuffle(pools.medium); shuffle(pools.hard);
+
+  let targets;
+  if (count <= 10) targets = { easy: 3, medium: 3, hard: 4 };
+  else if (count <= 20) targets = { easy: 7, medium: 7, hard: 6 };
+  else targets = { easy: 10, medium: 10, hard: 10 };
+
+  // Scale targets if requested count differs from preset
+  if (count !== 10 && count !== 20 && count !== 30) {
+    const total = targets.easy + targets.medium + targets.hard;
+    targets = {
+      easy:   Math.round(targets.easy   * count / total),
+      medium: Math.round(targets.medium * count / total),
+      hard:   Math.round(targets.hard   * count / total),
+    };
+  }
+
+  const picked = [];
+  const taken = { easy: 0, medium: 0, hard: 0 };
+  ['easy','medium','hard'].forEach(d => {
+    const want = Math.min(targets[d], pools[d].length);
+    for (let i = 0; i < want; i++) picked.push(pools[d][i]);
+    taken[d] = want;
+  });
+
+  // If short of target count (some pool too small), fill from leftovers
+  const leftovers = [];
+  ['easy','medium','hard'].forEach(d => {
+    for (let i = taken[d]; i < pools[d].length; i++) leftovers.push(pools[d][i]);
+  });
+  shuffle(leftovers);
+  while (picked.length < count && leftovers.length > 0) picked.push(leftovers.shift());
+
+  picked.sort((a,b)=>a-b);
+  return picked;
+}
+
+function shuffle(arr) {
+  for (let i=arr.length-1; i>0; i--) {
+    const j = Math.floor(Math.random()*(i+1));
+    [arr[i],arr[j]] = [arr[j],arr[i]];
+  }
+  return arr;
+}
+
+// ===== Quiz rendering =====
+function renderQuiz(lid) {
+  const lec = lectures.find(l => l.id === lid);
+  const body = document.getElementById('quizbody-' + lid);
+  const state = quizState[lid];
+  if (!state.filteredIndices || state.filteredIndices.length === 0) {
+    // fallback: all 30
+    state.filteredIndices = lec.questions.map((_,i)=>i);
+    state.total = 30;
+  }
+  if (body.dataset.rendered === "1") {
+    updateScoreBar(lid);
+    return;
+  }
+  body.dataset.rendered = "1";
+  let h = '';
+  state.filteredIndices.forEach((qi, displayIdx) => {
+    const q = lec.questions[qi];
+    h += '<div class="q-block reveal-on-scroll" id="q-'+lid+'-'+qi+'">';
+    h += '<div class="q-num">Question ' + (displayIdx+1) + ' of ' + state.filteredIndices.length + ' <span style="margin-left:8px;padding:1px 6px;background:var(--accent-soft);border-radius:3px;font-size:.85em">'+q.difficulty+'</span></div>';
+    h += '<div class="q-text">' + escapeHtml(q.q) + '</div>';
+    q.options.forEach((opt, oi) => {
+      h += '<label class="opt" id="opt-'+lid+'-'+qi+'-'+oi+'"><input type="radio" name="q-'+lid+'-'+qi+'" value="'+oi+'"> '+String.fromCharCode(65+oi)+'. '+escapeHtml(opt)+'</label>';
+    });
+    h += '<button class="btn submit-q" onclick="submitQ('+lid+','+qi+')">Submit</button>';
+    h += '<div class="explain" id="exp-'+lid+'-'+qi+'" style="display:none"></div>';
+    h += '</div>';
+  });
+  body.innerHTML = h;
+
+  // Restore answered states from saved choices
+  state.filteredIndices.forEach(qi => {
+    if (state.choices[qi] !== undefined) restoreAnswered(lid, qi);
+  });
+
+  updateScoreBar(lid);
+
+  if (state.completed) {
+    renderPostQuiz(lid);
+  }
+}
+
+function restoreAnswered(lid, qi) {
+  const state = quizState[lid];
+  const lec = lectures.find(l => l.id === lid);
+  const q = lec.questions[qi];
+  const chosen = state.choices[qi];
+  for (let oi=0; oi<q.options.length; oi++) {
+    const el = document.getElementById('opt-'+lid+'-'+qi+'-'+oi);
+    if (!el) continue;
+    el.classList.add('disabled');
+    if (oi === q.answer) el.classList.add('correct');
+    if (oi === chosen && chosen !== q.answer) el.classList.add('wrong');
+    const input = el.querySelector('input');
+    if (input) input.checked = (oi === chosen);
+    if (input) input.disabled = true;
+  }
+  const exp = document.getElementById('exp-'+lid+'-'+qi);
+  if (exp) {
+    exp.style.display = 'block';
+    exp.innerHTML = '<b>'+(chosen===q.answer?"Correct.":"Incorrect.")+'</b> '+escapeHtml(q.explain);
+  }
+  const btn = document.querySelector('#q-'+lid+'-'+qi+' .submit-q');
+  if (btn) { btn.disabled = true; btn.textContent = 'Submitted'; }
+}
+
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+
+function submitQ(lid, qi) {
+  const state = quizState[lid];
+  if (state.choices[qi] !== undefined) return;
+  const lec = lectures.find(l => l.id === lid);
+  const q = lec.questions[qi];
+  const radios = document.getElementsByName('q-'+lid+'-'+qi);
+  let chosen = -1;
+  radios.forEach(r => { if (r.checked) chosen = parseInt(r.value); });
+  if (chosen === -1) { alert("Please select an option."); return; }
+  state.choices[qi] = chosen;
+  state.answered += 1;
+  for (let oi=0; oi<q.options.length; oi++) {
+    const el = document.getElementById('opt-'+lid+'-'+qi+'-'+oi);
+    el.classList.add('disabled');
+    if (oi === q.answer) el.classList.add('correct');
+    if (oi === chosen && chosen !== q.answer) el.classList.add('wrong');
+  }
+  if (chosen === q.answer) state.correct += 1;
+  else state.wrongQuestions.push(qi);
+  const exp = document.getElementById('exp-'+lid+'-'+qi);
+  exp.style.display = 'block';
+  exp.innerHTML = '<b>'+(chosen===q.answer?"Correct.":"Incorrect.")+'</b> '+escapeHtml(q.explain);
+  const btn = document.querySelector('#q-'+lid+'-'+qi+' .submit-q');
+  btn.disabled = true;
+  btn.textContent = 'Submitted';
+  updateScoreBar(lid);
+  saveState();
+  if (state.answered === state.total) {
+    state.completed = true;
+    computeWeakSections(lid);
+    saveState();
+    document.getElementById('globalReportBtn').disabled = false;
+    renderPostQuiz(lid);
+    setTimeout(() => {
+      document.getElementById('postquiz-'+lid).scrollIntoView({behavior:'smooth'});
+    }, 200);
+  }
+}
+
+function updateScoreBar(lid) {
+  const s = quizState[lid];
+  const totalAvail = s.filteredIndices ? s.filteredIndices.length : 30;
+  document.getElementById('scorebar-'+lid).textContent = "Score: " + s.correct + " / " + s.answered + " (of " + totalAvail + " filtered)";
+}
+
+function renderPostQuiz(lid) {
+  const lec = lectures.find(l => l.id === lid);
+  const s = quizState[lid];
+  const total = s.total || 30;
+  const pct = Math.round((s.correct/total)*100);
+  let verdict;
+  if (pct >= 90) verdict = "Excellent. You have mastered this lecture.";
+  else if (pct >= 75) verdict = "Solid grasp. A few targeted reviews and you are exam-ready.";
+  else if (pct >= 60) verdict = "Reasonable foundation. Revisit the weak topics below.";
+  else verdict = "Needs more review. Go back to the notes for the topics flagged below.";
+
+  const themeCount = {};
+  s.wrongQuestions.forEach(qi => {
+    const t = lec.questions[qi].topic;
+    themeCount[t] = (themeCount[t] || 0) + 1;
+  });
+  const themes = Object.keys(themeCount).sort((a,b)=>themeCount[b]-themeCount[a]);
+
+  let h = '<div class="summary reveal-on-scroll reveal-delay-1">';
+  h += '<h2>Summary Report</h2>';
+  h += '<div class="score-big">'+s.correct+' / '+total+' ('+pct+'%)</div>';
+  h += '<div class="verdict">'+verdict+'</div>';
+  if (themes.length) {
+    h += '<h3>Topics to revisit</h3><ul class="theme-list">';
+    themes.forEach(t => { h += '<li><b>'+escapeHtml(t)+'</b> — '+themeCount[t]+' wrong</li>'; });
+    h += '</ul>';
+  } else {
+    h += '<p>No weak topics — perfect run.</p>';
+  }
+  h += '<p style="color:var(--muted);font-style:italic">Take a short break, then revisit the notes for any flagged topic before moving on.</p>';
+  h += '</div>';
+  h += '<h2>Wrong Answer Review</h2>';
+  if (s.wrongQuestions.length === 0) {
+    h += '<p>No wrong answers to review. Great job.</p>';
+  } else {
+    s.wrongQuestions.forEach((qi, idx) => {
+      const q = lec.questions[qi];
+      const chosen = s.choices[qi];
+      const delay = ['','reveal-delay-1','reveal-delay-2','reveal-delay-3'][idx%4];
+      h += '<div class="review-card reveal-on-scroll '+delay+'">';
+      h += '<div class="q-num">Question '+(qi+1)+'</div>';
+      h += '<div class="q-text">'+escapeHtml(q.q)+'</div>';
+      q.options.forEach((opt, oi) => {
+        let cls = "opt disabled";
+        if (oi === q.answer) cls += " correct";
+        if (oi === chosen && chosen !== q.answer) cls += " wrong";
+        h += '<div class="'+cls+'">'+String.fromCharCode(65+oi)+'. '+escapeHtml(opt)+'</div>';
+      });
+      h += '<div class="explain"><b>Explanation:</b> '+escapeHtml(q.explain)+'</div>';
+      h += '</div>';
+    });
+  }
+  document.getElementById('postquiz-'+lid).innerHTML = h;
+  setTimeout(initReveal, 50);
+}
+
+function showGlobalReport(){ showPage('global-report'); }
+
+function renderGlobalReport() {
+  let totalCorrect = 0, totalAnswered = 0;
+  const allThemes = {};
+  let h = '<p style="color:var(--muted);font-style:italic">Shows saved quiz data (persisted across reloads).</p>';
+  h += '<table><tr><th>Lecture</th><th>Score</th><th>%</th><th>Wrong</th></tr>';
+  lectures.forEach(lec => {
+    const s = quizState[lec.id];
+    if (s.answered > 0) {
+      totalCorrect += s.correct;
+      totalAnswered += s.answered;
+      const pct = s.answered ? Math.round(s.correct/s.answered*100) : 0;
+      h += '<tr><td>'+escapeHtml(lec.title)+'</td><td>'+s.correct+'/'+s.answered+'</td><td>'+pct+'%</td><td>'+s.wrongQuestions.length+'</td></tr>';
+      s.wrongQuestions.forEach(qi => {
+        const t = lec.questions[qi].topic;
+        allThemes[t] = (allThemes[t]||0)+1;
+      });
+    }
+  });
+  h += '</table>';
+  const overallPct = totalAnswered ? Math.round(totalCorrect/totalAnswered*100) : 0;
+  h += '<h2>Overall</h2><p><b>'+totalCorrect+' / '+totalAnswered+'</b> ('+overallPct+'%) across completed quizzes.</p>';
+  const sortedThemes = Object.keys(allThemes).sort((a,b)=>allThemes[b]-allThemes[a]);
+  if (sortedThemes.length) {
+    h += '<h2>Topics to revisit (combined)</h2><ul class="theme-list">';
+    sortedThemes.forEach(t => { h += '<li><b>'+escapeHtml(t)+'</b> — '+allThemes[t]+' wrong</li>'; });
+    h += '</ul>';
+  } else {
+    h += '<p>No weak topics across completed quizzes.</p>';
+  }
+  document.getElementById('global-body').innerHTML = h;
+}
+
+// ===== Reveal-on-scroll =====
+function initReveal() {
+  const els = document.querySelectorAll('.reveal-on-scroll:not(.is-visible)');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+  const obs = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { root:null, rootMargin:'0px', threshold:0.15 });
+  els.forEach(el => obs.observe(el));
+}
+
+// ===== Init on load =====
+function updateHomeStatus() {
+  lectures.forEach(lec => {
+    const s = quizState[lec.id];
+    const el = document.getElementById('status-'+lec.id);
+    if (!el) return;
+    if (s.answered > 0 && s.total) {
+      el.textContent = "Saved: "+s.correct+"/"+s.answered+" of "+s.total+(s.completed?" (completed)":"");
+      if (s.completed) document.getElementById('globalReportBtn').disabled = false;
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadState();
+  // Migrate older saved states: recompute weak topics/sections if missing
+  lectures.forEach(lec => {
+    const s = quizState[lec.id];
+    const hasTopics = s.weakTopics && s.weakTopics.length > 0;
+    const hasSecs = s.weakSections && s.weakSections.length > 0;
+    if (s.completed && !hasTopics && s.wrongQuestions.length > 0) {
+      computeWeakSections(lec.id);
+    }
+  });
+  saveState();
+  updateHomeStatus();
+  initReveal();
+});
+
+// ===== PWA Service Worker (inline via Blob) =====
+if ('serviceWorker' in navigator) {
+  const swCode = `
+    const CACHE = 'endo-study-v1';
+    self.addEventListener('install', e => { self.skipWaiting(); });
+    self.addEventListener('activate', e => { e.waitUntil(self.clients.claim()); });
+    self.addEventListener('fetch', e => {
+      if (e.request.method !== 'GET') return;
+      e.respondWith(
+        caches.open(CACHE).then(cache =>
+          cache.match(e.request).then(cached => {
+            const fetchPromise = fetch(e.request).then(resp => {
+              if (resp && resp.status === 200 && resp.type === 'basic') cache.put(e.request, resp.clone());
+              return resp;
+            }).catch(() => cached);
+            return cached || fetchPromise;
+          })
+        )
+      );
+    });
+  `;
+  try {
+    const blob = new Blob([swCode], {type:'application/javascript'});
+    navigator.serviceWorker.register(URL.createObjectURL(blob)).catch(e => console.warn('SW reg failed', e));
+  } catch(e) { console.warn('SW setup failed', e); }
+}
+
+</script>
+</body>
+</html>
