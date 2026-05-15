@@ -3,98 +3,146 @@
 **Last updated:** 2026-05-15
 
 ## Quick Overview
-This is a university study guide website for HKUST courses with:
-- **Home page** (`home.html`) - subject selection
-- **Subject pages** (`3040.html`, `2921.html`) - lectures with notes + quizzes
+HKUST study guide website with subject selection → lecture → notes/quiz flow.
 - **Tech stack:** Pure HTML/CSS/JS, no frameworks, localStorage for progress
+- **Hosted:** https://jordanpop.github.io/HKUST-GPA-4.3/
+- **Git rule: NEVER commit or push without explicit user approval**
 
-## File Structure (Multi-file SPA)
+## File Structure
 ```
-/HKUST-GPA-4.3/
-├── home.html          (landing page, subject cards)
-├── 3040.html          (LIFS3040 - Lectures 1-5)
-├── 2921.html          (HUMA2921 - Lectures 3,4,5)
-├── index.html         (original backup/archive)
-└── CLAUDE.md          (this file)
+/GPA4.3 website/HKUST-GPA-4.3/   ← git repo root
+├── index.html          (homepage: subject selection cards)
+├── 3040.html           (LIFS3040 — Lectures 1–5)
+├── 2921.html           (HUMA2921 — Lectures 3, 4, 5)
+├── CLAUDE.md           (this file)
+└── QUESTION_TEMPLATE.md
 ```
 
-## Key Architecture Decisions
-- **SPA with page linking** - Each HTML file is separate, navigation via `window.location.href`
-- **Back button pattern** - All subject pages have back button to `home.html` at top
-- **localStorage keys:**
-  - `3040QuizState` - LIFS3040 quiz progress
-  - `2921QuizState` - HUMA2921 quiz progress
-- **Styling** - CSS variables system (--bg, --paper, --ink, --accent, etc.)
+## Navigation Flow
+```
+index.html → 3040.html or 2921.html → lecture card → notes / quiz
+```
+Back button on subject pages points to `index.html`.
 
-## Adding Quiz Questions
+---
 
-**Format** (exactly as shown):
+## Update Workflow (follow this every time)
+
+### Case 1: Adding a new lecture to an existing subject
+User drops PDF/PPTX → say which subject and lecture number
+
+Steps:
+1. Read `CLAUDE.md` only (do not re-read the full HTML)
+2. Read only the target HTML file's `const lectures = [` array to check existing lecture IDs
+3. Generate notes HTML using the Notes Format below
+4. Generate exactly 30 questions using the Question Format below
+5. Inject into the target HTML:
+   - Add lecture card to home page section
+   - Add notes div (`notes-N`)
+   - Add quiz div (`quiz-N`)
+   - Add entry to `const lectures = [...]`
+   - Add entry to `const quizState = {...}`
+6. Ask user to approve before committing
+
+### Case 2: Adding a new subject
+User drops PDF/PPTX for a new course
+
+Steps:
+1. Create a new HTML file (copy 2921.html as template)
+2. Update localStorage key to `[COURSECODE]QuizState`
+3. Update `const lectures = [...]` with correct lecture ids/names
+4. Add a new subject card to `index.html`
+5. Update this CLAUDE.md content status table
+6. Ask user to approve before committing
+
+---
+
+## Notes Format (per lecture)
+
+```html
+<div class="big-picture">One paragraph framing why this topic matters.</div>
+
+<h2>Section Title</h2>
+<p>Plain-English explanation. Technical terms introduced after explanation.</p>
+<!-- Tables for comparisons, bold for key terms only -->
+<!-- Exam trap inline: <div class="exam-trap">Exam trap: ...</div> -->
+
+<div class="exam-traps-summary">
+  <strong>Exam Traps Summary</strong>
+  <ul>...</ul>
+</div>
+
+<div class="memorize">
+  <strong>Top things to memorize</strong>
+  <ol>...</ol>
+</div>
+
+<div class="lower-yield">
+  <strong>Lower-yield / skip if short on time</strong>
+  <ul>...</ul>
+</div>
+```
+
+- Add Traditional Chinese terms in parentheses on first mention of each technical term
+- Tone: calm, direct, no hype, no em dashes
+
+---
+
+## Question Format (exactly as shown)
+
 ```javascript
 {
   q: "Question text?",
-  options: ["A", "B", "C", "D", "E"],  // always 5 options
-  answer: 2,                             // 0-indexed (0-4)
-  explain: "Brief explanation.",
-  topic: "topic-name",
+  options: ["A", "B", "C", "D", "E"],  // always exactly 5 options
+  answer: 2,                             // 0-indexed (0–4)
+  explain: "Why correct. Flag exam traps where relevant.",
+  topic: "short-topic-name",
   difficulty: "easy" | "medium" | "hard"
 }
 ```
 
-**Where to add:**
-- **3040.html** - Find `const lectures = [...]` array, append to lecture's `questions:[]`
-- **2921.html** - Same pattern for lectures 3, 4, 5
+### Difficulty guide
+- **easy** — recall / definition
+- **medium** — mechanism / comparison
+- **hard** — application / clinical scenario
 
-**Important:** Always append to END of array. Never reorder/delete (localStorage uses indices).
+### Question rules
+- Exactly 30 per lecture
+- Mix of recall, comparison, application, "which is NOT", cause-and-effect
+- Distractors must be plausible (drawn from related concepts)
+- Vary correct answer position across the set
+- Always append to END of array — never reorder/delete (localStorage uses indices)
+- Use double quotes for strings containing apostrophes (e.g. `"You've"` not `'You've'`)
 
-## Design Rules (Fixed)
-- Color palette: CSS variables, beige/green theme
-- Font: Georgia, Times New Roman, serif
-- Minimal, calm design
-- No external libraries
-
-## Difficulty Guide
-- **easy** - recall/definition (answer directly from notes)
-- **medium** - mechanism/comparison (requires understanding)
-- **hard** - application/clinical scenario (requires synthesis)
-
-## Quiz State Structure
-```javascript
-quizState = {
-  1: { answered: 0, correct: 0, wrongQuestions: [], completed: false, choices: {}, filteredIndices: null, total: 30, weakSections: [], weakTopics: [] },
-  // ... one per lecture
-};
-```
-- `answered` - number of questions user has answered so far
-- `correct` - number correct
-- `wrongQuestions` - array of question indices user got wrong
-- `filteredIndices` - balanced sample indices (populated by quiz algorithm)
-- `total` - selected question count (10/20/30)
+---
 
 ## Balanced Sampling Algorithm
-Quiz pulls questions proportionally from easy/medium/hard to match user's selected total:
-- If user selects 30 questions and lecture has 10 easy, 10 medium, 10 hard → sample 10 from each
-- Uses `getBalancedSample()` function to distribute evenly
+Already implemented in all subject files. `getBalancedSample(questions, total)` distributes across easy/medium/hard proportionally. User selects 10/20/30 via dropdown. Do not modify this function.
 
-## Git Workflow (REQUIRED)
-**Never commit directly.** User must approve via message first:
-1. Make changes locally
-2. User reviews changes and says "ok to commit"
-3. Then: `git add`, `git commit`, `git push`
+## localStorage Keys
+| File | Key |
+|------|-----|
+| 3040.html | `3040QuizState` |
+| 2921.html | `2921QuizState` |
+
+## CSS Variables (never change)
+`--bg, --paper, --ink, --muted, --accent, --accent-soft, --wrong, --wrong-soft, --border`
+Font: Georgia / Times New Roman, serif. Beige/green palette. No external libraries.
+
+---
 
 ## Content Status
-| Course | Lectures | Notes | Questions |
-|--------|----------|-------|-----------|
-| LIFS3040 | 1-5 | ✅ Complete | ✅ Complete |
-| HUMA2921 | 3,4,5 | 🚧 Placeholder | 🚧 Empty arrays |
+| Subject | File | Notes | Questions |
+|---------|------|-------|-----------|
+| LIFS3040 | 3040.html | ✅ Complete (L1–L10) | ✅ Complete |
+| HUMA2921 | 2921.html | 🚧 Placeholder (L3,4,5) | 🚧 Empty arrays |
 
-## Next Steps
-- Populate HUMA2921 lecture notes content
-- Add HUMA2921 quiz questions (use same format)
-- Test navigation flow (home → subject → lecture)
-- Verify localStorage works across both subjects
-
-## Notes for Future Updates
-- This file avoids re-reading large HTML files
-- Check this file first before asking about structure/format
-- Questions format and localStorage keys are documented here
-- Do NOT edit this file without user permission (same as code files)
+### LIFS3040 Lecture Breakdown
+| Lecture | Topic | Source |
+|---------|-------|--------|
+| L1–L5 | Endocrine System | Endo1_2-26.pdf, Endo3&4-26.pdf, Endo5-26.pdf |
+| L6 | GI Overview & Upper GI | GI1-26.pdf |
+| L7 | Small Intestine & Absorption | GI2-26.pdf |
+| L8 | Large Intestine, Liver & Pancreas | GI3-26.pdf |
+| L9 | Neurons, Glia & Membrane Potentials | Neuro1-26.pdf |
+| L10 | Synaptic Transmission & Neural Circuits | Neuro2-26.pdf |
