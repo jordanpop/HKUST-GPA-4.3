@@ -1190,6 +1190,12 @@ const TOPIC_SECTION_MAP = {
   8: {"overview":0, "receptor-types":0, "transduction":1, "sensory-coding":1, "somatosensory":2, "touch":3, "temperature":3, "nociception":3, "hearing":4},
 };
 
+function initQuizStateFromLectures() {
+  lectures.forEach(l => {
+    quizState[l.id] = { answered:0, correct:0, wrongQuestions:[], completed:false, choices:{}, filteredIndices:null, total:30, weakSections:[], weakTopics:[] };
+  });
+}
+
 function saveState() {
   try {
     const out = {};
@@ -1625,6 +1631,7 @@ function updateHomeStatus() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  initQuizStateFromLectures();
   loadState();
   // Migrate older saved states: recompute weak topics/sections if missing
   lectures.forEach(lec => {
@@ -1643,7 +1650,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ===== PWA Service Worker (inline via Blob) =====
 if ('serviceWorker' in navigator) {
   const swCode = `
-    const CACHE = 'endo-study-v2';
+    const CACHE = 'endo-study-v3';
     self.addEventListener('install', e => { self.skipWaiting(); });
     self.addEventListener('activate', e => { e.waitUntil(self.clients.claim()); });
     self.addEventListener('fetch', e => {
