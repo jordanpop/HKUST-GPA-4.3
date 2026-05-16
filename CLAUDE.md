@@ -103,10 +103,17 @@ Steps:
    - `__JSON_NAME__` — JSON file basename (e.g. `3040` → `data/3040.json`). Appears TWICE.
    - `__CACHE_NAME__` — service-worker cache namespace (e.g. `lifs3040`)
 3. Create `data/{code}.json` with the schema described below. Set `storageKey` to something unique (e.g. `lifs3040_quiz_state`).
-4. For EACH lecture you add to the JSON, also add a `<div id="notes-N" class="page">` block to the new HTML at the location marked `NOTES PAGES go here`. The notes-div pattern is documented in the template's bottom comment block.
-5. Add a new subject card to `index.html`.
-6. Update this CLAUDE.md Content Status table.
-7. Ask user to approve before committing.
+4. **SCAN the actual PDF structure** — read through each PDF to identify the real topics, sections, and ordering. Do NOT rely on file names alone. Confirm with user: "This lecture covers [topics in actual order], right?" — get explicit confirmation before proceeding.
+5. **Spawn agents for parallel processing:**
+   - **Agent 1 (Notes Generator):** Reads the PDF and `prompts/notes-format.md`, then generates the complete notes HTML block (`<div id="notes-N">...</div>`) for this lecture. Follow the Content completeness rule: cover ALL content from the PDF.
+   - **Agent 2 (MCQ Generator):** Reads the PDF and `prompts/mcq-format.md`, then generates exactly 30 multiple-choice questions in JSON format. Must include option length/format parity rules and balanced answer position distribution.
+   - Both agents work in parallel. Do NOT wait for one to finish before starting the other.
+6. Once both agents complete, collect their outputs:
+   - Insert the notes HTML block into the new subject HTML file at the location marked `NOTES PAGES go here`
+   - Parse the JSON questions and append to `data/{code}.json` under the correct lecture object, along with updated `topicSectionMap`
+7. Add a new subject card to `index.html`.
+8. Update this CLAUDE.md Content Status table.
+9. Ask user to approve before committing.
 
 **Do NOT hand-write the home-page lecture cards or `<div id="quiz-N">` blocks.** They are generated at runtime by `renderHomeCards()` / `renderQuizContainers()` from the JSON data. Hand-writing them will cause duplicates.
 

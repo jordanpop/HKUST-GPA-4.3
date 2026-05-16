@@ -1544,7 +1544,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // ===== PWA Service Worker (inline via Blob) =====
 if ('serviceWorker' in navigator) {
   const swCode = `
-    const CACHE = 'huma2921-v1';
+    const CACHE = 'huma2921-v2';
     self.addEventListener('install', e => { self.skipWaiting(); });
     self.addEventListener('activate', e => { e.waitUntil(self.clients.claim()); });
     self.addEventListener('fetch', e => {
