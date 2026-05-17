@@ -1,0 +1,2645 @@
+{
+  "storageKey": "lifs2040_quiz_state",
+  "lectures": [
+    {
+      "id": 11,
+      "title": "Lecture 11: The Nucleus II",
+      "questions": [
+        {
+          "q": "Which of the following best describes the primary function of the nuclear pore complex (NPC) in the context of nuclear transport?",
+          "options": [
+            "It generates the Ran-GTP gradient that drives directional transport",
+            "It acts as the selective gateway through which all nuclear–cytoplasmic traffic passes",
+            "It synthesises importins and exportins for use in nuclear transport",
+            "It anchors the nuclear envelope to the endoplasmic reticulum membrane",
+            "It degrades misfolded proteins before they enter the nucleus"
+          ],
+          "answer": 1,
+          "topic": "nuclear-transport-overview",
+          "explain": "The NPC is the sole channel through which molecules cross the nuclear envelope, providing both size selectivity and regulated passage. It does not generate the Ran-GTP gradient (that role belongs to Ran-GEF and Ran-GAP) nor does it synthesise transport receptors.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which two classes of macromolecules must cross the nuclear envelope in opposite directions to maintain normal cell function?",
+          "options": [
+            "Lipids and carbohydrates",
+            "Histones and cholesterol",
+            "RNA and proteins",
+            "DNA and ribosomes",
+            "Transcription factors and lipid bilayers"
+          ],
+          "answer": 2,
+          "topic": "nuclear-transport-overview",
+          "explain": "RNA is synthesised in the nucleus and exported to the cytoplasm for translation, while proteins (e.g. histones, polymerases, transcription factors) are synthesised in the cytoplasm and imported into the nucleus. DNA does not routinely cross the nuclear envelope, and lipids/carbohydrates are not transported via the NPC in this manner.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "In the gold-particle electron microscopy experiment, what was the maximum diameter of uncoated gold particles that could enter the nucleus by passive diffusion?",
+          "options": [
+            "4–5 nm",
+            "8–10 nm",
+            "15 nm",
+            "20 nm",
+            "50 nm"
+          ],
+          "answer": 1,
+          "topic": "nuclear-import-methods",
+          "explain": "Uncoated gold particles must be smaller than 8–10 nm to enter the nucleus passively. Particles coated with a nuclear protein could enter up to 20 nm in diameter, demonstrating that the protein coat (NLS-containing) enables active transport beyond the passive diffusion limit.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "What was the critical control in the gold-particle EM experiment that proved a specific protein motif — not just any coating — was required for nuclear entry of large particles?",
+          "options": [
+            "Adding excess importin to the cytoplasm",
+            "Replacing the nuclear protein coat with a cytoplasmic protein coat",
+            "Treating coated particles with trypsin before injection",
+            "Injecting particles directly into the nucleus",
+            "Using particles larger than 50 nm to saturate the NPC"
+          ],
+          "answer": 2,
+          "topic": "nuclear-import-methods",
+          "explain": "Trypsin digestion of the nuclear protein coat on 20 nm particles prevented nuclear entry, proving that a specific protein sequence (the NLS-containing motif) is responsible, not a non-specific size or coating effect. Without trypsin digestion, one could argue that any protein coating would allow entry.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In the in vitro reconstitution experiment using digitonin-permeabilized cells, which result was observed when fluorescently labelled nuclear proteins were added with buffer and purified NLS receptor alone (no cytoplasmic lysate)?",
+          "options": [
+            "Nuclear import occurred at the same rate as with full lysate",
+            "Nuclear import occurred at half the rate observed with lysate",
+            "Nuclear import was completely abolished (0× relative import)",
+            "The nuclear envelope became permeable and import was unregulated",
+            "Import occurred but cargo was not released inside the nucleus"
+          ],
+          "answer": 2,
+          "topic": "nuclear-import-methods",
+          "explain": "Buffer plus purified NLS receptor alone gave 0× import, demonstrating that the receptor alone is insufficient. Additional cytosolic factors from the lysate are required. Cytosol alone gave 9× import, and cytosol plus receptor gave 23× import, showing receptor enhances but cannot replace cytosolic factors.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What was the purpose of using digitonin in the in vitro nuclear transport reconstitution experiment?",
+          "options": [
+            "To degrade the nuclear envelope so cargo could diffuse freely",
+            "To permeabilize only the plasma membrane, creating semi-intact cells with an intact nuclear envelope",
+            "To inhibit Ran-GAP activity and accumulate Ran-GTP in the cytoplasm",
+            "To fluorescently label the nuclear proteins before injection",
+            "To block FG-repeat interactions in the NPC channel"
+          ],
+          "answer": 1,
+          "topic": "nuclear-import-methods",
+          "explain": "Digitonin selectively permeabilizes the plasma membrane while leaving the nuclear envelope intact, creating semi-intact cells. This allows researchers to add or remove cytoplasmic components and reconstitute nuclear transport in a controlled manner. It does not degrade the nuclear envelope or affect Ran-GAP.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following statements about GFP-based live-cell imaging of nuclear transport is correct?",
+          "options": [
+            "GFP fusions can only track nuclear import, not export",
+            "Roger Tsien used GFP fusions to show nuclear transport is often a regulated and dynamic process",
+            "GFP fusions to nuclear proteins always remain permanently in the nucleus after import",
+            "GFP fusions proved that NLS sequences are cleaved after nuclear entry",
+            "GFP can only be used in fixed cells and cannot track live nuclear transport"
+          ],
+          "answer": 1,
+          "topic": "nuclear-import-methods",
+          "explain": "Live imaging of GFP-tagged nuclear proteins revealed that transport is regulated and dynamic — proteins can shuttle rapidly between nucleus and cytoplasm in response to signals. GFP does not prove NLS cleavage (NLS is retained), and GFP fusions can track both import and export in live cells.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "What is a nuclear localization signal (NLS)?",
+          "options": [
+            "A hydrophobic sequence that anchors proteins to the nuclear envelope membrane",
+            "A long stretch of negatively charged amino acids that recruits ribosomes",
+            "A short stretch of positively charged amino acids that directs proteins to the nucleus",
+            "A signal peptide that is cleaved after the protein enters the nucleus",
+            "A glycosylation site that marks proteins for nuclear pore insertion"
+          ],
+          "answer": 2,
+          "topic": "nls-importins",
+          "explain": "NLS sequences are short stretches of positively charged amino acids — primarily lysine (Lys) and arginine (Arg) — that are recognized by importins to direct proteins to the nucleus. Unlike ER signal peptides, NLS sequences are not cleaved after import; they remain permanently on the protein.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which experiment demonstrated that the NLS is sufficient (not just necessary) for nuclear targeting?",
+          "options": [
+            "Injecting gold particles coated with a nuclear protein into oocytes",
+            "Mutating a single Lys residue in the SV40 T-antigen NLS",
+            "Fusing the SV40 T-antigen NLS to pyruvate kinase, which then accumulated in the nucleus",
+            "Adding trypsin to digest the NLS and observing loss of nuclear entry",
+            "Expressing importin in cells lacking endogenous NLS-bearing proteins"
+          ],
+          "answer": 2,
+          "topic": "nls-importins",
+          "explain": "Fusing the SV40 T-antigen NLS to pyruvate kinase — a normally cytoplasmic enzyme — was sufficient to redirect it into the nucleus. This demonstrates sufficiency. Necessity was shown by mutating the NLS and observing that the protein remained cytoplasmic.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "How do importins interact with the nuclear pore complex to translocate cargo?",
+          "options": [
+            "Importins hydrolyse GTP to push through the NPC channel by force",
+            "Importins bind and unbind sequentially to FG-repeat regions of channel nucleoporins",
+            "Importins open a calcium channel in the nuclear membrane to allow passive entry",
+            "Importins covalently attach to scaffold nucleoporins and are pulled through",
+            "Importins recruit motor proteins such as kinesin to walk along nuclear pore filaments"
+          ],
+          "answer": 1,
+          "topic": "nls-importins",
+          "explain": "Importin–cargo complexes translocate through the NPC by repeatedly binding, dissociating, and rebinding to adjacent FG-repeat regions (disordered sequences) of channel nucleoporins. This ratchet-like mechanism does not require GTP hydrolysis during translocation itself; energy is consumed at the Ran-GTPase cycle level.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What happens to the NLS sequence after a nuclear protein is successfully imported into the nucleus?",
+          "options": [
+            "It is cleaved by a nuclear protease immediately after entry",
+            "It is phosphorylated to mask it and prevent re-export",
+            "It remains permanently on the protein unchanged",
+            "It is ubiquitinated and degraded in the nucleus",
+            "It is transferred to the importin to guide it back to the cytoplasm"
+          ],
+          "answer": 2,
+          "topic": "nls-importins",
+          "explain": "Unlike ER signal peptides, the NLS is NOT cleaved after import — it remains permanently on the protein. This is a common exam trap. ER signal sequences are cotranslationally cleaved, but nuclear targeting signals are retained.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "The SV40 T-antigen NLS has the sequence Pro–Pro–Lys–Lys–Lys–Arg–Lys–Val. What happens when a single lysine in this motif is mutated to alanine?",
+          "options": [
+            "Nuclear import is enhanced because steric hindrance is reduced",
+            "Nuclear import is unaffected because the remaining lysines are sufficient",
+            "Nuclear localization is abolished",
+            "The protein is redirected to the ER instead of the nucleus",
+            "Importin binds more tightly due to reduced electrostatic repulsion"
+          ],
+          "answer": 2,
+          "topic": "nls-importins",
+          "explain": "A single Lys mutation in the SV40 T-antigen NLS abolishes nuclear localization, demonstrating the critical requirement for positively charged residues. This highlights that the NLS is a precise signal, not a redundant sequence — loss of even one key charged residue disrupts importin binding.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Where are Ran-GEF and Ran-GAP located, and what is the functional consequence of this distribution?",
+          "options": [
+            "Ran-GEF in cytoplasm, Ran-GAP in nucleus — Ran-GDP accumulates in nucleus",
+            "Ran-GEF in nucleus, Ran-GAP in cytoplasm — Ran-GTP accumulates in nucleus and Ran-GDP accumulates in cytoplasm",
+            "Both Ran-GEF and Ran-GAP are in the nucleus — Ran cycles within the nucleus only",
+            "Ran-GEF in nucleus, Ran-GAP in nucleus — Ran-GTP is equal in both compartments",
+            "Ran-GEF in cytoplasm, Ran-GAP in cytoplasm — Ran-GDP accumulates in cytoplasm"
+          ],
+          "answer": 1,
+          "topic": "nuclear-export-ran",
+          "explain": "Ran-GEF (guanine nucleotide exchange factor) is located in the nucleus and converts Ran-GDP to Ran-GTP, so Ran-GTP is high in the nucleus. Ran-GAP (GTPase-activating protein) is in the cytoplasm and converts Ran-GTP to Ran-GDP, so Ran-GDP is high in the cytoplasm. This gradient is the engine of directional transport.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "During nuclear IMPORT, what is the role of Ran-GTP inside the nucleus?",
+          "options": [
+            "Ran-GTP in the nucleus stabilizes the importin–cargo complex to prevent premature dissociation",
+            "Ran-GTP in the nucleus binds importin and causes rapid dissociation of cargo from importin",
+            "Ran-GTP in the nucleus phosphorylates the NLS to signal that import is complete",
+            "Ran-GTP in the nucleus recruits exportins to remove empty importins from the nucleus",
+            "Ran-GTP in the nucleus hydrolyses the NLS to prevent re-import of the same cargo"
+          ],
+          "answer": 1,
+          "topic": "nuclear-export-ran",
+          "explain": "Inside the nucleus, abundant Ran-GTP binds to importin, causing the importin–cargo complex to rapidly dissociate and release the cargo. This is the mechanism by which cargo is unloaded in the nucleus. Ran-GTP stabilizes the exportin–cargo complex (for export), but has the opposite effect on importins.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "During nuclear EXPORT, what triggers the dissociation of the exportin–cargo–Ran-GTP ternary complex?",
+          "options": [
+            "Ran-GEF in the nucleus converts Ran-GTP to Ran-GDP, destabilizing the complex",
+            "Ran-GAP in the cytoplasm promotes GTP hydrolysis by Ran, converting it to Ran-GDP",
+            "Importins compete with exportins for cargo binding in the cytoplasm",
+            "Phosphorylation of the NES by cytoplasmic kinases prevents rebinding",
+            "The complex spontaneously disassembles when the NES is exposed to cytoplasmic pH"
+          ],
+          "answer": 1,
+          "topic": "nuclear-export-ran",
+          "explain": "When the exportin–cargo–Ran-GTP complex reaches the cytoplasm, Ran-GAP (located in the cytoplasm) stimulates GTP hydrolysis by Ran, converting Ran-GTP to Ran-GDP. This hydrolysis causes the ternary complex to dissociate, releasing cargo into the cytoplasm. Ran-GEF is in the nucleus and has the opposite function.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following correctly describes the stable ternary complex required for nuclear export?",
+          "options": [
+            "Importin + NLS cargo + Ran-GTP, formed in the cytoplasm",
+            "Exportin + NES cargo + Ran-GDP, formed in the nucleus",
+            "Exportin + NES cargo + Ran-GTP, formed in the nucleus",
+            "Exportin + NLS cargo + Ran-GAP, formed at the NPC",
+            "Importin + NES cargo + Ran-GDP, formed in the cytoplasm"
+          ],
+          "answer": 2,
+          "topic": "nuclear-export-ran",
+          "explain": "Inside the nucleus where Ran-GTP is abundant, exportin binds its cargo (which carries a nuclear export signal, NES) and Ran-GTP to form a stable ternary complex. This complex is then competent to traverse the NPC. In the cytoplasm, Ran-GAP hydrolyses GTP and the complex falls apart.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following GTPases is correctly matched with its primary cellular function?",
+          "options": [
+            "Ran — regulates vesicle trafficking between ER and Golgi",
+            "Rab — facilitates nuclear import and export of proteins",
+            "Ras — regulates vesicle trafficking",
+            "Ran — facilitates nuclear transport; Rab — vesicle trafficking; Ras — cell differentiation and growth signalling",
+            "Ras — nuclear transport; Ran — cell differentiation; Rab — nuclear export"
+          ],
+          "answer": 3,
+          "topic": "nuclear-export-ran",
+          "explain": "Ran GTPases facilitate transport to and from the nucleus; Rab GTPases regulate vesicle trafficking; and Ras GTPases are involved in cell differentiation and growth signalling. Each GTPase family has a distinct intracellular role despite sharing the GTPase mechanism.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "A drug inhibits Ran-GEF activity, completely blocking GDP-to-GTP exchange on Ran. What is the most likely consequence for nuclear import?",
+          "options": [
+            "Import is enhanced because importins can cycle faster without Ran-GTP",
+            "Importins enter the nucleus but cannot release their cargo because Ran-GTP is absent",
+            "Importins cannot bind their cargo in the cytoplasm because NLS recognition requires Ran-GTP",
+            "Export is specifically abolished but import is unaffected",
+            "The NPC becomes clogged with cargo–importin complexes in the cytoplasm"
+          ],
+          "answer": 1,
+          "topic": "nuclear-export-ran",
+          "explain": "Ran-GTP in the nucleus is required to trigger dissociation of cargo from importin. If Ran-GEF is inhibited, Ran-GTP cannot be generated in the nucleus; importins enter the nucleus but cannot release their cargo. This traps the importin–cargo complex inside the nucleus and halts further import cycles.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following is NOT one of the three general mechanisms by which nuclear transport can be regulated?",
+          "options": [
+            "Phosphorylation of amino acids near the NLS or NES",
+            "Inhibitory proteins that mask the NLS or NES",
+            "Anchoring proteins that retain cargo in the cytosol or another compartment",
+            "Proteolytic cleavage of importin inside the nucleus",
+            "All three options above (phosphorylation, inhibitory proteins, anchoring) are valid mechanisms"
+          ],
+          "answer": 3,
+          "topic": "transport-regulation",
+          "explain": "The three mechanisms are: (1) phosphorylation near the NLS/NES to mask or expose it; (2) inhibitory proteins that cover the signal; and (3) anchoring proteins that retain cargo away from the NPC. Proteolytic cleavage of importin is not a recognized regulatory mechanism — cleavage is used for cargo release (e.g. SREBP at the Golgi), not for importin regulation.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In the Drosophila embryo, the transcription factor Dorsal is excluded from nuclei on the dorsal side but concentrated in nuclei on the ventral side. This is an example of which regulatory mechanism?",
+          "options": [
+            "Proteolytic cleavage of Dorsal at the Golgi releasing its nuclear domain",
+            "Phosphorylation of NLS residues blocking importin binding on the ventral side",
+            "Spatial regulation of nuclear import creating a transcription factor gradient along the dorsal-ventral axis",
+            "Ran-GEF expression confined to ventral cells generating a local Ran-GTP gradient",
+            "Differential expression of exportins on the dorsal side actively removing Dorsal"
+          ],
+          "answer": 2,
+          "topic": "transport-regulation",
+          "explain": "The Dorsal protein example illustrates how spatially regulated nuclear import can create a morphogen-like transcription factor gradient that patterns the embryo along its dorsal-ventral axis. The mechanism involves inhibitory proteins (e.g. Cactus) retaining Dorsal in the cytoplasm on the dorsal side, not Golgi cleavage or local Ran-GTP differences.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Under HIGH cholesterol conditions, how is SREBP kept from entering the nucleus?",
+          "options": [
+            "SREBP is phosphorylated on its NLS by cholesterol-activated kinases",
+            "SCAP binds cholesterol and retains SREBP anchored in the ER membrane",
+            "Exportins actively export SREBP from the nucleus in response to high cholesterol",
+            "Ran-GAP is upregulated by cholesterol, reducing nuclear Ran-GTP",
+            "SREBP is ubiquitinated and degraded by proteasomes in the cytoplasm"
+          ],
+          "answer": 1,
+          "topic": "srebp-regulation",
+          "explain": "Under high cholesterol, SCAP (an ER membrane protein) binds cholesterol, adopts a conformation that retains the SCAP–SREBP complex in the ER membrane, preventing packaging into transport vesicles. This is an example of anchoring regulation. SREBP nuclear import is not regulated by direct NLS phosphorylation.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the correct sequence of events that allows SREBP to enter the nucleus when cholesterol is LOW?",
+          "options": [
+            "Cholesterol depletion → SCAP phosphorylates SREBP NLS → importin binds → nuclear entry",
+            "Cholesterol depletion → SCAP conformation changes → SCAP+SREBP packaged into vesicles → delivered to Golgi → proteolytic cleavage → SREBP domain released → nuclear entry",
+            "Cholesterol depletion → SREBP is dephosphorylated → NLS exposed → importin binds → nuclear entry",
+            "Cholesterol depletion → SCAP degrades → SREBP released from ER → diffuses to nucleus",
+            "Cholesterol depletion → Ran-GEF activity increases → more Ran-GTP pulls SREBP into nucleus"
+          ],
+          "answer": 1,
+          "topic": "srebp-regulation",
+          "explain": "When cholesterol is low, the cholesterol-binding site on SCAP is empty, causing SCAP to change conformation. This allows SCAP+SREBP to be packaged into transport vesicles and delivered to the Golgi, where site-1 and site-2 proteases cleave SREBP, releasing its cytosolic domain to enter the nucleus. This is anchoring + proteolytic release, not phosphorylation.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following correctly describes the state of NF-AT in a RESTING (non-activated) T cell?",
+          "options": [
+            "NF-AT is dephosphorylated, NLS exposed, and concentrated in the nucleus",
+            "NF-AT is phosphorylated, NES exposed, and retained in the cytoplasm",
+            "NF-AT is phosphorylated, NLS exposed, and imported into the nucleus",
+            "NF-AT is dephosphorylated, NES exposed, and exported to the cytoplasm",
+            "NF-AT is unphosphorylated and bound to calcineurin in the cytoplasm"
+          ],
+          "answer": 1,
+          "topic": "nfat-regulation",
+          "explain": "In resting T cells, NF-AT is phosphorylated, which masks the NLS and exposes the NES, retaining NF-AT in the cytoplasm. Upon T-cell activation, Ca²⁺ rises and activates calcineurin, which dephosphorylates NF-AT, exposing the NLS and masking the NES, driving nuclear import.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Cyclosporin is an immunosuppressive drug used to prevent organ transplant rejection. What is its mechanism of action in the context of nuclear transport?",
+          "options": [
+            "Cyclosporin inhibits Ran-GEF, preventing Ran-GTP accumulation in the nucleus",
+            "Cyclosporin blocks importins from binding FG repeats in the NPC",
+            "Cyclosporin inhibits calcineurin, preventing dephosphorylation of NF-AT and keeping T cells inactive",
+            "Cyclosporin promotes SCAP-mediated retention of NF-AT in the ER",
+            "Cyclosporin degrades exportins, trapping NF-AT permanently in the nucleus"
+          ],
+          "answer": 2,
+          "topic": "nfat-regulation",
+          "explain": "Cyclosporin inhibits calcineurin (the protein phosphatase activated by Ca²⁺ in T cells). Without calcineurin, NF-AT remains phosphorylated and cytoplasmic, so it cannot enter the nucleus to activate T-cell genes. This suppresses the immune response, preventing rejection of transplanted organs.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "In the NF-AT system, phosphorylation of NF-AT leads to which outcome?",
+          "options": [
+            "Enhanced nuclear import because importins recognize phosphorylated NLS",
+            "Cytoplasmic retention because the NES is exposed and the NLS is masked",
+            "Increased calcineurin activity, creating a positive feedback loop",
+            "Direct binding to Ran-GTP, which exports NF-AT from the nucleus",
+            "Proteolytic release of the NF-AT nuclear domain from the plasma membrane"
+          ],
+          "answer": 1,
+          "topic": "nfat-regulation",
+          "explain": "Phosphorylation of NF-AT masks the NLS and exposes the NES, resulting in cytoplasmic retention. This is a key exam trap — students may assume phosphorylation promotes import (as in some other signalling contexts), but here phosphorylation promotes cytoplasmic retention and export.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In the FRET-based Ran-GTP probe (YFP–RBD–CFP), what is observed when Ran-GTP is ABSENT?",
+          "options": [
+            "The probe is in an open conformation, YFP and CFP are far apart, and no FRET occurs",
+            "The probe is in a compact conformation, YFP and CFP are close together, and FRET occurs",
+            "Ran-GDP binds RBD and separates the two fluorophores, abolishing FRET",
+            "CFP is excited but emits no signal because YFP quenches it at long range",
+            "FRET occurs only when both Ran-GTP and Ran-GDP are simultaneously present"
+          ],
+          "answer": 1,
+          "topic": "fret-ran-visualization",
+          "explain": "Without Ran-GTP, the RBD adopts a compact conformation that keeps YFP and CFP close together, so FRET occurs (energy transfers from CFP to YFP). When Ran-GTP binds RBD, the conformation opens, separating the fluorophores and abolishing FRET. A LOW FRET ratio therefore indicates HIGH Ran-GTP.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "What does a LOW I_FRET/I_CFP ratio in the Ran-GTP FRET probe experiment indicate?",
+          "options": [
+            "Low Ran-GTP concentration — the probe is closed and FRET is occurring",
+            "High Ran-GTP concentration — the probe is open and FRET is not occurring",
+            "High Ran-GDP concentration — RBD conformation is extended",
+            "Equal Ran-GTP and Ran-GDP — the probe is in an intermediate state",
+            "The probe is malfunctioning — a low ratio always indicates probe degradation"
+          ],
+          "answer": 1,
+          "topic": "fret-ran-visualization",
+          "explain": "A low I_FRET/I_CFP ratio means that YFP emission is low relative to CFP emission — i.e., no FRET is occurring. This happens when Ran-GTP binds RBD and opens the probe, separating CFP and YFP. Therefore, a low ratio corresponds to HIGH Ran-GTP. This inverse relationship is the most common exam trap for this topic.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "In interphase cells, where is Ran-GTP enriched according to the FRET probe experiment using Xenopus sperm nuclei?",
+          "options": [
+            "In the cytoplasm near the plasma membrane",
+            "Equally distributed between nucleus and cytoplasm",
+            "Inside the nucleus",
+            "At the surface of the NPC on the cytoplasmic face",
+            "At the centrosome, to aid in spindle assembly during interphase"
+          ],
+          "answer": 2,
+          "topic": "fret-ran-visualization",
+          "explain": "The FRET probe showed the lowest I_FRET/I_CFP ratio (highest Ran-GTP) inside the nucleus during interphase, confirming that Ran-GEF in the nucleus generates a high Ran-GTP zone there. The control experiment using RanT24N (a Ran-GEF inhibitor) abolished this nuclear enrichment.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "During mitosis, where was the Ran-GTP FRET probe signal (lowest I_FRET/I_CFP) concentrated?",
+          "options": [
+            "Inside the reformed nuclear envelope",
+            "At the kinetochores of condensed chromosomes only",
+            "Around the central spindle/chromosomes in mitotic egg extracts",
+            "Uniformly throughout the mitotic cytoplasm",
+            "At the cortex of the dividing cell near the cleavage furrow"
+          ],
+          "answer": 2,
+          "topic": "fret-ran-visualization",
+          "explain": "During mitosis in Xenopus egg extracts, the FRET probe showed the lowest ratio (highest Ran-GTP) around the central spindle region surrounding chromosomes, suggesting Ran-GTP plays roles beyond nuclear transport — including spindle assembly — during cell division.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following comparisons between NLS and ER signal sequences is CORRECT?",
+          "options": [
+            "Both NLS and ER signal sequences are positively charged and are cleaved after targeting",
+            "NLS is positively charged and is NOT cleaved; ER signal sequence is hydrophobic and IS cleaved",
+            "NLS is hydrophobic and is cleaved; ER signal sequence is positively charged and is retained",
+            "Both NLS and ER signal sequences are retained on the protein after targeting to their respective organelle",
+            "NLS is cleaved in the nucleus; ER signal sequence is retained in the ER membrane"
+          ],
+          "answer": 1,
+          "topic": "nls-importins",
+          "explain": "NLS sequences are short stretches of positively charged amino acids (Lys, Arg) that are NOT cleaved after nuclear import — they remain permanently on the protein. In contrast, ER signal sequences are hydrophobic and are co-translationally cleaved by signal peptidase in the ER lumen. Confusing these two is a classic exam mistake.",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Lecture 12: Vesicular Traffic, Secretion and Endocytosis I",
+      "questions": [
+        {
+          "q": "Which of the following best describes the function of transport vesicles in eukaryotic cells?",
+          "options": [
+            "They replicate DNA and distribute it to daughter cells during cell division",
+            "They carry specific cargo proteins between membrane-enclosed compartments",
+            "They generate ATP by oxidative phosphorylation at the inner mitochondrial membrane",
+            "They degrade misfolded proteins via the ubiquitin-proteasome pathway",
+            "They synthesize secretory proteins on cytosolic ribosomes and release them directly"
+          ],
+          "answer": 1,
+          "topic": "transport-vesicles-basics",
+          "explain": "Transport vesicles are small, membrane-enclosed spherical structures enriched with specific cargo proteins destined for a target compartment. They mediate both the secretory and endocytic pathways. DNA replication, ATP synthesis, proteasomal degradation, and direct cytosolic protein release are all unrelated to vesicular transport.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "George Palade established the canonical secretory pathway. In what order does a newly synthesized secretory protein travel?",
+          "options": [
+            "Golgi → ER → Plasma membrane",
+            "ER → Lysosome → Plasma membrane",
+            "ER → Golgi → Plasma membrane",
+            "Plasma membrane → Early endosome → ER",
+            "Golgi → Plasma membrane → Early endosome"
+          ],
+          "answer": 2,
+          "topic": "secretory-roadmap",
+          "explain": "Palade demonstrated that secretory proteins enter the ER lumen, travel through Golgi cisternae, and exit via secretory vesicles to the plasma membrane or extracellular space. The endocytic arm runs in the reverse direction (plasma membrane → endosome → lysosome). None of the other options reflect the correct anterograde secretory route.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Novick and Schekman performed a yeast genetic screen using temperature-sensitive mutants. What phenotype distinguished secretory mutants from wild-type yeast in a density gradient centrifugation experiment?",
+          "options": [
+            "Secretory mutants floated near the top because they secreted more vesicles into the medium",
+            "Secretory mutants sedimented more rapidly because they accumulated vesicles and organelles",
+            "Secretory mutants were indistinguishable from wild-type in density",
+            "Secretory mutants formed larger colonies because protein synthesis was upregulated",
+            "Secretory mutants had lower density due to reduced membrane lipid content"
+          ],
+          "answer": 1,
+          "topic": "yeast-genetic-screen",
+          "explain": "At the restrictive temperature, secretory mutants accumulated secretory proteins at defined steps (ER, Golgi, or vesicles), making the cells denser with accumulated organelles. This allowed them to be separated from wild-type cells by density gradient centrifugation. The mutants are denser — not lighter — because they accumulate vesicles rather than secreting them.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In the Novick–Schekman yeast secretory mutant screen, mutant class C accumulated secretory proteins specifically in transport vesicles. What does this indicate about the function of the SEC genes mutated in class C?",
+          "options": [
+            "The SEC genes in class C encode proteins required for cargo entry into the ER",
+            "The SEC genes in class C encode proteins required for vesicle budding from the ER",
+            "The SEC genes in class C encode proteins required for vesicle processing in the Golgi",
+            "The SEC genes in class C encode proteins required for vesicle fusion with the plasma membrane",
+            "The SEC genes in class C encode proteins required for retrograde transport from Golgi to ER"
+          ],
+          "answer": 3,
+          "topic": "yeast-genetic-screen",
+          "explain": "Cargo accumulating in transport vesicles means the vesicles form and bud successfully but cannot fuse with the plasma membrane. Therefore the mutated SEC genes in class C are required for the final fusion step. Class A blocks at ER exit and class B blocks at Golgi exit — not at vesicle fusion.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following correctly pairs a coat protein type with its direction and route of transport?",
+          "options": [
+            "COPI — anterograde — ER to Golgi",
+            "COPII — retrograde — Golgi to ER",
+            "Clathrin — anterograde — ER to Golgi",
+            "COPII — anterograde — ER to Golgi",
+            "COPI — anterograde — Golgi to plasma membrane"
+          ],
+          "answer": 3,
+          "topic": "coat-proteins-types",
+          "explain": "COPII mediates anterograde (forward) transport from the ER to the Golgi. COPI mediates retrograde (backward) transport from the Golgi back to the ER, as well as intra-Golgi transport. Clathrin mediates endocytosis from the plasma membrane and Golgi-to-endosome trafficking — not ER-to-Golgi transport.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "How do coat proteins physically generate membrane curvature during vesicle budding?",
+          "options": [
+            "They insert hydrophobic domains into the inner leaflet of the lipid bilayer, stretching it outward",
+            "They polymerize into concave-shaped cage structures on the cytosolic face that force the bilayer to curve",
+            "They activate lipid flippases that transfer phospholipids from the inner to the outer leaflet",
+            "They recruit dynamin to the flat membrane, which then reshapes the membrane with its GTPase activity",
+            "They sever existing vesicles and reattach them to the donor membrane in a curved configuration"
+          ],
+          "answer": 1,
+          "topic": "coat-proteins-types",
+          "explain": "Coat proteins polymerize on the cytosolic face of donor membranes into concave-shaped cage structures that physically force the lipid bilayer to deform into a curved bud. Dynamin is specifically responsible for the scission (pinching-off) step, not for generating the initial curvature. Lipid flippases and hydrophobic insertions are not the primary mechanism described for coat-protein-mediated curvature.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "During clathrin-coated vesicle assembly, what is the role of adaptin?",
+          "options": [
+            "It polymerizes into a cage lattice that physically deforms the membrane into a pit",
+            "It hydrolyzes GTP to pinch the coated pit off the plasma membrane",
+            "It links the cargo receptor on the donor membrane to the clathrin coat",
+            "It forms the transmembrane channel through which cargo proteins enter the vesicle",
+            "It anchors the completed vesicle to microtubule tracks for directed transport"
+          ],
+          "answer": 2,
+          "topic": "clathrin-coat-assembly",
+          "explain": "Adaptin (adaptor protein) serves as the molecular bridge between the cargo receptor and clathrin. The assembly order is: cargo → cargo receptor → adaptin → clathrin. Clathrin itself forms the cage; dynamin performs GTP hydrolysis for scission; motor proteins handle microtubule-based transport.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which of the following correctly describes the complete sequence of clathrin-coated vesicle formation from the plasma membrane?",
+          "options": [
+            "Clathrin assembly → cargo receptor recruitment → adaptin binding → dynamin scission → coat retention on vesicle",
+            "Cargo recognition by cargo receptor → adaptin recruitment → clathrin polymerization → coated pit → dynamin scission → uncoating",
+            "Dynamin helix formation → clathrin cage assembly → cargo selection → adaptin linking → coated pit pinching",
+            "Cargo receptor recruitment → dynamin recruitment → clathrin assembly → adaptin linking → membrane deformation → fusion",
+            "Adaptin assembly → clathrin cage → cargo selection → GTP hydrolysis by clathrin → uncoating → naked vesicle"
+          ],
+          "answer": 1,
+          "topic": "clathrin-coat-assembly",
+          "explain": "The correct sequence is: (1) cargo recognized by cargo receptor, (2) cargo receptor recruits adaptin, (3) adaptin recruits clathrin, (4) clathrin polymerizes into a coated pit, (5) dynamin performs GTP-dependent scission, (6) coat proteins dissociate (uncoating), yielding a naked transport vesicle. Dynamin acts after coat assembly, not before it.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Dynamin is a GTPase that acts during vesicle budding. What is the specific mechanical role of dynamin?",
+          "options": [
+            "It polymerizes into a cage around the budding vesicle to generate membrane curvature",
+            "It recognizes and clusters cargo molecules into the forming vesicle bud",
+            "It forms a helical ring around the membrane neck and uses GTP hydrolysis to sever it",
+            "It recruits cargo receptors to the cytosolic face of the donor membrane",
+            "It catalyzes SNARE complex assembly to fuse the newly budded vesicle with its target"
+          ],
+          "answer": 2,
+          "topic": "dynamin-function",
+          "explain": "Dynamin forms a helix around the neck of the clathrin-coated pit; GTP hydrolysis drives a conformational change that constricts and severs the neck, releasing the vesicle. Membrane curvature is generated by coat proteins, not dynamin. Cargo recruitment involves cargo receptors and adaptins, and SNARE assembly is a later docking/fusion event.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Temperature-sensitive dynamin mutations in Drosophila cause flies to become paralyzed at high temperature. What is the cellular mechanism underlying this paralysis?",
+          "options": [
+            "Dynamin is required for axonal microtubule assembly; its loss causes cytoskeletal collapse in motor neurons",
+            "Dynamin mediates retrograde axonal transport; its loss causes toxic cargo accumulation in synapses",
+            "Dynamin is needed for coat protein disassembly; its loss traps coat proteins and blocks all vesicular traffic",
+            "Dynamin is required for synaptic vesicle recycling; its loss depletes synaptic vesicles and blocks neurotransmission",
+            "Dynamin is required for SNARE complex disassembly; its loss prevents new rounds of vesicle fusion"
+          ],
+          "answer": 3,
+          "topic": "dynamin-function",
+          "explain": "Without functional dynamin, clathrin-coated pits accumulate at the plasma membrane but fail to pinch off. This means synaptic vesicles cannot be recycled after neurotransmitter release, depleting the vesicle pool and blocking synaptic transmission. The flies are paralyzed because nerve-muscle communication fails — not due to cytoskeletal collapse or SNARE dysfunction.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following is NOT a function of coat proteins during vesicle budding?",
+          "options": [
+            "Deforming the donor membrane into a curved bud shape",
+            "Concentrating specific cargo molecules into the forming vesicle",
+            "Recognizing cargo receptors on the donor membrane surface",
+            "Performing GTP hydrolysis to sever the vesicle neck from the donor membrane",
+            "Polymerizing on the cytosolic face of the membrane"
+          ],
+          "answer": 3,
+          "topic": "coat-proteins-types",
+          "explain": "GTP hydrolysis for neck scission is performed by dynamin, not by coat proteins. Coat proteins (COPI, COPII, clathrin) are responsible for membrane deformation, cargo concentration, and interaction with cargo receptors. Confusing dynamin's role with that of coat proteins is a common exam error.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following problems in intracellular protein trafficking is solved by the endocytic transport pathway?",
+          "options": [
+            "Delivering nuclear transcription factors from the cytoplasm into the nucleus",
+            "Transporting newly synthesized secretory proteins from the ER to the Golgi",
+            "Importing extracellular molecules such as nutrients and cholesterol into the cell",
+            "Recycling COPI coat proteins from Golgi vesicles back to the cytosol",
+            "Packaging digestive enzymes into zymogen granules for storage"
+          ],
+          "answer": 2,
+          "topic": "compartmentalization-problem",
+          "explain": "The endocytic pathway solves the problem of bringing extracellular molecules (nutrients, cholesterol, ions) into the cell. Nuclear protein import is mediated by the nuclear pore complex, not endocytosis. ER-to-Golgi transport is handled by the secretory pathway (COPII), and zymogen granule packaging is also part of the secretory pathway.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "A researcher discovers a drug that blocks the uncoating step of vesicular transport (coat protein removal from vesicles). What would be the most likely direct consequence?",
+          "options": [
+            "Vesicles would bud normally but would fail to dock and fuse with their target membrane",
+            "Coat proteins would be depleted from the cytosol, preventing new rounds of vesicle budding",
+            "Cargo would be mispackaged into wrong vesicle types",
+            "Dynamin would fail to sever vesicle necks because coat proteins are required for dynamin recruitment",
+            "v-SNAREs would be permanently sequestered in the coat, preventing SNARE-mediated fusion"
+          ],
+          "answer": 0,
+          "topic": "vesicular-transport-steps",
+          "explain": "Uncoating occurs after dynamin severs the vesicle neck. The coat must be shed before the vesicle can dock and fuse with the target. If uncoating is blocked, the coat-covered vesicle cannot interact properly with tethering factors and SNAREs on the target membrane, preventing fusion and cargo delivery. Coat protein depletion would be a secondary consequence, not the most direct effect.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Vesicles move from donor to acceptor compartments along intracellular tracks. What provides these tracks, and what proteins do the walking?",
+          "options": [
+            "Actin filaments serve as tracks; Rab GTPases walk along them using GTP hydrolysis",
+            "Microtubules serve as tracks; motor proteins walk along them to deliver vesicles directionally",
+            "Intermediate filaments serve as tracks; SNARE proteins drive vesicle movement using ATP",
+            "Microtubules serve as tracks; dynamin walks along them using GTP hydrolysis",
+            "Lipid bilayer continuities serve as tunnels; cargo proteins diffuse passively between compartments"
+          ],
+          "answer": 1,
+          "topic": "vesicle-transport-microtubules",
+          "explain": "Microtubules serve as the intracellular highways for vesicular transport, and motor proteins (kinesins and dyneins) on the vesicle surface walk along these tracks to deliver vesicles directionally to the target compartment. Rab GTPases mediate tethering at the target, not movement. Dynamin performs scission, not vesicle transport.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "What is the primary role of Rab proteins in vesicular transport?",
+          "options": [
+            "Catalyzing GTP hydrolysis to power membrane fusion between vesicle and target",
+            "Polymerizing on the donor membrane to generate the vesicle coat",
+            "Marking vesicle/compartment identity and recruiting tethering proteins to initiate vesicle capture",
+            "Directly zippering v-SNARE and t-SNARE proteins together to fuse membranes",
+            "Severing vesicle necks from donor membranes during the budding reaction"
+          ],
+          "answer": 2,
+          "topic": "rab-tethering-snare",
+          "explain": "Rab proteins are small GTPases on the vesicle surface that mark the identity of specific vesicles and compartments. Active (GTP-bound) Rab recruits tethering proteins on the target membrane to initiate the capture of the vesicle. SNAREs, not Rabs, perform the actual membrane fusion. Dynamin, not Rab, severs vesicle necks.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Tethering proteins reside on the target membrane. What are their two key functions in vesicular transport?",
+          "options": [
+            "Generating membrane curvature and recruiting dynamin for scission",
+            "Hydrolyzing GTP to activate Rab proteins and depolymerizing the vesicle coat",
+            "Initially capturing the vesicle from a distance and assembling SNARE complexes",
+            "Recognizing cargo molecules on the vesicle and sorting them to the correct target",
+            "Polymerizing into a cage around the docked vesicle to prevent premature fusion"
+          ],
+          "answer": 2,
+          "topic": "rab-tethering-snare",
+          "explain": "Tethering proteins perform two key functions: (1) they interact with Rab-GTP on the incoming vesicle to initially capture it from a distance, and (2) they help assemble SNARE complexes to facilitate bilayer fusion. They do not generate curvature (coat proteins), hydrolyze GTP for scission (dynamin), or form cages around docked vesicles.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "How do SNAREs drive membrane fusion between a transport vesicle and its target compartment?",
+          "options": [
+            "v-SNARE on the vesicle and t-SNARE on the target zipper together, pulling the two membranes into close contact until they fuse",
+            "SNAREs hydrolyze ATP to power a mechanical piston that forces the two membranes together",
+            "SNAREs recruit phospholipases that digest membrane lipids, enabling spontaneous bilayer mixing",
+            "v-SNARE and t-SNARE form a pore channel through which cargo proteins diffuse without membrane fusion",
+            "SNAREs activate Rab GTPase, which then recruits coat proteins to fuse the membranes"
+          ],
+          "answer": 0,
+          "topic": "snare-fusion-mechanism",
+          "explain": "Complementary v-SNARE (on the vesicle) and t-SNARE (on the target membrane) intertwine in a zippering reaction that pulls the two bilayers into extremely close proximity, driving lipid bilayer fusion and cargo release. SNAREs do not use ATP hydrolysis; that is characteristic of motor proteins. SNAREs also do not form pores or recruit coat proteins.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "A transport vesicle carrying v-SNARE type X approaches two potential target membranes: one bearing t-SNARE type X and one bearing t-SNARE type Y. Which membrane will the vesicle fuse with, and why?",
+          "options": [
+            "The membrane bearing t-SNARE type Y, because mismatched SNAREs create stronger binding forces",
+            "Both membranes equally, because vesicle fusion depends on Rab proteins rather than SNARE identity",
+            "Neither membrane, because SNARE-mediated fusion requires coat proteins to remain on the vesicle",
+            "The membrane bearing t-SNARE type X, because complementary SNARE pairs are required for efficient fusion",
+            "The membrane bearing t-SNARE type Y, because tethering proteins recognize mismatched SNAREs"
+          ],
+          "answer": 3,
+          "topic": "snare-specificity",
+          "explain": "SNARE pairing is highly specific — v-SNARE type X on the vesicle efficiently interacts only with its matching t-SNARE type X on the target membrane, enabling fusion. This combinatorial SNARE code ensures vesicles fuse only with the correct target compartment. Mismatched SNARE pairs (type X + type Y) do not support efficient fusion.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In the SNARE-mediated fusion sequence, which event occurs FIRST?",
+          "options": [
+            "v-SNARE and t-SNARE zipper together to pull membranes close",
+            "Lipid bilayers merge and cargo is released into the target lumen",
+            "Rab-GTP on the vesicle recruits the tethering protein on the target membrane",
+            "Membranes contact and begin to coalesce",
+            "Tethering protein assembles the SNARE complex"
+          ],
+          "answer": 2,
+          "topic": "snare-fusion-mechanism",
+          "explain": "The sequence begins with tethering: Rab-GTP on the vesicle surface contacts the tethering protein on the target membrane, capturing the vesicle from a distance. Only after tethering do the v-SNARE and t-SNARE begin to zipper together (docking), followed by membrane coalescence and finally complete bilayer fusion with cargo release.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following best explains why vesicles do not randomly fuse with any membrane in the cell?",
+          "options": [
+            "Coat proteins remain on vesicles permanently, physically blocking access to non-target membranes",
+            "Only dynamin-coated membranes are competent to receive incoming vesicles",
+            "Rab identity, tethering factor complementarity, and compartment-specific SNARE pairing collectively ensure targeting specificity",
+            "Microtubule tracks are unidirectional and physically prevent vesicles from reaching wrong compartments",
+            "Cargo receptors on vesicles recognize surface markers on the correct target membrane, bypassing all SNARE interactions"
+          ],
+          "answer": 2,
+          "topic": "snare-specificity",
+          "explain": "Specificity of vesicle targeting arises from multiple layers: (1) Rab GTPases mark vesicle and compartment identity, (2) tethering factors on the target recognize the correct Rab, and (3) compartment-specific v-SNARE/t-SNARE pairs ensure only matching pairs fuse. This multi-step specificity prevents mistargeting. Coats are shed before fusion, and microtubule directionality alone cannot account for organelle-level targeting specificity.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "In the yeast autophagosome–vacuole fusion system, what is the role of Mon1-Ccz1?",
+          "options": [
+            "It is a v-SNARE on the autophagosome membrane that pairs with vacuolar t-SNARE",
+            "It is the tethering complex that captures the autophagosome on the vacuole surface",
+            "It is a GEF (guanine nucleotide exchange factor) that activates the Rab GTPase Ypt7 on the autophagosome",
+            "It is a GTPase-activating protein that inactivates Ypt7 to terminate fusion",
+            "It is the coat protein complex that generates autophagosome membrane curvature"
+          ],
+          "answer": 2,
+          "topic": "autophagosome-vacuole-fusion",
+          "explain": "Mon1-Ccz1 is the guanine nucleotide exchange factor (GEF) that is targeted to the autophagosome by Atg8 and activates Ypt7 (the Rab GTPase) by exchanging GDP for GTP. Ypt7-GTP then recruits the HOPS tethering complex on the vacuole. HOPS, not Mon1-Ccz1, is the tethering complex. Ykt6 is the v-SNARE on the autophagosome.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following statements about COPI-coated vesicles is correct?",
+          "options": [
+            "COPI mediates anterograde transport from the ER to the Golgi",
+            "COPI mediates retrograde transport from the Golgi back to the ER and intra-Golgi transport",
+            "COPI mediates endocytosis from the plasma membrane to early endosomes",
+            "COPI mediates transport from the Golgi to late endosomes",
+            "COPI mediates anterograde transport from the Golgi to the plasma membrane"
+          ],
+          "answer": 1,
+          "topic": "coat-proteins-types",
+          "explain": "COPI coat mediates retrograde transport (Golgi → ER) and intra-Golgi transport. COPII handles the anterograde ER-to-Golgi direction. Clathrin handles endocytosis from the plasma membrane and Golgi-to-endosome transport. Mixing up COPI and COPII directions is among the most common exam errors.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "A cell biologist uses electron microscopy to examine a dynamin temperature-sensitive mutant at the restrictive temperature. What would she observe at the plasma membrane?",
+          "options": [
+            "Abundant naked transport vesicles that have been shed but cannot be re-coated",
+            "Clathrin cages forming in the cytosol independently of the membrane",
+            "Clathrin-coated pits that extend as long membrane tubules but fail to pinch off",
+            "Complete absence of clathrin structures because uncoating is blocked",
+            "Fully formed uncoated vesicles accumulating beneath the plasma membrane"
+          ],
+          "answer": 2,
+          "topic": "dynamin-function",
+          "explain": "When dynamin is non-functional, clathrin-coated pits form and invaginate normally (coat assembly is intact), but they cannot be severed from the plasma membrane. The pits remain attached, forming long membrane tubules with attached pit structures visible by EM. This is the classic dynamin mutant phenotype observed in Drosophila temperature-sensitive experiments.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "What is the key distinction between the roles of Rab proteins/tethering factors and SNARE proteins in vesicular transport?",
+          "options": [
+            "Rab proteins and tethering factors fuse membranes; SNAREs only mediate cargo recognition",
+            "Rab proteins coat the vesicle; tethering factors coat the target; SNAREs uncoat the vesicle after fusion",
+            "Rab proteins and tethering factors mediate initial vesicle targeting and capture; SNAREs catalyze the actual lipid bilayer fusion",
+            "Rab proteins and SNAREs together drive budding; tethering factors drive coat assembly",
+            "Rab proteins and tethering factors hydrolyze GTP for membrane fusion; SNAREs stabilize the coat during budding"
+          ],
+          "answer": 2,
+          "topic": "rab-tethering-snare",
+          "explain": "Rab proteins (small GTPases) mark vesicle identity and recruit tethering factors, which capture the incoming vesicle at the target membrane — these steps constitute targeting. SNAREs are the actual fusion machinery: v-SNARE/t-SNARE zippering drives lipid bilayer merger. Confusing targeting (Rab/tethering) with fusion (SNARE) is a classic exam trap.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "According to the Bonifacino and Glick 7-step cycle, which step immediately follows dynamin-mediated scission?",
+          "options": [
+            "Initiation — cargo and v-SNARE associate with coat proteins at the donor membrane",
+            "Tethering — Rab-GTP on the vesicle contacts the tethering factor on the target membrane",
+            "Docking — v-SNARE and t-SNARE zipper together",
+            "Uncoating — coat proteins dissociate from the vesicle back to the cytosol",
+            "Fusion — lipid bilayers merge and cargo is released"
+          ],
+          "answer": 3,
+          "topic": "transport-machinery-summary",
+          "explain": "The 7-step cycle is: (1) initiation, (2) budding, (3) scission (dynamin), (4) uncoating, (5) tethering, (6) docking, (7) fusion. Immediately after scission, the coat must be shed (uncoating) so that the vesicle can interact with tethering factors and SNAREs. Tethering and docking occur only after uncoating.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which Nobel Prize is correctly matched to both the scientist and the discovery?",
+          "options": [
+            "1974 Nobel — Randy Schekman — yeast genetic screen identifying SEC genes",
+            "2013 Nobel — George Palade — establishment of the secretory pathway by EM autoradiography",
+            "2013 Nobel — James Rothman — discovery of the SNARE mechanism of vesicle fusion",
+            "1974 Nobel — James Rothman — discovery of clathrin-coated vesicles by electron microscopy",
+            "2013 Nobel — Randy Schekman — discovery of dynamin and its role in vesicle scission"
+          ],
+          "answer": 2,
+          "topic": "secretory-roadmap",
+          "explain": "James Rothman shared the 2013 Nobel Prize in Physiology or Medicine for discovering the SNARE mechanism of vesicle fusion. George Palade received the 1974 Nobel for establishing the secretory pathway. Randy Schekman shared the 2013 Nobel for the yeast genetic screen identifying SEC genes — not for dynamin. Dynamin is not a Nobel-recognized discovery covered in this lecture.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "A mutant cell expresses a v-SNARE that cannot interact with any t-SNARE. Which step in the 7-step vesicular transport cycle would be most directly blocked?",
+          "options": [
+            "Step 1 (initiation) — cargo would not associate with coat proteins",
+            "Step 3 (scission) — dynamin would not be recruited to the budding vesicle",
+            "Step 4 (uncoating) — coat proteins would remain permanently on the vesicle",
+            "Step 5 (tethering) — Rab-GTP would not recruit tethering factors",
+            "Step 6 (docking) — v-SNARE and t-SNARE could not zipper together"
+          ],
+          "answer": 4,
+          "topic": "transport-machinery-summary",
+          "explain": "v-SNARE/t-SNARE interaction is specifically required for step 6 (docking), where the two SNARE proteins zipper together to pull the membranes into contact before fusion. Budding, scission, uncoating, and tethering would proceed normally because those steps involve coat proteins, dynamin, and Rab/tethering factors — none of which require v-SNARE/t-SNARE pairing.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following is NOT one of the three essential steps of every vesicular transport event?",
+          "options": [
+            "Vesicle budding and cargo packaging at the donor membrane",
+            "Vesicle transport along microtubule tracks to the acceptor compartment",
+            "Uncoating of the vesicle to remove coat proteins after scission",
+            "Vesicle fusion with the target organelle to release cargo",
+            "All three of the other options are essential steps"
+          ],
+          "answer": 2,
+          "topic": "vesicular-transport-steps",
+          "explain": "The three essential steps described in the lecture are: (1) vesicle budding and cargo packaging, (2) vesicle transport along microtubules, and (3) vesicle fusion with the target organelle. Uncoating is a substep within the broader cycle but is not listed as one of the three 'essential steps' defined in this lecture. Options A, B, and D correspond to the three essential steps.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In the autophagosome–vacuole fusion cascade, which molecule directly recruits the HOPS tethering complex to the target vacuole?",
+          "options": [
+            "Atg8, by directly binding HOPS on the autophagosome surface",
+            "Mon1-Ccz1, by acting as the tethering scaffold bridging the two membranes",
+            "Ykt6, the v-SNARE, by engaging t-SNAREs on the vacuole surface",
+            "Ypt7-GTP, the activated Rab GTPase on the autophagosome, by binding HOPS on the vacuole",
+            "The COPII coat, which is retained on the autophagosome and recruits HOPS"
+          ],
+          "answer": 3,
+          "topic": "autophagosome-vacuole-fusion",
+          "explain": "The sequence is: Atg8 recruits Mon1-Ccz1 (GEF) to the autophagosome → Mon1-Ccz1 activates Ypt7 by GTP loading → Ypt7-GTP on the autophagosome then binds HOPS on the vacuole → HOPS assembles the SNARE complex (including Ykt6 v-SNARE) → fusion. HOPS is recruited by Ypt7-GTP, not directly by Atg8 or Mon1-Ccz1.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "A researcher inhibits clathrin assembly specifically. Which of the following trafficking routes would be most directly disrupted?",
+          "options": [
+            "Retrograde ER retrieval of escaped ER-resident proteins (Golgi → ER)",
+            "Anterograde trafficking of newly synthesized secretory proteins (ER → Golgi)",
+            "Endocytosis of receptor–ligand complexes from the plasma membrane",
+            "Intra-Golgi cisternal maturation",
+            "Protein import into the nucleus through the nuclear pore complex"
+          ],
+          "answer": 2,
+          "topic": "coat-proteins-types",
+          "explain": "Clathrin is the coat protein responsible for endocytosis from the plasma membrane (as well as Golgi-to-endosome transport). Inhibiting clathrin assembly would most directly disrupt receptor-mediated endocytosis. Retrograde Golgi-to-ER transport uses COPI; ER-to-Golgi transport uses COPII. Nuclear import uses the nuclear pore complex, not coat proteins.",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Lecture 13: Vesicular Traffic, Secretion and Endocytosis II",
+      "questions": [
+        {
+          "q": "Which coat protein mediates anterograde transport of cargo from the ER to the Golgi apparatus?",
+          "options": [
+            "COPII",
+            "COPI",
+            "Clathrin",
+            "Dynamin",
+            "Sar1"
+          ],
+          "answer": 0,
+          "topic": "coat-proteins-overview",
+          "explain": "COPII coat assembles on the ER membrane and selects cargo for anterograde (forward) transport to the Golgi. COPI is responsible for retrograde transport from the Golgi back to the ER and for intra-Golgi transport, making it a common source of confusion with COPII.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which of the following correctly describes the role of dynamin in vesicular transport?",
+          "options": [
+            "It selects transmembrane cargo proteins for packaging into vesicles",
+            "It mediates membrane fusion between vesicle and target membrane",
+            "It acts as a GTPase to pinch off (scission) vesicles from the donor membrane",
+            "It tethers vesicles to the correct acceptor compartment",
+            "It forms the outer scaffold layer of COPII vesicles"
+          ],
+          "answer": 2,
+          "topic": "coat-proteins-overview",
+          "explain": "Dynamin is a GTPase that wraps around the neck of a budding vesicle and uses GTP hydrolysis to drive membrane scission, releasing the vesicle. Membrane fusion is mediated by SNARE proteins, not dynamin, which is a common point of confusion.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which pair of proteins constitutes the inner layer of the COPII coat that directly recognises transmembrane cargo?",
+          "options": [
+            "Sec13 and Sec31",
+            "Sar1 and Sec24",
+            "Sec23 and Sec24",
+            "Rab1 and tethering factor",
+            "v-SNARE and t-SNARE"
+          ],
+          "answer": 2,
+          "topic": "copii-er-to-golgi",
+          "explain": "Sec23/24 forms the inner layer of the COPII coat; Sec24 directly recognises cytoplasmic tail signals on transmembrane cargo proteins. Sec13/31 forms the outer scaffold layer. Sar1 is the GTPase that initiates coat assembly but is not classified as the inner cargo-recognition layer.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the immediate consequence of Sar1 GTP hydrolysis after a COPII vesicle has budded?",
+          "options": [
+            "Sar1 recruits additional Sec23/24 complexes to the vesicle",
+            "The vesicle fuses with the Golgi membrane",
+            "The COPII coat disassembles (uncoating)",
+            "Dynamin wraps around the vesicle neck and pinches it off",
+            "The KDEL receptor is activated to retrieve escaped proteins"
+          ],
+          "answer": 2,
+          "topic": "copii-er-to-golgi",
+          "explain": "Sar1 GTP hydrolysis triggers disassembly of the COPII coat, allowing the vesicle to become competent for membrane fusion with its target. Students commonly think GTP hydrolysis drives budding, but it actually drives uncoating after scission.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "If a non-hydrolysable GTP analogue is added to a cell, what would most likely happen to COPII vesicles?",
+          "options": [
+            "They would fail to bud from the ER membrane",
+            "They would bud normally but remain coated and fail to fuse with the target compartment",
+            "They would deliver cargo to the lysosome instead of the Golgi",
+            "Sar1 would fail to insert into the ER membrane",
+            "Sec24 would lose its ability to bind cargo"
+          ],
+          "answer": 1,
+          "topic": "copii-er-to-golgi",
+          "explain": "Non-hydrolysable GTP prevents Sar1 from completing its GTPase cycle, so the coat cannot disassemble. Vesicles form and bud normally but remain trapped as coated vesicles unable to uncoat and fuse. This parallels the GTPγS effect seen in Rothman's Golgi transport assay.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Where do COPII vesicles primarily deliver their cargo after budding from the ER?",
+          "options": [
+            "Directly to the trans-Golgi network",
+            "To the vesicular tubular cluster (VTC/ERGIC)",
+            "To the late endosome",
+            "Directly to the plasma membrane",
+            "To the recycling endosome"
+          ],
+          "answer": 1,
+          "topic": "copii-er-to-golgi",
+          "explain": "COPII vesicles travel to the vesicular tubular cluster (VTC), also called the ER-Golgi intermediate compartment (ERGIC) in mammalian cells, which acts as an intermediate station between the ER and the Golgi. Delivery directly to the TGN would bypass the intervening Golgi cisternae.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In what order does cargo flow through the Golgi cisternae?",
+          "options": [
+            "Trans → Medial → Cis → TGN",
+            "Cis → Trans → Medial → TGN",
+            "Cis → Medial → Trans → TGN",
+            "TGN → Trans → Medial → Cis",
+            "Medial → Cis → Trans → TGN"
+          ],
+          "answer": 2,
+          "topic": "golgi-structure-copi",
+          "explain": "The Golgi has distinct polarity: cargo enters from the cis face (closest to ER), moves through medial cisternae, then reaches the trans cisterna, and finally exits via the TGN. Each cisterna contains distinct glycosylation enzymes that act sequentially on the cargo.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which sequence serves as the retrieval signal for soluble ER-resident proteins that escape to the Golgi?",
+          "options": [
+            "Mannose-6-phosphate",
+            "KDEL",
+            "Di-leucine motif",
+            "Signal peptide",
+            "GPI anchor"
+          ],
+          "answer": 1,
+          "topic": "golgi-structure-copi",
+          "explain": "KDEL is the C-terminal tetrapeptide motif on soluble ER-resident proteins such as BiP and PDI. If these proteins escape to the Golgi, the KDEL receptor recognises the KDEL sequence and loads them into COPI vesicles for retrograde retrieval. Mannose-6-phosphate is the signal for lysosomal targeting, not ER retention.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "In Rothman's in vitro Golgi transport assay, which experimental condition gives approximately 420 cpm of ³H-GlcNAc incorporation?",
+          "options": [
+            "Complete reaction (positive control)",
+            "Reaction lacking ATP",
+            "Reaction lacking cytosol",
+            "Reaction with added GTPγS (non-hydrolysable GTP)",
+            "Reaction lacking Golgi membranes"
+          ],
+          "answer": 3,
+          "topic": "golgi-structure-copi",
+          "explain": "GTPγS addition gives ~420 cpm compared to 3500 cpm in the complete reaction. GTPγS traps GTPase-dependent coat proteins in the GTP-bound state, blocking coat disassembly and therefore preventing vesicle fusion. This result confirmed that GTP hydrolysis is required for vesicle uncoating/fusion, not budding.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Why does removing ATP from Rothman's Golgi transport assay reduce ³H-GlcNAc incorporation to ~50 cpm?",
+          "options": [
+            "ATP is required for KDEL receptor binding to cargo",
+            "ATP is needed for coat protein synthesis in vitro",
+            "ATP provides energy for vesicle budding, membrane fusion, and coat protein dynamics",
+            "ATP activates the KDEL retrieval receptor only",
+            "ATP is the direct substrate for dynamin's pinching activity"
+          ],
+          "answer": 2,
+          "topic": "golgi-structure-copi",
+          "explain": "Vesicular transport requires multiple ATP-dependent steps including coat assembly, vesicle budding, and SNARE-mediated fusion events. Without ATP, essentially no transport occurs (50 cpm vs 3500 cpm complete). ATP is not specific to one step — it is broadly required throughout the transport cycle.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "How does the HIV protein Nef cause immune evasion?",
+          "options": [
+            "It prevents MHC-I synthesis in the ER",
+            "It blocks COPII export of MHC-I from the ER",
+            "It reroutes MHC-I from the TGN to the lysosome for degradation",
+            "It inhibits dynamin so MHC-I cannot be endocytosed",
+            "It displaces the KDEL receptor so MHC-I is retrieved back to the ER"
+          ],
+          "answer": 2,
+          "topic": "golgi-structure-copi",
+          "explain": "HIV Nef associates with MHC-I at the TGN/Golgi and hijacks TGN sorting machinery to divert MHC-I into vesicles destined for late endosomes and lysosomes, where MHC-I is degraded. Without MHC-I on the plasma membrane, cytotoxic T lymphocytes cannot recognise infected cells.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which statement about the KDEL retrieval mechanism is correct?",
+          "options": [
+            "The KDEL receptor binds KDEL-tagged proteins with high affinity in the ER lumen (neutral pH) and releases them in the acidic Golgi",
+            "The KDEL receptor is a COPII component that directly deforms the ER membrane",
+            "The KDEL receptor binds KDEL in the acidic Golgi and releases KDEL-tagged protein in the neutral ER lumen",
+            "KDEL-tagged proteins are degraded in the lysosome rather than retrieved",
+            "KDEL is a transmembrane signal recognised by Sec24 in the ER"
+          ],
+          "answer": 2,
+          "topic": "golgi-structure-copi",
+          "explain": "The KDEL receptor has higher affinity for KDEL in the slightly acidic Golgi lumen, allowing it to capture escaped ER-resident proteins. Once the COPI vesicle delivers the receptor-cargo complex back to the neutral ER lumen, the receptor releases the protein. Confusing which pH promotes binding vs. release is a classic exam error.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which destinations does the TGN dispatch cargo to? Select the most complete answer.",
+          "options": [
+            "ER and cis-Golgi only",
+            "Lysosomes and secretory vesicles only",
+            "Late endosomes/lysosomes, secretory vesicles, plasma membrane, and recycling endosomes",
+            "Early endosome and recycling endosome only",
+            "Plasma membrane and ER only"
+          ],
+          "answer": 2,
+          "topic": "tgn-sorting-polarised",
+          "explain": "The TGN is the major cargo-sorting hub of the cell, simultaneously dispatching vesicles to late endosomes/lysosomes (via mannose-6-phosphate/clathrin), secretory vesicles for exocytosis, the plasma membrane, and recycling endosomes. Limiting this to only two destinations misses the full scope of TGN function.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "In polarised intestinal epithelial cells, which surface faces the gut lumen and bears microvilli for nutrient import?",
+          "options": [
+            "Basolateral surface",
+            "Apical surface",
+            "Basal lamina surface",
+            "Endosomal membrane",
+            "Trans-Golgi network membrane"
+          ],
+          "answer": 1,
+          "topic": "tgn-sorting-polarised",
+          "explain": "The apical surface of polarised epithelial cells faces the gut lumen and is specialised for absorption via microvilli. The basolateral surface faces the basal lamina and blood vessels, and is responsible for exporting absorbed nutrients. TGN sorting ensures distinct membrane proteins reach their correct apical or basolateral domain.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "A researcher blocks the TGN sorting machinery in polarised epithelial cells. What is the most likely consequence?",
+          "options": [
+            "All secretory proteins accumulate permanently in the ER",
+            "Cargo is mistargeted — proteins destined for the apical surface may appear at the basolateral surface or vice versa",
+            "COPII vesicles stop budding from the ER",
+            "The KDEL receptor cannot retrieve escaped ER-resident proteins",
+            "Lysosomal hydrolases are constitutively secreted into the cytosol"
+          ],
+          "answer": 1,
+          "topic": "tgn-sorting-polarised",
+          "explain": "The TGN acts as the sorting hub that directs proteins to apical vs. basolateral membranes in polarised cells. Disrupting TGN sorting leads to mistargeting, where proteins designed for one domain end up at the wrong membrane. ER accumulation would result from blocking ER export (COPII), not TGN sorting.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "How does MHC-I normally travel to display viral peptides to cytotoxic T lymphocytes?",
+          "options": [
+            "MHC-I is synthesised in the cytosol and directly inserted into the plasma membrane",
+            "MHC-I travels ER → Golgi → TGN → plasma membrane via the secretory pathway",
+            "MHC-I is synthesised in the nucleus and exported via nuclear pores",
+            "MHC-I is delivered from the lysosome to the plasma membrane via exocytosis",
+            "MHC-I bypasses the Golgi and travels directly from the ER to the plasma membrane"
+          ],
+          "answer": 1,
+          "topic": "tgn-sorting-polarised",
+          "explain": "MHC-I follows the canonical secretory pathway: ER → Golgi → TGN → plasma membrane. At the plasma membrane it presents viral peptides to cytotoxic T lymphocytes. HIV Nef hijacks the TGN step to reroute MHC-I to the lysosome instead, preventing immune recognition.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following is NOT a major function of endocytosis?",
+          "options": [
+            "Uptake of extracellular nutrients",
+            "Recycling of plasma membrane lipids",
+            "Synthesis of new membrane proteins in the ER",
+            "Cellular signalling via internalised receptors",
+            "Immune defence through phagocytosis"
+          ],
+          "answer": 2,
+          "topic": "endocytic-pathway-overview",
+          "explain": "Membrane protein synthesis occurs in the ER as part of the secretory pathway — this is independent of endocytosis. Endocytosis serves nutrient uptake, membrane recycling, signalling, cell adhesion/migration, and immune defence. This is an exception/NOT question testing knowledge of endocytosis boundaries.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which type of endocytosis is restricted to specialised immune cells such as macrophages and neutrophils?",
+          "options": [
+            "Pinocytosis",
+            "Clathrin-mediated endocytosis",
+            "Phagocytosis",
+            "Receptor-mediated endocytosis",
+            "Macropinocytosis"
+          ],
+          "answer": 2,
+          "topic": "endocytic-pathway-overview",
+          "explain": "Phagocytosis involves pseudopod extension around large particles (~5 μm) such as bacteria or dead cells and is performed only by specialised phagocytic cells like macrophages and neutrophils. Pinocytosis and clathrin-mediated endocytosis occur in virtually all cell types.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "What is the correct sequence of compartments through which internalised cargo travels during the endocytic pathway?",
+          "options": [
+            "Plasma membrane → Late endosome → Early endosome → Lysosome",
+            "Plasma membrane → Early endosome → Recycling endosome → Lysosome",
+            "Plasma membrane → Clathrin-coated vesicle → Early endosome → Late endosome → Lysosome",
+            "Plasma membrane → Clathrin-coated vesicle → Lysosome → Late endosome",
+            "Plasma membrane → Early endosome → Lysosome → Late endosome"
+          ],
+          "answer": 2,
+          "topic": "endocytic-pathway-overview",
+          "explain": "The correct sequence is: clathrin-coated pit → clathrin-coated vesicle → uncoating → early endosome → late endosome (multivesicular body) → lysosome. The early endosome also sends receptors back to the plasma membrane via the recycling endosome, but cargo degradation follows the forward route to the lysosome.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "At which point in the endocytic pathway does receptor-ligand dissociation first begin, and why?",
+          "options": [
+            "At the plasma membrane, due to competition from extracellular ligands",
+            "In the clathrin-coated vesicle, due to coat protein-induced conformational changes",
+            "In the early endosome, due to its slightly acidic lumen",
+            "In the late endosome, due to complete acidification to pH 4.5",
+            "In the lysosome, due to hydrolytic enzyme activity"
+          ],
+          "answer": 2,
+          "topic": "endocytic-pathway-overview",
+          "explain": "The slightly acidic lumen of the early endosome triggers conformational changes that reduce receptor-ligand affinity, initiating dissociation. This allows receptors to be sorted back to the plasma membrane for recycling while ligands continue to the lysosome. The lysosome is where final hydrolytic degradation occurs, not initial dissociation.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the outer shell of an LDL particle primarily composed of?",
+          "options": [
+            "Cholesteryl esters and free cholesterol only",
+            "A phospholipid monolayer with apolipoprotein B on the surface",
+            "A phospholipid bilayer with mannose-6-phosphate receptors",
+            "A clathrin coat with dynamin at the neck",
+            "A glycoprotein lattice with KDEL-tagged proteins"
+          ],
+          "answer": 1,
+          "topic": "ldl-receptor-endocytosis",
+          "explain": "The outer shell of LDL consists of a phospholipid monolayer (not bilayer) studded with apolipoprotein B, which is the ligand recognised by the LDL receptor. The core contains cholesteryl esters and free cholesterol. Confusing the monolayer with a bilayer is a common structural error.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "How many times can a single LDL receptor be recycled during receptor-mediated endocytosis of LDL?",
+          "options": [
+            "Only once — it is degraded along with LDL in the lysosome",
+            "Approximately 5–10 times",
+            "Approximately 200 times",
+            "Indefinitely — it is never degraded",
+            "Approximately 50 times, until the clathrin coat wears out"
+          ],
+          "answer": 2,
+          "topic": "ldl-receptor-endocytosis",
+          "explain": "The LDL receptor is recycled back to the plasma membrane approximately 200 times. This is a key advantage of receptor-mediated endocytosis — the receptor is reused, while the LDL cargo is delivered to the lysosome for degradation and cholesterol release.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "A drug prevents LDL from dissociating from its receptor in acidic conditions. What is the most likely outcome?",
+          "options": [
+            "LDL is delivered to the lysosome faster and cytosolic cholesterol increases",
+            "The LDL receptor is recycled normally and cytosolic cholesterol is unaffected",
+            "The LDL receptor cannot be recycled; cytosolic cholesterol decreases",
+            "LDL is redirected to the early endosome via COPI vesicles",
+            "Clathrin-coated pit formation at the plasma membrane is inhibited"
+          ],
+          "answer": 2,
+          "topic": "ldl-receptor-endocytosis",
+          "explain": "If LDL cannot dissociate from LDLR in the acidic early endosome, the receptor remains bound to LDL and cannot be sorted to the recycling endosome. The receptor stays on the endosomal membrane and is eventually degraded. Without functional receptor recycling, LDL uptake is impaired and cytosolic cholesterol decreases.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Familial hypercholesterolaemia is caused by loss-of-function mutations in which gene?",
+          "options": [
+            "Apolipoprotein B (APOB)",
+            "LDL receptor (LDLR)",
+            "Dynamin (DNM2)",
+            "Clathrin heavy chain (CLTC)",
+            "HMG-CoA reductase (HMGCR)"
+          ],
+          "answer": 1,
+          "topic": "ldl-receptor-endocytosis",
+          "explain": "Familial hypercholesterolaemia results from loss-of-function mutations in the LDLR gene. Without functional LDL receptors, LDL cannot be cleared from the blood, causing 6–10-fold elevation in plasma LDL and early-onset atherosclerosis. HMGCR encodes the target of statins but its mutation does not cause this disease.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Statins treat hypercholesterolaemia by which mechanism?",
+          "options": [
+            "Blocking clathrin-mediated endocytosis of LDL",
+            "Increasing the number of LDL receptors on hepatocyte surfaces",
+            "Inhibiting a key enzyme in the cholesterol biosynthesis pathway",
+            "Promoting LDLR recycling from early endosomes",
+            "Directly binding LDL particles and preventing their uptake"
+          ],
+          "answer": 2,
+          "topic": "ldl-receptor-endocytosis",
+          "explain": "Statins inhibit HMG-CoA reductase, a key enzyme in the mevalonate/cholesterol biosynthesis pathway, thereby reducing intracellular cholesterol production. This is distinct from improving receptor-mediated clearance; statins do not directly enhance endocytosis or receptor recycling.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What are the two key advantages of receptor-mediated endocytosis compared to bulk-phase endocytosis?",
+          "options": [
+            "Speed and temperature independence",
+            "Efficiency (captures low-concentration ligands) and selectivity (only receptor-recognised molecules internalised)",
+            "Large cargo capacity and independence from clathrin",
+            "Ability to function without ATP and without dynamin",
+            "Exclusive use by immune cells and recycling of all cargo"
+          ],
+          "answer": 1,
+          "topic": "ldl-receptor-endocytosis",
+          "explain": "Receptor-mediated endocytosis provides efficiency — even molecules present at very low extracellular concentrations can be captured by concentrating them in coated pits — and selectivity, because only molecules recognised by specific receptor proteins are internalised. These properties are illustrated by the LDL-LDLR system.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which receptor does the SARS-CoV-2 spike protein bind to gain entry into host cells?",
+          "options": [
+            "LDL receptor (LDLR)",
+            "KDEL receptor",
+            "ACE2 (angiotensin-converting enzyme 2)",
+            "Mannose-6-phosphate receptor",
+            "MHC-I on the host cell surface"
+          ],
+          "answer": 2,
+          "topic": "sars-cov2-trafficking",
+          "explain": "SARS-CoV-2 uses its spike (S) glycoprotein to bind ACE2, a type I membrane protein expressed on lung, heart, kidney, and intestinal cells. ACE2 normally functions in blood pressure regulation. The virus enters via endocytosis and subsequent membrane fusion in the endosome.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "At which intracellular compartment does SARS-CoV-2 primarily assemble new virions?",
+          "options": [
+            "Nucleus",
+            "ER-Golgi intermediate compartment (ERGIC)",
+            "Lysosome",
+            "Early endosome",
+            "Plasma membrane directly"
+          ],
+          "answer": 1,
+          "topic": "sars-cov2-trafficking",
+          "explain": "SARS-CoV-2 virion assembly occurs at the ERGIC (ER-Golgi intermediate compartment), the same compartment that serves as the intermediate station between ER and Golgi in the secretory pathway. Assembled virions are then packaged into smooth-walled vesicles and released by exocytosis.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following best describes how SARS-CoV-2 exploits the host cell's membrane trafficking machinery?",
+          "options": [
+            "It uses COPI vesicles to export viral RNA from the nucleus to the cytosol",
+            "It hijacks the endocytic pathway for cell entry and the secretory pathway (ER, ERGIC, Golgi) for protein processing and assembly",
+            "It inserts its genome directly through the plasma membrane without using any vesicular compartments",
+            "It uses the lysosomal degradation pathway to process its own structural proteins",
+            "It exclusively uses clathrin-independent endocytosis pathways for cell entry"
+          ],
+          "answer": 1,
+          "topic": "sars-cov2-trafficking",
+          "explain": "SARS-CoV-2 exploits the host endocytic pathway for cell entry (spike binds ACE2 → endocytosis → membrane fusion releases RNA) and the secretory pathway compartments (ER for structural protein synthesis, ERGIC for assembly, Golgi for glycosylation) for replication and virion production.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "COPI coat protein mediates which of the following transport steps? Select the most complete answer.",
+          "options": [
+            "ER to Golgi (anterograde) and TGN to lysosome",
+            "Intra-Golgi transport only",
+            "Retrograde transport from Golgi to ER and intra-Golgi transport",
+            "Clathrin-coated vesicle formation at the plasma membrane",
+            "Recycling of LDL receptors from early endosomes to the plasma membrane"
+          ],
+          "answer": 2,
+          "topic": "coat-proteins-overview",
+          "explain": "COPI mediates two distinct steps: (1) retrograde retrieval of escaped ER-resident proteins from the Golgi back to the ER, and (2) intra-Golgi transport between cisternae. COPII (not COPI) mediates anterograde ER-to-Golgi transport, and clathrin mediates endocytosis and TGN-to-lysosome trafficking.",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Lecture 14: Mechanisms of Cellular Homeostasis",
+      "questions": [
+        {
+          "q": "Which of the following statements about protein degradation in cells is FALSE?",
+          "options": [
+            "It destroys misfolded and aggregated proteins before they harm the cell.",
+            "It is NOT important for regular protein turn-over.",
+            "It allows immune cells to digest invading bacteria via lysosomes.",
+            "It removes short-lived regulatory proteins such as cell cycle regulators.",
+            "It contributes to cellular quality control by clearing damaged proteins."
+          ],
+          "answer": 1,
+          "topic": "protein-degradation-importance",
+          "explain": "Protein degradation IS essential for regular protein turn-over — it replaces functional proteins that have reached the end of their lifespan. Option B is the false statement, as stated directly in the lecture exam trap. All other options correctly describe functions of protein degradation.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which enzyme has the SHORTEST half-life among those listed in the lecture?",
+          "options": [
+            "Glucokinase (1.2 days)",
+            "Tyrosine aminotransferase (1.5 hours)",
+            "HMG CoA reductase (3 hours)",
+            "Ornithine decarboxylase (11 minutes)",
+            "δ-Aminolevulinate synthetase (70 minutes)"
+          ],
+          "answer": 3,
+          "topic": "protein-half-lives",
+          "explain": "Ornithine decarboxylase has a half-life of just 11 minutes, making it the shortest-lived enzyme listed. This reflects its role as a tightly regulated metabolic enzyme. Lactic dehydrogenase, with 16 days, is the longest-lived.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Lactic dehydrogenase has a half-life of 16 days. What category of protein would typically have a lifespan of seconds to minutes?",
+          "options": [
+            "Structural proteins of bone",
+            "Metabolic enzymes in liver",
+            "Cell growth and division regulators",
+            "Muscle structural proteins",
+            "Extracellular matrix proteins"
+          ],
+          "answer": 2,
+          "topic": "protein-half-lives",
+          "explain": "Cell growth and division regulators (such as cyclins) have extremely short half-lives — seconds to minutes — because rapid degradation allows precise control of the cell cycle. Structural proteins of bone and muscle can persist for months to years.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which protein aggregate is associated with Parkinson's disease, and what are the resulting inclusion bodies called?",
+          "options": [
+            "Amyloid-β; senile plaques",
+            "TDP-43; stress granules",
+            "α-Synuclein; Lewy bodies",
+            "Tau; neurofibrillary tangles",
+            "Huntingtin; nuclear inclusions"
+          ],
+          "answer": 2,
+          "topic": "protein-degradation-diseases",
+          "explain": "Parkinson's disease is characterised by aggregation of α-Synuclein, forming Lewy bodies. Amyloid-β deposits are hallmarks of Alzheimer's, while TDP-43 inclusions spreading along motor pathways are characteristic of ALS.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "TDP-43 inclusions spreading along motor pathways are a hallmark lesion of which neurodegenerative disease?",
+          "options": [
+            "Alzheimer's disease",
+            "Parkinson's disease",
+            "Huntington's disease",
+            "Amyotrophic lateral sclerosis (ALS)",
+            "Multiple sclerosis"
+          ],
+          "answer": 3,
+          "topic": "protein-degradation-diseases",
+          "explain": "ALS (amyotrophic lateral sclerosis, 漸凍人症) is characterised by TDP-43 inclusions that spread along motor pathways, causing progressive motor neuron degeneration. Alzheimer's involves Aβ; Parkinson's involves α-Synuclein/Lewy bodies.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which of the following correctly distinguishes the proteasome from the lysosome as sites of protein degradation?",
+          "options": [
+            "The proteasome is found only in the nucleus; the lysosome is found only in the cytoplasm.",
+            "The proteasome degrades proteins, DNA, and lipids; the lysosome degrades only proteins.",
+            "The proteasome is a large protein complex in the nucleus and cytoplasm; the lysosome is an acidic organelle that also degrades bacteria and organelles.",
+            "The proteasome requires an acidic pH; the lysosome operates at neutral pH.",
+            "The proteasome can degrade entire organelles; the lysosome can only degrade small proteins."
+          ],
+          "answer": 2,
+          "topic": "degradation-sites-overview",
+          "explain": "The proteasome is a large protein complex found throughout the nucleus and cytoplasm, primarily degrading misfolded and short-lived proteins. The lysosome is an acidic organelle that degrades proteins, bacteria, damaged organelles, and viruses via multiple delivery pathways. Options A, D, and E reverse or misstate these properties.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "According to the protein quality control map, which of the following correctly describes the fate of a misfolded protein that is recognised by Hsc70?",
+          "options": [
+            "It is ubiquitinated and sent to the proteasome via ERAD.",
+            "It forms a stress granule and awaits refolding.",
+            "It enters the secretory pathway and is exported via the Golgi.",
+            "It undergoes chaperone-mediated autophagy (CMA) directly into the lysosome.",
+            "It is packaged into an autophagosome via macroautophagy."
+          ],
+          "answer": 3,
+          "topic": "protein-quality-control-map",
+          "explain": "Misfolded proteins recognised by the Hsc70 chaperone are directed to the lysosome via chaperone-mediated autophagy (CMA), bypassing the formation of an autophagosome. Ubiquitinated misfolded proteins go to the proteasome (ERAD) or macroautophagy; Hsc70-recognised proteins uniquely use CMA.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Ubiquitin is described as highly conserved. What percentage of sequence identity does human ubiquitin share with yeast ubiquitin?",
+          "options": [
+            "76%",
+            "85%",
+            "90%",
+            "96%",
+            "100%"
+          ],
+          "answer": 3,
+          "topic": "ubiquitin-structure",
+          "explain": "Human and yeast ubiquitin share 96% sequence identity, reflecting the critical importance of its structure throughout eukaryotic evolution. Ubiquitin is 76 amino acids long — 76% is the amino acid count, not the identity figure.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Ubiquitin is attached to target proteins via an isopeptide bond. Which specific amino acid on the target protein forms this bond?",
+          "options": [
+            "Arginine",
+            "Glycine",
+            "Serine",
+            "Lysine",
+            "Cysteine"
+          ],
+          "answer": 3,
+          "topic": "ubiquitin-structure",
+          "explain": "Ubiquitin's C-terminal glycine forms an isopeptide bond with a lysine residue on the target protein. This covalent attachment marks the protein for proteasomal or lysosomal degradation. Glycine is on ubiquitin itself, not on the substrate.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Lys48-linked polyubiquitin chains direct a protein to the proteasome. What is the functional consequence of Lys63-linked polyubiquitin chains?",
+          "options": [
+            "Direct degradation in the 20S proteasome core",
+            "Formation of stress granules",
+            "Routing to endocytic/lysosomal pathway",
+            "Activation of the E1 ubiquitin-activating enzyme",
+            "Nuclear export of the target protein"
+          ],
+          "answer": 2,
+          "topic": "ubiquitin-structure",
+          "explain": "Lys63-linked polyubiquitin chains signal endocytic/lysosomal routing, not proteasomal degradation. This distinction is important because different chain linkages encode different cellular fates. Lys48-linked chains are the canonical proteasome-targeting signal.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In the three-enzyme ubiquitination cascade, which enzyme provides substrate specificity by recognising degradation signals (degrons) on target proteins?",
+          "options": [
+            "E1 — ubiquitin-activating enzyme",
+            "E2 — ubiquitin-conjugating enzyme",
+            "E3 — ubiquitin ligase",
+            "The 19S regulatory cap of the proteasome",
+            "The 20S core particle of the proteasome"
+          ],
+          "answer": 2,
+          "topic": "ubiquitination-enzymes",
+          "explain": "E3 ubiquitin ligase recognises the specific degron (degradation signal) on each substrate protein, providing the substrate specificity of the ubiquitin-proteasome system. There are over 500 E3 ligases in humans for this reason. E1 activates ubiquitin using ATP; E2 carries the activated ubiquitin.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which enzyme in the ubiquitination cascade directly uses ATP hydrolysis to activate ubiquitin?",
+          "options": [
+            "E3 ubiquitin ligase",
+            "E2 ubiquitin-conjugating enzyme",
+            "E1 ubiquitin-activating enzyme",
+            "Deubiquitinase (DUB)",
+            "The 19S ATPase subunits"
+          ],
+          "answer": 2,
+          "topic": "ubiquitination-enzymes",
+          "explain": "E1 uses ATP hydrolysis (ATP → AMP + PPi) to activate ubiquitin and transfer it to E2. E3 does not directly use ATP; the 19S ATPase subunits use ATP to unfold the substrate at the proteasome, which is a separate step downstream.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Approximately how many E3 ubiquitin ligases are encoded in the human genome, and why does this number matter?",
+          "options": [
+            "2 — because one handles nuclear and one handles cytoplasmic substrates",
+            "~40 — because each handles a different cellular compartment",
+            ">500 — because the large number enables recognition of diverse substrate proteins",
+            "~10 — because each recognises a different amino acid degron",
+            "1 — because ubiquitin specificity is determined by the substrate itself"
+          ],
+          "answer": 2,
+          "topic": "ubiquitination-enzymes",
+          "explain": "There are over 500 E3 ubiquitin ligases in humans, which explains how the ubiquitin-proteasome system can selectively target hundreds of different proteins. In contrast, only 2 E1 and ~40 E2 enzymes exist, acting as shared upstream activators.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "The 26S proteasome consists of a 20S core particle and a 19S regulatory cap. Which activity is performed by the 19S cap but NOT the 20S core?",
+          "options": [
+            "Proteolytic cleavage of unfolded protein",
+            "Recognition of polyubiquitin chains and ATP-dependent unfolding",
+            "Formation of small peptide fragments from the target protein",
+            "Acidification of the interior chamber",
+            "Glycosylation of luminal subunits"
+          ],
+          "answer": 1,
+          "topic": "proteasome-structure",
+          "explain": "The 19S regulatory cap recognises polyubiquitin chains (via its ubiquitin receptor), removes the ubiquitin tags (via deubiquitinase), and uses ATP to unfold the substrate. Proteolytic cleavage is performed exclusively by the 20S core particle. Acidification and glycosylation are lysosomal, not proteasomal, features.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In which cellular locations is the 26S proteasome found?",
+          "options": [
+            "Only within lysosomes",
+            "Only in the endoplasmic reticulum lumen",
+            "Only in the mitochondrial matrix",
+            "Throughout the cytoplasm and nucleoplasm, concentrated at the nuclear envelope–ER network",
+            "Exclusively on the outer leaflet of the plasma membrane"
+          ],
+          "answer": 3,
+          "topic": "proteasome-structure",
+          "explain": "The proteasome is distributed throughout the cytoplasm and nucleoplasm and is particularly concentrated at the nuclear envelope–ER network. This distribution allows it to degrade misfolded proteins as they emerge from ribosomes in both compartments.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "What is the correct sequence of events during proteasomal degradation of a ubiquitinated protein?",
+          "options": [
+            "Ubiquitin removal → polyubiquitin recognition → ATP-driven unfolding → threading into 20S → peptide release",
+            "Polyubiquitin recognition → ubiquitin removal → ATP-driven unfolding → threading into 20S → peptide release",
+            "ATP-driven unfolding → polyubiquitin recognition → ubiquitin removal → threading into 20S → peptide release",
+            "Threading into 20S → ubiquitin removal → peptide release → ATP-driven unfolding",
+            "Polyubiquitin recognition → threading into 20S → ATP-driven unfolding → ubiquitin removal → peptide release"
+          ],
+          "answer": 1,
+          "topic": "proteasome-mechanism",
+          "explain": "The correct order is: (1) 19S ubiquitin receptor recognises the polyubiquitin chain, (2) deubiquitinase removes and recycles Ub tags, (3) 19S ATPases unfold the protein, (4) unfolded protein is threaded into the 20S core, (5) proteases generate peptide fragments. Ubiquitin removal precedes unfolding so the Ub tags are recycled before degradation.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following is NOT a function of ubiquitin (Ub) tagging in cells?",
+          "options": [
+            "Targeting Lys48-linked polyubiquitin substrates to the proteasome",
+            "Routing Lys63-linked ubiquitinated receptors through the endocytic pathway to lysosomes",
+            "Directing ESCRT complexes to sort cargo into intraluminal vesicles of MVBs",
+            "Serving as the direct proteolytic enzyme that degrades the target protein",
+            "Signalling protein quality control through polyubiquitin chain formation"
+          ],
+          "answer": 3,
+          "topic": "ubiquitin-proteasome",
+          "explain": "Ubiquitin is a tag — it marks proteins for degradation but does not itself perform proteolytic cleavage. Actual degradation is carried out by the proteasome or lysosomal hydrolases. All other options correctly describe ubiquitin's roles in routing proteins to different degradation compartments.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the approximate diameter and luminal pH of a typical lysosome?",
+          "options": [
+            "2–5 μm diameter; pH 7.2",
+            "0.2–0.5 μm diameter; pH 5.0",
+            "0.2–0.5 μm diameter; pH 7.2",
+            "1–2 μm diameter; pH 5.0",
+            "10 nm diameter; pH 4.0"
+          ],
+          "answer": 1,
+          "topic": "lysosome-structure",
+          "explain": "Lysosomes are 0.2–0.5 μm in diameter with a luminal pH of approximately 5.0 (acidic). The cytosol maintains pH ~7.2. This acidic environment is essential for the activity of the >50 types of acid hydrolases inside the lysosome.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Why are the H⁺ pump and transport proteins of the lysosomal membrane heavily glycosylated on their luminal face?",
+          "options": [
+            "To increase the rate of H⁺ transport into the lumen",
+            "To facilitate fusion of the lysosome with autophagosomes",
+            "To protect them from degradation by the luminal acid hydrolases",
+            "To allow binding of ubiquitinated cargo at the membrane surface",
+            "To lower the pH of the lysosome lumen more rapidly"
+          ],
+          "answer": 2,
+          "topic": "lysosome-membrane-proteins",
+          "explain": "The luminal face of lysosomal membrane proteins is heavily glycosylated as a protective sugar coat that shields the proteins from the very acid hydrolases they help to contain. Without this protection, the membrane proteins would themselves be degraded. Glycosylation does not directly drive H⁺ transport or membrane fusion.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following correctly pairs a lysosomal delivery pathway with its cargo?",
+          "options": [
+            "Phagocytosis — extracellular proteins taken up by coated vesicles",
+            "Endocytosis — bacteria and large particles engulfed by phagosomes",
+            "Secretory pathway — lysosomal enzymes from the trans-Golgi network",
+            "Autophagy — receptor tyrosine kinases recycled back to the plasma membrane",
+            "Phagocytosis — lysosomal hydrolases synthesised in the cytoplasm"
+          ],
+          "answer": 2,
+          "topic": "lysosomal-delivery-pathways",
+          "explain": "The secretory pathway delivers newly synthesised lysosomal enzymes from the ER through the Golgi, via the trans-Golgi network (TGN), to late endosomes and then lysosomes. Phagocytosis handles bacteria and large particles; endocytosis handles extracellular proteins and receptors; autophagy handles organelles and protein aggregates.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "A mutant cell line lacks ESCRT complexes. Which of the following lysosomal delivery pathways would be MOST directly disrupted?",
+          "options": [
+            "Phagocytosis of bacteria",
+            "Secretory pathway delivery of lysosomal enzymes from TGN",
+            "Macroautophagy of damaged mitochondria",
+            "Endocytic routing of ubiquitinated receptors into multivesicular bodies",
+            "Chaperone-mediated autophagy via LAMP-2A"
+          ],
+          "answer": 3,
+          "topic": "ubiquitin-endocytic-routing",
+          "explain": "ESCRT complexes (ESCRT-I, -II, -III) recognise ubiquitin tags on membrane receptors and sort them into intraluminal vesicles of the MVB (multivesicular body). Loss of ESCRT function specifically disrupts this endocytic receptor degradation pathway. Phagocytosis, autophagy, and CMA do not require ESCRT complexes.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Yoshinori Ohsumi was awarded the Nobel Prize in Physiology or Medicine in 2016 for discovering which cellular process?",
+          "options": [
+            "Ubiquitin-mediated proteasomal degradation",
+            "Lysosomal biogenesis and acid hydrolase trafficking",
+            "Autophagy mechanisms",
+            "ESCRT-mediated MVB sorting",
+            "Chaperone-mediated protein folding"
+          ],
+          "answer": 2,
+          "topic": "autophagy-overview",
+          "explain": "Yoshinori Ohsumi received the 2016 Nobel Prize for his discoveries of the mechanisms of autophagy — the cellular \"self-eating\" process. The ubiquitin-proteasome Nobel was awarded to Ciechanover, Hershko, and Rose in 2004.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which type of autophagy involves direct invagination of the lysosomal membrane to engulf small cytoplasmic portions, without forming an autophagosome?",
+          "options": [
+            "Macroautophagy",
+            "Chaperone-mediated autophagy (CMA)",
+            "Microautophagy",
+            "Mitophagy",
+            "Xenophagy"
+          ],
+          "answer": 2,
+          "topic": "autophagy-types",
+          "explain": "Microautophagy involves direct invagination of the lysosomal membrane to engulf small cytoplasmic material. CMA uses Hsc70 to translocate individual proteins across the membrane via LAMP-2A, while macroautophagy forms a double-membrane autophagosome around larger cargo.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In chaperone-mediated autophagy (CMA), which two components are essential for recognising and translocating the substrate protein into the lysosome?",
+          "options": [
+            "Atg8/LC3 and the HOPS tethering complex",
+            "Hsc70 chaperone and LAMP-2A channel",
+            "Rab7 GTPase and SNARE proteins",
+            "E3 ubiquitin ligase and 19S regulatory cap",
+            "ESCRT complexes and Rab5 GTPase"
+          ],
+          "answer": 1,
+          "topic": "autophagy-types",
+          "explain": "In CMA, the cytosolic chaperone Hsc70 recognises a KFERQ-like motif on the substrate protein and delivers it to LAMP-2A, a channel on the lysosomal membrane, for direct translocation into the lumen. No autophagosome is formed. Atg8/LC3 and HOPS are macroautophagy components.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the FIRST step of macroautophagy?",
+          "options": [
+            "Fusion of the autophagosome with the lysosome",
+            "Vesicle nucleation — formation of the isolation membrane (phagophore) requiring PI3P and ATG proteins",
+            "Coating of the phagophore membrane with ATG8/LC3",
+            "Activation of the Mon1-Ccz1 GEF complex on Rab7",
+            "Breakdown of cargo by lysosomal hydrolases"
+          ],
+          "answer": 1,
+          "topic": "macroautophagy-steps",
+          "explain": "Macroautophagy begins with vesicle nucleation — the formation of the isolation membrane (phagophore) requires PI3P (phosphatidylinositol-3-phosphate) and ATG proteins. Subsequent steps include elongation (LC3 coating), docking/fusion with the lysosome (HOPS/SNARE), and finally degradation.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "During macroautophagy, which molecular machinery is required for the docking and fusion of the autophagosome with the lysosome/vacuole?",
+          "options": [
+            "ESCRT-I, -II, -III complexes and Rab5",
+            "E1/E2/E3 ubiquitin cascade and the 19S cap",
+            "Rab7/Ypt7 GTPase, HOPS tethering complex, and SNARE proteins",
+            "LAMP-2A channel and Hsc70 chaperone",
+            "20S proteasome core and deubiquitinase"
+          ],
+          "answer": 2,
+          "topic": "macroautophagy-steps",
+          "explain": "Autophagosome–lysosome fusion requires: Ypt7/Rab7 GTPase (activated by Mon1-Ccz1 GEF), the HOPS tethering complex, and SNARE proteins (e.g., Ykt6). ESCRT complexes are used in MVB sorting, not autophagy fusion. LAMP-2A is specific to CMA.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "The Mon1-Ccz1 complex acts as a GEF (guanine nucleotide exchange factor). What is its direct substrate and what does it activate?",
+          "options": [
+            "Atg8/LC3; it promotes phagophore elongation",
+            "SNARE protein Ykt6; it initiates membrane fusion",
+            "Rab GTPase Ypt7 (Rab7 in mammals); it switches Ypt7 from GDP-bound to GTP-bound active form",
+            "HOPS complex subunit Vps39; it recruits the tethering complex to the autophagosome",
+            "Beclin1; it initiates vesicle nucleation at the ER"
+          ],
+          "answer": 2,
+          "topic": "autophagosome-vacuole-fusion",
+          "explain": "Mon1-Ccz1 is a GEF that activates the Rab GTPase Ypt7 (Rab7 in mammals) by exchanging GDP for GTP. Active Ypt7-GTP then binds the HOPS tethering complex on the vacuole membrane, initiating tethering and subsequent SNARE-mediated fusion. Mon1-Ccz1 is recruited to the autophagosome via Atg8/LC3.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "A researcher generates a yeast mutant that lacks a functional HOPS tethering complex. Which phenotype would you expect?",
+          "options": [
+            "Autophagosomes fail to form the double-membrane structure",
+            "LC3/Atg8 fails to coat the phagophore membrane",
+            "Autophagosomes accumulate outside the vacuole because fusion cannot occur",
+            "Ubiquitinated cargo is redirected to the proteasome",
+            "The lysosomal H⁺ pump is inactivated and pH rises to 7.2"
+          ],
+          "answer": 2,
+          "topic": "autophagosome-vacuole-fusion",
+          "explain": "HOPS mutants specifically fail at the docking/fusion step. Autophagosomes complete formation but cannot fuse with the vacuole, so they accumulate as Atg8 dots outside the vacuole lumen — a phenotype confirmed experimentally. Loss of Atg8 coating or phagophore formation would result from defects in nucleation/elongation steps.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "How does autophagy play a DUAL role in cancer — and what determines which role it plays?",
+          "options": [
+            "Autophagy always suppresses cancer by removing all misfolded proteins before they mutate DNA.",
+            "Autophagy always promotes cancer by helping tumour cells survive chemotherapy.",
+            "Autophagy is tumour-suppressive in early tumourigenesis (prevents malignant transformation) but pro-survival in established tumours (helps cells tolerate stress).",
+            "Autophagy is irrelevant to cancer; its role is limited to starvation responses.",
+            "Autophagy suppresses cancer only when Beclin1 is absent; it promotes cancer only when Beclin1 is overexpressed."
+          ],
+          "answer": 2,
+          "topic": "autophagy-cancer",
+          "explain": "Autophagy has a context-dependent role: in early tumourigenesis it acts as a tumour suppressor by eliminating damaged organelles and proteins that could drive malignant transformation. In established tumours, cancer cells exploit autophagy as a survival mechanism to endure metabolic stress and resist chemotherapy. Option E reverses the Beclin1 relationship.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In the Liang et al. (1999) Nature study using MCF7 breast carcinoma cells, what was the tumour incidence in mice injected with Beclin1-deficient MCF7 cells by day 5?",
+          "options": [
+            "0% — tumours did not form without Beclin1",
+            "~50% — half of mice developed tumours",
+            "~67% — 6 out of 9 mice developed tumours",
+            "~89% — 8 out of 9 mice developed tumours",
+            "100% — all mice developed tumours"
+          ],
+          "answer": 3,
+          "topic": "beclin1-experiment",
+          "explain": "In Liang et al. (1999), ~89% (8/9) of mice injected with Beclin1-deficient MCF7 cells developed tumours by day 5, demonstrating that loss of autophagy (via Beclin1 deletion) strongly promotes tumour growth. MCF7 cells with Beclin1 restored showed significantly reduced tumour incidence.",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Lecture 15: The Cytoskeleton and Cell Movement I",
+      "questions": [
+        {
+          "q": "Which of the following lists the three principal cytoskeletal filaments in order of increasing diameter?",
+          "options": [
+            "Actin filaments (~7 nm) → intermediate filaments (~10 nm) → microtubules (~25 nm)",
+            "Intermediate filaments (~10 nm) → actin filaments (~7 nm) → microtubules (~25 nm)",
+            "Actin filaments (~7 nm) → microtubules (~25 nm) → intermediate filaments (~10 nm)",
+            "Microtubules (~25 nm) → intermediate filaments (~10 nm) → actin filaments (~7 nm)",
+            "Intermediate filaments (~10 nm) → microtubules (~25 nm) → actin filaments (~7 nm)"
+          ],
+          "answer": 0,
+          "topic": "cytoskeleton-overview",
+          "explain": "The correct ascending order is actin (~7 nm), intermediate filaments (~10 nm), and microtubules (~25 nm). A common mistake is assuming intermediate filaments are the largest because of their name, but microtubules are the widest at ~25 nm.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which statement about the cytoskeleton is CORRECT?",
+          "options": [
+            "The cytoskeleton is found in both prokaryotes and eukaryotes",
+            "Only microtubules are dynamic; actin and intermediate filaments are permanently stable",
+            "Actin filaments are the largest of the three principal filament types",
+            "All three principal cytoskeletal filament types can polymerize and depolymerize in response to cell signals",
+            "The cytoskeleton is confined to the nucleus and does not extend into the cytoplasm"
+          ],
+          "answer": 3,
+          "topic": "cytoskeleton-overview",
+          "explain": "All three cytoskeletal filament types are dynamic — they polymerize and depolymerize in response to cell signals. Bacteria lack true intermediate filaments and microtubules; the cytoskeleton is eukaryote-specific and extends throughout the cytoplasm, not confined to the nucleus.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "What is the primary subunit of actin filaments?",
+          "options": [
+            "α/β-tubulin heterodimer",
+            "Lamin monomer",
+            "γ-tubulin monomer",
+            "Keratin dimer",
+            "G-actin monomer"
+          ],
+          "answer": 4,
+          "topic": "cytoskeleton-overview",
+          "explain": "Actin filaments are built from G-actin (globular actin) monomers. α/β-tubulin heterodimers are the subunits of microtubules, while lamins and keratins are intermediate filament subunits.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which feature distinguishes intermediate filaments from both actin filaments and microtubules?",
+          "options": [
+            "Intermediate filaments require GTP hydrolysis for assembly",
+            "Intermediate filaments are the thickest of the three filament types",
+            "Motor proteins preferentially walk along intermediate filaments for cargo transport",
+            "Intermediate filaments are polar structures with distinct plus and minus ends",
+            "Intermediate filaments are non-polar and do not require nucleotide hydrolysis for assembly"
+          ],
+          "answer": 4,
+          "topic": "intermediate-filaments",
+          "explain": "Intermediate filaments are non-polar (no plus/minus end) and assemble without ATP or GTP hydrolysis. Actin and microtubules are polar and require nucleotide hydrolysis. Because IFs lack polarity, motor proteins cannot use them as directional tracks.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Epidermolysis bullosa simplex is caused by mutations in which gene, and what is the resulting cellular defect?",
+          "options": [
+            "Lamin gene mutations → nuclear lamina breakdown → cell death",
+            "Keratin gene mutations → defective IF network in basal epidermal cells → blistered skin upon mechanical stress",
+            "α-tubulin gene mutations → disrupted mitotic spindle → abnormal cell division",
+            "Actin gene mutations → loss of cell cortex → rupture of internal membranes",
+            "Dynein gene mutations → impaired retrograde transport → accumulation of vesicles at cell periphery"
+          ],
+          "answer": 1,
+          "topic": "intermediate-filaments",
+          "explain": "Mutations in keratin genes disrupt the intermediate filament network in basal cells of the epidermis. Without a robust IF network, these cells cannot withstand mechanical friction, causing the skin to blister. Lamin mutations affect nuclear integrity but do not cause this particular blistering disease.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "At which cellular junctions are intermediate filaments anchored to link the cytoskeletons of adjacent cells?",
+          "options": [
+            "Tight junctions",
+            "Gap junctions",
+            "Focal adhesions",
+            "Adherens junctions",
+            "Desmosomes"
+          ],
+          "answer": 4,
+          "topic": "intermediate-filaments",
+          "explain": "Intermediate filaments are anchored at desmosomes (cell-cell junctions), which physically links the IF networks of neighboring cells to distribute tensile forces across a tissue. IFs are also anchored at hemidesmosomes to the basal lamina, not at tight junctions or gap junctions.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "The nuclear lamina is composed of which type of protein, and where is it located?",
+          "options": [
+            "Actin; lining the inner leaflet of the plasma membrane",
+            "Lamins (a type of intermediate filament protein); on the nucleoplasmic face of the inner nuclear membrane",
+            "β-tubulin; forming a cage around chromosomes in the nucleus",
+            "Myosin II; providing contractile force to the nucleus",
+            "Keratin; anchoring chromatin to the outer nuclear membrane"
+          ],
+          "answer": 1,
+          "topic": "intermediate-filaments",
+          "explain": "The nuclear lamina is a 10–40 nm thick meshwork of lamins, which are a specialized type of intermediate filament protein, located on the nucleoplasmic surface of the inner nuclear membrane. It provides structural integrity to the nucleus.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following correctly describes the structure of a microtubule?",
+          "options": [
+            "A solid rod of 7 protofilaments made of actin monomers, ~7 nm in diameter",
+            "A twisted rope of coiled-coil dimers, ~10 nm in diameter",
+            "A hollow cylinder of 13 protofilaments made of α/β-tubulin heterodimers, ~25 nm in diameter",
+            "A hollow cylinder of 9 protofilaments made of γ-tubulin subunits, ~25 nm in diameter",
+            "A solid rod of 13 protofilaments made of lamin monomers, ~10 nm in diameter"
+          ],
+          "answer": 2,
+          "topic": "microtubule-structure",
+          "explain": "Microtubules are hollow cylindrical tubes ~25 nm in diameter whose walls consist of 13 protofilaments, each made of repeating α/β-tubulin heterodimers. Actin filaments and intermediate filaments have distinct diameters (~7 nm and ~10 nm, respectively) and different subunit compositions.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "At the plus end of a growing microtubule, which tubulin subunit is exposed, and which nucleotide does it carry?",
+          "options": [
+            "α-tubulin exposed; carries exchangeable GTP",
+            "γ-tubulin exposed; carries GDP",
+            "α-tubulin exposed; carries GDP",
+            "β-tubulin exposed; carries exchangeable GTP",
+            "β-tubulin exposed; carries non-exchangeable GTP"
+          ],
+          "answer": 3,
+          "topic": "microtubule-structure",
+          "explain": "The plus end exposes β-tubulin, which carries exchangeable GTP that forms the stabilizing GTP cap. The GTP bound to α-tubulin is non-exchangeable and plays no role in dynamic instability. Confusing α- and β-tubulin's nucleotide states is a common exam error.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following accurately describes the polarity of the three cytoskeletal filament types?",
+          "options": [
+            "Actin filaments are non-polar; microtubules and intermediate filaments are polar",
+            "All three filament types are polar with distinct plus and minus ends",
+            "Intermediate filaments are polar; actin filaments and microtubules are non-polar",
+            "All three filament types are non-polar",
+            "Actin filaments and microtubules are polar; intermediate filaments are non-polar"
+          ],
+          "answer": 4,
+          "topic": "microtubule-structure",
+          "explain": "Both actin filaments and microtubules are polar structures with biochemically distinct plus and minus ends, which is essential for directional motor protein movement. Intermediate filaments, by contrast, are non-polar — they have no plus or minus end.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "During dynamic instability, what event is called 'catastrophe'?",
+          "options": [
+            "The re-formation of a GTP cap at the plus end of a shrinking microtubule",
+            "The complete severing of a microtubule by katanin enzyme",
+            "The attachment of a motor protein to the microtubule minus end",
+            "The transition of a microtubule from the minus end to the plus end during polymerization",
+            "The loss of the GTP cap due to hydrolysis outpacing tubulin addition, leading to rapid depolymerization"
+          ],
+          "answer": 4,
+          "topic": "dynamic-instability",
+          "explain": "Catastrophe occurs when GTP hydrolysis at the plus end proceeds faster than new GTP-tubulin subunits are added, causing the GTP cap to be lost. The exposed GDP-tubulin lattice is curved and unstable, triggering rapid depolymerization. Rescue (re-formation of a GTP cap) is the opposite event.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "If a cell is treated so that only GDP (no GTP) is available, what will happen to its microtubules?",
+          "options": [
+            "Microtubules will polymerize continuously because GDP-tubulin is more stable than GTP-tubulin",
+            "Microtubules will be unaffected because GDP is not involved in microtubule dynamics",
+            "Microtubules will shrink completely because no GTP cap can form to stabilize the plus end",
+            "Microtubules will become permanently stabilized as GDP locks the protofilaments in a straight conformation",
+            "Microtubules will convert to actin filaments when GTP is unavailable"
+          ],
+          "answer": 2,
+          "topic": "dynamic-instability",
+          "explain": "Without GTP, incoming tubulin dimers cannot carry the GTP needed to form or maintain a stabilizing cap at the plus end. GDP-tubulin in the lattice adopts a curved conformation, making the polymer unstable. As a result, all microtubules undergo catastrophe and shrink.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the functional significance of dynamic instability in living cells?",
+          "options": [
+            "It permanently stabilizes microtubules so they can form a rigid scaffold",
+            "It allows microtubules to rapidly explore cellular space and be selectively stabilized at specific locations",
+            "It provides the mechanical resistance needed to withstand tensile stress across tissues",
+            "It generates the power stroke required for actin-based cell crawling",
+            "It enables intermediate filaments to switch between polar and non-polar configurations"
+          ],
+          "answer": 1,
+          "topic": "dynamic-instability",
+          "explain": "Dynamic instability allows a single microtubule to oscillate stochastically between growth and shrinkage, rapidly exploring cellular space. Cells exploit this by selectively stabilizing microtubules at specific locations (e.g., at kinetochores during mitosis), building arrays with precisely defined shapes.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which experimental condition would produce microtubules that grow continuously WITHOUT undergoing catastrophe?",
+          "options": [
+            "Addition of excess GDP to the polymerization buffer",
+            "Treatment with a drug that blocks GTP binding to α-tubulin",
+            "Removal of all γ-tubulin from the centrosome matrix",
+            "Use of a non-hydrolyzable GTP analog so tubulin is always capped",
+            "Addition of katanin to sever microtubules at intervals"
+          ],
+          "answer": 3,
+          "topic": "dynamic-instability",
+          "explain": "A non-hydrolyzable GTP analog cannot be converted to GDP, so the plus end always retains a stable GTP cap. Without hydrolysis, the trigger for catastrophe never occurs and microtubules grow continuously. Excess GDP has the opposite effect, causing continuous shrinkage.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "What is the role of γ-tubulin ring complexes (γ-TuRC) at the centrosome?",
+          "options": [
+            "To form the lattice of the elongating microtubule wall alongside α/β-tubulin",
+            "To provide the GTP cap at the plus end of growing microtubules",
+            "To serve as the template for nucleating new microtubules by presenting 13 γ-tubulin subunits matching the 13-protofilament arrangement",
+            "To cross-link adjacent microtubules in the axoneme of cilia",
+            "To power minus-end-directed transport of organelles toward the nucleus"
+          ],
+          "answer": 2,
+          "topic": "mtoc-centrosome",
+          "explain": "γ-TuRC presents 13 γ-tubulin subunits arranged in a circle that mirrors the 13-protofilament geometry of a microtubule. This template nucleates polymerization, bypassing the slow spontaneous nucleation step. γ-tubulin itself does NOT become incorporated into the growing microtubule lattice.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "How many γ-TuSC units assemble to form one γ-TuRC, and how many γ-tubulin subunits does this expose?",
+          "options": [
+            "9 γ-TuSC units → 18 γ-tubulin subunits",
+            "13 γ-TuSC units → 26 γ-tubulin subunits",
+            "2 γ-TuSC units → 4 γ-tubulin subunits",
+            "7 γ-TuSC units → 14 γ-tubulin subunits",
+            "7 γ-TuSC units → 13 γ-tubulin subunits"
+          ],
+          "answer": 4,
+          "topic": "mtoc-centrosome",
+          "explain": "Seven copies of γ-TuSC (each containing 2 γ-tubulin subunits plus accessory proteins) assemble into a spiral, exposing exactly 13 γ-tubulin subunits — matching the 13 protofilaments of a microtubule. This arrangement provides the nucleation template.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "In an interphase animal cell, where is the minus end of most microtubules located, and why?",
+          "options": [
+            "At the cell periphery (cortex), because plus ends radiate inward from there",
+            "Embedded in the centrosome near the nucleus, because the centrosome is the MTOC that anchors minus ends",
+            "At the kinetochore of each chromosome, because chromosomes capture minus ends during mitosis",
+            "At the basal body of each cilium, because basal bodies nucleate minus ends for cytoplasmic transport",
+            "Free in the cytoplasm, because minus ends are not anchored in interphase cells"
+          ],
+          "answer": 1,
+          "topic": "mtoc-centrosome",
+          "explain": "The centrosome, as the main MTOC in animal cells, anchors the minus ends of microtubules. Plus ends radiate outward toward the cell periphery. This orientation establishes directional cues for kinesin (plus-end directed, toward periphery) and dynein (minus-end directed, toward centrosome).",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which structural components make up the centrosome?",
+          "options": [
+            "A pair of centrioles surrounded by a pericentriolar matrix containing γ-TuRC",
+            "A single centriole surrounded by actin filaments and myosin II",
+            "Nine doublet microtubules arranged in a ring, identical to a ciliary axoneme",
+            "A ring of γ-tubulin monomers with no surrounding protein matrix",
+            "Two basal bodies connected by a transition zone and embedded in the plasma membrane"
+          ],
+          "answer": 0,
+          "topic": "mtoc-centrosome",
+          "explain": "The centrosome consists of a pair of centrioles (short cylinders built from triplet microtubules) embedded in a protein-rich pericentriolar matrix. The matrix contains γ-TuRC complexes that nucleate new microtubules. The 9+2 arrangement describes cilia/flagella axonemes, not centrosomes.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Kinesin and cytoplasmic dynein both walk along microtubules using ATP hydrolysis. How do they differ in directionality?",
+          "options": [
+            "Kinesin moves toward the minus end; dynein moves toward the plus end",
+            "Kinesin moves toward the plus end (periphery); dynein moves toward the minus end (centrosome)",
+            "Both move toward the plus end but at different speeds",
+            "Kinesin moves laterally between protofilaments; dynein moves longitudinally",
+            "Both move toward the minus end, but kinesin dissociates before reaching the centrosome"
+          ],
+          "answer": 1,
+          "topic": "motor-proteins-kinesin-dynein",
+          "explain": "Conventional kinesin-1 is a plus-end-directed motor, moving cargo from the centrosome toward the cell periphery (anterograde). Cytoplasmic dynein is a minus-end-directed motor, moving cargo back toward the centrosome (retrograde). Reversing these is one of the most common exam errors.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "In fish skin cells, melanosomes (pigment granules) can either disperse to the periphery or aggregate at the center. Which motors are responsible for each movement?",
+          "options": [
+            "Dynein → dispersal to periphery; kinesin → aggregation at center",
+            "Both dynein and kinesin move melanosomes to the periphery; actin mediates central aggregation",
+            "Myosin moves melanosomes to the periphery; kinesin mediates central aggregation",
+            "Melanosomes are moved by actin filaments in both directions, not by microtubule motors",
+            "Kinesin → dispersal to periphery (plus-end directed); dynein → aggregation at center (minus-end directed)"
+          ],
+          "answer": 4,
+          "topic": "motor-proteins-kinesin-dynein",
+          "explain": "Dispersal of melanosomes outward (toward the periphery) is driven by kinesin, a plus-end-directed motor. Aggregation toward the center (minus end / centrosome) is driven by dynein, a minus-end-directed motor. This model is a classic example of bidirectional organelle transport on microtubule tracks.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which domain of a motor protein binds cargo being transported, and which domain contacts the microtubule?",
+          "options": [
+            "Tail domain contacts microtubule; globular head domain binds cargo",
+            "Stalk domain contacts microtubule; globular head domain binds cargo",
+            "Both domains contact the microtubule; cargo is bound by accessory proteins only",
+            "Globular head domain contacts microtubule (ATPase domain); tail domain binds cargo",
+            "Globular head domain binds cargo; coiled-coil stalk contacts microtubule"
+          ],
+          "answer": 3,
+          "topic": "motor-proteins-kinesin-dynein",
+          "explain": "Motor proteins have a globular head domain (the ATPase motor domain) that contacts and walks along the microtubule, and a tail domain that binds to specific cargo (vesicles, organelles, chromosomes, etc.). Reversing these domains is a common confusion.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which of the following types of cargo is NOT transported along microtubules by motor proteins in the scenarios described in the lecture?",
+          "options": [
+            "Secretory vesicles moving from the Golgi to the plasma membrane",
+            "Mitochondria repositioned in response to metabolic demand",
+            "Collagen monomers crossing the plasma membrane by exocytosis",
+            "Melanosomes distributing pigment within skin cells",
+            "Chromosomes being pulled toward spindle poles during mitosis"
+          ],
+          "answer": 2,
+          "topic": "motor-proteins-kinesin-dynein",
+          "explain": "Collagen monomer secretion by exocytosis involves vesicle fusion at the plasma membrane, but the exocytosis step itself (the actual crossing of the membrane) is mediated by SNARE proteins, not by motor protein-driven microtubule transport. All other options are classic examples of microtubule-based motor transport.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "What is the '9+2' arrangement in the axoneme of a motile cilium?",
+          "options": [
+            "9 actin protofilaments surrounding 2 intermediate filament bundles",
+            "9 singlet microtubules surrounding 2 central doublet microtubules",
+            "9 triplet microtubules surrounding 2 γ-TuRC complexes",
+            "9 dynein arms arranged around 2 radial spoke arrays",
+            "9 outer doublet microtubules surrounding 2 central singlet microtubules"
+          ],
+          "answer": 4,
+          "topic": "cilia-flagella-structure",
+          "explain": "The axoneme of a motile cilium has a 9+2 arrangement: 9 outer doublet microtubules arranged in a ring, each bearing dynein arms, surrounding 2 central singlet microtubules. The basal body has 9 triplet (not doublet) microtubules and no central pair.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "How does axonemal dynein generate the bending motion of a cilium in an intact cell, as opposed to isolated doublets?",
+          "options": [
+            "In isolated doublets with ATP, dynein slides adjacent doublets; in intact cilia, linking proteins resist sliding and convert the force into bending",
+            "In intact cilia, dynein directly bends the doublet microtubules by changing its own shape; in isolated doublets it cannot function",
+            "In intact cilia, dynein rotates the central pair microtubules; isolated doublets cannot rotate",
+            "In both isolated and intact conditions, dynein generates bending; only the speed differs",
+            "In isolated doublets, dynein causes bending; intact cilia use kinesin to generate the power stroke"
+          ],
+          "answer": 0,
+          "topic": "cilia-flagella-structure",
+          "explain": "When doublet microtubules are isolated with ATP, axonemal dynein slides adjacent doublets relative to each other (translational sliding). In an intact cilium, protein links between doublets resist sliding, so the force generated by dynein is redirected into bending of the entire axoneme. Without linking proteins, bending cannot occur.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "What is the structural relationship between the basal body and a centriole?",
+          "options": [
+            "Basal bodies have a 9+2 doublet arrangement; centrioles have a 9+0 arrangement",
+            "Centrioles contain a central pair of microtubules; basal bodies do not",
+            "Basal bodies and centrioles are structurally identical, both consisting of 9 sets of triplet microtubules",
+            "Basal bodies are made of actin filaments; centrioles are made of microtubules",
+            "Centrioles have 13 protofilaments per triplet; basal bodies have 9 protofilaments per triplet"
+          ],
+          "answer": 2,
+          "topic": "cilia-flagella-structure",
+          "explain": "The basal body, which sits at the base of every cilium and acts as the MTOC for axoneme assembly, is structurally identical to a centriole — both consist of 9 sets of triplet microtubules. The 9+2 arrangement (doublets) is found in the axoneme above the basal body, not in the basal body itself.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Primary (immotile) cilia differ functionally from motile cilia primarily because they:",
+          "options": [
+            "Have a 9+2 axoneme arrangement and produce coordinated beating to move mucus",
+            "Are found only on sperm cells and generate rotational propulsion",
+            "Are powered by kinesin rather than dynein and transport vesicles along the axoneme",
+            "Lack dynein arms and function as sensory antennae, transducing environmental signals",
+            "Contain actin filaments instead of microtubules and mediate cell-substrate adhesion"
+          ],
+          "answer": 3,
+          "topic": "cilia-flagella-structure",
+          "explain": "Primary cilia are immotile because they typically lack functional dynein arms. Instead, they serve as sensory antennae — their membranes and axonemes contain receptors that transduce signals such as fluid flow (renal cilia) or odorants (olfactory cilia). Motile cilia beat back and forth to move overlying fluid such as mucus.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "A patient presents with chronic recurrent respiratory infections, male infertility, and chronic sinusitis. Which cellular defect is most likely responsible?",
+          "options": [
+            "Keratin gene mutation causing fragile epithelial cells",
+            "Loss of nuclear lamin causing nuclear envelope instability",
+            "Excess γ-TuRC activity causing abnormal microtubule nucleation",
+            "Kinesin-1 mutation blocking anterograde vesicle transport in neurons",
+            "Defective axonemal dynein in cilia lining the respiratory tract and reproductive tract"
+          ],
+          "answer": 4,
+          "topic": "cilia-flagella-structure",
+          "explain": "This clinical picture is classic for primary ciliary dyskinesia (PCD), caused by defects in cilia (often axonemal dynein mutations). Impaired mucociliary clearance leads to chronic respiratory infections, and dysfunctional reproductive cilia/sperm flagella cause infertility. Keratin mutations cause blistered skin, not this constellation of symptoms.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which filament type is MOST suited to resist mechanical stretching forces in epithelial tissues, and what structural feature enables this?",
+          "options": [
+            "Microtubules; their 13-protofilament hollow tube provides compressive rigidity",
+            "Actin filaments; their polar structure enables force transmission in one direction",
+            "Intermediate filaments; their non-polar rope structure and anchorage at desmosomes enables tensile force distribution across cells",
+            "Microtubules; their dynamic instability allows them to absorb mechanical energy by depolymerizing",
+            "Actin filaments; their cross-linking by filamin creates a gel-like cortex that resists deformation"
+          ],
+          "answer": 2,
+          "topic": "intermediate-filaments",
+          "explain": "Intermediate filaments form rope-shaped non-polar structures that excel at resisting tensile (stretching) forces. Anchored to desmosomes between adjacent cells and to hemidesmosomes at the basal lamina, they distribute mechanical stress across the entire tissue. Microtubules are rigid but more suited to resisting compression and serving as transport tracks.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In the sequence of events during microtubule nucleation at the centrosome, which occurs FIRST?",
+          "options": [
+            "α/β-tubulin heterodimers spontaneously polymerize to form a short seed filament in the cytoplasm",
+            "Kinesin motor proteins deliver tubulin dimers to the centrosome from the cell periphery",
+            "The minus end of an existing microtubule detaches from the centrosome and migrates to the plus end",
+            "γ-TuSC subunits assemble into γ-TuRC within the pericentriolar matrix, creating the nucleation template",
+            "GDP-tubulin accumulates at the centrosome and is converted to GTP-tubulin by local kinases"
+          ],
+          "answer": 3,
+          "topic": "mtoc-centrosome",
+          "explain": "Microtubule nucleation at the centrosome begins when γ-TuSC units assemble into a γ-TuRC ring template within the pericentriolar matrix. This template then recruits free α/β-tubulin heterodimers from the cytoplasm, bypassing the thermodynamically unfavorable spontaneous nucleation step. GDP-tubulin conversion by kinases is not part of this mechanism.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following comparisons between kinesin and intermediate filaments is CORRECT?",
+          "options": [
+            "Both kinesin and intermediate filaments require GTP hydrolysis for their function",
+            "Both kinesin and intermediate filaments are found in prokaryotes as well as eukaryotes",
+            "Intermediate filaments, like kinesin, use ATP hydrolysis to generate mechanical force",
+            "Kinesin moves along intermediate filaments toward the minus end of the filament",
+            "Kinesin is a polar motor protein that requires track polarity; intermediate filaments are non-polar and cannot serve as kinesin tracks"
+          ],
+          "answer": 4,
+          "topic": "motor-proteins-kinesin-dynein",
+          "explain": "Kinesin is a directional motor that requires polar microtubule tracks (distinct plus and minus ends) to move specifically toward the plus end. Intermediate filaments are non-polar — they lack plus and minus ends — making it structurally impossible for motor proteins such as kinesin to walk along them directionally.",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Lecture 16: The Cytoskeleton and Cell Movement II",
+      "questions": [
+        {
+          "q": "Which of the following correctly describes the polarity of F-actin filaments?",
+          "options": [
+            "Both ends are chemically identical and grow at the same rate",
+            "The plus end (barbed end) grows faster than the minus end (pointed end) due to asymmetric monomer orientation",
+            "The minus end is exposed to the plus end of adjacent filaments in the cytoskeleton",
+            "Polarity is determined by the GTP/GDP state of the terminal monomer",
+            "F-actin has no intrinsic polarity; directionality is imposed only by binding proteins"
+          ],
+          "answer": 1,
+          "topic": "actin-filament-structure",
+          "explain": "G-actin monomers are asymmetric and polymerize head-to-tail, creating structural polarity. The plus (barbed) end grows faster than the minus (pointed) end. This polarity is essential for directional transport and cell movement.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "In the context of actin filaments, what is the role of ATP hydrolysis?",
+          "options": [
+            "It provides the energy for actin polymerization at the plus end",
+            "It weakens inter-subunit bonds in ADP-actin, promoting depolymerization and enabling treadmilling",
+            "It prevents spontaneous nucleation by capping both filament ends",
+            "It activates profilin to accelerate monomer addition",
+            "It directly stabilizes the F-actin helix structure"
+          ],
+          "answer": 1,
+          "topic": "actin-assembly-kinetics",
+          "explain": "ATP hydrolysis does not provide energy for polymerization; instead, it weakens bonds to promote disassembly and supports treadmilling. This parallels GTP hydrolysis in tubulin. A common exam trap is confusing ATP hydrolysis as the driving force for assembly.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which condition defines actin treadmilling?",
+          "options": [
+            "Both plus and minus ends simultaneously elongate while ATP hydrolysis occurs slowly",
+            "ATP-actin adds to the plus end at a rate faster than ATP hydrolysis, while ADP-actin falls off the minus end",
+            "Gelsolin severs filaments and both fragments depolymerize from their new plus ends",
+            "The minus end grows faster than the plus end, causing the filament to reverse orientation",
+            "All actin subunits hydrolyze ATP simultaneously, leading to rapid disassembly"
+          ],
+          "answer": 1,
+          "topic": "actin-assembly-kinetics",
+          "explain": "Treadmilling occurs when plus-end addition rate > ATP hydrolysis rate > minus-end addition rate. Subunits move through the filament from plus to minus end while net length remains constant. This is critical for cell migration.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the primary function of thymosin in actin regulation?",
+          "options": [
+            "It nucleates actin filament assembly at the leading edge of migrating cells",
+            "It sequesters G-actin monomers to maintain a free monomer pool and prevent uncontrolled assembly",
+            "It caps the plus end of F-actin to prevent further polymerization",
+            "It promotes ATP hydrolysis to accelerate treadmilling turnover",
+            "It severs existing actin filaments in response to calcium signals"
+          ],
+          "answer": 1,
+          "topic": "actin-binding-proteins",
+          "explain": "Thymosin binds and sequesters G-actin, controlling the available monomer pool. This prevents spontaneous polymerization and allows cells to rapidly mobilize actin when needed.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "How do formin and Arp2/3 differ in their mechanisms of nucleation?",
+          "options": [
+            "Formin caps the minus end; Arp2/3 caps the plus end",
+            "Formin nucleates linear unbranched filaments and remains at the plus end; Arp2/3 nucleates branched filaments and stays at the minus end of each new branch",
+            "Formin requires calcium activation; Arp2/3 is calcium-independent",
+            "Formin sequesters monomers; Arp2/3 severs existing filaments",
+            "Formin generates branches at 70° angles; Arp2/3 generates perpendicular branches"
+          ],
+          "answer": 1,
+          "topic": "actin-binding-proteins",
+          "explain": "This distinction is frequently tested and confused. Formin produces linear filaments (like stress fibers and filopodia) and stays processively at the plus end. Arp2/3 creates branched dendritic networks (like in lamellipodia) and anchors at the minus end of newly nucleated branches.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which actin-binding protein accelerates depolymerization and promotes treadmilling turnover?",
+          "options": [
+            "Profilin",
+            "Capping protein",
+            "Cofilin",
+            "Tropomodulin",
+            "Gelsolin"
+          ],
+          "answer": 2,
+          "topic": "actin-binding-proteins",
+          "explain": "Cofilin binds ADP-actin in older filament regions and accelerates disassembly, promoting treadmilling. This allows rapid monomer turnover essential for cell migration.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "What is the structural difference between a lamellipodium and a filopodium?",
+          "options": [
+            "Lamellipodia contain parallel actin bundles; filopodia contain branched actin networks",
+            "Lamellipodia are found only in neuronal growth cones; filopodia are found in all migrating cells",
+            "Lamellipodia contain Arp2/3-nucleated branched actin meshwork; filopodia contain formin-nucleated parallel actin bundles",
+            "Filopodia are much thicker and shorter than lamellipodia",
+            "Lamellipodia form during the contraction phase; filopodia form during protrusion"
+          ],
+          "answer": 2,
+          "topic": "cell-migration-structures",
+          "explain": "Lamellipodia are flat, broad protrusions with a branched actin network (Arp2/3 nucleated). Filopodia are thin, finger-like projections containing parallel actin bundles (formin nucleated). Both extend from the leading edge but serve different functions.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which structure serves as the primary link between the actin cytoskeleton and the extracellular matrix during cell migration?",
+          "options": [
+            "Tropomyosin",
+            "Focal adhesions containing integrin proteins",
+            "The sarcoplasmic reticulum",
+            "T tubules",
+            "Centrioles"
+          ],
+          "answer": 1,
+          "topic": "cell-migration-structures",
+          "explain": "Focal adhesions (focal contacts) are integrin-containing anchors that link the actin cytoskeleton to the extracellular matrix. They transmit traction forces and are essential for directed cell movement.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "In the four-step cell crawling cycle, which phase involves myosin-II-mediated contraction of the actin cortex?",
+          "options": [
+            "Protrusion",
+            "Attachment",
+            "Contraction, where myosin-II slides actin filaments and the cell body moves forward",
+            "Retraction",
+            "Nucleation"
+          ],
+          "answer": 2,
+          "topic": "crawling-cycle",
+          "explain": "The contraction phase uses myosin-II in the actin cortex to generate force that pulls the cell body forward. Simultaneously, unpolymerized actin flows toward the leading edge for reuse in the next protrusion cycle.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the correct sequence of events in the cell crawling cycle?",
+          "options": [
+            "Attachment → Protrusion → Contraction → Retraction",
+            "Protrusion → Attachment → Contraction → Retraction",
+            "Retraction → Contraction → Attachment → Protrusion",
+            "Protrusion → Contraction → Attachment → Retraction",
+            "Attachment → Retraction → Protrusion → Contraction"
+          ],
+          "answer": 1,
+          "topic": "crawling-cycle",
+          "explain": "The canonical order is protrusion (actin polymerization at leading edge), attachment (via integrins), contraction (myosin-II in actin cortex), and retraction (rear focal adhesion release). This cycle repeats for directional migration.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "How does Listeria monocytogenes achieve intracellular motility without using myosin?",
+          "options": [
+            "It activates intermediate filaments to generate pulling forces",
+            "It uses kinesin and dynein motors on microtubules for transport",
+            "Its ActA protein activates Arp2/3 to nucleate a dendritic actin comet tail; polymerization alone generates propulsive force",
+            "It severs actin filaments via gelsolin to create momentum",
+            "It hijacks the host cell's myosin-I motors"
+          ],
+          "answer": 2,
+          "topic": "bacterial-actin-motility",
+          "explain": "Listeria's ActA protein nucleates Arp2/3-driven branched actin assembly at one bacterial pole, creating a comet tail. Cofilin depolymerizes the older (ADP) actin regions at the tail rear. Polymerization force alone, without myosin, propels the bacterium forward.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which statement about bacterial actin-based motility is correct?",
+          "options": [
+            "Myosin-II is required to generate the propulsive force",
+            "The bacterial surface protein ActA mimics host formin function",
+            "Actin polymerization, without myosin, is sufficient to move a bacterial cell through the cytoplasm",
+            "Capping protein stabilizes the comet tail at the bacterial plus end",
+            "The process requires simultaneous activation of both Arp2/3 and formin"
+          ],
+          "answer": 2,
+          "topic": "bacterial-actin-motility",
+          "explain": "A key insight from Listeria motility is that actin polymerization alone can generate sufficient force to move objects. This contrasts with most cell migration, which relies on myosin. This system demonstrates the intrinsic power of the cytoskeleton.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "What is the primary structural difference between myosin-I and myosin-II?",
+          "options": [
+            "Myosin-I has a long tail; myosin-II has a short tail",
+            "Myosin-I is single-headed (~70 nm) and transports cargo; myosin-II is double-headed (~150 nm) and forms bipolar filaments for contraction",
+            "Myosin-I is found only in muscle; myosin-II is found in all cell types",
+            "Myosin-I moves toward the minus end of actin; myosin-II moves toward the plus end",
+            "Myosin-I requires troponin for regulation; myosin-II does not"
+          ],
+          "answer": 1,
+          "topic": "myosin-types",
+          "explain": "Myosin-I (~70 nm) has one head domain and a tail that attaches to membranes or vesicles, transporting cargo along actin toward the plus end. Myosin-II (~150 nm) has two heads and a coiled-coil tail, assembling into bipolar filaments essential for muscle contraction and cytokinesis.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "How is myosin-II organized in bipolar filaments, and what is the function of the bare region?",
+          "options": [
+            "Heads overlap at the center; the bare region is where tails interact to strengthen the filament",
+            "Molecules associate head-to-head with tails pointing outward; the bare region contains tails only, with no heads, allowing thin filaments to slide past without obstruction",
+            "Heads are distributed along the length; the bare region is where calcium binds to regulate motor activity",
+            "Tails overlap; the bare region is where cross-bridges form most frequently",
+            "The filament is helical; the bare region is the internal hollow core"
+          ],
+          "answer": 1,
+          "topic": "myosin-ii-filament",
+          "explain": "Myosin-II molecules self-assemble tail-to-tail with heads pointing outward at both ends. The central bare region (~0.2 µm) contains only tails; this allows antiparallel actin filaments to slide past each other without heads obstructing the motion.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In sarcomeric contraction, myosin heads pull actin filaments toward the center. Which statement correctly describes what happens to the filament lengths?",
+          "options": [
+            "Thick and thin filaments both shorten as their subunits are consumed",
+            "Thick and thin filaments shorten, but the subunits are not consumed",
+            "Both filament types maintain constant length; the sarcomere shortens as filaments slide past each other",
+            "Only the thin filaments shorten; thick filaments remain rigid",
+            "The plus ends of thin filaments retract toward the sarcomere center while minus ends depolymerize"
+          ],
+          "answer": 2,
+          "topic": "myosin-ii-filament",
+          "explain": "The sliding filament model shows that myosin heads walk along actin, pulling thin filaments inward. Filament lengths do not change; instead, the overlap zone increases and the sarcomere shortens. This is a frequent source of confusion on exams.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following correctly describes the relationship between a muscle fiber and myofibrils?",
+          "options": [
+            "Muscle fibers are organelles within myofibrils",
+            "Myofibrils are contractile bundles of sarcomeres running the length of the muscle fiber",
+            "Muscle fibers and myofibrils are separate structures that do not interact",
+            "Myofibrils connect muscle fibers to the extracellular matrix",
+            "Muscle fibers are formed by the fusion of multiple myofibrils"
+          ],
+          "answer": 1,
+          "topic": "muscle-hierarchy",
+          "explain": "A muscle fiber (skeletal muscle cell) is multinucleate. It contains many myofibrils, which are cylindrical bundles of sarcomeres arranged in parallel. The striated appearance of muscle comes from the aligned myofibrils.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "What is the primary function of the Z disc in muscle?",
+          "options": [
+            "It serves as the location of myosin-II motor protein heads",
+            "It anchors the plus ends of thin filaments from adjacent sarcomeres and defines the sarcomere boundary",
+            "It stores calcium for rapid release during contraction",
+            "It caps the minus ends of thick filaments",
+            "It serves as the insertion point for T tubules"
+          ],
+          "answer": 1,
+          "topic": "sarcomere-components",
+          "explain": "Z discs are protein structures at each sarcomere boundary. They anchor the plus ends of thin filaments, which face the disc. The minus ends point toward the sarcomere center. Z discs move closer together during contraction, shortening the sarcomere.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In the sarcomere, which region contains the overlap of thick and thin filaments where cross-bridges form?",
+          "options": [
+            "The bare region in the center of the thick filament",
+            "The region immediately adjacent to each Z disc",
+            "The overlap region, where heads of myosin-II interact with thin filaments",
+            "The space between adjacent sarcomeres",
+            "The region where T tubules invaginate the plasma membrane"
+          ],
+          "answer": 2,
+          "topic": "sarcomere-components",
+          "explain": "Cross-bridges form in the overlap region where thick (myosin) and thin (actin) filaments are interdigitated. The bare region at the thick filament center contains only tails and is devoid of heads.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the structural relationship between T tubules and the sarcoplasmic reticulum?",
+          "options": [
+            "They are continuous with each other; calcium flows freely between them",
+            "They are separated by a ~35 nm gap; voltage-gated channels in the T-tubule couple to calcium-release channels in the SR membrane",
+            "The SR is located inside T tubules",
+            "T tubules deliver calcium from the extracellular space directly into the SR lumen",
+            "They are completely independent structures with no functional interaction"
+          ],
+          "answer": 1,
+          "topic": "t-tubule-sr",
+          "explain": "T tubules and SR are closely apposed with a ~35 nm gap. DHPR (voltage-gated Ca²⁺ channel in T-tubule) is physically coupled to RyR (ryanodine receptor/Ca²⁺-release channel in SR). This mechanical coupling enables rapid, synchronous contraction.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which statement correctly describes the lumen of T tubules?",
+          "options": [
+            "It is filled with calcium stored from the sarcoplasmic reticulum",
+            "It is a separate cytosolic compartment distinct from the main cell cytoplasm",
+            "It is continuous with the extracellular space; the action potential travels along the T-tubule membrane",
+            "It contains tropomyosin and troponin for local regulation",
+            "It is an extension of the nuclear envelope"
+          ],
+          "answer": 2,
+          "topic": "t-tubule-sr",
+          "explain": "T tubules are invaginations of the plasma membrane; their lumen is extracellular space, not cytosol. The action potential travels along the T-tubule membrane to trigger voltage-gated channels that mechanically open RyR channels in the adjacent SR. Calcium is released from the SR lumen into the cytosol.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "What is the first event in the excitation-contraction coupling cascade?",
+          "options": [
+            "Calcium binds troponin C on the thin filament",
+            "Myosin heads bind to exposed actin-binding sites",
+            "The motor neuron fires and an action potential propagates along the muscle cell plasma membrane",
+            "Tropomyosin shifts laterally to expose myosin-binding sites",
+            "The sarcoplasmic reticulum releases calcium into the cytosol"
+          ],
+          "answer": 2,
+          "topic": "excitation-contraction-coupling",
+          "explain": "The cascade begins when a motor neuron fires, triggering an action potential that propagates along the muscle cell membrane and down the T tubule. This voltage change is sensed by DHPR, which opens RyR to release calcium. Calcium then binds troponin C.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "How does calcium trigger the exposure of myosin-binding sites on actin?",
+          "options": [
+            "Ca²⁺ directly binds to actin monomers, causing conformational change",
+            "Ca²⁺ binds troponin C, causing troponin I to release tropomyosin, which shifts ~1–1.5 nm laterally in the actin groove to expose binding sites",
+            "Ca²⁺ activates gelsolin to sever tropomyosin",
+            "Ca²⁺ dephosphorylates myosin light chains",
+            "Ca²⁺ binds directly to tropomyosin, causing it to dissociate from actin"
+          ],
+          "answer": 1,
+          "topic": "excitation-contraction-coupling",
+          "explain": "In resting muscle, tropomyosin blocks myosin-binding sites on actin. Ca²⁺ binds troponin C (the calcium-sensing subunit). This causes troponin I (inhibitory subunit) to release tropomyosin, allowing it to shift and expose the binding sites.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which troponin subunit is responsible for binding calcium?",
+          "options": [
+            "Troponin I",
+            "Troponin T",
+            "Troponin C",
+            "Troponin X",
+            "All three subunits bind calcium equally"
+          ],
+          "answer": 2,
+          "topic": "troponin-tropomyosin-regulation",
+          "explain": "Troponin C is the calcium-binding (calcium-sensing) subunit of the troponin complex. When Ca²⁺ binds, it triggers conformational changes in troponin I and troponin T, ultimately leading to tropomyosin displacement.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "What is the specific role of troponin I in muscle contraction?",
+          "options": [
+            "It binds calcium to initiate the contraction signal",
+            "It anchors the entire troponin complex to tropomyosin along the filament",
+            "It holds tropomyosin in the blocking position in the absence of Ca²⁺; upon Ca²⁺ binding to troponin C, it releases tropomyosin",
+            "It hydrolyzes ATP to provide energy for contraction",
+            "It binds directly to myosin heads to prevent cross-bridge formation"
+          ],
+          "answer": 2,
+          "topic": "troponin-tropomyosin-regulation",
+          "explain": "Troponin I is the inhibitory subunit that holds tropomyosin in a blocking position. When troponin C binds Ca²⁺, it undergoes a conformational change that pulls troponin I away from tropomyosin, allowing tropomyosin to shift and expose myosin-binding sites.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "In the sliding filament model, what prevents myosin-actin cross-bridges from forming in resting (relaxed) muscle?",
+          "options": [
+            "Calcium is absent, so myosin heads cannot bind ATP",
+            "Tropomyosin physically blocks the myosin-binding sites on actin; ATP is present but cross-bridges cannot form without calcium-triggered tropomyosin displacement",
+            "Myosin heads are bound to actin but in an inactive state",
+            "Gelsolin severs all actin filaments, preventing myosin access",
+            "The Z discs are locked in place by calcium-calmodulin complexes"
+          ],
+          "answer": 1,
+          "topic": "troponin-tropomyosin-regulation",
+          "explain": "In resting muscle, tropomyosin blocks myosin-binding sites on actin. Even though ATP is available, myosin heads cannot attach to actin. Only when Ca²⁺ rises and troponin C is occupied does tropomyosin shift to expose binding sites.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the primary function of the sarcoplasmic reticulum Ca²⁺-ATPase during muscle relaxation?",
+          "options": [
+            "It breaks down acetylcholine at the neuromuscular junction",
+            "It pumps Ca²⁺ back into the SR lumen, lowering cytosolic [Ca²⁺] and allowing tropomyosin to re-cover myosin-binding sites",
+            "It hydrolyzes ATP to provide energy for thin filament shortening",
+            "It severs actin filaments to terminate contraction",
+            "It phosphorylates tropomyosin to enhance its blocking activity"
+          ],
+          "answer": 1,
+          "topic": "excitation-contraction-coupling",
+          "explain": "During relaxation, SR Ca²⁺-ATPase pumps Ca²⁺ out of the cytosol back into the SR lumen. As [Ca²⁺] drops, Ca²⁺ dissociates from troponin C. Troponin reverts to its original conformation, tropomyosin re-covers myosin-binding sites, and cross-bridges cannot form.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following is NOT true about the three major cytoskeletal filaments?",
+          "options": [
+            "Intermediate filaments provide mechanical strength but have no associated motor proteins",
+            "Microtubules are powered by kinesin and dynein motors",
+            "Actin filaments are the thickest of the three and are powered by myosin motors",
+            "All eukaryotic cells contain actin and microtubules, but not all contain intermediate filaments",
+            "The three filament systems collaborate to perform cellular functions"
+          ],
+          "answer": 2,
+          "topic": "cytoskeleton-overview",
+          "explain": "Actin filaments (~7 nm) are the thinnest, not the thickest. Microtubules (~25 nm) are thicker than actin. Intermediate filaments (~10 nm) are intermediate in size. Actin is indeed powered by myosin, but its diameter is the smallest of the three.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which statement correctly compares the subunits and nucleotides of the three major cytoskeletal filaments?",
+          "options": [
+            "All three use the same subunit protein but different nucleotides",
+            "Intermediate filaments use keratins/lamins (no nucleotide); microtubules use tubulin (GTP); actin filaments use actin (ATP)",
+            "Microtubules and actin use the same nucleotide; intermediate filaments use a different one",
+            "All three use different proteins and different nucleotides, but the nucleotides are interchangeable",
+            "Intermediate filaments and actin both use ATP; microtubules use GTP"
+          ],
+          "answer": 1,
+          "topic": "cytoskeleton-overview",
+          "explain": "The three filaments differ in their subunits and nucleotide requirements. Intermediate filaments (keratins, lamins, vimentin) do not bind nucleotides. Microtubules use α/β-tubulin dimers with GTP. Actin filaments use G-actin monomers with ATP.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the key functional difference between nucleation by formin versus nucleation by Arp2/3 in the context of cell morphology?",
+          "options": [
+            "Formin produces structures that are wider and more stable; Arp2/3 produces thinner, more dynamic structures",
+            "Formin generates linear actin bundles (filopodia, stress fibers); Arp2/3 generates branched networks (lamellipodia) that are more flexible and form faster",
+            "Formin is activated by calcium; Arp2/3 is constitutively active",
+            "Formin produces thicker filaments; Arp2/3 produces thinner filaments",
+            "Formin is found only in migrating cells; Arp2/3 is found only in muscle"
+          ],
+          "answer": 1,
+          "topic": "actin-binding-proteins",
+          "explain": "Formin nucleates linear bundles, producing structures like stress fibers and filopodia that are rigid and directional. Arp2/3 nucleates branched networks that form a dynamic dendritic mesh (lamellipodium). The branched architecture provides greater flexibility and faster assembly.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following best explains why the bare region in the myosin-II bipolar filament is functionally important?",
+          "options": [
+            "It is where ATP binds to myosin heads to initiate the power stroke",
+            "It prevents the thick filament from shortening during contraction",
+            "It contains only tails, allowing antiparallel thin filaments to slide past without obstruction from myosin heads",
+            "It is the only region where troponin can bind",
+            "It serves as the attachment point for the Z disc"
+          ],
+          "answer": 2,
+          "topic": "myosin-ii-filament",
+          "explain": "The bare region (~0.2 µm at the center) contains only myosin tails. This allows the two sets of antiparallel thin filaments to slide inward without being blocked by myosin heads, which are located only at the two ends of the bipolar filament.",
+          "difficulty": "hard"
+        }
+      ]
+    }
+  ],
+  "topicSectionMap": {
+    "11": {
+      "nuclear-transport-overview": 0,
+      "nuclear-import-methods": 1,
+      "nls-importins": 2,
+      "nuclear-export-ran": 3,
+      "transport-regulation": 4,
+      "srebp-regulation": 4,
+      "nfat-regulation": 4,
+      "fret-ran-visualization": 5
+    },
+    "12": {
+      "compartmentalization-problem": 0,
+      "transport-vesicles-basics": 0,
+      "secretory-roadmap": 1,
+      "yeast-genetic-screen": 1,
+      "vesicular-transport-steps": 2,
+      "coat-proteins-types": 3,
+      "clathrin-coat-assembly": 3,
+      "dynamin-function": 3,
+      "vesicle-transport-microtubules": 4,
+      "rab-tethering-snare": 4,
+      "snare-fusion-mechanism": 4,
+      "snare-specificity": 4,
+      "autophagosome-vacuole-fusion": 4,
+      "transport-machinery-summary": 5
+    },
+    "13": {
+      "coat-proteins-overview": 0,
+      "copii-er-to-golgi": 1,
+      "golgi-structure-copi": 2,
+      "tgn-sorting-polarised": 3,
+      "endocytic-pathway-overview": 4,
+      "ldl-receptor-endocytosis": 5,
+      "sars-cov2-trafficking": 6
+    },
+    "14": {
+      "protein-degradation-importance": 0,
+      "protein-half-lives": 0,
+      "protein-degradation-diseases": 0,
+      "degradation-sites-overview": 1,
+      "protein-quality-control-map": 1,
+      "ubiquitin-structure": 2,
+      "ubiquitination-enzymes": 2,
+      "proteasome-structure": 2,
+      "proteasome-mechanism": 2,
+      "ubiquitin-proteasome": 2,
+      "lysosome-structure": 3,
+      "lysosome-membrane-proteins": 3,
+      "lysosomal-delivery-pathways": 3,
+      "ubiquitin-endocytic-routing": 3,
+      "autophagy-overview": 4,
+      "autophagy-types": 4,
+      "macroautophagy-steps": 4,
+      "autophagosome-vacuole-fusion": 4,
+      "autophagy-cancer": 5,
+      "beclin1-experiment": 5
+    },
+    "15": {
+      "cytoskeleton-overview": 0,
+      "intermediate-filaments": 1,
+      "microtubule-structure": 2,
+      "dynamic-instability": 2,
+      "mtoc-centrosome": 3,
+      "motor-proteins-kinesin-dynein": 4,
+      "cilia-flagella-structure": 5
+    },
+    "16": {
+      "actin-filament-structure": 0,
+      "actin-assembly-kinetics": 0,
+      "actin-binding-proteins": 1,
+      "cell-migration-structures": 2,
+      "crawling-cycle": 2,
+      "bacterial-actin-motility": 2,
+      "myosin-types": 3,
+      "myosin-ii-filament": 3,
+      "muscle-hierarchy": 4,
+      "sarcomere-components": 4,
+      "t-tubule-sr": 4,
+      "excitation-contraction-coupling": 5,
+      "troponin-tropomyosin-regulation": 5,
+      "cytoskeleton-overview": 5
+    }
+  }
+}

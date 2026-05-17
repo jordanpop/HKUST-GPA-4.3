@@ -1,0 +1,2853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cell Biology Study Guide — LIFS2040</title>
+<style>
+<style>
+:root{
+  --bg:#faf6ef; --paper:#fffdf7; --ink:#2b2a26; --muted:#6b6a63;
+  --accent:#4a6b4a; --accent-soft:#d9e4d3;
+  --wrong:#b85042; --wrong-soft:#f3dad6; --border:#d8d2c4;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.6;}
+.wrap{max-width:760px;margin:0 auto;padding:40px 24px 120px;}
+.page{display:none}
+.page.active{display:block}
+h1{font-size:2.2em;margin:0 0 8px;letter-spacing:.5px}
+h2{font-size:1.5em;color:var(--accent);border-bottom:1px solid var(--border);padding-bottom:6px;margin-top:38px}
+h3{font-size:1.15em;color:var(--ink);margin-top:24px}
+.subtitle{color:var(--muted);font-style:italic;margin-bottom:30px}
+.card{background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:22px;margin:14px 0;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.lec-row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.lec-title{font-size:1.15em;font-weight:bold}
+.btn{display:inline-block;padding:8px 18px;border:1px solid var(--accent);background:var(--paper);color:var(--accent);font-family:inherit;font-size:.95em;cursor:pointer;border-radius:4px;text-decoration:none;transition:all .2s}
+.btn:hover{background:var(--accent);color:var(--paper)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn-primary{background:var(--accent);color:var(--paper)}
+.btn-primary:hover{background:#3a5439}
+.back{margin-bottom:20px;font-size:.9em}
+.bigpic{background:var(--accent-soft);border-left:4px solid var(--accent);padding:14px 18px;margin:18px 0;font-style:italic}
+.callout{background:#fdf4d9;border-left:4px solid #c9a227;padding:14px 18px;margin:20px 0;border-radius:3px}
+.callout-title{font-weight:bold;color:#7a5e0a;margin-bottom:6px;font-style:normal}
+table{border-collapse:collapse;width:100%;margin:14px 0;background:var(--paper)}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--accent-soft)}
+.exam-trap-inline{background:#fdf4d9;border-left:3px solid #c9a227;padding:6px 12px;margin:10px 0;font-size:.92em}
+.exam-trap-inline b{color:#7a5e0a}
+.preview-q{background:var(--accent-soft);border-radius:4px;padding:14px 18px;margin:10px 0}
+.preview-q ol{margin:0;padding-left:22px}
+.lower-yield{color:var(--muted);font-size:.93em;border-top:1px dashed var(--border);padding-top:14px;margin-top:24px}
+.lower-yield ul{margin-top:6px}
+.score-bar{position:sticky;top:0;background:var(--paper);border:1px solid var(--border);padding:12px 18px;margin-bottom:20px;border-radius:4px;font-weight:bold;z-index:10;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.q-block{background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:20px;margin:18px 0}
+.q-num{color:var(--muted);font-size:.88em;margin-bottom:6px}
+.q-text{font-weight:bold;margin-bottom:14px}
+.opt{display:block;padding:10px 14px;margin:6px 0;border:1px solid var(--border);border-radius:4px;cursor:pointer;background:var(--paper);transition:background .15s}
+.opt:hover{background:var(--accent-soft)}
+.opt input{margin-right:10px}
+.opt.correct{background:var(--accent-soft);border-color:var(--accent);animation:slideIn .3s ease}
+.opt.wrong{background:var(--wrong-soft);border-color:var(--wrong);animation:slideIn .3s ease}
+.opt.disabled{cursor:default;opacity:.85}
+@keyframes slideIn{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:translateX(0)}}
+.opt.disabled:hover{background:var(--paper)}
+.opt.disabled.correct:hover{background:var(--accent-soft)}
+.opt.disabled.wrong:hover{background:var(--wrong-soft)}
+.explain{margin-top:12px;padding:12px;background:#f4efe2;border-radius:4px;font-size:.94em;color:var(--ink)}
+.explain b{color:var(--accent)}
+.summary{background:var(--paper);border:2px solid var(--accent);border-radius:6px;padding:24px;margin:30px 0}
+.summary h2{margin-top:0;color:var(--accent);border-bottom:none}
+.score-big{font-size:2.5em;color:var(--accent);font-weight:bold}
+.verdict{font-size:1.1em;margin:10px 0;font-style:italic}
+.theme-list{margin:12px 0}
+.theme-list li{margin:4px 0}
+.review-card{background:var(--paper);border:1px solid var(--wrong);border-radius:6px;padding:18px;margin:14px 0}
+.review-card .q-text{color:var(--wrong)}
+.memorize ol{padding-left:24px}
+.memorize li{margin:6px 0}
+.reveal-on-scroll{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.4,0,.2,1);will-change:opacity,transform}
+.reveal-on-scroll.is-visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+.submit-q{margin-top:10px}
+.quiz-settings{margin-top:12px;padding:10px 14px;background:var(--accent-soft);border-radius:4px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:.92em}
+.quiz-settings label{display:flex;align-items:center;gap:6px;color:var(--ink)}
+.quiz-settings select{font-family:inherit;font-size:.95em;padding:4px 8px;border:1px solid var(--border);border-radius:3px;background:var(--paper);color:var(--ink)}
+.reset-zone{text-align:center;margin-top:20px}
+.btn-danger{border-color:var(--wrong);color:var(--wrong)}
+.btn-danger:hover{background:var(--wrong);color:var(--paper)}
+.weak-highlight{background:rgba(253,222,90,.45);border-radius:3px;transition:background .3s;box-shadow:inset 3px 0 0 #c9a227}
+p.weak-highlight,li.weak-highlight,ul.weak-highlight,ol.weak-highlight,div.weak-highlight,table.weak-highlight{padding:6px 10px;margin:4px 0}
+tr.weak-highlight td,tr.weak-highlight th{background:rgba(253,222,90,.45)}
+tr.weak-highlight{box-shadow:none}
+.weak-h2{background:linear-gradient(transparent 60%,rgba(253,222,90,.55) 60%);padding:0 6px;border-radius:2px}
+/* Progress Ring + Chart Styles */
+.progress-ring-container{position:relative;width:120px;height:120px;margin:20px auto}
+.progress-ring-container svg{width:100%;height:100%}
+.progress-ring-label{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none}
+.progress-percentage{font-size:1.8em;font-weight:bold;color:var(--ink);line-height:1.2}
+.progress-score{font-size:0.9em;color:var(--muted);margin-top:4px}
+.chart-container{margin:20px 0;padding:20px;background:var(--paper);border-radius:6px}
+.bar-chart-item{display:flex;align-items:center;margin:14px 0;gap:12px}
+.bar-chart-label{width:140px;font-size:0.95em;color:var(--ink);flex-shrink:0}
+.bar-chart-bar{flex:1;height:24px;background:var(--accent-soft);border-radius:3px;position:relative;overflow:hidden;border:1px solid var(--accent)}
+.bar-chart-fill{height:100%;background:var(--accent);border-radius:2px;transition:width .6s ease;display:flex;align-items:center;justify-content:flex-end;padding-right:8px}
+.bar-chart-count{font-size:0.85em;color:var(--paper);font-weight:bold}
+.progress-badge{display:inline-block;font-size:0.85em;padding:4px 10px;background:var(--accent-soft);border-radius:4px;color:var(--ink);font-weight:500}
+.verdict-excellent{color:#2d5a2d}
+.verdict-good{color:#4a6b4a}
+.verdict-review{color:#7a6b3a}
+.verdict-weak{color:var(--wrong)}
+@media(max-width:600px){.progress-ring-container{width:100px;height:100px}.progress-percentage{font-size:1.4em}.bar-chart-label{width:100px;font-size:0.88em}}
+</style>
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div id="home" class="page active">
+  <a class="btn back" onclick="window.location.href='index.html'">← Subjects</a>
+  <h1>Cell Biology Study Guide</h1>
+  <div class="subtitle">LIFS2040 — Cell Biology, Lectures 11–23</div>
+
+  <!-- Lecture cards are generated by JS from data/2040.json (see renderHomeCards). -->
+  <div id="lecture-cards"></div>
+
+  <div style="text-align:center;margin-top:40px">
+    <button id="globalReportBtn" class="btn" disabled onclick="showGlobalReport()">Full Summary Report</button>
+  </div>
+  <div class="reset-zone">
+    <button class="btn btn-danger" onclick="resetAllProgress()">Reset All Progress</button>
+  </div>
+</div>
+
+<!--
+  NOTES PAGES go here. For each lecture you add to data/2040.json,
+  ALSO add a <div id="notes-N" class="page"> block here. See template comment block
+  at the bottom of this file for the exact pattern.
+-->
+
+<div id="notes-11" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-11" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(11)">Clear Highlights</button>
+  <h1>Lecture 11: The Nucleus II</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    The nucleus is sealed off from the cytoplasm by the nuclear envelope, yet it must constantly exchange proteins and RNA through the nuclear pore complex (核孔複合體). This lecture explains how the cell selectively imports nuclear proteins and exports RNA by using signal sequences, receptor proteins called importins and exportins, and the small GTPase Ran to set the direction of transport. Understanding this machinery matters because misregulation of nuclear transport underlies diseases ranging from viral infections to cancer.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Nuclear Transport: Overview and Directionality</h2>
+    <p data-topic="nuclear-transport-overview">
+      <ul>
+        <li>The nucleus separates the <strong>genome</strong> (基因組) from the site of mRNA translation 翻譯 in the cytoplasm 細胞質 — this is its defining function.</li>
+        <li>Two classes of molecules must cross the nuclear envelope 核膜 in opposite directions:
+          <ul>
+            <li><strong>RNA</strong> (合成於核內) — exported outward to the cytoplasm for translation.</li>
+            <li><strong>Proteins</strong> (合成於細胞質) — imported inward; examples include histones 組蛋白, DNA polymerases DNA聚合酶, RNA polymerase RNA聚合酶, and transcription factors 轉錄因子.</li>
+          </ul>
+        </li>
+        <li>All traffic passes through the <strong>nuclear pore complex (NPC)</strong> 核孔複合體; the central challenge is achieving <strong>selectivity</strong> 選擇性 and <strong>directionality</strong> 方向性.</li>
+        <li>The NPC structure (from Lecture 10) includes: cytosolic fibrils 細胞質纖維, scaffold nucleoporins 支架核孔蛋白, channel nucleoporins 通道核孔蛋白 (with disordered FG-repeat regions FG重複區), membrane ring proteins 膜環蛋白, and the nuclear basket 核籃.</li>
+      </ul>
+    </p>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Experimental Methods to Study Nuclear Import</h2>
+    <p data-topic="nuclear-import-methods">
+      The lecture presents three experimental strategies used to dissect the mechanism of nuclear transport, following a hypothesis-driven scientific approach: Question → Hypothesis → Experimental design → Results → Conclusions → Textbook knowledge.
+    </p>
+    <p data-topic="nuclear-import-methods">
+      <strong>Method 1: Electron microscopy (電子顯微鏡) with gold particles</strong>
+      <ul>
+        <li>Gold particles 金粒子 were injected into the cytosol of living cells; their position was tracked by EM at different time points after injection.</li>
+        <li><strong>Observation 1:</strong> Uncoated gold particles must be &lt;8–10 nm in diameter to enter the nucleus by passive diffusion 被動擴散.</li>
+        <li><strong>Observation 2:</strong> When coated with a nuclear protein, particles as large as <strong>20 nm</strong> in diameter can enter the nucleus — much larger than the passive diffusion limit.</li>
+        <li><strong>Observation 3:</strong> Trypsin digestion 胰蛋白酶消化 of the protein coat on the 20 nm particle prevents nuclear entry.</li>
+        <li><strong>Conclusion:</strong> Nuclear proteins carry a specific protein motif 序列基序 that is required to facilitate passage through the NPC beyond passive diffusion limits.</li>
+      </ul>
+    </p>
+    <p data-topic="nuclear-import-methods">
+      <strong>Method 2: In vitro reconstitution 體外重建 of nuclear transport (Adam and Gerace, JCB, 1990)</strong>
+      <ul>
+        <li>Digitonin 洋地黃皂苷 was used to permeabilize 使通透 the plasma membrane, creating semi-intact cells 半完整細胞 while leaving the nuclear envelope intact.</li>
+        <li>Fluorescently labelled 螢光標記 nuclear proteins were added in the presence or absence of cytoplasmic lysate 細胞質裂解液.</li>
+        <li><strong>Observation:</strong> No nuclear transport occurred without cell lysate; transport occurred normally with lysate.</li>
+        <li><strong>Conclusion:</strong> Soluble cytoplasmic proteins in the lysate are required for nuclear transport — transport is not spontaneous.</li>
+      </ul>
+    </p>
+    <p data-topic="nuclear-import-methods">
+      <strong>Identification of the NLS receptor from cytosol:</strong>
+      <ul>
+        <li>Strategy: purify cytosolic proteins that specifically bind the NLS, then test if they stimulate nuclear import.</li>
+        <li>Results: cytosol alone gave 9× import; cytosol + receptor gave 23× import; buffer + receptor gave 0× import.</li>
+        <li><strong>Conclusion:</strong> The purified receptor binds the NLS and stimulates nuclear import — but it requires additional cytosolic factors.</li>
+      </ul>
+    </p>
+    <p data-topic="nuclear-import-methods">
+      <strong>Method 3: Direct visualization using GFP 綠螢光蛋白 fusion proteins</strong>
+      <ul>
+        <li>GFP fused to a nuclear protein can be tracked in live cells by fluorescence microscopy 螢光顯微鏡.</li>
+        <li>Roger Tsien pioneered the engineering of multiple fluorescent protein variants (EBFP, ECFP, EGFP, Citrine, mOrange, mCherry, mPlum, etc.) enabling multicolour imaging; the "Brainbow" technique uses this to label individual neurons in transgenic mice with distinct colours.</li>
+        <li><strong>Insight from live imaging:</strong> Nuclear transport is a <strong>regulated and often dynamic</strong> process — proteins can move rapidly between nucleus and cytoplasm in response to signals.</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="nuclear-import-methods"><b>Exam trap:</b> Trypsin digestion of the gold-particle protein coat is a control proving the protein motif (not just any coating) is responsible for nuclear entry — do not confuse this with a non-specific size effect.</div>
+    <div class="exam-trap-inline" data-topic="nuclear-import-methods"><b>Exam trap:</b> The in vitro reconstitution experiment shows transport requires cytosolic factors, NOT just the nuclear envelope or the NLS alone. Buffer + receptor gives 0× transport, proving receptor alone is insufficient without cytosol.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Nuclear Localization Signals (NLS) and Importins</h2>
+    <p data-topic="nls-importins">
+      <ul>
+        <li>Proteins destined for the nucleus carry specific amino acid sequences called <strong>nuclear localization signals (NLS)</strong> 核定位訊號.</li>
+        <li>NLS are short stretches 短片段 of <strong>positively charged</strong> 帶正電荷 amino acids (e.g. Lys 賴胺酸, Arg 精胺酸).</li>
+        <li>The NLS amino acids are often close together in the 3D protein structure 三維蛋白質結構 but not necessarily immediately adjacent 緊鄰 in the primary sequence.</li>
+        <li>Classic example — SV40 T-antigen NLS: Pro–Pro–<b>Lys–Lys–Lys–Arg–Lys</b>–Val; mutation of a single Lys in this motif abolishes nuclear localization.</li>
+      </ul>
+    </p>
+    <p data-topic="nls-importins">
+      <strong>Proof that NLS is necessary AND sufficient:</strong>
+      <ul>
+        <li><em>Necessary:</em> Wild-type protein A (with NLS) → nucleus; mutant protein A lacking NLS (ΔNLS) → cytoplasm.</li>
+        <li><em>Sufficient:</em> Pyruvate kinase 丙酮酸激酶 (normally cytoplasmic) fused to the SV40 T-antigen NLS → accumulates in the nucleus.</li>
+      </ul>
+    </p>
+    <p data-topic="nls-importins">
+      <strong>Importins</strong> 輸入蛋白 are the receptors that carry cargo into the nucleus:
+      <ul>
+        <li>Soluble cytosolic proteins 可溶性細胞質蛋白.</li>
+        <li>Bind the NLS on the cargo protein in the cytoplasm.</li>
+        <li>Interact with the NPC by binding <strong>FG repeats</strong> FG重複序列 — the disordered regions 無序區域 of channel nucleoporins 通道核孔蛋白.</li>
+        <li>The receptor–cargo complex travels through the NPC by <strong>repeated binding, dissociating, and rebinding</strong> to adjacent FG repeats.</li>
+        <li>Once inside the nucleus, the importin dissociates from the cargo and returns to the cytoplasm.</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="nls-importins"><b>Exam trap:</b> NLS is NOT cleaved after import — unlike signal peptides for the ER, the NLS remains permanently on the protein. Do not confuse these two targeting mechanisms.</div>
+    <div class="exam-trap-inline" data-topic="nls-importins"><b>Exam trap:</b> NLS amino acids are positively charged (Lys, Arg), NOT hydrophobic. ER signal sequences are hydrophobic. Students frequently confuse these two.</div>
+
+    <!-- SVG: NLS-importin transport schematic -->
+    <div style="margin:16px 0; text-align:center;">
+      <svg width="520" height="140" style="font-family:sans-serif;font-size:12px;">
+        <!-- Cytoplasm label -->
+        <text x="10" y="20" fill="#555" font-weight="bold">Cytoplasm</text>
+        <!-- Nucleus label -->
+        <text x="10" y="120" fill="#555" font-weight="bold">Nucleus</text>
+        <!-- NPC channel -->
+        <rect x="230" y="50" width="60" height="40" rx="5" fill="#d4eaff" stroke="#4a90d9" stroke-width="1.5"/>
+        <text x="260" y="74" text-anchor="middle" fill="#2255aa">NPC</text>
+        <!-- FG repeat squiggles inside NPC -->
+        <path d="M245,58 q5,6 -5,12 q5,6 -5,12" stroke="#9ab" fill="none" stroke-width="1"/>
+        <path d="M270,58 q5,6 -5,12 q5,6 -5,12" stroke="#9ab" fill="none" stroke-width="1"/>
+        <!-- Cargo in cytoplasm -->
+        <rect x="50" y="10" width="60" height="24" rx="4" fill="#ffe4b5" stroke="#cc8800" stroke-width="1.5"/>
+        <text x="80" y="26" text-anchor="middle" fill="#774400">Cargo+NLS</text>
+        <!-- Importin in cytoplasm -->
+        <rect x="120" y="10" width="60" height="24" rx="4" fill="#b5d5ff" stroke="#2255aa" stroke-width="1.5"/>
+        <text x="150" y="26" text-anchor="middle" fill="#002288">Importin</text>
+        <!-- Arrow cargo+importin binding -->
+        <line x1="110" y1="22" x2="120" y2="22" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+        <!-- Complex moving to NPC -->
+        <rect x="175" y="28" width="50" height="20" rx="4" fill="#ffe4b5" stroke="#cc8800" stroke-width="1.2"/>
+        <text x="200" y="42" text-anchor="middle" fill="#774400" font-size="10">Complex</text>
+        <line x1="180" y1="22" x2="184" y2="33" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+        <!-- Arrow through NPC -->
+        <line x1="230" y1="62" x2="200" y2="62" stroke="#555" stroke-width="1.5" stroke-dasharray="4,2"/>
+        <!-- Cargo released in nucleus -->
+        <rect x="50" y="105" width="60" height="24" rx="4" fill="#ffe4b5" stroke="#cc8800" stroke-width="1.5"/>
+        <text x="80" y="121" text-anchor="middle" fill="#774400">Cargo (free)</text>
+        <!-- Importin returned -->
+        <rect x="330" y="10" width="60" height="24" rx="4" fill="#b5d5ff" stroke="#2255aa" stroke-width="1.5"/>
+        <text x="360" y="26" text-anchor="middle" fill="#002288">Importin ↩</text>
+        <!-- Down arrow from NPC to nucleus -->
+        <line x1="260" y1="90" x2="260" y2="105" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+        <text x="270" y="102" fill="#555" font-size="10">releases cargo</text>
+        <!-- Return arrow importin -->
+        <line x1="290" y1="62" x2="320" y2="30" stroke="#2255aa" stroke-width="1.2" stroke-dasharray="3,2" marker-end="url(#arr2)"/>
+        <defs>
+          <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6 Z" fill="#555"/>
+          </marker>
+          <marker id="arr2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6 Z" fill="#2255aa"/>
+          </marker>
+        </defs>
+        <!-- nuclear envelope line -->
+        <line x1="0" y1="95" x2="520" y2="95" stroke="#888" stroke-width="2" stroke-dasharray="6,3"/>
+        <text x="430" y="92" fill="#888" font-size="10">nuclear envelope</text>
+      </svg>
+      <div style="font-size:11px;color:#666;margin-top:4px;">Importin binds cargo (NLS) in cytoplasm → translocates through NPC via FG repeats → releases cargo in nucleus → returns to cytoplasm</div>
+    </div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Nuclear Export and the Role of Ran GTPase in Directionality</h2>
+    <p data-topic="nuclear-export-ran">
+      <strong>Nuclear export</strong> 核輸出 mirrors import but in reverse:
+      <ul>
+        <li>Export requires <strong>nuclear export signals (NES)</strong> 核輸出訊號 on the cargo.</li>
+        <li>Export receptors called <strong>exportins</strong> 輸出蛋白 bind cargo inside the nucleus and carry it out through the NPC.</li>
+        <li>Key asymmetry question: what determines the direction of transport for importins vs. exportins?</li>
+      </ul>
+    </p>
+    <p data-topic="nuclear-export-ran">
+      <strong>GTPases</strong> GTP酶 are molecular switches 分子開關 that cycle between a GTP-bound active state and a GDP-bound inactive state. Three examples:
+      <ul>
+        <li><strong>Ran GTPases</strong> — facilitate transport of proteins to/from the nucleus.</li>
+        <li><strong>Rab GTPases</strong> — regulate vesicle trafficking 囊泡運輸.</li>
+        <li><strong>Ras GTPases</strong> — cell differentiation 細胞分化 and growth signalling 生長訊號傳遞.</li>
+      </ul>
+    </p>
+    <p data-topic="nuclear-export-ran">
+      <strong>Ran GTPase</strong> 核轉運GTP酶 cycle:
+      <ul>
+        <li>Ran is a small GTPase 小型GTP酶 that cycles between <strong>Ran-GTP</strong> (active) and <strong>Ran-GDP</strong> (inactive).</li>
+        <li><strong>Ran-GEF</strong> (guanine nucleotide exchange factor 鳥嘌呤核苷酸交換因子) — promotes exchange of GDP for GTP; located in the <strong>nucleus</strong>.</li>
+        <li><strong>Ran-GAP</strong> (GTPase activating protein GTP酶激活蛋白) — promotes hydrolysis 水解 of GTP → GDP + Pi; located in the <strong>cytoplasm</strong>.</li>
+        <li>Ran can diffuse freely 自由擴散 between nucleus and cytoplasm through the NPC.</li>
+        <li>Result: <strong>most Ran in the nucleus is Ran-GTP; most Ran in the cytoplasm is Ran-GDP</strong> — a steep gradient 梯度 across the nuclear envelope.</li>
+      </ul>
+    </p>
+    <p data-topic="nuclear-export-ran">
+      <strong>How Ran-GTP gradient provides directionality to nuclear IMPORT:</strong>
+      <ol>
+        <li>Free importin binds cargo (via NLS) in the cytoplasm where Ran-GDP predominates.</li>
+        <li>The importin–cargo complex translocates through the NPC into the nucleus.</li>
+        <li>Inside the nucleus, Ran-GTP (abundant) binds importin → causes rapid <strong>dissociation</strong> of cargo from importin.</li>
+        <li>Importin returns to cytoplasm bound to Ran-GTP.</li>
+        <li>In the cytoplasm, Ran-GAP promotes GTP hydrolysis → Ran-GDP dissociates from importin, freeing importin for another cycle.</li>
+        <li>Ran-GDP diffuses back to nucleus where Ran-GEF recharges it to Ran-GTP.</li>
+        <li>The whole cycle is energetically driven by GTP hydrolysis.</li>
+      </ol>
+    </p>
+    <p data-topic="nuclear-export-ran">
+      <strong>How Ran-GTP gradient provides directionality to nuclear EXPORT:</strong>
+      <ol>
+        <li>Inside the nucleus, Ran-GTP + exportin + cargo (with NES) form a <strong>stable ternary complex</strong> 三元複合體.</li>
+        <li>Exportin allows the complex to traverse the NPC to the cytoplasm.</li>
+        <li>In the cytoplasm, Ran-GAP promotes GTP hydrolysis by Ran → Ran-GDP.</li>
+        <li>This GTP hydrolysis causes dissociation of the Ran/exportin/cargo complex, releasing cargo into cytoplasm.</li>
+      </ol>
+    </p>
+
+    <!-- SVG: Ran-GTP/GDP compartment gradient -->
+    <div style="margin:16px 0;text-align:center;">
+      <svg width="460" height="130" style="font-family:sans-serif;font-size:12px;">
+        <!-- Cytoplasm box -->
+        <rect x="10" y="10" width="200" height="50" rx="6" fill="#fff9e6" stroke="#cc9900" stroke-width="1.5"/>
+        <text x="110" y="30" text-anchor="middle" font-weight="bold" fill="#885500">Cytoplasm</text>
+        <text x="110" y="50" text-anchor="middle" fill="#885500">Ran-GDP (dominant) · Ran-GAP here</text>
+        <!-- Nucleus box -->
+        <rect x="250" y="10" width="200" height="50" rx="6" fill="#e6f0ff" stroke="#2255aa" stroke-width="1.5"/>
+        <text x="350" y="30" text-anchor="middle" font-weight="bold" fill="#002288">Nucleus</text>
+        <text x="350" y="50" text-anchor="middle" fill="#002288">Ran-GTP (dominant) · Ran-GEF here</text>
+        <!-- Arrow across NPC -->
+        <line x1="210" y1="35" x2="250" y2="35" stroke="#555" stroke-width="1.5" stroke-dasharray="4,2"/>
+        <text x="230" y="30" text-anchor="middle" fill="#555" font-size="10">NPC</text>
+        <!-- Import label -->
+        <rect x="10" y="80" width="200" height="40" rx="4" fill="#fff0cc" stroke="#cc9900" stroke-width="1"/>
+        <text x="110" y="96" text-anchor="middle" fill="#774400" font-size="11">Import: importin releases cargo</text>
+        <text x="110" y="112" text-anchor="middle" fill="#774400" font-size="11">when Ran-GTP enters</text>
+        <!-- Export label -->
+        <rect x="250" y="80" width="200" height="40" rx="4" fill="#ddeeff" stroke="#2255aa" stroke-width="1"/>
+        <text x="350" y="96" text-anchor="middle" fill="#002288" font-size="11">Export: Ran-GTP stabilises</text>
+        <text x="350" y="112" text-anchor="middle" fill="#002288" font-size="11">exportin–cargo complex</text>
+      </svg>
+      <div style="font-size:11px;color:#666;margin-top:4px;">Ran-GTP (nucleus) vs Ran-GDP (cytoplasm) gradient — the engine of directional transport</div>
+    </div>
+
+    <div class="exam-trap-inline" data-topic="nuclear-export-ran"><b>Exam trap:</b> Ran-GEF is in the NUCLEUS (makes Ran-GTP); Ran-GAP is in the CYTOPLASM (converts Ran-GTP → Ran-GDP). Students frequently reverse these locations.</div>
+    <div class="exam-trap-inline" data-topic="nuclear-export-ran"><b>Exam trap:</b> Ran-GTP promotes RELEASE of importin cargo in the nucleus AND STABILIZES the exportin–cargo complex in the nucleus — opposite effects depending on import vs. export receptor. A drug blocking GEF (blocking GDP→GTP exchange) would prevent importins from releasing cargo in the nucleus.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Regulation of Nuclear Transport</h2>
+    <p data-topic="transport-regulation">
+      Transport through the NPC can be regulated by three general mechanisms:
+      <ul>
+        <li><strong>Phosphorylation</strong> 磷酸化 of amino acids close to the NLS or NES — can mask or expose the signal, altering access of importin/exportin.</li>
+        <li><strong>Inhibitory proteins</strong> 抑制蛋白 that mask the signal sequences — bind to and cover the NLS or NES, preventing receptor recognition.</li>
+        <li><strong>Anchoring proteins</strong> 錨定蛋白 that retain proteins in the cytosol or another compartment — physically prevent the cargo from reaching the NPC.</li>
+      </ul>
+    </p>
+    <p data-topic="transport-regulation">
+      <strong>Example 1: Dorsal protein in Drosophila embryo</strong>
+      <ul>
+        <li>The transcription regulatory protein 轉錄調控蛋白 Dorsal is excluded from nuclei at the dorsal side (top) of the embryo but concentrated in nuclei at the ventral side (bottom).</li>
+        <li>This spatial regulation of nuclear import creates a transcription factor gradient that patterns the embryo along the dorsal-ventral axis 背腹軸.</li>
+      </ul>
+    </p>
+    <p data-topic="srebp-regulation">
+      <strong>Example 2: SREBP regulation of cholesterol biosynthesis</strong>
+      <ul>
+        <li><strong>SREBP</strong> (sterol regulatory element-binding protein 固醇調控元件結合蛋白) is a transcription regulator 轉錄調控子 controlling expression of cholesterol biosynthetic enzymes 膽固醇生物合成酶.</li>
+        <li><strong>High cholesterol</strong> 高膽固醇: SREBP is anchored in the ER membrane by interaction with <strong>SCAP</strong>, an ER membrane protein 內質網膜蛋白 that binds cholesterol — nuclear import is blocked.</li>
+        <li><strong>Low cholesterol</strong> 低膽固醇:
+          <ol>
+            <li>The cholesterol binding site on SCAP is empty → SCAP changes conformation 構象.</li>
+            <li>SCAP + SREBP are packaged into transport vesicles 運輸囊泡 and delivered to the Golgi apparatus 高爾基體.</li>
+            <li>At the Golgi, proteases 蛋白酶 (site 1 and site 2 proteases) cleave SREBP, freeing its cytosolic domain 胞質域 from the membrane.</li>
+            <li>The released SREBP domain moves into the nucleus to activate transcription of cholesterol biosynthesis genes.</li>
+          </ol>
+        </li>
+        <li>This is an example of regulation by <strong>anchoring</strong> (ER membrane) combined with <strong>proteolytic release</strong> 蛋白水解釋放.</li>
+      </ul>
+    </p>
+    <p data-topic="nfat-regulation">
+      <strong>Example 3: NF-AT and T-cell activation</strong>
+      <ul>
+        <li><strong>NF-AT</strong> (nuclear factor of activated T cells 活化T細胞核因子) is a transcription regulatory protein that resides in the cytosol in a <strong>phosphorylated</strong> state 磷酸化狀態 in resting T cells — NLS is masked by phosphate groups, NES is exposed → protein stays in cytoplasm.</li>
+        <li>Upon T-cell activation, cytoplasmic Ca²⁺ 鈣離子 rises → <strong>calcineurin</strong> 鈣調磷酸酶 (a protein phosphatase 蛋白磷酸酶) is activated → dephosphorylates 去磷酸化 NF-AT.</li>
+        <li>Dephosphorylated NF-AT: NLS exposed, NES masked → imported into nucleus → activates gene transcription 基因轉錄 → T cell activation.</li>
+        <li>Some <strong>immunosuppressive drugs</strong> 免疫抑制藥物 (e.g. cyclosporin) inhibit calcineurin → NF-AT remains phosphorylated and cytoplasmic → T cell activation is blocked.</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="transport-regulation"><b>Exam trap:</b> SREBP is regulated by anchoring in the ER (not direct NLS masking) — its nuclear import requires physical cleavage at the Golgi. Students may misclassify this as simple phosphorylation regulation.</div>
+    <div class="exam-trap-inline" data-topic="nfat-regulation"><b>Exam trap:</b> In resting T cells NF-AT is phosphorylated → cytoplasmic (NES exposed). Upon activation, calcineurin dephosphorylates NF-AT → NLS exposed → nuclear. Phosphorylation here promotes EXPORT (not import) — the opposite of what students may assume.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="5">
+    <h2>6. Visualizing Ran-GTP: FRET-Based Molecular Probe</h2>
+    <p data-topic="fret-ran-visualization">
+      <strong>Fluorescence resonance energy transfer (FRET)</strong> 螢光共振能量轉移 is a technique to detect molecular proximity 分子接近性:
+      <ul>
+        <li>Two fluorophores 螢光團 are used: <strong>CFP</strong> (cyan fluorescent protein 青色螢光蛋白) and <strong>YFP</strong> (yellow fluorescent protein 黃色螢光蛋白).</li>
+        <li>Excitation 激發 at 435 nm hits CFP.</li>
+        <li>If CFP and YFP are <strong>far apart</strong>: CFP emits cyan signal; no FRET.</li>
+        <li>If CFP and YFP are <strong>close together</strong> (within ~10 nm): energy is transferred from CFP to YFP → reduced CFP signal + increased YFP signal = FRET occurs.</li>
+        <li>The ratio I<sub>FRET</sub>/I<sub>CFP</sub> reports the level of FRET and thus proximity of the two fluorophores.</li>
+      </ul>
+    </p>
+    <p data-topic="fret-ran-visualization">
+      <strong>Ran-GTP FRET probe</strong> (Kalab et al., Science, 2002):
+      <ul>
+        <li>Probe design: YFP–RBD–CFP construct, where <strong>RBD</strong> = Ran-GTP binding domain 結合域.</li>
+        <li><strong>Without Ran-GTP:</strong> RBD adopts a compact conformation → YFP and CFP are close → <strong>FRET occurs</strong> → reduced CFP, enhanced YFP (I<sub>FRET</sub>/I<sub>CFP</sub> is high).</li>
+        <li><strong>With Ran-GTP:</strong> Ran-GTP binds RBD → opens/extends conformation → YFP and CFP move apart → <strong>no FRET</strong> → CFP and YFP signals unchanged (I<sub>FRET</sub>/I<sub>CFP</sub> is low).</li>
+        <li>Low I<sub>FRET</sub>/I<sub>CFP</sub> ratio = high Ran-GTP level in that location.</li>
+      </ul>
+    </p>
+    <p data-topic="fret-ran-visualization">
+      <strong>Experiment 1 — Ran-GTP in interphase nucleus</strong> (Xenopus 非洲爪蟾 sperm nuclei in interphase egg extracts):
+      <ul>
+        <li>Observation: I<sub>FRET</sub>/I<sub>CFP</sub> ratio was lowest <strong>inside the nucleus</strong>.</li>
+        <li>Control: adding RanT24N (a Ran-GEF inhibitor 抑制劑) abolished the nuclear enrichment.</li>
+        <li>Conclusion: <strong>Ran-GTP is highly enriched in the nucleus</strong> — confirming the model that Ran-GEF in the nucleus generates a high Ran-GTP zone.</li>
+      </ul>
+    </p>
+    <p data-topic="fret-ran-visualization">
+      <strong>Experiment 2 — Ran-GTP during mitosis</strong> (Xenopus sperm nuclei in mitotic egg extracts):
+      <ul>
+        <li>Observation: I<sub>FRET</sub>/I<sub>CFP</sub> ratio was lowest in the <strong>central spindle</strong> region 中央紡錘體 around chromosomes 染色體.</li>
+        <li>Conclusion: <strong>Ran-GTP is highly enriched around the central spindle during mitosis</strong> — suggesting Ran-GTP plays roles beyond nuclear transport, including spindle assembly.</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="fret-ran-visualization"><b>Exam trap:</b> A LOW I<sub>FRET</sub>/I<sub>CFP</sub> ratio means HIGH Ran-GTP (probe is open, no FRET). Students may intuitively assume high signal = high Ran-GTP — the logic is inverted for this probe.</div>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Trypsin digestion of gold-particle protein coat proves the <em>protein motif</em>, not particle size alone, is responsible for nuclear entry.</li>
+      <li>In vitro reconstitution: buffer + receptor alone = 0× import — cytosol is also required; receptor alone is insufficient.</li>
+      <li>NLS is NOT cleaved after import (unlike ER signal peptides); it remains permanently on the protein.</li>
+      <li>NLS amino acids are positively charged (Lys, Arg) — NOT hydrophobic like ER signal sequences.</li>
+      <li>Ran-GEF is in the NUCLEUS (generates Ran-GTP); Ran-GAP is in the CYTOPLASM (converts Ran-GTP → Ran-GDP). Do not reverse these.</li>
+      <li>Ran-GTP causes cargo RELEASE from importin (in nucleus) but STABILIZES exportin–cargo complex (in nucleus) — opposite effects for import vs. export.</li>
+      <li>A drug blocking Ran-GEF (blocking GDP→GTP exchange) → no Ran-GTP in nucleus → importins cannot release cargo in nucleus.</li>
+      <li>SREBP regulation involves ER anchoring + Golgi proteolytic cleavage, not simple NLS phosphorylation.</li>
+      <li>NF-AT phosphorylation promotes cytoplasmic retention (NES exposed); dephosphorylation by calcineurin exposes NLS and drives nuclear import — phosphorylation here causes EXPORT, not import.</li>
+      <li>Low I<sub>FRET</sub>/I<sub>CFP</sub> in FRET probe = HIGH Ran-GTP concentration (probe is open, FRET cannot occur). The relationship is inverse.</li>
+      <li>During mitosis, Ran-GTP is enriched around chromosomes/central spindle — not just inside the nucleus.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li><strong>NLS</strong> = short, positively charged amino acid sequence (Lys/Arg-rich) — necessary AND sufficient for nuclear import; remains on protein after import.</li>
+      <li><strong>Importin</strong> binds NLS in cytoplasm → translocates through NPC via FG-repeat interactions → releases cargo in nucleus when Ran-GTP binds.</li>
+      <li><strong>Exportin</strong> binds cargo (NES) + Ran-GTP inside nucleus → stable ternary complex → traverses NPC → Ran-GAP in cytoplasm hydrolyses GTP → complex dissociates.</li>
+      <li><strong>Ran-GEF in nucleus</strong> → Ran-GTP high in nucleus; <strong>Ran-GAP in cytoplasm</strong> → Ran-GDP high in cytoplasm — this gradient is the engine of directionality.</li>
+      <li>Gold particle EM experiment: uncoated &lt;8–10 nm passive; coated nuclear protein up to 20 nm; trypsin removes coat → no entry.</li>
+      <li>In vitro reconstitution: digitonin permeabilizes plasma membrane → semi-intact cells; transport requires cytoplasmic lysate; cytosol alone = 9×, cytosol + receptor = 23×, buffer + receptor = 0×.</li>
+      <li>SV40 T-antigen NLS: Pro–Pro–Lys–Lys–Lys–Arg–Lys–Val; single Lys mutation abolishes localization; NLS is sufficient to redirect cytoplasmic pyruvate kinase to the nucleus.</li>
+      <li><strong>Three mechanisms of regulation:</strong> (1) phosphorylation near signal, (2) inhibitory protein masking signal, (3) anchoring in cytosol/compartment.</li>
+      <li><strong>SREBP</strong>: anchored in ER by SCAP (high cholesterol) → low cholesterol → SCAP changes conformation → transported to Golgi → proteolytic cleavage → released domain enters nucleus.</li>
+      <li><strong>NF-AT</strong>: phosphorylated (resting T cell) → cytoplasmic; calcineurin dephosphorylates (high Ca²⁺, activated T cell) → nuclear; immunosuppressants block calcineurin.</li>
+      <li><strong>FRET probe logic</strong>: no Ran-GTP → FRET (probe closed, low I<sub>FRET</sub>/I<sub>CFP</sub> is NOT the case here — reversed: low ratio = high Ran-GTP = probe open = no FRET). Ran-GTP enriched in nucleus (interphase) and around spindle (mitosis).</li>
+      <li>GTPase family: Ran (nuclear transport), Rab (vesicle trafficking), Ras (cell differentiation/growth signalling).</li>
+    </ol>
+  </div>
+</div>
+
+<div id="notes-12" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-12" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(12)">Clear Highlights</button>
+  <h1>Lecture 12: Vesicular Traffic, Secretion and Endocytosis-I</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    Eukaryotic cells are divided into membrane-bound compartments, creating a logistical challenge: how do proteins and molecules move from where they are made to where they are needed? This lecture introduces vesicular transport — the cell's delivery system — and establishes the secretory pathway roadmap (ER → Golgi → plasma membrane) discovered by George Palade. It then dissects the molecular principles underlying each step: how coat proteins deform membranes to bud vesicles, how dynamin pinches them off, how microtubules serve as tracks, and how Rab proteins, tethering factors, and SNAREs ensure vesicles dock and fuse only with the correct target compartment.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Introduction: Why Vesicular Transport Matters</h2>
+
+    <p data-topic="compartmentalization-problem">
+      <strong>Compartmentalization</strong> (區室化) — eukaryotic cells contain many membrane-enclosed organelles; proteins synthesized in the cytoplasm must be delivered to the correct compartment to function.
+      <ul>
+        <li>Problem 1: Nuclear proteins (transcription factors, DNA polymerases) synthesized in cytoplasm must reach the nucleus — solved by <strong>Nuclear Pore Complex (核孔複合體)</strong> mediated gated transport.</li>
+        <li>Problem 2: Secreted proteins (growth factors, insulin, hormones) must travel from inside the cell to outside — solved by the <strong>secretory transport pathway (分泌運輸途徑)</strong>.</li>
+        <li>Problem 3: Extracellular molecules (nutrients, cholesterol, ions) must be brought into the cell — solved by the <strong>endocytic transport pathway (胞吞運輸途徑)</strong>.</li>
+      </ul>
+    </p>
+
+    <p data-topic="transport-vesicles-basics">
+      <strong>Transport vesicles (運輸囊泡)</strong> — the carriers mediating both secretory and endocytic pathways:
+      <ul>
+        <li>Small, spherical (球形), membrane-enclosed (膜包被) structures.</li>
+        <li>Enriched with specific <strong>cargo proteins (貨物蛋白)</strong> destined for a target compartment.</li>
+        <li>Physiological importance: pancreatic acinar cells (胰臟腺泡細胞) secrete digestive enzymes from <strong>zymogen granules (酶原顆粒, ZG)</strong>; neurons store neurotransmitters in <strong>synaptic vesicles (突觸囊泡)</strong> released at the synapse.</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="compartmentalization-problem"><b>Exam trap:</b> The secretory pathway and endocytic pathway are both mediated by vesicular carriers — do not confuse them. Secretory = inside to outside (or to organelles); endocytic = outside to inside.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. The Secretory Pathway Roadmap</h2>
+
+    <p data-topic="secretory-roadmap">
+      <strong>George Palade (喬治·帕拉德)</strong> — "Father of modern cell biology"; Nobel Prize in Physiology and Medicine, 1974; established the secretory pathway route: <strong>ER → Golgi → Plasma membrane</strong>.
+      <ul>
+        <li>Cargo proteins enter the <strong>endoplasmic reticulum (內質網, ER)</strong> lumen, travel through <strong>Golgi cisternae (高爾基體扁囊)</strong>, and exit via secretory vesicles (分泌囊泡) / zymogen granules to the plasma membrane or extracellular space.</li>
+        <li>Endocytic arm: plasma membrane → endocytic vesicle → early endosome (早期核內體) → recycling endosome (回收核內體) → late endosome (晚期核內體) → lysosome (溶酶體).</li>
+        <li>Fluorescent tagging of cargo proteins allowed direct visualization of trafficking along the secretory pathway.</li>
+      </ul>
+    </p>
+
+    <p data-topic="yeast-genetic-screen">
+      <strong>Yeast genetic screen (酵母菌遺傳篩選)</strong> — Novick &amp; Schekman (1979, 1980) used temperature-sensitive mutants of <em>Saccharomyces cerevisiae</em> to identify genes required for secretion:
+      <ul>
+        <li>At restrictive temperature, secretory mutants accumulated secretory proteins at defined steps rather than secreting them.</li>
+        <li><strong>Secretory mutant A</strong>: protein accumulates in <strong>ER</strong> (block at ER exit).</li>
+        <li><strong>Secretory mutant B</strong>: protein accumulates in <strong>Golgi apparatus</strong> (block at Golgi exit).</li>
+        <li><strong>Secretory mutant C</strong>: protein accumulates in <strong>transport vesicles</strong> (block at vesicle fusion with plasma membrane).</li>
+        <li>Wild-type yeast can be separated from secretory mutants by <strong>density gradient centrifugation (密度梯度離心)</strong> — mutants are denser because they accumulate vesicles/organelles.</li>
+        <li>Identified <strong>23 complementation groups (互補群)</strong> (SEC genes) required for post-translational events in the secretory pathway (Cell, 1980).</li>
+        <li>Randy Schekman shared the <strong>2013 Nobel Prize</strong> in Physiology or Medicine for this work.</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="yeast-genetic-screen"><b>Exam trap:</b> Secretory mutant A accumulates protein in the ER (not Golgi); mutant B in the Golgi; mutant C in transport vesicles — each reflects where the block occurs in the sequential pathway.</div>
+
+    <!-- SVG: Secretory pathway roadmap -->
+    <div style="margin:16px 0; text-align:center;">
+      <svg width="520" height="70" viewBox="0 0 520 70" style="font-family:sans-serif;font-size:13px;">
+        <rect x="5" y="20" width="80" height="30" rx="6" fill="#4caf50" stroke="#388e3c" stroke-width="1.5"/>
+        <text x="45" y="40" text-anchor="middle" fill="white" font-weight="bold">ER</text>
+        <polygon points="90,35 105,28 105,42" fill="#388e3c"/>
+        <rect x="110" y="20" width="80" height="30" rx="6" fill="#4caf50" stroke="#388e3c" stroke-width="1.5"/>
+        <text x="150" y="40" text-anchor="middle" fill="white" font-weight="bold">Golgi</text>
+        <polygon points="195,35 210,28 210,42" fill="#388e3c"/>
+        <rect x="215" y="20" width="130" height="30" rx="6" fill="#4caf50" stroke="#388e3c" stroke-width="1.5"/>
+        <text x="280" y="40" text-anchor="middle" fill="white" font-weight="bold">Plasma membrane</text>
+        <text x="45" y="65" text-anchor="middle" fill="#555" font-size="11">Entry point</text>
+        <text x="150" y="65" text-anchor="middle" fill="#555" font-size="11">Processing</text>
+        <text x="280" y="65" text-anchor="middle" fill="#555" font-size="11">Secretion / delivery</text>
+      </svg>
+    </div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Essential Steps of Vesicular Transport</h2>
+
+    <p data-topic="vesicular-transport-steps">
+      Every vesicular transport event has <strong>three essential steps (三個關鍵步驟)</strong>:
+      <ul>
+        <li><strong>Step 1 — Vesicle budding (囊泡出芽) and cargo packaging (貨物包裝)</strong>: coat proteins deform the donor membrane; cargo receptors select cargo; dynamin pinches the vesicle off.</li>
+        <li><strong>Step 2 — Vesicle transport (囊泡運輸)</strong>: vesicles are delivered along microtubule tracks (微管軌道) from donor to acceptor compartment.</li>
+        <li><strong>Step 3 — Vesicle fusion (囊泡融合) with target organelle</strong>: vesicle docks and fuses with the correct target membrane; cargo is released.</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="vesicular-transport-steps"><b>Exam trap:</b> All three steps — budding, transport, and fusion — are required for vesicular traffic. Missing any one step blocks cargo delivery entirely.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Vesicle Budding: Coat Proteins, Clathrin, and Dynamin</h2>
+
+    <p data-topic="coat-proteins-types">
+      <strong>Coat proteins (外被蛋白)</strong> — polymerize on the cytosolic face of donor membranes to force membrane deformation into a curved bud:
+      <ul>
+        <li><strong>Clathrin (囊格蛋白)</strong> — mediates endocytosis from plasma membrane; also Golgi → endosome transport. Forms a cage-like lattice structure visible by EM.</li>
+        <li><strong>COPI (COP I 蛋白)</strong> — mediates Golgi → ER (retrograde, 逆行) transport and intra-Golgi transport.</li>
+        <li><strong>COPII (COP II 蛋白)</strong> — mediates ER → Golgi (anterograde, 順行) transport. Scale bar ~100 nm.</li>
+        <li>Mechanism of membrane deformation: coat proteins polymerize into <strong>concave-shaped cage structures (凹形籠狀結構)</strong> that physically force the lipid bilayer to curve.</li>
+        <li>Cargo selection: <strong>cargo receptors (貨物受體)</strong> on the donor membrane recognize specific cargo molecules and concentrate them into the forming vesicle.</li>
+      </ul>
+    </p>
+
+    <p data-topic="clathrin-coat-assembly">
+      <strong>Clathrin-coated vesicle assembly sequence (有網格蛋白外被囊泡裝配順序)</strong>:
+      <ol>
+        <li>Cargo proteins recognized by <strong>cargo receptor (貨物受體)</strong>.</li>
+        <li>Cargo receptor recruits <strong>adaptin (接合蛋白)</strong> — adaptor protein linking cargo receptor to clathrin.</li>
+        <li>Adaptin recruits <strong>clathrin (囊格蛋白)</strong>.</li>
+        <li>Clathrin polymerizes to form first a <strong>clathrin-coated membrane patch (有網格蛋白外被膜片)</strong>, then a <strong>clathrin-coated pit (有網格蛋白外被小窩)</strong>.</li>
+        <li>Clathrin-coated pit pinches off from the plasma membrane — requires <strong>dynamin (液泡素)</strong>.</li>
+        <li>Clathrin coat is released from the vesicle (<strong>uncoating</strong>, 去外被), producing a <strong>naked transport vesicle (裸露運輸囊泡)</strong>.</li>
+      </ol>
+      <em>EM observation:</em> Clathrin-coated pits (~0.2 µm) visible on inner surface of plasma membrane of cultured skin cells.
+    </p>
+
+    <p data-topic="dynamin-function">
+      <strong>Dynamin (液泡素)</strong> — a GTPase (GTP 水解酶) that pinches clathrin-coated vesicles off the donor membrane:
+      <ul>
+        <li>Forms a <strong>dynamin helix (液泡素螺旋)</strong> around the membrane neck of the budding vesicle.</li>
+        <li><strong>GTP hydrolysis (GTP 水解)</strong> drives conformational change in the dynamin ring, constricting and severing the membrane neck.</li>
+        <li><em>Genetic evidence:</em> Temperature-sensitive mutations in dynamin (in <em>Drosophila</em>) cause accumulation of clathrin-coated pits that fail to pinch off — visible by EM as long membrane tubules with attached pits.</li>
+        <li><em>In vivo evidence:</em> Dynamin mutant <em>Drosophila</em> are paralyzed at high temperature (25°C) because synaptic vesicle recycling fails; wild-type flies are unaffected.</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="dynamin-function"><b>Exam trap:</b> Dynamin is specifically required for the <em>scission (切斷)</em> step — not for coat assembly or cargo selection. Dynamin mutants accumulate coated pits that never fully pinch off.</div>
+
+    <div class="exam-trap-inline" data-topic="coat-proteins-types"><b>Exam trap:</b> COPI mediates <em>retrograde</em> (Golgi to ER) traffic; COPII mediates <em>anterograde</em> (ER to Golgi) traffic; clathrin mediates endocytosis and Golgi-to-endosome traffic. Do not mix up directions.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Vesicle Transport and Fusion: Rab Proteins, Tethering Factors, and SNAREs</h2>
+
+    <p data-topic="vesicle-transport-microtubules">
+      <strong>Vesicle transport along microtubules (沿微管的囊泡運輸)</strong>:
+      <ul>
+        <li>Microtubules (微管) serve as intracellular highways — cells contain a dense network of microtubule tracks.</li>
+        <li>Vesicles (green fluorescence) can be visualized moving along microtubule tracks (red fluorescence) by live-cell fluorescence microscopy.</li>
+        <li>Motor proteins (馬達蛋白) on vesicle surface walk along microtubule tracks to deliver vesicles directionally.</li>
+      </ul>
+    </p>
+
+    <p data-topic="rab-tethering-snare">
+      <strong>Targeting and docking of vesicles (囊泡靶向與停靠)</strong> — three key molecular players ensure specificity:
+      <ul>
+        <li><strong>Rab proteins (Rab 蛋白)</strong> — small GTPases (小型 GTP 酶) on the vesicle surface; each Rab marks a specific vesicle/compartment identity; recruits tethering proteins.</li>
+        <li><strong>Tethering proteins (栓繫蛋白)</strong> — on the target membrane; interact with active (GTP-bound) Rab to initially capture the vesicle from a distance; also assemble SNAREs.</li>
+        <li><strong>SNAREs (SNARE 蛋白)</strong> — transmembrane proteins that catalyze lipid bilayer fusion:
+          <ul>
+            <li><strong>v-SNARE (囊泡SNARE)</strong> — on the transport vesicle membrane.</li>
+            <li><strong>t-SNARE (靶膜SNARE)</strong> — on the target membrane.</li>
+            <li>Complementary v-SNARE and t-SNARE pairs intertwine (zip together) to pull the two membranes into close contact, causing bilayer fusion.</li>
+            <li>Different v-SNARE/t-SNARE pairs are compartment-specific, ensuring vesicles fuse only with the correct target.</li>
+          </ul>
+        </li>
+      </ul>
+    </p>
+
+    <p data-topic="snare-fusion-mechanism">
+      <strong>SNARE-mediated membrane fusion sequence (SNARE 介導的膜融合過程)</strong>:
+      <ol>
+        <li><strong>Tethering (栓繫)</strong>: Rab-GTP on vesicle recruits tethering protein on target membrane — vesicle is captured at a distance.</li>
+        <li><strong>Docking (停靠)</strong>: v-SNARE and t-SNARE begin to zipper together — membranes are pulled close.</li>
+        <li><strong>Membrane coalescence (膜聚合)</strong>: membranes contact and begin to merge.</li>
+        <li><strong>Lipid bilayer fusion (脂雙層融合)</strong>: complete fusion — cargo protein released into target compartment lumen or membrane.</li>
+      </ol>
+      <em>Nobel recognition:</em> James Rothman shared the 2013 Nobel Prize for discovering the SNARE mechanism of vesicle fusion.
+    </p>
+
+    <p data-topic="snare-specificity">
+      <strong>SNARE specificity (SNARE 特異性)</strong> — ensures correct vesicle targeting:
+      <ul>
+        <li>Each compartment expresses a unique set of v-SNAREs and t-SNAREs.</li>
+        <li>A vesicle carrying v-SNARE "type A" only fuses efficiently with a target membrane bearing the matching t-SNARE "type A" — cargo a and cargo b are thus sorted to different compartments.</li>
+        <li>This combinatorial code prevents mis-targeting of vesicles to wrong organelles.</li>
+      </ul>
+    </p>
+
+    <p data-topic="autophagosome-vacuole-fusion">
+      <strong>Example: Autophagosome–vacuole fusion (自噬體–液泡融合)</strong> in yeast (research example from lecture):
+      <ul>
+        <li>Rab GTPase: <strong>Ypt7</strong>; GEF (guanine nucleotide exchange factor, 鳥嘌呤核苷酸交換因子): <strong>Mon1-Ccz1</strong>.</li>
+        <li>Tethering complex: <strong>HOPS</strong> — binds Ypt7-GTP and also assembles SNAREs.</li>
+        <li>v-SNARE on autophagosome: <strong>Ykt6</strong> (recruited from the PAS, pre-autophagosomal structure).</li>
+        <li>Sequence: Atg8 targets Mon1-Ccz1 to autophagosome → Mon1-Ccz1 activates Ypt7 → Ypt7-GTP binds HOPS on vacuole → HOPS assembles SNAREs → fusion. (Gao et al., JCB 2018; eLife 2018; EMBO R 2020)</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="rab-tethering-snare"><b>Exam trap:</b> Rab proteins and tethering factors mediate <em>vesicle targeting/tethering</em> — they do not directly fuse membranes. SNAREs are the actual fusion machinery. Confusing these roles is a common exam error.</div>
+
+    <div class="exam-trap-inline" data-topic="snare-specificity"><b>Exam trap:</b> SNARE pairing is specific — v-SNARE on the vesicle must match the t-SNARE on the target. This specificity, not just physical proximity, determines which vesicle fuses with which compartment.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="5">
+    <h2>6. Summary: Complete Vesicular Transport Machinery</h2>
+
+    <p data-topic="transport-machinery-summary">
+      The full 7-step cycle of vesicular transport (Bonifacino and Glick, 2004):
+      <ol>
+        <li><strong>Initiation (起始)</strong>: transmembrane cargo protein and v-SNARE associate with coat proteins at donor membrane.</li>
+        <li><strong>Budding (出芽)</strong>: coat proteins polymerize, deforming the membrane into a bud.</li>
+        <li><strong>Scission (切斷)</strong>: dynamin severs the vesicle neck (GTP hydrolysis).</li>
+        <li><strong>Uncoating (去外被)</strong>: coat proteins dissociate from the vesicle, releasing them back to the cytosol.</li>
+        <li><strong>Tethering (栓繫)</strong>: Rab-GTP on vesicle contacts tethering factor on acceptor membrane.</li>
+        <li><strong>Docking (停靠)</strong>: v-SNARE and t-SNARE zipper together.</li>
+        <li><strong>Fusion (融合)</strong>: lipid bilayers merge; cargo is delivered.</li>
+      </ol>
+    </p>
+
+    <table style="width:100%;border-collapse:collapse;margin-top:10px;font-size:0.93em;">
+      <thead>
+        <tr style="background:#1565c0;color:white;">
+          <th style="padding:7px;border:1px solid #ccc;">Molecule / Complex</th>
+          <th style="padding:7px;border:1px solid #ccc;">Chinese</th>
+          <th style="padding:7px;border:1px solid #ccc;">Function</th>
+          <th style="padding:7px;border:1px solid #ccc;">Step(s)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#e3f2fd;">
+          <td style="padding:6px;border:1px solid #ccc;">COPI</td>
+          <td style="padding:6px;border:1px solid #ccc;">COP I 外被蛋白</td>
+          <td style="padding:6px;border:1px solid #ccc;">Deform bilayer; package cargo — Golgi→ER (retrograde)</td>
+          <td style="padding:6px;border:1px solid #ccc;">1–2</td>
+        </tr>
+        <tr>
+          <td style="padding:6px;border:1px solid #ccc;">COPII</td>
+          <td style="padding:6px;border:1px solid #ccc;">COP II 外被蛋白</td>
+          <td style="padding:6px;border:1px solid #ccc;">Deform bilayer; package cargo — ER→Golgi (anterograde)</td>
+          <td style="padding:6px;border:1px solid #ccc;">1–2</td>
+        </tr>
+        <tr style="background:#e3f2fd;">
+          <td style="padding:6px;border:1px solid #ccc;">Clathrin</td>
+          <td style="padding:6px;border:1px solid #ccc;">囊格蛋白</td>
+          <td style="padding:6px;border:1px solid #ccc;">Deform bilayer; package cargo — PM endocytosis, Golgi→endosome</td>
+          <td style="padding:6px;border:1px solid #ccc;">1–2</td>
+        </tr>
+        <tr>
+          <td style="padding:6px;border:1px solid #ccc;">Adaptin</td>
+          <td style="padding:6px;border:1px solid #ccc;">接合蛋白</td>
+          <td style="padding:6px;border:1px solid #ccc;">Links cargo receptor to clathrin</td>
+          <td style="padding:6px;border:1px solid #ccc;">1</td>
+        </tr>
+        <tr style="background:#e3f2fd;">
+          <td style="padding:6px;border:1px solid #ccc;">Dynamin</td>
+          <td style="padding:6px;border:1px solid #ccc;">液泡素</td>
+          <td style="padding:6px;border:1px solid #ccc;">GTPase; severs vesicle neck by GTP hydrolysis</td>
+          <td style="padding:6px;border:1px solid #ccc;">3</td>
+        </tr>
+        <tr>
+          <td style="padding:6px;border:1px solid #ccc;">Rab proteins</td>
+          <td style="padding:6px;border:1px solid #ccc;">Rab 蛋白</td>
+          <td style="padding:6px;border:1px solid #ccc;">Small GTPases; vesicle identity; recruit tethering factors</td>
+          <td style="padding:6px;border:1px solid #ccc;">5</td>
+        </tr>
+        <tr style="background:#e3f2fd;">
+          <td style="padding:6px;border:1px solid #ccc;">Tethering proteins</td>
+          <td style="padding:6px;border:1px solid #ccc;">栓繫蛋白</td>
+          <td style="padding:6px;border:1px solid #ccc;">On target membrane; initial capture of vesicle; assemble SNAREs</td>
+          <td style="padding:6px;border:1px solid #ccc;">5–6</td>
+        </tr>
+        <tr>
+          <td style="padding:6px;border:1px solid #ccc;">v-SNARE / t-SNARE</td>
+          <td style="padding:6px;border:1px solid #ccc;">囊泡SNARE / 靶膜SNARE</td>
+          <td style="padding:6px;border:1px solid #ccc;">Zipper together to fuse lipid bilayers; compartment-specific pairs</td>
+          <td style="padding:6px;border:1px solid #ccc;">6–7</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p data-topic="transport-machinery-summary" style="margin-top:12px;">
+      <strong>Practice question (from lecture):</strong> Which order does a protein destined for the plasma membrane travel?
+      <br>Answer: <strong>(b) ER → Golgi → plasma membrane</strong> — the canonical secretory pathway established by Palade.
+    </p>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>The secretory pathway moves proteins <em>inside to outside</em>; the endocytic pathway moves molecules <em>outside to inside</em> — never confuse the directions.</li>
+      <li>Secretory mutant A = protein accumulates in ER; mutant B = Golgi; mutant C = transport vesicles — each location reveals which step is blocked.</li>
+      <li>COPI = retrograde (Golgi → ER); COPII = anterograde (ER → Golgi); clathrin = endocytosis and Golgi → endosome — direction and route must be memorized for each coat.</li>
+      <li>Dynamin performs only the <em>scission (pinching-off)</em> step via GTP hydrolysis — it does not assemble the coat or select cargo.</li>
+      <li>Dynamin mutations: coated pits accumulate but fail to release; in Drosophila, dynamin mutants are paralyzed at high temperature because synaptic vesicle recycling fails.</li>
+      <li>Rab proteins and tethering factors mediate <em>targeting</em>; SNAREs mediate <em>fusion</em> — these are distinct steps with distinct molecules.</li>
+      <li>SNARE specificity (v-SNARE must match t-SNARE) is what ensures vesicles fuse only with the correct target compartment — this is not merely physical proximity.</li>
+      <li>The correct order for a plasma membrane-destined protein is ER → Golgi → plasma membrane (not ER → lysosome, not Golgi → lysosome → PM).</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Secretory pathway route: ER → Golgi → Plasma membrane (Palade, Nobel 1974).</li>
+      <li>Three essential steps of vesicular transport: (1) budding + cargo packaging, (2) transport along microtubules, (3) fusion with target organelle.</li>
+      <li>Three coat types and their routes: COPII = ER→Golgi; COPI = Golgi→ER; clathrin = endocytosis + Golgi→endosome.</li>
+      <li>Clathrin assembly order: cargo → cargo receptor → adaptin → clathrin → coated pit → dynamin (scission) → uncoating → naked vesicle.</li>
+      <li>Dynamin = GTPase; forms helix around neck; GTP hydrolysis = scission; dynamin mutants accumulate coated pits.</li>
+      <li>Vesicle targeting triad: Rab (vesicle identity) → tethering protein (captures vesicle) → SNARE pairing (fuses membranes).</li>
+      <li>v-SNARE on vesicle + t-SNARE on target → zipper → membrane fusion; compartment-specific pairs ensure targeting specificity.</li>
+      <li>Novick &amp; Schekman yeast screen: 23 SEC complementation groups; secretory mutants A/B/C block at ER/Golgi/vesicles respectively; 2013 Nobel Prize (Schekman).</li>
+      <li>James Rothman: 2013 Nobel Prize for SNARE mechanism of vesicle fusion.</li>
+      <li>Autophagosome–vacuole fusion example: Ypt7 (Rab) activated by Mon1-Ccz1 (GEF) → recruits HOPS (tether) → HOPS assembles Ykt6 SNARE → fusion.</li>
+      <li>Microtubules are the intracellular highways for vesicle transport; motor proteins carry vesicles along tracks.</li>
+    </ol>
+  </div>
+</div>
+
+<div id="notes-13" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-13" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(13)">Clear Highlights</button>
+  <h1>Lecture 13: Vesicular Traffic, Secretion and Endocytosis-II</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    Vesicular transport moves proteins through two major highways: the secretory pathway (ER → Golgi → plasma membrane) and the endocytic pathway (plasma membrane → endosomes → lysosome). Coat proteins — COPII, COPI, and clathrin — select cargo and sculpt vesicle buds at specific membrane compartments, while sorting signals encoded in protein sequences direct each cargo to its correct destination. The trans-Golgi network (TGN 反式高爾基體網路) acts as the central dispatch hub from which cargoes diverge to lysosomes, secretory vesicles, or the cell surface. Endocytosis, exemplified by clathrin-mediated uptake of LDL-cholesterol, allows cells to efficiently import extracellular molecules using receptor-based selectivity.
+  </div>
+
+  <!-- SECTION 1 -->
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Coat Proteins and Sorting Signals in the Secretory Pathway</h2>
+
+    <p data-topic="coat-proteins-overview">
+      <ul>
+        <li><b>Vesicle coat proteins (囊泡外被蛋白)</b> — serve two functions: (1) deform the lipid bilayer to form a bud; (2) select and package specific cargo proteins into budding vesicles</li>
+        <li><b>Three major coat types</b> used at distinct trafficking steps:
+          <table>
+            <thead><tr><th>Coat</th><th>Direction / Location</th><th>Key function</th></tr></thead>
+            <tbody>
+              <tr><td>COPII</td><td>ER → Golgi (anterograde 正向)</td><td>Export cargo from ER</td></tr>
+              <tr><td>COPI</td><td>Golgi → ER (retrograde 逆向); intra-Golgi</td><td>Retrieval of ER-resident proteins; intra-Golgi transport</td></tr>
+              <tr><td>Clathrin (網格蛋白)</td><td>TGN → endosome/lysosome; plasma membrane → endosome</td><td>Receptor-mediated endocytosis; lysosomal targeting</td></tr>
+            </tbody>
+          </table>
+        </li>
+        <li><b>Dynamin (動力蛋白)</b> — GTPase that pinches off (scission 切斷) vesicles from the donor membrane</li>
+        <li><b>Rab proteins (Rab蛋白) &amp; tethering factors (拴繫因子)</b> — mediate vesicle targeting to the correct acceptor compartment</li>
+        <li><b>SNAREs (可溶性NSF附著蛋白受體)</b> — v-SNARE on vesicle pairs with t-SNARE on target membrane to drive membrane fusion (融合)</li>
+        <li><b>Sorting signal (分揀信號 / targeting signal)</b> — a short amino acid sequence, a signal patch on the folded structure, or a covalent modification that acts as an "address label" recognised by coat proteins; examples: KDEL sequence (soluble ER residents), mannose-6-phosphate (溶酶體酶)</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="coat-proteins-overview">
+      <b>Exam trap:</b> COPII moves cargo <em>forward</em> (ER→Golgi); COPI moves cargo <em>backward</em> (Golgi→ER). Students often swap these. COPI also mediates intra-Golgi transport — it is not exclusively retrograde.
+    </div>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. COPII-Mediated ER-to-Golgi Transport</h2>
+
+    <p data-topic="copii-er-to-golgi">
+      <ul>
+        <li><b>COPII coat assembly</b> — initiated by GTP-bound Sar1 (小GTP酶) inserting into the ER membrane:
+          <ol>
+            <li>Sar1-GDP (inactive) in cytosol is activated by a GEF → Sar1-GTP inserts amphipathic helix into ER membrane</li>
+            <li>Sar1-GTP recruits the inner layer: <b>Sec23/24</b> complex — Sec24 recognises and captures transmembrane cargo proteins</li>
+            <li>Outer layer: <b>Sec13/31</b> complex polymerises (聚合) over Sec23/24 to complete the coat and deform the membrane into a bud</li>
+            <li>Scission releases the COPII vesicle; Sar1 GTP hydrolysis triggers coat disassembly (uncoating 去外被)</li>
+          </ol>
+        </li>
+        <li><b>Destination</b> — COPII vesicles travel to the <b>vesicular tubular cluster (囊泡管狀簇, VTC)</b>, an intermediate compartment between ER and Golgi (also called ERGIC in mammals)</li>
+        <li><b>COPII vesicle morphology</b> — ~60–90 nm diameter; can be visualised by electron microscopy as coated buds on the ER membrane</li>
+        <li><b>Cargo selectivity</b> — transmembrane cargo proteins contain cytoplasmic tail signals recognised by Sec24; soluble luminal proteins are co-packaged by binding to transmembrane cargo receptors</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="copii-er-to-golgi">
+      <b>Exam trap:</b> Sar1 GTP hydrolysis causes coat <em>disassembly</em>, not assembly. If Sar1 cannot hydrolyse GTP, the coat remains — vesicles bud but cannot uncoat, blocking further transport.
+    </div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Golgi Apparatus Structure and COPI Retrieval</h2>
+
+    <p data-topic="golgi-structure-copi">
+      <ul>
+        <li><b>Golgi apparatus (高爾基體)</b> — discovered by Camillo Golgi (Nobel Prize 1906); consists of a stack of flattened sacs called <b>cisternae (囊腔)</b>, ~200 nm diameter as seen by EM</li>
+        <li><b>Polarity (極性)</b> — cargo flows from cis (順式) → medial (中間) → trans (反式) cisternae; each cisterna is enriched with distinct glycosylation (糖基化) enzymes that sequentially modify proteins</li>
+        <li><b>Trans Golgi network (TGN 反式高爾基體網路)</b> — the trans face; acts as the primary cargo-sorting hub dispatching vesicles to: lysosomes, secretory vesicles, plasma membrane, recycling endosomes</li>
+        <li><b>COPI functions</b>:
+          <ol>
+            <li>Intra-Golgi transport (between cisternae)</li>
+            <li>Retrograde retrieval of escaped ER-resident proteins back to the ER</li>
+          </ol>
+        </li>
+        <li><b>KDEL retrieval mechanism</b>:
+          <ul>
+            <li>Soluble ER-resident proteins (e.g., BiP, PDI) carry a C-terminal <b>KDEL motif (KDEL序列)</b></li>
+            <li>If these proteins escape to the Golgi, the <b>KDEL receptor</b> in the Golgi/VTC membrane recognises the KDEL sequence and loads the escaped protein into a COPI vesicle</li>
+            <li>COPI vesicle carries the KDEL receptor + bound luminal protein retrograde back to the ER</li>
+            <li>In the ER lumen (neutral pH), the receptor releases the protein (low affinity at neutral pH)</li>
+          </ul>
+        </li>
+        <li><b>Rothman's in vitro Golgi transport assay</b> (1986–1989) — used VSV-G protein (水泡性口炎病毒G蛋白) and ³H-GlcNAc transfer as a readout of inter-Golgi vesicle transport; key results:
+          <table>
+            <thead><tr><th>Condition</th><th>[³H] GlcNAc incorporated into VSV-G (cpm)</th></tr></thead>
+            <tbody>
+              <tr><td>Complete reaction</td><td>3500</td></tr>
+              <tr><td>− ATP</td><td>50</td></tr>
+              <tr><td>− Cytosol</td><td>75</td></tr>
+              <tr><td>− Golgi membranes</td><td>95</td></tr>
+              <tr><td>+ GTPγS (10 μM, non-hydrolysable GTP)</td><td>420</td></tr>
+            </tbody>
+          </table>
+        </li>
+        <li><b>GTPγS (非可水解GTP類似物)</b> — GTP analogue that cannot be hydrolysed; addition causes accumulation of coated vesicles (unable to uncoat), confirming that a GTPase controls coat disassembly; vesicles purified this way led to discovery of <b>COPI coat proteins</b> (Malhotra et al., Cell 1989)</li>
+        <li><b>Defective TGN sorting → mistargeting → physiological defect</b>: e.g., HIV protein <b>Nef</b> hijacks TGN sorting machinery to reroute MHC-I (主要組織相容性複合體I類) away from the plasma membrane, redirecting it to the lysosome for degradation — allowing HIV-infected cells to evade cytotoxic T cells</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="golgi-structure-copi">
+      <b>Exam trap:</b> GTPγS addition in Rothman's assay gives <em>lower</em> transport signal (420 cpm) than the complete reaction (3500 cpm) because vesicles form but cannot fuse — they are trapped as coated vesicles. This confirms GTP hydrolysis is required for vesicle uncoating/fusion, not for budding itself.
+    </div>
+  </section>
+
+  <!-- SECTION 4 -->
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Golgi-to-Plasma Membrane: TGN as Sorting Hub and Polarised Cells</h2>
+
+    <p data-topic="tgn-sorting-polarised">
+      <ul>
+        <li><b>TGN as cargo dispatch centre</b> — from the TGN, vesicles are sorted to:
+          <ul>
+            <li>Late endosome (晚期內體) / lysosome (溶酶體) — via clathrin-coated vesicles, e.g., lysosomal hydrolases tagged with mannose-6-phosphate</li>
+            <li>Secretory vesicle (分泌囊泡) → constitutive or regulated exocytosis to plasma membrane</li>
+            <li>Early endosome (早期內體) / recycling endosome (再循環內體)</li>
+            <li>Apical or basolateral plasma membrane in polarised epithelial cells</li>
+          </ul>
+        </li>
+        <li><b>Polarised epithelial cells (極性上皮細胞)</b> — e.g., intestinal absorptive cells:
+          <ul>
+            <li><b>Apical surface (頂面)</b> — faces gut lumen; imports nutrients via microvilli (微絨毛)</li>
+            <li><b>Basal surface (基底面)</b> — faces basal lamina; exports nutrients to blood</li>
+            <li>Different membrane proteins must be sorted to apical vs. basolateral domains — TGN sorting ensures correct targeting</li>
+          </ul>
+        </li>
+        <li><b>HIV Nef example of mistargeting</b>:
+          <ul>
+            <li>Normal: MHC-I travels ER → Golgi → TGN → plasma membrane, displaying viral peptides to cytotoxic T lymphocytes (CTL)</li>
+            <li>With Nef: Nef protein associates with MHC-I at the TGN/Golgi and redirects it into vesicles going to the late endosome → lysosome → degradation</li>
+            <li>Consequence: CTL cannot recognise infected cells → viral immune evasion (免疫逃避)</li>
+          </ul>
+        </li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="tgn-sorting-polarised">
+      <b>Exam trap:</b> The TGN is part of the Golgi apparatus (trans face) but functions as an independent sorting station — it dispatches cargo in multiple directions simultaneously. Do not confuse TGN with the trans cisterna; they are distinct sub-compartments.
+    </div>
+  </section>
+
+  <!-- SECTION 5 -->
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Endocytic Pathway: Types, Road Map, and LDL-Cholesterol Uptake</h2>
+
+    <p data-topic="endocytic-pathway-overview">
+      <ul>
+        <li><b>Endocytosis (內吞作用)</b> major functions: uptake of nutrients; recycling of lipid membranes; cellular signalling; cell adhesion and migration; immune defence</li>
+        <li><b>Two types of endocytosis</b>:
+          <table>
+            <thead><tr><th>Type</th><th>Mechanism</th><th>Cargo size</th></tr></thead>
+            <tbody>
+              <tr><td><b>Pinocytosis (胞飲作用)</b></td><td>Ingestion of small molecules; clathrin-coated vesicles (~0.1 μm); EM shows progressive membrane invagination → pinching</td><td>Small molecules, proteins</td></tr>
+              <tr><td><b>Phagocytosis (吞噬作用)</b></td><td>Ingestion of large particles; pseudopods (偽足) engulf bacteria or dead cells; performed by macrophages &amp; neutrophils</td><td>Bacteria, cells (~5 μm)</td></tr>
+            </tbody>
+          </table>
+        </li>
+        <li><b>Road map of the endocytic pathway</b>:
+          <ol>
+            <li>Clathrin-coated pit (網格蛋白包被坑) at plasma membrane → clathrin-coated vesicle</li>
+            <li>Uncoating → <b>early endosome (早期內體)</b>: slightly acidic lumen; receptor-ligand dissociation begins</li>
+            <li>From early endosome: receptors recycled back to plasma membrane via <b>recycling endosome (再循環內體)</b></li>
+            <li>Ligand/cargo progresses to <b>late endosome (晚期內體)</b>: more acidic; multivesicular body (多囊體)</li>
+            <li>Late endosome fuses with <b>lysosome (溶酶體)</b>: hydrolytic enzymes degrade cargo</li>
+          </ol>
+        </li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="endocytic-pathway-overview">
+      <b>Exam trap:</b> Phagocytosis is distinct from pinocytosis: phagocytosis involves active pseudopod extension around large particles and is restricted to specialised immune cells; pinocytosis (including clathrin-mediated endocytosis) occurs in virtually all cells.
+    </div>
+  </section>
+
+  <!-- SECTION 6 -->
+  <section class="reveal-on-scroll" data-sec="5">
+    <h2>6. Receptor-Mediated Endocytosis of Cholesterol (LDL Pathway)</h2>
+
+    <p data-topic="ldl-receptor-endocytosis">
+      <ul>
+        <li><b>LDL particle (低密度脂蛋白顆粒)</b> structure (~22 nm):
+          <ul>
+            <li>Core: cholesteryl ester molecules (膽固醇酯) + free cholesterol molecules</li>
+            <li>Outer shell: phospholipid monolayer (磷脂單層) + apolipoprotein B (載脂蛋白B) on surface</li>
+          </ul>
+        </li>
+        <li><b>LDL receptor (LDLR 低密度脂蛋白受體)</b> — transmembrane protein on plasma membrane; binds apolipoprotein B on LDL surface</li>
+        <li><b>Clathrin-mediated endocytosis of LDL — step-by-step</b>:
+          <ol>
+            <li>LDL binds LDLR at the cell surface; LDLR concentrates into clathrin-coated pits</li>
+            <li>Clathrin-coated vesicle forms (dynamin-dependent scission) and is internalised</li>
+            <li>Vesicle uncoats → fuses with early endosome</li>
+            <li>Acidic pH of early endosome causes LDL to dissociate from LDLR</li>
+            <li>LDLR is recycled back to the plasma membrane via recycling endosome (receptor reused ~200 times)</li>
+            <li>LDL is delivered to lysosome → hydrolytic enzymes release free cholesterol</li>
+            <li>Free cholesterol exits lysosome and is used by the cell for membrane synthesis or stored</li>
+          </ol>
+        </li>
+        <li><b>Advantages of receptor-mediated endocytosis (受體介導的內吞作用)</b>:
+          <ul>
+            <li><b>Efficiency (效率)</b> — molecules at very low extracellular concentration can still be captured</li>
+            <li><b>Selectivity (選擇性)</b> — only molecules recognised by specific receptor proteins are internalised</li>
+          </ul>
+        </li>
+        <li><b>Familial hypercholesterolaemia (家族性高膽固醇血症)</b> — caused by loss-of-function mutations in <em>LDLR</em> gene:
+          <ul>
+            <li>LDL cannot be cleared from the blood → 6–10-fold elevation in blood LDL levels</li>
+            <li>Clinical consequences: atherosclerosis (動脈硬化), heart attacks in early childhood</li>
+            <li>Treatment: <b>statins (他汀類藥物)</b> — inhibit a key enzyme in the cholesterol biosynthesis pathway, reducing blood cholesterol; discovered by Goldstein and Brown (Nobel Prize 1985)</li>
+          </ul>
+        </li>
+        <li><b>Exam-relevant drug scenario</b> — drug H5434 prevents cholesterol from dissociating from LDLR in acidic conditions: receptor remains bound to LDL in the endosome → LDLR cannot be recycled → remains on endosomal membrane → cytosolic cholesterol levels <em>decrease</em> (answer: B); receptor will not return to plasma membrane (not answer C — LDLR is still internalised)</li>
+      </ul>
+    </p>
+
+    <!-- SVG diagram: LDL endocytosis cycle -->
+    <div style="text-align:center;margin:1rem 0;">
+      <svg width="520" height="200" viewBox="0 0 520 200" style="font-family:sans-serif;font-size:11px;background:#f8f9fa;border-radius:8px;border:1px solid #dee2e6;">
+        <!-- Plasma membrane -->
+        <rect x="10" y="30" width="500" height="14" fill="#aed6f1" rx="4"/>
+        <text x="260" y="25" text-anchor="middle" fill="#1a5276" font-weight="bold">Plasma Membrane</text>
+        <!-- LDL binding -->
+        <circle cx="60" cy="20" r="12" fill="#e74c3c" opacity="0.8"/>
+        <text x="60" y="24" text-anchor="middle" fill="white" font-size="9">LDL</text>
+        <rect x="52" y="44" width="16" height="10" fill="#2980b9" rx="2"/>
+        <text x="60" y="52" text-anchor="middle" fill="white" font-size="8">LDLR</text>
+        <text x="60" y="70" text-anchor="middle" fill="#333">① Binding</text>
+        <!-- Arrow -->
+        <line x1="90" y1="37" x2="130" y2="37" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <!-- Clathrin vesicle -->
+        <circle cx="160" cy="90" r="28" fill="#d5f5e3" stroke="#27ae60" stroke-width="2"/>
+        <circle cx="160" cy="75" r="10" fill="#e74c3c" opacity="0.7"/>
+        <rect x="152" y="85" width="16" height="8" fill="#2980b9" rx="2"/>
+        <text x="160" y="122" text-anchor="middle" fill="#333">② Vesicle</text>
+        <!-- Arrow -->
+        <line x1="192" y1="90" x2="230" y2="90" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <!-- Early endosome -->
+        <ellipse cx="270" cy="90" rx="35" ry="25" fill="#fef9e7" stroke="#f39c12" stroke-width="2"/>
+        <text x="270" y="87" text-anchor="middle" fill="#7d6608" font-size="10">Early</text>
+        <text x="270" y="99" text-anchor="middle" fill="#7d6608" font-size="10">Endosome</text>
+        <text x="270" y="122" text-anchor="middle" fill="#333">③ Uncoating</text>
+        <!-- Recycling arrow up -->
+        <path d="M 260 65 Q 200 20 130 50" stroke="#27ae60" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arrow2)"/>
+        <text x="185" y="28" text-anchor="middle" fill="#27ae60" font-size="10">Recycle LDLR</text>
+        <!-- Arrow to lysosome -->
+        <line x1="305" y1="90" x2="345" y2="90" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <!-- Lysosome -->
+        <ellipse cx="395" cy="90" rx="40" ry="28" fill="#fadbd8" stroke="#c0392b" stroke-width="2"/>
+        <text x="395" y="87" text-anchor="middle" fill="#922b21" font-size="10">Lysosome</text>
+        <text x="395" y="99" text-anchor="middle" fill="#922b21" font-size="10">Hydrolysis</text>
+        <text x="395" y="122" text-anchor="middle" fill="#333">④ Degrade LDL</text>
+        <!-- Free cholesterol -->
+        <text x="460" y="90" text-anchor="middle" fill="#1a5276" font-size="10">→ Free</text>
+        <text x="460" y="103" text-anchor="middle" fill="#1a5276" font-size="10">Chol.</text>
+        <!-- Arrow markers -->
+        <defs>
+          <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6 Z" fill="#555"/>
+          </marker>
+          <marker id="arrow2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6 Z" fill="#27ae60"/>
+          </marker>
+        </defs>
+      </svg>
+      <div style="font-size:0.8rem;color:#555;margin-top:4px;">LDL receptor-mediated endocytosis cycle — LDLR is recycled; LDL is degraded in the lysosome to release free cholesterol</div>
+    </div>
+
+    <div class="exam-trap-inline" data-topic="ldl-receptor-endocytosis">
+      <b>Exam trap:</b> The LDL receptor is recycled back to the plasma membrane (not degraded with the LDL cargo). Mutations that impair receptor recycling — or drugs that prevent LDL-receptor dissociation in the endosome — will <em>reduce</em> cytosolic cholesterol because LDL cannot be delivered to the lysosome and degraded.
+    </div>
+  </section>
+
+  <!-- BONUS SECTION: SARS-CoV-2 (not tested in final exam) -->
+  <section class="reveal-on-scroll" data-sec="6">
+    <h2>7. How SARS-CoV-2 Hijacks the Trafficking Machinery <span style="font-size:0.75em;color:#888;">(not tested in final exam)</span></h2>
+
+    <p data-topic="sars-cov2-trafficking">
+      <ul>
+        <li><b>SARS-CoV-2 structure</b> — spherical coronavirus, diameter 80–120 nm; surface decorated with <b>spike (S) glycoprotein (棘突蛋白)</b> giving club-like projections; single-strand positive-sense RNA genome sharing ~80% identity with SARS-CoV</li>
+        <li><b>Viral structural proteins</b>: Spike (S), Membrane (M), Envelope (E), Nucleocapsid (N)</li>
+        <li><b>Infection cycle — 4 steps</b>:
+          <ol>
+            <li><b>Attachment &amp; Entry</b>: Spike protein binds <b>ACE2 (血管緊張素轉化酶2)</b> on host cells; ACE2 is a type I membrane protein expressed in lungs, heart, kidneys, and intestine (normal function: hormone maturation for blood pressure control); virus enters via endocytosis into endosome → membrane fusion releases viral RNA into cytosol; ACE2 binds SARS-CoV-2 S ectodomain with ~15 nM affinity — 10–20-fold higher than SARS-CoV S</li>
+            <li><b>Genome Replication</b>: (+) gRNA translated into polyproteins pp1a/pp1ab → proteolytic cleavage → non-structural proteins (nsps) form the <b>replication-transcription complex (RTC)</b>; RTC induces membrane rearrangement forming <b>double-membrane vesicles (DMV 雙膜囊泡)</b>; (+) gRNA → (−) gRNA template → amplified (+) gRNA copies</li>
+            <li><b>Assembly</b>: Structural proteins translated from subgenomic RNAs; nucleocapsid assembled with (+) gRNA; assembly occurs at the <b>ERGIC (ER-Golgi intermediate compartment 內質網-高爾基體中間體)</b></li>
+            <li><b>Release</b>: Assembled virions packaged into <b>smooth-walled vesicles (光滑壁囊泡)</b> and released from host cells by exocytosis (外吐作用)</li>
+          </ol>
+        </li>
+        <li><b>Trafficking hijacking</b>: SARS-CoV-2 exploits the host's endocytic pathway for cell entry and the secretory pathway (ER, ERGIC, Golgi) for viral protein processing and virion assembly — exactly the compartments studied in this lecture</li>
+      </ul>
+    </p>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>COPII = ER→Golgi (anterograde/forward); COPI = Golgi→ER (retrograde) AND intra-Golgi — never mix these up</li>
+      <li>Sar1 GTP hydrolysis causes COPII coat <em>disassembly</em>; GTPγS (non-hydrolysable) traps coated vesicles and blocks transport/fusion</li>
+      <li>In Rothman's assay, GTPγS gives <em>lower</em> than complete cpm (420 vs 3500) — vesicles form but cannot fuse; ATP and cytosol are both required (removing either drops signal to ~50–75 cpm)</li>
+      <li>KDEL sequence retrieves escaped soluble ER-resident proteins via COPI; the KDEL receptor binds KDEL in the acidic Golgi but releases in the neutral ER lumen</li>
+      <li>TGN is the trans face of the Golgi apparatus, but is functionally distinct from the trans cisterna — it is the main sorting hub</li>
+      <li>Phagocytosis (large particles, immune cells only) ≠ Pinocytosis (small molecules, all cells, includes clathrin-mediated endocytosis)</li>
+      <li>LDL receptor is <em>recycled</em> (~200 times); the LDL cargo is degraded in the lysosome — mutations blocking LDLR or drugs that prevent dissociation in acidic endosome will <em>decrease</em> cytosolic cholesterol</li>
+      <li>Familial hypercholesterolaemia = LDLR mutation → 6–10-fold blood LDL elevation → heart attacks; treated with statins (inhibit cholesterol biosynthesis enzyme, not the receptor)</li>
+      <li>HIV Nef causes MHC-I to be rerouted from TGN → lysosome (degradation), not to the plasma membrane — this is immune evasion via mistargeting</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top Things to Memorize</strong>
+    <ol>
+      <li>Three coat proteins and their directions: COPII (ER→Golgi), COPI (Golgi→ER + intra-Golgi), Clathrin (TGN→lysosome; PM→endosome)</li>
+      <li>COPII assembly: Sar1-GTP → Sec23/24 (inner layer, cargo recognition) → Sec13/31 (outer layer, coat polymerisation) → Sar1 GTP hydrolysis = disassembly</li>
+      <li>KDEL = ER-retention signal for soluble luminal proteins; retrieved by COPI via KDEL receptor in the Golgi</li>
+      <li>Golgi structure: cis cisterna → medial cisterna → trans cisterna → TGN; each cisterna has distinct glycosylation enzymes</li>
+      <li>Rothman's assay results: complete = 3500 cpm; −ATP = 50; −Cytosol = 75; −Golgi membranes = 95; +GTPγS = 420</li>
+      <li>GTPγS is non-hydrolysable → traps coated vesicles → blocks fusion → led to discovery of COPI</li>
+      <li>TGN = major sorting hub: sends cargo to lysosomes, secretory vesicles, apical/basolateral PM; disruption → mistargeting → disease</li>
+      <li>Pinocytosis (small) vs Phagocytosis (large); clathrin-mediated endocytosis is a form of pinocytosis</li>
+      <li>LDL endocytosis cycle: LDL binds LDLR → clathrin pit → vesicle → early endosome (acid dissociates LDL from LDLR) → LDLR recycled; LDL → lysosome → free cholesterol</li>
+      <li>Familial hypercholesterolaemia: LDLR mutation → 6–10× LDL elevation → childhood heart attacks; statins reduce cholesterol synthesis</li>
+      <li>Advantages of receptor-mediated endocytosis: Efficiency (low-concentration molecules captured) + Selectivity (only receptor-recognised molecules internalised)</li>
+      <li>SARS-CoV-2 entry: Spike protein binds ACE2 → endocytosis → membrane fusion → RNA release; assembly at ERGIC; release via smooth-walled vesicle exocytosis (not tested in final exam)</li>
+    </ol>
+  </div>
+</div>
+
+<div id="notes-14" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-14" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(14)">Clear Highlights</button>
+  <h1>Lecture 14: Mechanisms of Cellular Homeostasis</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    Cells constantly produce proteins that must eventually be degraded — whether they are misfolded, damaged, short-lived regulators, or entire organelles that have become dysfunctional. Two major cellular machines handle this task: the <strong>proteasome</strong>, a barrel-shaped protease complex distributed throughout the nucleus and cytoplasm, and the <strong>lysosome</strong>, an acidic organelle that receives cargo via endocytosis, phagocytosis, and autophagy. A small protein tag called <strong>ubiquitin</strong> acts as the universal "expired" stamp that routes proteins to either destination. Failure of these systems leads to accumulation of toxic protein aggregates and underlies devastating neurodegenerative diseases such as Alzheimer's, Parkinson's, and ALS.
+  </div>
+
+  <!-- SECTION 1 -->
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Why Protein Degradation Matters</h2>
+    <p data-topic="protein-degradation-importance">
+      <ul>
+        <li><strong>Quality control (品質管控)</strong> — destroy misfolded (錯誤折疊), aggregated (聚集), and damaged (受損) proteins before they harm the cell</li>
+        <li><strong>Protein turn-over (蛋白質更新)</strong> — regular replacement of functional proteins; lifespan varies enormously by protein type and cellular context:
+          <ul>
+            <li>Structural proteins of bones and muscles — lifespan: months to years</li>
+            <li>Metabolic enzymes — lifespan: days to hours</li>
+            <li>Cell growth / division regulators — lifespan: seconds to minutes</li>
+          </ul>
+        </li>
+        <li><strong>Digest invading bacteria (入侵細菌) or damaged organelles (受損胞器)</strong> — immune cells engulf pathogens and deliver them to lysosomes</li>
+      </ul>
+    </p>
+
+    <p data-topic="protein-half-lives">
+      <strong>Enzyme half-life examples</strong> (same cell type may differ between tissues):
+      <table>
+        <thead><tr><th>Enzyme</th><th>Half-life</th></tr></thead>
+        <tbody>
+          <tr><td>Ornithine decarboxylase</td><td><strong>11 minutes</strong> (shortest)</td></tr>
+          <tr><td>Tyrosine aminotransferase</td><td>1.5 hours</td></tr>
+          <tr><td>HMG CoA reductase</td><td>3 hours</td></tr>
+          <tr><td>Tryptophan oxygenase</td><td>2 hours</td></tr>
+          <tr><td>δ-Aminolevulinate synthetase</td><td>70 minutes</td></tr>
+          <tr><td>Glucokinase</td><td>1.2 days</td></tr>
+          <tr><td>Catalase</td><td>1.4 days</td></tr>
+          <tr><td>Lactic dehydrogenase</td><td><strong>16 days</strong> (longest)</td></tr>
+        </tbody>
+      </table>
+    </p>
+
+    <p data-topic="protein-degradation-diseases">
+      <strong>Consequences of failed protein degradation</strong> — neurodegenerative diseases (神經退化性疾病) caused by proteinaceous lesion (蛋白質病變) accumulation:
+      <ul>
+        <li><strong>Alzheimer's disease (阿茲海默症)</strong> — Amyloid-β (澱粉樣蛋白-β) deposits spread progressively through the brain cortex</li>
+        <li><strong>Parkinson's disease (帕金森症)</strong> — α-Synuclein (α-突觸核蛋白) inclusions (Lewy bodies 路易體); symptoms: tremor at rest (靜止性震顫), muscle rigidity (肌肉僵直), bradykinesia (運動遲緩), stooped posture, poor balance; famous patients: Muhammad Ali, Michael J. Fox</li>
+        <li><strong>ALS — amyotrophic lateral sclerosis (肌萎縮性脊髓側索硬化症 / 漸凍人症)</strong> — TDP-43 inclusions spread along motor pathways; famously associated with Stephen Hawking</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="protein-degradation-importance">
+      <b>Exam trap:</b> Option (b) in the lecture's practice question states "Protein degradation is NOT important for regular protein turn-over" — this is <strong>FALSE</strong>. Protein degradation IS essential for regular turn-over; choose it as the false statement.
+    </div>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Two Major Sites of Protein Degradation</h2>
+    <p data-topic="degradation-sites-overview">
+      <ul>
+        <li><strong>Proteasome (蛋白酶體)</strong> — large protein complex; distributed throughout nucleus + cytoplasm; degrades misfolded and short-lived proteins</li>
+        <li><strong>Lysosome (溶酶體)</strong> — intracellular organelle; distributed in cytoplasm; degrades proteins, bacteria, damaged organelles, viruses, and unhealthy cells</li>
+      </ul>
+    </p>
+
+    <p data-topic="protein-quality-control-map">
+      <strong>Protein quality control overview (Shahheydari et al., 2017):</strong>
+      <ul>
+        <li>Newly synthesised proteins enter the ER; chaperone proteins (伴隨蛋白) attempt correct folding</li>
+        <li>Correctly folded proteins → Golgi apparatus → secretion (ER/Golgi trafficking)</li>
+        <li>Misfolded proteins → three fates:
+          <ul>
+            <li><strong>Ubiquitination (泛素化)</strong> → Proteasome (ERAD) <em>or</em> → Autophagolysosome (Macroautophagy)</li>
+            <li><strong>Aggregation</strong> → Stress Granule (壓力顆粒)</li>
+            <li><strong>Hsc70 recognition</strong> → Lysosome (Chaperone-mediated autophagy, CMA)</li>
+          </ul>
+        </li>
+      </ul>
+    </p>
+
+    <!-- SVG overview diagram -->
+    <div style="margin:1rem 0;padding:1rem;background:#f8f9fa;border-radius:8px;font-size:0.85rem;">
+      <svg viewBox="0 0 520 180" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:520px;display:block;margin:auto;">
+        <!-- Ribosome/ER box -->
+        <rect x="170" y="5" width="180" height="50" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+        <text x="260" y="22" text-anchor="middle" font-size="10" font-weight="bold" fill="#856404">ER: Ribosome → Chaperones</text>
+        <text x="220" y="38" text-anchor="middle" font-size="9" fill="#856404">Misfolded</text>
+        <text x="300" y="38" text-anchor="middle" font-size="9" fill="#856404">Correctly folded</text>
+        <!-- Arrow down from misfolded -->
+        <line x1="210" y1="55" x2="210" y2="80" stroke="#dc3545" stroke-width="1.5" marker-end="url(#arr)"/>
+        <!-- Arrow right from correctly folded -->
+        <line x1="330" y1="30" x2="390" y2="30" stroke="#0d6efd" stroke-width="1.5" marker-end="url(#arr2)"/>
+        <!-- Proteasome box -->
+        <rect x="60" y="85" width="100" height="35" rx="6" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+        <text x="110" y="106" text-anchor="middle" font-size="9" fill="#842029">Proteasome (ERAD)</text>
+        <!-- Autophagolysosome -->
+        <rect x="175" y="85" width="70" height="35" rx="6" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+        <text x="210" y="100" text-anchor="middle" font-size="8" fill="#842029">Macro-</text>
+        <text x="210" y="113" text-anchor="middle" font-size="8" fill="#842029">autophagy</text>
+        <!-- CMA -->
+        <rect x="260" y="85" width="55" height="35" rx="6" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+        <text x="287" y="106" text-anchor="middle" font-size="8" fill="#842029">CMA</text>
+        <!-- Golgi/secretion -->
+        <rect x="390" y="15" width="115" height="30" rx="6" fill="#cff4fc" stroke="#0dcaf0" stroke-width="1.5"/>
+        <text x="448" y="33" text-anchor="middle" font-size="9" fill="#055160">Golgi → Secretion</text>
+        <!-- Lines from misfolded node -->
+        <line x1="210" y1="80" x2="110" y2="85" stroke="#dc3545" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="210" y1="80" x2="210" y2="85" stroke="#dc3545" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="210" y1="80" x2="287" y2="85" stroke="#dc3545" stroke-width="1" stroke-dasharray="3,2"/>
+        <defs>
+          <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#dc3545"/></marker>
+          <marker id="arr2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#0d6efd"/></marker>
+        </defs>
+        <!-- Labels -->
+        <text x="260" y="150" text-anchor="middle" font-size="9" fill="#555">Red = Degradation pathways | Blue = Secretion pathway</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. The Ubiquitin–Proteasome System</h2>
+
+    <p data-topic="ubiquitin-structure">
+      <strong>Ubiquitin (泛素, Ub)</strong> — the "expired" tag for protein degradation:
+      <ul>
+        <li>Small protein of <strong>76 amino acids</strong></li>
+        <li>Exists in <strong>all eukaryotic cells</strong>; highly conserved — human and yeast Ub share <strong>96% sequence identity</strong></li>
+        <li>Conjugated to a <strong>lysine (賴氨酸) residue</strong> on the target protein via an <strong>isopeptide bond (異肽鍵)</strong> (between Ub's C-terminal Gly and substrate Lys)</li>
+        <li>Contains <strong>7 lysine residues</strong> itself (e.g., Lys48, Lys63) → Ub can be ubiquitinated → forms <strong>polyubiquitin chains (多聚泛素鏈)</strong></li>
+        <li>Lys48-linked chains → proteasomal degradation; Lys63-linked → endocytic/lysosomal routing</li>
+      </ul>
+    </p>
+
+    <p data-topic="ubiquitination-enzymes">
+      <strong>The three-enzyme ubiquitination cascade (泛素化酶促級聯):</strong>
+      <table>
+        <thead><tr><th>Enzyme</th><th>Name</th><th>Number in humans</th><th>Function</th></tr></thead>
+        <tbody>
+          <tr><td><strong>E1</strong></td><td>Ubiquitin-activating enzyme (泛素活化酶)</td><td>2</td><td>Uses ATP hydrolysis (ATP → AMP + PPi) to activate Ub; transfers activated Ub to E2</td></tr>
+          <tr><td><strong>E2</strong></td><td>Ubiquitin-conjugating enzyme (泛素結合酶)</td><td>~40</td><td>Forms complex with E3; carries activated Ub</td></tr>
+          <tr><td><strong>E3</strong></td><td>Ubiquitin ligase (泛素連接酶)</td><td>&gt;500</td><td>Recognises specific degradation signal (degron 降解訊號) on substrate; helps E2 attach Ub to target</td></tr>
+        </tbody>
+      </table>
+      The large number of E3 ligases (&gt;500) provides substrate specificity — each E3 recognises different target proteins.
+    </p>
+
+    <p data-topic="proteasome-structure">
+      <strong>Proteasome (蛋白酶體) structure — the 26S proteasome:</strong>
+      <ul>
+        <li><strong>20S core particle (核心顆粒)</strong> — central cylinder containing proteolytic (蛋白水解) active sites; performs the actual cleavage</li>
+        <li><strong>19S regulatory cap (調節帽)</strong> — "unfoldase ring (解摺疊環)" at each end; contains:
+          <ul>
+            <li><strong>Ubiquitin receptor</strong> — recognises polyubiquitinated protein</li>
+            <li>ATPase subunits — use ATP hydrolysis to unfold the target protein</li>
+            <li>Deubiquitinase (去泛素酶) — removes ubiquitin for recycling</li>
+          </ul>
+        </li>
+        <li><strong>Location</strong> — found throughout cytoplasm and nucleoplasm; concentrated at the nuclear envelope–ER network</li>
+      </ul>
+    </p>
+
+    <p data-topic="proteasome-mechanism">
+      <strong>Steps of proteasomal degradation:</strong>
+      <ol>
+        <li>19S cap ubiquitin receptor recognises the polyubiquitin chain on the target protein</li>
+        <li>Deubiquitinase removes and recycles the Ub tags</li>
+        <li>19S ATPases use ATP hydrolysis to unfold the protein</li>
+        <li>Unfolded protein is threaded through the narrow 20S cylinder</li>
+        <li>Proteases in the 20S core cut the protein into small peptide fragments</li>
+        <li>Peptide products exit and are further degraded to amino acids by cytosolic peptidases</li>
+      </ol>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="ubiquitin-proteasome">
+      <b>Exam trap:</b> Ubiquitin itself has 7 Lys residues and <em>can itself be ubiquitinated</em> — forming a chain. Do not confuse the <strong>E3 ligase</strong> (recognises the substrate) with E1 (activates Ub with ATP) or E2 (carries Ub). E3 does NOT use ATP directly.
+    </div>
+  </section>
+
+  <!-- SECTION 4 -->
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. The Lysosome and Delivery Pathways</h2>
+
+    <p data-topic="lysosome-structure">
+      <strong>Lysosome (溶酶體) — structure and composition:</strong>
+      <ul>
+        <li>Size: <strong>0.2–0.5 μm</strong> diameter</li>
+        <li>Lumen pH: <strong>~5.0</strong> (acidic; cytosol pH ~7.2)</li>
+        <li>Contains &gt;<strong>50 types</strong> of acid hydrolases (酸性水解酶) including: nucleases, proteases, glycosidases, lipases, phosphatases, sulfatases, phospholipases</li>
+        <li>Equivalents: <em>vacuole (液泡)</em> in yeast and plants</li>
+      </ul>
+    </p>
+
+    <p data-topic="lysosome-membrane-proteins">
+      <strong>Lysosomal membrane proteins (溶酶體膜蛋白) — two key functions:</strong>
+      <ul>
+        <li><strong>H⁺ pump (質子泵)</strong> — uses ATP hydrolysis to pump H⁺ into the lumen → maintains pH ~5.0</li>
+        <li><strong>Transport proteins (轉運蛋白)</strong> — export final digestion products (amino acids, nucleotides) to the cytosol</li>
+        <li>Both pumps and transporters are <strong>heavily glycosylated (高度糖基化)</strong> on the luminal face to protect them from the very proteases inside</li>
+      </ul>
+    </p>
+
+    <p data-topic="lysosomal-delivery-pathways">
+      <strong>Four pathways delivering cargo to lysosomes:</strong>
+      <table>
+        <thead><tr><th>Pathway</th><th>Cargo</th><th>Mechanism</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Endocytosis (胞飲作用)</strong></td><td>Extracellular proteins, receptors</td><td>Plasma membrane → coated vesicle → early endosome → late endosome → lysosome</td></tr>
+          <tr><td><strong>Phagocytosis (吞噬作用)</strong></td><td>Bacteria, large particles</td><td>Phagosome (吞噬體) + lysosome → phagolysosome (吞噬溶酶體) → exocytosis of soluble debris</td></tr>
+          <tr><td><strong>Secretory pathway (分泌途徑)</strong></td><td>Lysosomal enzymes from ER/Golgi (TGN)</td><td>Trans-Golgi network → late endosome → lysosome</td></tr>
+          <tr><td><strong>Autophagy (自噬)</strong></td><td>Organelles, protein aggregates</td><td>Autophagosome → autolysosome</td></tr>
+        </tbody>
+      </table>
+    </p>
+
+    <p data-topic="ubiquitin-endocytic-routing">
+      <strong>Ubiquitin as a lysosomal routing tag in the endocytic pathway:</strong>
+      <ul>
+        <li>Ubiquitinated membrane receptors (e.g., receptor tyrosine kinases) are sorted into the <strong>MVB (multivesicular body 多囊體)</strong> pathway</li>
+        <li>ESCRT complexes (ESCRT-I, -II, -III) recognise Ub tags and sort cargo into intraluminal vesicles</li>
+        <li>MVB/late endosome fuses with lysosome → receptor degradation (prevents recycling → signal termination)</li>
+        <li>DUB (deubiquitinase 去泛素酶) removes Ub to regulate endocytic machinery</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="lysosomal-delivery-pathways">
+      <b>Exam trap:</b> The lysosome receives cargo from <em>multiple</em> routes — do not say only "endocytosis." Autophagy, phagocytosis, and the secretory pathway are equally valid delivery routes. The H⁺ pump uses ATP; if ATP is depleted the lysosome acidification fails.
+    </div>
+  </section>
+
+  <!-- SECTION 5 -->
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Autophagy — Three Types and Macroautophagy in Detail</h2>
+
+    <p data-topic="autophagy-overview">
+      <strong>Autophagy (自噬 / "self-eating")</strong> — discovered by Yoshinori Ohsumi (Nobel Prize in Physiology or Medicine, 2016):
+      <ul>
+        <li>Quality control — remove damaged organelles and large protein complexes</li>
+        <li>Reconstruction — normal cell growth and development</li>
+        <li>Adaptive stress response — starvation, infection</li>
+      </ul>
+    </p>
+
+    <p data-topic="autophagy-types">
+      <strong>Three principal types of autophagy (自噬的三種類型):</strong>
+      <table>
+        <thead><tr><th>Type</th><th>Mechanism</th><th>Cargo size</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Microautophagy (微自噬)</strong></td><td>Lysosomal membrane directly invaginates and engulfs small cytoplasmic portions (sequestration)</td><td>Small molecules</td></tr>
+          <tr><td><strong>Chaperone-mediated autophagy, CMA (伴隨蛋白介導的自噬)</strong></td><td>Hsc70 recognises KFERQ-like motif on substrate → direct translocation across lysosomal membrane via LAMP-2A channel</td><td>Individual unfolded proteins</td></tr>
+          <tr><td><strong>Macroautophagy (巨自噬)</strong></td><td>Double-membrane autophagosome forms around cargo, then fuses with lysosome</td><td>Organelles, aggregates, pathogens</td></tr>
+        </tbody>
+      </table>
+    </p>
+
+    <p data-topic="macroautophagy-steps">
+      <strong>Process of macroautophagy (巨自噬過程) — 4 key steps:</strong>
+      <ol>
+        <li><strong>Vesicle nucleation (囊泡成核)</strong> — isolation membrane (隔離膜) / phagophore (吞噬泡) forms; requires PI3P (phosphatidylinositol-3-phosphate) and ATG proteins</li>
+        <li><strong>Vesicle elongation (囊泡延伸)</strong> — phagophore expands and curves around cargo (damaged mitochondria, aggregated proteins, pathogens); ATG8/LC3 coats the membrane</li>
+        <li><strong>Docking and fusion (停靠與融合)</strong> — completed autophagosome (雙層膜囊泡) fuses with lysosome/vacuole → autolysosome (自溶酶體); machinery: Rab GTPase Ypt7, GEF Mon1-Ccz1, tethering complex HOPS, SNAREs (Ykt6)</li>
+        <li><strong>Vesicle breakdown and degradation (囊泡分解與降解)</strong> — lysosomal hydrolases digest the inner autophagosomal membrane and cargo → metabolites recycled to cytosol</li>
+      </ol>
+    </p>
+
+    <!-- SVG macroautophagy flow -->
+    <div style="margin:0.8rem 0;padding:0.8rem;background:#f0fff4;border-radius:8px;">
+      <svg viewBox="0 0 560 80" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;display:block;margin:auto;font-family:sans-serif;">
+        <rect x="5" y="20" width="90" height="40" rx="6" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+        <text x="50" y="37" text-anchor="middle" font-size="8.5" fill="#065f46">Isolation</text>
+        <text x="50" y="50" text-anchor="middle" font-size="8.5" fill="#065f46">membrane</text>
+        <text x="50" y="63" text-anchor="middle" font-size="7" fill="#065f46">(phagophore)</text>
+        <line x1="95" y1="40" x2="120" y2="40" stroke="#059669" stroke-width="1.5" marker-end="url(#ag)"/>
+        <rect x="120" y="20" width="90" height="40" rx="6" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+        <text x="165" y="37" text-anchor="middle" font-size="8.5" fill="#065f46">Autophagosome</text>
+        <text x="165" y="52" text-anchor="middle" font-size="7.5" fill="#065f46">(double membrane)</text>
+        <line x1="210" y1="40" x2="235" y2="40" stroke="#059669" stroke-width="1.5" marker-end="url(#ag)"/>
+        <rect x="235" y="20" width="90" height="40" rx="6" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+        <text x="280" y="37" text-anchor="middle" font-size="8.5" fill="#713f12">Docking &amp;</text>
+        <text x="280" y="52" text-anchor="middle" font-size="8.5" fill="#713f12">Fusion (HOPS/SNARE)</text>
+        <line x1="325" y1="40" x2="350" y2="40" stroke="#059669" stroke-width="1.5" marker-end="url(#ag)"/>
+        <rect x="350" y="20" width="100" height="40" rx="6" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+        <text x="400" y="37" text-anchor="middle" font-size="8.5" fill="#831843">Autolysosome</text>
+        <text x="400" y="52" text-anchor="middle" font-size="7.5" fill="#831843">→ Degradation</text>
+        <line x1="450" y1="40" x2="475" y2="40" stroke="#059669" stroke-width="1.5" marker-end="url(#ag)"/>
+        <rect x="475" y="20" width="80" height="40" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+        <text x="515" y="37" text-anchor="middle" font-size="8.5" fill="#1e3a8a">Metabolites</text>
+        <text x="515" y="52" text-anchor="middle" font-size="8.5" fill="#1e3a8a">recycled</text>
+        <defs>
+          <marker id="ag" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#059669"/></marker>
+        </defs>
+      </svg>
+    </div>
+
+    <p data-topic="autophagosome-vacuole-fusion">
+      <strong>Autophagosome–vacuole/lysosome fusion machinery (in yeast model):</strong>
+      <ul>
+        <li><strong>Atg8 (LC3 in mammals)</strong> — autophagosome membrane marker; recruits Mon1-Ccz1 complex</li>
+        <li><strong>Mon1-Ccz1</strong> — GEF (鳥嘌呤核苷酸交換因子) that activates Rab GTPase Ypt7 (mammal: Rab7)</li>
+        <li><strong>Ypt7-GTP</strong> — binds HOPS tethering complex on the vacuole</li>
+        <li><strong>HOPS</strong> — tethers (拴繫) the autophagosome to the vacuole; assembles SNARE proteins</li>
+        <li><strong>SNAREs (Ykt6 and others)</strong> — drive membrane fusion (膜融合)</li>
+        <li><em>HOPS mutants</em>: autophagosome accumulates outside the vacuole (shown by Atg8 dots not entering the vacuole lumen)</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="autophagy-types">
+      <b>Exam trap:</b> "Autophagy" alone usually means macroautophagy in exam questions. CMA uses the Hsc70 chaperone and LAMP-2A channel — it does NOT form an autophagosome. Microautophagy is direct engulfment by the lysosomal membrane.
+    </div>
+  </section>
+
+  <!-- SECTION 6 -->
+  <section class="reveal-on-scroll" data-sec="5">
+    <h2>6. Autophagy and Cancer — a Double-Edged Role</h2>
+
+    <p data-topic="autophagy-cancer">
+      <ul>
+        <li>Autophagy acts as a <strong>tumour suppressor (腫瘤抑制因子)</strong> — removes damaged organelles/proteins that could trigger malignant transformation (惡性轉化); prevents tumour initiation</li>
+        <li>Autophagy also acts as a <strong>survival pathway (存活途徑)</strong> — established tumour cells use autophagy to endure metabolic stress and resist death by chemotherapeutic agents (化療藥物)</li>
+        <li>Key protein: <strong>Beclin1 (貝克林1)</strong> — core autophagy regulator; functions in vesicle nucleation; acts as a tumour suppressor</li>
+      </ul>
+    </p>
+
+    <p data-topic="beclin1-experiment">
+      <strong>Experimental evidence — Liang et al., Nature 1999 (MCF7 breast carcinoma cells):</strong>
+      <ul>
+        <li>MCF7 cells <em>lacking</em> Beclin1 (no autophagy): under starvation, cells survive without forming autophagic vacuoles; when injected into mice (orthotopic injection 原位注射), <strong>~89% (8/9)</strong> of mice grew tumours by day 5; high tumour incidence at days 7, 37, 38</li>
+        <li>MCF7 cells <em>stably transfected</em> with Beclin1 (autophagy restored): starvation induces significantly higher level of autophagic vacuoles; tumour incidence reduced when compared to control</li>
+        <li>Conclusion: <strong>defects in autophagy (失能自噬) promote tumour growth</strong>; Beclin1 is a haploinsufficient tumour suppressor</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="autophagy-cancer">
+      <b>Exam trap:</b> Autophagy is a <em>context-dependent</em> process. In early tumourigenesis it is tumour-suppressive; in established tumours it is pro-survival. Do not state simply that "autophagy prevents cancer" — both effects exist.
+    </div>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Protein degradation IS important for regular protein turn-over — option (b) of the lecture practice question is the FALSE statement.</li>
+      <li>Ubiquitin has 7 Lys residues and can itself be ubiquitinated; Lys48 chains → proteasome; Lys63 chains → lysosome/endocytic pathway.</li>
+      <li>E3 ligase recognises the substrate (degron); E1 uses ATP; E2 carries Ub — do not mix up roles.</li>
+      <li>The proteasome has &gt;500 E3 ligases providing specificity but only 2 E1 and ~40 E2 enzymes.</li>
+      <li>Lysosome pH ~5.0 (maintained by ATP-driven H⁺ pump); cytosol pH ~7.2 — lysosomal enzymes only work at acidic pH.</li>
+      <li>Lysosome membrane proteins are heavily glycosylated to protect against luminal proteases.</li>
+      <li>Autophagy = macroautophagy in most exam contexts; CMA does NOT use an autophagosome; microautophagy = direct lysosomal membrane engulfment.</li>
+      <li>HOPS tethering complex is required for autophagosome–vacuole fusion; HOPS mutants accumulate autophagosomes outside the vacuole.</li>
+      <li>Autophagy is both tumour-suppressive (early) and pro-survival (established tumours) — context matters.</li>
+      <li>Beclin1 loss = reduced autophagy = increased tumour formation in mouse orthotopic injection assay (Liang et al., Nature 1999).</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Ubiquitin = 76 amino acids; 96% identity between human and yeast; 7 Lys residues</li>
+      <li>E1 (2 types) → ATP activation; E2 (~40) → Ub carrier; E3 (&gt;500) → substrate specificity</li>
+      <li>Proteasome: 20S core (protease) + 19S cap (unfoldase + Ub receptor + DUB); uses ATP hydrolysis</li>
+      <li>Lysosome size 0.2–0.5 μm; lumen pH ~5.0; &gt;50 types of acid hydrolases</li>
+      <li>H⁺ pump uses ATP to acidify lysosome; transporters export amino acids/nucleotides; both are heavily glycosylated</li>
+      <li>Four delivery routes to lysosome: endocytosis, phagocytosis, secretory pathway (TGN), autophagy</li>
+      <li>Three types of autophagy: microautophagy, CMA (Hsc70 + LAMP-2A), macroautophagy (autophagosome)</li>
+      <li>Macroautophagy steps: nucleation → elongation → docking/fusion (HOPS/SNARE) → degradation</li>
+      <li>Autophagosome markers: Atg8/LC3; fusion GTPase: Ypt7/Rab7; tether: HOPS; SNARE: Ykt6</li>
+      <li>Beclin1 = autophagy regulator and tumour suppressor; loss → increased tumour growth (MCF7 mouse model)</li>
+      <li>Protein half-lives: Ornithine decarboxylase = 11 min (shortest); Lactic dehydrogenase = 16 days (longest)</li>
+      <li>Diseases of failed degradation: Alzheimer's (Aβ), Parkinson's (α-Synuclein/Lewy bodies), ALS (TDP-43)</li>
+    </ol>
+  </div>
+</div>
+
+<div id="notes-15" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-15" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(15)">Clear Highlights</button>
+  <h1>Lecture 15: The Cytoskeleton and Cell Movement-I</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    The cytoskeleton (細胞骨架) is an intricate network of protein filaments that extends throughout the cytoplasm of eukaryotic cells, providing structural support, shape, and the machinery for intracellular transport and cell movement. Three distinct filament systems — intermediate filaments, microtubules, and actin filaments — each contribute unique mechanical and functional properties. Motor proteins (馬達蛋白) such as kinesin and dynein walk along microtubule tracks to ferry cargo across the cell, while specialized microtubule arrays in cilia and flagella generate coordinated beating motions essential for mucus clearance and sperm motility.
+  </div>
+
+  <!-- SECTION 1 -->
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Overview of the Three Cytoskeletal Filaments</h2>
+    <p data-topic="cytoskeleton-overview">
+      <ul>
+        <li>Cytoskeleton (細胞骨架) — an intricate network of protein filaments extending throughout the cytoplasm; found in all eukaryotic cells</li>
+        <li>Three principal filament types in multicellular eukaryotes:
+          <table>
+            <thead><tr><th>Filament</th><th>Diameter</th><th>Subunit</th><th>Key location/function</th></tr></thead>
+            <tbody>
+              <tr><td>Intermediate filaments (中間纖維)</td><td>~10 nm</td><td>Fibrous proteins (e.g. keratin, lamin)</td><td>Mechanical strength; nuclear lamina</td></tr>
+              <tr><td>Microtubules (微管)</td><td>~25 nm</td><td>α/β-tubulin heterodimer</td><td>Transport highways; mitotic spindle; cilia</td></tr>
+              <tr><td>Actin filaments (肌動蛋白絲)</td><td>~7 nm</td><td>G-actin monomer</td><td>Cell cortex; cell motility; muscle contraction</td></tr>
+            </tbody>
+          </table>
+        </li>
+        <li>Scale bar for all three filament types in cells: ~25 µm (cell level); ~25 nm (filament level)</li>
+        <li>All three are dynamic — they can polymerize and depolymerize in response to cell signals</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="cytoskeleton-overview"><b>Exam trap:</b> The cytoskeleton is present only in eukaryotes; bacteria (e.g. E. coli) lack true intermediate filaments and microtubules. Do not confuse filament diameter: microtubules (~25 nm) are the largest, actin (~7 nm) is the smallest, intermediate filaments (~10 nm) are in between.</div>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Intermediate Filaments: Structure, Assembly, and Function</h2>
+    <p data-topic="intermediate-filaments">
+      <ul>
+        <li>Intermediate filaments (中間纖維, IF) — rope-shaped filaments ~10 nm in diameter formed by lateral bundling of fibrous protein subunits; no nucleotide binding or hydrolysis required for assembly</li>
+        <li>Assembly — subunits wind together into coiled-coils (螺旋捲曲), then laterally bundle into the characteristic "rope shape" visible by EM</li>
+        <li>Polarity — IFs are non-polar (無極性); unlike actin and microtubules, they have no plus or minus end</li>
+        <li>Primary function — mechanical strength; enable cells to withstand mechanical stress (機械應力) when stretched</li>
+        <li>Anchorage at desmosomes (橋粒):
+          <ul>
+            <li>IFs are anchored to the plasma membrane at desmosomes (cell-cell junctions)</li>
+            <li>This links the IF networks of adjacent cells, distributing tensile forces across a tissue</li>
+            <li>Also anchored at hemidesmosomes (半橋粒) to the basal lamina (基底膜)</li>
+          </ul>
+        </li>
+        <li>Mechanical stress experiment: a sheet of cells with IFs remains intact when stretched; the same sheet without IFs ruptures</li>
+        <li>Nuclear lamina (核纖層) — a specialized IF meshwork 10–40 nm thick on the nucleoplasmic surface of the inner nuclear membrane; composed of lamins (核纖層蛋白); provides structural integrity and mechanical stability to the nucleus</li>
+        <li>Disease: Epidermolysis bullosa simplex (大皰性表皮松解症) — mutations in keratin (角蛋白) genes → defective keratin filament network in basal cells of epidermis → blistered skin (水疱) upon mechanical friction; hemidesmosomes fail to anchor basal cells to basal lamina</li>
+        <li>Around 30 different diseases are associated with mutations in IF protein genes</li>
+      </ul>
+    </p>
+
+    <!-- SVG diagram: IF lateral bundling to rope structure -->
+    <div style="margin:12px 0;text-align:center">
+      <svg width="420" height="80" viewBox="0 0 420 80" style="font-family:sans-serif;font-size:11px">
+        <!-- step 1: single coiled-coil -->
+        <rect x="10" y="30" width="80" height="16" rx="8" fill="#6db6e8" opacity="0.85"/>
+        <text x="50" y="60" text-anchor="middle" fill="#333">Coiled-coil dimer</text>
+        <!-- arrow -->
+        <line x1="100" y1="38" x2="130" y2="38" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+        <defs><marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#555"/></marker></defs>
+        <!-- step 2: protofilament -->
+        <rect x="135" y="22" width="80" height="32" rx="8" fill="#4a9fd4" opacity="0.85"/>
+        <text x="175" y="65" text-anchor="middle" fill="#333">Protofilament</text>
+        <!-- arrow -->
+        <line x1="225" y1="38" x2="255" y2="38" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+        <!-- step 3: rope -->
+        <ellipse cx="310" cy="38" rx="55" ry="20" fill="#2176ae" opacity="0.75"/>
+        <line x1="260" y1="32" x2="360" y2="26" stroke="#fff" stroke-width="1" opacity="0.6"/>
+        <line x1="260" y1="38" x2="360" y2="50" stroke="#fff" stroke-width="1" opacity="0.6"/>
+        <line x1="260" y1="44" x2="360" y2="36" stroke="#fff" stroke-width="1" opacity="0.6"/>
+        <text x="310" y="65" text-anchor="middle" fill="#333">IF "rope" (~10 nm)</text>
+      </svg>
+    </div>
+
+    <div class="exam-trap-inline" data-topic="intermediate-filaments"><b>Exam trap:</b> Intermediate filaments do NOT use ATP or GTP for assembly, and they are non-polar — motor proteins cannot walk along them. Keratin mutations cause blistered skin, not muscle disease; confusing keratin with other IF types is a common error.</div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Microtubules: Structure, Polarity, and Dynamic Instability</h2>
+    <p data-topic="microtubule-structure">
+      <ul>
+        <li>Microtubule (微管) — hollow cylindrical tube ~25 nm in diameter; wall formed by 13 protofilaments (原纖絲) arranged in parallel</li>
+        <li>Subunit — α/β-tubulin heterodimer (管蛋白異二聚體); the basic building block added during polymerization</li>
+        <li>Polarity — microtubules are polar (有極性):
+          <ul>
+            <li>Plus end (正端) — fast-growing end; β-tubulin exposed; points toward cell periphery in interphase</li>
+            <li>Minus end (負端) — slow-growing end; α-tubulin exposed; anchored at MTOC (e.g. centrosome) in interphase</li>
+          </ul>
+        </li>
+        <li>GTP cap (GTP帽) — growing microtubules maintain a cap of GTP-tubulin dimers at the plus end; GTP on β-tubulin is exchangeable; GTP on α-tubulin is non-exchangeable</li>
+      </ul>
+    </p>
+    <p data-topic="dynamic-instability">
+      <ul>
+        <li>Dynamic instability (動態不穩定性) — a single microtubule end oscillates stochastically between growing and shrinking states, allowing rapid exploration of cellular space</li>
+        <li>Catastrophe (崩塌):
+          <ul>
+            <li>If GTP hydrolysis proceeds faster than tubulin addition, the GTP cap is lost</li>
+            <li>GDP-tubulin (GDP管蛋白) in the lattice is curved and destabilized → rapid depolymerization (shrinking)</li>
+          </ul>
+        </li>
+        <li>Rescue (拯救):
+          <ul>
+            <li>GTP-tubulin subunits may still add to a shrinking end</li>
+            <li>If enough GTP-tubulin accumulates to re-form a cap, growth resumes</li>
+          </ul>
+        </li>
+        <li>Functional significance — dynamic instability allows cells to build microtubule arrays with specific shapes by selectively stabilizing or destabilizing microtubules at particular locations</li>
+        <li>GDP-only conditions → no GTP cap possible → microtubules shrink; non-hydrolyzable GTP analog → permanent cap → stable, continuously growing microtubules</li>
+      </ul>
+    </p>
+
+    <!-- SVG: dynamic instability cycle -->
+    <div style="margin:12px 0;text-align:center">
+      <svg width="460" height="110" viewBox="0 0 460 110" style="font-family:sans-serif;font-size:11px">
+        <!-- Growing MT -->
+        <rect x="20" y="20" width="20" height="60" rx="3" fill="#4caf50"/>
+        <rect x="20" y="15" width="20" height="10" rx="3" fill="#ffe082"/>
+        <text x="30" y="92" text-anchor="middle" fill="#333">Growing</text>
+        <text x="30" y="103" text-anchor="middle" fill="#888">(GTP cap)</text>
+        <!-- catastrophe arrow -->
+        <line x1="50" y1="48" x2="130" y2="48" stroke="#e53935" stroke-width="1.5" marker-end="url(#arr2)"/>
+        <text x="90" y="43" text-anchor="middle" fill="#e53935">Catastrophe</text>
+        <defs><marker id="arr2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#e53935"/></marker></defs>
+        <!-- Shrinking MT -->
+        <rect x="140" y="40" width="20" height="40" rx="3" fill="#ef9a9a"/>
+        <text x="150" y="92" text-anchor="middle" fill="#333">Shrinking</text>
+        <text x="150" y="103" text-anchor="middle" fill="#888">(GDP lattice)</text>
+        <!-- rescue arrow -->
+        <line x1="170" y1="68" x2="250" y2="68" stroke="#1976d2" stroke-width="1.5" marker-end="url(#arr3)"/>
+        <text x="210" y="63" text-anchor="middle" fill="#1976d2">Rescue</text>
+        <defs><marker id="arr3" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#1976d2"/></marker></defs>
+        <!-- New GTP cap forms -->
+        <rect x="260" y="25" width="20" height="55" rx="3" fill="#4caf50"/>
+        <rect x="260" y="18" width="20" height="10" rx="3" fill="#ffe082"/>
+        <text x="270" y="92" text-anchor="middle" fill="#333">Growing</text>
+        <text x="270" y="103" text-anchor="middle" fill="#888">(new cap)</text>
+        <!-- labels -->
+        <text x="390" y="40" fill="#555">GTP-tubulin = stable cap</text>
+        <text x="390" y="55" fill="#888" font-size="10">GDP-tubulin = curved, unstable</text>
+      </svg>
+    </div>
+
+    <div class="exam-trap-inline" data-topic="dynamic-instability"><b>Exam trap:</b> It is the β-tubulin subunit that carries exchangeable GTP — not α-tubulin. If only GDP is present (no GTP), microtubules cannot maintain a cap and will shrink. If a non-hydrolyzable GTP analog is used, no catastrophe can occur and microtubules grow continuously.</div>
+  </section>
+
+  <!-- SECTION 4 -->
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Microtubule Nucleation: MTOC, Centrosome, and γ-TuRC</h2>
+    <p data-topic="mtoc-centrosome">
+      <ul>
+        <li>MTOC (microtubule organizing center, 微管組織中心) — any structure that nucleates microtubule assembly; controls the number, polarity, and location of microtubules</li>
+        <li>Centrosome (中心體) — the main MTOC in animal cells; located near the nucleus; consists of:
+          <ul>
+            <li>A pair of centrioles (中心粒) — short cylindrical structures built from triplet microtubules</li>
+            <li>Pericentriolar matrix (centrosome matrix) — protein-rich cloud surrounding the centrioles; contains nucleating sites</li>
+          </ul>
+        </li>
+        <li>Nucleating sites — γ-tubulin ring complexes (γ-TuRC, γ-管蛋白環狀複合體) embedded in the centrosome matrix</li>
+        <li>γ-TuRC assembly:
+          <ul>
+            <li>γ-TuSC (γ-tubulin small complex, γ-管蛋白小複合體) — formed by 2 copies of γ-tubulin + a pair of accessory proteins</li>
+            <li>Seven copies of γ-TuSC assemble into a spiral structure exposing 13 γ-tubulin subunits in a circular orientation matching the 13 protofilaments of a microtubule</li>
+            <li>This "template" nucleates polymerization, skipping the rate-limiting nucleation step that free tubulin requires</li>
+          </ul>
+        </li>
+        <li>Minus end orientation — the minus end of every microtubule is anchored at the centrosome; plus ends radiate outward toward the cell periphery</li>
+        <li>Interphase organization — microtubules radiate from the centrosome near the nucleus, reaching the cell cortex (plus ends marked +)</li>
+        <li>Mitosis organization — centrosomes duplicate and separate to form the two poles of the mitotic spindle (有絲分裂紡錘體); kinetochore microtubules attach to chromosomes at their plus ends</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="mtoc-centrosome"><b>Exam trap:</b> γ-tubulin (gamma-管蛋白) is NOT incorporated into the microtubule lattice — it forms the ring template at the minus end only. The minus end stays buried in the centrosome; only the plus end grows outward. Confusing γ-TuSC with γ-TuRC: γ-TuSC is the small subunit; 7 × γ-TuSC = one γ-TuRC.</div>
+  </section>
+
+  <!-- SECTION 5 -->
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Motor Proteins: Kinesin and Dynein</h2>
+    <p data-topic="motor-proteins-kinesin-dynein">
+      <ul>
+        <li>Motor proteins (馬達蛋白) — proteins that use ATP hydrolysis to move along cytoskeletal tracks; both kinesin and dynein walk along microtubules using their globular head domains</li>
+        <li>Structure — each motor has:
+          <ul>
+            <li>Globular head (球形頭部) — ATPase domain that contacts the microtubule</li>
+            <li>Tail domain (尾部) — binds cargo (vesicles, organelles, chromosomes, etc.)</li>
+          </ul>
+        </li>
+        <li>Kinesin (驅動蛋白):
+          <ul>
+            <li>Moves toward the plus end (positive-end directed) — i.e., from centrosome toward cell periphery in interphase</li>
+            <li>Anterograde transport (順向運輸) of vesicles and organelles away from the cell body</li>
+          </ul>
+        </li>
+        <li>Dynein (動力蛋白):
+          <ul>
+            <li>Moves toward the minus end (negative-end directed) — i.e., from cell periphery toward centrosome</li>
+            <li>Retrograde transport (逆向運輸) of vesicles and organelles back toward the cell body</li>
+          </ul>
+        </li>
+        <li>Different kinesin family members and dyneins transport different cargo types (vesicles, mitochondria, melanosomes, chromosomes) along the same microtubule highway</li>
+        <li>Melanosome (黑色素體) movement example — melanosomes disperse outward (kinesin, plus-end directed) or aggregate centrally (dynein, minus-end directed), producing pigment distribution changes in fish skin cells</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="motor-proteins-kinesin-dynein"><b>Exam trap:</b> Kinesin moves to the plus end (periphery); dynein moves to the minus end (centrosome). A common mistake is reversing these. Note that some kinesin family members are minus-end directed — conventional kinesin-1 is the canonical plus-end motor.</div>
+  </section>
+
+  <!-- SECTION 6 -->
+  <section class="reveal-on-scroll" data-sec="5">
+    <h2>6. Cilia and Flagella: Structure, Function, and Disease</h2>
+    <p data-topic="cilia-flagella-structure">
+      <ul>
+        <li>Cilia (纖毛) and flagella (鞭毛) — microtubule-based organelles that project from the cell surface; powered by axonemal dynein (軸絲動力蛋白)</li>
+        <li>Motile vs immobile:
+          <ul>
+            <li>Motile cilia — back-and-forth beating; move fluid (e.g., mucus in respiratory tract) or propel cells</li>
+            <li>Flagella — propeller-like rotation; drive sperm motility; longer and fewer per cell than cilia</li>
+            <li>Immobile (primary) cilia — act as the cell's antenna (細胞天線); contain receptors in their membrane/axoneme; transduce environmental signals (e.g. renal cilia sense urine flow; olfactory cilia sense odorants)</li>
+          </ul>
+        </li>
+        <li>Axoneme (軸絲) structure — the core of a cilium/flagellum:
+          <ul>
+            <li>9+2 arrangement: 9 outer doublet microtubules (雙聯微管) surrounding 2 central singlet microtubules</li>
+            <li>Each doublet has outer dynein arms and inner dynein arms projecting toward neighboring doublets</li>
+          </ul>
+        </li>
+        <li>Basal body (基體):
+          <ul>
+            <li>At the base of every cilium; structurally identical to a centriole (9 triplet microtubules)</li>
+            <li>Acts as the MTOC for ciliary axoneme assembly; transition fibers and terminal plate connect basal body to the ciliary membrane</li>
+          </ul>
+        </li>
+        <li>Mechanism of bending (how dynein causes flagellum to bend):
+          <ul>
+            <li>In isolated doublets + ATP: axonemal dynein slides adjacent doublets relative to each other (microtubule sliding, 微管滑動)</li>
+            <li>In intact flagellum: linking proteins (connexin-like) resist sliding → force is converted to bending (彎曲) of the entire axoneme</li>
+          </ul>
+        </li>
+        <li>Primary ciliary dyskinesia (PCD, 原發性纖毛運動障礙) — caused by defects in cilia lining respiratory tract:
+          <ul>
+            <li>~30 different diseases caused by cilia defects</li>
+            <li>Symptoms: reduced mucus clearance from lungs, chronic recurrent respiratory infections, nasal/sinus problems, infertility (male and female)</li>
+            <li>Affected organs: nasal cavity/sinuses, trachea, bronchial tubes, lungs, middle ear, reproductive system</li>
+          </ul>
+        </li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="cilia-flagella-structure"><b>Exam trap:</b> The basal body and centriole have the same 9-triplet microtubule structure; the axoneme has a 9+2 arrangement (doublets, not triplets). Dynein in cilia/flagella is axonemal dynein — separate from cytoplasmic dynein that transports cargo. Sliding without linking proteins produces only translation, not bending; linking proteins are required to convert sliding into bending.</div>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Bacteria lack a true cytoskeleton — intermediate filaments and microtubules are eukaryote-only structures.</li>
+      <li>Filament diameter order: actin (~7 nm) &lt; intermediate filaments (~10 nm) &lt; microtubules (~25 nm).</li>
+      <li>Intermediate filaments are non-polar and do not use ATP/GTP for assembly; motor proteins cannot walk on them.</li>
+      <li>Keratin gene mutations → Epidermolysis bullosa simplex (blistered skin); the problem is at hemidesmosomes, not desmosomes between cells.</li>
+      <li>Nuclear lamina is made of lamin (a type of IF), not actin or tubulin.</li>
+      <li>Exchangeable GTP binds β-tubulin only; α-tubulin GTP is non-exchangeable and irrelevant to dynamic instability.</li>
+      <li>GDP-only solution → microtubule shrinkage; non-hydrolyzable GTP analog → permanent cap → stable growth.</li>
+      <li>γ-tubulin forms the ring template at the minus end but does NOT enter the microtubule lattice; 7 × γ-TuSC = 1 γ-TuRC = 13 γ-tubulin subunits.</li>
+      <li>Kinesin moves to the plus end (periphery); cytoplasmic dynein moves to the minus end (centrosome).</li>
+      <li>Axoneme = 9+2 doublet arrangement; basal body = 9 triplet microtubules; confusing the two is a common error.</li>
+      <li>Dynein sliding alone (isolated doublets) causes translational sliding; linking proteins convert this to bending of the cilium/flagellum.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Three cytoskeletal filaments and their diameters: actin ~7 nm, intermediate filaments ~10 nm, microtubules ~25 nm</li>
+      <li>Microtubule subunit = α/β-tubulin heterodimer; 13 protofilaments per microtubule</li>
+      <li>Plus end = fast-growing, β-tubulin exposed, points to periphery; minus end = anchored at centrosome</li>
+      <li>GTP cap on β-tubulin stabilizes the plus end; loss of cap → catastrophe; new cap formation → rescue</li>
+      <li>γ-TuRC = 7 × γ-TuSC = 13 γ-tubulin subunits arranged to template 13 protofilaments; located in centrosome matrix</li>
+      <li>Centrosome = pair of centrioles + pericentriolar matrix; is an MTOC; minus ends anchored here</li>
+      <li>Kinesin → plus-end directed (anterograde/periphery); cytoplasmic dynein → minus-end directed (retrograde/centrosome)</li>
+      <li>Intermediate filaments: non-polar, no ATP/GTP, rope structure, resist mechanical stress; anchored at desmosomes and hemidesmosomes</li>
+      <li>Nuclear lamina = lamin (IF type); 10–40 nm thick meshwork on inner nuclear membrane</li>
+      <li>Epidermolysis bullosa simplex = keratin gene mutation → fragile basal epithelial cells → blistered skin</li>
+      <li>Cilium axoneme = 9+2 doublet microtubules; basal body = 9 triplet microtubules; dynein arms cause sliding → linking proteins convert to bending</li>
+      <li>Primary ciliary dyskinesia (PCD) — ~30 diseases from cilia defects; symptoms: chronic respiratory infections, infertility, mucus buildup</li>
+    </ol>
+  </div>
+</div>
+
+<div id="notes-16" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-16" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(16)">Clear Highlights</button>
+  <h1>Lecture 16: The Cytoskeleton and Cell Movement-II</h1>
+  <div class="bigpic reveal-on-scroll">
+    This lecture focuses on actin filaments as the third major cytoskeletal component, covering their structure, assembly dynamics, and the actin-binding proteins that regulate them. It then traces how actin polymerization drives cell migration through lamellipodia and filopodia, and how myosin motor proteins interact with actin to power contraction. The lecture concludes with the molecular events of skeletal muscle contraction, from sarcomere organization to calcium-triggered sliding filament mechanics controlled by the troponin-tropomyosin system.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Actin Filament Structure and Assembly Dynamics</h2>
+    <p data-topic="actin-filament-structure">
+      <ul>
+        <li>肌動蛋白絲 (actin filament) / microfilament (微絲) — thinnest cytoskeletal element; diameter ~7 nm; visible at 25 nm scale bar under EM</li>
+        <li>G-actin (球狀肌動蛋白, globular actin) — cytosolic monomeric form; each monomer binds one ATP; asymmetric shape gives polarity upon polymerization (head-to-tail assembly)</li>
+        <li>F-actin (絲狀肌動蛋白, filamentous actin) — double-stranded helical polymer; helical repeat ~37 nm; two strands wind around each other</li>
+        <li>Plus end (正端) — faster-growing barbed end; minus end (負端) — slower-growing pointed end; polarity is structurally fixed by asymmetric monomer orientation</li>
+        <li>Nucleation (核化) — rate-limiting step; unstable oligomeric nucleus must form before rapid elongation begins; spontaneous nucleation in the cell is slow without nucleation factors</li>
+        <li>ATP hydrolysis: G-actin binds ATP; upon incorporation into filament, ATP is hydrolyzed to ADP + Pi; ADP-actin subunits have weaker inter-subunit bonds and are prone to disassembly</li>
+      </ul>
+    </p>
+
+    <p data-topic="actin-assembly-kinetics">
+      <strong>Three kinetic regimes governed by relative rates of monomer addition vs. ATP hydrolysis:</strong>
+      <ul>
+        <li>Addition at plus end &gt; addition at minus end &gt; ATP hydrolysis rate → <em>both ends grow</em> (filament elongates)</li>
+        <li>ATP hydrolysis rate &gt; addition at plus end &gt; addition at minus end → <em>both ends shrink</em> (filament depolymerizes)</li>
+        <li>Addition at plus end &gt; ATP hydrolysis rate &gt; addition at minus end → <em>treadmilling</em> (踏車運動): ATP-actin adds to plus end; ADP-actin falls off minus end; net filament length is constant but subunits translocate through the filament from plus to minus end</li>
+      </ul>
+    </p>
+
+    <!-- SVG treadmilling diagram -->
+    <div style="margin:1em auto;text-align:center;max-width:400px">
+      <svg width="390" height="85" viewBox="0 0 390 85" style="font-family:sans-serif;font-size:11px">
+        <rect x="55" y="30" width="265" height="18" rx="5" fill="#f5a623" opacity="0.85"/>
+        <text x="2" y="41" fill="#555">− end</text>
+        <circle cx="50" cy="39" r="9" fill="#ffd580" stroke="#c8860a" stroke-width="1.5"/>
+        <text x="28" y="70" fill="#888" font-size="10">ADP-actin lost</text>
+        <text x="320" y="41" fill="#555">+ end</text>
+        <circle cx="324" cy="22" r="9" fill="#e8543a" stroke="#9e2d10" stroke-width="1.5"/>
+        <text x="300" y="70" fill="#888" font-size="10">ATP-actin added</text>
+        <text x="140" y="20" fill="#333" font-weight="bold">Treadmilling</text>
+        <line x1="55" y1="39" x2="320" y2="39" stroke="#c8860a" stroke-width="0" stroke-dasharray="4,3"/>
+      </svg>
+    </div>
+
+    <div class="exam-trap-inline" data-topic="actin-assembly-kinetics">
+      <b>Exam trap:</b> ATP hydrolysis does NOT provide energy for actin polymerization — it weakens bonds to promote depolymerization and enable treadmilling. This parallels GTP hydrolysis in tubulin. A statement saying "ATP hydrolysis promotes actin polymerization" is FALSE.
+    </div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Actin-Binding Proteins Regulating Filament Behavior</h2>
+    <p data-topic="actin-binding-proteins">
+      <table style="width:100%;border-collapse:collapse;font-size:0.91em">
+        <thead>
+          <tr style="background:#f0f4ff">
+            <th style="border:1px solid #ccd;padding:5px 7px">Protein</th>
+            <th style="border:1px solid #ccd;padding:5px 7px">Chinese</th>
+            <th style="border:1px solid #ccd;padding:5px 7px">Action / Site</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border:1px solid #ccd;padding:4px 7px">Thymosin</td>
+            <td style="border:1px solid #ccd;padding:4px 7px">胸腺素</td>
+            <td style="border:1px solid #ccd;padding:4px 7px">Sequesters G-actin monomers; prevents assembly; maintains free monomer pool</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #ccd;padding:4px 7px">Profilin</td>
+            <td style="border:1px solid #ccd;padding:4px 7px">前纖維蛋白</td>
+            <td style="border:1px solid #ccd;padding:4px 7px">Binds G-actin; promotes ADP→ATP exchange; speeds elongation at plus end</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #ccd;padding:4px 7px">Formin</td>
+            <td style="border:1px solid #ccd;padding:4px 7px">甲型蛋白</td>
+            <td style="border:1px solid #ccd;padding:4px 7px">Nucleates assembly; stays processively at growing plus end; produces linear (unbranched) filaments (e.g., stress fibers, filopodial bundles)</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #ccd;padding:4px 7px">Arp2/3 complex</td>
+            <td style="border:1px solid #ccd;padding:4px 7px">Arp2/3複合體</td>
+            <td style="border:1px solid #ccd;padding:4px 7px">Nucleates branched filament from side of existing filament; stays at minus end of new branch; creates dendritic network in lamellipodia</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #ccd;padding:4px 7px">Cofilin</td>
+            <td style="border:1px solid #ccd;padding:4px 7px">切絲蛋白</td>
+            <td style="border:1px solid #ccd;padding:4px 7px">Binds ADP-actin in older filament regions; accelerates disassembly; promotes treadmilling turnover</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #ccd;padding:4px 7px">Gelsolin</td>
+            <td style="border:1px solid #ccd;padding:4px 7px">凝溶膠蛋白</td>
+            <td style="border:1px solid #ccd;padding:4px 7px">Severs filaments (Ca²⁺-activated); caps newly created plus end, blocking reassembly at that site</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #ccd;padding:4px 7px">Capping protein</td>
+            <td style="border:1px solid #ccd;padding:4px 7px">封端蛋白</td>
+            <td style="border:1px solid #ccd;padding:4px 7px">Caps plus end; prevents both assembly and disassembly at plus end</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #ccd;padding:4px 7px">Tropomodulin</td>
+            <td style="border:1px solid #ccd;padding:4px 7px">原肌球調節蛋白</td>
+            <td style="border:1px solid #ccd;padding:4px 7px">Caps minus end; prevents assembly and disassembly at minus end; stabilizes filament length</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #ccd;padding:4px 7px">Tropomyosin</td>
+            <td style="border:1px solid #ccd;padding:4px 7px">原肌球蛋白</td>
+            <td style="border:1px solid #ccd;padding:4px 7px">Runs along filament groove; stabilizes filament; in muscle, blocks myosin-binding sites on actin when Ca²⁺ is absent</td>
+          </tr>
+        </tbody>
+      </table>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="actin-binding-proteins">
+      <b>Exam trap:</b> Formin nucleates linear filaments and stays at the plus end. Arp2/3 nucleates branched filaments and stays at the minus end of each new branch. These are frequently swapped on exams.
+    </div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Actin-Based Cell Migration</h2>
+    <p data-topic="cell-migration-structures">
+      <ul>
+        <li>Lamellipodium (片足) — flat, broad protrusion at leading edge; contains branched actin web nucleated by Arp2/3; plus ends face the plasma membrane and polymerize to push it forward</li>
+        <li>Filopodium (絲足) — thin, finger-like projection extending from lamellipodium; contains parallel actin bundles (nucleated by formin); acts as a chemosensory probe</li>
+        <li>Actin cortex (肌動蛋白皮質層) — dense actin meshwork lining the inner plasma membrane; maintained under tension by myosin-II</li>
+        <li>Focal adhesion (黏著斑) / focal contact — integrin (整合素)-containing anchor linking actin cytoskeleton to extracellular matrix; transmits traction force; essential for directed cell movement</li>
+      </ul>
+    </p>
+
+    <p data-topic="crawling-cycle">
+      <strong>Four-step cell crawling cycle:</strong>
+      <ol>
+        <li><strong>Protrusion:</strong> Arp2/3-driven actin polymerization at plus ends pushes lamellipodium forward</li>
+        <li><strong>Attachment:</strong> Lamellipodium adheres to substratum via integrins forming focal contacts</li>
+        <li><strong>Contraction:</strong> Myosin-II in actin cortex slides actin filaments; cell body moves forward; unpolymerized actin flows toward leading edge for reuse</li>
+        <li><strong>Retraction:</strong> Rear focal adhesions release; trailing edge retracts; cycle repeats</li>
+      </ol>
+    </p>
+
+    <p data-topic="bacterial-actin-motility">
+      <ul>
+        <li>Intracellular bacteria such as <em>Listeria monocytogenes</em> hijack host actin machinery to propel themselves through the cytoplasm</li>
+        <li>Bacterial surface protein ActA activates Arp2/3 at one bacterial pole; branched actin assembles as an actin "comet tail" with plus ends pressing against the bacterium</li>
+        <li>Cofilin depolymerizes older (ADP-actin) regions at the minus ends; capping protein stabilizes plus ends of lateral branches — net polymerization at the bacterial pole generates propulsive force</li>
+        <li>Key conclusion: actin polymerization alone, without myosin, can produce directional force sufficient to move objects</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="bacterial-actin-motility">
+      <b>Exam trap:</b> <em>Listeria</em> actin-based motility does not require myosin; the propulsive force is entirely from actin polymerization. Do not apply myosin-based logic to this system.
+    </div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Myosin Motor Proteins on Actin</h2>
+    <p data-topic="myosin-types">
+      <ul>
+        <li>Myosin (肌球蛋白) — actin-based motor; moves toward the plus (+) end of actin filaments; ATPase activity in head domain drives conformational change (power stroke, 動力衝程)</li>
+        <li>Myosin-I (肌球蛋白-I) — single-headed; length ~70 nm; tail attaches to membranes or vesicles; transports cargo (e.g., vesicles) along actin toward the plus end; can also move actin filaments relative to a surface</li>
+        <li>Myosin-II (肌球蛋白-II) — double-headed; length ~150 nm; two heavy chains form coiled-coil tail; two globular head domains each bind actin and hydrolyze ATP; the motor for muscle contraction and cytokinesis</li>
+      </ul>
+    </p>
+
+    <p data-topic="myosin-ii-filament">
+      <ul>
+        <li>Myosin-II self-assembles into bipolar filaments: molecules associate tail-to-tail; heads point outward at both ends; central bare region (裸區) ~0.2 µm contains only tails; total bipolar filament length ~1 µm</li>
+        <li>Sliding mechanism: heads on one side of the bipolar filament walk along one actin filament (pulling it toward center); heads on the other side walk along an antiparallel actin filament (pulling it toward the opposite center) — the two actin filaments slide past each other, shortening the distance between their anchoring Z discs</li>
+        <li>In non-muscle cells: myosin-II generates tension in the actin cortex; contractile ring (收縮環) containing myosin-II pinches the cell during cytokinesis</li>
+      </ul>
+    </p>
+
+    <!-- SVG: myosin-II bipolar filament sliding antiparallel actin -->
+    <div style="margin:1em auto;text-align:center;max-width:420px">
+      <svg width="400" height="95" viewBox="0 0 400 95" style="font-family:sans-serif;font-size:10px">
+        <!-- top actin: + on right, - on left; moves left -->
+        <rect x="15" y="12" width="370" height="12" rx="4" fill="#e05c5c" opacity="0.8"/>
+        <text x="2" y="21" fill="#444">−</text><text x="384" y="21" fill="#444">+</text>
+        <text x="155" y="10" fill="#1a6adb" font-size="9">← moves left</text>
+        <!-- myosin-II filament bar -->
+        <rect x="115" y="35" width="170" height="10" rx="3" fill="#2e6e2e"/>
+        <!-- heads left -->
+        <ellipse cx="105" cy="38" rx="13" ry="8" fill="#1d4d1d"/>
+        <ellipse cx="94" cy="46" rx="13" ry="8" fill="#1d4d1d"/>
+        <!-- heads right -->
+        <ellipse cx="295" cy="38" rx="13" ry="8" fill="#1d4d1d"/>
+        <ellipse cx="306" cy="46" rx="13" ry="8" fill="#1d4d1d"/>
+        <!-- bottom actin: + on left, - on right; moves right -->
+        <rect x="15" y="62" width="370" height="12" rx="4" fill="#e05c5c" opacity="0.8"/>
+        <text x="2" y="71" fill="#444">+</text><text x="384" y="71" fill="#444">−</text>
+        <text x="155" y="88" fill="#1a6adb" font-size="9">→ moves right</text>
+        <text x="160" y="31" fill="#333" font-weight="bold" font-size="9">myosin-II (bipolar)</text>
+      </svg>
+    </div>
+
+    <div class="exam-trap-inline" data-topic="myosin-ii-filament">
+      <b>Exam trap:</b> Myosin moves toward the plus end of actin. In the sarcomere, the plus ends of thin filaments are anchored at Z discs; myosin heads pull actin inward (toward the center), shortening the sarcomere. The filaments do not shorten — the sarcomere does.
+    </div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Skeletal Muscle Structure: From Fiber to Sarcomere</h2>
+    <p data-topic="muscle-hierarchy">
+      <ul>
+        <li>Muscle fiber (肌纖維) / skeletal muscle cell — multinucleate; innervated by a motor neuron (運動神經元) at the neuromuscular junction</li>
+        <li>Myofibril (肌原纖維) — cylindrical bundle of sarcomeres running the length of the cell; many myofibrils pack the cell in parallel; responsible for the striated (條紋) appearance</li>
+        <li>Sarcomere (肌節) — fundamental contractile unit; length ~2.2 µm at rest; bounded by Z discs on both sides</li>
+      </ul>
+    </p>
+
+    <p data-topic="sarcomere-components">
+      <ul>
+        <li>Z disc (Z盤) — protein disc at each sarcomere boundary; anchors plus ends of thin filaments from adjacent sarcomeres; defines the sarcomere border</li>
+        <li>Thin filament (細肌絲) — actin filament + tropomyosin + troponin complex; plus end anchored at Z disc; minus end points toward sarcomere center</li>
+        <li>Thick filament (粗肌絲) — bipolar myosin-II filament (~1 µm); located in center of sarcomere; bare region at center where no heads are present</li>
+        <li>Overlap region (重疊區) — zone where thick and thin filaments interdigitate; cross-bridges form here</li>
+        <li>During contraction: thick filaments stay fixed in position; thin filaments slide inward; Z discs move closer; sarcomere shortens</li>
+      </ul>
+    </p>
+
+    <p data-topic="t-tubule-sr">
+      <ul>
+        <li>T tubule (橫管, transverse tubule) — deep invagination of plasma membrane; lumen is continuous with extracellular space; conducts action potential rapidly to the interior of the large muscle cell; runs perpendicular to myofibrils</li>
+        <li>Sarcoplasmic reticulum (肌漿網, SR) — specialized smooth ER ensheathing each myofibril; Ca²⁺ storage organelle; membrane contains Ca²⁺-ATPase pumps to reload Ca²⁺ after contraction</li>
+        <li>T tubule and SR are closely apposed with a ~35 nm gap; voltage-gated Ca²⁺ channel (dihydropyridine receptor, DHPR) in T-tubule membrane is physically coupled to the Ca²⁺-release channel (ryanodine receptor, RyR, 蘭尼鹼受體) in the SR membrane</li>
+        <li>Simultaneous contraction of all sarcomeres in the fiber is ensured because T tubules conduct the action potential to every sarcomere at the same moment</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="t-tubule-sr">
+      <b>Exam trap:</b> The lumen of T tubules is extracellular space, not cytosol. The Ca²⁺ that triggers contraction comes from the sarcoplasmic reticulum (into cytosol), not from the T tubule lumen. These two spaces are physically adjacent but functionally distinct.
+    </div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="5">
+    <h2>6. Calcium Regulation and the Sliding Filament Mechanism</h2>
+    <p data-topic="excitation-contraction-coupling">
+      <strong>Excitation-contraction coupling (興奮-收縮耦聯) — step by step:</strong>
+      <ol>
+        <li>Motor neuron fires → action potential propagates along muscle cell plasma membrane</li>
+        <li>Action potential travels down T tubule membrane; DHPR (voltage-gated Ca²⁺ channel in T-tubule) changes conformation</li>
+        <li>DHPR physically gates RyR (Ca²⁺-release channel) in SR membrane across the 35 nm gap; Ca²⁺ released from SR lumen into cytosol</li>
+        <li>Cytosolic [Ca²⁺] rises → Ca²⁺ binds troponin C (旋轉肌鈣蛋白C) of the troponin complex on thin filament → conformational change in troponin I → tropomyosin shifts ~1–1.5 nm laterally in actin groove → myosin-binding sites on actin exposed</li>
+        <li>Myosin heads bind exposed actin sites; ATP-driven cross-bridge cycling begins; thin filaments slide inward; sarcomere shortens; muscle contracts</li>
+        <li>Relaxation: SR Ca²⁺-ATPase pumps Ca²⁺ back into SR lumen; cytosolic [Ca²⁺] falls; troponin reverts; tropomyosin re-covers binding sites; cross-bridges cannot form; muscle relaxes</li>
+      </ol>
+    </p>
+
+    <p data-topic="troponin-tropomyosin-regulation">
+      <ul>
+        <li>Tropomyosin (原肌球蛋白) — rod-shaped coiled-coil protein; runs along the groove of the actin double helix; one tropomyosin spans ~7 actin monomers (~10 nm); in resting muscle physically blocks myosin-binding sites</li>
+        <li>Troponin complex (旋轉肌鈣蛋白複合體) — three subunits, one complex per tropomyosin molecule:
+          <ul>
+            <li>Troponin I (抑制亞基) — inhibitory subunit; holds tropomyosin in blocking position in the absence of Ca²⁺</li>
+            <li>Troponin C (鈣結合亞基) — Ca²⁺-binding subunit; binds Ca²⁺; conformational change pulls troponin I away from tropomyosin</li>
+            <li>Troponin T (原肌球蛋白結合亞基) — anchors entire troponin complex to tropomyosin along the filament</li>
+          </ul>
+        </li>
+        <li>Result of Ca²⁺ binding: troponin C grips troponin I; troponin I releases tropomyosin; tropomyosin shifts; myosin-binding sites on actin exposed; contraction proceeds</li>
+        <li>Without Ca²⁺: tropomyosin blocks myosin; no cross-bridges even if ATP is present</li>
+      </ul>
+    </p>
+
+    <p data-topic="cytoskeleton-overview">
+      <strong>Three cytoskeletal filaments — comparative summary:</strong>
+      <table style="width:100%;border-collapse:collapse;font-size:0.91em">
+        <thead>
+          <tr style="background:#f0f4ff">
+            <th style="border:1px solid #ccd;padding:5px">Filament</th>
+            <th style="border:1px solid #ccd;padding:5px">Diameter</th>
+            <th style="border:1px solid #ccd;padding:5px">Subunit / nucleotide</th>
+            <th style="border:1px solid #ccd;padding:5px">Motor</th>
+            <th style="border:1px solid #ccd;padding:5px">Key roles</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border:1px solid #ccd;padding:4px">Intermediate filaments (中間絲)</td>
+            <td style="border:1px solid #ccd;padding:4px">~10 nm</td>
+            <td style="border:1px solid #ccd;padding:4px">Keratins, lamins, vimentin; no nucleotide</td>
+            <td style="border:1px solid #ccd;padding:4px">None</td>
+            <td style="border:1px solid #ccd;padding:4px">Mechanical strength, nuclear lamina</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #ccd;padding:4px">Microtubules (微管)</td>
+            <td style="border:1px solid #ccd;padding:4px">~25 nm</td>
+            <td style="border:1px solid #ccd;padding:4px">α/β-tubulin heterodimer; GTP</td>
+            <td style="border:1px solid #ccd;padding:4px">Kinesin, dynein</td>
+            <td style="border:1px solid #ccd;padding:4px">Intracellular transport, mitosis, cilia/flagella</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #ccd;padding:4px">Actin filaments (肌動蛋白絲)</td>
+            <td style="border:1px solid #ccd;padding:4px">~7 nm</td>
+            <td style="border:1px solid #ccd;padding:4px">G-actin monomer; ATP</td>
+            <td style="border:1px solid #ccd;padding:4px">Myosin</td>
+            <td style="border:1px solid #ccd;padding:4px">Migration, muscle contraction, cytokinesis, microvilli</td>
+          </tr>
+        </tbody>
+      </table>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="cytoskeleton-overview">
+      <b>Exam trap:</b> Not all eukaryotic cells have intermediate filaments — but all have actin and microtubules. The cytoskeleton is dynamic, not rigid or permanent. The three filament systems collaborate, not act independently.
+    </div>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>ATP hydrolysis by actin weakens bonds and promotes depolymerization (not polymerization); same logic as GTP hydrolysis in tubulin.</li>
+      <li>Treadmilling condition: plus-end addition rate &gt; ATP hydrolysis rate &gt; minus-end addition rate. Both other conditions either grow or shrink both ends.</li>
+      <li>Formin: linear filaments, stays at plus end. Arp2/3: branched filaments, stays at minus end of branch. Do not swap.</li>
+      <li><em>Listeria</em> / bacterial actin motility uses Arp2/3 and cofilin but no myosin — pure polymerization force.</li>
+      <li>T tubule lumen = extracellular space. Ca²⁺ released into cytosol comes from SR lumen, not T tubule lumen.</li>
+      <li>Tropomyosin physically blocks myosin-binding sites on actin. Troponin C is the Ca²⁺ sensor that moves tropomyosin. Ca²⁺ does not directly bind actin.</li>
+      <li>Sliding filament model: filaments themselves do not shorten — they slide past each other; the sarcomere length decreases.</li>
+      <li>Sarcomere length at rest ≈ 2.2 µm. Plus ends of thin filaments are at Z discs; minus ends point inward toward sarcomere center.</li>
+      <li>Troponin I = inhibitory; Troponin C = Ca²⁺-binding; Troponin T = tropomyosin-anchoring. All three are needed.</li>
+      <li>Not all eukaryotic cells have intermediate filaments; all have actin and microtubules.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>G-actin (monomer, ATP-bound) → F-actin (polymer, ADP-bound after hydrolysis); nucleation is the rate-limiting step</li>
+      <li>Plus end grows faster than minus end; treadmilling = ATP-actin added at plus, ADP-actin lost at minus, net length constant</li>
+      <li>Formin: linear filaments, processively at plus end; Arp2/3: branched network, stays at minus end of new branch</li>
+      <li>Thymosin sequesters monomers; profilin speeds plus-end elongation; cofilin depolymerizes ADP-actin regions; gelsolin severs and caps plus end; tropomodulin caps minus end; tropomyosin stabilizes filament side</li>
+      <li>Lamellipodia (Arp2/3, branched actin, flat sheet) vs. filopodia (formin, parallel bundles, thin spike); plus ends face membrane</li>
+      <li>Four-step crawling cycle: protrusion (actin polymerization) → attachment (integrins/focal adhesions) → contraction (myosin-II) → retraction</li>
+      <li>Myosin-I: single head, 70 nm, moves cargo on actin toward plus end; Myosin-II: double head, 150 nm, forms bipolar filaments for contraction</li>
+      <li>Myosin-II bipolar filament ~1 µm; bare region at center (tails only); heads at both ends pull antiparallel actin inward</li>
+      <li>Sarcomere ~2.2 µm: Z disc — thin filament (+ end at Z disc) — overlap — thick filament (bare center) — overlap — thin filament — Z disc</li>
+      <li>T tubule (plasma membrane invagination; lumen = extracellular) → action potential → DHPR (voltage-gated) → physically opens RyR (ryanodine receptor) in SR → Ca²⁺ released into cytosol (gap = 35 nm)</li>
+      <li>Ca²⁺ → troponin C → troponin I releases tropomyosin → tropomyosin shifts → myosin-binding sites on actin exposed → cross-bridge cycling → sarcomere shortens</li>
+      <li>Troponin subunits: I (inhibitory/blocks tropomyosin), C (Ca²⁺-binding), T (tropomyosin-anchoring); one complex per tropomyosin rod (~7 actin monomers)</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Quiz containers are generated by JS (see renderQuizContainers). -->
+<div id="quiz-containers"></div>
+
+<div id="global-report" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <h1>Full Summary Report</h1>
+  <div id="global-body"></div>
+</div>
+
+</div>
+<script>
+// ===== Data + state (loaded from data/3040.json) =====
+let lectures = [];
+let STORAGE_KEY = "endoQuizState";
+let quizState = {};
+let TOPIC_SECTION_MAP = {};
+
+function initQuizStateFromLectures() {
+  lectures.forEach(l => {
+    quizState[l.id] = { answered:0, correct:0, wrongQuestions:[], completed:false, choices:{}, filteredIndices:null, total:30, weakSections:[], weakTopics:[] };
+  });
+}
+
+function saveState() {
+  try {
+    const out = {};
+    Object.keys(quizState).forEach(k => {
+      const s = quizState[k];
+      out[k] = { answered:s.answered, correct:s.correct, wrongQuestions:s.wrongQuestions, completed:s.completed, choices:s.choices, filteredIndices:s.filteredIndices, total:s.total, weakSections:s.weakSections, weakTopics:s.weakTopics };
+    });
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(out));
+  } catch(e){ console.warn("save failed", e); }
+}
+
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return;
+    const data = JSON.parse(raw);
+    Object.keys(data).forEach(k => {
+      if (quizState[k]) Object.assign(quizState[k], data[k]);
+    });
+  } catch(e){ console.warn("load failed", e); }
+}
+
+function resetAllProgress() {
+  if (!confirm("Reset ALL quiz progress? This cannot be undone.")) return;
+  localStorage.removeItem(STORAGE_KEY);
+  location.reload();
+}
+
+// ===== Navigation =====
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const el = document.getElementById(id);
+  if (el) el.classList.add('active');
+  window.scrollTo(0,0);
+  if (id === 'global-report') renderGlobalReport();
+  if (id.startsWith('notes-')) {
+    const lid = parseInt(id.split('-')[1]);
+    applyWeakHighlights(lid);
+  }
+  setTimeout(initReveal, 50);
+}
+
+function computeWeakSections(lid) {
+  const s = quizState[lid];
+  const lec = lectures.find(l => l.id === lid);
+  const map = TOPIC_SECTION_MAP[lid] || {};
+  const topicSet = new Set();
+  const secSet = new Set();
+  s.wrongQuestions.forEach(qi => {
+    const t = lec.questions[qi].topic;
+    if (t) topicSet.add(t);
+    if (map[t] !== undefined) secSet.add(map[t]);
+  });
+  s.weakTopics = Array.from(topicSet);
+  s.weakSections = Array.from(secSet).sort((a,b)=>a-b);
+}
+
+function applyWeakHighlights(lid) {
+  const s = quizState[lid];
+  const weakTopics = new Set(s.weakTopics || []);
+  const weakSecs = new Set(s.weakSections || []);
+  const page = document.getElementById('notes-'+lid);
+  if (!page) return;
+
+  // Clear existing highlights
+  page.querySelectorAll('.weak-highlight, .weak-h2').forEach(el => {
+    el.classList.remove('weak-highlight');
+    el.classList.remove('weak-h2');
+  });
+
+  // Per-element highlighting: substring match of any wrong topic name in the data-topic attribute
+  page.querySelectorAll('[data-topic]').forEach(el => {
+    const attr = el.getAttribute('data-topic') || '';
+    for (const t of weakTopics) {
+      if (attr.includes(t)) { el.classList.add('weak-highlight'); break; }
+    }
+  });
+
+  // Fallback: if a weak section has no inner match, lightly mark its h2
+  page.querySelectorAll('section[data-sec]').forEach(sec => {
+    const idx = parseInt(sec.dataset.sec);
+    if (!weakSecs.has(idx)) return;
+    if (sec.querySelector('.weak-highlight')) return;
+    const h = sec.querySelector('h2');
+    if (h) h.classList.add('weak-h2');
+  });
+
+  const clearBtn = document.getElementById('clear-hl-'+lid);
+  if (clearBtn) clearBtn.style.display = (weakTopics.size > 0 || weakSecs.size > 0) ? 'inline-block' : 'none';
+}
+
+function clearWeakHighlights(lid) {
+  quizState[lid].weakSections = [];
+  quizState[lid].weakTopics = [];
+  saveState();
+  applyWeakHighlights(lid);
+}
+
+function startQuiz(lid) {
+  const state = quizState[lid];
+  const countSel = document.getElementById('count-'+lid);
+  const desiredCount = countSel ? parseInt(countSel.value)||30 : 30;
+
+  // If there is saved progress AND requested count differs from saved, prompt to restart
+  const hasProgress = state.answered > 0 && state.filteredIndices && state.filteredIndices.length > 0;
+  let needNew = !state.filteredIndices;
+  if (hasProgress) {
+    if (state.filteredIndices.length !== desiredCount) {
+      if (confirm("You have saved progress for this lecture with a different question count. Start a new quiz with the new count? (This will erase saved progress for this lecture.)")) {
+        resetLectureState(lid);
+        needNew = true;
+      }
+    }
+  } else if (state.answered === 0) {
+    needNew = true;
+  }
+
+  if (needNew) {
+    const picked = buildBalancedSet(lid, desiredCount);
+    state.filteredIndices = picked;
+    state.total = picked.length;
+    state.answered = 0;
+    state.correct = 0;
+    state.wrongQuestions = [];
+    state.choices = {};
+    state.completed = false;
+    state.weakSections = [];
+    state.weakTopics = [];
+    saveState();
+    const body = document.getElementById('quizbody-'+lid);
+    if (body) body.dataset.rendered = "";
+    const post = document.getElementById('postquiz-'+lid);
+    if (post) post.innerHTML = '';
+  }
+
+  showPage('quiz-'+lid);
+  renderQuiz(lid);
+}
+
+function resetLectureState(lid) {
+  quizState[lid] = { answered:0, correct:0, wrongQuestions:[], completed:false, choices:{}, filteredIndices:null, total:30, weakSections:[], weakTopics:[] };
+  saveState();
+}
+
+// Balanced sampling across easy/medium/hard. Target ratios:
+//   10 → 3 easy, 3 medium, 4 hard
+//   20 → 7 easy, 7 medium, 6 hard
+//   30 → 10 easy, 10 medium, 10 hard
+function buildBalancedSet(lid, count) {
+  const lec = lectures.find(l => l.id === lid);
+  const pools = { easy: [], medium: [], hard: [] };
+  lec.questions.forEach((q, i) => {
+    if (pools[q.difficulty]) pools[q.difficulty].push(i);
+  });
+  shuffle(pools.easy); shuffle(pools.medium); shuffle(pools.hard);
+
+  let targets;
+  if (count <= 10) targets = { easy: 3, medium: 3, hard: 4 };
+  else if (count <= 20) targets = { easy: 7, medium: 7, hard: 6 };
+  else targets = { easy: 10, medium: 10, hard: 10 };
+
+  // Scale targets if requested count differs from preset
+  if (count !== 10 && count !== 20 && count !== 30) {
+    const total = targets.easy + targets.medium + targets.hard;
+    targets = {
+      easy:   Math.round(targets.easy   * count / total),
+      medium: Math.round(targets.medium * count / total),
+      hard:   Math.round(targets.hard   * count / total),
+    };
+  }
+
+  const picked = [];
+  const taken = { easy: 0, medium: 0, hard: 0 };
+  ['easy','medium','hard'].forEach(d => {
+    const want = Math.min(targets[d], pools[d].length);
+    for (let i = 0; i < want; i++) picked.push(pools[d][i]);
+    taken[d] = want;
+  });
+
+  // If short of target count (some pool too small), fill from leftovers
+  const leftovers = [];
+  ['easy','medium','hard'].forEach(d => {
+    for (let i = taken[d]; i < pools[d].length; i++) leftovers.push(pools[d][i]);
+  });
+  shuffle(leftovers);
+  while (picked.length < count && leftovers.length > 0) picked.push(leftovers.shift());
+
+  picked.sort((a,b)=>a-b);
+  return picked;
+}
+
+function shuffle(arr) {
+  for (let i=arr.length-1; i>0; i--) {
+    const j = Math.floor(Math.random()*(i+1));
+    [arr[i],arr[j]] = [arr[j],arr[i]];
+  }
+  return arr;
+}
+
+// ===== Quiz rendering =====
+function renderQuiz(lid) {
+  const lec = lectures.find(l => l.id === lid);
+  const body = document.getElementById('quizbody-' + lid);
+  const state = quizState[lid];
+  if (!state.filteredIndices || state.filteredIndices.length === 0) {
+    // fallback: all 30
+    state.filteredIndices = lec.questions.map((_,i)=>i);
+    state.total = 30;
+  }
+  if (body.dataset.rendered === "1") {
+    updateScoreBar(lid);
+    return;
+  }
+  body.dataset.rendered = "1";
+  let h = '';
+  state.filteredIndices.forEach((qi, displayIdx) => {
+    const q = lec.questions[qi];
+    h += '<div class="q-block reveal-on-scroll" id="q-'+lid+'-'+qi+'">';
+    h += '<div class="q-num">Question ' + (displayIdx+1) + ' of ' + state.filteredIndices.length + ' <span style="margin-left:8px;padding:1px 6px;background:var(--accent-soft);border-radius:3px;font-size:.85em">'+q.difficulty+'</span></div>';
+    h += '<div class="q-text">' + escapeHtml(q.q) + '</div>';
+    q.options.forEach((opt, oi) => {
+      h += '<label class="opt" id="opt-'+lid+'-'+qi+'-'+oi+'"><input type="radio" name="q-'+lid+'-'+qi+'" value="'+oi+'"> '+String.fromCharCode(65+oi)+'. '+escapeHtml(opt)+'</label>';
+    });
+    h += '<button class="btn submit-q" onclick="submitQ('+lid+','+qi+')">Submit</button>';
+    h += '<div class="explain" id="exp-'+lid+'-'+qi+'" style="display:none"></div>';
+    h += '</div>';
+  });
+  body.innerHTML = h;
+
+  // Restore answered states from saved choices
+  state.filteredIndices.forEach(qi => {
+    if (state.choices[qi] !== undefined) restoreAnswered(lid, qi);
+  });
+
+  updateScoreBar(lid);
+
+  if (state.completed) {
+    renderPostQuiz(lid);
+  }
+}
+
+function restoreAnswered(lid, qi) {
+  const state = quizState[lid];
+  const lec = lectures.find(l => l.id === lid);
+  const q = lec.questions[qi];
+  const chosen = state.choices[qi];
+  for (let oi=0; oi<q.options.length; oi++) {
+    const el = document.getElementById('opt-'+lid+'-'+qi+'-'+oi);
+    if (!el) continue;
+    el.classList.add('disabled');
+    if (oi === q.answer) el.classList.add('correct');
+    if (oi === chosen && chosen !== q.answer) el.classList.add('wrong');
+    const input = el.querySelector('input');
+    if (input) input.checked = (oi === chosen);
+    if (input) input.disabled = true;
+  }
+  const exp = document.getElementById('exp-'+lid+'-'+qi);
+  if (exp) {
+    exp.style.display = 'block';
+    exp.innerHTML = '<b>'+(chosen===q.answer?"Correct.":"Incorrect.")+'</b> '+escapeHtml(q.explain);
+  }
+  const btn = document.querySelector('#q-'+lid+'-'+qi+' .submit-q');
+  if (btn) { btn.disabled = true; btn.textContent = 'Submitted'; }
+}
+
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+
+// ===== SVG Progress Ring Generator =====
+function createProgressRing(percent, size = 120) {
+  const radius = (size - 12) / 2;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (percent / 100) * circumference;
+  const cx = size / 2;
+  const cy = size / 2;
+
+  return `
+    <svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" style="transform: rotate(-90deg)">
+      <circle cx="${cx}" cy="${cy}" r="${radius}" fill="none" stroke="var(--accent-soft)" stroke-width="6"/>
+      <circle cx="${cx}" cy="${cy}" r="${radius}" fill="none" stroke="var(--accent)" stroke-width="6"
+              stroke-dasharray="${circumference}" stroke-dashoffset="${offset}" stroke-linecap="round"
+              style="transition: stroke-dashoffset 0.6s ease"/>
+    </svg>
+  `;
+}
+
+function getVerdictClass(pct) {
+  if (pct >= 90) return 'verdict-excellent';
+  if (pct >= 75) return 'verdict-good';
+  if (pct >= 60) return 'verdict-review';
+  return 'verdict-weak';
+}
+
+function submitQ(lid, qi) {
+  const state = quizState[lid];
+  if (state.choices[qi] !== undefined) return;
+  const lec = lectures.find(l => l.id === lid);
+  const q = lec.questions[qi];
+  const radios = document.getElementsByName('q-'+lid+'-'+qi);
+  let chosen = -1;
+  radios.forEach(r => { if (r.checked) chosen = parseInt(r.value); });
+  if (chosen === -1) { alert("Please select an option."); return; }
+  state.choices[qi] = chosen;
+  state.answered += 1;
+  for (let oi=0; oi<q.options.length; oi++) {
+    const el = document.getElementById('opt-'+lid+'-'+qi+'-'+oi);
+    el.classList.add('disabled');
+    if (oi === q.answer) el.classList.add('correct');
+    if (oi === chosen && chosen !== q.answer) el.classList.add('wrong');
+  }
+  if (chosen === q.answer) state.correct += 1;
+  else state.wrongQuestions.push(qi);
+  const exp = document.getElementById('exp-'+lid+'-'+qi);
+  exp.style.display = 'block';
+  exp.innerHTML = '<b>'+(chosen===q.answer?"Correct.":"Incorrect.")+'</b> '+escapeHtml(q.explain);
+  const btn = document.querySelector('#q-'+lid+'-'+qi+' .submit-q');
+  btn.disabled = true;
+  btn.textContent = 'Submitted';
+  updateScoreBar(lid);
+  saveState();
+  if (state.answered === state.total) {
+    state.completed = true;
+    computeWeakSections(lid);
+    saveState();
+    document.getElementById('globalReportBtn').disabled = false;
+    renderPostQuiz(lid);
+    setTimeout(() => {
+      document.getElementById('postquiz-'+lid).scrollIntoView({behavior:'smooth'});
+    }, 200);
+  }
+}
+
+function updateScoreBar(lid) {
+  const s = quizState[lid];
+  const totalAvail = s.filteredIndices ? s.filteredIndices.length : 30;
+  document.getElementById('scorebar-'+lid).textContent = "Score: " + s.correct + " / " + s.answered + " (of " + totalAvail + " filtered)";
+}
+
+function renderPostQuiz(lid) {
+  const lec = lectures.find(l => l.id === lid);
+  const s = quizState[lid];
+  const total = s.total || 30;
+  const pct = Math.round((s.correct/total)*100);
+  let verdict;
+  if (pct >= 90) verdict = "Excellent. You have mastered this lecture.";
+  else if (pct >= 75) verdict = "Solid grasp. A few targeted reviews and you are exam-ready.";
+  else if (pct >= 60) verdict = "Reasonable foundation. Revisit the weak topics below.";
+  else verdict = "Needs more review. Go back to the notes for the topics flagged below.";
+
+  const themeCount = {};
+  s.wrongQuestions.forEach(qi => {
+    const t = lec.questions[qi].topic;
+    themeCount[t] = (themeCount[t] || 0) + 1;
+  });
+  const themes = Object.keys(themeCount).sort((a,b)=>themeCount[b]-themeCount[a]);
+
+  let h = '<div class="summary reveal-on-scroll reveal-delay-1">';
+  h += '<h2>Summary Report</h2>';
+
+  // Add progress ring visualization
+  h += '<div class="progress-ring-container">';
+  h += createProgressRing(pct);
+  h += '<div class="progress-ring-label">';
+  h += '<div class="progress-percentage">'+pct+'%</div>';
+  h += '<div class="progress-score">'+s.correct+'/'+total+'</div>';
+  h += '</div></div>';
+
+  h += '<div class="verdict '+getVerdictClass(pct)+'">'+verdict+'</div>';
+
+  // Add wrong topics bar chart
+  if (themes.length) {
+    h += '<h3>Wrong Topics Breakdown</h3>';
+    h += '<div class="chart-container">';
+    const maxWrong = Math.max(...themes.map(t => themeCount[t]));
+    themes.forEach(t => {
+      const count = themeCount[t];
+      const pctBar = Math.round((count / maxWrong) * 100);
+      h += '<div class="bar-chart-item">';
+      h += '<div class="bar-chart-label">'+escapeHtml(t)+'</div>';
+      h += '<div class="bar-chart-bar">';
+      h += '<div class="bar-chart-fill" style="width:'+pctBar+'%"><span class="bar-chart-count">'+count+'</span></div>';
+      h += '</div></div>';
+    });
+    h += '</div>';
+    h += '<h3>Topics to Revisit</h3><ul class="theme-list">';
+    themes.forEach(t => { h += '<li><b>'+escapeHtml(t)+'</b> — '+themeCount[t]+' wrong</li>'; });
+    h += '</ul>';
+  } else {
+    h += '<p>No weak topics — perfect run.</p>';
+  }
+  h += '<p style="color:var(--muted);font-style:italic">Take a short break, then revisit the notes for any flagged topic before moving on.</p>';
+  h += '</div>';
+  h += '<h2>Wrong Answer Review</h2>';
+  if (s.wrongQuestions.length === 0) {
+    h += '<p>No wrong answers to review. Great job.</p>';
+  } else {
+    s.wrongQuestions.forEach((qi, idx) => {
+      const q = lec.questions[qi];
+      const chosen = s.choices[qi];
+      const delay = ['','reveal-delay-1','reveal-delay-2','reveal-delay-3'][idx%4];
+      h += '<div class="review-card reveal-on-scroll '+delay+'">';
+      h += '<div class="q-num">Question '+(qi+1)+'</div>';
+      h += '<div class="q-text">'+escapeHtml(q.q)+'</div>';
+      q.options.forEach((opt, oi) => {
+        let cls = "opt disabled";
+        if (oi === q.answer) cls += " correct";
+        if (oi === chosen && chosen !== q.answer) cls += " wrong";
+        h += '<div class="'+cls+'">'+String.fromCharCode(65+oi)+'. '+escapeHtml(opt)+'</div>';
+      });
+      h += '<div class="explain"><b>Explanation:</b> '+escapeHtml(q.explain)+'</div>';
+      h += '</div>';
+    });
+  }
+  document.getElementById('postquiz-'+lid).innerHTML = h;
+  setTimeout(initReveal, 50);
+}
+
+function showGlobalReport(){ showPage('global-report'); }
+
+function renderGlobalReport() {
+  let totalCorrect = 0, totalAnswered = 0;
+  const allThemes = {};
+  const lectureScores = [];
+
+  lectures.forEach(lec => {
+    const s = quizState[lec.id];
+    if (s.answered > 0) {
+      totalCorrect += s.correct;
+      totalAnswered += s.answered;
+      const pct = s.answered ? Math.round(s.correct/s.answered*100) : 0;
+      lectureScores.push({ title: lec.title, correct: s.correct, answered: s.answered, pct });
+      s.wrongQuestions.forEach(qi => {
+        const t = lec.questions[qi].topic;
+        allThemes[t] = (allThemes[t]||0)+1;
+      });
+    }
+  });
+
+  const overallPct = totalAnswered ? Math.round(totalCorrect/totalAnswered*100) : 0;
+
+  let h = '<p style="color:var(--muted);font-style:italic">Shows saved quiz data (persisted across reloads).</p>';
+
+  // Overall progress ring
+  h += '<h2>Overall Score</h2>';
+  h += '<div class="progress-ring-container">';
+  h += createProgressRing(overallPct, 140);
+  h += '<div class="progress-ring-label">';
+  h += '<div class="progress-percentage">'+overallPct+'%</div>';
+  h += '<div class="progress-score">'+totalCorrect+'/'+totalAnswered+'</div>';
+  h += '</div></div>';
+  h += '<p style="text-align:center;color:var(--ink)"><b>'+totalCorrect+' / '+totalAnswered+'</b> across all completed quizzes</p>';
+
+  // Lecture breakdown bar chart
+  if (lectureScores.length) {
+    h += '<h2>Lecture Breakdown</h2>';
+    h += '<div class="chart-container">';
+    lectureScores.forEach(lec => {
+      const pctBar = lec.pct;
+      const verdictClass = getVerdictClass(lec.pct);
+      h += '<div class="bar-chart-item">';
+      h += '<div class="bar-chart-label" title="'+escapeHtml(lec.title)+'">'+escapeHtml(lec.title.substring(0, 25))+'...</div>';
+      h += '<div class="bar-chart-bar">';
+      h += '<div class="bar-chart-fill '+verdictClass+'" style="width:'+pctBar+'%"><span class="bar-chart-count">'+lec.pct+'%</span></div>';
+      h += '</div></div>';
+    });
+    h += '</div>';
+  }
+
+  // Weak topics summary
+  const sortedThemes = Object.keys(allThemes).sort((a,b)=>allThemes[b]-allThemes[a]);
+  if (sortedThemes.length) {
+    h += '<h2>Topics to Revisit (Combined)</h2>';
+    h += '<div class="chart-container">';
+    const maxThemeWrong = Math.max(...sortedThemes.map(t => allThemes[t]));
+    sortedThemes.slice(0, 8).forEach(t => {
+      const count = allThemes[t];
+      const pctBar = Math.round((count / maxThemeWrong) * 100);
+      h += '<div class="bar-chart-item">';
+      h += '<div class="bar-chart-label">'+escapeHtml(t)+'</div>';
+      h += '<div class="bar-chart-bar">';
+      h += '<div class="bar-chart-fill" style="width:'+pctBar+'%"><span class="bar-chart-count">'+count+'</span></div>';
+      h += '</div></div>';
+    });
+    h += '</div>';
+    if (sortedThemes.length > 8) {
+      h += '<p style="color:var(--muted);font-size:0.9em">... and '+(sortedThemes.length-8)+' more topics</p>';
+    }
+  } else {
+    h += '<p>No weak topics across completed quizzes.</p>';
+  }
+
+  document.getElementById('global-body').innerHTML = h;
+}
+
+// ===== Reveal-on-scroll =====
+function initReveal() {
+  const els = document.querySelectorAll('.reveal-on-scroll:not(.is-visible)');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+  const obs = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { root:null, rootMargin:'0px', threshold:0.15 });
+  els.forEach(el => obs.observe(el));
+}
+
+// ===== Init on load =====
+function updateHomeStatus() {
+  lectures.forEach(lec => {
+    const s = quizState[lec.id];
+    const el = document.getElementById('status-'+lec.id);
+    const progressEl = document.getElementById('progress-'+lec.id);
+    if (!el) return;
+    if (s.answered > 0 && s.total) {
+      const pct = Math.round((s.correct/s.total)*100);
+      el.textContent = "Saved: "+s.correct+"/"+s.answered+" of "+s.total+(s.completed?" (completed)":"");
+      if (progressEl) {
+        progressEl.innerHTML = '<div class="progress-badge">'+pct+'% ('+s.correct+'/'+s.total+')</div>';
+      }
+      if (s.completed) document.getElementById('globalReportBtn').disabled = false;
+    }
+  });
+}
+
+
+// ===== Dynamic card / quiz container generation =====
+function renderHomeCards() {
+  const container = document.getElementById('lecture-cards');
+  if (!container) return;
+  const delays = ['reveal-delay-1','reveal-delay-2','reveal-delay-3'];
+  container.innerHTML = lectures.map((lec, idx) => {
+    const delay = delays[idx % 3];
+    const titleHtml = escapeHtml(lec.title);
+    return `
+    <div class="card reveal-on-scroll ${delay}">
+      <div class="lec-row">
+        <div class="lec-title">${titleHtml}</div>
+        <div>
+          <button class="btn" onclick="showPage('notes-${lec.id}')">Notes</button>
+          <button class="btn btn-primary" onclick="startQuiz(${lec.id})">Quiz</button>
+        </div>
+      </div>
+      <div class="quiz-settings">
+        <label>Questions:
+          <select id="count-${lec.id}"><option value="10">10</option><option value="20">20</option><option value="30" selected>30</option></select>
+        </label>
+        <span id="progress-${lec.id}"></span>
+        <span id="status-${lec.id}" style="color:var(--muted);font-size:.9em"></span>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderQuizContainers() {
+  const container = document.getElementById('quiz-containers');
+  if (!container) return;
+  container.innerHTML = lectures.map(lec => {
+    const titleHtml = escapeHtml(lec.title);
+    return `
+    <div id="quiz-${lec.id}" class="page">
+      <a class="btn back" onclick="showPage('home')">← Home</a>
+      <h1>${titleHtml} — Quiz</h1>
+      <div class="score-bar" id="scorebar-${lec.id}">Score: 0 / 0 (of 30)</div>
+      <div id="quizbody-${lec.id}"></div>
+      <div id="postquiz-${lec.id}"></div>
+    </div>`;
+  }).join('');
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  fetch('data/2040.json')
+    .then(r => {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(data => {
+      lectures = data.lectures || [];
+      STORAGE_KEY = data.storageKey || STORAGE_KEY;
+      TOPIC_SECTION_MAP = data.topicSectionMap || {};
+      initQuizStateFromLectures();
+      renderHomeCards();
+      renderQuizContainers();
+      loadState();
+      // Migrate older saved states: recompute weak topics/sections if missing
+      lectures.forEach(lec => {
+        const s = quizState[lec.id];
+        const hasTopics = s.weakTopics && s.weakTopics.length > 0;
+        if (s.completed && !hasTopics && s.wrongQuestions.length > 0) {
+          computeWeakSections(lec.id);
+        }
+      });
+      saveState();
+      updateHomeStatus();
+      initReveal();
+    })
+    .catch(err => {
+      console.error('Failed to load data/2040.json:', err);
+      alert('Failed to load lecture data. If you opened this file directly (file://), please serve via a local HTTP server. See CLAUDE.md.');
+    });
+});
+
+// ===== PWA Service Worker (inline via Blob) =====
+if ('serviceWorker' in navigator) {
+  const swCode = `
+    const CACHE = 'lifs2040-v2';
+    self.addEventListener('install', e => { self.skipWaiting(); });
+    self.addEventListener('activate', e => { e.waitUntil(self.clients.claim()); });
+    self.addEventListener('fetch', e => {
+      if (e.request.method !== 'GET') return;
+      e.respondWith(
+        caches.open(CACHE).then(cache =>
+          cache.match(e.request).then(cached => {
+            const fetchPromise = fetch(e.request).then(resp => {
+              if (resp && resp.status === 200 && resp.type === 'basic') cache.put(e.request, resp.clone());
+              return resp;
+            }).catch(() => cached);
+            return cached || fetchPromise;
+          })
+        )
+      );
+    });
+  `;
+  try {
+    const blob = new Blob([swCode], {type:'application/javascript'});
+    navigator.serviceWorker.register(URL.createObjectURL(blob)).catch(e => console.warn('SW reg failed', e));
+  } catch(e) { console.warn('SW setup failed', e); }
+}
+</script>
+
+<!--
+  ============================================================================
+  TEMPLATE INSTRUCTIONS — READ BEFORE EDITING
+  ============================================================================
+
+  This file is a universal subject template. To create a new subject:
+
+  1. Copy this file to a new subject HTML, e.g.  cp template.html 3015.html
+  2. In the copy, find-and-replace these placeholders:
+       Cell Biology Study Guide     e.g. "Endocrine Study Guide"
+       LIFS2040      e.g. "LIFS3040"
+       Cell Biology, Lectures 11–23  e.g. "Endocrine, GI & Neuroscience, Lectures 1-10"
+       2040         e.g. "3040"  (matches data/3040.json — appears TWICE)
+       lifs2040        e.g. "lifs3040"  (service-worker cache namespace)
+  3. Create data/{2040}.json with this shape (see CLAUDE.md for full schema):
+       {
+         "storageKey": "lifs3040_quiz_state",
+         "lectures": [
+           { "id": 1, "title": "Lecture 1: ...", "questions": [ ... 30 question objects ... ] }
+         ],
+         "topicSectionMap": { "1": { "topic-name": 0 } }
+       }
+  4. For EACH lecture you add to the JSON, also add a notes page block to THIS HTML,
+     placed where the comment "NOTES PAGES go here" is above. Use this pattern:
+
+       <div id="notes-N" class="page">
+         <a class="btn back" onclick="showPage('home')">← Home</a>
+         <button id="clear-hl-N" class="btn btn-danger" style="display:none;float:right"
+                 onclick="clearWeakHighlights(N)">Clear Highlights</button>
+         <h1>Lecture N: Title</h1>
+
+         <div class="bigpic reveal-on-scroll">
+           One-paragraph framing of why this topic matters.
+         </div>
+
+         <section class="reveal-on-scroll" data-sec="0">
+           <h2>1. Section heading</h2>
+           <p data-topic="Topic name used in questions">Explanation...</p>
+         </section>
+
+         <!-- More sections with data-sec="1", "2", ... -->
+
+         <div class="memorize">
+           <strong>Top things to memorize</strong>
+           <ol>...</ol>
+         </div>
+       </div>
+
+  5. Add a subject card linking to this HTML on index.html.
+  6. Add this subject to CLAUDE.md's Content Status table.
+
+  WHAT NOT TO DO:
+  - Do NOT hand-write the home page lecture cards or quiz containers — they are
+    generated by renderHomeCards() / renderQuizContainers() from JSON.
+  - Do NOT rename question schema fields. Canonical: q, options, answer, explain,
+    topic, difficulty. The renderQuiz / submitQ functions assume these exact names.
+  - Do NOT use the field name `name` for lecture titles — always `title`.
+
+  CACHE INVALIDATION:
+  When you change data/JSON or this HTML, bump lifs2040-v2 → v2 in the
+  service worker block above so returning users do not get the old version.
+  ============================================================================
+-->
+
+</body>
+</html>
