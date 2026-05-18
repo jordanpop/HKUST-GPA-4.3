@@ -1,0 +1,2444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Organisational Behaviour — MGMT2110</title>
+<style>
+<style>
+:root{
+  --bg:#faf6ef; --paper:#fffdf7; --ink:#2b2a26; --muted:#6b6a63;
+  --accent:#4a6b4a; --accent-soft:#d9e4d3;
+  --wrong:#b85042; --wrong-soft:#f3dad6; --border:#d8d2c4;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.6;}
+.wrap{max-width:760px;margin:0 auto;padding:40px 24px 120px;}
+.page{display:none}
+.page.active{display:block}
+h1{font-size:2.2em;margin:0 0 8px;letter-spacing:.5px}
+h2{font-size:1.5em;color:var(--accent);border-bottom:1px solid var(--border);padding-bottom:6px;margin-top:38px}
+h3{font-size:1.15em;color:var(--ink);margin-top:24px}
+.subtitle{color:var(--muted);font-style:italic;margin-bottom:30px}
+.card{background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:22px;margin:14px 0;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.lec-row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.lec-title{font-size:1.15em;font-weight:bold}
+.btn{display:inline-block;padding:8px 18px;border:1px solid var(--accent);background:var(--paper);color:var(--accent);font-family:inherit;font-size:.95em;cursor:pointer;border-radius:4px;text-decoration:none;transition:all .2s}
+.btn:hover{background:var(--accent);color:var(--paper)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn-primary{background:var(--accent);color:var(--paper)}
+.btn-primary:hover{background:#3a5439}
+.back{margin-bottom:20px;font-size:.9em}
+.bigpic{background:var(--accent-soft);border-left:4px solid var(--accent);padding:14px 18px;margin:18px 0;font-style:italic}
+.callout{background:#fdf4d9;border-left:4px solid #c9a227;padding:14px 18px;margin:20px 0;border-radius:3px}
+.callout-title{font-weight:bold;color:#7a5e0a;margin-bottom:6px;font-style:normal}
+table{border-collapse:collapse;width:100%;margin:14px 0;background:var(--paper)}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--accent-soft)}
+.exam-trap-inline{background:#fdf4d9;border-left:3px solid #c9a227;padding:6px 12px;margin:10px 0;font-size:.92em}
+.exam-trap-inline b{color:#7a5e0a}
+.preview-q{background:var(--accent-soft);border-radius:4px;padding:14px 18px;margin:10px 0}
+.preview-q ol{margin:0;padding-left:22px}
+.lower-yield{color:var(--muted);font-size:.93em;border-top:1px dashed var(--border);padding-top:14px;margin-top:24px}
+.lower-yield ul{margin-top:6px}
+.score-bar{position:sticky;top:0;background:var(--paper);border:1px solid var(--border);padding:12px 18px;margin-bottom:20px;border-radius:4px;font-weight:bold;z-index:10;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.q-block{background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:20px;margin:18px 0}
+.q-num{color:var(--muted);font-size:.88em;margin-bottom:6px}
+.q-text{font-weight:bold;margin-bottom:14px}
+.opt{display:block;padding:10px 14px;margin:6px 0;border:1px solid var(--border);border-radius:4px;cursor:pointer;background:var(--paper);transition:background .15s}
+.opt:hover{background:var(--accent-soft)}
+.opt input{margin-right:10px}
+.opt.correct{background:var(--accent-soft);border-color:var(--accent);animation:slideIn .3s ease}
+.opt.wrong{background:var(--wrong-soft);border-color:var(--wrong);animation:slideIn .3s ease}
+.opt.disabled{cursor:default;opacity:.85}
+@keyframes slideIn{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:translateX(0)}}
+.opt.disabled:hover{background:var(--paper)}
+.opt.disabled.correct:hover{background:var(--accent-soft)}
+.opt.disabled.wrong:hover{background:var(--wrong-soft)}
+.explain{margin-top:12px;padding:12px;background:#f4efe2;border-radius:4px;font-size:.94em;color:var(--ink)}
+.explain b{color:var(--accent)}
+.summary{background:var(--paper);border:2px solid var(--accent);border-radius:6px;padding:24px;margin:30px 0}
+.summary h2{margin-top:0;color:var(--accent);border-bottom:none}
+.score-big{font-size:2.5em;color:var(--accent);font-weight:bold}
+.verdict{font-size:1.1em;margin:10px 0;font-style:italic}
+.theme-list{margin:12px 0}
+.theme-list li{margin:4px 0}
+.review-card{background:var(--paper);border:1px solid var(--wrong);border-radius:6px;padding:18px;margin:14px 0}
+.review-card .q-text{color:var(--wrong)}
+.memorize ol{padding-left:24px}
+.memorize li{margin:6px 0}
+.reveal-on-scroll{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.4,0,.2,1);will-change:opacity,transform}
+.reveal-on-scroll.is-visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+.submit-q{margin-top:10px}
+.quiz-settings{margin-top:12px;padding:10px 14px;background:var(--accent-soft);border-radius:4px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:.92em}
+.quiz-settings label{display:flex;align-items:center;gap:6px;color:var(--ink)}
+.quiz-settings select{font-family:inherit;font-size:.95em;padding:4px 8px;border:1px solid var(--border);border-radius:3px;background:var(--paper);color:var(--ink)}
+.reset-zone{text-align:center;margin-top:20px}
+.btn-danger{border-color:var(--wrong);color:var(--wrong)}
+.btn-danger:hover{background:var(--wrong);color:var(--paper)}
+.weak-highlight{background:rgba(253,222,90,.45);border-radius:3px;transition:background .3s;box-shadow:inset 3px 0 0 #c9a227}
+p.weak-highlight,li.weak-highlight,ul.weak-highlight,ol.weak-highlight,div.weak-highlight,table.weak-highlight{padding:6px 10px;margin:4px 0}
+tr.weak-highlight td,tr.weak-highlight th{background:rgba(253,222,90,.45)}
+tr.weak-highlight{box-shadow:none}
+.weak-h2{background:linear-gradient(transparent 60%,rgba(253,222,90,.55) 60%);padding:0 6px;border-radius:2px}
+/* Progress Ring + Chart Styles */
+.progress-ring-container{position:relative;width:120px;height:120px;margin:20px auto}
+.progress-ring-container svg{width:100%;height:100%}
+.progress-ring-label{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none}
+.progress-percentage{font-size:1.8em;font-weight:bold;color:var(--ink);line-height:1.2}
+.progress-score{font-size:0.9em;color:var(--muted);margin-top:4px}
+.chart-container{margin:20px 0;padding:20px;background:var(--paper);border-radius:6px}
+.bar-chart-item{display:flex;align-items:center;margin:14px 0;gap:12px}
+.bar-chart-label{width:140px;font-size:0.95em;color:var(--ink);flex-shrink:0}
+.bar-chart-bar{flex:1;height:24px;background:var(--accent-soft);border-radius:3px;position:relative;overflow:hidden;border:1px solid var(--accent)}
+.bar-chart-fill{height:100%;background:var(--accent);border-radius:2px;transition:width .6s ease;display:flex;align-items:center;justify-content:flex-end;padding-right:8px}
+.bar-chart-count{font-size:0.85em;color:var(--paper);font-weight:bold}
+.progress-badge{display:inline-block;font-size:0.85em;padding:4px 10px;background:var(--accent-soft);border-radius:4px;color:var(--ink);font-weight:500}
+.verdict-excellent{color:#2d5a2d}
+.verdict-good{color:#4a6b4a}
+.verdict-review{color:#7a6b3a}
+.verdict-weak{color:var(--wrong)}
+@media(max-width:600px){.progress-ring-container{width:100px;height:100px}.progress-percentage{font-size:1.4em}.bar-chart-label{width:100px;font-size:0.88em}}
+</style>
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div id="home" class="page active">
+  <a class="btn back" onclick="window.location.href='index.html'">← Subjects</a>
+  <h1>Organisational Behaviour</h1>
+  <div class="subtitle">MGMT2110 — Organisational Behaviour — Classes 11–16</div>
+
+  <!-- Lecture cards are generated by JS from data/mgmt2110.json (see renderHomeCards). -->
+  <div id="lecture-cards"></div>
+
+  <div style="text-align:center;margin-top:40px">
+    <button id="globalReportBtn" class="btn" disabled onclick="showGlobalReport()">Full Summary Report</button>
+  </div>
+  <div class="reset-zone">
+    <button class="btn btn-danger" onclick="resetAllProgress()">Reset All Progress</button>
+  </div>
+</div>
+
+<!--
+  NOTES PAGES go here. For each lecture you add to data/mgmt2110.json,
+  ALSO add a <div id="notes-N" class="page"> block here. See template comment block
+  at the bottom of this file for the exact pattern.
+-->
+
+<!-- NOTES PAGES go here -->
+<div id="notes-6" class="page">
+<div id="notes-6" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-6" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(6)">Clear Highlights</button>
+  <h1>Class 16: Ethics</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    Ethics (倫理學) is the field that seeks to explain why people behave in ways aligned with moral norms — the sense of "right" or "wrong" — and why they sometimes break those norms. Moral character dominates social impressions even more than warmth, yet unethical behaviour is not confined to psychopaths: situational pressures routinely cause ordinary, well-intentioned people to act wrongly, as demonstrated by the Good Samaritan study and the space-shuttle Challenger tragedy. When scarce resources must be allocated under crisis conditions, such as ventilators during COVID-19, these everyday ethical tensions become decisions of life and death, forcing explicit choice between competing frameworks of justice. Understanding how those frameworks differ — and where each breaks down — is the foundation of applied organisational ethics.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. What Ethics Is and Why It Matters</h2>
+    <p data-topic="ethics-definition">
+      <strong>Core definition</strong>
+      <ul>
+        <li>Ethics (倫理學) — a field that explains why people behave in line with moral norms and why they sometimes violate them; anchored in the sense of "right" and "wrong"</li>
+        <li>Steven Pinker's framing — "Morality is not just any old topic in psychology but close to our conception of the meaning of life. Moral goodness is what gives each of us the sense that we are worthy human beings."</li>
+        <li>Ethics (倫理學) is therefore both descriptive (what people do) and normative (what they ought to do)</li>
+      </ul>
+    </p>
+    <p data-topic="why-individuals-care">
+      <strong>Why individuals should care about ethics</strong>
+      <ul>
+        <li>Moral character dominance effect (道德印象主導效應) — Goodwin et al. (2014) showed that moral character information dominates global impressions of a person more than warmth does; a person with good moral character but interpersonal coldness is rated far more positively than a warm person with bad moral character</li>
+        <li>Practical upside: co-workers, managers, and clients like you more when you are perceived as ethical (合乎倫理)</li>
+        <li>Practical downside: moral failures (道德失敗) make others actively dislike you — illustrated by the Martin Shkreli case where prospective jurors stated publicly that they "hated" him and called him "greedy," making impartial trial nearly impossible</li>
+        <li>Shkreli raised the price of Daraprim (an anti-parasitic drug) by 5,000% overnight, drawing massive public outrage as an example of legal-but-unethical corporate behaviour</li>
+      </ul>
+    </p>
+    <p data-topic="why-businesses-care">
+      <strong>Why businesses should care about ethics</strong>
+      <ul>
+        <li>Social costs of unethicality (不道德行為的社會成本) — unethical corporate decisions harm lives and the environment, not just reputation</li>
+        <li>Boeing 737 MAX case: concealing known defects in the MCAS flight-control system led to two crashes (Lion Air Flight 610; Ethiopian Airlines Flight 302) killing 346 people; CEO Dennis Muilenberg issued a written apology on April 4, 2019, but public trust in the aircraft remained severely damaged</li>
+        <li>Shell environmental case: corporate environmental decisions can harm ecosystems and invite sustained activism, illustrating reputational and regulatory costs beyond the immediate harm</li>
+        <li>Essay synthesis: the Boeing case illustrates that short-term cost savings achieved through ethically questionable concealment ultimately destroy both human life and stakeholder (利益相關者) value, falsifying the assumption that profit maximisation and ethical compliance are in tension</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="ethics-definition"><b>Exam trap:</b> Students often define ethics purely as "following laws." Ethics and legality are distinct — Shkreli's drug-price increase was legal but widely condemned as unethical. Never conflate the two in an essay.</div>
+    <div class="exam-trap-inline" data-topic="why-individuals-care"><b>Exam trap:</b> The Goodwin et al. (2014) finding is often misread. Moral character dominates over warmth — not over competence. Warmth and moral character are different dimensions; make sure you cite this correctly.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Why Good People Do Bad Things</h2>
+    <p data-topic="bad-people-myth">
+      <strong>The "bad person" hypothesis — and why it is insufficient</strong>
+      <ul>
+        <li>Psychopath (心理變態者, Hare 1998) traits: lack of remorse and empathy; impulsive and erratic behaviour; average or above-average intelligence but lack of focus; superficial charm; ease with deception and lying; failure to learn from past mistakes; high self-worth and narcissism; insincerity and unreliability; impersonal sex life and detachment</li>
+        <li>Critical limitation: psychopaths are estimated at less than 1% of the general population — the popular "10% of Wall Streeters" figure is not supported by evidence</li>
+        <li>Implication: if bad people represent less than 1% of the population, they cannot explain the bulk of observed unethical behaviour (不道德行為) in organisations</li>
+      </ul>
+    </p>
+    <p data-topic="situational-ethics">
+      <strong>Situational forces — the core explanation</strong>
+      <ul>
+        <li>Good Samaritan Study (善人行惡研究, Batson and Darley 1973) — seminary students preparing a speech on the parable of the Good Samaritan were sent across campus; only 10% stopped to help a person in distress when they were in a hurry, versus 63% when not rushed</li>
+        <li>Key takeaway: "Even saints can be sinners when environmental demands are high" — the topic of the speech (helping others) was irrelevant; the situational pressure (時間壓力) was decisive</li>
+        <li>Challenger space-shuttle case: NASA engineers and managers decided to launch despite known O-ring risks in cold temperatures; the decision was made by people who were not "bad" — they were responding to institutional pressure (機構壓力), schedule demands, and groupthink</li>
+        <li>Professional ethics (職業倫理) vs. personal morality conflict: lawyers bound by attorney-client privilege sometimes cannot reveal information that could exonerate an innocent person — a structural conflict between role-based ethics and personal moral intuitions</li>
+      </ul>
+    </p>
+    <p data-topic="situational-ethics">
+      <strong>Why this matters for organisations</strong>
+      <ul>
+        <li>Organisations cannot rely on "hiring good people" as an ethics strategy; structural and situational factors must be managed independently</li>
+        <li>Essay synthesis: the situational account of unethical behaviour (不道德行為) — supported by Batson and Darley (1973) — challenges dispositional explanations and implies that ethical organisational design requires attention to workload, incentive structures, and psychological safety (心理安全感), not merely individual character</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="bad-people-myth"><b>Exam trap:</b> Do not use "psychopath" and "unethical person" interchangeably. The lecture explicitly argues most unethical actors are not psychopaths; situational pressures drive behaviour far more commonly than dispositional deficits.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Ethical Frameworks and the Ventilator Allocation Dilemma</h2>
+    <p data-topic="ventilator-dilemma">
+      <strong>The case: allocating ventilators during COVID-19</strong>
+      <ul>
+        <li>Ventilator allocation dilemma (呼吸機分配困境) — during COVID-19 surges, clinicians faced decisions about which patients receive ventilators, sometimes withdrawing a ventilator from one patient to give it to another</li>
+        <li>As of May 10, 2020 (US data): only 26 of 50 states had ventilator allocation guidelines; only 15 recommended forming a triage committee (分診委員會); only 22 discussed withdrawal of mechanical ventilation (Piscitello et al., 2020, JAMA Network Open)</li>
+        <li>Italy, March 2020: Hospitals around Milan admitted more than 200 patients with severe respiratory failure per day; SIAARTI published allocation guidance that sparked immediate heated debate about distributive justice (分配正義)</li>
+      </ul>
+    </p>
+    <p data-topic="siaarti-framework">
+      <strong>SIAARTI recommendations (Italy) — key elements</strong>
+      <ul>
+        <li>Denial of access to life-sustaining therapies based on distributive justice may be justified when demand overwhelms supply</li>
+        <li>Allocation criteria should be flexible and adapted locally</li>
+        <li>An age limit for ICU admission may ultimately need to be set</li>
+        <li>Comorbidities and functional status must be carefully evaluated alongside age</li>
+        <li>Every ICU admission should be treated as an "ICU trial" — appropriateness of treatment re-evaluated daily</li>
+      </ul>
+    </p>
+    <p data-topic="maryland-framework">
+      <strong>Maryland Recommendations (US) — structured framework</strong>
+      <ul>
+        <li>Short-term survival: Sequential Organ Failure Assessment (SOFA 序貫器官衰竭評分) — scored across 6 organ systems, each rated 0 (normal) to 4 (severe dysfunction)</li>
+        <li>Long-term survival: +3 points if life expectancy is less than 12 months due to comorbidities (共病症); +0 otherwise</li>
+        <li>Tiebreakers (in order): life stage cycle (生命階段) (younger patients prioritised) → pregnancy → lottery (抽籤)</li>
+        <li>Open communication with patients and families required throughout</li>
+      </ul>
+    </p>
+
+    <table>
+      <caption>Maryland vs SIAARTI Ventilator Allocation Frameworks Compared</caption>
+      <thead>
+        <tr>
+          <th>Dimension</th>
+          <th>Maryland (US)</th>
+          <th>SIAARTI (Italy)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Primary criterion</td>
+          <td>SOFA score (organ failure severity)</td>
+          <td>Distributive justice + local flexibility</td>
+        </tr>
+        <tr>
+          <td>Age</td>
+          <td>Tiebreaker (life stage)</td>
+          <td>Explicit age limit may be set</td>
+        </tr>
+        <tr>
+          <td>Randomness</td>
+          <td>Lottery as final tiebreaker</td>
+          <td>Not specified</td>
+        </tr>
+        <tr>
+          <td>Ongoing review</td>
+          <td>Open communication with families</td>
+          <td>Daily ICU trial re-evaluation</td>
+        </tr>
+        <tr>
+          <td>Ethical basis</td>
+          <td>Utilitarian survival maximisation + fairness</td>
+          <td>Distributive justice; contextual</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p data-topic="ventilator-candidates">
+      <strong>The eight-candidate classroom exercise</strong>
+      <ul>
+        <li>Candidate A — 34-year-old nurse, ANA Hall of Fame, contracted COVID-19 while caring for patients</li>
+        <li>Candidate B — 62-year-old biologist working on virus-killing bacteria with revolutionary immunology potential</li>
+        <li>Candidate C — busy mother, recently joined wait list, highest chance of recovery if assigned a ventilator</li>
+        <li>Candidate D — compromised immune system from drug use, now a role model and mentor to recovering addicts</li>
+        <li>Candidate E — real estate CEO with inherited lung condition, generous donor, pledged future profits to lung research</li>
+        <li>Candidate F — 44-year-old Uber driver, top of wait list, but low probability of recovery even with ventilator</li>
+        <li>Candidate G — 15-year-old daughter of visiting ambassador, straight-A student, life will be saved and improved with ventilator</li>
+        <li>Candidate H — contracted COVID-19 while caring for his sick father, whose condition has since improved</li>
+      </ul>
+    </p>
+    <p data-topic="ventilator-candidates">
+      This exercise reveals which ethical frameworks people implicitly apply: utilitarian (功利主義) thinkers prioritise Candidate C (highest survival probability) or G (youngest, most life-years saved); deontologists (義務論) may prioritise A (duty/desert) or H (virtuous sacrifice); Rawlsians may apply lottery-based equality (平等原則). The disagreements that emerge within a group expose why real triage committees face moral distress and why consistent, transparent criteria matter.
+    </p>
+    <div class="exam-trap-inline" data-topic="maryland-framework"><b>Exam trap:</b> The SOFA score measures short-term survival probability, not social worth. The Maryland framework explicitly excludes social utility (e.g., donor status, profession) as a primary criterion — only medical factors and age (as tiebreaker) count. Do not conflate a utilitarian framework with "most socially valuable."</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Ethical Theories: Competing Frameworks</h2>
+    <p data-topic="ethical-theories-overview">
+      The ventilator dilemma activates three classical ethical theories (倫理學理論) simultaneously. Understanding each framework's underlying logic — and its weaknesses — is essential for essay-level analysis.
+    </p>
+    <p data-topic="utilitarianism">
+      <strong>Utilitarianism (功利主義) — consequentialist framework</strong>
+      <ul>
+        <li>Core logic: the morally correct action is the one that produces the greatest good for the greatest number; outcomes are what matter, not intentions or duties</li>
+        <li>Applied to ventilators: allocate to whichever patient maximises total lives saved or life-years gained (supports SOFA-based approaches; prioritises C or G)</li>
+        <li>Applied to the trolley problem (電車問題): divert the tram, kill one, save five — a utilitarian calculus (功利計算) says yes</li>
+        <li>Strength: provides a clear, measurable decision rule; avoids arbitrary distinctions between people</li>
+        <li>Criticism: permits sacrificing individuals for aggregate gain; ignores rights, fairness, and desert; can justify outcomes that are intuitively monstrous (e.g., harvesting one healthy person's organs to save five)</li>
+        <li>Scholarly limitation: the aggregation problem — utilitarianism assumes welfare units are commensurable and addable, an assumption contested by philosophers such as Rawls (羅爾斯) and Sen</li>
+      </ul>
+    </p>
+    <p data-topic="deontology">
+      <strong>Deontology (義務論) — duty-based framework</strong>
+      <ul>
+        <li>Core logic: certain actions are inherently right or wrong regardless of consequences; people have duties and rights that cannot be violated even for good outcomes</li>
+        <li>Applied to ventilators: obligations such as "first come, first served" (wait-list order) or duty of care to the most vulnerable regardless of survival odds</li>
+        <li>Applied to the trolley problem: some deontologists say you must not divert the tram because actively killing one person — even to save five — violates the categorical imperative (定言命令) not to use persons merely as means</li>
+        <li>Strength: protects individual rights; provides stable rules that resist manipulation by outcome calculations</li>
+        <li>Criticism: rigid application can lead to worse outcomes; offers no clear guidance when duties (義務) conflict (e.g., the lawyer case — confidentiality duty vs. duty not to allow injustice); also silent on how to weigh competing duties</li>
+        <li>Scholarly disagreement: Kant's categorical imperative (定言命令) is the canonical deontological tool, but scholars debate whether it yields determinate answers in real dilemmas</li>
+      </ul>
+    </p>
+    <p data-topic="justice-rawls">
+      <strong>Rawlsian Justice (正義論) — fairness framework</strong>
+      <ul>
+        <li>Core logic (Rawls 羅爾斯): principles of justice are those a rational person would choose from behind a "veil of ignorance" (無知之幕) — not knowing their own position in society; the difference principle holds that inequalities are only just if they benefit the least-advantaged members</li>
+        <li>Applied to ventilators: lottery-based allocation treats each life as equally valuable; tiebreaker lottery in Maryland recommendations reflects this intuition</li>
+        <li>Applied to the trolley problem (電車難題): Rawlsian fairness might prohibit diversion because you cannot know from behind the veil which track you would be on</li>
+        <li>Strength: impartial; accounts for the moral arbitrariness of natural endowment and social position</li>
+        <li>Criticism: the veil of ignorance (無知之幕) is a thought experiment, not an action-guiding procedure; critics (e.g., Nozick's libertarian critique) argue it unjustly redistributes entitlements</li>
+      </ul>
+    </p>
+
+    <table>
+      <caption>Three Ethical Frameworks Applied to the Ventilator Dilemma</caption>
+      <thead>
+        <tr>
+          <th>Framework</th>
+          <th>Core Question</th>
+          <th>Ventilator Decision Rule</th>
+          <th>Key Weakness</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Utilitarianism (功利主義)</td>
+          <td>What maximises total welfare?</td>
+          <td>Highest survival probability (Candidate C or G)</td>
+          <td>May sacrifice rights for aggregate gain</td>
+        </tr>
+        <tr>
+          <td>Deontology (義務論)</td>
+          <td>What duties apply regardless of outcome?</td>
+          <td>Wait-list order; duty of care to weakest</td>
+          <td>Rigid; silent when duties conflict</td>
+        </tr>
+        <tr>
+          <td>Rawlsian Justice (正義論)</td>
+          <td>What would we choose not knowing our position?</td>
+          <td>Lottery; benefit the least advantaged</td>
+          <td>Thought experiment, not action-guiding</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p data-topic="trolley-problem">
+      <strong>The Trolley Problem (電車問題) — canonical dilemma</strong>
+      <ul>
+        <li>Classic formulation: a runaway tram will kill five people on the main track; you can divert it to a side track, killing one worker instead — do you pull the lever? This tests the conflict between justice (正義) and utility.</li>
+        <li>COVID version: the trolley is COVID-19; the government controls the switch; the tracks lead to "People" (lockdown harms) and "Economy" (opening-up harms); neither option is harm-free</li>
+        <li>Michael Sandel's "What Money Can't Buy" — argues that market logic colonises domains (like healthcare allocation) where it should not apply; pure utilitarian market solutions to scarce medical resources commodify human life in ways that violate human dignity (人類尊嚴, Kantian critique of markets)</li>
+        <li>The trolley problem exposes that no single framework yields a universally accepted answer; it is designed as a stress test for ethical intuitions (道德直覺), not a puzzle with one correct solution</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="utilitarianism"><b>Exam trap:</b> "Utilitarian" does not mean "selfish." Utilitarianism is explicitly other-regarding — it asks for the greatest good for the greatest number, not for oneself. Confusing utilitarianism with self-interest is a common essay error.</div>
+    <div class="exam-trap-inline" data-topic="trolley-problem"><b>Exam trap:</b> The trolley problem is not simply about whether to save more people. The philosophical tension is about the moral difference between killing and letting die, and whether actively causing harm to one person is morally distinguishable from failing to prevent harm to five. Answering only with numbers misses the point.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Applying Ethics to Organisational and Professional Life</h2>
+    <p data-topic="professional-vs-personal-ethics">
+      <strong>Professional ethics (職業倫理) vs personal morality (個人道德) — structural conflicts</strong>
+      <ul>
+        <li>Lawyers example: attorney-client privilege legally forbids a lawyer from revealing information that could exonerate an innocent person serving prison time — the professional duty conflicts with the personal moral duty not to allow injustice (正義)</li>
+        <li>This is not a failure of character; it is a designed structural conflict in role-based ethical systems</li>
+        <li>Organisational implication: employees regularly face conflicts of interest (利益衝突) between institutional rules and their own moral judgements; organisations that provide no legitimate dissent channel force employees to choose between compliance and moral integrity</li>
+      </ul>
+    </p>
+    <p data-topic="ethics-design">
+      <strong>Designing for ethical behaviour</strong>
+      <ul>
+        <li>Triage committees (分診委員會) — Maryland recommendations use committees independent of direct patient care; this reduces moral distress (道德困擾), promotes objectivity, and prevents conflicts of interest; the committee structure is itself an ethical design choice</li>
+        <li>The Good Samaritan finding implies that reducing time pressure, work overload, and competing demands should be treated as ethics interventions, not merely productivity measures</li>
+        <li>Transparent criteria — open communication with patients and families (Maryland) acknowledges that procedural fairness (程序公平) matters alongside outcome fairness</li>
+        <li>Lottery as a residual tiebreaker acknowledges the limits of meritocratic and utilitarian criteria and treats residual uncertainty as a fairness reason for randomisation</li>
+      </ul>
+    </p>
+    <p data-topic="ethics-design">
+      <strong>Essay synthesis</strong>
+      <ul>
+        <li>The ventilator case demonstrates that ethical frameworks are not mutually exclusive in practice: the Maryland protocol combines utilitarian survival maximisation (功利主義, SOFA), deontological queue respect (義務論, wait-list order), and Rawlsian fairness (正義論, lottery tiebreaker) — a hybrid reflecting the limits of each framework applied alone</li>
+        <li>For organisations, this implies that ethics programmes that teach only one framework will fail under conditions of genuine moral complexity; multi-framework literacy is necessary for ethical decision-making under pressure</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="professional-vs-personal-ethics"><b>Exam trap:</b> Professional ethics and personal morality are not the same construct. An action can be professionally required yet personally immoral (the lawyer case) or personally motivated yet professionally prohibited. Essays that treat them as synonymous will miss the structural dimension of organisational ethics.</div>
+
+    <!-- SVG diagram: Ethical Frameworks Decision Map -->
+    <svg viewBox="0 0 520 220" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;margin:1rem 0;display:block;" aria-label="Ethical frameworks decision map">
+      <!-- Central node -->
+      <rect x="190" y="85" width="140" height="50" rx="8" fill="#2563eb" opacity="0.15" stroke="#2563eb" stroke-width="1.5"/>
+      <text x="260" y="108" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e3a8a">Ethical Dilemma</text>
+      <text x="260" y="124" text-anchor="middle" font-size="11" fill="#1e3a8a">(e.g. ventilator)</text>
+
+      <!-- Utilitarianism -->
+      <rect x="10" y="10" width="130" height="55" rx="8" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+      <text x="75" y="30" text-anchor="middle" font-size="11" font-weight="bold" fill="#065f46">Utilitarianism</text>
+      <text x="75" y="45" text-anchor="middle" font-size="10" fill="#065f46">Max total welfare</text>
+      <text x="75" y="58" text-anchor="middle" font-size="10" fill="#065f46">→ Highest survival odds</text>
+      <line x1="140" y1="40" x2="190" y2="100" stroke="#059669" stroke-width="1.2" stroke-dasharray="5,3"/>
+
+      <!-- Deontology -->
+      <rect x="10" y="150" width="130" height="55" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+      <text x="75" y="170" text-anchor="middle" font-size="11" font-weight="bold" fill="#92400e">Deontology</text>
+      <text x="75" y="185" text-anchor="middle" font-size="10" fill="#92400e">Duty / Rights</text>
+      <text x="75" y="198" text-anchor="middle" font-size="10" fill="#92400e">→ Wait-list order</text>
+      <line x1="140" y1="175" x2="190" y2="115" stroke="#d97706" stroke-width="1.2" stroke-dasharray="5,3"/>
+
+      <!-- Rawlsian Justice -->
+      <rect x="380" y="80" width="130" height="55" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+      <text x="445" y="100" text-anchor="middle" font-size="11" font-weight="bold" fill="#4c1d95">Rawlsian Justice</text>
+      <text x="445" y="115" text-anchor="middle" font-size="10" fill="#4c1d95">Veil of ignorance</text>
+      <text x="445" y="128" text-anchor="middle" font-size="10" fill="#4c1d95">→ Lottery / fairness</text>
+      <line x1="380" y1="107" x2="330" y2="110" stroke="#7c3aed" stroke-width="1.2" stroke-dasharray="5,3"/>
+
+      <!-- Output -->
+      <rect x="185" y="175" width="150" height="38" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+      <text x="260" y="191" text-anchor="middle" font-size="11" font-weight="bold" fill="#991b1b">Hybrid Protocol</text>
+      <text x="260" y="206" text-anchor="middle" font-size="10" fill="#991b1b">(Maryland: SOFA + queue + lottery)</text>
+      <line x1="260" y1="135" x2="260" y2="175" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arr)"/>
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#dc2626"/>
+        </marker>
+      </defs>
+    </svg>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Ethics vs law: legal does not mean ethical; Shkreli's Daraprim price hike was legal but universally condemned as unethical — never conflate legality with morality.</li>
+      <li>Goodwin et al. (2014) finding: moral character dominates over warmth, not over competence — cite the correct comparison.</li>
+      <li>Psychopath frequency: psychopaths are under 1% of the general population; most unethical behaviour in organisations stems from situational pressures, not dispositional pathology.</li>
+      <li>Good Samaritan Study: the decisive variable was time pressure, not the topic of the speech — even students preparing to speak about helping others failed to help when rushed.</li>
+      <li>Utilitarianism is not selfishness: it explicitly aims at the greatest good for the greatest number; confusing it with self-interest is a fundamental conceptual error.</li>
+      <li>Trolley problem depth: the moral question is the distinction between killing and letting die, not just arithmetic — always engage with the action/omission distinction.</li>
+      <li>SOFA score is medical, not social: Maryland's framework excludes social worth (wealth, profession, donor status) as a primary criterion; only medical factors qualify.</li>
+      <li>Professional vs personal ethics: these are structurally distinct; the lawyer case shows that professional duties can directly conflict with personal moral obligations — they are not the same thing.</li>
+      <li>Maryland protocol is a hybrid: it combines utilitarian, deontological, and Rawlsian elements — it cannot be classified under a single framework without oversimplification.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Ethics (倫理學) definition: field explaining why people follow moral norms and why they sometimes break them</li>
+      <li>Goodwin et al. (2014): moral character dominates global impressions more than warmth — a person with good character but cold manner is rated more positively than a warm person with bad character</li>
+      <li>Martin Shkreli / Daraprim: price raised 5,000% overnight — legal but unethical; illustrates reputational destruction from moral failure</li>
+      <li>Boeing 737 MAX: concealing MCAS defects led to 346 deaths; ethical failure had catastrophic social and financial costs</li>
+      <li>Psychopaths (Hare 1998): under 1% of general population; cannot explain most organisational unethical behaviour</li>
+      <li>Good Samaritan Study (Batson and Darley 1973): only 10% helped when rushed vs 63% when unhurried; situational pressure overrides character</li>
+      <li>Utilitarianism (功利主義): greatest good for the greatest number; outcomes determine morality; applied to ventilators = highest survival probability wins</li>
+      <li>Deontology (義務論): duties and rights are intrinsic; cannot violate them even for good outcomes; applied to ventilators = wait-list order, duty of care to weakest</li>
+      <li>Rawlsian Justice (正義論): choose principles from behind a veil of ignorance; difference principle; applied to ventilators = lottery tiebreaker</li>
+      <li>SOFA score (序貫器官衰竭評分): 6 organ systems, each scored 0–4; Maryland's primary short-term survival criterion</li>
+      <li>Maryland tiebreakers: life stage cycle → pregnancy → lottery</li>
+      <li>Trolley problem (電車問題): divert tram, kill 1, save 5 — exposes killing vs letting die distinction; COVID version: government chooses between harming people vs harming economy</li>
+    </ol>
+  </div>
+</div>
+</div>
+
+<div id="notes-5" class="page">
+<div id="notes-5" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-5" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(5)">Clear Highlights</button>
+  <h1>Class 15: Leadership</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    Leadership (領導力) is the ability to influence others toward the achievement of goals, and it is conceptually distinct from management (管理), which relies on formal authority to obtain compliance. The lecture walks through the trait perspective — asking who naturally becomes a leader — before turning to four behavioural styles whose trade-offs between productivity and satisfaction were demonstrated live through an origami-frog factory exercise. The core scholarly tension is this: no single style universally outperforms the others, because effectiveness depends on follower expertise, task structure, and the goal being pursued. Understanding that distinction is the foundation for any serious analysis of leadership in organisations.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Defining Leadership vs. Management</h2>
+    <p data-topic="leadership-vs-management">
+      The distinction between leadership (領導力) and management (管理) is not merely semantic — it reflects two fundamentally different logics of influence. Management rests on positional authority; leadership rests on the capacity to move people beyond their formal obligations.
+    </p>
+    <ul>
+      <li><strong>Leadership (領導力)</strong> — the ability to influence others toward the achievement of goals; influence is the operative word, not authority</li>
+      <li><strong>Management (管理)</strong> — use of authority inherent in a designated formal rank to obtain compliance from organisational members</li>
+    </ul>
+    <p data-topic="manager-leader-contrast">
+      Kotter's classic contrast (implicit in the lecture) shows these roles pull in different directions:
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Management</th>
+          <th>Leadership</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Copes with <strong>complexity</strong> — brings order and stability to unpredictable situations</td>
+          <td>Anticipates and produces <strong>change</strong> — enables adaptation to new circumstances</td>
+        </tr>
+        <tr>
+          <td>Plans and budgets</td>
+          <td>Sets direction and course</td>
+        </tr>
+        <tr>
+          <td><strong>Organises and staffs</strong> — sets up systems to ensure plans are implemented precisely and efficiently</td>
+          <td><strong>Aligns people with vision</strong> — gets them to believe in an alternative future</td>
+        </tr>
+        <tr>
+          <td>Exercises control and solves problems</td>
+          <td>Motivates and inspires people</td>
+        </tr>
+        <tr>
+          <td>Strong managers are essential to ensure efficient progress given a <strong>steady</strong> course</td>
+          <td>Strong leaders are essential to envision and stimulate necessary <strong>changes</strong> and longer-term survival</td>
+        </tr>
+      </tbody>
+    </table>
+    <p data-topic="leadership-vs-management-synthesis">
+      The underlying logic is that management (管理) optimises within a given direction, while leadership (領導力) questions and changes the direction itself through vision (願景) and charisma (魅力). In an essay, one can argue that organisations need both simultaneously — good managers without leaders stagnate, and good leaders without managers create inspiring chaos.
+    </p>
+    <div class="exam-trap-inline" data-topic="leadership-vs-management">
+      <b>Exam trap:</b> Do not conflate leadership with seniority or formal rank. A manager who relies purely on positional authority is not exercising leadership as defined here — leadership is about influence, not hierarchy.
+    </div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. The Competency (Trait) Perspective</h2>
+    <p data-topic="trait-perspective">
+      The competency or trait perspective (特質觀點) asks a deceptively simple question: are leaders born, not made? These theories identify personality, social, physical, or intellectual traits that differentiate leaders from non-leaders. The practical promise is that if we know the traits, we can select or develop leaders more reliably.
+    </p>
+    <ul>
+      <li><strong>Extraversion (外向性)</strong> — strong predictor of leader emergence (.33) and a moderate predictor of effectiveness (.24); sociability signals confidence and willingness to take charge</li>
+      <li><strong>Conscientiousness (盡責性)</strong> — strong predictor of emergence (.33), moderate predictor of effectiveness (.16); reliable, organised individuals are trusted to follow through</li>
+      <li><strong>Openness (開放性)</strong> — moderate predictor of both emergence (.24) and effectiveness (.21); intellectual curiosity supports vision and adaptability</li>
+      <li><strong>Agreeableness (親和性)</strong> — weak predictor of emergence (.05) but moderate predictor of effectiveness (.21); being likeable does not make one step up, but helps once in the role</li>
+      <li><strong>Neuroticism (神經質)</strong> — moderate predictor of emergence (.24) and effectiveness (.22); negative direction — emotional instability undermines both rising to the role and performing in it</li>
+      <li><strong>Integrity (誠信)</strong> — trustworthiness and ethical consistency; critical for sustained follower commitment</li>
+      <li><strong>Charisma (個人魅力)</strong> — ability to inspire and attract followers through personal presence</li>
+      <li><strong>Leadership Motivation (領導動機)</strong> — genuine desire to influence and lead others, not merely to gain status</li>
+      <li><strong>Cognitive Intelligence (認知智力)</strong> — analytical capacity to process complex information and make sound decisions</li>
+      <li><strong>Emotional Intelligence (情緒智力)</strong> — awareness and management of one's own and others' emotions; increasingly emphasised in modern leadership research</li>
+    </ul>
+
+    <svg width="480" height="140" viewBox="0 0 480 140" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:1rem 0;font-family:sans-serif">
+      <rect x="0" y="0" width="480" height="140" rx="8" fill="#f0f4f8"/>
+      <!-- Emergence column -->
+      <text x="120" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a56db">Emergence (相關)</text>
+      <text x="120" y="42" text-anchor="middle" font-size="11" fill="#333">Extraversion .33 ●●●</text>
+      <text x="120" y="58" text-anchor="middle" font-size="11" fill="#333">Conscientiousness .33 ●●●</text>
+      <text x="120" y="74" text-anchor="middle" font-size="11" fill="#333">Neuroticism .24 ●●</text>
+      <text x="120" y="90" text-anchor="middle" font-size="11" fill="#333">Openness .24 ●●</text>
+      <text x="120" y="106" text-anchor="middle" font-size="11" fill="#e53e3e">Agreeableness .05 ●</text>
+      <!-- divider -->
+      <line x1="240" y1="10" x2="240" y2="130" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+      <!-- Effectiveness column -->
+      <text x="360" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a56db">Effectiveness (相關)</text>
+      <text x="360" y="42" text-anchor="middle" font-size="11" fill="#333">Extraversion .24 ●●</text>
+      <text x="360" y="58" text-anchor="middle" font-size="11" fill="#333">Neuroticism .22 ●●</text>
+      <text x="360" y="74" text-anchor="middle" font-size="11" fill="#333">Agreeableness .21 ●●</text>
+      <text x="360" y="90" text-anchor="middle" font-size="11" fill="#333">Openness .21 ●●</text>
+      <text x="360" y="106" text-anchor="middle" font-size="11" fill="#333">Conscientiousness .16 ●●</text>
+      <text x="240" y="130" text-anchor="middle" font-size="10" fill="#666">Big Five correlations with leadership (meta-analytic)</text>
+    </svg>
+
+    <p data-topic="trait-limits">
+      Critical limitation: correlations are modest (none exceed .33), meaning traits alone explain a small fraction of variance in who leads or leads well. Context — industry, team composition, crisis level — moderates these effects substantially. The trait perspective also struggles to explain why effective leaders in one setting fail in another, pointing toward the need for behavioural and situational theories.
+    </p>
+    <p data-topic="trait-synthesis">
+      For essays: the trait perspective is valuable as a selection tool and a first-pass account of leadership emergence, but its determinism is its weakness — it implies leadership is relatively fixed, leaving little room for development or situational fit.
+    </p>
+    <div class="exam-trap-inline" data-topic="trait-perspective">
+      <b>Exam trap:</b> Agreeableness is a weak predictor of <em>emergence</em> (.05) but a moderate predictor of <em>effectiveness</em> (.21). Students often assume higher agreeableness always helps — it does once you are in the role, but agreeable people are less likely to step up and claim the role in the first place.
+    </div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Four Leadership Styles: Behavioural Perspective</h2>
+    <p data-topic="four-styles-intro">
+      The lecture moves from who leaders are to what leaders do. The origami-frog factory exercise was not a game — it was a controlled demonstration of four scripted styles, each revealing a distinct pattern of productivity and satisfaction outcomes. The four styles (領導風格) are: Democratic/Participative, Autocratic/Directive, Laissez-Faire, and Transformational.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Style</th>
+          <th>Core Behaviours</th>
+          <th>Best Context</th>
+          <th>Key Trade-off</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Democratic / Participative (民主/參與式)</strong></td>
+          <td>Consults team; encourages suggestions; treats subordinates as equals; leader retains final say</td>
+          <td>Creative tasks; motivated, capable workers; situations where buy-in matters</td>
+          <td>Higher satisfaction and intrinsic motivation, but slower production (especially early)</td>
+        </tr>
+        <tr>
+          <td><strong>Autocratic / Directive (專制/指令式)</strong></td>
+          <td>Provides directions; acts as sole expert; does not seek input or encourage suggestions</td>
+          <td>High-structure needed (e.g., kindergarten teacher); high-stress/urgent situations (e.g., military commander during battle)</td>
+          <td>High short-term output (unless rebellion), but low satisfaction; reduces creativity and intrinsic motivation; workers take less pride in work</td>
+        </tr>
+        <tr>
+          <td><strong>Laissez-Faire (放任式)</strong></td>
+          <td>Provides minimal instructions; limited contact; rarely gives feedback or goals; "letting people do their job"</td>
+          <td>Expert teams who need autonomy to achieve flow states</td>
+          <td>Neither productive nor satisfied when followers are not already experts; the "leader doesn't care, why should I?" contagion effect</td>
+        </tr>
+        <tr>
+          <td><strong>Transformational (轉型式)</strong></td>
+          <td>Highly charismatic; creates inspirational vision; appeals to values and ideals; inspires intrinsic motivation</td>
+          <td>Changing beliefs/attitudes toward a new vision; inspiring exceptional performance; organisational change</td>
+          <td>Both productive and satisfied — but risk of blind allegiance and excessive risk-taking when everyone is enamoured with the leader</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Style-by-Style Analysis: Mechanisms and Scholarly Tensions</h2>
+    <p data-topic="democratic-analysis">
+      <strong>Democratic/Participative Style (民主/參與式):</strong>
+    </p>
+    <ul>
+      <li>Mechanism: participation increases perceived autonomy and ownership, activating intrinsic motivation (links to self-determination theory)</li>
+      <li>Pro: everyone feels heard; commitment to implementation is higher because people helped shape the decision</li>
+      <li>Con: requires clear communication channels and coordination costs; early-stage production suffers because deliberation takes time</li>
+      <li>Scholarly note: participative leadership is not universally effective — in high power-distance cultures (e.g., parts of East Asia), followers may interpret extensive consultation as weakness or indecision</li>
+    </ul>
+    <p data-topic="autocratic-analysis">
+      <strong>Autocratic/Directive Style (專制/指令式):</strong>
+    </p>
+    <ul>
+      <li>Mechanism: clarity of direction reduces ambiguity and accelerates execution; effective when the leader genuinely holds superior expertise</li>
+      <li>Appropriate contexts: the lecture gives two examples — kindergarten teachers (young children need structure, not negotiation) and military commanders in battle (urgency overrides deliberation)</li>
+      <li>Con: undermines psychological ownership; workers produce less creatively and take less pride in work, often leading to lower quality despite higher volume</li>
+      <li>Scholarly tension: the same style that maximises short-run output may generate resistance or turnover in the long run, erasing those gains</li>
+    </ul>
+    <p data-topic="laissez-faire-analysis">
+      <strong>Laissez-Faire Style (放任式):</strong>
+    </p>
+    <ul>
+      <li>Mechanism: absence of interference allows expert workers to reach flow states — deep intrinsic engagement that maximises quality</li>
+      <li>Critical condition: only effective when followers are already expert and self-directed; the same approach applied to novices produces neither productivity nor satisfaction</li>
+      <li>The "leader doesn't care, why should I?" problem — disengagement is contagious; follower motivation mirrors perceived leader investment</li>
+      <li>Scholarly note: laissez-faire is often mislabelled as a style when it is more accurately the absence of style; Bass and colleagues classify it as non-leadership in full-range leadership models</li>
+    </ul>
+    <p data-topic="transformational-analysis">
+      <strong>Transformational Style (轉型式):</strong>
+    </p>
+    <ul>
+      <li>Mechanism: leader articulates a compelling vision (願景) that connects followers' (追隨者) values and identity to organisational goals; compliance becomes commitment; extrinsic motivation (外在動機) becomes intrinsic</li>
+      <li>The origami exercise demonstrated this through the charity incentive on the left side — working for a cause (Childhood Cancer Foundation) altered the meaning of the task, not just its reward</li>
+      <li>Research finding: transformational leadership correlates with both high productivity and high satisfaction simultaneously — the only style that achieves both in the exercise data</li>
+      <li>Con 1 — Blind allegiance (盲目效忠): followers stop questioning the leader's plans; groupthink risk increases sharply</li>
+      <li>Con 2 — Excessive risk-taking (過度冒險): when everyone is enamoured with the vision, critical evaluation of risk is suppressed; examples include Enron and WeWork</li>
+      <li>Scholarly note: it is not easy to be transformational — charisma can be cultivated but not simply learned; the style also carries ethical risk if deployed for self-interested or destructive ends (dark charisma)</li>
+    </ul>
+    <p data-topic="style-synthesis">
+      For essays: the four styles expose a fundamental productivity-satisfaction trade-off that no single style resolves cleanly, except transformational — and even that comes with risks of uncritical followership. This suggests the most sophisticated leaders are situationally flexible, matching style to follower readiness and task demands.
+    </p>
+    <div class="exam-trap-inline" data-topic="four-styles-traps">
+      <b>Exam trap:</b> Do not write that transformational leadership is always best. The lecture explicitly notes it is not easy to be transformational and that it risks blind allegiance and excessive risk-taking. A high-scoring essay acknowledges these limitations rather than treating transformational leadership as a universal solution.
+    </div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. The Origami Factory Exercise: Evidence in Action</h2>
+    <p data-topic="origami-evidence">
+      The exercise was a within-class experiment. Leaders were coached outside and assigned scripted roles (Democratic / 民主式, Autocratic / 專制式, Laissez-Faire / 放任式, or Transformational / 轉型型). Students made origami frogs and rated satisfaction. This design allowed direct comparison of outcomes across styles under otherwise identical conditions. The debrief revealed that leaders had been acting — underscoring the point that leadership style (領導風格) is a behavioural choice, not a fixed personality.
+    </p>
+    <ul>
+      <li><strong>Democratic teams:</strong> very satisfied, but lower frog count — deliberation and discussion traded off against raw production speed</li>
+      <li><strong>Autocratic teams:</strong> highest frog count (unless rebellion occurred), but very low satisfaction scores</li>
+      <li><strong>Laissez-faire teams:</strong> neither the most productive nor the most satisfied — followers lacked the expert-level autonomy the style requires</li>
+      <li><strong>Transformational teams:</strong> both productive and satisfied — the charity framing (HKD $1 per frog to the Childhood Cancer Foundation) converted the task from a competition into a meaningful act</li>
+    </ul>
+    <p data-topic="intrinsic-extrinsic-motivation">
+      The exercise also probed intrinsic vs. extrinsic motivation (內在動機 vs. 外在動機): the left side was offered a prosocial extrinsic reward (charity donation), and the right side was offered a direct personal extrinsic reward (participation point). The question of whether the left side felt differently from the right side connects to research on pro-social motivation and meaning at work — doing good for others can amplify intrinsic engagement (內在動機) beyond what personal rewards achieve.
+    </p>
+    <p data-topic="exercise-synthesis">
+      For essays: the exercise provides a rare empirical anchor within the lecture series. It demonstrates that style choice produces measurable, predictable differences in both performance and well-being — making leadership not just a normative concern but a design variable in organisational management.
+    </p>
+    <div class="exam-trap-inline" data-topic="origami-exercise">
+      <b>Exam trap:</b> The autocratic style produced the most frogs only when there was no rebellion. In real organisations, autocratic leadership frequently triggers resistance — the "unless there's a rebellion" qualifier is analytically important and should not be dropped in an answer about autocratic productivity.
+    </div>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Leadership is not the same as management — leadership is about influence, not positional authority. A senior manager can be a poor leader.</li>
+      <li>Agreeableness is a weak predictor of leader <em>emergence</em> (.05) but a moderate predictor of <em>effectiveness</em> (.21) — the pattern is the opposite of what students assume.</li>
+      <li>Transformational leadership is not universally optimal — blind allegiance and excessive risk-taking are documented drawbacks; do not present it as a cure-all.</li>
+      <li>Autocratic productivity comes with a critical caveat: "unless there's a rebellion." Drop the qualifier and the claim becomes false.</li>
+      <li>Laissez-faire is only appropriate for expert, self-directed followers. Applied to novices, it produces neither productivity nor satisfaction.</li>
+      <li>Democratic leaders retain the final say — the style involves consultation and participation, not abdication of decision-making authority.</li>
+      <li>Trait correlations are modest (max .33); traits alone cannot fully predict leadership emergence or effectiveness — context and situation also matter.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Leadership definition: ability to influence others toward goal achievement (not positional authority)</li>
+      <li>Management vs. Leadership: management = complexity/stability; leadership = change/vision/inspiration</li>
+      <li>Trait perspective: personality, social, physical, or intellectual traits differentiating leaders from non-leaders</li>
+      <li>Big Five correlations — Emergence: Extraversion .33, Conscientiousness .33, Neuroticism .24, Openness .24, Agreeableness .05</li>
+      <li>Big Five correlations — Effectiveness: Extraversion .24, Neuroticism .22, Agreeableness .21, Openness .21, Conscientiousness .16</li>
+      <li>Four styles: Democratic/Participative, Autocratic/Directive, Laissez-Faire, Transformational</li>
+      <li>Democratic: high satisfaction, slower production; leader retains final say</li>
+      <li>Autocratic: high output (unless rebellion), low satisfaction, less creativity, lower pride in work; useful in urgent/high-structure contexts</li>
+      <li>Laissez-Faire: works only for expert followers; produces neither productivity nor satisfaction for novices; the "leader doesn't care" contagion</li>
+      <li>Transformational: charismatic, vision-based, appeals to values, inspires intrinsic motivation; achieves both productivity and satisfaction; risks blind allegiance and excessive risk-taking</li>
+      <li>Origami exercise finding: transformational teams were both productive and satisfied; the charity incentive (Childhood Cancer Foundation) demonstrated pro-social motivation amplifying intrinsic engagement</li>
+      <li>Scholarly caveat: no single style universally outperforms — effectiveness depends on follower expertise, task structure, and organisational context</li>
+    </ol>
+  </div>
+</div>
+</div>
+
+<div id="notes-4" class="page">
+<div id="notes-4" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-4" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(4)">Clear Highlights</button>
+  <h1>Class 14: Negotiation II</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    Effective negotiation is not a battle over positions but a structured pursuit of value: negotiators must first discover what each party truly wants (value discovery), then expand what is available by generating creative solutions (value creation), and finally decide how that value is divided (value claiming). The key insight is that interests are rarely purely monetary — they span relationship, substance, and communication dimensions — and skilled negotiators use preparation, packaging, and justified justifications to satisfy the deepest interests of both sides while knowing when their BATNA makes walking away the rational choice.
+  </div>
+
+  <!-- SECTION 0 -->
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Structure of a Negotiation: Distributive vs. Integrative</h2>
+    <p data-topic="negotiation-structure">
+      The foundational distinction in negotiation (談判) theory is between two structural logics that shape how parties approach the table. Understanding which structure applies — or which the other party assumes — is the starting condition for any strategic analysis.
+    </p>
+    <ul>
+      <li><strong>分配式談判 (Distributive negotiation)</strong> — win/lose orientation; each party tries to maximise their own gain; adversarial in tone; suited to single-issue, short-term interactions where there is no future relationship to protect (e.g., one-off price haggling).</li>
+      <li><strong>整合式談判 (Integrative negotiation)</strong> — win/win orientation; parties seek to maximise joint gains (共同利益) by trading across multiple issues; convergent and relationship-oriented; best suited to long-term partnerships where trust enables information sharing.</li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Dimension</th>
+          <th>Distributive (分配式)</th>
+          <th>Integrative (整合式)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Outcome goal</td>
+          <td>Win / Lose</td>
+          <td>Win / Win</td>
+        </tr>
+        <tr>
+          <td>Gain focus</td>
+          <td>Maximise own gains</td>
+          <td>Maximise joint gains</td>
+        </tr>
+        <tr>
+          <td>Orientation</td>
+          <td>Adversarial</td>
+          <td>Convergent</td>
+        </tr>
+        <tr>
+          <td>Time horizon</td>
+          <td>Short-term</td>
+          <td>Long-term</td>
+        </tr>
+        <tr>
+          <td>Issue scope</td>
+          <td>Single issue</td>
+          <td>Multiple issues</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p data-topic="negotiation-structure-synthesis">
+      <em>Essay synthesis:</em> A student can argue that most real-world negotiations contain both structural elements simultaneously — parties want the best deal for themselves (distributive / 分配性談判) but also need a functional relationship going forward (integrative / 整合性談判). Recognising which logic dominates, and when to shift frames, is the hallmark of a sophisticated negotiator.
+    </p>
+
+    <div class="exam-trap-inline" data-topic="negotiation-structure">
+      <b>Exam trap:</b> Students often conflate "integrative" with "cooperative" and assume integrative negotiations are automatically friendly. In fact, integrative simply means multiple issues are on the table, allowing for trades — the parties can still be firm advocates for their own interests.
+    </div>
+  </section>
+
+  <!-- SECTION 1 -->
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. The Pursuit of Value: Interests as the Engine of Negotiation</h2>
+    <p data-topic="values-interests">
+      The lecture frames negotiation as fundamentally about satisfying interests (利益), not winning on positions (立場). This distinction is central to the integrative approach.
+    </p>
+    <ul>
+      <li><strong>利益/價值觀 (Values = Interests)</strong> — all the needs, wants, desires, and fears that motivate people to negotiate. "I want" and "I need" are both expressions of "I value." The implication is that interests are broader and deeper than stated positions.</li>
+      <li><strong>價值追求 (Pursuit of value)</strong> — a purposeful, focused effort to satisfy the parties' interests to the greatest feasible extent with the lowest possible risk. It is not merely compromise (妥協); it is proactive exploration of what can be gained.</li>
+    </ul>
+    <p data-topic="values-interests">
+      The WABTY.com classroom exercise illustrates this directly: teams that signed a contract did so because the offer met interests that could not have been met without the other party. Teams that walked away did so because their BATNA (最佳替代方案 — Best Alternative to a Negotiated Agreement) was superior to what was on the table. This shows that the decision to agree or walk away is always relative to the quality of one's outside options.
+    </p>
+
+    <!-- SVG: Interests → Pursuit of Value → Agreement or BATNA -->
+    <svg viewBox="0 0 520 100" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:520px;display:block;margin:12px auto;">
+      <rect x="0" y="30" width="120" height="40" rx="6" fill="#3b82f6" opacity="0.15" stroke="#3b82f6" stroke-width="1.5"/>
+      <text x="60" y="55" text-anchor="middle" font-size="12" fill="#1e40af" font-family="sans-serif">Interests</text>
+      <line x1="120" y1="50" x2="160" y2="50" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+      <rect x="160" y="20" width="160" height="60" rx="6" fill="#0ea5e9" opacity="0.12" stroke="#0ea5e9" stroke-width="1.5"/>
+      <text x="240" y="48" text-anchor="middle" font-size="11" fill="#0369a1" font-family="sans-serif">Pursuit of Value</text>
+      <text x="240" y="64" text-anchor="middle" font-size="10" fill="#0369a1" font-family="sans-serif">(Discovery → Creation → Claiming)</text>
+      <line x1="320" y1="40" x2="360" y2="30" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+      <line x1="320" y1="60" x2="360" y2="70" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+      <rect x="360" y="10" width="140" height="30" rx="6" fill="#22c55e" opacity="0.15" stroke="#22c55e" stroke-width="1.5"/>
+      <text x="430" y="30" text-anchor="middle" font-size="11" fill="#15803d" font-family="sans-serif">Agreement</text>
+      <rect x="360" y="60" width="140" height="30" rx="6" fill="#ef4444" opacity="0.12" stroke="#ef4444" stroke-width="1.5"/>
+      <text x="430" y="80" text-anchor="middle" font-size="11" fill="#b91c1c" font-family="sans-serif">BATNA (walk away)</text>
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#64748b"/>
+        </marker>
+      </defs>
+    </svg>
+
+    <p data-topic="values-interests-synthesis">
+      <em>Essay synthesis:</em> The insight that interests (利益) are broader than positions (立場) is what separates principled negotiation (Fisher and Ury's "Getting to Yes" framework) from positional bargaining — negotiators who focus only on positions leave value on the table by missing trades that could satisfy deeper needs on both sides.
+    </p>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Step 1 — Value Discovery: Uncovering What Each Party Truly Wants</h2>
+    <p data-topic="value-discovery">
+      <strong>價值發現 (Value discovery)</strong> is the first step of a productive negotiation: exploring and clarifying the wants, needs, desires, fears, and concerns of both parties. The underlying logic is that negotiators routinely underestimate the diversity of the other party's interests (利益). The WABTY.com case (Larry the job candidate vs. May the hiring manager) illustrates how different parties can want very different things from the same deal.
+    </p>
+
+    <ul>
+      <li><strong>Larry's interests (job candidate)</strong>: work for an internet/social media company; company that is doing well, a great workplace, cutting-edge, exciting location; opportunities for growth; market-rate salary.</li>
+      <li><strong>May's interests (hiring manager)</strong>: strong candidate who fits the organisation; contribute to employees' sense of satisfaction; feel good about the decision; stay within budgetary and approval limits; avoid looking bad to boss/stakeholders.</li>
+    </ul>
+
+    <p data-topic="value-discovery">
+      The question the lecture poses — "Did you know about these values about your partner?" — highlights that parties rarely have full information about each other's interests (利益) before negotiation begins. Value discovery (價值發現) is the process of closing that information gap (資訊不對稱).
+    </p>
+
+    <h3>Obstacles to Value Discovery</h3>
+    <ul>
+      <li><strong>對對方利益的假設 (Assumptions about their interests)</strong> — assuming the other party only wants money, leading negotiators to overlook other concessions (讓步) that could satisfy them at low cost to you.</li>
+      <li><strong>急於滿足自身利益 (Eagerness to satisfy our own interests)</strong> — being so focused on what you need that you miss the opportunity to probe the deep wants of your partner.</li>
+      <li><strong>準備不足 (Insufficient preparation)</strong> — not knowing your own priority order before you sit down, making it impossible to make strategic concessions.</li>
+    </ul>
+
+    <p data-topic="value-discovery-overcome">
+      <strong>How to overcome these obstacles:</strong> Prepare, prepare, prepare. Use probing questions at the table: "Why are you asking for that?" / "Why not?" / "Can you help me understand what concerns you?" These questions surface the interests (利益) behind stated positions (立場) and create opportunities for trades (權衡).
+    </p>
+
+    <div class="exam-trap-inline" data-topic="value-discovery">
+      <b>Exam trap:</b> Value discovery is not simply "asking what the other party wants." It requires preparation beforehand (knowing your own interests and hypothesising theirs) and skilled probing at the table. Students who define it as just "listening" miss the proactive, strategic dimension.
+    </div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Step 2 — Value Creation: Generating Solutions That Expand the Pie</h2>
+    <p data-topic="value-creation">
+      <strong>價值創造 (Value creation)</strong> is generating possible solutions that increase the total value available, making it more likely that all parties' interests can be satisfied. The underlying logic is that negotiators who only focus on dividing existing value (價值主張) leave potential gains unrealised. Value creation is possible when parties have different priorities — what is cheap to give to Party A may be very valuable to Party B.
+    </p>
+
+    <p data-topic="value-creation">
+      The lecture presents a taxonomy of interests organised by nature, showing that interests are multi-dimensional and that creative solutions can address multiple categories simultaneously:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Relationship (關係)</th>
+          <th>Substance (實質)</th>
+          <th>Communication (溝通)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Status, Respect, Reputation</td>
+          <td>Money, Payment terms, Benefits</td>
+          <td>Efficient and effective process</td>
+        </tr>
+        <tr>
+          <td>Reliability, Honesty, Trust</td>
+          <td>Guarantees, Fair outcome, Incentives</td>
+          <td>Topics to discuss, Fair process</td>
+        </tr>
+        <tr>
+          <td>Rationality, Fairness</td>
+          <td>Career plan, Stability</td>
+          <td>Proactive and transparent process, Learn, Dialogue pattern</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Obstacles to Value Creation</h3>
+    <ul>
+      <li><strong>狹隘框架 (Narrow framing)</strong> — treating the negotiation as only about one dimension (e.g., "Is this just about salary?") when other dimensions (career advancement, quality of life) are also at stake. This prevents parties from seeing the full space of possible trades.</li>
+      <li><strong>只看單一維度 (Seeing only one dimension)</strong> — for example, treating salary as a single fixed number when it can be structured (less now, more next year contingent on performance), opening new options.</li>
+    </ul>
+
+    <p data-topic="value-creation-packaging">
+      <strong>Solution — The Power of Packaging (打包方案):</strong> Instead of negotiating issues sequentially (which produces distributive, zero-sum outcomes on each), package multiple issues together. This allows creative trades: "I can't do X on salary, but on the matter of flexible hours, perhaps I can..." The phrase structure itself signals integrative intent — it keeps negotiations open by coupling a refusal on one dimension with a concession on another.
+    </p>
+
+    <p data-topic="value-creation-synthesis">
+      <em>Essay synthesis:</em> Value creation is analytically grounded in the idea that preferences across issues differ between parties, and logrolling (trading concessions on issues each party values differently) is the mechanism by which joint gains are realised. A negotiator who treats every issue independently misses the logrolling opportunities that packaging enables.
+    </p>
+
+    <div class="exam-trap-inline" data-topic="value-creation">
+      <b>Exam trap:</b> Students often confuse value creation with compromise. Compromise (splitting the difference) does not create value — it merely divides it. True value creation means finding solutions that make both parties better off than any simple compromise would, typically by trading across different issue dimensions.
+    </div>
+  </section>
+
+  <!-- SECTION 4 -->
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Step 3 — Value Claiming: BATNA, Reservation Price, and ZOPA</h2>
+    <p data-topic="value-claiming">
+      <strong>價值索取 (Value claiming)</strong> is deciding how much of the existing or created value each party will take. Even in integrative negotiations, this final step is inherently competitive — once the pie is expanded, parties still must divide it. Three concepts govern this step:
+    </p>
+
+    <ul>
+      <li><strong>BATNA (最佳替代方案 — Best Alternative to a Negotiated Agreement)</strong> — your best option if talks fail. The stronger your BATNA, the more power you hold because you can credibly walk away. Example: a buyer whose BATNA is an alternative chair at £105 will not pay more than £105 for the negotiated chair.</li>
+      <li><strong>保留價格 (Reservation price / Bottom line)</strong> — the point at which you are indifferent between making a deal and walking away to your BATNA. It is set by your BATNA, not by your aspirations. A buyer's reservation price (保留價格) equals the cost of the next best alternative.</li>
+      <li><strong>可能達成協議的區域 (ZOPA — Zone of Possible Agreement)</strong> — the range between the two parties' reservation prices within which a deal is mutually beneficial. In the slide example: seller's BATNA = £90 (recover costs), buyer's BATNA = £105 (alternative chair), so ZOPA (可能協議區間) = £90–£105.</li>
+    </ul>
+
+    <h3>Should You Reveal Your Reservation Price?</h3>
+    <p data-topic="reservation-price-reveal">
+      Research by White and Neale (1994) shows revealing your true reservation price (保留價格) is strategically dangerous:
+    </p>
+    <ul>
+      <li>It is a bright-line standard — once revealed, it anchors (錨定效應) the negotiation at your worst acceptable outcome, not your aspiration.</li>
+      <li>When a counterpart is told your bottom line, they are more likely to walk away (perceiving the revealed limit as a lie or feeling insulted).</li>
+      <li>Verification is impossible: when your counterpart claims a bottom line, you cannot know if it is true — and they face the same uncertainty about your claim.</li>
+      <li>Revealing too early is often treated as dishonest signalling, damaging trust.</li>
+    </ul>
+
+    <p data-topic="value-claiming-synthesis">
+      <em>Essay synthesis:</em> The tension between value creation (價值創造, which requires sharing information) and value claiming (價值索取, which punishes information revelation) is the central dilemma of negotiation. Negotiators must share enough to find trades but protect reservation prices to avoid being exploited — this is the "negotiator's dilemma" (談判者困境) that no strategy fully resolves.
+    </p>
+  </section>
+
+  <!-- SECTION 5 -->
+  <section class="reveal-on-scroll" data-sec="5">
+    <h2>6. The Power of Justification in Negotiation</h2>
+    <p data-topic="justification">
+      The lecture introduces the Langer, Blank, and Chanowitz (1978) copy-machine study to explain why giving a reason — even a weak one — dramatically increases compliance in persuasion and negotiation (談判) contexts.
+    </p>
+
+    <ul>
+      <li><strong>Request only:</strong> "May I use the copy machine?" — approximately 60% compliance.</li>
+      <li><strong>Request + good reason:</strong> "May I use the copy machine because I am in a rush?" — approximately 94% compliance.</li>
+      <li><strong>Request + poor/circular reason:</strong> "May I use the copy machine because I need to make copies?" — approximately 93% compliance.</li>
+    </ul>
+
+    <p data-topic="justification">
+      The critical finding is that the quality of the reason barely matters for small requests — the word "because" triggers a near-automatic compliance response (自動服從反應). This is what Cialdini (in <em>Influence: The Psychology of Persuasion</em>) calls a click-whirr response — a mental shortcut (心理捷徑) where the presence of a justification keyword signals legitimacy without deeper scrutiny.
+    </p>
+
+    <p data-topic="justification">
+      Applied to negotiation: providing a justification for a demand or concession (讓步) increases its persuasiveness. Crucially, the act of explaining why you are asking also functions as a form of value discovery (價值發現) — "May I use the machine because I am in a rush?" reveals the interest (urgency), enabling the other party to respond to the underlying need, not just the stated request (立場).
+    </p>
+
+    <ul>
+      <li><strong>理由的力量 (Power of justification)</strong> — any reason increases compliance beyond a bare request, because "because" activates the social script that requests paired with reasons are legitimate.</li>
+      <li><strong>Limitation:</strong> for large or costly requests, the quality of the reason does matter — weak reasons fail when scrutiny is high. The heuristic only holds for low-stakes situations, which is a significant limitation when applying this to high-stakes negotiations.</li>
+      <li><strong>Cialdini's influence framework</strong> — the justification effect is one instance of a broader set of persuasion principles (說服原則: reciprocity, commitment, social proof, authority, liking, scarcity) that skilled negotiators can leverage.</li>
+    </ul>
+
+    <p data-topic="justification-synthesis">
+      <em>Essay synthesis:</em> The justification research bridges social psychology and negotiation (談判) strategy — it shows that framing a claim with a reason does double duty: it increases compliance through cognitive scripting, and it reveals the interest (利益) behind the position, potentially opening space for integrative solutions (整合性解決方案). Students can use this to argue that "explaining your reasoning" is not a sign of weakness but a strategic tool.
+    </p>
+
+    <div class="exam-trap-inline" data-topic="justification">
+      <b>Exam trap:</b> Students may assume the copy machine study proves that any justification works in all contexts. The study only tested small requests (5 copies). For large requests, the quality and credibility of the reason matters significantly — this is a key limitation that an essay answer should acknowledge.
+    </div>
+  </section>
+
+  <!-- EXAM TRAPS SUMMARY -->
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>"Integrative" does not mean friendly — it means multi-issue; parties can still be vigorous advocates for their own interests within an integrative structure.</li>
+      <li>Value discovery is proactive and preparation-dependent, not just "listening at the table."</li>
+      <li>Compromise (splitting the difference) is not value creation — true value creation requires logrolling across different issue dimensions.</li>
+      <li>Revealing your reservation price tends to increase impasse risk, not reduce it (White and Neale, 1994) — the person to whom it is revealed is more likely to walk away.</li>
+      <li>The copy machine justification effect (Langer et al., 1978) only generalises to low-stakes requests; for high-stakes negotiations, reason quality matters.</li>
+      <li>BATNA sets your reservation price — your bottom line is determined by your outside option, not by how much you want the deal.</li>
+      <li>Packaging (offering trades across issues) is the mechanism of value creation; negotiating issues one at a time is the mechanism of distributive bargaining.</li>
+    </ul>
+  </div>
+
+  <!-- MEMORIZE -->
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Two negotiation structures: Distributive (分配式) = win/lose, single issue; Integrative (整合式) = win/win, multiple issues.</li>
+      <li>Values = Interests = all needs, wants, desires, fears motivating negotiation; "I want" = "I value."</li>
+      <li>Pursuit of value (價值追求) = satisfying interests to the greatest feasible extent with lowest risk.</li>
+      <li>Three steps of negotiation: Value Discovery (價值發現) → Value Creation (價值創造) → Value Claiming (價值索取).</li>
+      <li>Three obstacles to value discovery: assumptions about interests, eagerness to satisfy own interests, insufficient preparation. Overcome with preparation and probing questions ("Why are you asking…?").</li>
+      <li>BATNA (最佳替代方案) = best alternative to a negotiated agreement — determines your reservation price and walk-away point.</li>
+      <li>ZOPA (可能達成協議的區域) = Zone of Possible Agreement, the range between the two parties' reservation prices.</li>
+      <li>Reservation price / bottom line (保留價格) — revealing it tends to increase impasse; the recipient is more likely to walk away (White and Neale, 1994).</li>
+      <li>Packaging (打包方案) = bundling multiple issues to enable trades; overcomes narrow framing and single-dimension thinking in value creation.</li>
+      <li>Power of justification: "because" triggers near-automatic compliance (~94% vs. ~60% without a reason); Langer et al. (1978) copy machine study; also reveals interests.</li>
+      <li>Interests taxonomy: Relationship (status, trust, fairness) / Substance (money, benefits, career plan) / Communication (process, transparency, dialogue).</li>
+      <li>Cialdini's <em>Influence</em> — persuasion principles (reciprocity, commitment, social proof, authority, liking, scarcity) are the broader framework behind justification effects in negotiation.</li>
+    </ol>
+  </div>
+</div>
+</div>
+
+<div id="notes-3" class="page">
+<div id="notes-3" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-3" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(3)">Clear Highlights</button>
+  <h1>Class 13: Negotiation I — Simulation</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    This class runs a live, two-party salary negotiation (談判／協商) between an HR manager (HR May) and a job candidate (Larry), mirroring the dyadic structure studied in negotiation theory. Each party holds private role information they must not share, forcing both sides to operate under information asymmetry — a condition that makes pre-negotiation planning, anchoring strategy, and the identification of mutually acceptable settlement zones essential. The simulation is deliberately structured so that a deal is possible but not guaranteed, teaching students that the existence of a zone of possible agreement does not automatically produce agreement; skilled communication and strategic concession-making are required. Reflecting on the outcome in the debrief class is as important as the negotiation itself, because self-awareness of one's own tactics is the foundation of continued improvement.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. The Architecture of a Two-Party Negotiation</h2>
+    <p data-topic="two-party-structure">
+      The simulation uses a <strong>dyadic negotiation</strong> (雙方談判) format — one HR manager and one job candidate negotiate a single employment contract. This is the most fundamental negotiation structure in organisational life, and it isolates the core variables cleanly: each party has a <strong>target point</strong> (目標點, the ideal outcome they are aiming for), a <strong>reservation point</strong> (保留點, also called resistance point or walk-away point — the worst acceptable outcome), and a <strong>BATNA</strong> (Best Alternative to a Negotiated Agreement, 談判破裂最佳替代方案). Understanding all three for both sides is the analytical core of pre-negotiation planning.
+    </p>
+    <p data-topic="two-party-structure">
+      The relationship between the two parties' reservation points defines the <strong>Zone of Possible Agreement (ZOPA)</strong> (可能達成協議的範圍). If HR May's maximum salary offer exceeds Larry's minimum acceptable salary, a positive ZOPA exists and a deal is theoretically possible. If those thresholds do not overlap, no mutually acceptable deal exists and negotiation should rationally end. The simulation's design — where results range from "signed contract: Y" to "signed contract: N" across different pairs — demonstrates empirically that identical ZOPAs produce different outcomes depending on how parties negotiate, not just on objective conditions.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Concept</th>
+          <th>HR May (Employer)</th>
+          <th>Larry (Candidate)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Target point (目標點)</td>
+          <td>Hire Larry at the lowest cost that retains him</td>
+          <td>Secure the highest salary and best conditions</td>
+        </tr>
+        <tr>
+          <td>Reservation point (保留點)</td>
+          <td>Maximum salary the budget can support</td>
+          <td>Minimum salary below which Larry prefers his BATNA</td>
+        </tr>
+        <tr>
+          <td>BATNA (最佳替代方案)</td>
+          <td>Hire another candidate or leave role unfilled</td>
+          <td>Accept another job offer or remain in current role</td>
+        </tr>
+        <tr>
+          <td>Opening anchor (開價錨點)</td>
+          <td>Low initial offer to establish a favourable reference</td>
+          <td>High initial demand to shift the negotiation range upward</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p data-topic="two-party-structure">
+      In essay terms: the dyadic negotiation format reveals that outcomes are shaped not only by objective resource constraints but also by each party's subjective perception of their own and their counterpart's reservation points — a finding central to behavioural negotiation research.
+    </p>
+
+    <div class="exam-trap-inline" data-topic="two-party-structure"><b>Exam trap:</b> Students often confuse BATNA with reservation point. BATNA is an external option (what you do if talks fail); the reservation point is the in-negotiation threshold derived from how attractive that BATNA is. A strong BATNA raises your reservation point, giving you more power — but BATNA and reservation point are not the same number.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Information Asymmetry and the Role of Private Case Materials</h2>
+    <p data-topic="information-asymmetry">
+      The simulation's explicit rule — <em>do not share your case material with your opponent</em> — is not merely a procedural safeguard; it replicates a defining feature of real negotiations: <strong>information asymmetry</strong> (資訊不對稱). HR May holds information about the budget ceiling, internal salary bands, and the urgency of filling the position. Larry holds information about competing offers, his minimum acceptable salary (保留價格), and which non-salary benefits matter most to him. Neither party knows the other's reservation point with certainty.
+    </p>
+    <p data-topic="information-asymmetry">
+      This asymmetry creates two interrelated strategic problems. First, each party must make inferences about the other's reservation point from observable cues — the pace of concessions (讓步), expressed urgency, willingness to discuss non-salary terms. Second, each party must manage the information they reveal, because disclosing your reservation point hands the counterpart the ability to make you an offer right at your limit. Skilled negotiators reveal preferences (what they care about) without revealing limits (how far they will go).
+    </p>
+
+    <ul>
+      <li><strong>Signalling</strong> (訊號傳遞): Statements like "that salary would be difficult for me to accept" reveal preferences without disclosing the exact floor.</li>
+      <li><strong>Probing questions</strong> (探詢): "What is most important to you in this role?" extracts the counterpart's priority ordering without requiring them to name a number.</li>
+      <li><strong>Strategic ambiguity</strong> (策略模糊): Keeping multiple issues open simultaneously prevents the counterpart from knowing which concessions you value most.</li>
+      <li><strong>Deceptive tactics risk</strong>: Outright lying about your reservation point can produce short-term gain but destroys trust if discovered, undermining long-term organisational relationships.</li>
+    </ul>
+
+    <p data-topic="information-asymmetry">
+      In essay terms: information asymmetry is not a market failure to be corrected but a structural feature of negotiation that rewards preparation and active listening, and that makes the ethical management of information disclosure a genuine organisational competency.
+    </p>
+
+    <div class="exam-trap-inline" data-topic="information-asymmetry"><b>Exam trap:</b> Students assume that the party with more information always wins. In fact, the party who better uses the information they have — and who reads the other party's signals more accurately — has the advantage. Having private information is only useful if you know how to leverage it without prematurely disclosing your own limits.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. The Planning Document: Structured Pre-Negotiation Preparation</h2>
+    <p data-topic="planning-document">
+      Students are required to complete a <strong>Planning Document</strong> (談判計畫書) before entering the negotiation. This requirement encodes a core principle of negotiation scholarship: systematic preparation predicts outcomes more reliably than natural charisma or improvised cleverness. A well-constructed planning document forces the negotiator to specify their goals, limits, and opening strategy before adrenaline and social pressure distort their judgement at the table.
+    </p>
+    <p data-topic="planning-document">
+      The planning document typically covers five domains, each corresponding to a theoretical construct:
+    </p>
+
+    <ol>
+      <li><strong>Issues on the table</strong>: Enumerate all negotiable items — salary, start date, title, benefits, working hours, review schedule. Listing issues prevents the negotiator from becoming fixated on a single variable (usually salary) and missing integrative opportunities.</li>
+      <li><strong>Priorities and trade-off rates</strong>: Rank issues by importance and estimate how much of one issue you would trade for a gain on another. This enables <strong>logrolling</strong> (交換讓步) — trading concessions on low-priority issues for gains on high-priority ones.</li>
+      <li><strong>Target and reservation point per issue</strong>: Set a specific aspiration and a specific walk-away threshold for each issue before the negotiation begins, so in-session pressure cannot move these anchors arbitrarily.</li>
+      <li><strong>Opening offer / first anchor</strong>: Decide in advance whether to open first (anchoring advantage) or let the counterpart open (information advantage), and if opening, what number to state and how to justify it.</li>
+      <li><strong>BATNA assessment</strong>: Articulate concretely what you will do if no deal is reached. A vague BATNA weakens your actual negotiating power even if your alternatives are objectively strong.</li>
+    </ol>
+
+    <p data-topic="planning-document">
+      In essay terms: the planning document operationalises the principle that negotiation preparation is itself a cognitive intervention — by committing to goals and limits in advance, negotiators reduce susceptibility to in-session anchoring, framing effects, and social pressure to concede.
+    </p>
+
+    <!-- SVG diagram: Planning Document flow -->
+    <svg viewBox="0 0 520 130" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;display:block;margin:1rem auto;font-family:Georgia,serif">
+      <!-- boxes -->
+      <rect x="5" y="40" width="90" height="48" rx="6" fill="#e8f5e9" stroke="#388e3c" stroke-width="1.5"/>
+      <text x="50" y="60" text-anchor="middle" font-size="9" fill="#1b5e20">Identify</text>
+      <text x="50" y="73" text-anchor="middle" font-size="9" fill="#1b5e20">Issues</text>
+      <text x="50" y="83" text-anchor="middle" font-size="8" fill="#388e3c">(列出議題)</text>
+
+      <rect x="115" y="40" width="90" height="48" rx="6" fill="#e8f5e9" stroke="#388e3c" stroke-width="1.5"/>
+      <text x="160" y="60" text-anchor="middle" font-size="9" fill="#1b5e20">Set Target</text>
+      <text x="160" y="73" text-anchor="middle" font-size="9" fill="#1b5e20">&amp; Reservation</text>
+      <text x="160" y="83" text-anchor="middle" font-size="8" fill="#388e3c">(目標與保留點)</text>
+
+      <rect x="225" y="40" width="90" height="48" rx="6" fill="#e8f5e9" stroke="#388e3c" stroke-width="1.5"/>
+      <text x="270" y="60" text-anchor="middle" font-size="9" fill="#1b5e20">Assess</text>
+      <text x="270" y="73" text-anchor="middle" font-size="9" fill="#1b5e20">BATNA</text>
+      <text x="270" y="83" text-anchor="middle" font-size="8" fill="#388e3c">(最佳替代方案)</text>
+
+      <rect x="335" y="40" width="90" height="48" rx="6" fill="#e8f5e9" stroke="#388e3c" stroke-width="1.5"/>
+      <text x="380" y="60" text-anchor="middle" font-size="9" fill="#1b5e20">Plan</text>
+      <text x="380" y="73" text-anchor="middle" font-size="9" fill="#1b5e20">Opening Anchor</text>
+      <text x="380" y="83" text-anchor="middle" font-size="8" fill="#388e3c">(開價策略)</text>
+
+      <rect x="445" y="40" width="70" height="48" rx="6" fill="#fff9c4" stroke="#f9a825" stroke-width="1.5"/>
+      <text x="480" y="60" text-anchor="middle" font-size="9" fill="#e65100">Negotiate</text>
+      <text x="480" y="73" text-anchor="middle" font-size="9" fill="#e65100">&amp; Report</text>
+      <text x="480" y="83" text-anchor="middle" font-size="8" fill="#f9a825">(談判執行)</text>
+
+      <!-- arrows -->
+      <line x1="95" y1="64" x2="115" y2="64" stroke="#388e3c" stroke-width="1.5" marker-end="url(#arr)"/>
+      <line x1="205" y1="64" x2="225" y2="64" stroke="#388e3c" stroke-width="1.5" marker-end="url(#arr)"/>
+      <line x1="315" y1="64" x2="335" y2="64" stroke="#388e3c" stroke-width="1.5" marker-end="url(#arr)"/>
+      <line x1="425" y1="64" x2="445" y2="64" stroke="#f9a825" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#388e3c"/>
+        </marker>
+        <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#f9a825"/>
+        </marker>
+      </defs>
+
+      <text x="260" y="15" text-anchor="middle" font-size="10" fill="#333" font-weight="bold">Pre-Negotiation Planning Sequence</text>
+    </svg>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Distributive vs. Integrative Bargaining in the HR–Larry Scenario</h2>
+    <p data-topic="distributive-integrative">
+      The simulation involves salary as its primary issue, which has a <strong>distributive</strong> (分配式) character: every dollar more that Larry gets is a dollar more that HR May's budget absorbs. This fixed-pie structure triggers competitive behaviour. However, a salary negotiation rarely involves only salary. When other issues — start date, job title, annual leave days, performance review timing, remote work flexibility — are brought onto the table, the negotiation can shift toward <strong>integrative bargaining</strong> (整合式談判), where both parties expand the pie by trading across issues they value differently.
+    </p>
+    <p data-topic="distributive-integrative">
+      The key to integration is <strong>heterogeneous preferences</strong> (異質偏好): if HR May cares most about the candidate starting quickly and Larry cares most about salary, an integrative deal might give Larry a higher salary in exchange for an earlier start date — both parties gain relative to their priorities. The planning document's priority-ranking step is specifically designed to surface these trade-off opportunities before they are obscured by positional bargaining.
+    </p>
+
+    <ul>
+      <li><strong>Distributive tactic — anchoring</strong> (錨定): The first number stated in a negotiation has a disproportionate influence on the final settlement. Both parties should plan their opening anchor strategically.</li>
+      <li><strong>Distributive tactic — bracketing</strong>: Making concessions in decreasing increments signals that you are approaching your limit, slowing the counterpart's expectations without explicit statement.</li>
+      <li><strong>Integrative tactic — issue linkage</strong> (議題連結): "I can accept a lower salary if the performance review is set at six months rather than twelve" trades across issues.</li>
+      <li><strong>Integrative tactic — contingent contracts</strong> (條件式合約): "If my sales targets are met in the first quarter, the salary increases to X" resolves disagreements about future performance by making terms contingent on observable outcomes.</li>
+    </ul>
+
+    <p data-topic="distributive-integrative">
+      In essay terms: the distinction between distributive and integrative bargaining is not a choice of personality but a structural feature of the negotiation context — the number and type of issues on the table determines how much integration is even possible, making issue-identification a strategic act.
+    </p>
+
+    <div class="exam-trap-inline" data-topic="distributive-integrative"><b>Exam trap:</b> Students often treat integrative bargaining as "being nice" and distributive bargaining as "being aggressive." This is wrong. Integrative bargaining is analytically distinct: it requires multiple issues with heterogeneous valuations. A negotiation can be both integrative in structure and assertively competitive in execution.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Reporting Results and the Role of Outcome Transparency</h2>
+    <p data-topic="results-reporting">
+      After negotiating, each pair reports three data points to the shared Results Report Excel file: whether a contract was signed (Y/N), the agreed salary, and any other agreements reached. This public result-reporting structure serves a pedagogical function beyond record-keeping: it creates a <strong>cross-dyad comparison dataset</strong> (跨對比較數據集) that the debrief class (總結討論) uses to surface variation in outcomes.
+    </p>
+    <p data-topic="results-reporting">
+      Because all pairs negotiate the same scenario (same role materials, same objective ZOPA — 可能協議區間), outcome variation across pairs is attributable to process differences — who anchored first (錨定效應), how concessions were sequenced, whether non-salary issues were raised, how well each party read signals. This makes the dataset a natural experiment in negotiation tactics.
+    </p>
+
+    <ul>
+      <li>Pairs who reached agreement: What salary did they settle on? Who made the first concession (讓步)?</li>
+      <li>Pairs who failed to agree: Were their reservation points genuinely incompatible, or did positional rigidity cause an impasse within a positive ZOPA (可能協議區間)?</li>
+      <li>Outlier outcomes: Pairs who reached unusually high or low salaries reveal the boundary conditions of anchoring (錨定效應) and BATNA (最佳替代方案) effects.</li>
+    </ul>
+
+    <p data-topic="results-reporting">
+      The result fields — signed contract (Y/N), salary, other agreements — map directly onto the three dimensions scholars use to evaluate negotiation outcomes: <strong>impasse rate</strong> (談判破裂率), <strong>individual outcome</strong> (how close to one's target point), and <strong>joint gain</strong> (共同利益, whether integrative potential was realised). In essay terms: systematically comparing outcomes across negotiating dyads (二人組) is one of the most powerful methods for isolating the causal effects of specific tactics, because the scenario controls for structural variables while allowing process to vary.
+    </p>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="5">
+    <h2>6. The Debrief: Converting Experience into Learning</h2>
+    <p data-topic="debrief-learning">
+      The mandatory debrief class (negotiation debriefing / 覆盤課) is structured so that the first task is a face-to-face discussion between negotiation partners — the same two people who just negotiated (談判) against each other in a role play (角色扮演). This design reflects the <strong>experiential learning cycle</strong> (經驗學習循環): concrete experience → reflective observation → abstract conceptualisation → active experimentation. Without structured reflection, students encode only the emotional memory of winning or losing, not the tactical or structural lessons.
+    </p>
+    <p data-topic="debrief-learning">
+      The debrief partner discussion accomplishes several things simultaneously. It reveals information that was asymmetric (資訊不對稱) during the negotiation — students discover what the other party's reservation price (保留價格) actually was, whether they left value on the table, and whether their read of the other party's signals was accurate. This retrospective transparency is only possible because the negotiation is over, and it creates a uniquely teachable moment: students can map their subjective experience of the negotiation onto the objective structural reality.
+    </p>
+
+    <ul>
+      <li>Were you above, within, or below the ZOPA (可能協議區間)? Did you know at the time?</li>
+      <li>What was your opening offer (開價) and anchor (錨點), and how did it affect the final settlement?</li>
+      <li>Did you raise any non-salary issues? Did this help or hurt the integrative bargaining (整合性談判) potential?</li>
+      <li>At what point (if any) did you consider walking away? What kept you at the table?</li>
+      <li>What would you do differently if you negotiated this scenario again?</li>
+    </ul>
+
+    <p data-topic="debrief-learning">
+      The reflection paper that follows asks students to formalise these observations using course concepts, bridging the practicum experience with the theoretical framework introduced in subsequent lectures. In essay terms: structured debriefing (總結討論) transforms a simulation from a performance exercise into a diagnostic one — the debrief is where the actual learning occurs, because it links behaviour to outcome in ways that are invisible during the negotiation itself.
+    </p>
+
+    <div class="exam-trap-inline" data-topic="debrief-learning"><b>Exam trap:</b> Students often evaluate their negotiation performance purely by outcome — "I got a high salary, so I negotiated well." The debrief reveals this is insufficient: a high salary achieved within a wide ZOPA may reflect luck rather than skill, while an impasse within a technically positive ZOPA reflects a process failure. Good negotiation is evaluated by process quality, not just outcome.</div>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>BATNA ≠ reservation point. BATNA is the external alternative; reservation point is the in-negotiation threshold derived from it. A strong BATNA raises your reservation point but they are different constructs.</li>
+      <li>More information does not automatically mean more power. The advantage goes to the party who uses available information more effectively and reads signals more accurately.</li>
+      <li>Integrative bargaining is not about being cooperative or "nice" — it is a structural condition requiring multiple issues with heterogeneous valuations between parties.</li>
+      <li>A positive ZOPA does not guarantee agreement. Positional rigidity, poor signalling, anchoring errors, or distrust can all produce impasse within a positive ZOPA.</li>
+      <li>Negotiation outcome is not a reliable measure of negotiation skill. A high salary in a wide ZOPA may reflect structural luck; an impasse in a positive ZOPA reflects a process failure regardless of how the parties "felt" about the negotiation.</li>
+      <li>The planning document is not bureaucratic busywork — it is a pre-commitment device that protects against in-session cognitive biases (anchoring, framing, social pressure to concede).</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li><strong>BATNA</strong> (最佳替代方案) — best alternative to a negotiated agreement; determines your walk-away power.</li>
+      <li><strong>Reservation point</strong> (保留點) — the worst acceptable outcome in-negotiation; set before talks begin, derived from BATNA.</li>
+      <li><strong>Target point</strong> (目標點) — the aspiration level; sets the ceiling of ambition and anchors concession patterns.</li>
+      <li><strong>ZOPA</strong> (可能達成協議的範圍) — the overlap between HR's maximum offer and Larry's minimum acceptable salary; a positive ZOPA is necessary but not sufficient for agreement.</li>
+      <li><strong>Anchoring</strong> (錨定效應) — the first number stated pulls final settlements toward it; the planning document requires deciding whether and how to anchor.</li>
+      <li><strong>Distributive bargaining</strong> (分配式談判) — fixed-pie, single-issue negotiation where one party's gain is the other's loss.</li>
+      <li><strong>Integrative bargaining</strong> (整合式談判) — multi-issue negotiation where heterogeneous preferences allow value-creating trades (logrolling).</li>
+      <li><strong>Logrolling</strong> (交換讓步) — trading concessions on low-priority issues for gains on high-priority ones; requires issue linkage.</li>
+      <li><strong>Information asymmetry</strong> (資訊不對稱) — each party knows things the other does not; the simulation enforces this with separate role materials.</li>
+      <li><strong>Experiential learning cycle</strong> (經驗學習循環) — experience → reflection → conceptualisation → experimentation; the debrief class operationalises this cycle.</li>
+      <li><strong>Impasse</strong> (談判破裂) — failure to reach agreement; can occur even in a positive ZOPA due to process failures, not just structural incompatibility.</li>
+      <li><strong>Contingent contract</strong> (條件式合約) — resolves disagreement about uncertain futures by tying terms to observable outcomes (e.g., performance-based salary escalation).</li>
+    </ol>
+  </div>
+</div>
+</div>
+
+<div id="notes-2" class="page">
+<div id="notes-2" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-2" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(2)">Clear Highlights</button>
+  <h1>Class 12: Conflicts of Interest</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    Conflicts of interest arise whenever an individual's personal incentives diverge from what benefits the collective — a tension so fundamental that Thomas Hobbes warned cooperation's absence renders life "solitary, poor, nasty, brutish, and short." This lecture uses the Black Card, Red Card game to demonstrate how rational self-interest systematically undermines group welfare, producing the social dilemma at the heart of organisational life. The core analytical challenge is understanding why cooperation breaks down even when everyone would be better off if it held, and what structural or normative interventions can restore it. Grasping this logic is essential for any essay on group dynamics, incentive design, or organisational behaviour.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. The Black Card, Red Card Game: A Structured Social Dilemma</h2>
+    <p data-topic="card-game-mechanics">
+      <ul>
+        <li>設計 (game design) — each player holds 3 black cards and 3 red cards; over 9 rounds (3 segments × 3 rounds) they simultaneously place one card face-down into a collective pot.</li>
+        <li>個人得分規則 (individual scoring rule) — keeping a red card in hand earns $0.50; each red card placed into the collective pot earns every player $0.25 (multiplier effect on the group).</li>
+        <li>集體最優 (collective optimum) — if all 4 players contribute red cards every round, 4 red cards × $0.25 × 4 players = $1.00 per person per round; across 9 rounds each person earns $9.00 — more than most actually earned.</li>
+        <li>個人最優 (individual optimum) — keeping black while others contribute red yields $0.50 (own red retained) + $0.75 (three others' reds × $0.25) = $1.25 per round, or $11.25 over 9 rounds — the maximum individual payoff.</li>
+        <li>三段設計 (three-segment design) reveals how information and communication change behaviour:
+          <ul>
+            <li>Segment 1: cards placed face-down with no communication — pure anonymous choice.</li>
+            <li>Segment 2: each player may speak freely before placing face-down — promises, announcements, deals allowed (truthful or deceptive).</li>
+            <li>Segment 3: cards placed face-up — full transparency; everyone sees what everyone else plays.</li>
+          </ul>
+        </li>
+        <li>課堂提示 (class hint) — players tended to cooperate (合作) more in Segment 3 (face-up), demonstrating that visibility reduces free-riding (搭便車).</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="card-game-mechanics"><b>Exam trap:</b> Students often say the individually rational move is to play red. It is not — the individually dominant strategy (優勢策略) is to play black (keep red), because black always yields more regardless of what others do. Playing red is collectively rational but individually irrational.</div>
+
+    <p data-topic="game-payoff-structure">
+      <table>
+        <thead>
+          <tr><th>Your choice</th><th>Others all play red</th><th>Others all play black</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Play red (contribute)</td><td>$0.25 + $0.75 = $1.00</td><td>$0.25 + $0 = $0.25</td></tr>
+          <tr><td>Play black (keep red)</td><td>$0.50 + $0.75 = $1.25</td><td>$0.50 + $0 = $0.50</td></tr>
+        </tbody>
+      </table>
+      <em>Black dominates red in both columns — this is the structural logic of every social dilemma.</em>
+    </p>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 160" style="max-width:420px;display:block;margin:1rem 0;font-family:sans-serif;">
+      <rect x="10" y="10" width="180" height="60" rx="8" fill="#e8f4fd" stroke="#3498db" stroke-width="2"/>
+      <text x="100" y="35" text-anchor="middle" font-size="12" font-weight="bold" fill="#2c3e50">Individual Incentive</text>
+      <text x="100" y="55" text-anchor="middle" font-size="11" fill="#2c3e50">Keep red = +$0.50</text>
+      <rect x="230" y="10" width="180" height="60" rx="8" fill="#eafaf1" stroke="#27ae60" stroke-width="2"/>
+      <text x="320" y="35" text-anchor="middle" font-size="12" font-weight="bold" fill="#2c3e50">Collective Incentive</text>
+      <text x="320" y="55" text-anchor="middle" font-size="11" fill="#2c3e50">Contribute red = $1/round</text>
+      <rect x="130" y="100" width="160" height="50" rx="8" fill="#fdecea" stroke="#e74c3c" stroke-width="2"/>
+      <text x="210" y="122" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">Conflict of Interest</text>
+      <text x="210" y="140" text-anchor="middle" font-size="11" fill="#c0392b">Cooperation breaks down</text>
+      <line x1="100" y1="70" x2="170" y2="100" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+      <line x1="320" y1="70" x2="250" y2="100" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+      <defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#888"/></marker></defs>
+    </svg>
+
+    <p data-topic="card-game-mechanics">
+      Essay-ready synthesis: The card game is analytically important because it isolates the pure structural logic of a conflict of interest — the dominant individual strategy is defection (背叛), not because players are malicious, but because the payoff (報酬) matrix rewards it regardless of context.
+    </p>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Cooperation and Its Fragility: The Hobbes Baseline</h2>
+    <p data-topic="cooperation-hobbes">
+      <ul>
+        <li>湯瑪斯·霍布斯 (Thomas Hobbes, 1651) — argued that without enforced cooperation, natural human competition produces a life that is "solitary, poor, nasty, brutish, and short"; this is the theoretical baseline justifying all social institutions.</li>
+        <li>合作的價值 (value of cooperation) — cooperation generates surplus: when all contribute, the collective pot is larger than the sum of individual hoarding, creating positive-sum outcomes unavailable to defectors acting alone.</li>
+        <li>合作的脆弱性 (fragility of cooperation) — even small suspicions that others will defect rationally justify pre-emptive defection, producing cascading breakdown; this is why cooperation is a genuine achievement, not a default state.</li>
+        <li>組織行為的意涵 (OB implication) — organisations exist partly as institutional solutions to this fragility: they create structures (contracts (合約), monitoring (監督), culture) that make sustained cooperation possible despite individual incentives (激勵) to defect.</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="cooperation-hobbes"><b>Exam trap:</b> Do not treat cooperation as the natural baseline that defection (背叛) disrupts. Hobbes's insight is the reverse — defection is the natural equilibrium; cooperation requires active institutional maintenance.</div>
+    <p data-topic="cooperation-hobbes">
+      Essay-ready synthesis: Hobbes provides the normative stakes: a world without cooperation is catastrophic, which is precisely why understanding how cooperation breaks down — and how to restore it — is the central problem of organisational design. Formal institutions (正式制度) and informal institutions (非正式制度) both play a role in sustaining collective action (集體行動).
+    </p>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Social Dilemmas: Definition, Structure, and Real-World Scope</h2>
+    <p data-topic="social-dilemma-definition">
+      <ul>
+        <li>社會困境 (social dilemma) — any situation in which the group's collective interest is at odds with each individual member's personal interest; the defining feature is that individually rational behaviour produces collectively irrational outcomes.</li>
+        <li>結構特徵 (structural features):
+          <ul>
+            <li>Each individual has a dominant strategy (優勢策略) that benefits them personally regardless of what others do.</li>
+            <li>If all individuals follow their dominant strategy, the group outcome is worse than if all had cooperated (合作).</li>
+            <li>No single individual can unilaterally change this outcome without being exploited.</li>
+          </ul>
+        </li>
+        <li>公地悲劇 (Tragedy of the Commons, Hardin 1968) — the canonical large-scale social dilemma: shared resources (public goods (公共財), fisheries, clean air, forests) are over-exploited because each actor's private incentive to extract exceeds what is collectively sustainable; the lecture cites this as a humanity-level issue (TED-Ed reference).</li>
+        <li>社會懈怠 (social loafing) — the organisational-level social dilemma: a motivational loss resulting from members feeling less accountable for team outcomes relative to independent work that results in individually identifiable outcomes; this is the mechanism behind group project free-riding.</li>
+        <li>無處不在性 (ubiquity) — social dilemmas appear in organisations, businesses, romantic relationships, international relations, and environmental governance; they are not edge cases but the default condition of any multi-party cooperative endeavour.</li>
+      </ul>
+    </p>
+    <p data-topic="social-dilemma-definition">
+      Essay-ready synthesis: The social dilemma framework reframes free-riding (搭便車) not as a moral failing but as a structural outcome — individuals respond rationally to incentive (激勵) structures, so changing behaviour requires changing structures, not just individuals. Game theory (博弈論) provides the formal tools to analyse such situations.
+    </p>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Why People Free Ride: Greed and Fear of Greed</h2>
+    <p data-topic="free-riding-motives">
+      <ul>
+        <li>搭便車者 (free rider) — someone who does not contribute to the collective efforts of the group while still benefiting from others' contributions.</li>
+        <li>貪婪動機 (greed motive) — keeping a black card while others contribute red cards maximises personal payoff; in the game, playing black while all 3 others play red yields $1.25/round ($11.25 total over 9 rounds) — the highest possible individual return; this is the "I want more" motivation.</li>
+        <li>對貪婪的恐懼 (fear of greed motive) — even a player who would prefer to cooperate rationally defects if they believe others will defect; "no one wants to be a sucker" captures the logic of pre-emptive defection; this is distinct from greed because the motivation is defensive, not acquisitive.</li>
+        <li>非金融情境 (non-financial contexts) — the same logic applies to effort contribution in group projects: it pays to let others do the work; no one wants to be the only person doing everything; this creates the equilibrium where no one contributes optimally. The prisoner's dilemma (囚徒困境) captures this mutual defection (相互背叛) logic precisely.</li>
+      </ul>
+    </p>
+
+    <table>
+      <thead>
+        <tr><th>Motive</th><th>Logic</th><th>Game Analogue</th><th>OB Example</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Greed (貪婪)</td><td>Defect to earn more than cooperators</td><td>Keep red, gain from others' contributions</td><td>Taking credit for team output without contributing</td></tr>
+        <tr><td>Fear of Greed (對貪婪的恐懼)</td><td>Defect defensively so others cannot exploit you</td><td>Play black because you expect others to do the same</td><td>Withholding effort because you expect peers to loaf</td></tr>
+      </tbody>
+    </table>
+
+    <p data-topic="free-riding-motives">
+      Critical angle: Scholars debate which motive is more important. Greed-based models predict defection is always dominant; fear-based models predict cooperation can be sustained if credible commitment is established (explaining why communication in Segment 2 sometimes helped). Both motives operate simultaneously and interact. Trust (信任) and reciprocity (互惠) are the social mechanisms that allow fear-of-greed to be overcome.
+    </p>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Social Dilemmas in Organisational Life: Social Loafing</h2>
+    <p data-topic="social-loafing">
+      <ul>
+        <li>社會懈怠定義 (social loafing definition) — a type of motivational loss resulting from members feeling less accountable for team outcomes relative to independent work that results in individually identifiable outcomes (lecture's precise definition — memorise this wording).</li>
+        <li>問責性機制 (accountability (問責性) mechanism) — the key variable is individual identifiability (可識別性): when individual contributions can be observed and evaluated, loafing declines; when they are submerged in group output, loafing increases.</li>
+        <li>小組作業情境 (group project context) — individual incentive is to let others do the work; if everyone acts on this incentive, no work gets done; this is not merely laziness but a structurally generated equilibrium.</li>
+        <li>理論意涵 (theoretical implication) — social loafing shows that motivation is not purely internal; it responds to structural features of the task, specifically whether outputs are individually vs. collectively attributed.</li>
+        <li>限制 (limitation) — the social loafing effect is weaker in collectivist cultures (e.g., some East Asian contexts), in small groups (group size (群體規模) matters) where identity with the group is strong, and when tasks are intrinsically motivating — suggesting structural fixes are not universally sufficient.</li>
+      </ul>
+    </p>
+    <p data-topic="social-loafing">
+      Essay-ready synthesis: Social loafing is analytically important because it links the abstract social dilemma framework to concrete organisational performance: the same structural logic that produces free-riding in card games produces underperformance in teams, and the solution in both cases is making individual contributions visible and consequential. Monitoring (監督) mechanisms and norms (規範) of accountability both serve this function.
+    </p>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="5">
+    <h2>6. Solving Social Dilemmas: Formal and Informal Mechanisms</h2>
+    <p data-topic="solving-dilemmas-formal">
+      <ul>
+        <li>正式機制 / formal institution (正式制度) — structural interventions that change the incentive calculus:
+          <ul>
+            <li>個人績效可視化 (make individual performance visible) — when each person's contribution is observable, free-riding imposes reputational and direct costs; Segment 3 of the card game demonstrated this effect.</li>
+            <li>懲罰搭便車者 (punish free riders) — change the incentive system so that acting on self-interest makes you worse off than acting on collective interest; this realigns the dominant strategy.</li>
+            <li>合約與規則 (contracts and rules) — establish binding agreements enforced by leaders or institutions; the state, the employment contract, and organisational policy are all examples.</li>
+          </ul>
+        </li>
+        <li>非正式機制 / informal institution (非正式制度) — social and normative (規範) interventions:
+          <ul>
+            <li>流言蜚語 (gossip / reputational damage) — spreading information about free-riders imposes social costs without formal authority; gossip is a cheap-talk mechanism that nonetheless disciplines behaviour.</li>
+            <li>道德規範與羞恥感 (morality, guilt, and shame) — framing free-riding as immoral activates internal sanctions (制裁); guilt (self-directed) and shame (other-directed) reduce defection by raising the psychological cost of non-cooperation.</li>
+          </ul>
+        </li>
+        <li>溝通的作用 (role of communication) — Segment 2 of the card game showed that communication (even unverified promises) can increase cooperation, because it activates social norms and creates informal commitment devices.</li>
+        <li>談判課預告 (teaser for negotiations class) — the lecture notes that more solutions will be covered in the subsequent negotiations class, pointing to commitment, reciprocity (互惠), and repeat-game (重複博弈) logic as additional mechanisms. The shadow of the future (未來的陰影) — the expectation of future interactions — discourages defection in repeated games.</li>
+      </ul>
+    </p>
+
+    <table>
+      <thead>
+        <tr><th>Mechanism</th><th>Type</th><th>How It Works</th><th>Limitation</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Make individual performance visible (個人績效可視化)</td><td>Formal</td><td>Increases accountability; raises cost of defection</td><td>Requires monitoring infrastructure; can reduce intrinsic motivation</td></tr>
+        <tr><td>Contracts/rules (合約/規則)</td><td>Formal</td><td>Legally or institutionally binds parties to cooperate</td><td>Costly to enforce; incomplete contracts leave gaps</td></tr>
+        <tr><td>Gossip (流言蜚語)</td><td>Informal</td><td>Reputational damage deters free-riding</td><td>Inaccurate information; can be weaponised unfairly</td></tr>
+        <tr><td>Guilt/shame (罪惡感/羞恥)</td><td>Informal</td><td>Internal and social sanction raises psychological cost of defection</td><td>Variable across individuals and cultures</td></tr>
+        <tr><td>Communication/promises (溝通/承諾)</td><td>Informal</td><td>Creates social commitment even without enforcement</td><td>Cheap talk; promises can be broken without formal consequence</td></tr>
+      </tbody>
+    </table>
+
+    <div class="exam-trap-inline" data-topic="solving-dilemmas-formal"><b>Exam trap:</b> Students often argue that "better communication" alone solves social dilemmas. The lecture is more precise: communication helps (Segment 2 showed this) but it is insufficient without either formal enforcement or strong normative pressure, because promises remain cheap talk absent consequences.</div>
+
+    <p data-topic="solving-dilemmas-formal">
+      Critical angle: Formal and informal mechanisms are not substitutes — they work best in combination. Organisations that rely solely on formal monitoring find it can crowd out intrinsic motivation; those that rely solely on norms find them insufficient when stakes are high or group size is large. Coordination failure (協調失敗) occurs when neither mechanism is strong enough.
+    </p>
+    <p data-topic="solving-dilemmas-formal">
+      Essay-ready synthesis: The most analytically sophisticated answer to "how do organisations solve social dilemmas?" is that they layer formal structural mechanisms (which change payoffs) with informal normative mechanisms (which change preferences), and the relative weight of each depends on group size, culture, and task type.
+    </p>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>The individually rational move in a social dilemma is to defect (play black), not cooperate (play red) — do not conflate "individually rational" with "morally correct" or "collectively beneficial."</li>
+      <li>Hobbes's point is that defection is the natural equilibrium, not an aberration — cooperation is the achievement that requires explanation and institutional support.</li>
+      <li>Social loafing is defined precisely: motivational loss from reduced accountability for team outcomes relative to independently identifiable work — do not just say "laziness in groups."</li>
+      <li>Greed and fear of greed are two distinct motives for free-riding — greed is offensive (I want more), fear of greed is defensive (I don't want to be exploited).</li>
+      <li>Communication can increase cooperation (Segment 2 effect) but does not guarantee it — promises are cheap talk without enforcement mechanisms.</li>
+      <li>Making individual performance visible is the central formal solution — it realigns individual payoffs by imposing accountability costs on defectors.</li>
+      <li>The Tragedy of the Commons is a macro-level social dilemma (shared natural resources), not an organisational concept — do not conflate it with social loafing, which is the team/org-level version.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Definition of social dilemma (社會困境): situation where the group's collective interest is at odds with each individual's personal interest, such that individually rational behaviour produces collectively irrational outcomes.</li>
+      <li>Definition of social loafing (社會懈怠): motivational loss resulting from members feeling less accountable for team outcomes relative to independent work that results in individually identifiable outcomes.</li>
+      <li>Definition of free rider (搭便車者): someone who does not contribute to the collective efforts of the group.</li>
+      <li>Two motives for free-riding: Greed (貪婪) — want to gain more; Fear of Greed (對貪婪的恐懼) — don't want to be exploited by others.</li>
+      <li>Thomas Hobbes quote and its analytical function: "solitary, poor, nasty, brutish, and short" — establishes the stakes of cooperation failure.</li>
+      <li>Card game payoff structure: keeping red = $0.50 (personal); red in collective pot = $0.25 to each player; collective optimum = $9/person over 9 rounds; individual maximum = $11.25.</li>
+      <li>Formal solutions: make individual performance visible; punish free-riders; establish contracts and rules.</li>
+      <li>Informal solutions: gossip (reputational damage); morality/guilt/shame.</li>
+      <li>Three segments of the card game and what each reveals: Segment 1 (anonymous, no communication) = pure self-interest baseline; Segment 2 (communication before face-down play) = role of cheap talk and social norms; Segment 3 (face-up) = transparency and accountability increase cooperation.</li>
+      <li>Tragedy of the Commons (公地悲劇): Hardin (1968); shared resources over-exploited because individual extraction incentive exceeds sustainable collective level; humanity-scale social dilemma.</li>
+      <li>Key insight on accountability: the variable that determines whether social loafing occurs is individual identifiability — when contributions are observable, loafing declines.</li>
+    </ol>
+  </div>
+</div>
+</div>
+
+<div id="notes-1" class="page">
+<div id="notes-1" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-1" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(1)">Clear Highlights</button>
+  <h1>Class 11: Groups and Teams</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    This lecture examines how collections of people become teams, why groups systematically fail to pool all the information available to them, and what conditions allow groups to outperform individuals. The central tension is between the theoretical advantages of collective intelligence and the social-psychological forces that suppress unique knowledge, reward conformity, and inflate the influence of dominant speakers. Understanding these dynamics is essential for any essay on organisational decision-making, because the same structural features that make teams valuable also create the conditions for groupthink, information suppression, and process loss.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Groups vs. Teams: Definitions and Types</h2>
+    <p data-topic="group-team-definitions">
+      <ul>
+        <li><strong>Group (群體)</strong> — any collection of two or more people; no requirement for interdependence, shared goals, or task orientation.</li>
+        <li><strong>Team (團隊)</strong> — two or more people working <em>interdependently</em> over a time period to accomplish common goals related to a task-oriented purpose; the key addition over a group is mutual dependence and a shared performance objective.</li>
+        <li>The group-to-team distinction matters analytically: a group can share space without sharing work; a team's outcomes are structurally linked to how members coordinate.</li>
+      </ul>
+    </p>
+    <p data-topic="team-types">
+      <strong>Five canonical team types:</strong>
+      <table>
+        <thead>
+          <tr><th>Type</th><th>Example</th><th>Core characteristic</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Work team (工作團隊)</td><td>Sales team</td><td>Ongoing, stable membership; routine production or service tasks</td></tr>
+          <tr><td>Management team (管理團隊)</td><td>Top management team</td><td>Coordinates sub-units; strategic decisions; high authority</td></tr>
+          <tr><td>Parallel team (平行團隊)</td><td>Committee, task force</td><td>Operates alongside normal structure; advisory or quality-improvement role</td></tr>
+          <tr><td>Project team (項目團隊)</td><td>Product design team</td><td>Time-limited; dissolved on completion; cross-functional membership</td></tr>
+          <tr><td>Action team (行動團隊)</td><td>Surgical team, band</td><td>High-stakes, time-pressured performance; specialised roles tightly coordinated</td></tr>
+        </tbody>
+      </table>
+    </p>
+    <p data-topic="group-team-synthesis">
+      For essay purposes, the group/team distinction is a foundation for explaining why organisational design choices (who works together, how, for how long) shape both performance potential and the social processes that can undermine it.
+    </p>
+    <div class="exam-trap-inline" data-topic="group-team-definitions"><b>Exam trap:</b> Do not treat "group" and "team" as synonyms. A team requires interdependence and a shared task-oriented purpose; a group requires only two or more people. Questions that ask you to evaluate whether a team existed will penalise conflation of the two.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. The Common Knowledge Problem and Information Sharing Biases</h2>
+    <p data-topic="common-knowledge-problem">
+      <ul>
+        <li><strong>Common Knowledge Problem (共同知識問題)</strong> — groups spend the majority of discussion time on information that all members already share; unique information held by only one or two members is rarely surfaced and rarely influences the final decision.</li>
+        <li>The mechanism: shared information is easy to introduce (any member can raise it), easy to validate (others can confirm it), and socially safe (it does not challenge the emerging consensus); unique information requires a member to volunteer something only they know, with no social reinforcement.</li>
+        <li>Consequence: groups systematically make worse decisions than they would if all unique information were integrated, even when the group collectively possesses all the information needed for the correct answer.</li>
+        <li>Classroom illustration — Murder Mystery exercise: three reports (A, B, C) each contained unique exonerating or implicating evidence. Teams that failed to surface each member's unique information accused the wrong suspect (Mickey Malone rather than Eddie Sullivan) because the exonerating evidence for Mickey was unique to Report B and the motive evidence implicating Eddie was unique to Report A.</li>
+      </ul>
+    </p>
+    <p data-topic="information-biases">
+      <strong>Six biases that drive the Common Knowledge Problem:</strong>
+      <ul>
+        <li><strong>Preference bias (偏好偏誤)</strong> — members stick to their initial preferred option even when presented with new information that contradicts it.</li>
+        <li><strong>Ownership bias (所有權偏誤)</strong> — members weight their own information more heavily than information provided by others, simply because they possess it.</li>
+        <li><strong>Corroboration bias (印證偏誤)</strong> — members value information that can be confirmed by others in the group, which by definition advantages already-shared information.</li>
+        <li><strong>Time constraints (時間限制)</strong> — groups run out of time after discussing shared information; unique information is never reached because agenda time is front-loaded with what everyone knows.</li>
+        <li><strong>Normative social influence (規範性社會影響)</strong> — members who hold unique information that contradicts the group's emerging view often self-censor to avoid conflict, judgment, or exclusion.</li>
+        <li><strong>Illusion of transparency (透明度錯覺)</strong> — members overestimate how clearly their internal thoughts and private knowledge are telegraphed to others, so they assume their unique information is somehow already known.</li>
+      </ul>
+    </p>
+    <p data-topic="information-sharing-solutions">
+      <strong>Solutions to the Common Knowledge Problem:</strong>
+      <ul>
+        <li>Plan the decision process before beginning: assign roles that require each member to report their unique information first.</li>
+        <li>Appoint a facilitator whose explicit job is to ensure every member has had a voice before convergence begins.</li>
+        <li>Simply educating groups about the common knowledge problem has been shown to reduce its severity — awareness itself is a partial remedy.</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="common-knowledge-problem"><b>Exam trap:</b> Students often write that the Common Knowledge Problem arises because group members are uninformed. The correct argument is that group members collectively possess the right information but fail to share or weight unique information appropriately — the failure is procedural and social, not informational.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Group vs. Individual Decision-Making: Process Loss and Process Gain</h2>
+    <p data-topic="group-individual-dm">
+      <ul>
+        <li><strong>Average individual score</strong> — represents the baseline knowledge and expertise members bring individually; in the NASA Team Survival exercise, a lower error score means better individual expertise relative to NASA experts.</li>
+        <li><strong>Group performance</strong> is more than the sum of individual expertise; it also reflects the quality of <em>interpersonal group processes</em> — how effectively the team coordinates, communicates, and integrates knowledge during the task.</li>
+        <li><strong>Process Loss (過程損失)</strong> — when the group score is worse than the average individual score; the interpersonal process subtracted value from what individuals could have achieved alone (e.g., dominant members overrode better-informed quiet members).</li>
+        <li><strong>Process Gain (過程增益)</strong> — when the group score is better than the average individual score; the interpersonal process added value beyond what any individual could contribute alone (synergy).</li>
+        <li>The ratio of group score to average individual score is used to evaluate how well the team's social process worked, independent of raw member expertise.</li>
+      </ul>
+    </p>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" style="width:100%;max-width:520px;display:block;margin:1rem auto;" aria-label="Process loss and gain diagram">
+      <rect x="0" y="30" width="140" height="50" rx="8" fill="#4a90d9" opacity="0.85"/>
+      <text x="70" y="51" text-anchor="middle" font-size="11" fill="#fff" font-family="sans-serif">Average Individual</text>
+      <text x="70" y="67" text-anchor="middle" font-size="11" fill="#fff" font-family="sans-serif">Score</text>
+      <line x1="140" y1="55" x2="190" y2="55" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+      <rect x="190" y="10" width="130" height="40" rx="8" fill="#e05c5c" opacity="0.85"/>
+      <text x="255" y="27" text-anchor="middle" font-size="10" fill="#fff" font-family="sans-serif">Group Score WORSE</text>
+      <text x="255" y="42" text-anchor="middle" font-size="10" fill="#fff" font-family="sans-serif">= Process Loss</text>
+      <rect x="190" y="70" width="130" height="40" rx="8" fill="#3aaa5c" opacity="0.85"/>
+      <text x="255" y="87" text-anchor="middle" font-size="10" fill="#fff" font-family="sans-serif">Group Score BETTER</text>
+      <text x="255" y="102" text-anchor="middle" font-size="10" fill="#fff" font-family="sans-serif">= Process Gain</text>
+      <line x1="140" y1="50" x2="190" y2="30" stroke="#e05c5c" stroke-width="1.5"/>
+      <line x1="140" y1="60" x2="190" y2="90" stroke="#3aaa5c" stroke-width="1.5"/>
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+        </marker>
+      </defs>
+    </svg>
+
+    <p data-topic="group-dm-strengths-weaknesses">
+      <strong>Strengths of group decision-making (集體決策優勢):</strong>
+      <ul>
+        <li>Access to more total information and knowledge than any single individual.</li>
+        <li>Greater diversity of perspectives and interpretive frameworks.</li>
+        <li>Higher acceptance of the decision among those who participated (buy-in).</li>
+        <li>Diffusion of responsibility — no single person bears the entire cognitive or moral burden.</li>
+      </ul>
+      <strong>Weaknesses of group decision-making (集體決策劣勢):</strong>
+      <ul>
+        <li>Time-consuming and slow relative to unilateral individual decisions.</li>
+        <li>Conformity pressures can produce groupthink (discussed below).</li>
+        <li>Ambiguous responsibility — diffusion can become diffusion of accountability, with no individual held responsible for poor outcomes.</li>
+        <li>Increased likelihood of intra-group conflict when preferences diverge.</li>
+      </ul>
+    </p>
+    <p data-topic="wisdom-of-crowds">
+      The "Wisdom of Crowds (群眾智慧)" (James Surowiecki) illustrates potential group superiority: at a county fair, 800 independent guesses of an ox's weight averaged 1,197 lbs against an actual weight of 1,198 lbs. The key condition is <em>independence (獨立性)</em> — when members influence each other before committing, the crowd's statistical averaging (統計平均) breaks down and common biases (共同偏見) dominate.
+    </p>
+    <div class="exam-trap-inline" data-topic="group-individual-dm"><b>Exam trap:</b> Process Loss and Process Gain are measured relative to the average individual score, not relative to the best individual in the group. A group can show Process Gain yet still perform worse than the best single member — these are analytically distinct comparisons.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Groupthink and Conformity Pressures</h2>
+    <p data-topic="groupthink-definition">
+      <ul>
+        <li><strong>Groupthink (群體思維)</strong> — behaviours that support conformity and team harmony at the expense of other team priorities, most critically at the expense of performance and decision quality.</li>
+        <li>Underlying logic: when members value cohesion and social harmony above task accuracy, they self-censor dissent, pressure dissenters to conform, and collectively rationalise poor choices rather than reassess them.</li>
+        <li>Three conditions that generate groupthink:
+          <ol>
+            <li>Group harmony is prioritised over group performance.</li>
+            <li>Acceptance of decisions by all members is stressed more than quality of decisions.</li>
+            <li>Strong social pressure to conform suppresses minority dissent.</li>
+          </ol>
+        </li>
+        <li>Critical limitation: groupthink is most dangerous precisely when groups are cohesive and members like each other — the same social glue that enables cooperation also silences challenge.</li>
+      </ul>
+    </p>
+    <p data-topic="groupthink-solutions">
+      <strong>Solutions to groupthink (群體思維解決方案):</strong>
+      <ul>
+        <li><strong>Value dissent</strong> — explicitly establish that disagreement is welcome and expected, not a social transgression.</li>
+        <li><strong>Psychological safety</strong> — members must feel comfortable speaking up without fear of ridicule or punishment.</li>
+        <li><strong>Devil's advocate (魔鬼代言人) role</strong> — assign one member the formal task of challenging the emerging consensus, insulating them from social cost.</li>
+        <li><strong>Bring in outsiders</strong> — external reviewers have no stake in group cohesion and can challenge assumptions freely.</li>
+      </ul>
+    </p>
+    <p data-topic="groupthink-essay-synthesis">
+      The theoretical insight for essays is that groupthink reveals a fundamental tension in group life: the social conditions that make coordination pleasant (high cohesion, shared identity, mutual liking) are the same conditions that make critical thinking dangerous. Effective teams must institutionalise dissent structurally, not rely on individual courage.
+    </p>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Domination by Small Numbers and Ineffective Influence Cues</h2>
+    <p data-topic="domination-small-numbers">
+      <ul>
+        <li><strong>Domination by small numbers (少數人支配)</strong> — dominant group members (自信且強勢的成員; self-assured, assertive, high in confidence) tend to wield disproportionate influence (不成比例的影響力) over group decisions regardless of their actual expertise or accuracy.</li>
+        <li>Groups use <em>ineffective cues (無效線索)</em> to allocate influence: they infer competence (能力) from confidence, speaking time, and assertiveness rather than from demonstrated knowledge or track record.</li>
+        <li>Critical finding: group members, research observers, and even broader publics rate dominant, assertive individuals as more competent even when those individuals demonstrably lack competence — the halo (光環效應) from assertiveness is persistent and cross-contextually replicated.</li>
+        <li>Consequence for decision quality (決策質量): if the most assertive member happens to hold incorrect information or poor judgment, their disproportionate influence produces group errors that quieter, better-informed members could have prevented.</li>
+        <li>This mechanism interacts directly with the Common Knowledge Problem: dominant members tend to crowd out (排擠) contributions from quieter members, which are often the members holding unique information.</li>
+      </ul>
+    </p>
+    <p data-topic="domination-essay-synthesis">
+      For essay arguments: domination by small numbers is a structural critique of the assumption that groups benefit from member diversity — diversity of knowledge only translates into better decisions if the social process allows diverse voices to be heard with weight proportional to their informational value, not their social assertiveness.
+    </p>
+    <div class="exam-trap-inline" data-topic="domination-small-numbers"><b>Exam trap:</b> Students sometimes conflate "influential" with "expert." The lecture explicitly states that dominant group members are rated as more competent even when they lack competence. Do not assume that who speaks most in a group reflects who knows most.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="5">
+    <h2>6. Team Synergy: The NASA Survival Exercise</h2>
+    <p data-topic="team-synergy">
+      <ul>
+        <li><strong>Team Survival exercise (團隊求生練習)</strong> — participants rank (排序) 15 lunar survival items individually, then reach a consensus (共識) team ranking; both are compared against official NASA expert rankings using an error score (lower = better).</li>
+        <li><strong>Error score (誤差分數)</strong> — the absolute difference (絕對差值) between each item's rank and the NASA expert rank, summed across all 15 items; a score of 0 = perfect agreement with NASA.</li>
+        <li><strong>Synergy Check (協同效應檢驗)</strong> — the exercise reveals whether working as a team improved survival chances relative to working alone: "Team Synergy!" badge if group score beats average individual score; "Team Worsened" if group score is worse.</li>
+        <li>The exercise operationalises (使具體化) the Process Loss / Process Gain framework in a vivid, measurable way: teams can observe directly whether their social process added or subtracted value from the individual expertise in the room.</li>
+        <li>Key implication: a team that achieves Team Synergy did not merely pool expertise (集合專業知識) — it ran an effective interpersonal process that amplified member knowledge through good communication, inclusion, and integrative discussion.</li>
+      </ul>
+    </p>
+    <p data-topic="synergy-essay-synthesis">
+      The synergy framework gives essays a concrete evaluative criterion: rather than asking whether groups are "better" in the abstract, we can ask whether the group's interpersonal process produced gain or loss relative to the raw talent available. This grounds the abstract theory of teamwork in measurable outcomes.
+    </p>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Do not conflate "group" and "team" — a team requires interdependence and task-oriented shared purpose; a group requires only two or more people.</li>
+      <li>The Common Knowledge Problem is not caused by ignorance — members collectively hold all needed information; the failure is social and procedural, not informational.</li>
+      <li>Process Loss and Process Gain are measured against the <em>average</em> individual score, not the best individual; a group can show Process Gain yet still underperform the best single member.</li>
+      <li>Groupthink is most likely in highly cohesive groups — high cohesion is both a cause of groupthink and an asset for coordination; do not treat it as purely negative.</li>
+      <li>Dominant group members are rated as more competent even when they lack competence — assertiveness and expertise are empirically uncorrelated in group influence dynamics.</li>
+      <li>The Wisdom of Crowds only works under conditions of independence — if members influence each other, the statistical benefits of aggregation collapse and shared biases dominate.</li>
+      <li>Normative social influence explains why unique information is suppressed: the member holding it fears social cost, not because they think the information is wrong.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Definition of team vs. group: team = interdependence + shared task-oriented goals over time; group = two or more people.</li>
+      <li>Five team types: work, management, parallel, project, action — with one example each.</li>
+      <li>Common Knowledge Problem: groups over-discuss shared info, under-surface unique info, and make worse decisions as a result.</li>
+      <li>Six biases driving the Common Knowledge Problem: preference bias, ownership bias, corroboration bias, time constraints, normative social influence, illusion of transparency.</li>
+      <li>Process Loss = group score worse than average individual; Process Gain = group score better than average individual.</li>
+      <li>Group decision-making strengths: more information, diversity of views, higher acceptance, diffusion of responsibility.</li>
+      <li>Group decision-making weaknesses: slow, groupthink, ambiguous responsibility, intra-group conflict.</li>
+      <li>Groupthink definition: behaviours supporting conformity and harmony at the expense of performance; occurs when harmony is prioritised over accuracy and conformity pressures are strong.</li>
+      <li>Four solutions to groupthink: value dissent, ensure psychological safety, assign devil's advocate role, bring in outsiders.</li>
+      <li>Domination by small numbers: assertive/dominant members wield disproportionate influence; rated as more competent even when they lack competence.</li>
+      <li>Three solutions to the Common Knowledge Problem: plan decision process in advance, appoint a facilitator, educate members about the problem.</li>
+      <li>NASA Synergy Check: "Team Synergy!" if group error score beats average individual error score; "Team Worsened" if it does not.</li>
+    </ol>
+  </div>
+</div>
+</div>
+
+
+<!-- Quiz containers are generated by JS (see renderQuizContainers). -->
+<div id="quiz-containers"></div>
+
+<div id="global-report" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <h1>Full Summary Report</h1>
+  <div id="global-body"></div>
+</div>
+
+</div>
+<script>
+// ===== Data + state (loaded from data/3040.json) =====
+let lectures = [];
+let STORAGE_KEY = "endoQuizState";
+let quizState = {};
+let TOPIC_SECTION_MAP = {};
+
+function initQuizStateFromLectures() {
+  lectures.forEach(l => {
+    quizState[l.id] = { answered:0, correct:0, wrongQuestions:[], completed:false, choices:{}, filteredIndices:null, total:30, weakSections:[], weakTopics:[] };
+  });
+}
+
+function saveState() {
+  try {
+    const out = {};
+    Object.keys(quizState).forEach(k => {
+      const s = quizState[k];
+      out[k] = { answered:s.answered, correct:s.correct, wrongQuestions:s.wrongQuestions, completed:s.completed, choices:s.choices, filteredIndices:s.filteredIndices, total:s.total, weakSections:s.weakSections, weakTopics:s.weakTopics };
+    });
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(out));
+  } catch(e){ console.warn("save failed", e); }
+}
+
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return;
+    const data = JSON.parse(raw);
+    Object.keys(data).forEach(k => {
+      if (quizState[k]) Object.assign(quizState[k], data[k]);
+    });
+  } catch(e){ console.warn("load failed", e); }
+}
+
+function resetAllProgress() {
+  if (!confirm("Reset ALL quiz progress? This cannot be undone.")) return;
+  localStorage.removeItem(STORAGE_KEY);
+  location.reload();
+}
+
+// ===== Navigation =====
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const el = document.getElementById(id);
+  if (el) el.classList.add('active');
+  window.scrollTo(0,0);
+  if (id === 'global-report') renderGlobalReport();
+  if (id.startsWith('notes-')) {
+    const lid = parseInt(id.split('-')[1]);
+    applyWeakHighlights(lid);
+  }
+  setTimeout(initReveal, 50);
+}
+
+function computeWeakSections(lid) {
+  const s = quizState[lid];
+  const lec = lectures.find(l => l.id === lid);
+  const map = TOPIC_SECTION_MAP[lid] || {};
+  const topicSet = new Set();
+  const secSet = new Set();
+  s.wrongQuestions.forEach(qi => {
+    const t = lec.questions[qi].topic;
+    if (t) topicSet.add(t);
+    if (map[t] !== undefined) secSet.add(map[t]);
+  });
+  s.weakTopics = Array.from(topicSet);
+  s.weakSections = Array.from(secSet).sort((a,b)=>a-b);
+}
+
+function applyWeakHighlights(lid) {
+  const s = quizState[lid];
+  const weakTopics = new Set(s.weakTopics || []);
+  const weakSecs = new Set(s.weakSections || []);
+  const page = document.getElementById('notes-'+lid);
+  if (!page) return;
+
+  // Clear existing highlights
+  page.querySelectorAll('.weak-highlight, .weak-h2').forEach(el => {
+    el.classList.remove('weak-highlight');
+    el.classList.remove('weak-h2');
+  });
+
+  // Per-element highlighting: substring match of any wrong topic name in the data-topic attribute
+  page.querySelectorAll('[data-topic]').forEach(el => {
+    const attr = el.getAttribute('data-topic') || '';
+    for (const t of weakTopics) {
+      if (attr.includes(t)) { el.classList.add('weak-highlight'); break; }
+    }
+  });
+
+  // Fallback: if a weak section has no inner match, lightly mark its h2
+  page.querySelectorAll('section[data-sec]').forEach(sec => {
+    const idx = parseInt(sec.dataset.sec);
+    if (!weakSecs.has(idx)) return;
+    if (sec.querySelector('.weak-highlight')) return;
+    const h = sec.querySelector('h2');
+    if (h) h.classList.add('weak-h2');
+  });
+
+  const clearBtn = document.getElementById('clear-hl-'+lid);
+  if (clearBtn) clearBtn.style.display = (weakTopics.size > 0 || weakSecs.size > 0) ? 'inline-block' : 'none';
+}
+
+function clearWeakHighlights(lid) {
+  quizState[lid].weakSections = [];
+  quizState[lid].weakTopics = [];
+  saveState();
+  applyWeakHighlights(lid);
+}
+
+function startQuiz(lid) {
+  const state = quizState[lid];
+  const countSel = document.getElementById('count-'+lid);
+  const desiredCount = countSel ? parseInt(countSel.value)||30 : 30;
+
+  // If there is saved progress AND requested count differs from saved, prompt to restart
+  const hasProgress = state.answered > 0 && state.filteredIndices && state.filteredIndices.length > 0;
+  let needNew = !state.filteredIndices;
+  if (hasProgress) {
+    if (state.filteredIndices.length !== desiredCount) {
+      if (confirm("You have saved progress for this lecture with a different question count. Start a new quiz with the new count? (This will erase saved progress for this lecture.)")) {
+        resetLectureState(lid);
+        needNew = true;
+      }
+    }
+  } else if (state.answered === 0) {
+    needNew = true;
+  }
+
+  if (needNew) {
+    const picked = buildBalancedSet(lid, desiredCount);
+    state.filteredIndices = picked;
+    state.total = picked.length;
+    state.answered = 0;
+    state.correct = 0;
+    state.wrongQuestions = [];
+    state.choices = {};
+    state.completed = false;
+    state.weakSections = [];
+    state.weakTopics = [];
+    saveState();
+    const body = document.getElementById('quizbody-'+lid);
+    if (body) body.dataset.rendered = "";
+    const post = document.getElementById('postquiz-'+lid);
+    if (post) post.innerHTML = '';
+  }
+
+  showPage('quiz-'+lid);
+  renderQuiz(lid);
+}
+
+function resetLectureState(lid) {
+  quizState[lid] = { answered:0, correct:0, wrongQuestions:[], completed:false, choices:{}, filteredIndices:null, total:30, weakSections:[], weakTopics:[] };
+  saveState();
+}
+
+// Balanced sampling across easy/medium/hard. Target ratios:
+//   10 → 3 easy, 3 medium, 4 hard
+//   20 → 7 easy, 7 medium, 6 hard
+//   30 → 10 easy, 10 medium, 10 hard
+function buildBalancedSet(lid, count) {
+  const lec = lectures.find(l => l.id === lid);
+  const pools = { easy: [], medium: [], hard: [] };
+  lec.questions.forEach((q, i) => {
+    if (pools[q.difficulty]) pools[q.difficulty].push(i);
+  });
+  shuffle(pools.easy); shuffle(pools.medium); shuffle(pools.hard);
+
+  let targets;
+  if (count <= 10) targets = { easy: 3, medium: 3, hard: 4 };
+  else if (count <= 20) targets = { easy: 7, medium: 7, hard: 6 };
+  else targets = { easy: 10, medium: 10, hard: 10 };
+
+  // Scale targets if requested count differs from preset
+  if (count !== 10 && count !== 20 && count !== 30) {
+    const total = targets.easy + targets.medium + targets.hard;
+    targets = {
+      easy:   Math.round(targets.easy   * count / total),
+      medium: Math.round(targets.medium * count / total),
+      hard:   Math.round(targets.hard   * count / total),
+    };
+  }
+
+  const picked = [];
+  const taken = { easy: 0, medium: 0, hard: 0 };
+  ['easy','medium','hard'].forEach(d => {
+    const want = Math.min(targets[d], pools[d].length);
+    for (let i = 0; i < want; i++) picked.push(pools[d][i]);
+    taken[d] = want;
+  });
+
+  // If short of target count (some pool too small), fill from leftovers
+  const leftovers = [];
+  ['easy','medium','hard'].forEach(d => {
+    for (let i = taken[d]; i < pools[d].length; i++) leftovers.push(pools[d][i]);
+  });
+  shuffle(leftovers);
+  while (picked.length < count && leftovers.length > 0) picked.push(leftovers.shift());
+
+  picked.sort((a,b)=>a-b);
+  return picked;
+}
+
+function shuffle(arr) {
+  for (let i=arr.length-1; i>0; i--) {
+    const j = Math.floor(Math.random()*(i+1));
+    [arr[i],arr[j]] = [arr[j],arr[i]];
+  }
+  return arr;
+}
+
+// ===== Quiz rendering =====
+function renderQuiz(lid) {
+  const lec = lectures.find(l => l.id === lid);
+  const body = document.getElementById('quizbody-' + lid);
+  const state = quizState[lid];
+  if (!state.filteredIndices || state.filteredIndices.length === 0) {
+    // fallback: all 30
+    state.filteredIndices = lec.questions.map((_,i)=>i);
+    state.total = 30;
+  }
+  if (body.dataset.rendered === "1") {
+    updateScoreBar(lid);
+    return;
+  }
+  body.dataset.rendered = "1";
+  let h = '';
+  state.filteredIndices.forEach((qi, displayIdx) => {
+    const q = lec.questions[qi];
+    h += '<div class="q-block reveal-on-scroll" id="q-'+lid+'-'+qi+'">';
+    h += '<div class="q-num">Question ' + (displayIdx+1) + ' of ' + state.filteredIndices.length + ' <span style="margin-left:8px;padding:1px 6px;background:var(--accent-soft);border-radius:3px;font-size:.85em">'+q.difficulty+'</span></div>';
+    h += '<div class="q-text">' + escapeHtml(q.q) + '</div>';
+    q.options.forEach((opt, oi) => {
+      h += '<label class="opt" id="opt-'+lid+'-'+qi+'-'+oi+'"><input type="radio" name="q-'+lid+'-'+qi+'" value="'+oi+'"> '+String.fromCharCode(65+oi)+'. '+escapeHtml(opt)+'</label>';
+    });
+    h += '<button class="btn submit-q" onclick="submitQ('+lid+','+qi+')">Submit</button>';
+    h += '<div class="explain" id="exp-'+lid+'-'+qi+'" style="display:none"></div>';
+    h += '</div>';
+  });
+  body.innerHTML = h;
+
+  // Restore answered states from saved choices
+  state.filteredIndices.forEach(qi => {
+    if (state.choices[qi] !== undefined) restoreAnswered(lid, qi);
+  });
+
+  updateScoreBar(lid);
+
+  if (state.completed) {
+    renderPostQuiz(lid);
+  }
+}
+
+function restoreAnswered(lid, qi) {
+  const state = quizState[lid];
+  const lec = lectures.find(l => l.id === lid);
+  const q = lec.questions[qi];
+  const chosen = state.choices[qi];
+  for (let oi=0; oi<q.options.length; oi++) {
+    const el = document.getElementById('opt-'+lid+'-'+qi+'-'+oi);
+    if (!el) continue;
+    el.classList.add('disabled');
+    if (oi === q.answer) el.classList.add('correct');
+    if (oi === chosen && chosen !== q.answer) el.classList.add('wrong');
+    const input = el.querySelector('input');
+    if (input) input.checked = (oi === chosen);
+    if (input) input.disabled = true;
+  }
+  const exp = document.getElementById('exp-'+lid+'-'+qi);
+  if (exp) {
+    exp.style.display = 'block';
+    exp.innerHTML = '<b>'+(chosen===q.answer?"Correct.":"Incorrect.")+'</b> '+escapeHtml(q.explain);
+  }
+  const btn = document.querySelector('#q-'+lid+'-'+qi+' .submit-q');
+  if (btn) { btn.disabled = true; btn.textContent = 'Submitted'; }
+}
+
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+
+// ===== SVG Progress Ring Generator =====
+function createProgressRing(percent, size = 120) {
+  const radius = (size - 12) / 2;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (percent / 100) * circumference;
+  const cx = size / 2;
+  const cy = size / 2;
+
+  return `
+    <svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" style="transform: rotate(-90deg)">
+      <circle cx="${cx}" cy="${cy}" r="${radius}" fill="none" stroke="var(--accent-soft)" stroke-width="6"/>
+      <circle cx="${cx}" cy="${cy}" r="${radius}" fill="none" stroke="var(--accent)" stroke-width="6"
+              stroke-dasharray="${circumference}" stroke-dashoffset="${offset}" stroke-linecap="round"
+              style="transition: stroke-dashoffset 0.6s ease"/>
+    </svg>
+  `;
+}
+
+function getVerdictClass(pct) {
+  if (pct >= 90) return 'verdict-excellent';
+  if (pct >= 75) return 'verdict-good';
+  if (pct >= 60) return 'verdict-review';
+  return 'verdict-weak';
+}
+
+function submitQ(lid, qi) {
+  const state = quizState[lid];
+  if (state.choices[qi] !== undefined) return;
+  const lec = lectures.find(l => l.id === lid);
+  const q = lec.questions[qi];
+  const radios = document.getElementsByName('q-'+lid+'-'+qi);
+  let chosen = -1;
+  radios.forEach(r => { if (r.checked) chosen = parseInt(r.value); });
+  if (chosen === -1) { alert("Please select an option."); return; }
+  state.choices[qi] = chosen;
+  state.answered += 1;
+  for (let oi=0; oi<q.options.length; oi++) {
+    const el = document.getElementById('opt-'+lid+'-'+qi+'-'+oi);
+    el.classList.add('disabled');
+    if (oi === q.answer) el.classList.add('correct');
+    if (oi === chosen && chosen !== q.answer) el.classList.add('wrong');
+  }
+  if (chosen === q.answer) state.correct += 1;
+  else state.wrongQuestions.push(qi);
+  const exp = document.getElementById('exp-'+lid+'-'+qi);
+  exp.style.display = 'block';
+  exp.innerHTML = '<b>'+(chosen===q.answer?"Correct.":"Incorrect.")+'</b> '+escapeHtml(q.explain);
+  const btn = document.querySelector('#q-'+lid+'-'+qi+' .submit-q');
+  btn.disabled = true;
+  btn.textContent = 'Submitted';
+  updateScoreBar(lid);
+  saveState();
+  if (state.answered === state.total) {
+    state.completed = true;
+    computeWeakSections(lid);
+    saveState();
+    document.getElementById('globalReportBtn').disabled = false;
+    renderPostQuiz(lid);
+    setTimeout(() => {
+      document.getElementById('postquiz-'+lid).scrollIntoView({behavior:'smooth'});
+    }, 200);
+  }
+}
+
+function updateScoreBar(lid) {
+  const s = quizState[lid];
+  const totalAvail = s.filteredIndices ? s.filteredIndices.length : 30;
+  document.getElementById('scorebar-'+lid).textContent = "Score: " + s.correct + " / " + s.answered + " (of " + totalAvail + " filtered)";
+}
+
+function renderPostQuiz(lid) {
+  const lec = lectures.find(l => l.id === lid);
+  const s = quizState[lid];
+  const total = s.total || 30;
+  const pct = Math.round((s.correct/total)*100);
+  let verdict;
+  if (pct >= 90) verdict = "Excellent. You have mastered this lecture.";
+  else if (pct >= 75) verdict = "Solid grasp. A few targeted reviews and you are exam-ready.";
+  else if (pct >= 60) verdict = "Reasonable foundation. Revisit the weak topics below.";
+  else verdict = "Needs more review. Go back to the notes for the topics flagged below.";
+
+  const themeCount = {};
+  s.wrongQuestions.forEach(qi => {
+    const t = lec.questions[qi].topic;
+    themeCount[t] = (themeCount[t] || 0) + 1;
+  });
+  const themes = Object.keys(themeCount).sort((a,b)=>themeCount[b]-themeCount[a]);
+
+  let h = '<div class="summary reveal-on-scroll reveal-delay-1">';
+  h += '<h2>Summary Report</h2>';
+
+  // Add progress ring visualization
+  h += '<div class="progress-ring-container">';
+  h += createProgressRing(pct);
+  h += '<div class="progress-ring-label">';
+  h += '<div class="progress-percentage">'+pct+'%</div>';
+  h += '<div class="progress-score">'+s.correct+'/'+total+'</div>';
+  h += '</div></div>';
+
+  h += '<div class="verdict '+getVerdictClass(pct)+'">'+verdict+'</div>';
+
+  // Add wrong topics bar chart
+  if (themes.length) {
+    h += '<h3>Wrong Topics Breakdown</h3>';
+    h += '<div class="chart-container">';
+    const maxWrong = Math.max(...themes.map(t => themeCount[t]));
+    themes.forEach(t => {
+      const count = themeCount[t];
+      const pctBar = Math.round((count / maxWrong) * 100);
+      h += '<div class="bar-chart-item">';
+      h += '<div class="bar-chart-label">'+escapeHtml(t)+'</div>';
+      h += '<div class="bar-chart-bar">';
+      h += '<div class="bar-chart-fill" style="width:'+pctBar+'%"><span class="bar-chart-count">'+count+'</span></div>';
+      h += '</div></div>';
+    });
+    h += '</div>';
+    h += '<h3>Topics to Revisit</h3><ul class="theme-list">';
+    themes.forEach(t => { h += '<li><b>'+escapeHtml(t)+'</b> — '+themeCount[t]+' wrong</li>'; });
+    h += '</ul>';
+  } else {
+    h += '<p>No weak topics — perfect run.</p>';
+  }
+  h += '<p style="color:var(--muted);font-style:italic">Take a short break, then revisit the notes for any flagged topic before moving on.</p>';
+  h += '</div>';
+  h += '<h2>Wrong Answer Review</h2>';
+  if (s.wrongQuestions.length === 0) {
+    h += '<p>No wrong answers to review. Great job.</p>';
+  } else {
+    s.wrongQuestions.forEach((qi, idx) => {
+      const q = lec.questions[qi];
+      const chosen = s.choices[qi];
+      const delay = ['','reveal-delay-1','reveal-delay-2','reveal-delay-3'][idx%4];
+      h += '<div class="review-card reveal-on-scroll '+delay+'">';
+      h += '<div class="q-num">Question '+(qi+1)+'</div>';
+      h += '<div class="q-text">'+escapeHtml(q.q)+'</div>';
+      q.options.forEach((opt, oi) => {
+        let cls = "opt disabled";
+        if (oi === q.answer) cls += " correct";
+        if (oi === chosen && chosen !== q.answer) cls += " wrong";
+        h += '<div class="'+cls+'">'+String.fromCharCode(65+oi)+'. '+escapeHtml(opt)+'</div>';
+      });
+      h += '<div class="explain"><b>Explanation:</b> '+escapeHtml(q.explain)+'</div>';
+      h += '</div>';
+    });
+  }
+  document.getElementById('postquiz-'+lid).innerHTML = h;
+  setTimeout(initReveal, 50);
+}
+
+function showGlobalReport(){ showPage('global-report'); }
+
+function renderGlobalReport() {
+  let totalCorrect = 0, totalAnswered = 0;
+  const allThemes = {};
+  const lectureScores = [];
+
+  lectures.forEach(lec => {
+    const s = quizState[lec.id];
+    if (s.answered > 0) {
+      totalCorrect += s.correct;
+      totalAnswered += s.answered;
+      const pct = s.answered ? Math.round(s.correct/s.answered*100) : 0;
+      lectureScores.push({ title: lec.title, correct: s.correct, answered: s.answered, pct });
+      s.wrongQuestions.forEach(qi => {
+        const t = lec.questions[qi].topic;
+        allThemes[t] = (allThemes[t]||0)+1;
+      });
+    }
+  });
+
+  const overallPct = totalAnswered ? Math.round(totalCorrect/totalAnswered*100) : 0;
+
+  let h = '<p style="color:var(--muted);font-style:italic">Shows saved quiz data (persisted across reloads).</p>';
+
+  // Overall progress ring
+  h += '<h2>Overall Score</h2>';
+  h += '<div class="progress-ring-container">';
+  h += createProgressRing(overallPct, 140);
+  h += '<div class="progress-ring-label">';
+  h += '<div class="progress-percentage">'+overallPct+'%</div>';
+  h += '<div class="progress-score">'+totalCorrect+'/'+totalAnswered+'</div>';
+  h += '</div></div>';
+  h += '<p style="text-align:center;color:var(--ink)"><b>'+totalCorrect+' / '+totalAnswered+'</b> across all completed quizzes</p>';
+
+  // Lecture breakdown bar chart
+  if (lectureScores.length) {
+    h += '<h2>Lecture Breakdown</h2>';
+    h += '<div class="chart-container">';
+    lectureScores.forEach(lec => {
+      const pctBar = lec.pct;
+      const verdictClass = getVerdictClass(lec.pct);
+      h += '<div class="bar-chart-item">';
+      h += '<div class="bar-chart-label" title="'+escapeHtml(lec.title)+'">'+escapeHtml(lec.title.substring(0, 25))+'...</div>';
+      h += '<div class="bar-chart-bar">';
+      h += '<div class="bar-chart-fill '+verdictClass+'" style="width:'+pctBar+'%"><span class="bar-chart-count">'+lec.pct+'%</span></div>';
+      h += '</div></div>';
+    });
+    h += '</div>';
+  }
+
+  // Weak topics summary
+  const sortedThemes = Object.keys(allThemes).sort((a,b)=>allThemes[b]-allThemes[a]);
+  if (sortedThemes.length) {
+    h += '<h2>Topics to Revisit (Combined)</h2>';
+    h += '<div class="chart-container">';
+    const maxThemeWrong = Math.max(...sortedThemes.map(t => allThemes[t]));
+    sortedThemes.slice(0, 8).forEach(t => {
+      const count = allThemes[t];
+      const pctBar = Math.round((count / maxThemeWrong) * 100);
+      h += '<div class="bar-chart-item">';
+      h += '<div class="bar-chart-label">'+escapeHtml(t)+'</div>';
+      h += '<div class="bar-chart-bar">';
+      h += '<div class="bar-chart-fill" style="width:'+pctBar+'%"><span class="bar-chart-count">'+count+'</span></div>';
+      h += '</div></div>';
+    });
+    h += '</div>';
+    if (sortedThemes.length > 8) {
+      h += '<p style="color:var(--muted);font-size:0.9em">... and '+(sortedThemes.length-8)+' more topics</p>';
+    }
+  } else {
+    h += '<p>No weak topics across completed quizzes.</p>';
+  }
+
+  document.getElementById('global-body').innerHTML = h;
+}
+
+// ===== Reveal-on-scroll =====
+function initReveal() {
+  const els = document.querySelectorAll('.reveal-on-scroll:not(.is-visible)');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+  const obs = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { root:null, rootMargin:'0px', threshold:0.15 });
+  els.forEach(el => obs.observe(el));
+}
+
+// ===== Init on load =====
+function updateHomeStatus() {
+  lectures.forEach(lec => {
+    const s = quizState[lec.id];
+    const el = document.getElementById('status-'+lec.id);
+    const progressEl = document.getElementById('progress-'+lec.id);
+    if (!el) return;
+    if (s.answered > 0 && s.total) {
+      const pct = Math.round((s.correct/s.total)*100);
+      el.textContent = "Saved: "+s.correct+"/"+s.answered+" of "+s.total+(s.completed?" (completed)":"");
+      if (progressEl) {
+        progressEl.innerHTML = '<div class="progress-badge">'+pct+'% ('+s.correct+'/'+s.total+')</div>';
+      }
+      if (s.completed) document.getElementById('globalReportBtn').disabled = false;
+    }
+  });
+}
+
+
+// ===== Dynamic card / quiz container generation =====
+function renderHomeCards() {
+  const container = document.getElementById('lecture-cards');
+  if (!container) return;
+  const delays = ['reveal-delay-1','reveal-delay-2','reveal-delay-3'];
+  container.innerHTML = lectures.map((lec, idx) => {
+    const delay = delays[idx % 3];
+    const titleHtml = escapeHtml(lec.title);
+    return `
+    <div class="card reveal-on-scroll ${delay}">
+      <div class="lec-row">
+        <div class="lec-title">${titleHtml}</div>
+        <div>
+          <button class="btn" onclick="showPage('notes-${lec.id}')">Notes</button>
+          <button class="btn btn-primary" onclick="startQuiz(${lec.id})">Quiz</button>
+        </div>
+      </div>
+      <div class="quiz-settings">
+        <label>Questions:
+          <select id="count-${lec.id}"><option value="10">10</option><option value="20">20</option><option value="30" selected>30</option></select>
+        </label>
+        <span id="progress-${lec.id}"></span>
+        <span id="status-${lec.id}" style="color:var(--muted);font-size:.9em"></span>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderQuizContainers() {
+  const container = document.getElementById('quiz-containers');
+  if (!container) return;
+  container.innerHTML = lectures.map(lec => {
+    const titleHtml = escapeHtml(lec.title);
+    return `
+    <div id="quiz-${lec.id}" class="page">
+      <a class="btn back" onclick="showPage('home')">← Home</a>
+      <h1>${titleHtml} — Quiz</h1>
+      <div class="score-bar" id="scorebar-${lec.id}">Score: 0 / 0 (of 30)</div>
+      <div id="quizbody-${lec.id}"></div>
+      <div id="postquiz-${lec.id}"></div>
+    </div>`;
+  }).join('');
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  fetch('data/mgmt2110.json')
+    .then(r => {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(data => {
+      lectures = data.lectures || [];
+      STORAGE_KEY = data.storageKey || STORAGE_KEY;
+      TOPIC_SECTION_MAP = data.topicSectionMap || {};
+      initQuizStateFromLectures();
+      renderHomeCards();
+      renderQuizContainers();
+      loadState();
+      // Migrate older saved states: recompute weak topics/sections if missing
+      lectures.forEach(lec => {
+        const s = quizState[lec.id];
+        const hasTopics = s.weakTopics && s.weakTopics.length > 0;
+        if (s.completed && !hasTopics && s.wrongQuestions.length > 0) {
+          computeWeakSections(lec.id);
+        }
+      });
+      saveState();
+      updateHomeStatus();
+      initReveal();
+    })
+    .catch(err => {
+      console.error('Failed to load data/mgmt2110.json:', err);
+      alert('Failed to load lecture data. If you opened this file directly (file://), please serve via a local HTTP server. See CLAUDE.md.');
+    });
+});
+
+// ===== PWA Service Worker (inline via Blob) =====
+if ('serviceWorker' in navigator) {
+  const swCode = `
+    const CACHE = 'mgmt2110-v7';
+    self.addEventListener('install', e => { self.skipWaiting(); });
+    self.addEventListener('activate', e => { e.waitUntil(self.clients.claim()); });
+    self.addEventListener('fetch', e => {
+      if (e.request.method !== 'GET') return;
+      e.respondWith(
+        caches.open(CACHE).then(cache =>
+          cache.match(e.request).then(cached => {
+            const fetchPromise = fetch(e.request).then(resp => {
+              if (resp && resp.status === 200 && resp.type === 'basic') cache.put(e.request, resp.clone());
+              return resp;
+            }).catch(() => cached);
+            return cached || fetchPromise;
+          })
+        )
+      );
+    });
+  `;
+  try {
+    const blob = new Blob([swCode], {type:'application/javascript'});
+    navigator.serviceWorker.register(URL.createObjectURL(blob)).catch(e => console.warn('SW reg failed', e));
+  } catch(e) { console.warn('SW setup failed', e); }
+}
+</script>
+
+<!--
+  ============================================================================
+  TEMPLATE INSTRUCTIONS — READ BEFORE EDITING
+  ============================================================================
+
+  This file is a universal subject template. To create a new subject:
+
+  1. Copy this file to a new subject HTML, e.g.  cp template.html 3015.html
+  2. In the copy, find-and-replace these placeholders:
+       Organisational Behaviour     e.g. "Endocrine Study Guide"
+       MGMT2110      e.g. "LIFS3040"
+       Organisational Behaviour — Classes 11–16  e.g. "Endocrine, GI & Neuroscience, Lectures 1-10"
+       mgmt2110         e.g. "3040"  (matches data/3040.json — appears TWICE)
+       mgmt2110        e.g. "lifs3040"  (service-worker cache namespace)
+  3. Create data/{mgmt2110}.json with this shape (see CLAUDE.md for full schema):
+       {
+         "storageKey": "lifs3040_quiz_state",
+         "lectures": [
+           { "id": 1, "title": "Lecture 1: ...", "questions": [ ... 30 question objects ... ] }
+         ],
+         "topicSectionMap": { "1": { "topic-name": 0 } }
+       }
+  4. For EACH lecture you add to the JSON, also add a notes page block to THIS HTML,
+     placed where the comment "NOTES PAGES go here" is above. Use this pattern:
+
+       <div id="notes-N" class="page">
+         <a class="btn back" onclick="showPage('home')">← Home</a>
+         <button id="clear-hl-N" class="btn btn-danger" style="display:none;float:right"
+                 onclick="clearWeakHighlights(N)">Clear Highlights</button>
+         <h1>Lecture N: Title</h1>
+
+         <div class="bigpic reveal-on-scroll">
+           One-paragraph framing of why this topic matters.
+         </div>
+
+         <section class="reveal-on-scroll" data-sec="0">
+           <h2>1. Section heading</h2>
+           <p data-topic="Topic name used in questions">Explanation...</p>
+         </section>
+
+         <!-- More sections with data-sec="1", "2", ... -->
+
+         <div class="memorize">
+           <strong>Top things to memorize</strong>
+           <ol>...</ol>
+         </div>
+       </div>
+
+  5. Add a subject card linking to this HTML on index.html.
+  6. Add this subject to CLAUDE.md's Content Status table.
+
+  WHAT NOT TO DO:
+  - Do NOT hand-write the home page lecture cards or quiz containers — they are
+    generated by renderHomeCards() / renderQuizContainers() from JSON.
+  - Do NOT rename question schema fields. Canonical: q, options, answer, explain,
+    topic, difficulty. The renderQuiz / submitQ functions assume these exact names.
+  - Do NOT use the field name `name` for lecture titles — always `title`.
+
+  CACHE INVALIDATION:
+  When you change data/JSON or this HTML, bump mgmt2110-v1 → v2 in the
+  service worker block above so returning users do not get the old version.
+  ============================================================================
+-->
+
+</body>
+</html>

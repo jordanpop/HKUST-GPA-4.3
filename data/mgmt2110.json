@@ -1,0 +1,43 @@
+{
+  "storageKey": "mgmt2110_quiz_state",
+  "lectures": [
+    {
+      "id": 1,
+      "title": "Class 11: Groups and Teams",
+      "questions": []
+    },
+    {
+      "id": 2,
+      "title": "Class 12: Conflicts of Interest",
+      "questions": []
+    },
+    {
+      "id": 3,
+      "title": "Class 13: Negotiation I — Simulation",
+      "questions": []
+    },
+    {
+      "id": 4,
+      "title": "Class 14: Negotiation II",
+      "questions": []
+    },
+    {
+      "id": 5,
+      "title": "Class 15: Leadership",
+      "questions": []
+    },
+    {
+      "id": 6,
+      "title": "Class 16: Ethics",
+      "questions": []
+    }
+  ],
+  "topicSectionMap": {
+    "1": {},
+    "2": {},
+    "3": {},
+    "4": {},
+    "5": {},
+    "6": {}
+  }
+}

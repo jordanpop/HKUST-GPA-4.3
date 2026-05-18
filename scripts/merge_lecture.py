@@ -77,7 +77,7 @@ def check_notes(html, lecture_n):
         errors.append("exam-traps-summary div not found")
 
     # Inline exam-trap divs (separate from summary) — required for in-context warnings
-    inline_traps = len(re.findall(r'class="exam-trap"', html))
+    inline_traps = len(re.findall(r'class="exam-trap(?:-inline)?"', html))
     if inline_traps < 2:
         errors.append(
             f"inline exam-trap divs = {inline_traps}, expected ≥2 (use <div class=\"exam-trap\">…</div> "
@@ -100,10 +100,10 @@ def check_notes(html, lecture_n):
 
     # Bullet lists — body must use multiple lists, not one giant list
     body_lists = len(re.findall(r'<(?:ul|ol)\b', html))
-    # The memorize <ol>, lower-yield <ul>, and exam-traps-summary <ul> contribute 3 baseline lists
-    if body_lists < 5:
+    # The memorize <ol> and exam-traps-summary <ul> contribute 2 baseline lists
+    if body_lists < 4:
         errors.append(
-            f"<ul>/<ol> count = {body_lists}, expected ≥5 (use bullet lists liberally in section bodies, "
+            f"<ul>/<ol> count = {body_lists}, expected ≥4 (use bullet lists liberally in section bodies, "
             f"not just in memorize / exam-traps-summary)"
         )
 
@@ -301,6 +301,7 @@ def merge_hardcoded_html(html_text, lecture_n, lecture_title, notes_html):
 
 def main():
     dry_run = "--dry-run" in sys.argv
+    notes_only = "--notes-only" in sys.argv
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
 
     if len(args) != 2:
@@ -327,24 +328,28 @@ def main():
 
     # Load drafts
     notes_html = load_draft_text(notes_path)
-    questions_raw = load_draft_text(questions_path)
-    topicmap_raw = load_draft_text(topicmap_path)
+    if not notes_only:
+        questions_raw = load_draft_text(questions_path)
+        topicmap_raw = load_draft_text(topicmap_path)
 
     # --- Validation ---
-    print(f"Validating L{lecture_n} drafts for {code}...")
+    print(f"Validating L{lecture_n} drafts for {code}{'  [notes-only]' if notes_only else ''}...")
 
     notes_errors = check_notes(notes_html, lecture_n)
     notes_topics = extract_notes_topics(notes_html)
 
-    questions_errors, questions = check_questions(questions_raw, notes_topics)
-    topicmap_errors, topicmap = check_topicmap(topicmap_raw, notes_topics)
+    if notes_only:
+        questions_errors, questions, topicmap_errors, topicmap = [], [], [], {}
+    else:
+        questions_errors, questions = check_questions(questions_raw, notes_topics)
+        topicmap_errors, topicmap = check_topicmap(topicmap_raw, notes_topics)
 
-    # Subset check: all MCQ topics ⊆ notes topics
-    if questions:
-        mcq_topics = {q["topic"] for q in questions}
-        not_in_notes = mcq_topics - notes_topics
-        if not_in_notes:
-            questions_errors.append(f"MCQ topics not found in notes: {not_in_notes}")
+        # Subset check: all MCQ topics ⊆ notes topics
+        if questions:
+            mcq_topics = {q["topic"] for q in questions}
+            not_in_notes = mcq_topics - notes_topics
+            if not_in_notes:
+                questions_errors.append(f"MCQ topics not found in notes: {not_in_notes}")
 
     all_errors = notes_errors + questions_errors + topicmap_errors
     if all_errors:
@@ -354,9 +359,10 @@ def main():
         fail(f"{len(all_errors)} validation error(s). Fix drafts and retry.")
 
     print(f"  ✓ Notes: {len(re.findall(r'<section', notes_html))} sections, {len(notes_topics)} topics")
-    print(f"  ✓ Questions: {len(questions)} questions")
-    print(f"  ✓ Topicmap: {len(topicmap)} entries")
-    print(f"  ✓ All MCQ topics ⊆ notes data-topic slugs")
+    if not notes_only:
+        print(f"  ✓ Questions: {len(questions)} questions")
+        print(f"  ✓ Topicmap: {len(topicmap)} entries")
+        print(f"  ✓ All MCQ topics ⊆ notes data-topic slugs")
 
     if dry_run:
         print("\nDry run complete — no files modified.")
@@ -372,13 +378,20 @@ def main():
         fail(f"Lecture {lecture_n} already exists in {data_json_path}. Aborting to prevent duplicate.")
 
     # --- Update JSON ---
-    # Find lecture title from notes HTML h1
-    title_match = re.search(rf'<h1>Lecture {lecture_n}:\s*(.*?)</h1>', notes_html)
+    # Find lecture title from notes HTML h1 (supports "Lecture N:" and "Class N:" prefixes)
+    title_match = re.search(rf'<h1>(?:Lecture|Class)\s+\d+:\s*(.*?)</h1>', notes_html)
     lecture_title = title_match.group(1).strip() if title_match else f"Lecture {lecture_n}"
+
+    # Use full h1 text if it starts with "Class N:" pattern, otherwise default "Lecture N: title"
+    full_title_match = re.search(r'<h1>(Class\s+\d+:.*?)</h1>', notes_html)
+    if full_title_match:
+        json_title = full_title_match.group(1).strip()
+    else:
+        json_title = f"Lecture {lecture_n}: {lecture_title}"
 
     lecture_obj = {
         "id": lecture_n,
-        "title": f"Lecture {lecture_n}: {lecture_title}",
+        "title": json_title,
         "questions": questions
     }
     data["lectures"].append(lecture_obj)
@@ -399,9 +412,11 @@ def main():
     html_path.write_text(html_text, encoding="utf-8")
 
     # --- Delete drafts ---
-    for p in [notes_path, questions_path, topicmap_path]:
-        p.unlink()
-        print(f"  Deleted draft: {p.name}")
+    draft_paths = [notes_path] if notes_only else [notes_path, questions_path, topicmap_path]
+    for p in draft_paths:
+        if p.exists():
+            p.unlink()
+            print(f"  Deleted draft: {p.name}")
 
     print(f"\n✓ L{lecture_n} merged successfully — {len(questions)} questions, {len(notes_topics)} topics, cache bumped.")
 
