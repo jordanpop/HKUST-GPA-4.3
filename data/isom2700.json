@@ -1,0 +1,49 @@
+{
+  "storageKey": "isom2700_quiz_state",
+  "lectures": [
+    {
+      "id": 1,
+      "title": "Lecture 1: Demand Management and Forecasting",
+      "questions": []
+    },
+    {
+      "id": 2,
+      "title": "Lecture 2: Demand Management and Forecasting – Forecasting Models",
+      "questions": []
+    },
+    {
+      "id": 6,
+      "title": "Lecture 6: Supply Chain Management",
+      "questions": []
+    },
+    {
+      "id": 7,
+      "title": "Lecture 7: Just in Time System",
+      "questions": []
+    },
+    {
+      "id": 3,
+      "title": "Lecture 3: Inventory Management",
+      "questions": []
+    },
+    {
+      "id": 4,
+      "title": "Lecture 4: Managing Short Life Cycle Products – Newsvendor Model",
+      "questions": []
+    },
+    {
+      "id": 5,
+      "title": "Lecture 5: Revenue Management",
+      "questions": []
+    }
+  ],
+  "topicSectionMap": {
+    "1": {},
+    "2": {},
+    "6": {},
+    "7": {},
+    "3": {},
+    "4": {},
+    "5": {}
+  }
+}

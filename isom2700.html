@@ -1,0 +1,3229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Operations Management Study Guide — ISOM2700</title>
+<style>
+<style>
+:root{
+  --bg:#faf6ef; --paper:#fffdf7; --ink:#2b2a26; --muted:#6b6a63;
+  --accent:#4a6b4a; --accent-soft:#d9e4d3;
+  --wrong:#b85042; --wrong-soft:#f3dad6; --border:#d8d2c4;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.6;}
+.wrap{max-width:760px;margin:0 auto;padding:40px 24px 120px;}
+.page{display:none}
+.page.active{display:block}
+h1{font-size:2.2em;margin:0 0 8px;letter-spacing:.5px}
+h2{font-size:1.5em;color:var(--accent);border-bottom:1px solid var(--border);padding-bottom:6px;margin-top:38px}
+h3{font-size:1.15em;color:var(--ink);margin-top:24px}
+.subtitle{color:var(--muted);font-style:italic;margin-bottom:30px}
+.card{background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:22px;margin:14px 0;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.lec-row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.lec-title{font-size:1.15em;font-weight:bold}
+.btn{display:inline-block;padding:8px 18px;border:1px solid var(--accent);background:var(--paper);color:var(--accent);font-family:inherit;font-size:.95em;cursor:pointer;border-radius:4px;text-decoration:none;transition:all .2s}
+.btn:hover{background:var(--accent);color:var(--paper)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn-primary{background:var(--accent);color:var(--paper)}
+.btn-primary:hover{background:#3a5439}
+.back{margin-bottom:20px;font-size:.9em}
+.bigpic{background:var(--accent-soft);border-left:4px solid var(--accent);padding:14px 18px;margin:18px 0;font-style:italic}
+.callout{background:#fdf4d9;border-left:4px solid #c9a227;padding:14px 18px;margin:20px 0;border-radius:3px}
+.callout-title{font-weight:bold;color:#7a5e0a;margin-bottom:6px;font-style:normal}
+table{border-collapse:collapse;width:100%;margin:14px 0;background:var(--paper)}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--accent-soft)}
+.exam-trap-inline{background:#fdf4d9;border-left:3px solid #c9a227;padding:6px 12px;margin:10px 0;font-size:.92em}
+.exam-trap-inline b{color:#7a5e0a}
+.preview-q{background:var(--accent-soft);border-radius:4px;padding:14px 18px;margin:10px 0}
+.preview-q ol{margin:0;padding-left:22px}
+.lower-yield{color:var(--muted);font-size:.93em;border-top:1px dashed var(--border);padding-top:14px;margin-top:24px}
+.lower-yield ul{margin-top:6px}
+.score-bar{position:sticky;top:0;background:var(--paper);border:1px solid var(--border);padding:12px 18px;margin-bottom:20px;border-radius:4px;font-weight:bold;z-index:10;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.q-block{background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:20px;margin:18px 0}
+.q-num{color:var(--muted);font-size:.88em;margin-bottom:6px}
+.q-text{font-weight:bold;margin-bottom:14px}
+.opt{display:block;padding:10px 14px;margin:6px 0;border:1px solid var(--border);border-radius:4px;cursor:pointer;background:var(--paper);transition:background .15s}
+.opt:hover{background:var(--accent-soft)}
+.opt input{margin-right:10px}
+.opt.correct{background:var(--accent-soft);border-color:var(--accent);animation:slideIn .3s ease}
+.opt.wrong{background:var(--wrong-soft);border-color:var(--wrong);animation:slideIn .3s ease}
+.opt.disabled{cursor:default;opacity:.85}
+@keyframes slideIn{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:translateX(0)}}
+.opt.disabled:hover{background:var(--paper)}
+.opt.disabled.correct:hover{background:var(--accent-soft)}
+.opt.disabled.wrong:hover{background:var(--wrong-soft)}
+.explain{margin-top:12px;padding:12px;background:#f4efe2;border-radius:4px;font-size:.94em;color:var(--ink)}
+.explain b{color:var(--accent)}
+.summary{background:var(--paper);border:2px solid var(--accent);border-radius:6px;padding:24px;margin:30px 0}
+.summary h2{margin-top:0;color:var(--accent);border-bottom:none}
+.score-big{font-size:2.5em;color:var(--accent);font-weight:bold}
+.verdict{font-size:1.1em;margin:10px 0;font-style:italic}
+.theme-list{margin:12px 0}
+.theme-list li{margin:4px 0}
+.review-card{background:var(--paper);border:1px solid var(--wrong);border-radius:6px;padding:18px;margin:14px 0}
+.review-card .q-text{color:var(--wrong)}
+.memorize ol{padding-left:24px}
+.memorize li{margin:6px 0}
+.reveal-on-scroll{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.4,0,.2,1);will-change:opacity,transform}
+.reveal-on-scroll.is-visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+.submit-q{margin-top:10px}
+.quiz-settings{margin-top:12px;padding:10px 14px;background:var(--accent-soft);border-radius:4px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:.92em}
+.quiz-settings label{display:flex;align-items:center;gap:6px;color:var(--ink)}
+.quiz-settings select{font-family:inherit;font-size:.95em;padding:4px 8px;border:1px solid var(--border);border-radius:3px;background:var(--paper);color:var(--ink)}
+.reset-zone{text-align:center;margin-top:20px}
+.btn-danger{border-color:var(--wrong);color:var(--wrong)}
+.btn-danger:hover{background:var(--wrong);color:var(--paper)}
+.weak-highlight{background:rgba(253,222,90,.45);border-radius:3px;transition:background .3s;box-shadow:inset 3px 0 0 #c9a227}
+p.weak-highlight,li.weak-highlight,ul.weak-highlight,ol.weak-highlight,div.weak-highlight,table.weak-highlight{padding:6px 10px;margin:4px 0}
+tr.weak-highlight td,tr.weak-highlight th{background:rgba(253,222,90,.45)}
+tr.weak-highlight{box-shadow:none}
+.weak-h2{background:linear-gradient(transparent 60%,rgba(253,222,90,.55) 60%);padding:0 6px;border-radius:2px}
+/* Progress Ring + Chart Styles */
+.progress-ring-container{position:relative;width:120px;height:120px;margin:20px auto}
+.progress-ring-container svg{width:100%;height:100%}
+.progress-ring-label{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none}
+.progress-percentage{font-size:1.8em;font-weight:bold;color:var(--ink);line-height:1.2}
+.progress-score{font-size:0.9em;color:var(--muted);margin-top:4px}
+.chart-container{margin:20px 0;padding:20px;background:var(--paper);border-radius:6px}
+.bar-chart-item{display:flex;align-items:center;margin:14px 0;gap:12px}
+.bar-chart-label{width:140px;font-size:0.95em;color:var(--ink);flex-shrink:0}
+.bar-chart-bar{flex:1;height:24px;background:var(--accent-soft);border-radius:3px;position:relative;overflow:hidden;border:1px solid var(--accent)}
+.bar-chart-fill{height:100%;background:var(--accent);border-radius:2px;transition:width .6s ease;display:flex;align-items:center;justify-content:flex-end;padding-right:8px}
+.bar-chart-count{font-size:0.85em;color:var(--paper);font-weight:bold}
+.progress-badge{display:inline-block;font-size:0.85em;padding:4px 10px;background:var(--accent-soft);border-radius:4px;color:var(--ink);font-weight:500}
+.verdict-excellent{color:#2d5a2d}
+.verdict-good{color:#4a6b4a}
+.verdict-review{color:#7a6b3a}
+.verdict-weak{color:var(--wrong)}
+@media(max-width:600px){.progress-ring-container{width:100px;height:100px}.progress-percentage{font-size:1.4em}.bar-chart-label{width:100px;font-size:0.88em}}
+</style>
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div id="home" class="page active">
+  <a class="btn back" onclick="window.location.href='index.html'">← Subjects</a>
+  <h1>Operations Management Study Guide</h1>
+  <div class="subtitle">ISOM2700 — Operations Management — Lectures 1–7</div>
+
+  <!-- Lecture cards are generated by JS from data/isom2700.json (see renderHomeCards). -->
+  <div id="lecture-cards"></div>
+
+  <div style="text-align:center;margin-top:40px">
+    <button id="globalReportBtn" class="btn" disabled onclick="showGlobalReport()">Full Summary Report</button>
+  </div>
+  <div class="reset-zone">
+    <button class="btn btn-danger" onclick="resetAllProgress()">Reset All Progress</button>
+  </div>
+</div>
+
+<!-- NOTES PAGES go here -->
+<div id="notes-5" class="page">
+<div id="notes-5" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-5" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(5)">Clear Highlights</button>
+  <h1>Lecture 5: Revenue Management</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    Revenue management (收益管理) is the discipline of selling the right product to the right customer at the right time for the right price. It combines dynamic pricing, capacity control, and overbooking to squeeze maximum revenue out of fixed or perishable capacity. The core insight is that uniform pricing leaves money on the table: customers differ in willingness to pay, and demand accumulates over time in predictable patterns that firms can exploit.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Dynamic Pricing and Willingness to Pay</h2>
+    <p data-topic="dynamic-pricing">
+      Dynamic pricing (動態定價) treats price as a management control variable rather than a fixed parameter.
+    </p>
+    <ul>
+      <li>Revenue formula: <strong>revenue = price × min{demand, capacity}</strong> — maximizing this product requires choosing the right price, not simply the highest one.</li>
+      <li>Willingness to pay (WTP, 願意支付價格) — the maximum amount a customer is willing to incur to obtain one unit of a product or service.</li>
+      <li>Different customers have different WTPs for the same product; firms exploit this via market segmentation (市場細分).</li>
+      <li>WTP is determined by: customer characteristics (income, gender), product characteristics (quality, brand), and availability of substitutes (替代品).</li>
+    </ul>
+    <p data-topic="wtp-optimization">
+      Revenue maximization with heterogeneous WTP — key mechanics:
+    </p>
+    <ul>
+      <li>List all WTP values and frequencies; compute cumulative demand at each price (customers with WTP ≥ price will buy).</li>
+      <li>Revenue at each candidate price = price × cumulative demand at that price.</li>
+      <li>Textbook example: WTP values $20–$80 with frequencies 6–28; revenue peaks at <strong>price = $40</strong> yielding <strong>$3,360</strong>.</li>
+      <li>Fixed-price strategy captures only one segment; variable pricing across segments captures additional revenue.</li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr><th>WTP</th><th>Frequency</th><th>Cumulative Demand</th><th>Revenue</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>$80</td><td>10</td><td>10</td><td>$800</td></tr>
+        <tr><td>$70</td><td>12</td><td>22</td><td>$1,540</td></tr>
+        <tr><td>$60</td><td>14</td><td>36</td><td>$2,160</td></tr>
+        <tr><td>$50</td><td>28</td><td>64</td><td>$3,200</td></tr>
+        <tr><td><strong>$40</strong></td><td><strong>20</strong></td><td><strong>84</strong></td><td><strong>$3,360 ← max</strong></td></tr>
+        <tr><td>$30</td><td>10</td><td>94</td><td>$2,820</td></tr>
+        <tr><td>$20</td><td>6</td><td>100</td><td>$2,000</td></tr>
+      </tbody>
+    </table>
+
+    <p data-topic="dynamic-pricing-practice">
+      Industry applications of dynamic pricing:
+    </p>
+    <ul>
+      <li>Amazon changes prices frequently (e.g., textbook price history from $151 to $273 on the same listing).</li>
+      <li>Hotels use a demand control chart (需求控制圖) — plots expected vs. actual reservation accumulation over days before arrival to trigger price adjustments.</li>
+      <li>Concert ticket resale platforms (e.g., StubHub) exhibit live dynamic pricing based on remaining supply and demand signals.</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="wtp-optimization"><b>Exam trap:</b> The revenue-maximizing price is NOT always the highest WTP. You must compute price × cumulative demand at every candidate price and compare — the optimum is often a mid-range price where cumulative demand is large enough to compensate for the lower price.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Capacity Control and Protection Levels</h2>
+    <p data-topic="capacity-control">
+      Capacity control (產能控制) allocates limited seats or rooms across fare classes (票價等級) to maximize total revenue. Airlines routinely sell the same physical seat at multiple price points depending on when and how the ticket is booked.
+    </p>
+    <ul>
+      <li>Protection level (保護水平) Q — number of units reserved for the high-fare class or higher; low-fare bookings are blocked once this threshold is hit.</li>
+      <li>Booking limit (訂位上限) — maximum units that may be sold at the discounted fare = total capacity − protection level.</li>
+      <li>Two-class model: full fare f_H vs. discount fare f_L; passengers always book discount first while seats remain available; last-minute full-fare demand follows a known distribution.</li>
+    </ul>
+    <p data-topic="protection-level-costs">
+      Cost trade-off for setting protection level Q:
+    </p>
+    <ul>
+      <li><strong>C_o (overage cost)</strong> — set Q too high: reserved a seat at full fare that went unsold; loss = f_L (could have sold at discount).</li>
+      <li><strong>C_u (underage cost)</strong> — set Q too low: sold a seat at discount that a full-fare customer would have paid; loss = f_H − f_L.</li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr><th>Cost type</th><th>Trigger</th><th>Formula</th><th>Airline example value</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Overage C_o</td><td>Protect level too high (seat unsold)</td><td>f_L</td><td>$5,250</td></tr>
+        <tr><td>Underage C_u</td><td>Protect level too low (seat sold cheap)</td><td>f_H − f_L</td><td>$7,950 − $5,250 = $2,700</td></tr>
+      </tbody>
+    </table>
+
+    <p data-topic="newsvendor-protection">
+      Marginal analysis (邊際分析) decision rule — keep increasing Q until:
+    </p>
+    <ul>
+      <li>Expected cost of over-protecting = Expected cost of under-protecting</li>
+      <li><strong>Critical factor (關鍵因子): F(Q*) = C_u / (C_u + C_o)</strong></li>
+      <li>Airline example: F(Q*) = 2700 / (2700 + 5250) = <strong>0.3396</strong>; z = −0.41; Q* = 25 + (−0.41)(5) = <strong>23 seats</strong>.</li>
+      <li>Hotel example (discrete data): full rate $159, discount $105; C_u = 54, C_o = 105; F(Q*) = 0.3396 → Q* = <strong>79 rooms</strong>.</li>
+      <li>Double-check rule: continue increasing Q while (1 − F(Q)) × f_H ≥ f_L. Stop when expected revenue from the next protected unit falls below the discount fare.</li>
+    </ul>
+
+    <p data-topic="decision-tree-protection">
+      Decision tree (決策樹) framing for the Q-to-Q+1 choice:
+    </p>
+    <ul>
+      <li>Choose "No" (keep Q): earn f_L for sure.</li>
+      <li>Choose "Yes" (protect Q+1): earn f_H with probability P(D > Q) = 1 − F(Q); earn $0 with probability F(Q).</li>
+      <li>Increase to Q+1 while: (1 − F(Q)) × f_H ≥ f_L, equivalently F(Q) ≤ (f_H − f_L) / f_H.</li>
+    </ul>
+
+    <p data-topic="multiple-fare-classes">
+      Multiple fare classes extension:
+    </p>
+    <ul>
+      <li>When f_1 > f_2 > f_3 > … > f_n, use a nested booking limit (巢式訂位上限) structure.</li>
+      <li>Each lower fare class has access to seats not reserved for higher classes; limits nest inside each other.</li>
+      <li>The same critical-factor formula applies pairwise between adjacent fare classes.</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="newsvendor-protection"><b>Exam trap:</b> In capacity control, C_o = f_L (the discount fare, not zero) and C_u = f_H − f_L (the revenue difference, not the full fare). Students commonly set C_o = 0 or C_u = f_H — both are wrong. The seat is not worthless unsold if a discount buyer existed; the opportunity cost is f_L.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Overbooking</h2>
+    <p data-topic="overbooking-concept">
+      Overbooking (超額預訂) means selling more reservations than actual capacity to hedge against no-shows (未出現) and cancellations (取消). Because no-show quantity is random, the firm must choose an overbooking quantity Q that balances the two error costs.
+    </p>
+    <ul>
+      <li><strong>C_u (underestimating no-shows)</strong> — actual no-shows exceed Q, leaving capacity empty; cost = lost revenue per empty seat (e.g., ticket price = $50).</li>
+      <li><strong>C_o (overestimating no-shows)</strong> — actual no-shows fewer than Q, so more customers arrive than seats; cost = compensation per denied-boarding passenger (e.g., $120 or $300 + original ticket).</li>
+    </ul>
+
+    <p data-topic="overbooking-approach1">
+      Approach 1 — Simple average (簡單平均法):
+    </p>
+    <ul>
+      <li>Set Q = E(# no-shows) = weighted average of the no-show distribution.</li>
+      <li>Textbook example: E(# no-shows) = 0(0.05) + 1(0.1) + 2(0.2) + … + 10(0.05) = <strong>4.05 → Q = 4</strong>.</li>
+      <li>Limitation: ignores the asymmetry between C_u and C_o; may be far from optimal when costs differ significantly.</li>
+    </ul>
+
+    <p data-topic="overbooking-approach2">
+      Approach 2 — Payoff table (損益表):
+    </p>
+    <ul>
+      <li>Construct a matrix: rows = actual no-show levels (with probabilities), columns = overbooking quantities Q.</li>
+      <li>Cell cost = C_u × max(no-shows − Q, 0) + C_o × max(Q − no-shows, 0).</li>
+      <li>Compute E(Total cost) for each column Q; choose the Q with minimum expected cost.</li>
+      <li>Textbook result (C_u = $50, C_o = $120): minimum cost at <strong>Q = 2</strong> ($137); Q = 0 costs $203, Q = 1 costs $161, Q = 3 costs $146, Q = 4 costs $181, Q = 5 costs $242.</li>
+    </ul>
+
+    <p data-topic="overbooking-approach3">
+      Approach 3 — Marginal analysis (newsvendor model, 報童模型):
+    </p>
+    <ul>
+      <li>Continue overbooking until: expected cost of overbooking = expected cost of empty capacity.</li>
+      <li><strong>Critical factor: F(Q*) = C_u / (C_u + C_o)</strong> — same formula as capacity control.</li>
+      <li>Discrete example (C_u = $50, C_o = $120): critical factor = 50 / 170 = <strong>0.2941</strong> → Q* = <strong>2</strong> (first Q where cumulative probability ≥ 0.2941).</li>
+      <li>Overbooking example with normal distribution (C_u = $105, C_o = $300): critical factor = 105 / 405 = <strong>0.259</strong>; z = −0.65; Q* = 20 + (−0.65)(10) = <strong>13.5 → 13 seats</strong> (verified by marginal check).</li>
+      <li>Hotel overbooking example (C_u = $80, C_o = $200): critical factor = 80 / 280 = <strong>0.2857</strong> → Q* = <strong>3 rooms</strong> (discrete) or Q* = 5 + (−0.565)(3) = 3.3 ≈ <strong>3</strong> (normal).</li>
+    </ul>
+
+    <p data-topic="overbooking-verification">
+      Verification via marginal condition (for non-0.5 rounding edge cases):
+    </p>
+    <ul>
+      <li>Check both Q and Q+1: compare [F(Q)][C_o] vs. [1 − F(Q)][C_u].</li>
+      <li>Continue overbooking while [F(Q)][C_o] &lt; [1 − F(Q)][C_u]; stop when equality is crossed.</li>
+      <li>Course rule: use standard rounding to the nearest integer in exams and exercises.</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="overbooking-approach3"><b>Exam trap:</b> The net overage cost in overbooking problems is often C_o = (total denied-boarding cost) − (ticket price already paid), not the full stated compensation. For example, if denied-boarding total cost = $405 and ticket = $105, then net C_o = $300. Always subtract the ticket price already received.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Marginal Analysis — General Framework</h2>
+    <p data-topic="marginal-analysis-general">
+      The newsvendor (報童模型) / marginal analysis (邊際分析) framework unifies capacity control and overbooking. It answers: how much of a scarce resource (稀缺資源) should I commit to a use, given uncertain demand?
+    </p>
+    <ul>
+      <li>Core logic: increase quantity Q by 1 as long as <strong>expected marginal benefit (預期邊際收益) &gt; expected marginal cost</strong>.</li>
+      <li>Marginal cost = C_o × P(D &lt; Q) = C_o × F(Q) — the cost of having too much.</li>
+      <li>Marginal benefit = C_u × P(D ≥ Q) = C_u × [1 − F(Q)] — the opportunity cost (機會成本) of having too little.</li>
+      <li>Optimal condition: <strong>F(Q*) = C_u / (C_u + C_o)</strong> — the critical fractile (關鍵分位數).</li>
+      <li>Q* is the smallest Q such that P(D ≤ Q) ≥ critical factor (round-up rule for discrete distributions (離散分佈)).</li>
+    </ul>
+
+    <p data-topic="critical-factor-implications">
+      Implications of relative cost magnitudes:
+    </p>
+    <ul>
+      <li>If C_u &gt; C_o → critical factor &gt; 0.5 → stock more (lean toward over-supplying (過度供應)).</li>
+      <li>If C_u &lt; C_o → critical factor &lt; 0.5 → stock less (lean toward under-supplying).</li>
+      <li>Increasing C_u raises Q*; increasing C_o decreases Q*.</li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr><th>Situation</th><th>C_u vs C_o</th><th>Critical factor</th><th>Implication</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Capacity control</td><td>C_u = f_H − f_L; C_o = f_L</td><td>Depends on fare ratio</td><td>Protect fewer seats when discount fare is high relative to gap</td></tr>
+        <tr><td>Overbooking</td><td>C_u = ticket price; C_o = compensation cost</td><td>Usually &lt; 0.5</td><td>Overbook conservatively when compensation is costly</td></tr>
+        <tr><td>Newsvendor (general)</td><td>C_u = profit margin (利潤率); C_o = salvage loss (殘值損失)</td><td>High margin → high Q*</td><td>Produce more when margin far exceeds salvage loss</td></tr>
+      </tbody>
+    </table>
+
+    <p data-topic="newsvendor-examples">
+      Additional worked examples:
+    </p>
+    <ul>
+      <li><strong>Donuts (discrete):</strong> C_u = $3, C_o = $4; critical factor = 3/7 = 0.4286; from distribution table, optimal Q* = <strong>20 dozens</strong> (first Q where F(Q) ≥ 0.4286).</li>
+      <li><strong>Normal demand (常態需求分佈):</strong> μ = 100, σ = 20; C_u = $150 − $30 = $120; C_o = $30 − $20 = $10; critical factor = 120/130 = 0.9231; z = 1.43; Q* = 100 + (1.43)(20) = <strong>129 units</strong>.</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="critical-factor-implications"><b>Exam trap:</b> The critical factor formula is always C_u / (C_u + C_o) — not C_u / C_o and not C_o / (C_u + C_o). Mixing up numerator and denominator gives a complementary probability, leading to a Q* on the wrong side of the distribution.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Revenue Management Strategy and Framework</h2>
+    <p data-topic="rm-framework">
+      Revenue management (RM) sits at the intersection of strategic and operational decisions. The framework organises decisions into two tiers:
+    </p>
+    <ul>
+      <li><strong>Strategic decisions</strong> (策略決策) — dynamic pricing, forecasting (需求預測), market segmentation (市場區隔), and optimization (最優化).</li>
+      <li><strong>Tactical / operational decisions</strong> (戰術與運營決策) — yield management (收益管理), overbooking, and capacity control.</li>
+    </ul>
+    <p data-topic="rm-three-questions">
+      Three core questions guiding RM practice:
+    </p>
+    <ul>
+      <li><em>Who</em> is the right customer? → Market segmentation.</li>
+      <li><em>What</em> is the right product? → Product differentiation (產品差異化) (e.g., fare codes XS, Y, B, M, L, Q with different restrictions).</li>
+      <li><em>When</em> is the right time and what is the right price? → Dynamic pricing and capacity allocation.</li>
+    </ul>
+    <p data-topic="airline-seat-class">
+      Airline seat class allocation (座位等級分配) in practice:
+    </p>
+    <ul>
+      <li>Economy class seats carry multiple fare codes (e.g., Y, B, M, Q, XS) — same physical seat but different price, flexibility, and booking restrictions.</li>
+      <li>Seasonal allocation adjusts percentages across fare codes: e.g., more discount seats in off-peak winter, more full-fare seats in peak summer.</li>
+      <li>Booking limits and protection levels are adjusted dynamically as the departure date approaches and demand data accumulates.</li>
+    </ul>
+
+    <svg viewBox="0 0 540 160" xmlns="http://www.w3.org/2000/svg" style="max-width:540px;width:100%;display:block;margin:1rem auto">
+      <!-- RM Strategy Flow -->
+      <rect x="10" y="60" width="110" height="40" rx="6" fill="#d4edda" stroke="#4a7c59" stroke-width="1.5"/>
+      <text x="65" y="75" text-anchor="middle" font-size="11" font-family="Georgia,serif" fill="#2d4a35">Dynamic</text>
+      <text x="65" y="89" text-anchor="middle" font-size="11" font-family="Georgia,serif" fill="#2d4a35">Pricing</text>
+      <rect x="140" y="60" width="110" height="40" rx="6" fill="#d4edda" stroke="#4a7c59" stroke-width="1.5"/>
+      <text x="195" y="75" text-anchor="middle" font-size="11" font-family="Georgia,serif" fill="#2d4a35">Capacity</text>
+      <text x="195" y="89" text-anchor="middle" font-size="11" font-family="Georgia,serif" fill="#2d4a35">Control</text>
+      <rect x="270" y="60" width="110" height="40" rx="6" fill="#d4edda" stroke="#4a7c59" stroke-width="1.5"/>
+      <text x="325" y="75" text-anchor="middle" font-size="11" font-family="Georgia,serif" fill="#2d4a35">Over-</text>
+      <text x="325" y="89" text-anchor="middle" font-size="11" font-family="Georgia,serif" fill="#2d4a35">booking</text>
+      <!-- arrows -->
+      <line x1="120" y1="80" x2="138" y2="80" stroke="#4a7c59" stroke-width="1.5" marker-end="url(#arr)"/>
+      <line x1="250" y1="80" x2="268" y2="80" stroke="#4a7c59" stroke-width="1.5" marker-end="url(#arr)"/>
+      <line x1="380" y1="80" x2="418" y2="80" stroke="#4a7c59" stroke-width="1.5" marker-end="url(#arr)"/>
+      <rect x="420" y="55" width="110" height="50" rx="6" fill="#fff3cd" stroke="#856404" stroke-width="1.5"/>
+      <text x="475" y="73" text-anchor="middle" font-size="11" font-family="Georgia,serif" fill="#4d3800">Max</text>
+      <text x="475" y="87" text-anchor="middle" font-size="11" font-family="Georgia,serif" fill="#4d3800">Revenue</text>
+      <text x="475" y="100" text-anchor="middle" font-size="10" font-family="Georgia,serif" fill="#856404">(收益最大化)</text>
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#4a7c59"/>
+        </marker>
+      </defs>
+      <text x="270" y="145" text-anchor="middle" font-size="10" font-family="Georgia,serif" fill="#666">Three levers of Revenue Management</text>
+    </svg>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>The revenue-maximizing price is NOT always the highest WTP — compute price × cumulative demand at every price point; the optimum is often a mid-range price.</li>
+      <li>In capacity control, C_o = f_L (discount fare) and C_u = f_H − f_L (fare gap) — do NOT use C_o = 0 or C_u = f_H.</li>
+      <li>In overbooking, the net overage cost C_o = total denied-boarding cost MINUS the ticket price already paid (since the firm keeps the ticket revenue regardless).</li>
+      <li>The critical factor formula is C_u / (C_u + C_o) — NOT C_u / C_o and NOT C_o / (C_u + C_o).</li>
+      <li>For the rounding edge case (z giving Q*.5), verify the marginal condition for both Q and Q+1 rather than blindly rounding up; in this course, standard rounding is used unless stated otherwise.</li>
+      <li>Booking limit and protection level are complementary: booking limit = total capacity − protection level. Mixing them up reverses your answer.</li>
+      <li>Approach 1 (simple average) ignores cost asymmetry and is generally suboptimal — always prefer the marginal analysis (critical-factor) approach when cost data is given.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Revenue = price × min{demand, capacity}; optimal price maximizes this product, not the unit price alone.</li>
+      <li>Critical factor (newsvendor / capacity control / overbooking): <strong>F(Q*) = C_u / (C_u + C_o)</strong>.</li>
+      <li>Capacity control: C_o = f_L (discount fare); C_u = f_H − f_L (fare gap).</li>
+      <li>Overbooking: C_u = price of empty seat (ticket price); C_o = net compensation cost (total compensation − ticket price already paid).</li>
+      <li>Decision rule: increase Q while [F(Q)][C_o] &lt; [1 − F(Q)][C_u]; stop at equality.</li>
+      <li>Normal distribution solution: Q* = μ + z·σ, where z is read from the standard normal table for F(Q*) = critical factor.</li>
+      <li>Discrete distribution: Q* = smallest Q where cumulative F(Q) ≥ critical factor (round-up rule).</li>
+      <li>Increasing C_u raises Q*; increasing C_o lowers Q*.</li>
+      <li>Protection level + booking limit = total capacity (they are complements, not additive).</li>
+      <li>Multiple fare classes use nested booking limits: each lower class can access seats not protected for higher classes.</li>
+      <li>The three RM questions: who (segmentation), what (product differentiation), when/price (dynamic pricing + capacity allocation).</li>
+    </ol>
+  </div>
+</div>
+</div>
+
+<div id="notes-4" class="page">
+<div id="notes-4" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-4" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(4)">Clear Highlights</button>
+  <h1>Lecture 4: Managing Short Life Cycle Products – Newsvendor Model</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    When products perish, go out of season, or become obsolete quickly, the usual replenishment logic breaks down: you must commit to an order quantity before you know actual demand, and any surplus or shortage carries a direct cost. The Newsvendor Model (報攤模型) gives a principled answer to this one-shot ordering decision by balancing the cost of over-ordering against the cost of under-ordering through a single number called the Critical Ratio (臨界比率). Mastering this model means understanding both the formula and the two computational approaches — marginal analysis for discrete demand and the normal-distribution formula for continuous demand.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. The Newsvendor Problem: Setup and Motivation</h2>
+    <p data-topic="newsvendor-definition">
+      The newsvendor problem (報攤問題) captures any situation with three features simultaneously:
+    </p>
+    <ul>
+      <li>Uncertain demand (不確定需求) — demand is unknown at order time; only a probability distribution is available.</li>
+      <li>Pre-commitment (預先承諾) — the order quantity must be chosen before demand is observed; there is only one ordering opportunity.</li>
+      <li>Short product life cycle (短產品生命週期) — leftover inventory loses value or all value after the season ends; salvage value (殘值) is typically below cost.</li>
+    </ul>
+    <p data-topic="newsvendor-examples">
+      Real-world examples span many industries:
+    </p>
+    <ul>
+      <li>Fashion apparel (時裝), festive products (節慶商品) — Christmas trees, decorations</li>
+      <li>Special-event merchandise (特殊活動商品) — event T-shirts, holiday turkeys</li>
+      <li>Technology with rapid obsolescence (快速淘汰) — video games, computers, cell phones</li>
+      <li>Healthcare — flu vaccines (流感疫苗), perishable biologics</li>
+    </ul>
+    <p data-topic="newsvendor-tradeoff">
+      The core trade-off (核心取捨):
+    </p>
+    <ul>
+      <li>Q &lt; D → lost sales (缺貨損失): foregone profit on units you could have sold</li>
+      <li>Q &gt; D → markdown cost (降價損失): units sold below cost or disposed</li>
+      <li>Ordering the average (平均值) is not necessarily optimal — the correct quantity depends on the relative sizes of these two costs.</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="newsvendor-tradeoff"><b>Exam trap:</b> Students often assume ordering the average demand is always optimal. It is not — optimal quantity shifts above or below the mean depending on whether underage or overage cost dominates.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Cost Structure and the Critical Ratio</h2>
+    <p data-topic="cost-structure">
+      Define the two unit mismatch costs (不匹配成本):
+    </p>
+    <ul>
+      <li><b>Overage cost C<sub>o</sub></b> (超額成本) — cost per unit of surplus when Q &gt; D; e.g., purchase cost minus salvage value: C<sub>o</sub> = cost − salvage</li>
+      <li><b>Underage cost C<sub>u</sub></b> (短缺成本) — cost per unit of shortage when Q &lt; D; e.g., lost margin: C<sub>u</sub> = selling price − cost</li>
+    </ul>
+    <p data-topic="mismatch-cost-formula">
+      Total mismatch cost for a given order Q and realized demand D:
+    </p>
+    <ul>
+      <li>G(Q, D) = C<sub>o</sub> · max(0, Q − D) + C<sub>u</sub> · max(0, D − Q)</li>
+      <li>Objective: find Q* that minimizes expected cost G(Q) = E[G(Q, D)]</li>
+    </ul>
+    <p data-topic="critical-ratio">
+      The Critical Ratio (臨界比率) CR is the threshold cumulative probability that solves the optimization:
+    </p>
+    <ul>
+      <li>CR = C<sub>u</sub> / (C<sub>u</sub> + C<sub>o</sub>)</li>
+      <li>Optimal condition: F(Q*) = P(D ≤ Q*) = CR</li>
+      <li>Derivation: at Q*, expected marginal overage cost equals expected marginal underage cost — P(D ≤ Q) · C<sub>o</sub> = P(D &gt; Q) · C<sub>u</sub> = [1 − P(D ≤ Q)] · C<sub>u</sub></li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Scenario</th>
+          <th>Cost relationship</th>
+          <th>Critical Ratio</th>
+          <th>Ordering posture</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fashion apparel (時裝)</td>
+          <td>C<sub>u</sub> = $300 &gt;&gt; C<sub>o</sub> = $20</td>
+          <td>300 / 320 ≈ 94%</td>
+          <td>Aggressive (積極); over-stock</td>
+        </tr>
+        <tr>
+          <td>IBM ThinkPad (舊型號)</td>
+          <td>C<sub>u</sub> ≈ 0, C<sub>o</sub> &gt; 0</td>
+          <td>≈ 0%</td>
+          <td>Conservative (保守); under-plan</td>
+        </tr>
+        <tr>
+          <td>Cookies King (校園餅店)</td>
+          <td>C<sub>u</sub> = $3, C<sub>o</sub> = $2</td>
+          <td>3 / 5 = 60%</td>
+          <td>Slightly above median</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p data-topic="critical-ratio-insight">
+      Key insight (關鍵洞見):
+    </p>
+    <ul>
+      <li>If C<sub>u</sub> &gt;&gt; C<sub>o</sub>: stockout is very costly → CR near 1 → order more than expected demand (over-stock strategy).</li>
+      <li>If C<sub>u</sub> &lt;&lt; C<sub>o</sub>: surplus is very costly → CR near 0 → order less than expected demand (under-plan strategy).</li>
+      <li>Optimal Q* depends on BOTH the demand distribution AND the cost structure — never on one alone.</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="critical-ratio"><b>Exam trap:</b> C<sub>u</sub> and C<sub>o</sub> are defined as per-unit mismatch costs, not total revenue or total cost. Always derive them as incremental values: C<sub>o</sub> = purchase cost − salvage; C<sub>u</sub> = selling price − purchase cost.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Solution Approach 1 — Payoff Table (Discrete Demand)</h2>
+    <p data-topic="payoff-table">
+      Used when demand is discrete (離散需求) with a small number of possible values. Steps:
+    </p>
+    <ol>
+      <li>List all possible demand values D and their probabilities P(D).</li>
+      <li>For each combination of order quantity Q and demand D, compute net profit:
+        <ul>
+          <li>If D ≥ Q: profit = C<sub>u</sub> · Q (sell everything ordered)</li>
+          <li>If D &lt; Q: profit = C<sub>u</sub> · D − C<sub>o</sub> · (Q − D) (sell D, mark down Q−D)</li>
+        </ul>
+      </li>
+      <li>Compute expected value (期望值) EV for each row Q: EV = Σ [profit(Q,D) · P(D)].</li>
+      <li>Choose Q* with the highest EV.</li>
+    </ol>
+    <p data-topic="cookies-king-payoff">
+      Cookies King example (餅店例子) — parameters:
+    </p>
+    <ul>
+      <li>Selling price = $7.9/unit; Cost = $4.9/unit; Markdown price = $2.9/unit</li>
+      <li>C<sub>u</sub> = 7.9 − 4.9 = $3/unit; C<sub>o</sub> = 4.9 − 2.9 = $2/unit</li>
+      <li>Demand distribution: 1,800–3,000 units in 200-unit steps with probabilities 0.05, 0.10, 0.20, 0.30, 0.20, 0.10, 0.05</li>
+    </ul>
+    <p data-topic="cookies-king-payoff">
+      Payoff table result:
+    </p>
+    <ul>
+      <li>Q* = 2,400 units with expected profit = $6,650</li>
+      <li>EV calculation example for Q = 2,800: 3,400(0.05) + 4,400(0.1) + 5,400(0.2) + 6,400(0.3) + 7,400(0.2) + 8,400(0.1) + 8,400(0.05) = $6,350</li>
+    </ul>
+
+    <svg viewBox="0 0 560 120" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;display:block;margin:1em auto">
+      <rect x="0" y="0" width="560" height="120" fill="#f9f6ef" rx="8"/>
+      <!-- Q axis -->
+      <line x1="40" y1="100" x2="520" y2="100" stroke="#555" stroke-width="1.5"/>
+      <text x="530" y="104" font-size="11" fill="#555">Q</text>
+      <!-- EV bars approximated -->
+      <rect x="55"  y="64" width="52" height="36" fill="#a8c49a" opacity="0.8"/>
+      <rect x="120" y="52" width="52" height="48" fill="#a8c49a" opacity="0.8"/>
+      <rect x="185" y="30" width="52" height="70" fill="#a8c49a" opacity="0.8"/>
+      <rect x="250" y="18" width="52" height="82" fill="#4a8c3f"/>
+      <rect x="315" y="22" width="52" height="78" fill="#a8c49a" opacity="0.8"/>
+      <rect x="380" y="38" width="52" height="62" fill="#a8c49a" opacity="0.8"/>
+      <rect x="445" y="55" width="52" height="45" fill="#a8c49a" opacity="0.8"/>
+      <!-- Labels -->
+      <text x="60"  y="114" font-size="9" fill="#555">1800</text>
+      <text x="125" y="114" font-size="9" fill="#555">2000</text>
+      <text x="190" y="114" font-size="9" fill="#555">2200</text>
+      <text x="255" y="114" font-size="9" fill="#333" font-weight="bold">2400★</text>
+      <text x="320" y="114" font-size="9" fill="#555">2600</text>
+      <text x="385" y="114" font-size="9" fill="#555">2800</text>
+      <text x="450" y="114" font-size="9" fill="#555">3000</text>
+      <text x="276" y="14" font-size="9" fill="#333" font-weight="bold">Max EV</text>
+      <text x="10"  y="60"  font-size="9" fill="#555" transform="rotate(-90,14,60)">EV($)</text>
+    </svg>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Solution Approach 2 — Marginal Analysis (Discrete Demand)</h2>
+    <p data-topic="marginal-analysis">
+      Marginal analysis (邊際分析) asks: should we stock the (Q+1)th unit? Stop increasing Q when expected marginal cost ≥ expected marginal benefit.
+    </p>
+    <ul>
+      <li>Expected marginal cost of the (Q+1)th unit = P(D ≤ Q) · C<sub>o</sub></li>
+      <li>Expected marginal benefit of the (Q+1)th unit = P(D &gt; Q) · C<sub>u</sub> = [1 − P(D ≤ Q)] · C<sub>u</sub></li>
+      <li>Optimality condition (最優條件): P(D ≤ Q*) · C<sub>o</sub> = [1 − P(D ≤ Q*)] · C<sub>u</sub></li>
+      <li>Solving: P(D ≤ Q*) = C<sub>u</sub> / (C<sub>u</sub> + C<sub>o</sub>) = Critical Ratio</li>
+    </ul>
+    <p data-topic="marginal-analysis-procedure">
+      Procedure for discrete demand (離散需求程序):
+    </p>
+    <ol>
+      <li>Compute CR = C<sub>u</sub> / (C<sub>u</sub> + C<sub>o</sub>).</li>
+      <li>Build a cumulative probability table (累積機率表) P(D ≤ Q) for each possible Q value.</li>
+      <li>Find the smallest Q* such that P(D ≤ Q*) ≥ CR.</li>
+    </ol>
+    <p data-topic="cookies-king-marginal">
+      Cookies King via marginal analysis:
+    </p>
+    <ul>
+      <li>CR = 3 / (3 + 2) = 0.60</li>
+      <li>P(D ≤ 2,200) = 0.35; P(D ≤ 2,400) = 0.65 — first value ≥ 0.60 → Q* = 2,400</li>
+      <li>Expected profit at Q* = 2,400: 4,200(0.05) + 5,200(0.10) + 6,200(0.20) + 7,200(0.65) = $6,650 — matches payoff table</li>
+    </ul>
+    <p data-topic="fashion-discrete-example">
+      Fashion item example (時裝例子) — department store:
+    </p>
+    <ul>
+      <li>Cost = $100; Selling price = $190; Outlet price (特賣價) = $80; Season = 1 month; Past 100 seasons of data</li>
+      <li>C<sub>o</sub> = 100 − 80 = $20/unit; C<sub>u</sub> = 190 − 100 = $90/unit</li>
+      <li>CR = 90 / (90 + 20) = 0.8182</li>
+      <li>From cumulative frequency table (累積頻率表): P(D ≤ 88) = 0.78; P(D ≤ 89) = 0.84 — first ≥ 0.8182 → Q* = 89 units</li>
+      <li>Mean = 85 units, σ = 4.43 units; ordering at 81.82% service level places Q* well above the mean</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="marginal-analysis-procedure"><b>Exam trap:</b> When using a discrete cumulative table, select the smallest Q where P(D ≤ Q) is at least (≥) the Critical Ratio — not strictly greater than. If P(D ≤ Q) exactly equals CR, that Q is already optimal; do not move to the next level.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Solution Approach 3 — Normal Distribution (Continuous Demand)</h2>
+    <p data-topic="normal-distribution-approach">
+      When demand is approximately normally distributed (常態分佈) — typically when the number of possible demand values is large — use the standard normal formula:
+    </p>
+    <ul>
+      <li>Q* = μ + z · σ</li>
+      <li>μ = mean demand (平均需求); σ = standard deviation (標準差); z = z-score (標準分) corresponding to CR from the standard normal table</li>
+      <li>If z &lt; 0, Q* &lt; μ — optimal to order below average (conservative posture).</li>
+      <li>If z &gt; 0, Q* &gt; μ — optimal to order above average (aggressive posture).</li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Example</th>
+          <th>μ</th>
+          <th>σ</th>
+          <th>C<sub>u</sub></th>
+          <th>C<sub>o</sub></th>
+          <th>CR</th>
+          <th>z</th>
+          <th>Q*</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Mr. Choi SCMP (報紙)</td>
+          <td>100</td>
+          <td>12</td>
+          <td>$3</td>
+          <td>$4</td>
+          <td>0.4286</td>
+          <td>−0.18</td>
+          <td>≈ 98 copies</td>
+        </tr>
+        <tr>
+          <td>Fashion item (時裝)</td>
+          <td>85</td>
+          <td>4.43</td>
+          <td>$90</td>
+          <td>$20</td>
+          <td>0.8182</td>
+          <td>0.91</td>
+          <td>89 units</td>
+        </tr>
+        <tr>
+          <td>Christmas trees (聖誕樹)</td>
+          <td>21,550</td>
+          <td>4,260</td>
+          <td>$5</td>
+          <td>$1.5</td>
+          <td>0.77</td>
+          <td>≈ 0.74</td>
+          <td>≈ 24,690 units</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p data-topic="normal-distribution-steps">
+      Step-by-step procedure (常態分佈求解步驟):
+    </p>
+    <ol>
+      <li>Identify μ and σ — from historical data, regression model, or given distribution parameters.</li>
+      <li>Compute C<sub>u</sub> and C<sub>o</sub> from price, cost, and salvage value.</li>
+      <li>Compute CR = C<sub>u</sub> / (C<sub>u</sub> + C<sub>o</sub>).</li>
+      <li>Look up z such that Φ(z) = CR from the standard normal table (or use Excel: NORMINV(CR, μ, σ)).</li>
+      <li>Q* = μ + z · σ. Round to nearest integer.</li>
+    </ol>
+    <p data-topic="christmas-tree-demand-forecast">
+      Christmas tree demand forecast (聖誕樹需求預測) — two-step process:
+    </p>
+    <ul>
+      <li>Step 1 — Estimate μ and σ: fit a linear regression (線性迴歸) to historical sales data; use regression equation to predict mean for next year; use STDEV of residuals as σ.</li>
+      <li>Example equation: Sales = 10.95k + 0.2k × year; for year 53: μ = 10.95 + 0.2(53) = 21.55k; σ = 4.26k</li>
+      <li>Step 2 — Apply newsvendor formula: C<sub>o</sub> = 2.5 − 1.0 = $1.5; C<sub>u</sub> = 7.5 − 2.5 = $5.0; CR = 5 / 6.5 = 0.77; Q* = 21,550 + z(4,260) ≈ 24,690 units</li>
+    </ul>
+    <p data-topic="effect-of-service-level">
+      Effect of service level (服務水準) on Q* — fashion item illustration:
+    </p>
+    <ul>
+      <li>85% service level: z = 1.04 → Q* = 90 units</li>
+      <li>90% service level: z = 1.28 → Q* = 91 units</li>
+      <li>95% service level: z = 1.64 → Q* = 93 units</li>
+      <li>99% service level: z = 2.33 → Q* = 96 units</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="normal-distribution-approach"><b>Exam trap:</b> For Mr. Choi's newspaper problem, the critical ratio is 3/(3+4) = 0.4286, giving z = −0.18 and Q* = 100 + (−0.18)(12) = 97.84 ≈ 98 copies — below the mean. Students often force z to be positive or round incorrectly. A negative z is valid and means ordering below average is optimal.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="5">
+    <h2>6. Choosing the Right Solution Approach</h2>
+    <p data-topic="solution-approach-selection">
+      The three approaches cover different data situations:
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Data type</th>
+          <th>Method</th>
+          <th>Formula</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Discrete / few values (少量離散值)</td>
+          <td>Payoff table (收益表)</td>
+          <td>Compute EV for each Q; pick max</td>
+        </tr>
+        <tr>
+          <td>Discrete / few values (少量離散值)</td>
+          <td>Marginal analysis (邊際分析)</td>
+          <td>P(D ≤ Q*) = C<sub>u</sub> / (C<sub>u</sub> + C<sub>o</sub>)</td>
+        </tr>
+        <tr>
+          <td>Continuous / large range (連續大範圍)</td>
+          <td>Normal distribution (常態分佈)</td>
+          <td>Q* = μ + z · σ</td>
+        </tr>
+      </tbody>
+    </table>
+    <ul>
+      <li>Payoff table and marginal analysis always yield the same Q* for the same discrete distribution.</li>
+      <li>Normal approximation (常態近似) is valid even when true demand is integer-valued, as long as the range is large — round the final continuous Q* to the nearest integer.</li>
+      <li>Excel shortcut (Excel捷徑): NORMINV(CR, μ, σ) returns Q* directly without needing the z-table.</li>
+    </ul>
+    <p data-topic="technical-notes">
+      Technical notes from lecture:
+    </p>
+    <ul>
+      <li>Demand in Mr. Choi's problem is modelled as Normal(μ=100, σ=12) even though actual sales are integers — this is standard practice.</li>
+      <li>When you cannot find the exact CR in the normal table, interpolate (內插) between the two nearest z values or use the closest available value.</li>
+      <li>When using the discrete cumulative table, P(D ≤ Q) is a step function — the critical ratio identifies the step to land on.</li>
+    </ul>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Ordering the average demand is NOT optimal unless C<sub>u</sub> = C<sub>o</sub> exactly.</li>
+      <li>C<sub>u</sub> and C<sub>o</sub> are per-unit incremental costs: C<sub>o</sub> = cost − salvage; C<sub>u</sub> = price − cost. Never use total revenue or total cost.</li>
+      <li>Critical Ratio = C<sub>u</sub> / (C<sub>u</sub> + C<sub>o</sub>), not C<sub>o</sub> / (C<sub>u</sub> + C<sub>o</sub>). The numerator is the underage cost.</li>
+      <li>For discrete demand, choose the smallest Q where P(D ≤ Q) ≥ CR — use ≥, not strictly &gt;.</li>
+      <li>A negative z-score in the normal distribution approach is valid and means Q* &lt; μ — ordering below average is optimal when overage cost dominates.</li>
+      <li>The payoff table and marginal analysis must agree on Q* for the same problem — if they do not, recheck your C<sub>u</sub> and C<sub>o</sub> derivation.</li>
+      <li>IBM ThinkPad scenario: near-zero lost-sales cost (backorder) pushes CR ≈ 0, meaning production should be very conservative regardless of demand distribution.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Critical Ratio formula: CR = C<sub>u</sub> / (C<sub>u</sub> + C<sub>o</sub>), where C<sub>u</sub> = price − cost, C<sub>o</sub> = cost − salvage.</li>
+      <li>Optimality condition: F(Q*) = P(D ≤ Q*) = CR — the CDF evaluated at Q* equals the critical ratio.</li>
+      <li>Normal distribution formula: Q* = μ + z · σ, where z = Φ⁻¹(CR).</li>
+      <li>Discrete approach: build cumulative P(D ≤ Q) table; pick smallest Q where P(D ≤ Q) ≥ CR.</li>
+      <li>High CR (close to 1) → aggressive over-stocking (e.g., fashion with high lost-sale cost).</li>
+      <li>Low CR (close to 0) → conservative under-stocking (e.g., IBM ThinkPad with near-zero backorder cost).</li>
+      <li>Mr. Choi SCMP: C<sub>u</sub> = $3, C<sub>o</sub> = $4, CR = 0.4286, z = −0.18, Q* = 98 copies (below mean of 100).</li>
+      <li>Cookies King: C<sub>u</sub> = $3, C<sub>o</sub> = $2, CR = 0.60, Q* = 2,400 units, EV = $6,650.</li>
+      <li>Fashion department store: C<sub>u</sub> = $90, C<sub>o</sub> = $20, CR = 0.8182, Q* = 89 units (mean 85, σ 4.43).</li>
+      <li>Christmas trees: μ from regression (10.95k + 0.2k × year); σ from residuals; Q* ≈ 24,690 units at CR = 0.77.</li>
+      <li>Three solution pathways: payoff table (discrete, few values) → marginal analysis (discrete, any size) → normal distribution (continuous/large).</li>
+      <li>Optimal Q* depends on BOTH demand distribution AND cost structure — changing either changes Q*.</li>
+    </ol>
+  </div>
+</div>
+</div>
+
+<div id="notes-3" class="page">
+<div id="notes-3" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-3" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(3)">Clear Highlights</button>
+  <h1>Lecture 3: Inventory Management</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    Inventory management (存貨管理) is the discipline of deciding how much stock to hold and when to replenish it so that operations run without interruption while costs are minimised. Every firm faces a core tension: holding too little risks stockouts and lost sales, yet holding too much ties up capital, hides operational problems, and generates waste. This lecture builds from the basic role of inventory through practical classification and counting methods to four quantitative models — EOQ, EPQ, quantity-discount EOQ, and probabilistic EOQ — each suited to a different demand environment.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. The Role and Purpose of Inventory</h2>
+    <p data-topic="inventory-definition">
+      Inventory (存貨) is the stock of any item or resource used in an organisation, encompassing:
+    </p>
+    <ul>
+      <li>Raw materials (原材料) — inputs not yet entered production</li>
+      <li>Components (零件) — partially processed inputs</li>
+      <li>Work-in-progress (在製品, WIP) — items currently being transformed</li>
+      <li>Finished goods (成品) — completed products awaiting sale or shipment</li>
+    </ul>
+
+    <p data-topic="inventory-purposes">Why firms hold inventory — four distinct purposes:</p>
+    <ul>
+      <li>Buffer against uncertainty (緩衝不確定性) — absorbs unpredictable demand or supply fluctuations; this portion is called safety stock (安全庫存)</li>
+      <li>Decoupling (解耦) — maintains independence between successive operations so one stage's disruption does not instantly halt the next</li>
+      <li>Economies of scale (規模經濟) — larger orders reduce per-unit ordering and logistics costs; the resulting stock is cycle stock (週期庫存)</li>
+      <li>Required/unavoidable — regulatory requirements, seasonal stock (季節性庫存), and pipeline/in-transit inventory (在途庫存) that cannot be avoided</li>
+    </ul>
+
+    <p data-topic="excess-inventory-costs">Why firms must avoid excess inventory (過多存貨):</p>
+    <ul>
+      <li>Ties up working capital (營運資金) — money locked in stock earns no return; Kiyoshi Suzaki called excess inventory "the root of all evil"</li>
+      <li>Little's Law (利特爾定律) implication: I = R × T — higher inventory (I) for a given throughput rate (R) means longer flow time (T), slowing responsiveness</li>
+      <li>Masks underlying problems (掩蓋問題) — e.g., quality defects, poor scheduling, communication failures</li>
+      <li>Increases storage, handling, damage, and administrative expenses</li>
+      <li>Risk of obsolescence (過時) — stock may become worthless before it is used or sold</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="inventory-purposes"><b>Exam trap:</b> Safety stock and cycle stock serve different purposes. Safety stock exists because of demand/supply uncertainty; cycle stock exists because of ordering economies of scale. Do not conflate them.</div>
+
+    <p data-topic="inventory-control-goals">The practical goal of inventory control (庫存控制) balances four simultaneous objectives:</p>
+    <ul>
+      <li>Optimise reordering (優化補貨) to react to market changes in moderation</li>
+      <li>Determine the most productive (最有效率的) inventory mix</li>
+      <li>Track safety stock and distressed inventory (滯銷庫存)</li>
+      <li>Add to sales and operations planning (銷售與運營計劃)</li>
+    </ul>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Inventory Management Practices</h2>
+    <p data-topic="abc-classification">ABC classification (ABC分類法) applies the 80/20 principle (二八原則, "critical few, trivial many") to rank stock-keeping units (SKUs) by annual dollar usage (年度美元用量):</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Share of items</th>
+          <th>Share of total value</th>
+          <th>Control approach</th>
+          <th>Production strategy</th>
+          <th>Service level</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>A (e.g., engines)</td>
+          <td>Small %</td>
+          <td>~72%</td>
+          <td>Strictly controlled and counted</td>
+          <td>Make-to-order</td>
+          <td>Higher service level</td>
+        </tr>
+        <tr>
+          <td>B (e.g., brackets)</td>
+          <td>Medium %</td>
+          <td>~23%</td>
+          <td>Controlled reorder point and quantity</td>
+          <td>Configure-to-order</td>
+          <td>Medium/High service level</td>
+        </tr>
+        <tr>
+          <td>C (e.g., nuts &amp; bolts)</td>
+          <td>Large %</td>
+          <td>~4%</td>
+          <td>Free issue</td>
+          <td>Make-to-stock</td>
+          <td>Lower service level</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p data-topic="abc-example">Worked example from lecture: 9 items totalling $233,450 — items 22 and 68 alone account for $170,000 (72%) and are classified A; items 27, 03, 82 form class B ($53,000, 22.7%); remaining five items form class C ($10,450, 4.4%).</p>
+
+    <p data-topic="beyond-abc">Beyond ABC — a two-dimensional matrix (銷售價值 × 可預測性) extends ABC by also rating forecastability (可預測性):</p>
+    <ul>
+      <li>High value + constant demand — highest priority for tight control</li>
+      <li>High value + sporadic demand (零星需求) — difficult to manage; may need make-to-order</li>
+      <li>High value + seasonal/trend demand — plan production campaigns</li>
+      <li>Low value + constant demand — safe to use simple reorder rules</li>
+      <li>Low value + sporadic demand — consider eliminating or consolidating SKUs</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="abc-classification"><b>Exam trap:</b> ABC is based on annual dollar usage value, not unit volume or unit price alone. A cheap but high-volume part can be class A if its total annual spend is large.</div>
+
+    <p data-topic="cycle-counting">Cycle counting (循環盤點) vs. physical count (實地盤點):</p>
+    <ul>
+      <li>Physical count — suspend all operations and count every SKU; disruptive and infrequent</li>
+      <li>Cycle count — systematically sample (系統性抽樣) a subset of SKUs during normal operations; higher frequency</li>
+      <li>Scheduling decisions: how often, when, which items, by whom</li>
+      <li>Discrepancies (差異) investigated immediately; ties to inventory accuracy (庫存準確率) — do records agree with physical count?</li>
+    </ul>
+
+    <p data-topic="rfid-barcode">Technology — barcode (條碼) and RFID (無線射頻識別) enhance supply chain visibility (供應鏈可視性):</p>
+    <ul>
+      <li>Tags incorporated into labels or attached to items, cartons, or pallets</li>
+      <li>RFID scanners throughout the supply chain track goods from factory to warehouse to store</li>
+      <li>Tags report an identification number; systems look up a database (often via internet) for detailed product information</li>
+      <li>At factory — raw materials tagged to track precise usage; finished items tagged individually or by carton/pallet</li>
+      <li>Sensors built into tags can monitor conditions such as heat and humidity (e.g., detecting thawed frozen food)</li>
+      <li>At warehouse — loading-dock scanners track every incoming item; internal scanners track shipment preparation</li>
+      <li>Scanning range varies: some systems scan within 1 foot; others reach 15 feet or more</li>
+      <li>Retail application — contents of a shopping cart can be read as it passes the checkout</li>
+    </ul>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. EOQ Model — Basic Economic Order Quantity</h2>
+    <p data-topic="inventory-control-questions">Two fundamental inventory control questions (庫存控制問題):</p>
+    <ul>
+      <li>Order quantity (訂購量) — how much to order each time</li>
+      <li>Stocking time (補貨時機) — when to place the order</li>
+    </ul>
+
+    <p data-topic="review-systems">Two review system types:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>System</th>
+          <th>Trigger</th>
+          <th>Order quantity</th>
+          <th>Order interval</th>
+          <th>Decisions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Continuous review (Q-system, 連續審查)</td>
+          <td>Inventory falls to reorder point R</td>
+          <td>Fixed (Q)</td>
+          <td>Variable</td>
+          <td>How much (Q)? When (R)?</td>
+        </tr>
+        <tr>
+          <td>Periodic review (P-system, 定期審查)</td>
+          <td>Fixed time interval T</td>
+          <td>Variable (order up to target)</td>
+          <td>Fixed (T)</td>
+          <td>How much (Q)? How long between orders (T)?</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p data-topic="eoq-assumptions">EOQ model assumptions (假設):</p>
+    <ul>
+      <li>Constant, known demand rate D (units per year)</li>
+      <li>Constant setup cost S per order and holding cost H per unit per year</li>
+      <li>Instantaneous and complete receipt of inventory</li>
+      <li>Known and constant lead time (前置時間)</li>
+      <li>No stockouts (缺貨) permitted</li>
+      <li>No quantity discounts</li>
+    </ul>
+
+    <p data-topic="eoq-costs">Cost structure:</p>
+    <ul>
+      <li>Order/setup cost S — sum of fixed costs per order: order processing, logistics, inbound inspection/putaway, machine setup (e.g., changing dies). High S encourages larger, less frequent orders.</li>
+      <li>Holding cost H — all costs to keep items in inventory: capital cost (lost interest on tied-up capital), storage (warehouse rent), insurance. Often expressed as a percentage of unit purchase cost (e.g., 10%). High H discourages ordering too much.</li>
+      <li>Annual order cost = (D/Q) × S</li>
+      <li>Annual holding cost = (Q/2) × H — average inventory on hand is Q/2 because inventory drops linearly from Q to 0</li>
+      <li>Total cost: TC = (D/Q)S + (Q/2)H</li>
+    </ul>
+
+    <p data-topic="eoq-formula">Optimal order quantity (最優訂購量) Q* is where annual setup cost equals annual holding cost:</p>
+    <ul>
+      <li>Set DS/Q = QH/2, solve: Q* = √(2DS/H) — derived by Ford W. Harris in 1913</li>
+      <li>Reorder point (再訂購點): R = d × L, where d = demand per day, L = lead time in days</li>
+      <li>Expected number of orders per year = D/Q*</li>
+      <li>Order cycle (訂購週期) = Q*/D (or 1 / number of orders per year)</li>
+    </ul>
+
+    <p data-topic="eoq-example">M&amp;S sweater example:</p>
+    <ul>
+      <li>D = 100 sweaters/week; S = $5,000/order; unit cost = $400; holding rate = 1%/week → H = $4/unit/week</li>
+      <li>Q* = √(2 × 100 × 5,000 / 4) = 500 units</li>
+      <li>Order cycle = 500/100 = 5 weeks</li>
+      <li>Weekly ordering cost = (100/500) × $5,000 = $1,000; weekly holding cost = (500/2) × $4 = $1,000 — equal at optimum</li>
+    </ul>
+
+    <!-- SVG: EOQ cost curves -->
+    <svg viewBox="0 0 420 220" xmlns="http://www.w3.org/2000/svg" style="max-width:420px;display:block;margin:1rem 0;font-family:serif">
+      <!-- axes -->
+      <line x1="50" y1="180" x2="390" y2="180" stroke="#555" stroke-width="1.5"/>
+      <line x1="50" y1="20" x2="50" y2="180" stroke="#555" stroke-width="1.5"/>
+      <text x="390" y="195" font-size="12" fill="#555">Q</text>
+      <text x="10" y="25" font-size="12" fill="#555">Cost</text>
+      <!-- holding cost curve — rises linearly -->
+      <path d="M 60,170 Q 200,100 380,40" stroke="#2a7a4f" stroke-width="2" fill="none"/>
+      <text x="340" y="35" font-size="11" fill="#2a7a4f">Holding</text>
+      <!-- setup cost curve — decreasing hyperbola -->
+      <path d="M 60,30 Q 150,120 380,165" stroke="#b05c2a" stroke-width="2" fill="none"/>
+      <text x="330" y="170" font-size="11" fill="#b05c2a">Setup</text>
+      <!-- total cost curve -->
+      <path d="M 60,60 Q 180,85 210,82 Q 260,85 380,100" stroke="#1a4a8a" stroke-width="2.5" fill="none"/>
+      <text x="340" y="98" font-size="11" fill="#1a4a8a">Total</text>
+      <!-- optimal Q* vertical -->
+      <line x1="210" y1="82" x2="210" y2="180" stroke="#888" stroke-width="1" stroke-dasharray="4"/>
+      <text x="200" y="195" font-size="11" fill="#333">Q*</text>
+      <circle cx="210" cy="82" r="4" fill="#1a4a8a"/>
+      <text x="155" y="75" font-size="10" fill="#555">Min TC</text>
+    </svg>
+
+    <div class="exam-trap-inline" data-topic="eoq-formula"><b>Exam trap:</b> At the EOQ optimum, annual setup cost equals annual holding cost. Students often forget this equality and try to minimise by calculus alone — but recognising the equality is the fastest check.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. EPQ Model — Economic Production Quantity and Make vs. Buy</h2>
+    <p data-topic="make-vs-buy">Make vs. buy break-even analysis (自製vs外購損益平衡分析):</p>
+    <ul>
+      <li>If make: invest $K in capacity; produce at variable cost c₂ per unit</li>
+      <li>If buy: purchase at c₁ per unit (c₁ > c₂, so buying is more expensive per unit)</li>
+      <li>Break-even quantity (損益平衡數量) B = K / (c₁ − c₂) — produce in-house if expected volume exceeds B</li>
+      <li>Other considerations: storage requirements, equipment use after production halts (shadow price or salvage value), supplier quality, strategic implications of outsourcing (外包)</li>
+    </ul>
+
+    <p data-topic="epq-assumptions">EPQ model — assumptions (compared to EOQ):</p>
+    <ul>
+      <li>Same as EOQ (constant known demand D, constant S and H, no stockouts) plus:</li>
+      <li>Constant production rate (生產率) P > D (if P ≤ D you can never keep up with demand)</li>
+      <li>Lead time is zero; each production run replenishes inventory gradually (not instantaneously)</li>
+      <li>Designed for in-house production (內部生產) decisions</li>
+    </ul>
+
+    <p data-topic="epq-formulas">EPQ cost structure and optimal quantity:</p>
+    <ul>
+      <li>Production phase length = t_p; net inventory build-up rate = p − d</li>
+      <li>Maximum inventory level (最大庫存水平): I_max = (p − d)/p × Q</li>
+      <li>Annual setup cost = (D/Q) × S</li>
+      <li>Annual holding cost = (I_max/2) × H = [(p−d)/(2p)] × Q × H</li>
+      <li>Total cost: TC(Q) = (D/Q)S + [(p−d)/(2p)] × QH</li>
+      <li>Optimal EPQ: Q* = √[2DS/H × p/(p−d)]</li>
+      <li>Optimal cycle time: T* = Q*/D</li>
+    </ul>
+
+    <p data-topic="epq-example">Dakota Electronics example:</p>
+    <ul>
+      <li>D = 10,000 units/year; H = $10/unit/year; S = $100/order; d = 40 units/day; p = 200 units/day; C = $15/unit</li>
+      <li>EPQ = √[2(10,000)(100)/10 × 200/(200−40)] = 500 units</li>
+      <li>Number of lots per year = 10,000/500 = 20</li>
+      <li>I_max = 500 × (200−40)/200 = 400 units</li>
+      <li>Total cost = DC + (I_max/2)H + (D/Q)S = $150,000 + $2,000 + $2,000 = $154,000/year</li>
+      <li>Supplier offer: C = $15.20, S = $25 → EOQ = 224 units; TC = $154,236/year</li>
+      <li>Conclusion: making is cheaper by $236/year; however, make requires max inventory of 400 vs. buy 224 — storage and strategic factors also matter</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="epq-formulas"><b>Exam trap:</b> In EPQ, maximum inventory is NOT equal to Q. It equals Q × (p−d)/p because inventory is built up gradually during the production phase, not received all at once as in EOQ.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. EOQ with Quantity Discounts</h2>
+    <p data-topic="quantity-discount-assumptions">Quantity discount (數量折扣) EOQ — same assumptions as basic EOQ except product unit cost C is a function of order quantity Q (price breaks at certain volume thresholds).</p>
+
+    <p data-topic="quantity-discount-procedure">Solution procedure (解題步驟) — four steps:</p>
+    <ol>
+      <li>Start at the lowest unit cost tier. Compute EOQ using Q* = √(2DS/H) with H = (discount rate) × C.</li>
+      <li>Check feasibility (可行性): EOQ must fall within the quantity range for that price tier. If infeasible (EOQ outside the range), move to the next higher price tier and repeat.</li>
+      <li>Once a feasible EOQ is found, compute total cost (總成本) TC = DC + (Q/2)(0.2C) + (D/Q)S for that EOQ, where the second term is the annual holding cost (持有成本).</li>
+      <li>Also compute TC at every higher price break point (價格臨界點) that yields a lower unit cost. The optimal Q is the one with the minimum total cost among all candidates.</li>
+    </ol>
+
+    <p data-topic="quantity-discount-example">Lecture example: D = 40,000; S = $25; holding rate = 20%:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Quantity range</th>
+          <th>Unit cost</th>
+          <th>EOQ</th>
+          <th>Feasible?</th>
+          <th>TC (if evaluated)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>≥ 3,000</td>
+          <td>$2.20</td>
+          <td>2,132</td>
+          <td>No (2,132 &lt; 3,000)</td>
+          <td>Use break-point 3,000 → $88,993/yr</td>
+        </tr>
+        <tr>
+          <td>2,500–2,999</td>
+          <td>$2.25</td>
+          <td>2,108</td>
+          <td>No (2,108 &lt; 2,500)</td>
+          <td>Use break-point 2,500 → $90,963/yr</td>
+        </tr>
+        <tr>
+          <td>1,500–2,499</td>
+          <td>$2.30</td>
+          <td>2,085</td>
+          <td>Yes</td>
+          <td>$92,959/yr</td>
+        </tr>
+        <tr>
+          <td>&lt; 1,500</td>
+          <td>$2.35</td>
+          <td>—</td>
+          <td>Not evaluated</td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ul>
+      <li>Optimal Q = 3,000 units at $2.20/unit → minimum total cost = $88,993/year</li>
+      <li>Note: the feasible EOQ (2,085) is NOT optimal because ordering at the 3,000 break-point saves more on purchase cost than the extra holding cost incurred</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="quantity-discount-procedure"><b>Exam trap:</b> Always evaluate the feasible EOQ AND all higher price break-points. Do NOT stop at the feasible EOQ — a break-point with a lower unit price frequently yields a lower total cost despite higher holding costs.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="5">
+    <h2>6. Probabilistic EOQ — Safety Stock and Service Level</h2>
+    <p data-topic="probabilistic-demand">When demand during lead time (前置時間需求) fluctuates, the classic reorder point R = dL understates the stock needed. The probabilistic EOQ (概率性EOQ) model retains the EOQ formula for Q* but adjusts the reorder point.</p>
+
+    <p data-topic="safety-stock">Safety stock (安全庫存) mechanics:</p>
+    <ul>
+      <li>Safety stock SS = Z × σ_L — extra inventory held as a buffer against demand spikes during lead time</li>
+      <li>Z = z-score corresponding to the desired service level (服務水平) — the probability of not stocking out during a lead time period</li>
+      <li>σ_L = standard deviation of demand during lead time</li>
+      <li>If daily demand variation σ_d is constant: σ_L = √L × σ_d (standard deviations combine as square root of lead time)</li>
+      <li>New ROP = average demand during lead time + safety stock = dL + Zσ_L</li>
+      <li>Higher service level → higher Z → more safety stock → higher holding cost (non-linear relationship)</li>
+    </ul>
+
+    <p data-topic="probabilistic-eoq-example">Worked example:</p>
+    <ul>
+      <li>D = 15,600 units/year; d = 300 units/week; σ_d = 90 units/week; S = $31.20; H = $0.10/unit/year; L = 4 weeks; SL = 98%</li>
+      <li>Z = 2.05 for 98% service level</li>
+      <li>σ_L = √4 × 90 = 180 units</li>
+      <li>ROP = 300 × 4 + 2.05 × 180 = 1,200 + 369 = 1,569 units</li>
+      <li>If safety stock is cut by 50%: new SS ≈ 185 units → Z = 185/180 ≈ 1.03 → SL ≈ 84.85%</li>
+    </ul>
+
+    <!-- SVG: ROP diagram with safety stock -->
+    <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" style="max-width:400px;display:block;margin:1rem 0;font-family:serif">
+      <!-- axes -->
+      <line x1="40" y1="170" x2="380" y2="170" stroke="#555" stroke-width="1.5"/>
+      <line x1="40" y1="20" x2="40" y2="170" stroke="#555" stroke-width="1.5"/>
+      <text x="370" y="185" font-size="11" fill="#555">Time</text>
+      <text x="2" y="18" font-size="11" fill="#555">Inv</text>
+      <!-- sawtooth inventory -->
+      <polyline points="40,40 120,130 120,40 200,130 200,40 280,130 280,40 360,130" stroke="#2a7a4f" stroke-width="2" fill="none"/>
+      <!-- ROP line -->
+      <line x1="40" y1="130" x2="380" y2="130" stroke="#b05c2a" stroke-width="1.5" stroke-dasharray="5"/>
+      <text x="345" y="126" font-size="10" fill="#b05c2a">ROP</text>
+      <!-- Safety stock line -->
+      <line x1="40" y1="155" x2="380" y2="155" stroke="#1a4a8a" stroke-width="1.2" stroke-dasharray="3"/>
+      <text x="315" y="152" font-size="10" fill="#1a4a8a">SS (Zσ_L)</text>
+      <!-- brace label -->
+      <text x="2" y="143" font-size="9" fill="#555">dL</text>
+    </svg>
+
+    <p data-topic="model-selection">Which inventory model to use — summary decision rules (決策規則):</p>
+    <ul>
+      <li>Known demand, low variation, long lifecycle, multiple reorder opportunities → apply EOQ or EPQ</li>
+      <li>Demand during lead time fluctuates → use service level to set safety stock; apply probabilistic EOQ for Q* and ROP</li>
+      <li>Single ordering opportunity, short lifecycle, perishable or seasonal products, uncertain demand → apply Newsvendor model (報童模型) to determine optimal Q</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="safety-stock"><b>Exam trap:</b> σ_L is not simply L × σ_d. It is √L × σ_d because independent daily demands add in variance (方差), not standard deviation. Squaring then taking the square root is essential.</div>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Safety stock vs. cycle stock — safety stock buffers uncertainty; cycle stock results from economies of scale. Do not mix them up.</li>
+      <li>ABC classification is by annual dollar usage value, not unit price or unit volume alone.</li>
+      <li>EOQ optimum: at Q*, annual setup cost equals annual holding cost — use this equality as a quick check.</li>
+      <li>EPQ maximum inventory = Q × (p−d)/p, not Q. Inventory builds gradually, not instantaneously.</li>
+      <li>Quantity discount: always evaluate the feasible EOQ AND every higher price break-point; the feasible EOQ is often NOT the optimal solution.</li>
+      <li>Safety stock formula: SS = Zσ_L where σ_L = √L × σ_d — variances add, not standard deviations; never write σ_L = L × σ_d.</li>
+      <li>Newsvendor model is for single-order situations (perishable/seasonal); EOQ/EPQ are for repeated ordering situations.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>EOQ formula: Q* = √(2DS/H); at Q* annual setup cost = annual holding cost</li>
+      <li>Reorder point (basic): R = d × L; with probabilistic demand: R = dL + Zσ_L</li>
+      <li>Safety stock: SS = Zσ_L; σ_L = √L × σ_d (variance addition rule)</li>
+      <li>EPQ formula: Q* = √[2DS/H × p/(p−d)]; I_max = Q × (p−d)/p</li>
+      <li>Total cost for EOQ: TC = (D/Q)S + (Q/2)H; for EPQ add purchase cost DC</li>
+      <li>Quantity discount procedure: start lowest price, check feasibility, compute TC for feasible EOQ + all higher break-points, pick minimum</li>
+      <li>ABC classification: A = small % items, ~72% of value; B = ~23%; C = ~4% of value</li>
+      <li>Little's Law: I = R × T — excess inventory inflates flow time</li>
+      <li>Four inventory purposes: safety (buffer uncertainty), decoupling, economies of scale, regulatory/pipeline</li>
+      <li>Make vs. buy break-even: B = K/(c₁ − c₂); also consider storage, equipment reuse, supplier quality, outsourcing strategy</li>
+      <li>Continuous (Q) system: fixed Q, variable interval, triggered at reorder point R; Periodic (P) system: fixed interval, variable Q</li>
+      <li>Model selection rule: repeated + stable demand → EOQ/EPQ; uncertain lead-time demand → probabilistic EOQ; single order + perishable → Newsvendor</li>
+    </ol>
+  </div>
+</div>
+</div>
+
+<div id="notes-7" class="page">
+<div id="notes-7" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-7" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(7)">Clear Highlights</button>
+  <h1>Lecture 7: Just in Time System</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    Just-in-Time (JIT) is a management philosophy originating from Toyota's post-WWII production system that targets the elimination of all forms of waste by producing only what is needed, when it is needed, and in the exact quantity needed. It operates as a demand-pull system that exposes hidden operational problems rather than masking them with excess inventory. Its principles now extend beyond manufacturing to supply chain delivery, purchasing, and service operations, making it one of the most influential operations management frameworks in modern industry.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Lean Production and the Concept of Waste</h2>
+    <p data-topic="lean-production-waste">
+      Lean production (精益生產) is a systematic focus on eliminating as much waste (浪費) as possible while operating with precision and remaining responsive to demand. It traces its roots to Henry Ford's mass production system and Toyota's continuous improvement (持續改善) efforts after World War II.
+    </p>
+    <ul>
+      <li><strong>Value (價值)</strong> — defined by the customer based on their perception of usefulness and necessity; not defined by the producer.</li>
+      <li><strong>Value-added activities (增值活動)</strong> — activities for which the customer is willing to pay.</li>
+      <li><strong>Non-value-added activities / Waste (非增值活動)</strong> — activities that consume resources but add no value from the customer's perspective.</li>
+      <li><strong>Business value-added activities (業務增值活動)</strong> — non-value-added but required (e.g., regulatory compliance, internal controls).</li>
+      <li><strong>Customer value (顧客價值)</strong> — specifically something for which the customer is willing to pay.</li>
+    </ul>
+
+    <h3>Seven Forms of Waste</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Form of Waste (浪費類型)</th>
+          <th>Description / Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Defects (缺陷)</strong></td>
+          <td>Extra manpower needed to inspect, rework, and repair</td>
+        </tr>
+        <tr>
+          <td><strong>Overproduction (過度生產)</strong></td>
+          <td>Producing more than needed; results in extra storage cost</td>
+        </tr>
+        <tr>
+          <td><strong>Inventory (庫存)</strong></td>
+          <td>Additional material handling; rework required when changes are made</td>
+        </tr>
+        <tr>
+          <td><strong>Waiting (等待)</strong></td>
+          <td>Idle time caused by lack of planning, organization, and discipline</td>
+        </tr>
+        <tr>
+          <td><strong>Excess motion (過多動作)</strong></td>
+          <td>Poor facility layout; materials placed too far apart</td>
+        </tr>
+        <tr>
+          <td><strong>Over-processing (過度加工)</strong></td>
+          <td>Redundant approvals, extra copies, inefficient policies and procedures</td>
+        </tr>
+        <tr>
+          <td><strong>Transportation (運輸)</strong></td>
+          <td>Unnecessary material movement; damage incurred during transportation</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="exam-trap-inline" data-topic="lean-production-waste"><b>Exam trap:</b> Students often confuse "non-value-added but required" (business value-added) with pure waste. Business value-added activities cannot simply be eliminated — they are legally or operationally necessary, unlike true waste. Do not lump them together.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. JIT Philosophy and the Toyota Production System (TPS)</h2>
+    <p data-topic="jit-tps-principles">
+      Just-in-Time (及時生產) is both a management philosophy (管理哲學) and a production control approach. Also known as the Toyota Production System (豐田生產方式, TPS), it attacks waste systematically and exposes hidden operational problems by removing the inventory buffer that conceals them.
+    </p>
+    <ul>
+      <li><strong>Pull system (拉式系統)</strong> — execution is initiated in response to actual customer orders, not forecasts.</li>
+      <li><strong>Push system (推式系統)</strong> — execution is initiated in anticipation of customer orders based on forecasts.</li>
+      <li>JIT achieves streamlined production (流線型生產) through small lot sizes, stable environments, and total quality control (全面品質管理).</li>
+      <li>Requires continuous employee participation (員工參與) and industrial engineering basics.</li>
+    </ul>
+
+    <h3>Scope: JIT can exist anywhere in the supply chain</h3>
+    <ul>
+      <li>JIT production / manufacturing — also known as TPS</li>
+      <li>JIT inventory (及時庫存)</li>
+      <li>JIT purchasing (及時採購)</li>
+      <li>JIT delivery (及時交貨)</li>
+      <li>JIT supply chain management (及時供應鏈管理)</li>
+      <li>JIT service (及時服務)</li>
+    </ul>
+
+    <h3>Guiding Principles of TPS</h3>
+    <ul>
+      <li><strong>Elimination of waste</strong> — the primary aim, targeting all 7 forms.</li>
+      <li><strong>Quality at the source (源頭品質)</strong> — workers check and correct quality at their own workstation.</li>
+      <li><strong>JIT production</strong> — small lot sizes coordinated via Kanban.</li>
+      <li><strong>Minimize setup time (最小化換模時間)</strong> — makes small lot sizes economically feasible.</li>
+      <li><strong>Respect for people (尊重員工)</strong> — lifetime employment (終身僱用), cooperative labor-management relations, strong supplier relationships.</li>
+    </ul>
+
+    <h3>TPS Success Factors (Approaches, Methods, Techniques)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Aim</th>
+          <th>Approaches to overcoming barriers</th>
+          <th>Methods for eliminating waste</th>
+          <th>Techniques for lean synchronization</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Eliminate all waste</td>
+          <td>Involve everyone; Continuous improvement</td>
+          <td>Pull control; Set-up reduction; Levelled scheduling; Mixed modelling; Lean supply</td>
+          <td>Layout; Visible flow; Simplify technology; Kanbans</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="exam-trap-inline" data-topic="jit-tps-principles"><b>Exam trap:</b> JIT and TPS are often used interchangeably, but TPS is the specific Toyota implementation. JIT is the broader philosophy. Also, the pull system responds to actual orders — not forecasts. A push system uses forecasts.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Inventory as a Problem-Hider and JIT Exposure Logic</h2>
+    <p data-topic="inventory-hides-problems">
+      Inventory acts like water in a river: it hides rocks (operational problems) beneath the surface. The JIT approach deliberately reduces inventory (water level) so that problems become visible and can be resolved.
+    </p>
+
+    <h3>Problems Hidden by Excess Inventory (過多庫存)</h3>
+    <ul>
+      <li>Machine downtime (機器停機)</li>
+      <li>Work-in-process queues / banks (在製品積壓)</li>
+      <li>Engineering design redundancies (工程設計冗餘)</li>
+      <li>Change orders (更改訂單)</li>
+      <li>Paperwork backlogs (文書積壓)</li>
+      <li>Decision backlogs (決策積壓)</li>
+      <li>Inspection backlogs (檢查積壓)</li>
+    </ul>
+
+    <p data-topic="inventory-hides-problems">
+      Reducing inventory exposes: defective deliveries (缺陷交貨), productivity problems (生產力問題), downtime, inaccurate quantities (不準確數量), and unstable standards (不穩定標準). Once visible, operations management can systematically eliminate each problem.
+    </p>
+
+    <!-- SVG: Inventory-as-water analogy -->
+    <svg width="520" height="160" viewBox="0 0 520 160" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:1rem auto;">
+      <!-- Water (high inventory) -->
+      <rect x="10" y="40" width="230" height="110" rx="6" fill="#a8d8ea" opacity="0.7"/>
+      <text x="125" y="30" text-anchor="middle" font-size="12" fill="#333">High Inventory (Problems Hidden)</text>
+      <!-- Rocks under high water -->
+      <ellipse cx="60" cy="130" rx="30" ry="18" fill="#8B7355" opacity="0.4"/>
+      <ellipse cx="130" cy="135" rx="25" ry="15" fill="#8B7355" opacity="0.4"/>
+      <ellipse cx="200" cy="128" rx="28" ry="16" fill="#8B7355" opacity="0.4"/>
+      <!-- Ship -->
+      <rect x="80" y="52" width="90" height="22" rx="4" fill="#e07b39"/>
+      <text x="125" y="67" text-anchor="middle" font-size="10" fill="#fff">Operations Mgmt</text>
+
+      <!-- Arrow -->
+      <line x1="255" y1="95" x2="275" y2="95" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+        </marker>
+      </defs>
+      <text x="265" y="88" text-anchor="middle" font-size="10" fill="#555">JIT</text>
+
+      <!-- Water (low inventory) -->
+      <rect x="280" y="90" width="230" height="60" rx="6" fill="#a8d8ea" opacity="0.7"/>
+      <text x="395" y="30" text-anchor="middle" font-size="12" fill="#333">Low Inventory (Problems Exposed)</text>
+      <!-- Rocks visible -->
+      <ellipse cx="320" cy="88" rx="28" ry="16" fill="#8B7355" opacity="0.9"/>
+      <text x="320" y="71" text-anchor="middle" font-size="9" fill="#8B7355">Downtime</text>
+      <ellipse cx="395" cy="84" rx="25" ry="14" fill="#8B7355" opacity="0.9"/>
+      <text x="395" y="67" text-anchor="middle" font-size="9" fill="#8B7355">Defects</text>
+      <ellipse cx="465" cy="87" rx="27" ry="15" fill="#8B7355" opacity="0.9"/>
+      <text x="465" y="70" text-anchor="middle" font-size="9" fill="#8B7355">Queues</text>
+      <!-- Ship -->
+      <rect x="345" y="100" width="90" height="22" rx="4" fill="#e07b39"/>
+      <text x="390" y="115" text-anchor="middle" font-size="10" fill="#fff">Operations Mgmt</text>
+    </svg>
+
+    <div class="exam-trap-inline" data-topic="inventory-hides-problems"><b>Exam trap:</b> JIT does not simply remove inventory to save cost — its deeper purpose is to surface hidden problems so they can be fixed. Treating inventory reduction as purely a cost-saving measure misses the diagnostic logic of JIT.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. JIT Implementation Requirements</h2>
+    <p data-topic="jit-implementation">
+      Implementing JIT requires coordinated changes across five areas: process design, quality improvement, production scheduling, vendor relationships, and inventory/product design.
+    </p>
+
+    <h3>Five Implementation Areas</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Area</th>
+          <th>Key Requirements</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Redesign flow process (重新設計流程)</strong></td>
+          <td>Link operations; balance workstation capacities (平衡工作站產能); redesign layout for better flow; emphasize preventive maintenance (預防性維護)</td>
+        </tr>
+        <tr>
+          <td><strong>Improve process quality (提升製程品質)</strong></td>
+          <td>Worker empowerment (員工授權); statistical quality control (統計品質控制); poka-yoke (防錯裝置) fail-safe methods; automatic inspection (自動檢查)</td>
+        </tr>
+        <tr>
+          <td><strong>Stabilize production schedules (穩定生產計劃)</strong></td>
+          <td>Level schedule (平準化排程); underutilize capacity; establish freeze windows (凍結期 — no schedule changes for a set period)</td>
+        </tr>
+        <tr>
+          <td><strong>Improve vendor relationships (改善供應商關係)</strong></td>
+          <td>Reduce lead time (縮短前置時間); frequent deliveries (頻繁交貨); information sharing (資訊共享)</td>
+        </tr>
+        <tr>
+          <td><strong>Implement pull system (實施拉式系統)</strong></td>
+          <td>Kanban system to control flow</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Improve Product Design (改善產品設計)</h3>
+    <ul>
+      <li>Standard product configuration — modular design (模組化設計)</li>
+      <li>Standardize and reduce number of parts (標準化並減少零件數)</li>
+      <li>Integrated product and process design — concurrent engineering approach (並行工程)</li>
+      <li>Robust design for quality (穩健設計)</li>
+    </ul>
+
+    <h3>Reduce Inventory Level (降低庫存水平)</h3>
+    <ul>
+      <li>Reduce lot sizes (減少批量)</li>
+      <li>Reduce setup / changeover time (縮短換模時間)</li>
+    </ul>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Kanban System</h2>
+    <p data-topic="kanban-system">
+      Kanban (看板) means card, sign, or instruction card in Japanese. It is the mechanism by which JIT implements demand-pull control across a plant and its supplier network, regulating inventory levels and production quantities through the physical movement of cards.
+    </p>
+    <ul>
+      <li><strong>Inventory level control</strong> — inventory is controlled by the number of Kanban cards in circulation; more cards = more WIP allowed.</li>
+      <li><strong>Two-kanban system</strong> — uses two card types: <strong>production instruction kanban (生產指示看板)</strong> and <strong>retrieval / withdrawal kanban (取料看板)</strong>.</li>
+      <li><strong>Production instruction kanban</strong> — attached to parts at a machine center; removed when an operator retrieves parts, authorizing production of exactly the quantity indicated.</li>
+      <li><strong>Retrieval kanban</strong> — carried by operator to retrieve replacement parts from upstream; removed when an operator uses parts at the assembly line.</li>
+      <li><strong>Only the exact number of parts indicated on the kanban are produced</strong> — this is the discipline that prevents overproduction.</li>
+      <li>Kanban coordinates the work flow for the entire plant and deliveries from suppliers (e.g., FAS → Fab-1, Fab-2, Fab-3 → Suppliers chain).</li>
+      <li>Production of <strong>small lot sizes (小批量)</strong> is a prerequisite for Kanban to function effectively.</li>
+    </ul>
+
+    <h3>Push vs. Pull — Formal Definitions</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>System</th>
+          <th>Trigger for Execution</th>
+          <th>Basis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Push system (推式系統)</td>
+          <td>Anticipated customer orders</td>
+          <td>Forecasts (預測)</td>
+        </tr>
+        <tr>
+          <td>Pull system (拉式系統)</td>
+          <td>Actual customer orders</td>
+          <td>Real demand (實際需求)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="exam-trap-inline" data-topic="kanban-system"><b>Exam trap:</b> A Kanban card does not authorize unlimited production — it authorizes production of the exact quantity written on the card. The total inventory in the system is capped by the total number of cards. Increasing cards increases WIP; reducing cards forces problem-solving.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="5">
+    <h2>6. Small Lot Sizes, Levelled Scheduling, and JIT Resilience</h2>
+    <p data-topic="small-lots-levelling">
+      JIT production targets small batch sizes to reduce work-in-process (在製品) inventory and stabilize work schedules. This is only feasible when setup / changeover times (換模時間) are drastically reduced.
+    </p>
+
+    <h3>Setup Time Comparison (Hood and Fender Press Machines)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Toyota</th>
+          <th>USA</th>
+          <th>Sweden</th>
+          <th>Germany</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Setup time</td>
+          <td><strong>10 minutes</strong></td>
+          <td>6 hours</td>
+          <td>4 hours</td>
+          <td>4 hours</td>
+        </tr>
+        <tr>
+          <td>Setups per day</td>
+          <td><strong>3</strong></td>
+          <td>1</td>
+          <td>—</td>
+          <td>~½</td>
+        </tr>
+        <tr>
+          <td>Lot size</td>
+          <td><strong>1 day*</strong></td>
+          <td>10 days</td>
+          <td>1 month</td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+    <p data-topic="small-lots-levelling">* For low-demand items (&lt;1000 per month), Toyota's lot size can be as large as 7 days.</p>
+
+    <h3>Levelled Scheduling (平準化排程) vs. Large Batches</h3>
+    <ul>
+      <li><strong>Large batch example:</strong> Batch A=600, B=200, C=200 with capacity 250/day — runs long uninterrupted runs of A then B then C, creating high WIP inventory peaks.</li>
+      <li><strong>Levelled scheduling example:</strong> Batch A=150, B=50, C=50 — products A, B, C are mixed every cycle, smoothing inventory and workload.</li>
+      <li>Level production or delivery schedules require <strong>no significant loss of capacity or added cost</strong>.</li>
+      <li>JIT delivery uses levelled delivery schedules to reduce <strong>finished goods inventory (成品庫存)</strong>.</li>
+    </ul>
+
+    <h3>JIT Limitations and Supply Chain Resilience (供應鏈韌性)</h3>
+    <ul>
+      <li>COVID-19 disruptions (e.g., U.S. paper towel demand spike 160%+ in early 2020) exposed JIT's vulnerability to sudden demand shocks.</li>
+      <li><strong>Six resilience strategies (Gartner):</strong> Nearshoring (近岸外包); platform/product/plant harmonization; manufacturing network diversification (製造網絡多元化); inventory and capacity buffers (庫存與產能緩衝); ecosystem partnerships (生態系統夥伴關係).</li>
+      <li><strong>Supply chain resilience factors (time-series model, Melnyk et al. 2014):</strong>
+        <ul>
+          <li>TD — Time of Disturbance (干擾發生時間)</li>
+          <li>TO — Time of Onset (影響開始時間)</li>
+          <li>TC — Time of Climax (最低點時間); RC — Response at Climax</li>
+          <li>TP — Turning Point (轉折點); RT — Response at Turning Point</li>
+          <li>TR — Time of Recovery (恢復時間); RR — Response at Recovery</li>
+        </ul>
+      </li>
+      <li><strong>Resilience matrix:</strong> firms can be Hardy (高抵抗力 + 高恢復力), Vulnerable but Responsive (低抵抗力 + 高恢復力), or fall in other quadrants based on Resistance Capacity vs. Recovery Capacity.</li>
+      <li>"Only the fittest will survive" (Darwin) — geopolitical uncertainty makes supply chain resilience planning essential.</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="small-lots-levelling"><b>Exam trap:</b> Levelled scheduling is often mistaken for capacity reduction. The lecture explicitly states that level schedules require no significant loss of capacity or added cost. The benefit is inventory reduction, not capacity sacrifice.</div>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Business value-added (non-value-added but required) activities are NOT the same as waste — they cannot simply be eliminated.</li>
+      <li>JIT and TPS are related but not identical: TPS is Toyota's specific implementation of the JIT philosophy.</li>
+      <li>Pull system = triggered by actual customer orders; Push system = triggered by forecasts. Do not mix up.</li>
+      <li>JIT reduces inventory primarily to expose and fix hidden problems, not merely to cut storage costs.</li>
+      <li>Kanban cards authorize exactly the quantity written — not unlimited production. Total cards cap total WIP.</li>
+      <li>Levelled scheduling does not sacrifice capacity — it maintains throughput while smoothing inventory and workload.</li>
+      <li>Toyota's setup time is 10 minutes (3 setups/day, lot size ~1 day), versus 4–6 hours in USA/Europe — this enables small lot feasibility.</li>
+      <li>Supply chain resilience adds buffers and diversification on top of JIT — resilience and JIT are complementary, not mutually exclusive.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>7 forms of waste: Defects, Overproduction, Inventory, Waiting, Excess motion, Over-processing, Transportation.</li>
+      <li>Pull system = actual orders; Push system = forecasts. JIT is a pull system.</li>
+      <li>Kanban (看板) = card system; inventory level controlled by number of Kanban cards in circulation.</li>
+      <li>Two Kanban types: Production instruction kanban (生產指示看板) and Retrieval/Withdrawal kanban (取料看板).</li>
+      <li>Toyota setup time = 10 minutes; USA = 6 hours; Sweden/Germany = 4 hours — enables Toyota's 1-day lot size.</li>
+      <li>JIT inventory-as-water analogy: reducing inventory (water) exposes operational problems (rocks).</li>
+      <li>5 JIT implementation areas: flow redesign, quality improvement, schedule stabilization, vendor relations, pull system (Kanban).</li>
+      <li>Levelled scheduling (平準化排程) maintains capacity — no added cost — while reducing WIP and finished goods inventory.</li>
+      <li>Poka-yoke (防錯裝置) = fail-safe method; quality at the source = workers check quality at their own workstations.</li>
+      <li>6 Gartner supply chain resilience strategies: nearshoring, harmonization, network diversification, inventory/capacity buffers, ecosystem partnerships.</li>
+      <li>Melnyk resilience matrix: Hardy = high resistance + high recovery; Vulnerable but Responsive = low resistance + high recovery.</li>
+      <li>Freeze windows = no schedule changes for a defined period — part of stabilizing production schedules.</li>
+    </ol>
+  </div>
+</div>
+</div>
+
+<div id="notes-6" class="page">
+<div id="notes-6" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-6" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(6)">Clear Highlights</button>
+  <h1>Lecture 6: Supply Chain Management</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    Supply chain management (供應鏈管理) coordinates the flow of goods, information, and finances from raw material procurement to final customer delivery. The central challenge is aligning demand signals with supply capacity so that costs stay low and customers stay satisfied. Two structural decisions dominate the field: where to place the push-pull boundary, and how tightly to integrate the chain's tiers. Technology increasingly enables the real-time visibility and automation that make both decisions executable.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Supply Chain Management Fundamentals</h2>
+    <p data-topic="scm-definition">
+      Supply chain management (SCM) (供應鏈管理) encompasses the management of goods (貨物), information (資訊), and financial flows (資金流動) related to a product or service, from raw material procurement (原材料採購) to final delivery.
+    </p>
+    <ul>
+      <li><strong>Physical flow</strong> (實物流) — typically <em>downstream</em> (下游): Raw Materials → Manufacturer (製造商) → Distributor (分銷商) → Retailer (零售商) → Customer</li>
+      <li><strong>Cash flow</strong> (現金流) — typically <em>upstream</em> (上游): from customer back to supplier</li>
+      <li><strong>Information flow</strong> (資訊流) — bidirectional: both upstream and downstream</li>
+    </ul>
+    <p data-topic="scm-activities">
+      Typical SCM activities include procurement (採購), product lifecycle management (產品生命週期管理), supply chain planning (供應鏈規劃), logistics (物流), distribution (配送), order management (訂單管理), and global coordination (全球協調) with systems integration (系統整合).
+    </p>
+    <ul>
+      <li>Major objective: connect demand (需求) to supply strategy (供應策略) and to operations (運營)</li>
+      <li>Sales &amp; Operations Planning (S&amp;OP) (銷售與運營計劃) acts as the "conductor" of the business</li>
+    </ul>
+    <p data-topic="sop-process">
+      S&amp;OP integrates three plans:
+    </p>
+    <ul>
+      <li><strong>Demand Plan</strong> (需求計劃) — what we can SELL</li>
+      <li><strong>Supply Plan</strong> (供應計劃) — what we can MAKE/DO</li>
+      <li><strong>Financial Plan</strong> (財務計劃) — what it means for PROFIT &amp; CASH</li>
+    </ul>
+    <p data-topic="sop-process">
+      S&amp;OP process steps:
+    </p>
+    <ol>
+      <li>Data gathering (數據收集)</li>
+      <li>Demand Planning (需求規劃)</li>
+      <li>Supply Planning (供應規劃)</li>
+      <li>Reconciliation Meeting (協調會議) — the Pre-S&amp;OP</li>
+      <li>Executive S&amp;OP Meeting (高管S&amp;OP會議)</li>
+    </ol>
+    <div class="exam-trap-inline" data-topic="scm-definition"><b>Exam trap:</b> Cash flow runs <em>upstream</em> (from customer to supplier), not downstream like the physical product flow. Information flow is the only bidirectional flow.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. The Bullwhip Effect</h2>
+    <p data-topic="bullwhip-definition">
+      The bullwhip effect (長鞭效應) describes how small fluctuations in customer demand get progressively amplified as orders move upstream through the supply chain — from retailer (零售商) to wholesaler (批發商) to distributor (分銷商) to factory (工廠/啤酒廠).
+    </p>
+    <p data-topic="beer-game">
+      The Beer Game (啤酒遊戲) is a role-playing simulation illustrating the bullwhip effect. Four roles: Retailer → Wholesaler → Distributor (Bottler) → Factory (Brewery). Key constraint: each team sees only orders from the immediately downstream link; cross-team communication is often forbidden. Each team's job:
+    </p>
+    <ul>
+      <li>Receive shipments from upstream supplier (after a delay)</li>
+      <li>Receive orders from downstream customer</li>
+      <li>Ship beer from inventory to fill orders; backorder (延遲交付) if inventory is insufficient</li>
+      <li>Place replenishment orders to upstream supplier</li>
+      <li>Goal: minimize total costs = inventory (storage costs) + backorders (shortage costs 缺貨成本)</li>
+    </ul>
+    <p data-topic="bullwhip-causes">
+      Common causes of the bullwhip effect:
+    </p>
+    <ul>
+      <li>Forecast errors (預測誤差)</li>
+      <li>Poor demand information sharing (需求資訊共享不足)</li>
+      <li>Overreacting to supplier rationing (供應商配給) and buyer gaming behavior (買家博弈行為)</li>
+      <li>Uncertainty caused by long lead times (長交貨期)</li>
+      <li>Price fluctuations (價格波動) and uneven demand (需求不均)</li>
+    </ul>
+    <p data-topic="bullwhip-solutions">
+      Possible solutions to the bullwhip effect:
+    </p>
+    <ul>
+      <li>Streamline the supply chain to coordinate a better supply plan</li>
+      <li>Improved communication with technology (科技改善溝通)</li>
+      <li>Optimize inventory management (庫存管理)</li>
+      <li>Consistent, smaller order sizes (穩定、較小的訂單量)</li>
+      <li>Minimize promotions and discounts to stabilize demand (穩定需求)</li>
+    </ul>
+    <p data-topic="bullwhip-takeaways">
+      Key takeaways from the Beer Game:
+    </p>
+    <ul>
+      <li><strong>Systems thinking</strong> (系統思維) over blame: shift from "Who messed up?" to "How is the system causing this behavior?"</li>
+      <li><strong>Dangers of local optimization</strong> (局部優化的危害): each node optimizing individually worsens the whole</li>
+      <li><strong>Critical role of information &amp; communication</strong>: shared data, S&amp;OP, and supply chain visibility (供應鏈可見性) are essential</li>
+      <li><strong>Time delays are a killer</strong>: lead time (交貨期) amplifies variance at every tier</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="bullwhip-definition"><b>Exam trap:</b> The bullwhip effect is not caused by actual demand being volatile — daily demand in the Beer Game follows a stable Poisson distribution (mean = 1 unit per retailer). The amplification is entirely systemic, caused by information lag and independent decision-making, not by real demand swings.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Push vs. Pull Supply Chain Models</h2>
+    <p data-topic="push-pull-definition">
+      Supply chains choose between two fundamental operating philosophies based on whether production is triggered by forecasts or by actual customer demand.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Dimension</th>
+          <th>Push Model (推式模式)</th>
+          <th>Pull Model (拉式模式)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Trigger</td>
+          <td>Forecast (預測)</td>
+          <td>Actual customer demand (實際需求)</td>
+        </tr>
+        <tr>
+          <td>Focus</td>
+          <td>Efficiency (效率); economies of scale (規模經濟)</td>
+          <td>Responsiveness (響應速度); reduce inventory</td>
+        </tr>
+        <tr>
+          <td>Flow</td>
+          <td>Forecast → Purchase → Produce → Warehouse → Sell → Deliver</td>
+          <td>Order received → Purchase → Produce → Deliver</td>
+        </tr>
+        <tr>
+          <td>Best for</td>
+          <td>Functional products (功能性產品): predictable demand</td>
+          <td>Innovative products (創新性產品): unpredictable demand</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p data-topic="product-attributes">
+      Marshall Fisher (1997) identifies product attributes that determine the appropriate supply chain model:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Attribute</th>
+          <th>Functional Products (功能性產品)</th>
+          <th>Innovative Products (創新性產品)</th>
+          <th>Made-to-Order (按訂單生產)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Demand</td>
+          <td>Predictable (可預測)</td>
+          <td>Unpredictable (不可預測)</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>Product life cycle (產品生命週期)</td>
+          <td>&gt;2 years</td>
+          <td>3 months to 1 year</td>
+          <td>6 months to 1 year</td>
+        </tr>
+        <tr>
+          <td>Contribution margin (貢獻邊際)</td>
+          <td>5% to 20%</td>
+          <td>20% to 60%</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>Product variety (產品多樣性)</td>
+          <td>Low</td>
+          <td>High</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>Forecast error (預測誤差)</td>
+          <td>10%</td>
+          <td>40% to 100%</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>Average stockout (平均缺貨率)</td>
+          <td>1% to 2%</td>
+          <td>10% to 40%</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>Average markdown (平均降價率)</td>
+          <td>0%</td>
+          <td>10% to 25%</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>Lead time (交貨期)</td>
+          <td>—</td>
+          <td>—</td>
+          <td>1 day to 2 weeks</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p data-topic="push-pull-boundary">
+      The push-pull boundary (推拉邊界) is the strategic point where the chain transitions from forecast-driven to demand-driven production. Three archetypes:
+    </p>
+    <ul>
+      <li><strong>Make-to-Stock (MTS)</strong> (按庫存生產) — pure push; example: Coca-Cola (finished goods held in stock)</li>
+      <li><strong>Make-to-Order (MTO)</strong> (按訂單生產) — pure pull; example: Boeing Aircraft (component fabrication triggered by order)</li>
+      <li><strong>Assemble-to-Order (ATO)</strong> (按訂單裝配) — hybrid; example: Dell (components pushed, final assembly pulled)</li>
+    </ul>
+    <p data-topic="push-pull-examples">
+      Real-world hybrid examples:
+    </p>
+    <ul>
+      <li><strong>Amazon</strong>: high-volume predictable items (books, electronics) → push/MTS stored in fulfillment centers; low-volume items → pull, suppliers ship directly</li>
+      <li><strong>Zara</strong> (fashion): pushes generic fabric based on forecasts; pulls final garment by cutting and dyeing after seeing early sales trends — highly responsive hybrid</li>
+      <li><strong>Chip manufacturers (Intel, TSMC)</strong>: push standard wafer fabrication; pull final customization and packaging based on specific customer orders</li>
+      <li><strong>Influenza vaccine</strong>: WHO detects antigenic variants, proposes formulation by February; 5-6 month production process begins; final fill and release is demand-driven</li>
+    </ul>
+    <p data-topic="push-pull-rule">
+      Fundamental rule of thumb: <strong>Push</strong> = standardized, high-volume, predictable components; <strong>Pull</strong> = customized, low-volume, unpredictable final products. The optimal boundary is a strategic choice, not a given.
+    </p>
+    <div class="exam-trap-inline" data-topic="push-pull-boundary"><b>Exam trap:</b> Zara is often cited as a pure pull company, but it is actually a hybrid. Fabric (generic, low-cost) is pushed; the final garment (cut, dye, assembly) is pulled. Do not classify companies as purely push or pull without checking where their boundary sits.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Supply Chain Integration</h2>
+    <p data-topic="integration-types">
+      Supply chain integration (供應鏈整合) refers to the degree of coordination and ownership across chain tiers. Two major forms:
+    </p>
+    <ul>
+      <li><strong>Vertical integration</strong> (垂直整合) — insourcing through mergers &amp; acquisitions (併購)
+        <ul>
+          <li>Forward integration (前向整合): expand toward the customer side</li>
+          <li>Backward integration (後向整合): expand toward the supplier side</li>
+        </ul>
+      </li>
+      <li><strong>Virtual integration</strong> (虛擬整合) — outsourcing (外包) coordinated by IT; partners remain independent but operate as one chain</li>
+    </ul>
+    <p data-topic="ibm-outsourcing">
+      IBM case (1980s): IBM outsourced PC design and manufacturing to external component suppliers using an open architecture (開放架構). This accelerated innovation and lowered costs initially, but competitors could access the same components and replicate the product. Key lesson: outsourcing core components of a product can erode competitive advantage (競爭優勢) if those components become the source of differentiation (差異化).
+    </p>
+    <p data-topic="outsourcing-decision">
+      Decision logic for outsourcing (外包決策邏輯) — keep in-house if all three conditions hold:
+    </p>
+    <ol>
+      <li>Activity is of strategic importance (具戰略重要性)</li>
+      <li>Company has specialized knowledge (專業知識)</li>
+      <li>Company's performance is superior (績效卓越) OR significant operations improvement is likely</li>
+    </ol>
+    <div class="exam-trap-inline" data-topic="outsourcing-decision"><b>Exam trap:</b> The outsourcing decision tree requires ALL three conditions (strategic importance, specialized knowledge, superior performance) to favor keeping an activity in-house. If even one is absent, outsourcing may be appropriate — but "significant performance improvement likely" can override poor current performance.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Technology Impacts on Supply Chain Management</h2>
+    <p data-topic="scm-pain-points">
+      Common pain points in traditional SCM environments:
+    </p>
+    <ul>
+      <li>Each company is isolated (各自孤立); siloed functions (engineering, marketing, sales, manufacturing, distribution, finance)</li>
+      <li>Communication is time-consuming and error-prone</li>
+      <li>Long decision and response times (決策和響應時間長)</li>
+    </ul>
+    <p data-topic="scm-technologies">
+      Five key technologies delivering competitive advantage (競爭優勢) in SCM (MIT Sloan):
+    </p>
+    <ul>
+      <li><strong>Internet of Things (IoT)</strong> (物聯網)</li>
+      <li><strong>Blockchain</strong> (區塊鏈)</li>
+      <li><strong>AI, machine learning, and analytics</strong> (人工智能、機器學習與數據分析)</li>
+      <li><strong>Robotic process automation (RPA)</strong> (機器人流程自動化)</li>
+      <li><strong>3D printing</strong> (三維打印)</li>
+    </ul>
+    <p data-topic="iot-scm">
+      IoT beyond RFID — enables continuous real-time supply chain visibility (供應鏈可見性) through three functions:
+    </p>
+    <ul>
+      <li><strong>Tracking</strong> (追蹤): real-time location via GSM, WiFi, wide area low-energy networks</li>
+      <li><strong>Monitoring</strong> (監控): real-time condition status (temperature, humidity, etc.)</li>
+      <li><strong>Analytics</strong> (分析): real-time exception alerts — delays, condition violations</li>
+    </ul>
+    <p data-topic="blockchain-scm">
+      Blockchain (區塊鏈) applications in SCM:
+    </p>
+    <ul>
+      <li>Transaction settlement (交易結算) and audit transparency (審計透明度)</li>
+      <li>Tracking social responsibility (社會責任追蹤) and provenance (來源追蹤)</li>
+      <li>Accurate costing information and better shipping data</li>
+      <li>Preventing compliance violations and enforcing trade policies and tariffs (關稅)</li>
+      <li>Food safety (食品安全) assurance and counterfeit goods (假冒商品) reduction</li>
+      <li>Automated purchasing &amp; planning and reducing human error (人為錯誤)</li>
+    </ul>
+    <p data-topic="ai-ml-scm">
+      AI, machine learning, and analytics improve major SCM processes across the value chain:
+    </p>
+    <ul>
+      <li>Demand planning (需求規劃) and forecasting</li>
+      <li>Supplier selection (供應商選擇), cost analysis, contract management</li>
+      <li>Predictive sourcing (預測性採購) and digital purchasing</li>
+      <li>Inventory control (庫存控制) and aftermarket inventory levels</li>
+      <li>Automated order picking (自動揀貨), carrier management, delivery tracking</li>
+      <li>Waste reduction (減少浪費), robotic workforce, predictive maintenance (預測性維護)</li>
+      <li>Risk mitigation (風險緩解) and end-of-life management</li>
+      <li>Service network structure and machine feedback</li>
+    </ul>
+    <p data-topic="rpa-scm">
+      RPA (機器人流程自動化) automates repetitive SCM tasks:
+    </p>
+    <ul>
+      <li>Order processing &amp; payments (訂單處理與付款)</li>
+      <li>Partner onboarding (合作夥伴入職)</li>
+      <li>Supply and demand planning (供需規劃)</li>
+      <li>Shipment scheduling and tracking (出貨排程與追蹤)</li>
+      <li>Procurement invoicing &amp; inventory (採購發票與庫存)</li>
+    </ul>
+    <p data-topic="3d-printing-scm">
+      3D printing (三維打印) enables a digital supply chain model that bypasses traditional tiers:
+    </p>
+    <ul>
+      <li><strong>Traditional chain</strong>: Supplier's suppliers → Supplier → Manufacturer → Retailer → Consumer</li>
+      <li><strong>Additive manufacturing model</strong>: 3D model provider → download 3D printing file → 3D shop or consumer's own printer → Consumer. The physical supply chain collapses into a digital file distribution network.</li>
+    </ul>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 160" style="width:100%;max-width:680px;display:block;margin:1rem auto;font-family:Georgia,serif">
+      <!-- Traditional chain -->
+      <text x="10" y="20" font-size="11" fill="#555">Traditional Chain</text>
+      <rect x="10" y="28" width="90" height="30" rx="4" fill="#e8f4e8" stroke="#6aaa6a"/>
+      <text x="55" y="47" text-anchor="middle" font-size="10" fill="#333">Supplier/Mfr</text>
+      <line x1="100" y1="43" x2="120" y2="43" stroke="#999" stroke-width="1.5" marker-end="url(#arr)"/>
+      <rect x="120" y="28" width="70" height="30" rx="4" fill="#e8f4e8" stroke="#6aaa6a"/>
+      <text x="155" y="47" text-anchor="middle" font-size="10" fill="#333">Retailer</text>
+      <line x1="190" y1="43" x2="210" y2="43" stroke="#999" stroke-width="1.5" marker-end="url(#arr)"/>
+      <rect x="210" y="28" width="70" height="30" rx="4" fill="#e8f4e8" stroke="#6aaa6a"/>
+      <text x="245" y="47" text-anchor="middle" font-size="10" fill="#333">Consumer</text>
+
+      <!-- Additive chain -->
+      <text x="10" y="105" font-size="11" fill="#555">Additive Mfg Model</text>
+      <rect x="10" y="113" width="90" height="30" rx="4" fill="#fff3cd" stroke="#e6a817"/>
+      <text x="55" y="132" text-anchor="middle" font-size="10" fill="#333">3D Model File</text>
+      <line x1="100" y1="128" x2="250" y2="128" stroke="#e6a817" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr2)"/>
+      <text x="175" y="122" text-anchor="middle" font-size="9" fill="#e6a817">download</text>
+      <rect x="250" y="113" width="90" height="30" rx="4" fill="#fff3cd" stroke="#e6a817"/>
+      <text x="295" y="132" text-anchor="middle" font-size="10" fill="#333">3D Printer</text>
+      <line x1="340" y1="128" x2="400" y2="128" stroke="#e6a817" stroke-width="1.5" marker-end="url(#arr2)"/>
+      <rect x="400" y="113" width="70" height="30" rx="4" fill="#fff3cd" stroke="#e6a817"/>
+      <text x="435" y="132" text-anchor="middle" font-size="10" fill="#333">Consumer</text>
+
+      <defs>
+        <marker id="arr" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#999"/>
+        </marker>
+        <marker id="arr2" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#e6a817"/>
+        </marker>
+      </defs>
+    </svg>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Cash flow runs upstream (customer to supplier); information flow is the only bidirectional flow. Physical flow is downstream.</li>
+      <li>The bullwhip effect is caused by systemic information lag and independent decision-making — NOT by genuinely volatile end-customer demand. In the Beer Game, daily demand follows a stable Poisson distribution (mean = 1 unit).</li>
+      <li>Zara is a hybrid push-pull company, not a pure pull company. Fabric is pushed; the final garment is pulled after observing early sales.</li>
+      <li>The outsourcing decision requires all three conditions (strategic importance + specialized knowledge + superior performance/improvement potential) to favor insourcing. A single "No" can flip the decision to outsource.</li>
+      <li>ATO (Assemble-to-Order) like Dell is neither pure push nor pure pull — it pushes component fabrication and pulls final assembly. Do not conflate it with MTO or MTS.</li>
+      <li>Blockchain in SCM is not just about cryptocurrency or payments — its primary uses include provenance tracking, food safety, counterfeit prevention, and compliance enforcement.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Three SCM flows: Physical (downstream), Cash (upstream), Information (bidirectional)</li>
+      <li>S&amp;OP 5-step process: Data gathering → Demand Planning → Supply Planning → Pre-S&amp;OP Reconciliation → Executive S&amp;OP</li>
+      <li>Bullwhip effect: small demand fluctuations amplify upstream; caused by forecast errors, poor info sharing, lead time, rationing gaming, price fluctuations</li>
+      <li>Push = forecast-driven, efficiency focus; Pull = demand-driven, responsiveness focus</li>
+      <li>Fisher (1997) product table: functional products → push (low forecast error 10%, low margin 5-20%); innovative products → pull (high forecast error 40-100%, high margin 20-60%)</li>
+      <li>Push-pull archetypes: MTS (Coca-Cola) = push; MTO (Boeing) = pull; ATO (Dell) = hybrid</li>
+      <li>Vertical integration: forward (toward customer), backward (toward supplier); Virtual integration: outsourcing coordinated by IT</li>
+      <li>Outsourcing decision logic: keep in-house if activity is strategically important AND company has specialized knowledge AND performance is superior (or significant improvement likely)</li>
+      <li>IBM 1980s failure: open architecture outsourcing eroded competitive advantage because competitors could access the same components</li>
+      <li>Five SCM technologies: IoT, Blockchain, AI/ML, RPA, 3D printing</li>
+      <li>IoT provides three capabilities: Tracking (location), Monitoring (condition), Analytics (exception alerts)</li>
+      <li>3D printing collapses the supply chain: physical tiers replaced by digital file download → local print → consumer</li>
+    </ol>
+  </div>
+</div>
+</div>
+
+<div id="notes-2" class="page">
+<div id="notes-2" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-2" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(2)">Clear Highlights</button>
+  <h1>Lecture 2: Demand Management and Forecasting – Forecasting Models</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    This lecture covers the core quantitative models used to forecast demand over time. Starting from simple averages, it builds toward exponential smoothing and linear regression, each model adding a layer of sophistication to handle trends and noise. The central throughline is the trade-off between responsiveness and stability: no single parameter choice is universally optimal, and selecting the right model requires understanding what pattern the demand data actually exhibits.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Simple Moving Average</h2>
+    <p data-topic="simple-moving-average">Simple moving average (簡單移動平均) is appropriate when demand (需求) is stable — no rapid growth, no decline, and no seasonal fluctuations (季節性波動). The forecast for period t is the arithmetic mean of the n most recent actual demand values.</p>
+    <ul>
+      <li>Formula: F<sub>t</sub> = (A<sub>t−1</sub> + A<sub>t−2</sub> + … + A<sub>t−n</sub>) / n, where A is actual demand and n is the period length (期數)</li>
+      <li>Example — 3-week moving average for week 4: F<sub>4</sub> = (1000 + 1400 + 800) / 3 = 1067</li>
+      <li>Example — 3-week moving average for week 5: F<sub>5</sub> = (1500 + 1000 + 1400) / 3 = 1300</li>
+      <li>Example — 9-week moving average for week 10: F<sub>10</sub> = (1700 + 1300 + 1800 + 1700 + 1500 + 1300 + 1500 + 1400 + 800) / 9 = 1567 (rounded from 1467 per table entry; table shows 1467)</li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Period length (n)</th>
+          <th>Responsiveness (響應性)</th>
+          <th>Smoothing effect (平滑效果)</th>
+          <th>Best for</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Short (e.g. 3-week)</td>
+          <td>High — reacts quickly to recent sales</td>
+          <td>Low</td>
+          <td>Rapidly changing demand</td>
+        </tr>
+        <tr>
+          <td>Long (e.g. 9-week)</td>
+          <td>Low</td>
+          <td>High — smooths out fluctuations in the long run</td>
+          <td>Stable demand, noise reduction</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="exam-trap-inline" data-topic="simple-moving-average"><b>Exam trap:</b> Simple moving average treats all n periods with equal weight. It does NOT give more importance to more recent data — that is the role of weighted moving average or exponential smoothing.</div>
+
+    <svg width="420" height="120" viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:12px auto;">
+      <rect x="0" y="0" width="420" height="120" rx="8" fill="#f9f6ef" stroke="#ccc"/>
+      <!-- timeline -->
+      <line x1="30" y1="90" x2="390" y2="90" stroke="#888" stroke-width="1.5"/>
+      <!-- demand bars -->
+      <rect x="50" y="50" width="28" height="40" fill="#8dba8d" opacity="0.8"/>
+      <rect x="100" y="30" width="28" height="60" fill="#8dba8d" opacity="0.8"/>
+      <rect x="150" y="60" width="28" height="30" fill="#8dba8d" opacity="0.8"/>
+      <!-- forecast bar -->
+      <rect x="200" y="45" width="28" height="45" fill="#5a9dc5" opacity="0.8"/>
+      <!-- labels -->
+      <text x="64" y="108" font-size="11" text-anchor="middle" fill="#555">t−3</text>
+      <text x="114" y="108" font-size="11" text-anchor="middle" fill="#555">t−2</text>
+      <text x="164" y="108" font-size="11" text-anchor="middle" fill="#555">t−1</text>
+      <text x="214" y="108" font-size="11" text-anchor="middle" fill="#5a9dc5">F<tspan font-size="9">t</tspan></text>
+      <text x="30" y="20" font-size="11" fill="#333">SMA: average of n past periods → forecast</text>
+      <line x1="78" y1="68" x2="200" y2="68" stroke="#5a9dc5" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="130" y="63" font-size="9" fill="#5a9dc5">avg</text>
+    </svg>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Weighted Moving Average</h2>
+    <p data-topic="weighted-moving-average">Weighted moving average (加權移動平均) assigns different weights (權重) to each past period, allowing the most recent data to carry more influence. All weights must sum to 1.</p>
+    <ul>
+      <li>Formula: F<sub>t</sub> = w<sub>1</sub>A<sub>t−1</sub> + w<sub>2</sub>A<sub>t−2</sub> + … + w<sub>n</sub>A<sub>t−n</sub>, where Σw<sub>i</sub> = 1</li>
+      <li>Typical weight assignment: most recent week gets the highest weight; older periods get progressively lower weights</li>
+      <li>Example — 4-week WMA with weights 0.4 / 0.3 / 0.2 / 0.1 (most-recent to oldest): F<sub>5</sub> = 0.4×1500 + 0.3×1000 + 0.2×1400 + 0.1×800 = 1260</li>
+      <li>Seasonality (季節性) should also be reflected in weight selection</li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Weight on past periods</th>
+          <th>Key parameter(s)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Simple Moving Average</td>
+          <td>Equal (1/n each)</td>
+          <td>Period length n</td>
+        </tr>
+        <tr>
+          <td>Weighted Moving Average</td>
+          <td>User-defined, sum = 1, recent > old</td>
+          <td>Period length n + individual weights w<sub>i</sub></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p data-topic="moving-average-drawbacks">Drawbacks (缺點) shared by both SMA and WMA:</p>
+    <ul>
+      <li>Difficult to decide the right parameters: period length (n) and weights (w<sub>i</sub>) are chosen subjectively</li>
+      <li>Must continuously carry and store a rolling window of historical data (歷史數據)</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="weighted-moving-average"><b>Exam trap:</b> In WMA, the weights must sum exactly to 1. If a question gives weights that do not sum to 1, the formula is invalid. Also, "most recent" week uses weight w<sub>1</sub> applied to A<sub>t−1</sub>, not A<sub>t</sub> — the current period's actual demand is not yet known when forming the forecast.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Simple Exponential Smoothing (SES)</h2>
+    <p data-topic="ses-concept">Simple exponential smoothing (簡單指數平滑法) provides an exponentially weighted moving average of all previously observed values. It is appropriate for data with no predictable upward or downward trend (趨勢). The aim is to estimate the current level and use it as the forecast of the next period.</p>
+
+    <p data-topic="ses-formula">Core formula and interpretation:</p>
+    <ul>
+      <li>F<sub>t</sub> = αA<sub>t−1</sub> + (1 − α)F<sub>t−1</sub></li>
+      <li>α (smoothing constant 平滑常數): weight on most recent actual observation; (1 − α): weight on previous forecast</li>
+      <li>Equivalent form (error-correction form 誤差修正形式): F<sub>t</sub> = F<sub>t−1</sub> + α(A<sub>t−1</sub> − F<sub>t−1</sub>) — new forecast = old forecast + fraction of last period's forecast error</li>
+      <li>Expanded form shows F<sub>t</sub> is the weighted moving average of ALL past observations with exponentially declining weights: F<sub>t</sub> = αA<sub>t−1</sub> + α(1−α)A<sub>t−2</sub> + α(1−α)<sup>2</sup>A<sub>t−3</sub> + … + α(1−α)<sup>t−2</sup>A<sub>1</sub></li>
+      <li>Unlike SMA/WMA, SES does not require storing a fixed window of raw historical data — only F<sub>t−1</sub> and α are needed each period</li>
+    </ul>
+
+    <p data-topic="ses-alpha-effect">Effect of α value:</p>
+    <ul>
+      <li>High α (e.g. 0.5): more responsive to recent demand, but forecast overshoots after a change in direction</li>
+      <li>Low α (e.g. 0.1): smoother, but forecasts lag behind actual sales data for longer</li>
+      <li>Optimal α is identified by minimizing forecasting errors — typically MAD (Mean Absolute Deviation 平均絕對偏差) or MSE (Mean Squared Error 均方誤差)</li>
+      <li>Adaptive smoothing (自適應平滑) uses variable smoothing constants based on the latest percent of error: α<sub>t+1</sub> = f(α<sub>t</sub>) adjusted by recent error signal</li>
+    </ul>
+
+    <p data-topic="ses-initialization">Initialization and worked example:</p>
+    <ul>
+      <li>Initialize: set F<sub>1</sub> = A<sub>1</sub> (use actual demand of first period as first forecast)</li>
+      <li>Example with α = 0.5: Period 1 A=79, F<sub>1</sub>=79; Period 2 A=84, F<sub>2</sub>=79; Period 3 A=83, F<sub>3</sub>=79+0.5(84−79)=81.50; Period 4 A=81, F<sub>4</sub>=82.25; Period 5 A=98, F<sub>5</sub>=81.63; Period 6 A=100, F<sub>6</sub>=89.81; F<sub>7</sub>=94.91; MAD=6.86</li>
+      <li>Numerical example (simpler): F<sub>prev</sub>=1050, A<sub>prev</sub>=1000, α=0.05 → F<sub>this month</sub> = 1050 + 0.05(1000−1050) = 1047.5</li>
+      <li>MAD formula: MAD = Σ|A<sub>t</sub> − F<sub>t</sub>| / n</li>
+    </ul>
+
+    <p data-topic="ses-advantages">Why exponential smoothing is widely adopted:</p>
+    <ul>
+      <li>Surprisingly accurate relative to complexity</li>
+      <li>Easy to formulate and compute</li>
+      <li>Requires minimal computer storage — only the previous forecast and α are needed, not a full history window</li>
+      <li>Easy to test model performance (e.g. compare MAD across different α values)</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="ses-alpha-effect"><b>Exam trap:</b> A higher α does NOT always mean a better forecast. High α makes the model more reactive but causes overshooting after demand reversal. Low α lags persistently. The optimal α must be found by minimizing forecast error metrics, not by choosing intuitively.</div>
+
+    <svg width="440" height="130" viewBox="0 0 440 130" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:12px auto;">
+      <rect x="0" y="0" width="440" height="130" rx="8" fill="#f9f6ef" stroke="#ccc"/>
+      <text x="220" y="18" font-size="11" text-anchor="middle" fill="#333" font-style="italic">SES: F<tspan baseline-shift="sub" font-size="9">t</tspan> = F<tspan baseline-shift="sub" font-size="9">t−1</tspan> + α(A<tspan baseline-shift="sub" font-size="9">t−1</tspan> − F<tspan baseline-shift="sub" font-size="9">t−1</tspan>)</text>
+      <!-- boxes -->
+      <rect x="20" y="35" width="100" height="36" rx="5" fill="#8dba8d" opacity="0.85"/>
+      <text x="70" y="57" font-size="11" text-anchor="middle" fill="#fff">Old Forecast</text>
+      <rect x="170" y="35" width="100" height="36" rx="5" fill="#e8a87c" opacity="0.85"/>
+      <text x="220" y="57" font-size="11" text-anchor="middle" fill="#fff">Forecast Error</text>
+      <rect x="320" y="35" width="100" height="36" rx="5" fill="#5a9dc5" opacity="0.85"/>
+      <text x="370" y="57" font-size="11" text-anchor="middle" fill="#fff">New Forecast</text>
+      <!-- arrows -->
+      <line x1="120" y1="53" x2="168" y2="53" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+      <line x1="270" y1="53" x2="318" y2="53" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+      <defs><marker id="arr" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#888"/></marker></defs>
+      <!-- labels below -->
+      <text x="70" y="90" font-size="10" text-anchor="middle" fill="#555">F<tspan baseline-shift="sub" font-size="8">t−1</tspan></text>
+      <text x="220" y="90" font-size="10" text-anchor="middle" fill="#555">α × (A<tspan baseline-shift="sub" font-size="8">t−1</tspan> − F<tspan baseline-shift="sub" font-size="8">t−1</tspan>)</text>
+      <text x="370" y="90" font-size="10" text-anchor="middle" fill="#5a9dc5">F<tspan baseline-shift="sub" font-size="8">t</tspan></text>
+      <text x="220" y="116" font-size="10" text-anchor="middle" fill="#888">α controls how much error is incorporated</text>
+    </svg>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Exponential Smoothing with Trend Adjustment (Holt's Method)</h2>
+    <p data-topic="holts-method">Holt's method (霍爾特法) extends SES to handle data with a trend component (趨勢成分). It maintains two smoothing equations: one for the level (水平) F and one for the trend T, combining them into a trend-adjusted forecast FIT.</p>
+
+    <ul>
+      <li>Two smoothing parameters: α (for level) and δ (delta, for trend 趨勢平滑常數)</li>
+      <li>Level update: F<sub>t</sub> = FIT<sub>t−1</sub> + α(A<sub>t−1</sub> − FIT<sub>t−1</sub>)</li>
+      <li>Trend update: T<sub>t</sub> = T<sub>t−1</sub> + δ(F<sub>t</sub> − FIT<sub>t−1</sub>)</li>
+      <li>Trend-adjusted forecast: FIT<sub>t</sub> = F<sub>t</sub> + T<sub>t</sub></li>
+      <li>Initialization: F<sub>1</sub> = A<sub>1</sub> and T<sub>1</sub> = A<sub>2</sub> − A<sub>1</sub></li>
+    </ul>
+
+    <p data-topic="holts-worked-example">Worked example (α = 0.5, δ = 0.3):</p>
+    <ul>
+      <li>Week 1: A=31; Week 2: A=40, F<sub>2</sub>=31.00, T<sub>2</sub>=9.00, FIT<sub>2</sub>=40.00, error=0.00</li>
+      <li>Week 3: A=43, F<sub>3</sub>=40.00, T<sub>3</sub>=9.00, FIT<sub>3</sub>=49.00, error=6.00</li>
+      <li>Week 4: A=52, F<sub>4</sub>=46.00, T<sub>4</sub>=8.10, FIT<sub>4</sub>=54.10, error=2.10</li>
+      <li>Week 5: A=49, F<sub>5</sub>=53.05, T<sub>5</sub>=7.79, FIT<sub>5</sub>=60.84, error=11.84</li>
+      <li>Week 6: A=64, F<sub>6</sub>=54.92, T<sub>6</sub>=6.01, FIT<sub>6</sub>=60.93, error=3.07</li>
+      <li>Week 7: A=58, F<sub>7</sub>=62.46, T<sub>7</sub>=6.47, FIT<sub>7</sub>=68.93, error=10.93</li>
+      <li>Week 8: A=68, F<sub>8</sub>=63.47, T<sub>8</sub>=4.83, FIT<sub>8</sub>=68.30, error=0.30</li>
+      <li>Week 9 forecast: FIT<sub>9</sub>=72.94; MAD=4.89</li>
+      <li>Step detail for week 3: F<sub>3</sub> = FIT<sub>2</sub> + α(A<sub>2</sub>−FIT<sub>2</sub>) = 40 + 0.5(40−40) = 40; T<sub>3</sub> = T<sub>2</sub> + δ(F<sub>3</sub>−FIT<sub>2</sub>) = 9 + 0.3(40−40) = 9</li>
+    </ul>
+
+    <p data-topic="holts-method">This method is listed as optional (for reference) in the lecture but the full worked table is provided.</p>
+
+    <div class="exam-trap-inline" data-topic="holts-method"><b>Exam trap:</b> In Holt's method, the trend T is updated using (F<sub>t</sub> − FIT<sub>t−1</sub>), not (A<sub>t</sub> − FIT<sub>t−1</sub>). Do not substitute actual demand into the trend update equation.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Simple Linear Regression for Forecasting</h2>
+    <p data-topic="linear-regression-concept">Simple linear regression (簡單線性回歸) is a statistical technique used to describe the relationship between a dependent variable (因變量) y and one independent variable (自變量) x. When applied to time-series demand, x = time period t.</p>
+
+    <ul>
+      <li>Regression line: y = b<sub>0</sub> + b<sub>1</sub>x, where b<sub>0</sub> is the intercept (截距) and b<sub>1</sub> is the slope (斜率)</li>
+      <li>In real data, relationships are rarely exact — points scatter around the line</li>
+      <li>Least squares minimization (最小二乘法): minimize Σ(y<sub>i</sub> − ŷ<sub>i</sub>)<sup>2</sup> (sum of squared residuals 殘差平方和) — gives a unique, objective solution</li>
+      <li>Residual (殘差) / "fit error": difference between each observed y and the fitted ŷ; positive and negative deviations ideally cancel out, but squaring removes sign ambiguity</li>
+    </ul>
+
+    <p data-topic="regression-formulas">Least squares estimators:</p>
+    <ul>
+      <li>Slope: b = (Σty − n·t̄·ȳ) / (Σt<sup>2</sup> − n·t̄<sup>2</sup>)</li>
+      <li>Intercept: a = ȳ − b·t̄</li>
+      <li>Both can be computed by hand or via Excel</li>
+    </ul>
+
+    <p data-topic="regression-worked-example">Worked example (monthly demand data, n=6):</p>
+
+    <table>
+      <thead>
+        <tr><th>Month (t)</th><th>Demand (y)</th><th>ty</th><th>t<sup>2</sup></th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1 (Jan)</td><td>12</td><td>12</td><td>1</td></tr>
+        <tr><td>2 (Feb)</td><td>11</td><td>22</td><td>4</td></tr>
+        <tr><td>3 (Mar)</td><td>15</td><td>45</td><td>9</td></tr>
+        <tr><td>4 (Apr)</td><td>12</td><td>48</td><td>16</td></tr>
+        <tr><td>5 (May)</td><td>16</td><td>80</td><td>25</td></tr>
+        <tr><td>6 (Jun)</td><td>15</td><td>90</td><td>36</td></tr>
+        <tr><td><strong>Total</strong></td><td><strong>81</strong></td><td><strong>297</strong></td><td><strong>91</strong></td></tr>
+        <tr><td><strong>Average</strong></td><td><strong>13.5</strong></td><td></td><td><strong>t̄ = 3.5</strong></td></tr>
+      </tbody>
+    </table>
+
+    <ul>
+      <li>b = (297 − 6×3.5×13.5) / (91 − 6×3.5<sup>2</sup>) = (297 − 283.5) / (91 − 73.5) = 13.5 / 17.5 ≈ 0.77</li>
+      <li>a = 13.5 − 0.77×3.5 = 13.5 − 2.7 = 10.8</li>
+      <li>Regression equation: Y<sub>t</sub> = 10.8 + 0.77t</li>
+      <li>Forecast for July (t=7): Y<sub>7</sub> = 10.8 + 0.77×7 = 16.2</li>
+    </ul>
+
+    <p data-topic="multiple-regression">Multiple regression (多元回歸) extends this to two or more predictor variables: y = b<sub>0</sub> + b<sub>1</sub>x<sub>1</sub> + b<sub>2</sub>x<sub>2</sub> + … Covered briefly as an extension.</p>
+
+    <div class="exam-trap-inline" data-topic="regression-formulas"><b>Exam trap:</b> The "n" in the regression formulas refers to the number of observations (e.g. 6 months), not the period length of a moving average. Also, t̄ is the mean of the time indices (1,2,3…n), not the mean of demand — mixing up t̄ and ȳ in the formula leads to wrong b and a values.</div>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Simple moving average assigns equal weight to all n periods — it does NOT favor recent data.</li>
+      <li>In WMA, all weights must sum to 1; "most recent" maps to A<sub>t−1</sub>, not A<sub>t</sub>.</li>
+      <li>A higher α in SES does not guarantee a better forecast — it increases responsiveness but causes overshooting after direction changes. Optimal α minimizes MAD or MSE.</li>
+      <li>In Holt's method, the trend T is updated with (F<sub>t</sub> − FIT<sub>t−1</sub>), not (A<sub>t</sub> − FIT<sub>t−1</sub>).</li>
+      <li>In the regression formula, "n" is the number of data points (observations), not a moving average window. t̄ is the mean of time indices; ȳ is the mean of demand values — do not swap them.</li>
+      <li>SES is only appropriate when there is no predictable trend — for trended data, Holt's method (with both α and δ) is required.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>SMA formula: F<sub>t</sub> = (A<sub>t−1</sub> + … + A<sub>t−n</sub>) / n; shorter n = more responsive, longer n = smoother</li>
+      <li>WMA: weights user-defined, must sum to 1, highest weight on most recent period</li>
+      <li>SES core formula: F<sub>t</sub> = αA<sub>t−1</sub> + (1−α)F<sub>t−1</sub>; error-correction form: F<sub>t</sub> = F<sub>t−1</sub> + α(A<sub>t−1</sub>−F<sub>t−1</sub>)</li>
+      <li>SES initialization: F<sub>1</sub> = A<sub>1</sub>; optimal α found by minimizing MAD or MSE</li>
+      <li>SES vs SMA: SES uses unequal (exponentially declining) weights on all past data; SMA uses equal weights on only n recent periods</li>
+      <li>Holt's method formulas: F<sub>t</sub> = FIT<sub>t−1</sub> + α(A<sub>t−1</sub>−FIT<sub>t−1</sub>); T<sub>t</sub> = T<sub>t−1</sub> + δ(F<sub>t</sub>−FIT<sub>t−1</sub>); FIT<sub>t</sub> = F<sub>t</sub> + T<sub>t</sub></li>
+      <li>Regression slope: b = (Σty − n·t̄·ȳ) / (Σt<sup>2</sup> − n·t̄<sup>2</sup>); intercept: a = ȳ − b·t̄</li>
+      <li>Worked regression result: a = 10.8, b = 0.77, July forecast = 16.2</li>
+      <li>Least squares minimizes Σ(y<sub>i</sub> − ŷ<sub>i</sub>)<sup>2</sup> — squaring eliminates sign issues and gives a unique solution</li>
+      <li>Drawback of SMA/WMA: hard to choose n and weights; must store rolling window of historical data</li>
+    </ol>
+  </div>
+</div>
+</div>
+
+<div id="notes-1" class="page">
+<div id="notes-1" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-1" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(1)">Clear Highlights</button>
+  <h1>Lecture 1: Demand Management and Forecasting</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    Demand management sits at the heart of supply chain operations: a firm must decide how much to sell, at what price, and how much capacity to maintain — all before customer orders arrive. Forecasting (預測) provides the quantitative foundation for these decisions, translating past demand patterns into actionable estimates of the future. The lecture covers what makes forecasting hard, how to measure forecast accuracy, and which quantitative models suit which data patterns.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Demand Management</h2>
+    <p data-topic="demand-management">Demand management (需求管理) is the process of optimizing customer demand against available capacity to maximize a company's profit. It has two dimensions:</p>
+    <ul>
+      <li><b>Revenue side</b> — how much to sell and at what price</li>
+      <li><b>Cost side</b> — how much capacity (產能) to maintain and at what cost</li>
+    </ul>
+    <p data-topic="demand-management">Two strategic postures exist:</p>
+    <ul>
+      <li><b>Passive role</b> (被動角色) — forecast and respond to customer demand as it arrives</li>
+      <li><b>Active role</b> (主動角色) — influence or prioritize customer demand (e.g., promotions, pricing, rationing) before actual sales occur</li>
+    </ul>
+    <p data-topic="demand-management-case">The Chinese Pharmaceuticals (HK) case illustrates why accurate forecasting matters. Key operational constraints:</p>
+    <table>
+      <thead>
+        <tr><th>Characteristic</th><th>Detail</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Profit margin</td><td>High — but only realised if inventory (存貨) is available</td></tr>
+        <tr><td>Supply lead time (前置時間)</td><td>4–6 weeks from Yunnan supplier</td></tr>
+        <tr><td>Production lead time</td><td>8 weeks at Hong Kong contract manufacturer</td></tr>
+        <tr><td>Demand pattern</td><td>Seasonal and festive spikes; frequent promotional sales</td></tr>
+        <tr><td>Reorder interval</td><td>Regular monthly cycle</td></tr>
+        <tr><td>Warehouse space</td><td>Limited</td></tr>
+        <tr><td>Manufacturing</td><td>Equipment-intensive</td></tr>
+      </tbody>
+    </table>
+    <div class="exam-trap-inline" data-topic="demand-management"><b>Exam trap:</b> "Demand management" is not the same as "demand forecasting." Forecasting is a tool within demand management; management also includes active tactics like pricing and promotions to shape demand.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Principles of Demand Forecasting</h2>
+    <p data-topic="forecasting-principles">Five foundational principles govern any forecasting exercise:</p>
+    <ul>
+      <li><b>No forecast is perfect</b> — all forecasts carry error (誤差); plan for it</li>
+      <li><b>Causal continuity assumed</b> — forecasts assume the relationships driving past demand continue into the future</li>
+      <li><b>Groups more accurate than individuals</b> — aggregate (總量) forecasts are more reliable than individual-item forecasts</li>
+      <li><b>Accuracy decreases with horizon</b> — the further into the future, the less accurate the forecast</li>
+      <li><b>Complexity not always better</b> — good forecasts do not always require complex (複雜) models; simple models often suffice</li>
+    </ul>
+    <p data-topic="forecasting-inputs">A forecasting process (預測流程) integrates three input streams:</p>
+    <ul>
+      <li>Historical demand realisations: y₁ … yₜ</li>
+      <li>Historical values of causal variables (因果變數): x₁ … xₜ</li>
+      <li>Subjective expert opinions (主觀意見) about the future</li>
+    </ul>
+    <p data-topic="forecasting-inputs">These inputs feed into either <b>judgment-based</b> or <b>quantitative</b> model families to produce forecast ŷₜ₊₁.</p>
+
+    <!-- SVG: Forecasting process flow -->
+    <svg width="520" height="80" viewBox="0 0 520 80" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:12px 0;font-family:Georgia,serif;font-size:12px">
+      <rect x="0" y="20" width="130" height="40" rx="6" fill="#e8f5e9" stroke="#4caf50"/>
+      <text x="65" y="35" text-anchor="middle" fill="#333">Historical demand</text>
+      <text x="65" y="51" text-anchor="middle" fill="#333">y₁…yₜ</text>
+      <rect x="160" y="20" width="130" height="40" rx="6" fill="#e8f5e9" stroke="#4caf50"/>
+      <text x="225" y="35" text-anchor="middle" fill="#333">Causal variables</text>
+      <text x="225" y="51" text-anchor="middle" fill="#333">x₁…xₜ</text>
+      <rect x="320" y="20" width="90" height="40" rx="6" fill="#e8f5e9" stroke="#4caf50"/>
+      <text x="365" y="35" text-anchor="middle" fill="#333">Expert</text>
+      <text x="365" y="51" text-anchor="middle" fill="#333">opinion</text>
+      <polygon points="430,40 445,33 445,47" fill="#4caf50"/>
+      <rect x="445" y="20" width="70" height="40" rx="6" fill="#c8e6c9" stroke="#388e3c"/>
+      <text x="480" y="35" text-anchor="middle" fill="#222" font-weight="bold">Forecast</text>
+      <text x="480" y="51" text-anchor="middle" fill="#222">ŷₜ₊₁</text>
+    </svg>
+
+    <div class="exam-trap-inline" data-topic="forecasting-principles"><b>Exam trap:</b> Aggregate forecasts are more accurate than individual forecasts — not the other way around. Exam questions sometimes invert this to test awareness.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Measuring Forecast Accuracy</h2>
+    <p data-topic="forecast-error">Forecast error (預測誤差) is defined as: <b>Error = Actual − Forecast</b>. Three higher-level measures build on this:</p>
+    <table>
+      <thead>
+        <tr><th>Metric</th><th>Formula</th><th>What it captures</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>MAD</b> (平均絕對偏差, Mean Absolute Deviation)</td><td>Σ|Actual − Forecast| / n</td><td>Typical magnitude of error; approximates 0.8 × σ under normality</td></tr>
+        <tr><td><b>MSE</b> (均方誤差, Mean Squared Error)</td><td>Σ(Actual − Forecast)² / n</td><td>Penalises large errors more heavily</td></tr>
+        <tr><td><b>MAPE</b> (平均絕對百分比誤差, Mean Absolute Percent Error)</td><td>Σ|PE| / n, where PE = (Actual − Forecast) / Actual</td><td>Scale-free accuracy; expressed as a percentage</td></tr>
+      </tbody>
+    </table>
+    <p data-topic="bias-tracking">Bias (偏差) is measured via the Cumulative Sum of Errors: Σ(Actual − Forecast). A consistently positive or negative cumulative sum signals systematic over- or under-forecasting.</p>
+
+    <h3>Tracking Signal (追蹤信號)</h3>
+    <p data-topic="tracking-signal">The tracking signal (TS) combines bias and MAD into a single alarm metric:</p>
+    <ul>
+      <li><b>TS = Σ(Actual − Forecast) / MAD</b></li>
+      <li>A TS near zero means random errors are cancelling; a large |TS| signals systematic bias (系統性偏差)</li>
+      <li>Control limit (控制限): most companies set ±3.75 MAD units (equivalent to a 3-sigma limit under normality, since 1 MAD ≈ 0.8 σ)</li>
+      <li>Procedure: calculate TS each period; if |TS| exceeds the threshold, flag the forecast for review</li>
+    </ul>
+
+    <h3>Worked Example: Method 1 vs. Method 2</h3>
+    <p data-topic="tracking-signal-example">Five-month comparison of two forecast methods against actual sales (in $M):</p>
+    <table>
+      <thead>
+        <tr><th>Month</th><th>Actual</th><th>M1 Forecast</th><th>M1 Error</th><th>M1 Cum|Error|</th><th>M1 MAD</th><th>M1 Cum Error</th><th>M1 TS</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>100</td><td>60</td><td>+40</td><td>40</td><td>40.0</td><td>40</td><td>1.00</td></tr>
+        <tr><td>2</td><td>100</td><td>130</td><td>−30</td><td>70</td><td>35.0</td><td>10</td><td>0.29</td></tr>
+        <tr><td>3</td><td>200</td><td>200</td><td>0</td><td>70</td><td>23.3</td><td>10</td><td>0.43</td></tr>
+        <tr><td>4</td><td>200</td><td>270</td><td>−70</td><td>140</td><td>35.0</td><td>−60</td><td>−1.71</td></tr>
+        <tr><td>5</td><td>400</td><td>340</td><td>+60</td><td>200</td><td>40.0</td><td>0</td><td>0.00</td></tr>
+      </tbody>
+    </table>
+    <table>
+      <thead>
+        <tr><th>Month</th><th>Actual</th><th>M2 Forecast</th><th>M2 Error</th><th>M2 Cum|Error|</th><th>M2 MAD</th><th>M2 Cum Error</th><th>M2 TS</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>100</td><td>100</td><td>0</td><td>0</td><td>0.0</td><td>0</td><td>0.00</td></tr>
+        <tr><td>2</td><td>100</td><td>100</td><td>0</td><td>0</td><td>0.0</td><td>0</td><td>0.00</td></tr>
+        <tr><td>3</td><td>200</td><td>150</td><td>+50</td><td>50</td><td>16.7</td><td>50</td><td>3.00</td></tr>
+        <tr><td>4</td><td>200</td><td>200</td><td>0</td><td>50</td><td>12.5</td><td>50</td><td>4.00</td></tr>
+        <tr><td>5</td><td>400</td><td>250</td><td>+150</td><td>200</td><td>40.0</td><td>200</td><td>5.00</td></tr>
+      </tbody>
+    </table>
+    <ul>
+      <li>Method 1 TS stays within ±3.75 — no bias alarm triggered</li>
+      <li>Method 2 TS reaches 5.00 by month 5, exceeding the ±3.75 control limit — consistent positive bias (systematic under-forecasting) detected</li>
+      <li>Conclusion: Method 1 preferred despite higher raw error in some months, because Method 2 shows systematic bias</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="tracking-signal"><b>Exam trap:</b> A low MAD alone does not mean a forecast is unbiased. Method 2 has the same MAD as Method 1 by month 5 ($40M), yet its tracking signal reveals strong positive bias. Always check both MAD and TS.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Qualitative vs. Quantitative Forecasting</h2>
+    <p data-topic="qualitative-forecasting">Qualitative forecasting (定性預測) relies on expert judgment when historical data are scarce or unavailable.</p>
+    <ul>
+      <li><b>When to use:</b> new products, long-term technology or environmental shifts</li>
+      <li><b>Methods:</b> market research (市場調研), historical analogy (歷史類比), panel consensus (專家小組共識), Delphi method (德爾菲法)</li>
+      <li><b>Advantages:</b> usable without historical data</li>
+      <li><b>Limitations:</b> subjective (主觀), inconsistent across forecasters</li>
+    </ul>
+    <p data-topic="quantitative-forecasting">Quantitative forecasting (定量預測) is data-driven and assumes past patterns continue.</p>
+    <ul>
+      <li><b>When to use:</b> sufficient historical data exist and patterns are expected to persist</li>
+      <li><b>Advantages:</b> objective, fully reproducible by any forecaster, forecasts can be updated automatically</li>
+      <li><b>Limitations:</b> requires adequate historical data to build a reliable model</li>
+      <li><b>Associative methods</b> (關聯性方法): simple linear regression Y = a + bX; multiple regression models</li>
+      <li><b>Time series methods</b> (時間序列方法): moving average, exponential smoothing, trend and seasonal models</li>
+    </ul>
+
+    <h3>Forecasting Method Selection Guide</h3>
+    <table>
+      <thead>
+        <tr><th>Method</th><th>Historical Data Needed</th><th>Data Pattern Handled</th><th>Forecast Horizon</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Simple moving average (簡單移動平均)</td><td>6–12 months (weekly data often used)</td><td>Stationary only (no trend or seasonality)</td><td>Short</td></tr>
+        <tr><td>Weighted moving average &amp; simple exponential smoothing (指數平滑)</td><td>5–10 observations to start</td><td>Stationary only</td><td>Short</td></tr>
+        <tr><td>Exponential smoothing with trend (帶趨勢指數平滑)</td><td>5–10 observations to start</td><td>Stationary and trend</td><td>Short</td></tr>
+        <tr><td>Linear regression (線性回歸)</td><td>10–20 observations</td><td>Stationary, trend, and seasonality</td><td>Short to medium</td></tr>
+        <tr><td>Trend and seasonal models (趨勢季節模型)</td><td>2–3 observations per season</td><td>Stationary, trend, and seasonality</td><td>Short to medium</td></tr>
+      </tbody>
+    </table>
+    <div class="exam-trap-inline" data-topic="quantitative-forecasting"><b>Exam trap:</b> Simple moving average and simple exponential smoothing handle stationary patterns only — they cannot capture trends or seasonality. Applying them to trended data will produce a lagging, biased forecast.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Time Series Components</h2>
+    <p data-topic="time-series-components">Every time series (時間序列) can be decomposed into four components:</p>
+    <table>
+      <thead>
+        <tr><th>Component</th><th>Classification</th><th>Definition</th><th>Cause</th><th>Duration</th><th>Forecasting use</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>Trend</b> (趨勢)</td><td>Systematic</td><td>Long-term upward or downward movement</td><td>Technology, population, wealth changes</td><td>Several years</td><td>Trend model</td></tr>
+        <tr><td><b>Seasonal</b> (季節性)</td><td>Systematic</td><td>Regular periodic fluctuations within each 12-month period</td><td>Weather, social customs, religious events</td><td>Within 12 months (monthly/quarterly)</td><td>Seasonal model</td></tr>
+        <tr><td><b>Cyclical</b> (週期性)</td><td>Systematic</td><td>Repeating up-and-down swings through four phases: peak → contraction → trough → expansion</td><td>Combinations of macro-economic factors</td><td>Usually 2–10 years, varying intensity</td><td>Not often used for near-term sales forecasting</td></tr>
+        <tr><td><b>Irregular</b> (不規則)</td><td>Unsystematic</td><td>Erratic residual fluctuations after removing systematic effects</td><td>Random variation; unforeseen events (strikes, hurricanes, floods)</td><td>Short, non-repeating</td><td>Captured as noise</td></tr>
+      </tbody>
+    </table>
+    <p data-topic="time-series-patterns">Common recognisable patterns:</p>
+    <ul>
+      <li><b>Purely random error</b> (純隨機誤差) — no recognisable pattern</li>
+      <li><b>Seasonal pattern</b> (季節模式) — regular periodic peaks and troughs</li>
+      <li><b>Increasing linear trend</b> (遞增線性趨勢) — consistent upward slope</li>
+      <li><b>Seasonal pattern plus linear growth</b> — combined oscillation and rising baseline</li>
+    </ul>
+
+    <!-- SVG: Four time series patterns schematic -->
+    <svg width="500" height="120" viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:12px 0;font-family:Georgia,serif;font-size:11px">
+      <!-- Random -->
+      <text x="0" y="12" fill="#555">Random</text>
+      <polyline points="0,60 15,55 30,65 45,50 60,70 75,58 90,63 105,48 120,68" fill="none" stroke="#888" stroke-width="1.5"/>
+      <!-- Seasonal -->
+      <text x="130" y="12" fill="#555">Seasonal</text>
+      <polyline points="130,65 140,45 150,65 160,45 170,65 180,45 190,65 200,45 210,65 220,45 230,65" fill="none" stroke="#4caf50" stroke-width="1.5"/>
+      <!-- Trend -->
+      <text x="250" y="12" fill="#555">Trend</text>
+      <line x1="250" y1="70" x2="370" y2="40" stroke="#2196f3" stroke-width="1.5"/>
+      <!-- Seasonal + Trend -->
+      <text x="380" y="12" fill="#555">Seasonal+Trend</text>
+      <polyline points="380,70 390,55 400,65 410,48 420,58 430,40 440,52 450,35 460,48 470,30 480,44" fill="none" stroke="#e91e63" stroke-width="1.5"/>
+    </svg>
+
+    <div class="exam-trap-inline" data-topic="time-series-components"><b>Exam trap:</b> The cyclical component is often confused with the seasonal component. Seasonal patterns repeat within a fixed 12-month window; cyclical swings span 2–10 years and vary in intensity and length.</div>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>"Demand management" encompasses both forecasting and active demand-shaping tactics; forecasting alone is not demand management.</li>
+      <li>Aggregate forecasts are more accurate than individual-item forecasts — not the reverse.</li>
+      <li>A low MAD alone does not confirm an unbiased forecast; always verify with the tracking signal. Method 2 in the example had the same final MAD as Method 1 but a TS of 5.00 (exceeded ±3.75 limit).</li>
+      <li>Simple moving average and simple exponential smoothing handle stationary data only; applying them to trended or seasonal data produces systematically biased forecasts.</li>
+      <li>Cyclical ≠ Seasonal: seasonal repeats within 12 months; cyclical spans 2–10 years with variable duration and intensity.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Forecast Error = Actual − Forecast (positive = under-forecast; negative = over-forecast)</li>
+      <li>MAD = Σ|Error| / n; approximates 0.8 × σ under a normal distribution</li>
+      <li>Tracking Signal = Σ(Actual − Forecast) / MAD; control limit ±3.75 (3-sigma equivalent)</li>
+      <li>MSE = Σ(Error)² / n; MAPE = Σ|PE| / n where PE = Error / Actual</li>
+      <li>Five forecasting principles: no perfect forecast; causal continuity assumed; groups &gt; individuals; accuracy falls with horizon; complexity not always better</li>
+      <li>Qualitative methods: market research, historical analogy, panel consensus, Delphi method — used when historical data are scarce</li>
+      <li>Method selection: simple MA / simple ES → stationary only; ES with trend → stationary + trend; linear regression / seasonal models → all three components</li>
+      <li>Four time series components: Trend (years), Seasonal (≤12 months), Cyclical (2–10 years), Irregular (random)</li>
+      <li>Cyclical component is not typically used for near-term sales forecasting</li>
+      <li>Chinese Pharmaceuticals case: total lead time up to 14 weeks (6 supply + 8 production); monthly reorder; high-margin product with seasonal demand — all factors making accurate forecasting critical</li>
+    </ol>
+  </div>
+</div>
+</div>
+
+
+<!-- Quiz containers are generated by JS (see renderQuizContainers). -->
+<div id="quiz-containers"></div>
+
+<div id="global-report" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <h1>Full Summary Report</h1>
+  <div id="global-body"></div>
+</div>
+
+</div>
+<script>
+// ===== Data + state (loaded from data/3040.json) =====
+let lectures = [];
+let STORAGE_KEY = "endoQuizState";
+let quizState = {};
+let TOPIC_SECTION_MAP = {};
+
+function initQuizStateFromLectures() {
+  lectures.forEach(l => {
+    quizState[l.id] = { answered:0, correct:0, wrongQuestions:[], completed:false, choices:{}, filteredIndices:null, total:30, weakSections:[], weakTopics:[] };
+  });
+}
+
+function saveState() {
+  try {
+    const out = {};
+    Object.keys(quizState).forEach(k => {
+      const s = quizState[k];
+      out[k] = { answered:s.answered, correct:s.correct, wrongQuestions:s.wrongQuestions, completed:s.completed, choices:s.choices, filteredIndices:s.filteredIndices, total:s.total, weakSections:s.weakSections, weakTopics:s.weakTopics };
+    });
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(out));
+  } catch(e){ console.warn("save failed", e); }
+}
+
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return;
+    const data = JSON.parse(raw);
+    Object.keys(data).forEach(k => {
+      if (quizState[k]) Object.assign(quizState[k], data[k]);
+    });
+  } catch(e){ console.warn("load failed", e); }
+}
+
+function resetAllProgress() {
+  if (!confirm("Reset ALL quiz progress? This cannot be undone.")) return;
+  localStorage.removeItem(STORAGE_KEY);
+  location.reload();
+}
+
+// ===== Navigation =====
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const el = document.getElementById(id);
+  if (el) el.classList.add('active');
+  window.scrollTo(0,0);
+  if (id === 'global-report') renderGlobalReport();
+  if (id.startsWith('notes-')) {
+    const lid = parseInt(id.split('-')[1]);
+    applyWeakHighlights(lid);
+  }
+  setTimeout(initReveal, 50);
+}
+
+function computeWeakSections(lid) {
+  const s = quizState[lid];
+  const lec = lectures.find(l => l.id === lid);
+  const map = TOPIC_SECTION_MAP[lid] || {};
+  const topicSet = new Set();
+  const secSet = new Set();
+  s.wrongQuestions.forEach(qi => {
+    const t = lec.questions[qi].topic;
+    if (t) topicSet.add(t);
+    if (map[t] !== undefined) secSet.add(map[t]);
+  });
+  s.weakTopics = Array.from(topicSet);
+  s.weakSections = Array.from(secSet).sort((a,b)=>a-b);
+}
+
+function applyWeakHighlights(lid) {
+  const s = quizState[lid];
+  const weakTopics = new Set(s.weakTopics || []);
+  const weakSecs = new Set(s.weakSections || []);
+  const page = document.getElementById('notes-'+lid);
+  if (!page) return;
+
+  // Clear existing highlights
+  page.querySelectorAll('.weak-highlight, .weak-h2').forEach(el => {
+    el.classList.remove('weak-highlight');
+    el.classList.remove('weak-h2');
+  });
+
+  // Per-element highlighting: substring match of any wrong topic name in the data-topic attribute
+  page.querySelectorAll('[data-topic]').forEach(el => {
+    const attr = el.getAttribute('data-topic') || '';
+    for (const t of weakTopics) {
+      if (attr.includes(t)) { el.classList.add('weak-highlight'); break; }
+    }
+  });
+
+  // Fallback: if a weak section has no inner match, lightly mark its h2
+  page.querySelectorAll('section[data-sec]').forEach(sec => {
+    const idx = parseInt(sec.dataset.sec);
+    if (!weakSecs.has(idx)) return;
+    if (sec.querySelector('.weak-highlight')) return;
+    const h = sec.querySelector('h2');
+    if (h) h.classList.add('weak-h2');
+  });
+
+  const clearBtn = document.getElementById('clear-hl-'+lid);
+  if (clearBtn) clearBtn.style.display = (weakTopics.size > 0 || weakSecs.size > 0) ? 'inline-block' : 'none';
+}
+
+function clearWeakHighlights(lid) {
+  quizState[lid].weakSections = [];
+  quizState[lid].weakTopics = [];
+  saveState();
+  applyWeakHighlights(lid);
+}
+
+function startQuiz(lid) {
+  const state = quizState[lid];
+  const countSel = document.getElementById('count-'+lid);
+  const desiredCount = countSel ? parseInt(countSel.value)||30 : 30;
+
+  // If there is saved progress AND requested count differs from saved, prompt to restart
+  const hasProgress = state.answered > 0 && state.filteredIndices && state.filteredIndices.length > 0;
+  let needNew = !state.filteredIndices;
+  if (hasProgress) {
+    if (state.filteredIndices.length !== desiredCount) {
+      if (confirm("You have saved progress for this lecture with a different question count. Start a new quiz with the new count? (This will erase saved progress for this lecture.)")) {
+        resetLectureState(lid);
+        needNew = true;
+      }
+    }
+  } else if (state.answered === 0) {
+    needNew = true;
+  }
+
+  if (needNew) {
+    const picked = buildBalancedSet(lid, desiredCount);
+    state.filteredIndices = picked;
+    state.total = picked.length;
+    state.answered = 0;
+    state.correct = 0;
+    state.wrongQuestions = [];
+    state.choices = {};
+    state.completed = false;
+    state.weakSections = [];
+    state.weakTopics = [];
+    saveState();
+    const body = document.getElementById('quizbody-'+lid);
+    if (body) body.dataset.rendered = "";
+    const post = document.getElementById('postquiz-'+lid);
+    if (post) post.innerHTML = '';
+  }
+
+  showPage('quiz-'+lid);
+  renderQuiz(lid);
+}
+
+function resetLectureState(lid) {
+  quizState[lid] = { answered:0, correct:0, wrongQuestions:[], completed:false, choices:{}, filteredIndices:null, total:30, weakSections:[], weakTopics:[] };
+  saveState();
+}
+
+// Balanced sampling across easy/medium/hard. Target ratios:
+//   10 → 3 easy, 3 medium, 4 hard
+//   20 → 7 easy, 7 medium, 6 hard
+//   30 → 10 easy, 10 medium, 10 hard
+function buildBalancedSet(lid, count) {
+  const lec = lectures.find(l => l.id === lid);
+  const pools = { easy: [], medium: [], hard: [] };
+  lec.questions.forEach((q, i) => {
+    if (pools[q.difficulty]) pools[q.difficulty].push(i);
+  });
+  shuffle(pools.easy); shuffle(pools.medium); shuffle(pools.hard);
+
+  let targets;
+  if (count <= 10) targets = { easy: 3, medium: 3, hard: 4 };
+  else if (count <= 20) targets = { easy: 7, medium: 7, hard: 6 };
+  else targets = { easy: 10, medium: 10, hard: 10 };
+
+  // Scale targets if requested count differs from preset
+  if (count !== 10 && count !== 20 && count !== 30) {
+    const total = targets.easy + targets.medium + targets.hard;
+    targets = {
+      easy:   Math.round(targets.easy   * count / total),
+      medium: Math.round(targets.medium * count / total),
+      hard:   Math.round(targets.hard   * count / total),
+    };
+  }
+
+  const picked = [];
+  const taken = { easy: 0, medium: 0, hard: 0 };
+  ['easy','medium','hard'].forEach(d => {
+    const want = Math.min(targets[d], pools[d].length);
+    for (let i = 0; i < want; i++) picked.push(pools[d][i]);
+    taken[d] = want;
+  });
+
+  // If short of target count (some pool too small), fill from leftovers
+  const leftovers = [];
+  ['easy','medium','hard'].forEach(d => {
+    for (let i = taken[d]; i < pools[d].length; i++) leftovers.push(pools[d][i]);
+  });
+  shuffle(leftovers);
+  while (picked.length < count && leftovers.length > 0) picked.push(leftovers.shift());
+
+  picked.sort((a,b)=>a-b);
+  return picked;
+}
+
+function shuffle(arr) {
+  for (let i=arr.length-1; i>0; i--) {
+    const j = Math.floor(Math.random()*(i+1));
+    [arr[i],arr[j]] = [arr[j],arr[i]];
+  }
+  return arr;
+}
+
+// ===== Quiz rendering =====
+function renderQuiz(lid) {
+  const lec = lectures.find(l => l.id === lid);
+  const body = document.getElementById('quizbody-' + lid);
+  const state = quizState[lid];
+  if (!state.filteredIndices || state.filteredIndices.length === 0) {
+    // fallback: all 30
+    state.filteredIndices = lec.questions.map((_,i)=>i);
+    state.total = 30;
+  }
+  if (body.dataset.rendered === "1") {
+    updateScoreBar(lid);
+    return;
+  }
+  body.dataset.rendered = "1";
+  let h = '';
+  state.filteredIndices.forEach((qi, displayIdx) => {
+    const q = lec.questions[qi];
+    h += '<div class="q-block reveal-on-scroll" id="q-'+lid+'-'+qi+'">';
+    h += '<div class="q-num">Question ' + (displayIdx+1) + ' of ' + state.filteredIndices.length + ' <span style="margin-left:8px;padding:1px 6px;background:var(--accent-soft);border-radius:3px;font-size:.85em">'+q.difficulty+'</span></div>';
+    h += '<div class="q-text">' + escapeHtml(q.q) + '</div>';
+    q.options.forEach((opt, oi) => {
+      h += '<label class="opt" id="opt-'+lid+'-'+qi+'-'+oi+'"><input type="radio" name="q-'+lid+'-'+qi+'" value="'+oi+'"> '+String.fromCharCode(65+oi)+'. '+escapeHtml(opt)+'</label>';
+    });
+    h += '<button class="btn submit-q" onclick="submitQ('+lid+','+qi+')">Submit</button>';
+    h += '<div class="explain" id="exp-'+lid+'-'+qi+'" style="display:none"></div>';
+    h += '</div>';
+  });
+  body.innerHTML = h;
+
+  // Restore answered states from saved choices
+  state.filteredIndices.forEach(qi => {
+    if (state.choices[qi] !== undefined) restoreAnswered(lid, qi);
+  });
+
+  updateScoreBar(lid);
+
+  if (state.completed) {
+    renderPostQuiz(lid);
+  }
+}
+
+function restoreAnswered(lid, qi) {
+  const state = quizState[lid];
+  const lec = lectures.find(l => l.id === lid);
+  const q = lec.questions[qi];
+  const chosen = state.choices[qi];
+  for (let oi=0; oi<q.options.length; oi++) {
+    const el = document.getElementById('opt-'+lid+'-'+qi+'-'+oi);
+    if (!el) continue;
+    el.classList.add('disabled');
+    if (oi === q.answer) el.classList.add('correct');
+    if (oi === chosen && chosen !== q.answer) el.classList.add('wrong');
+    const input = el.querySelector('input');
+    if (input) input.checked = (oi === chosen);
+    if (input) input.disabled = true;
+  }
+  const exp = document.getElementById('exp-'+lid+'-'+qi);
+  if (exp) {
+    exp.style.display = 'block';
+    exp.innerHTML = '<b>'+(chosen===q.answer?"Correct.":"Incorrect.")+'</b> '+escapeHtml(q.explain);
+  }
+  const btn = document.querySelector('#q-'+lid+'-'+qi+' .submit-q');
+  if (btn) { btn.disabled = true; btn.textContent = 'Submitted'; }
+}
+
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+
+// ===== SVG Progress Ring Generator =====
+function createProgressRing(percent, size = 120) {
+  const radius = (size - 12) / 2;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (percent / 100) * circumference;
+  const cx = size / 2;
+  const cy = size / 2;
+
+  return `
+    <svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" style="transform: rotate(-90deg)">
+      <circle cx="${cx}" cy="${cy}" r="${radius}" fill="none" stroke="var(--accent-soft)" stroke-width="6"/>
+      <circle cx="${cx}" cy="${cy}" r="${radius}" fill="none" stroke="var(--accent)" stroke-width="6"
+              stroke-dasharray="${circumference}" stroke-dashoffset="${offset}" stroke-linecap="round"
+              style="transition: stroke-dashoffset 0.6s ease"/>
+    </svg>
+  `;
+}
+
+function getVerdictClass(pct) {
+  if (pct >= 90) return 'verdict-excellent';
+  if (pct >= 75) return 'verdict-good';
+  if (pct >= 60) return 'verdict-review';
+  return 'verdict-weak';
+}
+
+function submitQ(lid, qi) {
+  const state = quizState[lid];
+  if (state.choices[qi] !== undefined) return;
+  const lec = lectures.find(l => l.id === lid);
+  const q = lec.questions[qi];
+  const radios = document.getElementsByName('q-'+lid+'-'+qi);
+  let chosen = -1;
+  radios.forEach(r => { if (r.checked) chosen = parseInt(r.value); });
+  if (chosen === -1) { alert("Please select an option."); return; }
+  state.choices[qi] = chosen;
+  state.answered += 1;
+  for (let oi=0; oi<q.options.length; oi++) {
+    const el = document.getElementById('opt-'+lid+'-'+qi+'-'+oi);
+    el.classList.add('disabled');
+    if (oi === q.answer) el.classList.add('correct');
+    if (oi === chosen && chosen !== q.answer) el.classList.add('wrong');
+  }
+  if (chosen === q.answer) state.correct += 1;
+  else state.wrongQuestions.push(qi);
+  const exp = document.getElementById('exp-'+lid+'-'+qi);
+  exp.style.display = 'block';
+  exp.innerHTML = '<b>'+(chosen===q.answer?"Correct.":"Incorrect.")+'</b> '+escapeHtml(q.explain);
+  const btn = document.querySelector('#q-'+lid+'-'+qi+' .submit-q');
+  btn.disabled = true;
+  btn.textContent = 'Submitted';
+  updateScoreBar(lid);
+  saveState();
+  if (state.answered === state.total) {
+    state.completed = true;
+    computeWeakSections(lid);
+    saveState();
+    document.getElementById('globalReportBtn').disabled = false;
+    renderPostQuiz(lid);
+    setTimeout(() => {
+      document.getElementById('postquiz-'+lid).scrollIntoView({behavior:'smooth'});
+    }, 200);
+  }
+}
+
+function updateScoreBar(lid) {
+  const s = quizState[lid];
+  const totalAvail = s.filteredIndices ? s.filteredIndices.length : 30;
+  document.getElementById('scorebar-'+lid).textContent = "Score: " + s.correct + " / " + s.answered + " (of " + totalAvail + " filtered)";
+}
+
+function renderPostQuiz(lid) {
+  const lec = lectures.find(l => l.id === lid);
+  const s = quizState[lid];
+  const total = s.total || 30;
+  const pct = Math.round((s.correct/total)*100);
+  let verdict;
+  if (pct >= 90) verdict = "Excellent. You have mastered this lecture.";
+  else if (pct >= 75) verdict = "Solid grasp. A few targeted reviews and you are exam-ready.";
+  else if (pct >= 60) verdict = "Reasonable foundation. Revisit the weak topics below.";
+  else verdict = "Needs more review. Go back to the notes for the topics flagged below.";
+
+  const themeCount = {};
+  s.wrongQuestions.forEach(qi => {
+    const t = lec.questions[qi].topic;
+    themeCount[t] = (themeCount[t] || 0) + 1;
+  });
+  const themes = Object.keys(themeCount).sort((a,b)=>themeCount[b]-themeCount[a]);
+
+  let h = '<div class="summary reveal-on-scroll reveal-delay-1">';
+  h += '<h2>Summary Report</h2>';
+
+  // Add progress ring visualization
+  h += '<div class="progress-ring-container">';
+  h += createProgressRing(pct);
+  h += '<div class="progress-ring-label">';
+  h += '<div class="progress-percentage">'+pct+'%</div>';
+  h += '<div class="progress-score">'+s.correct+'/'+total+'</div>';
+  h += '</div></div>';
+
+  h += '<div class="verdict '+getVerdictClass(pct)+'">'+verdict+'</div>';
+
+  // Add wrong topics bar chart
+  if (themes.length) {
+    h += '<h3>Wrong Topics Breakdown</h3>';
+    h += '<div class="chart-container">';
+    const maxWrong = Math.max(...themes.map(t => themeCount[t]));
+    themes.forEach(t => {
+      const count = themeCount[t];
+      const pctBar = Math.round((count / maxWrong) * 100);
+      h += '<div class="bar-chart-item">';
+      h += '<div class="bar-chart-label">'+escapeHtml(t)+'</div>';
+      h += '<div class="bar-chart-bar">';
+      h += '<div class="bar-chart-fill" style="width:'+pctBar+'%"><span class="bar-chart-count">'+count+'</span></div>';
+      h += '</div></div>';
+    });
+    h += '</div>';
+    h += '<h3>Topics to Revisit</h3><ul class="theme-list">';
+    themes.forEach(t => { h += '<li><b>'+escapeHtml(t)+'</b> — '+themeCount[t]+' wrong</li>'; });
+    h += '</ul>';
+  } else {
+    h += '<p>No weak topics — perfect run.</p>';
+  }
+  h += '<p style="color:var(--muted);font-style:italic">Take a short break, then revisit the notes for any flagged topic before moving on.</p>';
+  h += '</div>';
+  h += '<h2>Wrong Answer Review</h2>';
+  if (s.wrongQuestions.length === 0) {
+    h += '<p>No wrong answers to review. Great job.</p>';
+  } else {
+    s.wrongQuestions.forEach((qi, idx) => {
+      const q = lec.questions[qi];
+      const chosen = s.choices[qi];
+      const delay = ['','reveal-delay-1','reveal-delay-2','reveal-delay-3'][idx%4];
+      h += '<div class="review-card reveal-on-scroll '+delay+'">';
+      h += '<div class="q-num">Question '+(qi+1)+'</div>';
+      h += '<div class="q-text">'+escapeHtml(q.q)+'</div>';
+      q.options.forEach((opt, oi) => {
+        let cls = "opt disabled";
+        if (oi === q.answer) cls += " correct";
+        if (oi === chosen && chosen !== q.answer) cls += " wrong";
+        h += '<div class="'+cls+'">'+String.fromCharCode(65+oi)+'. '+escapeHtml(opt)+'</div>';
+      });
+      h += '<div class="explain"><b>Explanation:</b> '+escapeHtml(q.explain)+'</div>';
+      h += '</div>';
+    });
+  }
+  document.getElementById('postquiz-'+lid).innerHTML = h;
+  setTimeout(initReveal, 50);
+}
+
+function showGlobalReport(){ showPage('global-report'); }
+
+function renderGlobalReport() {
+  let totalCorrect = 0, totalAnswered = 0;
+  const allThemes = {};
+  const lectureScores = [];
+
+  lectures.forEach(lec => {
+    const s = quizState[lec.id];
+    if (s.answered > 0) {
+      totalCorrect += s.correct;
+      totalAnswered += s.answered;
+      const pct = s.answered ? Math.round(s.correct/s.answered*100) : 0;
+      lectureScores.push({ title: lec.title, correct: s.correct, answered: s.answered, pct });
+      s.wrongQuestions.forEach(qi => {
+        const t = lec.questions[qi].topic;
+        allThemes[t] = (allThemes[t]||0)+1;
+      });
+    }
+  });
+
+  const overallPct = totalAnswered ? Math.round(totalCorrect/totalAnswered*100) : 0;
+
+  let h = '<p style="color:var(--muted);font-style:italic">Shows saved quiz data (persisted across reloads).</p>';
+
+  // Overall progress ring
+  h += '<h2>Overall Score</h2>';
+  h += '<div class="progress-ring-container">';
+  h += createProgressRing(overallPct, 140);
+  h += '<div class="progress-ring-label">';
+  h += '<div class="progress-percentage">'+overallPct+'%</div>';
+  h += '<div class="progress-score">'+totalCorrect+'/'+totalAnswered+'</div>';
+  h += '</div></div>';
+  h += '<p style="text-align:center;color:var(--ink)"><b>'+totalCorrect+' / '+totalAnswered+'</b> across all completed quizzes</p>';
+
+  // Lecture breakdown bar chart
+  if (lectureScores.length) {
+    h += '<h2>Lecture Breakdown</h2>';
+    h += '<div class="chart-container">';
+    lectureScores.forEach(lec => {
+      const pctBar = lec.pct;
+      const verdictClass = getVerdictClass(lec.pct);
+      h += '<div class="bar-chart-item">';
+      h += '<div class="bar-chart-label" title="'+escapeHtml(lec.title)+'">'+escapeHtml(lec.title.substring(0, 25))+'...</div>';
+      h += '<div class="bar-chart-bar">';
+      h += '<div class="bar-chart-fill '+verdictClass+'" style="width:'+pctBar+'%"><span class="bar-chart-count">'+lec.pct+'%</span></div>';
+      h += '</div></div>';
+    });
+    h += '</div>';
+  }
+
+  // Weak topics summary
+  const sortedThemes = Object.keys(allThemes).sort((a,b)=>allThemes[b]-allThemes[a]);
+  if (sortedThemes.length) {
+    h += '<h2>Topics to Revisit (Combined)</h2>';
+    h += '<div class="chart-container">';
+    const maxThemeWrong = Math.max(...sortedThemes.map(t => allThemes[t]));
+    sortedThemes.slice(0, 8).forEach(t => {
+      const count = allThemes[t];
+      const pctBar = Math.round((count / maxThemeWrong) * 100);
+      h += '<div class="bar-chart-item">';
+      h += '<div class="bar-chart-label">'+escapeHtml(t)+'</div>';
+      h += '<div class="bar-chart-bar">';
+      h += '<div class="bar-chart-fill" style="width:'+pctBar+'%"><span class="bar-chart-count">'+count+'</span></div>';
+      h += '</div></div>';
+    });
+    h += '</div>';
+    if (sortedThemes.length > 8) {
+      h += '<p style="color:var(--muted);font-size:0.9em">... and '+(sortedThemes.length-8)+' more topics</p>';
+    }
+  } else {
+    h += '<p>No weak topics across completed quizzes.</p>';
+  }
+
+  document.getElementById('global-body').innerHTML = h;
+}
+
+// ===== Reveal-on-scroll =====
+function initReveal() {
+  const els = document.querySelectorAll('.reveal-on-scroll:not(.is-visible)');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+  const obs = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { root:null, rootMargin:'0px', threshold:0.15 });
+  els.forEach(el => obs.observe(el));
+}
+
+// ===== Init on load =====
+function updateHomeStatus() {
+  lectures.forEach(lec => {
+    const s = quizState[lec.id];
+    const el = document.getElementById('status-'+lec.id);
+    const progressEl = document.getElementById('progress-'+lec.id);
+    if (!el) return;
+    if (s.answered > 0 && s.total) {
+      const pct = Math.round((s.correct/s.total)*100);
+      el.textContent = "Saved: "+s.correct+"/"+s.answered+" of "+s.total+(s.completed?" (completed)":"");
+      if (progressEl) {
+        progressEl.innerHTML = '<div class="progress-badge">'+pct+'% ('+s.correct+'/'+s.total+')</div>';
+      }
+      if (s.completed) document.getElementById('globalReportBtn').disabled = false;
+    }
+  });
+}
+
+
+// ===== Dynamic card / quiz container generation =====
+function renderHomeCards() {
+  const container = document.getElementById('lecture-cards');
+  if (!container) return;
+  const delays = ['reveal-delay-1','reveal-delay-2','reveal-delay-3'];
+  container.innerHTML = lectures.map((lec, idx) => {
+    const delay = delays[idx % 3];
+    const titleHtml = escapeHtml(lec.title);
+    return `
+    <div class="card reveal-on-scroll ${delay}">
+      <div class="lec-row">
+        <div class="lec-title">${titleHtml}</div>
+        <div>
+          <button class="btn" onclick="showPage('notes-${lec.id}')">Notes</button>
+          <button class="btn btn-primary" onclick="startQuiz(${lec.id})">Quiz</button>
+        </div>
+      </div>
+      <div class="quiz-settings">
+        <label>Questions:
+          <select id="count-${lec.id}"><option value="10">10</option><option value="20">20</option><option value="30" selected>30</option></select>
+        </label>
+        <span id="progress-${lec.id}"></span>
+        <span id="status-${lec.id}" style="color:var(--muted);font-size:.9em"></span>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderQuizContainers() {
+  const container = document.getElementById('quiz-containers');
+  if (!container) return;
+  container.innerHTML = lectures.map(lec => {
+    const titleHtml = escapeHtml(lec.title);
+    return `
+    <div id="quiz-${lec.id}" class="page">
+      <a class="btn back" onclick="showPage('home')">← Home</a>
+      <h1>${titleHtml} — Quiz</h1>
+      <div class="score-bar" id="scorebar-${lec.id}">Score: 0 / 0 (of 30)</div>
+      <div id="quizbody-${lec.id}"></div>
+      <div id="postquiz-${lec.id}"></div>
+    </div>`;
+  }).join('');
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  fetch('data/isom2700.json')
+    .then(r => {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(data => {
+      lectures = data.lectures || [];
+      STORAGE_KEY = data.storageKey || STORAGE_KEY;
+      TOPIC_SECTION_MAP = data.topicSectionMap || {};
+      initQuizStateFromLectures();
+      renderHomeCards();
+      renderQuizContainers();
+      loadState();
+      // Migrate older saved states: recompute weak topics/sections if missing
+      lectures.forEach(lec => {
+        const s = quizState[lec.id];
+        const hasTopics = s.weakTopics && s.weakTopics.length > 0;
+        if (s.completed && !hasTopics && s.wrongQuestions.length > 0) {
+          computeWeakSections(lec.id);
+        }
+      });
+      saveState();
+      updateHomeStatus();
+      initReveal();
+    })
+    .catch(err => {
+      console.error('Failed to load data/isom2700.json:', err);
+      alert('Failed to load lecture data. If you opened this file directly (file://), please serve via a local HTTP server. See CLAUDE.md.');
+    });
+});
+
+// ===== PWA Service Worker (inline via Blob) =====
+if ('serviceWorker' in navigator) {
+  const swCode = `
+    const CACHE = 'isom2700-v8';
+    self.addEventListener('install', e => { self.skipWaiting(); });
+    self.addEventListener('activate', e => { e.waitUntil(self.clients.claim()); });
+    self.addEventListener('fetch', e => {
+      if (e.request.method !== 'GET') return;
+      e.respondWith(
+        caches.open(CACHE).then(cache =>
+          cache.match(e.request).then(cached => {
+            const fetchPromise = fetch(e.request).then(resp => {
+              if (resp && resp.status === 200 && resp.type === 'basic') cache.put(e.request, resp.clone());
+              return resp;
+            }).catch(() => cached);
+            return cached || fetchPromise;
+          })
+        )
+      );
+    });
+  `;
+  try {
+    const blob = new Blob([swCode], {type:'application/javascript'});
+    navigator.serviceWorker.register(URL.createObjectURL(blob)).catch(e => console.warn('SW reg failed', e));
+  } catch(e) { console.warn('SW setup failed', e); }
+}
+</script>
+
+<!--
+  ============================================================================
+  TEMPLATE INSTRUCTIONS — READ BEFORE EDITING
+  ============================================================================
+
+  This file is a universal subject template. To create a new subject:
+
+  1. Copy this file to a new subject HTML, e.g.  cp template.html 3015.html
+  2. In the copy, find-and-replace these placeholders:
+       Operations Management Study Guide     e.g. "Endocrine Study Guide"
+       ISOM2700      e.g. "LIFS3040"
+       Operations Management — Lectures 1–7  e.g. "Endocrine, GI & Neuroscience, Lectures 1-10"
+       isom2700         e.g. "3040"  (matches data/3040.json — appears TWICE)
+       isom2700        e.g. "lifs3040"  (service-worker cache namespace)
+  3. Create data/{isom2700}.json with this shape (see CLAUDE.md for full schema):
+       {
+         "storageKey": "lifs3040_quiz_state",
+         "lectures": [
+           { "id": 1, "title": "Lecture 1: ...", "questions": [ ... 30 question objects ... ] }
+         ],
+         "topicSectionMap": { "1": { "topic-name": 0 } }
+       }
+  4. For EACH lecture you add to the JSON, also add a notes page block to THIS HTML,
+     placed where the comment "NOTES PAGES go here" is above. Use this pattern:
+
+       <div id="notes-N" class="page">
+         <a class="btn back" onclick="showPage('home')">← Home</a>
+         <button id="clear-hl-N" class="btn btn-danger" style="display:none;float:right"
+                 onclick="clearWeakHighlights(N)">Clear Highlights</button>
+         <h1>Lecture N: Title</h1>
+
+         <div class="bigpic reveal-on-scroll">
+           One-paragraph framing of why this topic matters.
+         </div>
+
+         <section class="reveal-on-scroll" data-sec="0">
+           <h2>1. Section heading</h2>
+           <p data-topic="Topic name used in questions">Explanation...</p>
+         </section>
+
+         <!-- More sections with data-sec="1", "2", ... -->
+
+         <div class="memorize">
+           <strong>Top things to memorize</strong>
+           <ol>...</ol>
+         </div>
+       </div>
+
+  5. Add a subject card linking to this HTML on index.html.
+  6. Add this subject to CLAUDE.md's Content Status table.
+
+  WHAT NOT TO DO:
+  - Do NOT hand-write the home page lecture cards or quiz containers — they are
+    generated by renderHomeCards() / renderQuizContainers() from JSON.
+  - Do NOT rename question schema fields. Canonical: q, options, answer, explain,
+    topic, difficulty. The renderQuiz / submitQ functions assume these exact names.
+  - Do NOT use the field name `name` for lecture titles — always `title`.
+
+  CACHE INVALIDATION:
+  When you change data/JSON or this HTML, bump isom2700-v1 → v2 in the
+  service worker block above so returning users do not get the old version.
+  ============================================================================
+-->
+
+</body>
+</html>
