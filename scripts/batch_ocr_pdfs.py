@@ -15,8 +15,9 @@ import subprocess
 import re
 from pathlib import Path
 
-INPUT_DIR = Path("/Users/winter_08.01/Desktop/GPA4.3 website/input")
-DRAFTS_DIR = Path("/Users/winter_08.01/Desktop/GPA4.3 website/prompts/drafts")
+WEBSITE_ROOT = Path("/Users/winter_08.01/Desktop/GPA4.3 website/HKUST-GPA-4.3")
+INPUT_DIR = WEBSITE_ROOT / "input"
+DRAFTS_DIR = WEBSITE_ROOT / "prompts" / "drafts"
 
 
 def fail(msg):

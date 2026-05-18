@@ -26,7 +26,7 @@ import math
 from pathlib import Path
 
 WEBSITE_ROOT = Path("/Users/winter_08.01/Desktop/GPA4.3 website/HKUST-GPA-4.3")
-DRAFTS_DIR = Path("/Users/winter_08.01/Desktop/GPA4.3 website/prompts/drafts")
+DRAFTS_DIR = WEBSITE_ROOT / "prompts" / "drafts"
 
 
 def fail(msg):
