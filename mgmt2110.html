@@ -121,7 +121,6 @@ tr.weak-highlight{box-shadow:none}
   <div class="reset-zone">
     <button class="btn btn-danger" onclick="resetAllProgress()">Reset All Progress</button>
   </div>
-</div>
 
 <!--
   NOTES PAGES go here. For each lecture you add to data/mgmt2110.json,
@@ -472,7 +471,6 @@ tr.weak-highlight{box-shadow:none}
     </ol>
   </div>
 </div>
-</div>
 
 <div id="notes-5" class="page">
   <a class="btn back" onclick="showPage('home')">← Home</a>
@@ -727,7 +725,6 @@ tr.weak-highlight{box-shadow:none}
       <li>Scholarly caveat: no single style universally outperforms — effectiveness depends on follower expertise, task structure, and organisational context</li>
     </ol>
   </div>
-</div>
 </div>
 
 <div id="notes-4" class="page">
@@ -1023,7 +1020,6 @@ tr.weak-highlight{box-shadow:none}
     </ol>
   </div>
 </div>
-</div>
 
 <div id="notes-3" class="page">
   <a class="btn back" onclick="showPage('home')">← Home</a>
@@ -1270,7 +1266,6 @@ tr.weak-highlight{box-shadow:none}
     </ol>
   </div>
 </div>
-</div>
 
 <div id="notes-2" class="page">
   <a class="btn back" onclick="showPage('home')">← Home</a>
@@ -1488,7 +1483,6 @@ tr.weak-highlight{box-shadow:none}
       <li>Key insight on accountability: the variable that determines whether social loafing occurs is individual identifiability — when contributions are observable, loafing declines.</li>
     </ol>
   </div>
-</div>
 </div>
 
 <div id="notes-1" class="page">
@@ -1709,7 +1703,6 @@ tr.weak-highlight{box-shadow:none}
       <li>NASA Synergy Check: "Team Synergy!" if group error score beats average individual error score; "Team Worsened" if it does not.</li>
     </ol>
   </div>
-</div>
 </div>
 
 
@@ -2345,7 +2338,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ===== PWA Service Worker (inline via Blob) =====
 if ('serviceWorker' in navigator) {
   const swCode = `
-    const CACHE = 'mgmt2110-v7';
+    const CACHE = 'mgmt2110-v8';
     self.addEventListener('install', e => { self.skipWaiting(); });
     self.addEventListener('activate', e => { e.waitUntil(self.clients.claim()); });
     self.addEventListener('fetch', e => {

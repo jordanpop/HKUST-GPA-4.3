@@ -3121,7 +3121,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ===== PWA Service Worker (inline via Blob) =====
 if ('serviceWorker' in navigator) {
   const swCode = `
-    const CACHE = 'isom2700-v8';
+    const CACHE = 'isom2700-v9';
     self.addEventListener('install', e => { self.skipWaiting(); });
     self.addEventListener('activate', e => { e.waitUntil(self.clients.claim()); });
     self.addEventListener('fetch', e => {
