@@ -3,13 +3,16 @@
 Replace one lecture's notes block in {code}.html with the draft at
 prompts/drafts/{code}_lec{N}_notes.html. Rebuilds topicSectionMap[N]
 from data-sec / data-topic markers in the new notes, bumps the
-service-worker cache version, validates JSON, deletes the draft.
+service-worker cache version, validates JSON, deletes drafts.
+
+With --with-mcq, ALSO replaces lectures[i].questions with the array in
+prompts/drafts/{code}_lec{N}_questions.json. The question file must be a
+JSON array of 30 question objects. topicSectionMap is taken from the
+notes draft, not from the topicmap draft.
 
 Usage:
     python3 scripts/replace_lecture_notes.py <code> <N> [<N> ...]
-
-Example:
-    python3 scripts/replace_lecture_notes.py 3040 7 8
+    python3 scripts/replace_lecture_notes.py <code> <N> [<N> ...] --with-mcq
 """
 import json
 import pathlib
@@ -79,11 +82,14 @@ def bump_cache(html: str) -> str:
 
 
 def main(argv: list[str]) -> int:
-    if len(argv) < 3:
+    args = argv[1:]
+    with_mcq = "--with-mcq" in args
+    args = [a for a in args if a != "--with-mcq"]
+    if len(args) < 2:
         print(__doc__)
         return 2
-    code = argv[1]
-    lectures = sorted({int(x) for x in argv[2:]})
+    code = args[0]
+    lectures = sorted({int(x) for x in args[1:]})
 
     html_path = ROOT / f"{code}.html"
     json_path = ROOT / f"data/{code}.json"
@@ -97,6 +103,7 @@ def main(argv: list[str]) -> int:
     html = html_path.read_text()
     data = json.loads(json_path.read_text())
     data.setdefault("topicSectionMap", {})
+    lecture_by_id = {L["id"]: L for L in data["lectures"]}
 
     drafts_to_delete: list[pathlib.Path] = []
     for n in lectures:
@@ -114,7 +121,34 @@ def main(argv: list[str]) -> int:
             raise SystemExit(f"L{n}: no data-topic slugs found in draft")
         data["topicSectionMap"][str(n)] = tmap
         drafts_to_delete.append(draft_path)
-        print(f"  L{n}: replaced notes block, {len(tmap)} topic slugs")
+
+        mcq_info = ""
+        if with_mcq:
+            q_path = drafts_dir / f"{code}_lec{n}_questions.json"
+            if not q_path.exists():
+                raise SystemExit(f"questions draft missing: {q_path}")
+            questions = json.loads(q_path.read_text())
+            if not isinstance(questions, list) or len(questions) != 30:
+                raise SystemExit(
+                    f"L{n}: questions must be a JSON array of exactly 30 items "
+                    f"(got {type(questions).__name__} len={len(questions) if isinstance(questions, list) else 'n/a'})"
+                )
+            for i, q in enumerate(questions):
+                for key in ("q", "options", "answer", "explain", "topic", "difficulty"):
+                    if key not in q:
+                        raise SystemExit(f"L{n} Q{i+1}: missing field '{key}'")
+                if not isinstance(q["options"], list) or len(q["options"]) != 5:
+                    raise SystemExit(f"L{n} Q{i+1}: options must be array of 5")
+            if n not in lecture_by_id:
+                raise SystemExit(f"L{n}: lecture id not found in JSON")
+            lecture_by_id[n]["questions"] = questions
+            drafts_to_delete.append(q_path)
+            tm_path = drafts_dir / f"{code}_lec{n}_topicmap.json"
+            if tm_path.exists():
+                drafts_to_delete.append(tm_path)
+            mcq_info = ", MCQ replaced (30 Q)"
+
+        print(f"  L{n}: replaced notes block, {len(tmap)} topic slugs{mcq_info}")
 
     html = bump_cache(html)
 
