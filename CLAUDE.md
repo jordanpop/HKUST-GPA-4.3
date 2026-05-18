@@ -75,22 +75,37 @@ Notes:
 
 ## Update Workflow (follow this every time)
 
+**CRITICAL: ALL cases (whether adding one lecture or a whole new subject) must spawn TWO parallel agents — one for notes, one for MCQs. Never hand-write or generate content without agents.**
+
+### Prerequisites (All Cases)
+1. **Before spawning agents**, read the format specification files from `prompts/`:
+   - `prompts/notes-format.md` — exact HTML structure, content completeness rules, topic-slug conventions
+   - `prompts/mcq-format.md` — question rules, option parity, answer distribution, JSON schema
+   - `prompts/agent-notes-generator.md` — notes agent instructions
+   - `prompts/agent-mcq-generator.md` — MCQ agent instructions
+2. **Scan the actual PDF structure** — read through the PDF to identify the real topics, sections, and ordering. Do NOT rely on CLAUDE.md's lecture breakdown table.
+3. Confirm with user: "This PDF covers [topics in actual order], right?" — get explicit confirmation before proceeding.
+
 ### Case 1: Adding a new lecture to an existing subject
 User drops PDF/PPTX → say which subject and lecture number
 
 Steps:
-1. **Scan the actual PDF structure** — read through the PDF to identify the real topics, sections, and ordering. Do NOT rely on CLAUDE.md's lecture breakdown table (it may be stale or incorrect).
-2. Confirm with user: "This PDF covers [topics in actual order], right?" — get explicit confirmation before proceeding.
-3. Open `data/{code}.json` to check existing lecture IDs
-4. **Generate exactly 30 questions** using the Question Format below (all questions must be answerable from this lecture's PDF only)
-5. **Generate notes HTML** using the Notes Format below, following the PDF's actual structure exactly
-6. **Update only `data/{code}.json`**: append the new lecture object (with all 30 questions) and any new topic→section mappings. The fetch-based architecture means you do NOT edit the HTML file for data updates.
-7. **If this is the first lecture:** You will need to add a `<div id="notes-N">` and `<div id="quiz-N">` block to the HTML file once. After that, only JSON updates are needed.
-8. Update CLAUDE.md's reference table only after confirming the PDF structure matches
-9. Ask user to approve before committing
+1. Open `data/{code}.json` to check existing lecture IDs and confirm the new lecture number
+2. **Spawn agents in parallel:**
+   - **Agent 1 (Notes Generator):** Use `prompts/agent-notes-generator.md`. Pass the PDF and lecture number. Agent must follow `prompts/notes-format.md` exactly.
+   - **Agent 2 (MCQ Generator):** Use `prompts/agent-mcq-generator.md`. Pass the PDF and lecture number. Agent must follow `prompts/mcq-format.md` exactly.
+   - Both agents work in parallel. Do NOT wait for one to finish before starting the other.
+3. Once both agents complete, collect their outputs:
+   - Extract the notes HTML block (`<div id="notes-N">...</div>`) from Agent 1
+   - Extract the JSON array of 30 questions from Agent 2
+4. **Update only `data/{code}.json`**: append the new lecture object (with all 30 questions from Agent 2) and any new topic→section mappings from Agent 1's topic-slugs. The fetch-based architecture means you do NOT edit the HTML file for data updates.
+5. **If this is the first lecture:** You will need to add a `<div id="notes-N">` and `<div id="quiz-N">` block to the HTML file once. After that, only JSON updates are needed.
+6. Bump the service-worker cache version in the subject HTML file (see localStorage Keys section).
+7. Update CLAUDE.md's reference table only after confirming the PDF structure matches.
+8. Ask user to approve before committing.
 
 ### Case 2: Adding a new subject
-User drops PDF/PPTX for a new course.
+User drops PDF(s) for a new course.
 
 **ALWAYS start from `template.html`. Never copy an existing subject HTML — they may have drifted.**
 
@@ -103,19 +118,21 @@ Steps:
    - `__JSON_NAME__` — JSON file basename (e.g. `3040` → `data/3040.json`). Appears TWICE.
    - `__CACHE_NAME__` — service-worker cache namespace (e.g. `lifs3040`)
 3. Create `data/{code}.json` with the schema described below. Set `storageKey` to something unique (e.g. `lifs3040_quiz_state`).
-4. **SCAN the actual PDF structure** — read through each PDF to identify the real topics, sections, and ordering. Do NOT rely on file names alone. Confirm with user: "This lecture covers [topics in actual order], right?" — get explicit confirmation before proceeding.
-5. **Spawn agents for parallel processing:**
-   - **Agent 1 (Notes Generator):** Reads the PDF and `prompts/notes-format.md`, then generates the complete notes HTML block (`<div id="notes-N">...</div>`) for this lecture. Follow the Content completeness rule: cover ALL content from the PDF.
-   - **Agent 2 (MCQ Generator):** Reads the PDF and `prompts/mcq-format.md`, then generates exactly 30 multiple-choice questions in JSON format. Must include option length/format parity rules and balanced answer position distribution.
-   - Both agents work in parallel. Do NOT wait for one to finish before starting the other.
-6. Once both agents complete, collect their outputs:
-   - Insert the notes HTML block into the new subject HTML file at the location marked `NOTES PAGES go here`
-   - Parse the JSON questions and append to `data/{code}.json` under the correct lecture object, along with updated `topicSectionMap`
-7. Add a new subject card to `index.html`.
-8. Update this CLAUDE.md Content Status table.
-9. Ask user to approve before committing.
+4. For each lecture PDF:
+   - **Spawn agents in parallel:**
+     - **Agent 1 (Notes Generator):** Use `prompts/agent-notes-generator.md`. Pass the PDF and lecture number. Agent must follow `prompts/notes-format.md` exactly.
+     - **Agent 2 (MCQ Generator):** Use `prompts/agent-mcq-generator.md`. Pass the PDF and lecture number. Agent must follow `prompts/mcq-format.md` exactly.
+     - Both agents work in parallel. Do NOT wait for one to finish before starting the other.
+   - Once both agents complete, collect their outputs:
+     - Extract the notes HTML block from Agent 1
+     - Extract the JSON array of 30 questions from Agent 2
+     - Insert the notes HTML block into the new subject HTML file at the location marked `NOTES PAGES go here`
+     - Parse the JSON questions and append to `data/{code}.json` under the correct lecture object, along with updated `topicSectionMap` from Agent 1's topic-slugs
+5. Add a new subject card to `index.html`.
+6. Update this CLAUDE.md Content Status table.
+7. Ask user to approve before committing.
 
-**Do NOT hand-write the home-page lecture cards or `<div id="quiz-N">` blocks.** They are generated at runtime by `renderHomeCards()` / `renderQuizContainers()` from the JSON data. Hand-writing them will cause duplicates.
+**Do NOT hand-write the home-page lecture cards, `<div id="notes-N">` blocks, or `<div id="quiz-N">` blocks.** They are either generated by agents (notes) or by the website at runtime (quiz containers) from JSON data. Hand-writing them will cause duplicates or inconsistency.
 
 ---
 
@@ -199,8 +216,16 @@ Font: Georgia / Times New Roman, serif. Beige/green palette. No external librari
 ## Content Status
 | Subject | File | Notes | Questions |
 |---------|------|-------|-----------|
+| LIFS2040 | 2040.html + data/2040.json | ✅ Complete (L11–L20) | ✅ Complete (300 Qs) |
 | LIFS3040 | 3040.html + data/3040.json | ✅ Complete (L1–L10) | ✅ Complete (300 Qs) |
 | HUMA2921 | 2921.html + data/2921.json | 🚧 Placeholder (L3,4,5) | 🚧 Empty arrays |
+
+### LIFS2040 Lecture Breakdown
+| Lecture | Topic |
+|---------|-------|
+| L11–L18 | (Previously generated) |
+| L19 | Cell Division Cycle |
+| L20 | Sexual Reproduction & Genetics |
 
 ### LIFS3040 Lecture Breakdown
 | Lecture | Topic | Source |

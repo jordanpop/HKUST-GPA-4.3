@@ -2719,6 +2719,286 @@ tr.weak-highlight{box-shadow:none}
   </div>
 </div>
 
+<div id="notes-19" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-19" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(19)">Clear Highlights</button>
+  <h1>Lecture 19: THE CELL DIVISION CYCLE</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    The cell division cycle (細胞分裂週期) is the fundamental process by which a eukaryotic cell duplicates its genetic material and divides into two daughter cells. This lecture explores the orchestrated stages of the cycle—growth, DNA replication, and mitosis—and the molecular control systems (cyclins 細胞週期素 and cyclin-dependent kinases) that ensure each step occurs in the correct order. Understanding these checkpoints and regulators is essential because failures in this system lead to uncontrolled cell division and cancer.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Overview of the Cell Division Cycle</h2>
+    <p data-topic="cell-cycle-phases">
+      • <b>Cell division cycle:</b> The repeating sequence of growth (G1, G2), DNA synthesis (S phase), and nuclear and cytoplasmic division (M phase) by which one cell becomes two identical daughter cells.
+    </p>
+    <p data-topic="cell-cycle-phases">
+      • <b>G1 phase:</b> Metabolic activity and cell growth; cell increases in size and protein content.
+    </p>
+    <p data-topic="cell-cycle-phases">
+      • <b>S phase:</b> DNA replication (合成 synthesis); the cell duplicates its entire genome.
+    </p>
+    <p data-topic="cell-cycle-phases">
+      • <b>G2 phase:</b> Further cell growth and protein synthesis to prepare for mitosis; cell accumulates proteins and lipids needed for division.
+    </p>
+    <p data-topic="cell-cycle-phases">
+      • <b>M phase:</b> Nuclear division (mitosis 有絲分裂) and cytoplasmic division (cytokinesis 胞質分裂); chromosomes segregate and the cell pinches into two.
+    </p>
+    <p data-topic="interphase">
+      • <b>Interphase:</b> Comprises G1, S, and G2 phases; the cell is not actively dividing but is growing and preparing for division.
+    </p>
+    <div class="exam-trap-inline" data-topic="cell-cycle-phases"><b>Exam trap:</b> G0 phase (cell cycle arrest) is withdrawal from the cycle, leading to terminal differentiation (終末分化); cells in G0 do not divide. Do not confuse G0 with G1, which is actively progressing toward S phase.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Cell Cycle Checkpoints and Control</h2>
+    <p data-topic="g1-s-checkpoint">
+      • <b>G1/S checkpoint:</b> A critical control point (檢驗點) where the cell assesses whether conditions are suitable for DNA replication.
+    </p>
+    <p data-topic="g1-s-checkpoint">
+      • <b>Checkpoint decisions:</b> The cell evaluates: Is all DNA replicated? Are DNA damages repaired? Is the environment favorable for division? Based on these answers, the cell either proceeds to S phase, pauses, or withdraws permanently to G0 for terminal differentiation.
+    </p>
+    <p data-topic="dna-damage-response">
+      • <b>p53 tumor suppressor:</b> A master regulator activated by DNA damage (通過 via protein kinases). Stable, activated p53 binds to the promoter (啟動子) region of the p21 gene.
+    </p>
+    <p data-topic="dna-damage-response">
+      • <b>p21 inhibitor:</b> A Cdk inhibitor protein transcribed and translated from p21 mRNA. p21 complexes with G1/S-Cdk and S-Cdk, blocking their kinase activity and halting the cell cycle until DNA damage is repaired.
+    </p>
+    <p data-topic="dna-damage-response">
+      • <b>In the absence of DNA damage:</b> p53 is unstable and rapidly degraded in proteasomes; p21 is not produced, allowing cyclin-Cdk complexes to remain active.
+    </p>
+    <div class="exam-trap-inline" data-topic="dna-damage-response"><b>Exam trap:</b> p53 does not directly stop the cell cycle; instead, it activates p21 transcription. p21 is the actual Cdk inhibitor. Also, X-rays cause DNA damage and activate p53, which is used as a model system in many exam questions.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Cyclins and Cyclin-Dependent Kinases (Cdks)</h2>
+    <p data-topic="cyclin-cdk-complex">
+      • <b>Cyclin-dependent kinase (Cdk) (週期蛋白依賴激酶):</b> A protein kinase that is inactive on its own; activation requires binding to a cyclin partner.
+    </p>
+    <p data-topic="cyclin-cdk-complex">
+      • <b>Cyclin (細胞週期素):</b> A regulatory protein whose concentration fluctuates cyclically during the cell cycle. Different cyclins activate different Cdks at different phases.
+    </p>
+    <p data-topic="cyclin-cdk-pairs">
+      • <b>G1-Cdk complex:</b> Cyclin D + Cdk4 or Cdk6; drives early G1 progression.
+    </p>
+    <p data-topic="cyclin-cdk-pairs">
+      • <b>G1/S-Cdk complex:</b> Cyclin E + Cdk2; controls the G1/S transition; responsible for initiating DNA replication.
+    </p>
+    <p data-topic="cyclin-cdk-pairs">
+      • <b>S-Cdk complex:</b> Cyclin A + Cdk2; maintains S phase and coordinates ongoing DNA replication (DNA複製).
+    </p>
+    <p data-topic="cyclin-cdk-pairs">
+      • <b>M-Cdk complex:</b> Cyclin B + Cdk1; drives M phase and ensures proper chromosome segregation (分離).
+    </p>
+    <p data-topic="cyclin-degradation">
+      • <b>Ubiquitylation and proteasomal destruction:</b> Cyclins are tagged with ubiquitin chains by APC (anaphase-promoting complex 分裂促進複合體), an ubiquitin ligase (泛素連接酶). Tagged cyclins are degraded by the proteasome, inactivating their Cdk partners.
+    </p>
+    <p data-topic="cyclin-degradation">
+      • <b>APC function:</b> Active APC marks cyclins for destruction, causing their concentration to drop cyclically. When a cyclin is absent, its Cdk is inactive.
+    </p>
+    <div class="exam-trap-inline" data-topic="cyclin-cdk-complex"><b>Exam trap:</b> Cdks are inactive without cyclins—cyclin binding is essential for activation. Also, cyclin concentration, not Cdk concentration, is what varies during the cycle. Cyclin degradation inactivates the Cdk.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Mitosis and Chromosome Segregation</h2>
+    <p data-topic="prophase">
+      • <b>Prophase:</b> Chromosomes condense (濃聚) into visible coils of chromatin. Centrosomes duplicate and move to opposite poles. The mitotic spindle (有絲分裂紡錘) assembles from microtubules (微管) emanating from centrosomes.
+    </p>
+    <p data-topic="prophase">
+      • <b>Chromosome structure in prophase:</b> Each duplicated chromosome consists of two sister chromatids (姊妹染色單體) held together along their length by cohesin rings (粘聚蛋白環).
+    </p>
+    <p data-topic="prometaphase">
+      • <b>Prometaphase:</b> The nuclear envelope breaks down (破裂). Kinetochores (著絲點) at the centromere (中著絲點) region attach to spindle microtubules.
+    </p>
+    <p data-topic="prometaphase">
+      • <b>Kinetochore function:</b> Protein structures that serve as attachment sites (附著位點) for spindle microtubules, pulling chromosomes toward spindle poles.
+    </p>
+    <p data-topic="metaphase">
+      • <b>Metaphase:</b> Kinetochores of all chromosomes align in a plane midway between the two spindle poles. The spindle is properly positioned and oriented.
+    </p>
+    <p data-topic="metaphase">
+      • <b>Spindle checkpoint:</b> The cell ensures all chromosomes are correctly attached and aligned before allowing separation.
+    </p>
+    <p data-topic="anaphase">
+      • <b>Anaphase:</b> APC is activated; securin (安全蛋白), an inhibitory protein, is ubiquitylated and degraded. Free separase (分離酶), a proteolytic enzyme (蛋白水解酶), cleaves cohesin rings.
+    </p>
+    <p data-topic="anaphase">
+      • <b>Sister chromatid separation:</b> Once cohesins are cut, sister chromatids separate and move toward opposite spindle poles. Kinetochore microtubules shorten.
+    </p>
+    <p data-topic="telophase-cytokinesis">
+      • <b>Telophase:</b> Two sets of chromosomes arrive at spindle poles. Chromosomes decondense (解聚) back to chromatin. A new nuclear envelope reassembles around each set of chromosomes.
+    </p>
+    <p data-topic="telophase-cytokinesis">
+      • <b>Cytokinesis:</b> The contractile ring (收縮環), composed of actin and myosin filaments (肌動蛋白和肌球蛋白細絲), forms at the cell equator. The ring contracts, dividing the cytoplasm and organelles between two daughter cells.
+    </p>
+    <p data-topic="telophase-cytokinesis">
+      • <b>Plant cell cytokinesis:</b> Instead of a contractile ring, a phragmoplast (分膜體) assembles with microtubules and vesicles to form a new cell wall (細胞壁) in the division plane.
+    </p>
+    <div class="exam-trap-inline" data-topic="metaphase"><b>Exam trap:</b> Metaphase is when chromosomes are aligned at the equator; anaphase is when they separate. Do not confuse metaphase alignment with anaphase separation.</div>
+    <div class="exam-trap-inline" data-topic="anaphase"><b>Exam trap:</b> Separase must be activated by APC-mediated degradation of securin. If securin is not degraded, separase remains inactive and sister chromatids do not separate.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. DNA Replication and S Phase Preparation</h2>
+    <p data-topic="dna-synthesis">
+      • <b>DNA synthesis (S phase) (DNA合成):</b> The cell duplicates (複製) its entire genome, resulting in two identical copies of each chromosome.
+    </p>
+    <p data-topic="dna-synthesis">
+      • <b>Pre-replication events:</b> Before DNA is replicated, the cell synthesizes proteins and lipids. Organelles grow and increase in number to be distributed (分配) to both daughter cells.
+    </p>
+    <p data-topic="s-cdk-activity">
+      • <b>S-Cdk function:</b> Cyclin A + Cdk2 complexes, active during S phase, drive and coordinate (協調) DNA replication. S-Cdk activity is high during S phase and drops when cyclin A is degraded (降解).
+    </p>
+    <p data-topic="s-cdk-activity">
+      • <b>Why duplication before segregation:</b> The cell cycle is coordinated so that DNA is replicated first (S phase) before chromosomes are segregated (M phase 分裂期). This ordering is ensured by cyclin-Cdk activity patterns: G1/S-Cdk and S-Cdk are active before M-Cdk.
+    </p>
+    <div class="exam-trap-inline" data-topic="dna-synthesis"><b>Exam trap:</b> If S phase and M phase occur with no intervening growth (G1 and G2), cells would become progressively smaller without increasing in size. This is a common exam scenario.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="5">
+    <h2>6. Coordination of the Cell Cycle Sequence</h2>
+    <p data-topic="cycle-coordination">
+      • <b>Why the sequence matters:</b> DNA must be duplicated first, then segregated (分離). Cells cannot divide properly if this order is reversed (反轉).
+    </p>
+    <p data-topic="cycle-coordination">
+      • <b>Cyclin-Cdk temporal pattern:</b> Different cyclin-Cdk complexes are active at different phases. G1-Cdk and G1/S-Cdk prepare the cell and initiate (開始) replication. S-Cdk maintains replication. M-Cdk drives mitosis (有絲分裂). This sequential (順序的) activation ensures the correct order of events.
+    </p>
+    <p data-topic="cycle-coordination">
+      • <b>Checkpoint control:</b> Multiple checkpoints (檢驗點) (G1/S, intra-S, spindle) verify that the previous phase has been completed (完成) before advancing. For example, the spindle checkpoint confirms all chromosomes are properly attached before anaphase begins.
+    </p>
+    <p data-topic="cycle-coordination">
+      • <b>Cancer connection:</b> Overexpression (過度表達) of cyclins or loss of Cdk inhibitors (like p21 or Rb) allows uncontrolled cell division, leading to uncontrolled growth and metastasis (轉移). Mutations (突變) in checkpoint genes increase cancer risk.
+    </p>
+    <div class="exam-trap-inline" data-topic="cycle-coordination"><b>Exam trap:</b> The question "What happens if cells only undergo S phase and M phase with no G1 and G2?" tests understanding that cells would progressively decrease in size because there is no growth period to compensate for cell division.</div>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>G0 is withdrawal from the cycle (terminal differentiation), not the same as G1 phase.</li>
+      <li>p53 does not directly stop the cell cycle; it activates p21 transcription, and p21 is the Cdk inhibitor.</li>
+      <li>Cdks are inactive without cyclins; cyclin binding is essential for activation.</li>
+      <li>Cyclin concentration, not Cdk concentration, varies during the cycle.</li>
+      <li>Metaphase is alignment at the equator; anaphase is separation of sister chromatids.</li>
+      <li>Separase must be activated by APC-mediated degradation of securin for chromatid separation.</li>
+      <li>If only S and M phases occur without G1 and G2, cells become progressively smaller.</li>
+      <li>Checkpoint genes are mutated in cancer, allowing uncontrolled division.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Four phases of the cell cycle: G1 (growth), S (DNA synthesis), G2 (growth), M (mitosis and cytokinesis).</li>
+      <li>Four cyclin-Cdk pairs and their roles: G1-Cdk (Cyc D + Cdk4/6), G1/S-Cdk (Cyc E + Cdk2), S-Cdk (Cyc A + Cdk2), M-Cdk (Cyc B + Cdk1).</li>
+      <li>G1/S checkpoint: cell assesses DNA damage, environment, readiness to replicate before proceeding to S phase.</li>
+      <li>p53 activates p21 transcription in response to DNA damage; p21 inhibits cyclin-Cdk complexes.</li>
+      <li>APC ubiquitylates cyclins for proteasomal degradation, inactivating their Cdk partners.</li>
+      <li>Mitotic stages and key events: prophase (condensation, spindle assembly), prometaphase (nuclear envelope breakdown, kinetochore attachment), metaphase (chromosome alignment), anaphase (sister chromatid separation), telophase (nuclear envelope reassembly).</li>
+      <li>Cohesin rings hold sister chromatids together; separase, activated by APC, cleaves cohesins to allow separation.</li>
+      <li>Cytokinesis divides cytoplasm via contractile ring (animal) or phragmoplast (plant).</li>
+      <li>DNA replication occurs in S phase; the cell cycle ensures replication precedes segregation.</li>
+      <li>Spindle checkpoint confirms all chromosomes are properly attached before anaphase proceeds.</li>
+    </ol>
+  </div>
+</div>
+
+<div id="notes-20" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-20" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(20)">Clear Highlights</button>
+  <h1>Lecture 20: Sexual Reproduction & Genetics</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    Sexual reproduction generates genetic diversity through the combination of paternal and maternal chromosomes, creating unique organisms better suited to adapt to changing environments. This lecture explores meiosis, the cellular process that produces haploid gametes, and Mendelian genetics, which explains how traits are inherited. Understanding these mechanisms reveals how genetic variation and recombination provide the raw material for evolution and disease resistance.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Asexual vs. Sexual Reproduction</h2>
+    <p data-topic="asexual-reproduction">Asexual reproduction (無性生殖) — bacteria and some organisms divide through mitosis (有絲分裂), producing genetically identical clones; simple, efficient, no recombination (重組).</p>
+    <p data-topic="sexual-reproduction">Sexual reproduction (有性生殖) — involves fusion (融合) of haploid gametes (配子) from two parents; produces diploid (二倍體) zygote (受精卵) containing unique maternal and paternal chromosomes (染色體).</p>
+    <p data-topic="genetic-diversity">Generates genetic diversity (遺傳多樣性) through two mechanisms: unique assortment (分配) of maternal and paternal chromosomes, and homologous recombination (同源重組).</p>
+    <p data-topic="selective-advantage">Competitive advantage in unpredictable environments — diverse individuals better resist pathogens (病原體) and survive ecological stress (生態壓力); deleterious genes (有害基因) are eliminated through natural selection.</p>
+    <div class="exam-trap-inline" data-topic="asexual-sexual-distinction">Exam trap: Asexual reproduction = clones (identical DNA); sexual reproduction = variation. Don't confuse mitosis (somatic cells, identical) with meiosis (germ cells, haploid).</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Meiosis I and II: Generating Haploid Gametes</h2>
+    <p data-topic="meiosis-overview">Meiosis (減數分裂) — two cell divisions that convert one diploid (2N) germ cell into four haploid (N) gametes; each gamete contains one copy of each chromosome.</p>
+    <p data-topic="meiosis-i-stages">Meiosis I stages (第一次減數分裂): (1) Homologous chromosomes replicate and synapse (配對) to form bivalents (二價體); (2) Crossing-over (交叉互換) occurs between non-sister chromatids (姐妹染色質); (3) Duplicated homologs separate at anaphase, reducing chromosome number to N; (4) Sister chromatids remain attached.</p>
+    <p data-topic="meiosis-ii-stages">Meiosis II stages (第二次減數分裂): (1) Duplicated chromosomes line up individually on spindle (紡錘體); (2) Sister chromatids separate at anaphase; (3) Four haploid cells result, each with single chromatids; functionally identical to mitosis except chromosome number is N.</p>
+    <p data-topic="bivalent-formation">Bivalent (二價體) — pair of duplicated homologous chromosomes; bound by cohesins (粘聚蛋白); kinetochores (著點) of sister chromatids function as a unit in Meiosis I; cohesin degradation in Meiosis II allows sister chromatid separation.</p>
+    <div class="exam-trap-inline" data-topic="meiosis-stages">Exam trap: In Meiosis I, homologous chromosomes (not sister chromatids) separate — DNA content drops from 4N to 2N. In Meiosis II, sister chromatids separate — 2N becomes N. Crossing-over happens in Meiosis I, not II.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Homologous Recombination and Genetic Variation</h2>
+    <p data-topic="homologous-recombination">Homologous recombination (同源重組) — two similar DNA sequences exchange genetic information between non-sister chromatids of homologous chromosomes; major source of genetic variation in sexual reproduction.</p>
+    <p data-topic="crossing-over-mechanism">Crossing-over mechanism (交叉互換機制): (1) Recombination proteins (蛋白質) create double-strand breaks (雙鏈斷裂) in DNA; (2) Nuclease digests (降解) 5&apos; ends; (3) Second strand is captured (捕獲); (4) DNA synthesis and ligation (連接) complete the exchange; produces novel allele (對位基因) assortments.</p>
+    <p data-topic="chiasma">Chiasma (交叉點) — visible point where crossing-over occurred; marked by meiotic recombination machinery; multiple crossovers can occur between duplicated homologs in single bivalent.</p>
+    <p data-topic="reassortment-independent">Independent assortment (獨立分配) of paternal and maternal chromosomes — orientation (方向) of each bivalent on metaphase plate is random; with N = 23 chromosomes, humans can produce 2^23 = 8.4 × 10^6 genetically distinct gametes from independent assortment alone.</p>
+    <div class="exam-trap-inline" data-topic="recombination-vs-assortment">Exam trap: Recombination = genes on same chromosome swap places (local change); independent assortment = whole chromosomes randomly inherited (genome-wide change). Both create variation, but through different mechanisms.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Aneuploidy and Chromosome Nondisjunction</h2>
+    <p data-topic="nondisjunction">Nondisjunction (不分離) — failure of homologous chromosomes (Meiosis I) or sister chromatids (Meiosis II) to separate; produces aneuploid (非整倍體) gametes with extra or missing copies of a chromosome.</p>
+    <p data-topic="down-syndrome">Down syndrome (唐氏症) — trisomy 21; child receives 3 copies of Chromosome 21 instead of 2; results from maternal nondisjunction during Meiosis I or II; associated with maternal age (年齡) — risk increases significantly in pregnancies of women over 35.</p>
+    <p data-topic="aneuploid-gametes">Aneuploid gametes (非整倍體配子) — one gamete with two copies of a chromosome, another with zero; fertilization of aneuploid gamete (2N + 1 or 2N − 1) produces trisomic (三體) or monosomic (單體) zygote; most are lethal (致命的).</p>
+    <div class="exam-trap-inline" data-topic="nondisjunction-timing">Exam trap: Nondisjunction in Meiosis I affects both products of that division; nondisjunction in Meiosis II affects only one product. Timing determines how many aneuploid gametes are produced.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Mendel&apos;s Laws of Inheritance</h2>
+    <p data-topic="mendel-first-law">Mendel&apos;s first law (分離律, law of segregation) — two alleles (對位基因) for each trait separate during gamete formation and reunite randomly at fertilization; diploid organisms inherit one allele from each parent.</p>
+    <p data-topic="mendel-monohybrid">Monohybrid cross (單因子雜交) example: yellow-seeded (YY) × green-seeded (yy) parent plants produce F₁ yellow-seeded (Yy) offspring; F₁ self-fertilization yields F₂ ratio of 3:1 (yellow:green) or 1:2:1 (YY:Yy:yy) genotype ratio.</p>
+    <p data-topic="mendel-second-law">Mendel&apos;s second law (自由組合律, law of independent assortment) — each pair of alleles segregates independently during meiosis; alleles of different genes assort randomly at fertilization; only true for genes on different chromosomes or far apart on same chromosome.</p>
+    <p data-topic="mendel-dihybrid">Dihybrid cross (雙因子雜交) example: yellow-round (YYRR) × green-wrinkled (yyrr) produce F₁ yellow-round (YyRr); F₁ self-fertilization yields F₂ ratio 9:3:3:1 (phenotypic) corresponding to 16 genotypic combinations; demonstrates independent assortment of Y/y and R/r allele pairs.</p>
+    <p data-topic="homozygous-heterozygous">Homozygous (純合) — identical alleles at a locus (基因位點); heterozygous (雜合) — different alleles at same locus; homozygous dominant (BB) and homozygous recessive (dd) breed true; heterozygous (Bb) produces segregation in offspring.</p>
+    <div class="exam-trap-inline" data-topic="mendel-laws-limitations">Exam trap: Mendel&apos;s laws apply only to nuclear genes with simple dominance (顯性). Linked genes (連鎖基因) violate independent assortment; incomplete dominance, codominance, and epistasis (上位性) modify ratios; organellar genes (細胞器官基因) show maternal inheritance (母本繼承).</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="5">
+    <h2>6. Genetics as an Experimental Tool</h2>
+    <p data-topic="mutagenesis-screens">Forward genetics (正向遺傳) approach — mutagenize (誘變) cells, screen (篩選) for mutant phenotypes; temperature-sensitive mutants (溫度敏感突變體) identify genes regulating behavior; example: identifying genes controlling social feeding vs. solitary behavior in colonies (菌落).</p>
+    <p data-topic="mutation-types">Chromosome structural mutations (染色體結構突變): duplication (重複), inversion (倒位), deletion (缺失), insertion (插入), translocation (易位); each alters gene dosage (基因劑量) or gene order (基因順序), affecting phenotype.</p>
+    <p data-topic="point-mutations">Point mutations (點突變) — single nucleotide substitutions (核苷酸替換); example: sickle-cell anemia (鐮刀形細胞貧血症) caused by GTG → GAG in β-globin DNA, changing glutamic acid (谷氨酸) to valine (纈氨酸); polymerizes (聚合) under low oxygen (氧氣), distorting cell shape.</p>
+    <p data-topic="dna-sequence-variation">DNA sequence variation (DNA序列變異) — same mutation can cause normal protein, low/nonfunctional protein, or disease susceptibility (易感性); affects penetrance (外顯率) and expressivity (表現度) depending on genetic background (遺傳背景) and environment.</p>
+    <p data-topic="genetic-applications">Applications of genetics: identify disease-associated mutations; diagnose genetic abnormalities (遺傳異常) via DNA sequencing (DNA測序); reveal pathogenic outbreaks (爆發) through genome analysis; develop targeted therapeutics (治療學).</p>
+    <div class="exam-trap-inline" data-topic="mutation-phenotype">Exam trap: Not all mutations cause disease; same mutation can have different effects (variable penetrance and expressivity). Sickle-cell heterozygotes (Ss) have malaria resistance without severe anemia — context matters for phenotypic outcome.</div>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Asexual vs. sexual: Mitosis creates clones; meiosis creates variation.</li>
+      <li>Meiosis I separates homologs (2N → N); Meiosis II separates sister chromatids (2N → N). Crossing-over occurs in Meiosis I only.</li>
+      <li>Crossing-over (local recombination) and independent assortment (chromosome-level) both create variation but through different mechanisms.</li>
+      <li>Nondisjunction timing: Meiosis I affects both products; Meiosis II affects one product.</li>
+      <li>Mendel&apos;s laws apply only to nuclear genes with simple dominance and independent assortment (genes on different chromosomes).</li>
+      <li>Linked genes violate independent assortment; incomplete dominance and epistasis modify Mendelian ratios.</li>
+      <li>Sickle-cell and other mutations show variable penetrance and expressivity — genotype does not deterministically predict phenotype.</li>
+      <li>Temperature-sensitive mutants identify conditional (環境依賴) gene functions; not defective under permissive (允許) conditions.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Meiosis produces 4 haploid gametes from 1 diploid cell; Meiosis I reduces chromosome number (homolog separation), Meiosis II separates sister chromatids.</li>
+      <li>Homologous recombination (crossing-over) exchanges genetic information between non-sister chromatids; major source of genetic variation.</li>
+      <li>Independent assortment: with 23 chromosomes, humans produce ~8.4 × 10^6 genetically distinct gametes.</li>
+      <li>Mendel&apos;s first law (segregation): alleles separate in gamete formation and recombine randomly at fertilization.</li>
+      <li>Mendel&apos;s second law (independent assortment): allele pairs segregate independently (only true for unlinked genes).</li>
+      <li>Monohybrid F₁ self-cross yields 3:1 phenotypic ratio (1:2:1 genotypic); dihybrid F₁ self-cross yields 9:3:3:1 phenotypic ratio.</li>
+      <li>Nondisjunction produces aneuploid gametes; trisomy 21 (Down syndrome) results from maternal nondisjunction, especially in older mothers.</li>
+      <li>Point mutations (e.g. sickle-cell) can be silent, deleterious, or conditionally beneficial (malaria resistance in heterozygotes).</li>
+      <li>Gene mutations affect penetrance (% affected individuals) and expressivity (severity in affected individuals); context-dependent outcomes.</li>
+      <li>Cohesins glue sister chromatids together; degradation in Meiosis II allows separation; kinetochores attach to centromere.</li>
+    </ol>
+  </div>
+</div>
+
 <!-- Quiz containers are generated by JS (see renderQuizContainers). -->
 <div id="quiz-containers"></div>
 
@@ -3351,7 +3631,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ===== PWA Service Worker (inline via Blob) =====
 if ('serviceWorker' in navigator) {
   const swCode = `
-    const CACHE = 'lifs2040-v2';
+    const CACHE = 'lifs2040-v3';
     self.addEventListener('install', e => { self.skipWaiting(); });
     self.addEventListener('activate', e => { e.waitUntil(self.clients.claim()); });
     self.addEventListener('fetch', e => {
