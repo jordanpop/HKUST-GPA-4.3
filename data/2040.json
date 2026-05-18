@@ -2556,6 +2556,858 @@
           "difficulty": "hard"
         }
       ]
+    },
+    {
+      "id": 17,
+      "title": "Lecture 17: Mechanisms of Cellular Communication-I",
+      "questions": [
+        {
+          "q": "Which of the following best describes the purpose of cell communication (細胞通訊) in multicellular organisms?",
+          "options": [
+            "To eliminate waste products from the extracellular space",
+            "To directly transfer genetic material between neighboring cells",
+            "To maintain membrane potential by regulating ion concentrations",
+            "To recycle intracellular proteins through the proteasome pathway",
+            "To coordinate survival, growth, differentiation, and death through signal exchange"
+          ],
+          "answer": 4,
+          "topic": "cell-communication-importance",
+          "explain": "Cell communication allows cells to sense the environment, send orders to other cells, heal wounds, and guide developmental patterning — all requiring coordinated information exchange. Waste elimination, genetic transfer, membrane potential, and protein recycling are not the defining functions of cell-to-cell communication as a signaling framework.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Yeast mating-type cells a and α secrete mating factors that cause the partner cell to elongate toward it before fusing. This is an example of which signaling phenomenon?",
+          "options": [
+            "Contact-dependent signaling requiring direct membrane contact",
+            "Endocrine signaling carried through the yeast bloodstream",
+            "Synaptic signaling delivered by specialized nerve terminals",
+            "Autocrine signaling where cells respond to their own secreted factors",
+            "Signal transduction converting an extracellular chemical signal into a cellular response"
+          ],
+          "answer": 4,
+          "topic": "cell-communication-importance",
+          "explain": "Yeast mating involves secreted mating factors that bind receptors on the partner cell and trigger intracellular changes — a classic signal transduction event. Yeast lack a bloodstream (ruling out endocrine), the cells do not need to touch before responding (ruling out contact-dependent), and the signal targets the partner, not the secreting cell (ruling out autocrine).",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In contact-dependent signaling, what feature makes it distinct from all other modes of cell communication?",
+          "options": [
+            "The signaling molecule is membrane-bound and requires direct cell-to-cell contact",
+            "The signal is secreted into the extracellular matrix and diffuses to nearby cells",
+            "The signal travels through the bloodstream to reach distant target cells",
+            "The signal is carried along an axon and released at a specialized terminal",
+            "The signal activates a G-protein-coupled receptor on the target cell surface"
+          ],
+          "answer": 0,
+          "topic": "communication-modes-contact",
+          "explain": "Contact-dependent signaling uses membrane-bound signal molecules that never leave the cell surface, so physical contact between the signaling and target cells is mandatory. All other modes (paracrine, endocrine, synaptic) involve secreted or released molecules that travel some distance through extracellular space or fluid.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "In the Delta–Notch signaling system, one epithelial cell expressing Delta activates Notch on all its neighbors. What is the functional outcome of this lateral inhibition?",
+          "options": [
+            "All neighboring cells adopt the same specialized fate as the Delta-expressing cell",
+            "Neighboring cells are suppressed from adopting the same fate, producing cell specialization",
+            "The Delta-expressing cell is destroyed so that only Notch-bearing cells remain",
+            "Notch activation triggers apoptosis in all cells simultaneously",
+            "Delta is secreted and diffuses broadly to pattern the entire tissue layer"
+          ],
+          "answer": 1,
+          "topic": "communication-modes-contact",
+          "explain": "Lateral inhibition via Delta–Notch suppresses neighbors from adopting the same fate as the Delta-expressing cell, generating diversity from a field of equivalent cells — this is the mechanism of cell specialization. Delta remains membrane-bound and is not secreted, and Notch activation promotes differentiation into a different fate, not cell destruction.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "A student states: 'Paracrine and endocrine signaling both use secreted signal molecules, so the only difference is how far the signal travels.' Which part of this statement is correct, and what is the most important omission?",
+          "options": [
+            "Both use secreted molecules — correct; but endocrine signals travel via the bloodstream while paracrine signals remain local — the route is the key distinction",
+            "The statement is fully correct; distance is the sole distinction between these modes",
+            "The statement is incorrect; paracrine signals are membrane-bound and endocrine signals are secreted",
+            "The statement is incorrect; endocrine signals are electrical and paracrine signals are chemical",
+            "Both use secreted molecules — correct; but paracrine signals enter the bloodstream whereas endocrine signals stay local"
+          ],
+          "answer": 0,
+          "topic": "communication-modes-paracrine",
+          "explain": "Paracrine signals (local mediators) are secreted but remain in the neighborhood of the secreting cell without entering the bloodstream; endocrine hormones are also secreted but travel via the bloodstream to distant targets. Distance and route through the bloodstream are both important distinctions — the student captured half the picture. Option E reverses which mode uses the bloodstream.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Autocrine signaling is considered a variant of which broader signaling mode?",
+          "options": [
+            "Contact-dependent signaling, because the signal never leaves the cell membrane",
+            "Endocrine signaling, because the hormone enters the bloodstream before re-binding",
+            "Synaptic signaling, because autocrine factors are released at specialized terminals",
+            "Intracellular signaling, because the signal molecule never crosses the plasma membrane",
+            "Paracrine signaling, because the cell secretes a local mediator and then responds to it itself"
+          ],
+          "answer": 4,
+          "topic": "communication-modes-paracrine",
+          "explain": "Autocrine signaling is a variant of paracrine signaling in which the same cell that secretes the local mediator also bears the receptor and responds to its own signal. Like paracrine, the signal is secreted and diffuses locally — the distinction is only that the source and target are the same cell.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Insulin secreted by the pancreas travels through the bloodstream to cells throughout the body. Which property of endocrine signaling does this best illustrate?",
+          "options": [
+            "High spatial precision — only cells immediately adjacent to the pancreas respond",
+            "Fast signal delivery — insulin reaches its target in milliseconds via the blood",
+            "Membrane-bound transmission — insulin remains attached to pancreatic cells during signaling",
+            "Broad reach — a single endocrine organ can simultaneously regulate many distant cell types",
+            "Synaptic precision — insulin is released only at nerve terminals adjacent to target cells"
+          ],
+          "answer": 3,
+          "topic": "communication-modes-endocrine",
+          "explain": "Endocrine signaling allows one secretory organ (the pancreas) to simultaneously affect many cell types throughout the body via the bloodstream — broad reach is the hallmark of this mode. Endocrine signaling is not spatially precise like synaptic signaling, is not fast like ion channel activation, and insulin is clearly secreted, not membrane-bound.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "A neuron releases neurotransmitters into the synaptic cleft, where they bind receptors on the target cell. Which property distinguishes synaptic signaling from paracrine signaling?",
+          "options": [
+            "Synaptic signals are secreted molecules, while paracrine signals are membrane-bound",
+            "Paracrine signaling uses electrical impulses, while synaptic signaling uses chemical transmitters",
+            "Synaptic signaling requires the signal to enter the bloodstream for delivery to target cells",
+            "Synaptic signaling is spatially directed through specialized nerve terminals — like private lines — whereas paracrine signals diffuse broadly in the tissue",
+            "Paracrine signaling operates only in neural tissue, while synaptic signaling operates in all tissues"
+          ],
+          "answer": 3,
+          "topic": "communication-modes-synaptic",
+          "explain": "Synaptic signaling is delivered with high spatial precision through the nerve terminal directly to the synapse — neurotransmitters cross a narrow cleft to a specific target cell. Paracrine signals diffuse more broadly in the extracellular space. Both use chemical messengers, and neither requires entry into the bloodstream.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which sequence correctly describes the three phases of signal transduction in order?",
+          "options": [
+            "Response → Transduction → Reception",
+            "Transduction → Reception → Response",
+            "Reception → Response → Transduction",
+            "Reception → Transduction → Response",
+            "Amplification → Reception → Response"
+          ],
+          "answer": 3,
+          "topic": "three-phases-transduction",
+          "explain": "The canonical order is Reception (the receptor detects the extracellular signal), then Transduction (the signal is converted and relayed through intracellular cascades), then Response (the cellular outcome — altered metabolism, shape, or gene expression). All other orderings break the logical flow of extracellular → intracellular → output.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "A signaling pathway converts receptor activation into altered gene expression. Which phase of signal transduction includes the functions of relay, amplification, integration, distribution, and feedback control?",
+          "options": [
+            "Reception, because the receptor coordinates all downstream events",
+            "Response, because it encompasses all changes in cell behavior",
+            "Secretion, because the ligand must be processed before it can relay information",
+            "Elimination, because signal inactivation is required before any response occurs",
+            "Transduction, because it converts and processes the signal through intracellular cascades"
+          ],
+          "answer": 4,
+          "topic": "three-phases-transduction",
+          "explain": "Transduction is the phase that converts the extracellular signal into an intracellular form capable of driving a response; it encompasses relay, amplification (one signal activates many downstream molecules), integration of multiple inputs, distribution to multiple effectors, and feedback control. Reception is only the binding event; response is the final output.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which type of signal molecule uses a cell-surface receptor rather than an intracellular receptor, and why?",
+          "options": [
+            "Small hydrophobic molecules, because they require a receptor embedded in the membrane to cross it",
+            "Large hydrophilic molecules, because they cannot cross the hydrophobic lipid bilayer and bind receptors on the cell surface",
+            "Steroid hormones, because they are too large to be detected by intracellular machinery",
+            "Gas-phase signals, because they bind receptors on the extracellular face of the membrane",
+            "All signal molecules, because every signal requires an initial interaction with a cell-surface protein"
+          ],
+          "answer": 1,
+          "topic": "reception-receptor-types",
+          "explain": "Large, charged, or hydrophilic signal molecules cannot diffuse through the hydrophobic lipid bilayer, so they bind receptors anchored on the cell surface that transmit the signal inside. Small hydrophobic molecules (e.g., steroid hormones) cross the membrane freely and bind intracellular receptors.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "A researcher describes an intracellular receptor as 'extracellular' because 'the signal comes from outside the cell.' What is the error in this reasoning?",
+          "options": [
+            "There is no error — any receptor that detects an external signal is extracellular by definition",
+            "The error is that intracellular receptors are always located on the plasma membrane, not inside the cell",
+            "The error is conflating the receptor's location with the signal's origin — the receptor itself is inside the cell even though the signal molecule originates outside",
+            "The error is that intracellular receptors only detect signals synthesized within the cytosol",
+            "The error is that extracellular signals always bind cell-surface receptors, making intracellular receptors impossible"
+          ],
+          "answer": 2,
+          "topic": "reception-receptor-types",
+          "explain": "The term 'intracellular receptor' refers to where the receptor protein resides — inside the cell (cytosol or nucleus). The signal molecule (e.g., cortisol) does originate outside but crosses the membrane before binding its intracellular receptor. Location of the receptor and origin of the signal are independent facts.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Cortisol is a steroid hormone. What property allows it to reach its receptor without a cell-surface receptor?",
+          "options": [
+            "Cortisol is actively transported into the cell by a dedicated membrane pump",
+            "Cortisol binds a channel protein that opens and allows it to enter",
+            "Cortisol is hydrophobic and freely diffuses through the lipid bilayer of the plasma membrane",
+            "Cortisol is broken down at the membrane and reconstructed inside the cell",
+            "Cortisol enters through gap junctions shared between adjacent cells"
+          ],
+          "answer": 2,
+          "topic": "intracellular-receptors-cortisol",
+          "explain": "Cortisol is a steroid hormone with a hydrophobic structure that allows it to dissolve in and diffuse through the lipid bilayer without the assistance of a transporter or channel. This is what distinguishes steroid hormones from large hydrophilic signals that need cell-surface receptors.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Where is the cortisol nuclear receptor located BEFORE cortisol binds to it?",
+          "options": [
+            "On the outer surface of the plasma membrane",
+            "Inside the nucleus, already bound to DNA regulatory regions",
+            "In the cytosol, in an inactive conformation",
+            "In the endoplasmic reticulum, awaiting ligand-induced secretion",
+            "In the lysosome, protected from premature activation"
+          ],
+          "answer": 2,
+          "topic": "intracellular-receptors-cortisol",
+          "explain": "Before cortisol binds, the nuclear receptor protein resides in the cytosol in an inactive conformation. Cortisol binding causes a conformational change that activates the receptor, and only then does the receptor-cortisol complex translocate into the nucleus to bind DNA regulatory regions. Students commonly but incorrectly assume the receptor starts in the nucleus.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Place the following steps of cortisol signaling in the correct order: (1) receptor-cortisol complex binds DNA regulatory region; (2) cortisol crosses the plasma membrane; (3) conformational change activates receptor; (4) complex translocates to nucleus; (5) cortisol binds cytosolic nuclear receptor.",
+          "options": [
+            "2 → 5 → 3 → 4 → 1",
+            "5 → 2 → 3 → 1 → 4",
+            "2 → 3 → 5 → 4 → 1",
+            "1 → 2 → 5 → 3 → 4",
+            "2 → 5 → 4 → 3 → 1"
+          ],
+          "answer": 0,
+          "topic": "intracellular-receptors-cortisol",
+          "explain": "Cortisol first crosses the plasma membrane (2) due to its hydrophobic nature, then binds the cytosolic nuclear receptor (5), triggering a conformational change that activates it (3), after which the active complex translocates to the nucleus (4), and finally binds the DNA regulatory region to activate transcription (1). This ordered sequence is the canonical cortisol signaling pathway.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the three cell-surface receptor classes directly controls ion flow as an immediate consequence of ligand binding?",
+          "options": [
+            "G-protein-coupled receptors, because they activate a G protein that opens separate ion channels",
+            "Enzyme-coupled receptors, because receptor dimerization creates a pore in the membrane",
+            "Ion-channel-coupled receptors, because ligand binding opens the channel built into the receptor protein itself",
+            "Intracellular receptors, because they translocate to the nucleus and activate ion transporter genes",
+            "Receptor tyrosine kinases, because phosphorylation of the receptor creates an ion-conducting pathway"
+          ],
+          "answer": 2,
+          "topic": "cell-surface-receptor-classes",
+          "explain": "Ion-channel-coupled receptors contain the ion channel as an integral part of the receptor protein — ligand binding causes a conformational change that opens the pore, allowing ions to flow immediately (within milliseconds). GPCRs activate G proteins that may indirectly regulate separate channels; enzyme-coupled receptors activate kinase domains, not ion pores.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "A GPCR is activated by its ligand. Which molecular event directly converts the G protein from its inactive to its active state?",
+          "options": [
+            "The activated receptor phosphorylates the G protein on a tyrosine residue",
+            "The G protein subunit exchanges GDP for GTP, releasing the active subunit to trigger downstream effectors",
+            "The G protein cleaves GTP to GDP, releasing energy to drive conformational change",
+            "The receptor dimerizes, allowing two G proteins to simultaneously bind and cross-activate each other",
+            "The G protein translocates to the nucleus and binds a DNA regulatory element"
+          ],
+          "answer": 1,
+          "topic": "cell-surface-receptor-classes",
+          "explain": "Activated GPCRs catalyze exchange of GDP for GTP on the G protein alpha subunit; the GTP-bound active subunit then dissociates and triggers downstream effectors. GTP hydrolysis (not an activating event but the inactivation step) returns the G protein to its OFF state. GPCRs have no intrinsic kinase activity and do not phosphorylate the G protein.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Enzyme-coupled receptors are often activated by a dimeric signal molecule. Why does dimerization of the signal matter?",
+          "options": [
+            "A dimeric signal doubles the amount of ligand, increasing receptor occupancy by mass action",
+            "A dimeric signal cross-links two receptor monomers, bringing their cytoplasmic catalytic domains into proximity to activate each other",
+            "A dimeric signal prevents receptor internalization, prolonging signaling duration",
+            "A dimeric signal activates the receptor's G protein by stabilizing the GDP-bound conformation",
+            "A dimeric signal allows the receptor to form an ion channel by bridging two membrane leaflets"
+          ],
+          "answer": 1,
+          "topic": "cell-surface-receptor-classes",
+          "explain": "Enzyme-coupled receptors (e.g., receptor tyrosine kinases) require dimerization — a dimeric signal molecule simultaneously binds two receptor monomers, cross-linking them and bringing their cytoplasmic catalytic (kinase) domains into proximity so they can transphosphorylate and activate each other. This structural requirement explains why a monomeric signal cannot activate the receptor.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following statements about cell-surface receptor classes is NOT correct?",
+          "options": [
+            "Ion-channel-coupled receptors operate on a millisecond timescale after ligand binding",
+            "GPCRs contain seven transmembrane helices",
+            "GPCRs activate intrinsic tyrosine kinase domains upon ligand binding",
+            "Enzyme-coupled receptors include receptor tyrosine kinases",
+            "Enzyme-coupled receptors are activated by signal-induced dimerization of receptor monomers"
+          ],
+          "answer": 2,
+          "topic": "cell-surface-receptor-classes",
+          "explain": "GPCRs do NOT have intrinsic kinase activity — their signaling mechanism relies on activating trimeric G proteins, not phosphorylating targets directly. Intrinsic tyrosine kinase activity belongs to enzyme-coupled receptors (receptor tyrosine kinases). All other statements accurately describe the respective receptor classes.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Protein kinase and protein phosphatase are both enzymes that regulate signaling proteins. Which statement correctly describes their opposing roles in the phosphorylation switch?",
+          "options": [
+            "Protein kinase adds a phosphate group from ATP (turns signaling ON); protein phosphatase removes the phosphate (turns signaling OFF)",
+            "Protein kinase removes a phosphate group (turns signaling ON); protein phosphatase adds a phosphate group (turns signaling OFF)",
+            "Both protein kinase and phosphatase add phosphate groups, but to different residues",
+            "Protein kinase hydrolyzes GTP to GDP to activate signaling; phosphatase reverses this by adding GTP",
+            "Protein kinase activates signaling by cleaving the substrate protein; phosphatase restores it by ligating the fragments"
+          ],
+          "answer": 0,
+          "topic": "molecular-switches",
+          "explain": "Protein kinase transfers a phosphate group from ATP to the target protein, switching it ON; protein phosphatase catalyzes hydrolytic removal of that phosphate, switching the protein OFF and returning it to its basal state. This reversible modification is one of the two main molecular switch mechanisms in signaling cascades.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Ras is a canonical GTP-binding switch protein. In its active state, what molecular event eventually returns Ras to its OFF (inactive) state?",
+          "options": [
+            "A protein phosphatase removes a phosphate from Ras, releasing GDP",
+            "A protein kinase phosphorylates Ras on its catalytic arginine, blocking GTP binding",
+            "GDP spontaneously dissociates from Ras, leaving an empty nucleotide-binding pocket",
+            "A guanine nucleotide exchange factor (GEF) re-loads Ras with GDP to inactivate it",
+            "Ras intrinsic GTPase activity hydrolyzes GTP to GDP plus inorganic phosphate"
+          ],
+          "answer": 4,
+          "topic": "molecular-switches",
+          "explain": "Active (GTP-bound) Ras is returned to its OFF state by its intrinsic GTPase activity, which slowly hydrolyzes GTP to GDP + Pᵢ; the GDP-bound form is inactive. This built-in timer is important for signal termination. GEFs actually promote GDP release and GTP loading (activation), not inactivation.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following correctly distinguishes the two molecular switch mechanisms used in intracellular signaling?",
+          "options": [
+            "Phosphorylation switch: kinase adds GTP; GTP-binding switch: GTPase adds phosphate",
+            "Phosphorylation switch: kinase ON / phosphatase OFF; GTP-binding switch: GTP binding ON / GTP hydrolysis OFF",
+            "Phosphorylation switch: reversible; GTP-binding switch: irreversible once GTP is bound",
+            "Both switches use the same mechanism but differ only in which downstream pathway they activate",
+            "Phosphorylation switch: uses GDP/GTP exchange; GTP-binding switch: uses ATP/ADP phosphorylation"
+          ],
+          "answer": 1,
+          "topic": "molecular-switches",
+          "explain": "The phosphorylation switch is driven by protein kinase (adds phosphate from ATP → ON) and protein phosphatase (removes phosphate → OFF). The GTP-binding switch is driven by GTP binding (ON) and intrinsic GTPase-catalyzed hydrolysis to GDP (OFF). These are mechanistically distinct and must not be conflated.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In a signaling cascade, activating one receptor eventually activates thousands of intracellular effector molecules. Which function of intracellular signaling pathways does this best describe?",
+          "options": [
+            "Integration — multiple input signals are merged at a single protein",
+            "Distribution — one receptor branches to activate multiple parallel pathways",
+            "Amplification — each step activates many more downstream molecules, exponentially increasing signal strength",
+            "Feedback control — downstream products inhibit upstream components to limit the response",
+            "Relay — the signal is passed sequentially from one protein to the next"
+          ],
+          "answer": 2,
+          "topic": "intracellular-pathway-functions",
+          "explain": "Amplification describes the cascade property whereby one activated receptor triggers many molecules at the next step, each of which activates many more — producing an exponential increase (domino effect) so that a single receptor activation event can yield thousands of downstream molecular events. Relay is just sequential passing; distribution involves branching, not numerical expansion.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "A cell simultaneously receives signals from three different receptors. These signals converge and are processed together at a single intracellular signaling protein before a response is committed. Which pathway function does this illustrate?",
+          "options": [
+            "Amplification, because each of the three signals multiplies the total signal strength",
+            "Relay, because each signal passes through the shared protein in sequence",
+            "Feedback control, because three inputs compete to inhibit each other",
+            "Integration, because multiple concurrent inputs from different pathways are merged at one protein",
+            "Distribution, because one receptor splits its signal to three downstream branches"
+          ],
+          "answer": 3,
+          "topic": "intracellular-pathway-functions",
+          "explain": "Integration is the pathway function where inputs from multiple signaling pathways converge at a single protein so the cell can sense combinations of signals rather than each in isolation. This allows nuanced decision-making (e.g., survive vs. apoptose). Distribution is the inverse — one receptor sending to multiple branches.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Acetylcholine causes decreased firing rate in heart pacemaker cells, secretion in salivary gland cells, and contraction in skeletal muscle cells. What does this phenomenon demonstrate?",
+          "options": [
+            "Acetylcholine is three different molecules with different structures in each tissue",
+            "Acetylcholine must be modified after secretion to acquire tissue-specific activity",
+            "Different cell types have different signal-transduction phases — some lack transduction entirely",
+            "The same signal molecule can produce different responses depending on which receptors and signaling pathways are present in the target cell",
+            "Acetylcholine binds only one receptor type but that receptor produces different ligands in each tissue"
+          ],
+          "answer": 3,
+          "topic": "signal-response-diversity",
+          "explain": "The acetylcholine example classically illustrates that it is not the signal molecule itself but the receptor identity and downstream signaling machinery of the receiving cell that determines the response. Acetylcholine is structurally identical in all cases; the heart, salivary gland, and muscle cells express different receptor subtypes and pathway components.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Muscle contraction occurs within seconds of nerve stimulation, while cell differentiation requires hours. What is the mechanistic basis for this difference in response speed?",
+          "options": [
+            "Fast responses require new protein synthesis; slow responses use pre-existing proteins",
+            "Fast responses require gene expression changes; slow responses use pre-existing protein activation",
+            "Fast responses alter the function of pre-existing proteins; slow responses require new protein synthesis via altered gene expression",
+            "Fast responses use paracrine signals; slow responses use endocrine hormones",
+            "Fast responses are driven by endocrine signaling; slow responses by contact-dependent signaling"
+          ],
+          "answer": 2,
+          "topic": "signal-speed",
+          "explain": "Fast responses (seconds to minutes) alter pre-existing protein function directly — no gene expression or new synthesis needed, just activation of dormant machinery (e.g., opening ion channels or activating existing enzymes). Slow responses (minutes to hours) require the signal to alter transcription so new proteins can be synthesized. Options A and B reverse the relationship.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following is the primary function of YAP and TAZ in the HIPPO pathway?",
+          "options": [
+            "To phosphorylate DCH S1/2 and FAT4 receptors to activate the kinase cascade",
+            "To sequester 14-3-3 proteins in the cytoplasm, preventing their nuclear entry",
+            "To act as transcriptional co-activators in the nucleus, driving expression of pro-growth genes",
+            "To hydrolyze GTP on Ras-like proteins, terminating the proliferation signal",
+            "To form ion channels that allow Ca²⁺ entry and trigger downstream kinase activation"
+          ],
+          "answer": 2,
+          "topic": "hippo-pathway",
+          "explain": "YAP and TAZ are transcriptional co-activators; when unphosphorylated they enter the nucleus and drive expression of pro-growth transcription factors, promoting cell proliferation. 14-3-3 proteins sequester phosphorylated YAP/TAZ in the cytoplasm (not the other way around), and YAP/TAZ have no GTPase or ion channel function.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "At high cell density, how does the HIPPO pathway prevent cell proliferation?",
+          "options": [
+            "Cell-cell contacts inactivate DCH S1/2 and FAT4, allowing YAP/TAZ to enter the nucleus freely",
+            "Cell-cell contacts activate DCH S1/2 and FAT4, triggering a kinase cascade that phosphorylates YAP/TAZ, which are then retained in the cytoplasm by 14-3-3 proteins",
+            "High density directly inhibits transcription factor binding to pro-growth gene promoters without requiring kinase activity",
+            "YAP/TAZ phosphorylation at high density promotes their nuclear import and activation of apoptotic genes",
+            "High cell density saturates extracellular growth factor receptors, indirectly activating HIPPO by depleting available ligand"
+          ],
+          "answer": 1,
+          "topic": "hippo-pathway",
+          "explain": "At high cell density, membrane-bound regulators DCH S1/2 and FAT4 are engaged by cell-cell contacts, activating a downstream kinase cascade that phosphorylates YAP/TAZ. Phosphorylated YAP/TAZ are recognized and sequestered in the cytoplasm by 14-3-3 proteins, preventing nuclear entry and blocking pro-growth gene expression — implementing contact inhibition.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following statements about the mouse liver HIPPO experiment (Dong et al., Cell, 2007) is NOT correct?",
+          "options": [
+            "Inducible expression of activated YAP was triggered using doxycycline",
+            "Liver/body weight ratio increased from approximately 5% to approximately 17% within two weeks",
+            "The liver overgrowth was reversible upon turning off the YAP transgene",
+            "Tumors developed within one week of transgene induction, demonstrating rapid oncogenesis",
+            "At eight weeks of continuous YAP activity, tumors developed in the liver"
+          ],
+          "answer": 3,
+          "topic": "hippo-pathway",
+          "explain": "Tumors appeared at eight weeks, not within one week — the overgrowth over the first two weeks was reversible hyperplasia, not immediate tumor formation. Statements A, B, C, and E accurately describe the experimental data from Dong et al. The one-week claim in option D is a fabricated timeline that contradicts the published findings.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "A loss-of-function mutation in HIPPO pathway kinases (that normally phosphorylate YAP/TAZ) would be predicted to cause which outcome?",
+          "options": [
+            "Constitutive YAP/TAZ inactivation and arrest of cell proliferation in all tissues",
+            "Constitutive nuclear localization of unphosphorylated YAP/TAZ and excessive cell proliferation or organ overgrowth",
+            "Increased 14-3-3-mediated cytoplasmic sequestration of YAP/TAZ, reducing pro-growth signaling",
+            "Enhanced activation of DCH S1/2 and FAT4 leading to accelerated contact inhibition",
+            "Selective apoptosis of high-density cell populations due to failure of the survival signal"
+          ],
+          "answer": 1,
+          "topic": "hippo-pathway",
+          "explain": "If HIPPO kinases cannot phosphorylate YAP/TAZ, then YAP/TAZ remain unphosphorylated regardless of cell density and constitutively enter the nucleus to drive pro-growth gene expression — mimicking the low-density state even in crowded tissue. This leads to uncontrolled proliferation and organ overgrowth, consistent with the fruit fly wing disc data showing massive overgrowth when HIPPO signaling is disrupted.",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Lecture 18: Mechanisms of Cellular Communication-II",
+      "questions": [
+        {
+          "q": "Which structural feature correctly describes G-protein-coupled receptors (GPCRs)?",
+          "options": [
+            "Single-pass transmembrane protein with an intracellular kinase domain",
+            "Double-pass transmembrane protein with two membrane-spanning helices",
+            "Seven-pass transmembrane protein with seven membrane-spanning helices",
+            "Peripheral membrane protein anchored by a GPI lipid tail",
+            "Soluble nuclear receptor that binds lipid-soluble ligands in the cytoplasm"
+          ],
+          "answer": 2,
+          "topic": "gpcr-intro",
+          "explain": "GPCRs are defined by their seven-pass (heptahelical) transmembrane topology. The most common error is confusing GPCRs with RTKs, which are single-pass transmembrane proteins; single-pass is the description of enzyme-coupled receptors, not GPCRs.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Approximately what fraction of currently used drugs exert their effects through GPCRs?",
+          "options": [
+            "~5% of currently used drugs",
+            "~10% of currently used drugs",
+            "~20% of currently used drugs",
+            "~30% of currently used drugs",
+            "~50% of currently used drugs"
+          ],
+          "answer": 3,
+          "topic": "gpcr-intro",
+          "explain": "Approximately 30% of all drugs in clinical use act through GPCRs, reflecting the enormous therapeutic importance of this receptor family. The ~400 olfactory receptor figure is a different statistic about the GPCR family size, not about drug targets.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "When a ligand binds an active GPCR and GDP dissociates from the Gα subunit, what event immediately follows?",
+          "options": [
+            "Gα is phosphorylated by a receptor-associated kinase and becomes active",
+            "GTP binds Gα, causing Gα-GTP to dissociate from Gβγ",
+            "Gβγ hydrolyzes GTP to GDP and reassociates with Gα",
+            "The receptor internalizes and Gα is degraded by the proteasome",
+            "IP₃ is released from the membrane and diffuses to the ER"
+          ],
+          "answer": 1,
+          "topic": "g-protein-activation",
+          "explain": "GDP dissociation creates an empty nucleotide-binding site on Gα; GTP (which is present at high concentrations in the cytosol) rapidly fills this site, producing Gα-GTP, which then dissociates from Gβγ. GTP hydrolysis (not GTP binding) is the inactivating step that comes later.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "What molecular event terminates the activity of Gα-GTP signaling?",
+          "options": [
+            "A cytosolic phosphatase removes the phosphate from Gα",
+            "Gβγ binds back to Gα and blocks its effector-binding surface",
+            "The intrinsic GTPase activity of Gα hydrolyzes GTP to GDP",
+            "The ligand dissociates from the GPCR and allows Gα to re-associate",
+            "Ubiquitin-mediated proteasomal degradation of Gα-GTP"
+          ],
+          "answer": 2,
+          "topic": "g-protein-activation",
+          "explain": "The duration of Gα signaling is determined by the intrinsic GTPase (GTP-hydrolyzing) activity built into the Gα subunit itself. Once GTP is hydrolyzed to GDP, Gα returns to its inactive conformation and reassociates with Gβγ. Phosphatases and protein degradation are not the primary mechanism.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "After a GPCR ligand triggers G protein dissociation, which statement correctly describes the activity of the resulting subunits?",
+          "options": [
+            "Only Gα-GTP is active; Gβγ remains inactive until Gα reassociates",
+            "Only Gβγ is active; Gα-GTP is sequestered by a chaperone protein",
+            "Both Gα-GTP and free Gβγ are active and each can activate distinct effectors",
+            "Neither subunit is active until the receptor is phosphorylated by GRK",
+            "Gα-GTP and Gβγ form a new heterotrimer with a different Gα isoform"
+          ],
+          "answer": 2,
+          "topic": "g-protein-activation",
+          "explain": "Both Gα-GTP and free Gβγ are active effector-activating units after dissociation. For example, Gβγ directly opens K⁺ channels in heart pacemaker cells. Students frequently attribute all downstream activity only to Gα, missing the important role of Gβγ.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following is NOT a direct effector activated by heterotrimeric G proteins downstream of a GPCR?",
+          "options": [
+            "Adenylyl cyclase, producing cAMP from ATP",
+            "Phospholipase C, cleaving PIP₂ into IP₃ and DAG",
+            "Ion channels, such as K⁺ channels in cardiac pacemaker cells",
+            "Receptor tyrosine kinases, triggering phosphotyrosine docking",
+            "None of the above — all four are direct G-protein effectors"
+          ],
+          "answer": 3,
+          "topic": "g-protein-effectors",
+          "explain": "The three canonical G-protein effectors are adenylyl cyclase, phospholipase C, and ion channels. RTKs are a completely separate class of cell-surface receptors activated by growth factors, not by GPCR-coupled G proteins.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In heart pacemaker cells, which subunit of the G protein directly opens K⁺ channels to slow heart rate after acetylcholine binds its muscarinic GPCR?",
+          "options": [
+            "Gα-GDP, the inactive form of the alpha subunit",
+            "Gα-GTP, the active form of the alpha subunit",
+            "Gβγ, the free beta-gamma complex after G protein dissociation",
+            "The GPCR itself, which changes conformation to gate the channel",
+            "cAMP, generated by adenylyl cyclase after G protein activation"
+          ],
+          "answer": 2,
+          "topic": "g-protein-effectors",
+          "explain": "In heart pacemaker cells, the free Gβγ complex directly opens K⁺ channels, causing K⁺ efflux, hyperpolarization, and slowed heart rate. This is a key example of Gβγ-mediated effector activation, not Gα-mediated, which is a common source of confusion.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Adrenaline binds its adrenergic GPCR, activates the Gs protein, and ultimately increases glycogen breakdown in muscle. Which intracellular relay correctly describes this pathway?",
+          "options": [
+            "Gs → phospholipase C → IP₃ → Ca²⁺ → PKC → glycogen breakdown",
+            "Gs → adenylyl cyclase → cAMP → PKA → glycogen breakdown",
+            "Gs → PI3-kinase → PIP₃ → Akt → glycogen breakdown",
+            "Gs → Ras-GEF → Ras-GTP → MAPK → glycogen breakdown",
+            "Gs → guanylyl cyclase → cGMP → PKG → glycogen breakdown"
+          ],
+          "answer": 1,
+          "topic": "adenylyl-cyclase-camp-pka",
+          "explain": "The Gs/adenylyl cyclase/cAMP/PKA pathway is the canonical route through which adrenaline stimulates glycogen breakdown. The PLC/PKC and PI3K/Akt pathways are distinct and not involved in this adrenaline response.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which second messenger directly activates Protein Kinase A (PKA)?",
+          "options": [
+            "Diacylglycerol (DAG) produced by PLC",
+            "Inositol trisphosphate (IP₃) released into the cytosol",
+            "Cyclic AMP (cAMP) synthesized by adenylyl cyclase",
+            "Calcium ions released from the endoplasmic reticulum",
+            "Phosphatidylinositol trisphosphate (PIP₃) in the inner leaflet"
+          ],
+          "answer": 2,
+          "topic": "adenylyl-cyclase-camp-pka",
+          "explain": "cAMP binds to the regulatory subunits of PKA, releasing the catalytic subunits and activating them. DAG and Ca²⁺ together activate PKC, not PKA — confusing these two pathways and their respective kinases is one of the most common exam errors.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Phospholipase C (PLC) is activated by a G protein. Which pair of molecules does it generate by cleaving PIP₂?",
+          "options": [
+            "cAMP and cGMP, two cyclic nucleotide second messengers",
+            "IP₃ and diacylglycerol (DAG), two distinct second messengers",
+            "PIP₃ and PDK1, a lipid second messenger and a kinase",
+            "GDP and GTP, exchanged on the Gα subunit",
+            "Arachidonic acid and lysophospholipid, prostaglandin precursors"
+          ],
+          "answer": 1,
+          "topic": "phospholipase-c-pkc",
+          "explain": "PLC cleaves the membrane phospholipid PIP₂ into IP₃ (water-soluble, diffuses to ER) and DAG (lipid-soluble, stays in membrane). Both products are second messengers. Students often name only one — the exam expects both.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "After PLC cleaves PIP₂, IP₃ and DAG are generated. What is the primary initial source of the Ca²⁺ that is released into the cytosol?",
+          "options": [
+            "Voltage-gated Ca²⁺ channels in the plasma membrane open in response to IP₃",
+            "IP₃ opens Ca²⁺ channels on the endoplasmic reticulum membrane",
+            "DAG chelates extracellular Ca²⁺ and transports it across the plasma membrane",
+            "Mitochondria release stored Ca²⁺ in response to elevated DAG",
+            "Adenylyl cyclase-generated cAMP opens ER Ca²⁺ channels indirectly"
+          ],
+          "answer": 1,
+          "topic": "phospholipase-c-pkc",
+          "explain": "IP₃ (inositol trisphosphate) is water-soluble and diffuses to the ER membrane, where it binds and opens IP₃-gated Ca²⁺ channels, releasing Ca²⁺ from the ER lumen into the cytosol. The ER Ca²⁺ concentration (~1 mM) is far higher than resting cytosolic levels (~10⁻⁴ mM), driving rapid release.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "A sperm fertilizes an egg and a Ca²⁺ wave sweeps across the egg. Which signaling molecules are responsible for this Ca²⁺ release?",
+          "options": [
+            "cAMP activates PKA, which phosphorylates ER Ca²⁺ pumps to open them",
+            "IP₃ opens Ca²⁺ channels on the ER, releasing stored Ca²⁺ into the cytosol",
+            "PIP₃ recruits Akt, which phosphorylates and opens plasma membrane Ca²⁺ channels",
+            "Ras-GTP activates MAPK, which phosphorylates Ca²⁺ transporters",
+            "Free Gβγ directly opens voltage-gated plasma membrane Ca²⁺ channels"
+          ],
+          "answer": 1,
+          "topic": "phospholipase-c-pkc",
+          "explain": "The sperm-triggered Ca²⁺ wave in an egg is a classic example of IP₃-mediated Ca²⁺ release from ER stores. PLC generates IP₃ from PIP₂, IP₃ opens ER Ca²⁺ channels, and Ca²⁺ floods the cytosol, propagating as a wave. This is the PLC/Ca²⁺ pathway, not the cAMP/PKA or PI3K/Akt pathways.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which description correctly contrasts enzyme-coupled receptors with GPCRs?",
+          "options": [
+            "Enzyme-coupled receptors have seven transmembrane helices; GPCRs have one",
+            "Enzyme-coupled receptors are single-pass transmembrane proteins; GPCRs have seven passes",
+            "Enzyme-coupled receptors couple exclusively to Gβγ; GPCRs couple to Gα only",
+            "Enzyme-coupled receptors act exclusively in the nucleus; GPCRs act at the plasma membrane",
+            "Enzyme-coupled receptors use cAMP as a second messenger; GPCRs use IP₃ only"
+          ],
+          "answer": 1,
+          "topic": "enzyme-coupled-receptors-intro",
+          "explain": "Enzyme-coupled receptors (including RTKs) are single-pass transmembrane proteins, whereas GPCRs are seven-pass. Mixing up these transmembrane topologies is one of the most frequently tested exam traps in cell signaling.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Enzyme-coupled receptors primarily respond to which class of extracellular ligands, and what downstream outcome do they typically regulate?",
+          "options": [
+            "Neurotransmitters that regulate ion channel gating and membrane potential",
+            "Steroid hormones that bind intracellular receptors and directly activate gene transcription",
+            "Growth factors that regulate cell growth, proliferation, differentiation, and survival via gene expression changes",
+            "Second messengers such as cAMP that amplify signals within the same cell",
+            "Odorant molecules that activate olfactory neurons via GPCR cascades"
+          ],
+          "answer": 2,
+          "topic": "enzyme-coupled-receptors-intro",
+          "explain": "Enzyme-coupled receptors respond primarily to growth factors and their activation typically leads to changes in gene expression that regulate proliferation, differentiation, growth, and survival. They are distinct from GPCRs (which handle neurotransmitters and hormones) and steroid receptors (which are intracellular).",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which three subtypes correctly represent the major classes of enzyme-coupled receptors?",
+          "options": [
+            "Ion channel receptors, GPCR-coupled receptors, and nuclear receptors",
+            "cAMP-linked receptors, cGMP-linked receptors, and IP₃-linked receptors",
+            "Tyrosine kinase receptors, serine/threonine kinase receptors, and guanylyl cyclase-linked receptors",
+            "Tyrosine kinase receptors, lipid kinase receptors, and phosphatase-linked receptors",
+            "MAPK-linked receptors, PI3K-linked receptors, and PKC-linked receptors"
+          ],
+          "answer": 2,
+          "topic": "enzyme-coupled-subtypes",
+          "explain": "The three main subtypes of enzyme-coupled receptors are tyrosine kinase receptors (RTKs), serine/threonine kinase receptors (e.g., TGF-β receptors), and guanylyl cyclase-linked receptors. Knowing all three is important — listing only two is a common exam shortfall.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "What is the correct sequence of events when an RTK is activated by a dimeric growth factor ligand?",
+          "options": [
+            "Receptor dimerizes → ligand binds → transautophosphorylation → docking site formation",
+            "Ligand binds → receptor dimerizes → transautophosphorylation of tyrosines → phosphotyrosine docking sites assembled",
+            "Ligand binds → cAMP rises → PKA is activated → tyrosines are phosphorylated",
+            "Receptor dimerizes spontaneously → ligand stabilizes the dimer → GDP dissociates from Gα",
+            "Ligand binds → PI3-kinase phosphorylates the receptor tail → Akt docks directly on RTK"
+          ],
+          "answer": 1,
+          "topic": "rtk-activation-complex",
+          "explain": "Ligand binding is the triggering event that causes RTK dimerization; the receptors do not pre-dimerize. Dimerization activates the intracellular kinase domains, which then transautophosphorylate tyrosine residues on each other's cytoplasmic tails, creating docking sites for downstream signaling proteins.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Each phosphotyrosine on an activated RTK tail serves as a docking site. Which statement about these docking sites is correct?",
+          "options": [
+            "All phosphotyrosines recruit the same adaptor protein, ensuring signal uniformity",
+            "Each phosphotyrosine recruits a different specific signaling protein, enabling multiple parallel pathways",
+            "Phosphotyrosines are recognized by SH2-domain proteins only if GDP is present on Ras",
+            "Docking sites are formed before dimerization to prime the receptor for activation",
+            "Phosphotyrosines recruit only serine kinases that then phosphorylate cytoskeletal proteins"
+          ],
+          "answer": 1,
+          "topic": "rtk-activation-complex",
+          "explain": "A key feature of RTK signaling is pathway multiplexing: each phosphotyrosine sequence is recognized by a different intracellular signaling protein, allowing one activated RTK to simultaneously activate multiple distinct downstream cascades (e.g., both the Ras/MAPK and PI3K/Akt pathways).",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following is NOT a correct statement about RTK activation?",
+          "options": [
+            "Ligand binding induces dimerization of two RTK monomers",
+            "Dimerization activates the intracellular kinase domain of each receptor",
+            "The kinase domain phosphorylates tyrosine residues on the adjacent receptor tail",
+            "RTK monomers spontaneously dimerize in the absence of ligand to pre-activate the receptor",
+            "Multiple phosphotyrosines on the activated RTK create simultaneous parallel signaling"
+          ],
+          "answer": 3,
+          "topic": "rtk-activation-complex",
+          "explain": "RTKs do NOT spontaneously dimerize in the absence of ligand; ligand binding is the event that induces dimerization. Constitutive (ligand-independent) dimerization would lead to uncontrolled, cancer-driving signaling — which is why some EGFR mutations that cause constitutive activity are oncogenic.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "A researcher mutates tyrosine Y3 of an RTK to alanine. They observe that signaling protein X no longer co-immunoprecipitates with the activated receptor. What conclusion is correct?",
+          "options": [
+            "Phospho-Y3 is the specific docking site that recruits signaling protein X",
+            "Y3 is required for GDP–GTP exchange on the Gα subunit of the associated G protein",
+            "Y3 phosphorylation is needed to activate adenylyl cyclase downstream of the RTK",
+            "Alanine at position 3 causes receptor misfolding and prevents all downstream signaling",
+            "Phospho-Y3 recruits Gβγ to the RTK cytoplasmic tail to amplify signal"
+          ],
+          "answer": 0,
+          "topic": "rtk-mutagenesis",
+          "explain": "Mutating a tyrosine to alanine prevents phosphorylation at that site. If a specific signaling protein no longer associates with the receptor after this mutation, it means phospho-Y3 was the docking site for that protein. This tyrosine-to-alanine mutagenesis strategy is the standard experimental method for mapping RTK docking sites.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "A researcher expresses a constitutively active (GTP-locked) form of Ras in cells that lack protein Y. These cells signal normally through the MAPK pathway. What does this result indicate about protein Y?",
+          "options": [
+            "Protein Y acts downstream of Ras in the MAPK cascade",
+            "Protein Y acts upstream of Ras, because bypassing Ras rescues signaling without Y",
+            "Protein Y is the same as Ras-GEF (SOS) and is required for RTK signaling only",
+            "Protein Y acts in a completely separate pathway unrelated to Ras or MAPK",
+            "Protein Y is a tumor suppressor that inhibits Ras-GTP loading"
+          ],
+          "answer": 1,
+          "topic": "rtk-mutagenesis",
+          "explain": "If constitutively active Ras rescues MAPK signaling in cells lacking protein Y, then Y must act upstream of Ras — because bypassing the Ras-activation step is sufficient to restore the pathway. If Y were downstream of Ras, constitutively active Ras would not rescue the defect.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "What is the role of Grb2 in the RTK → Ras signaling cascade?",
+          "options": [
+            "Grb2 acts as a Ras-GEF and directly promotes GDP-to-GTP exchange on Ras",
+            "Grb2 acts as an adaptor protein: it docks on a phosphotyrosine of the RTK and recruits SOS (Ras-GEF)",
+            "Grb2 directly activates adenylyl cyclase to produce cAMP downstream of RTK",
+            "Grb2 is a GTPase-activating protein (GAP) that turns off Ras after signal transmission",
+            "Grb2 phosphorylates Raf to initiate the MAP kinase cascade"
+          ],
+          "answer": 1,
+          "topic": "rtk-activates-ras",
+          "explain": "Grb2 is an adaptor protein that lacks catalytic activity. It docks on an RTK phosphotyrosine via its SH2 domain and simultaneously recruits SOS (the Ras-GEF) via its SH3 domain. SOS is the molecule that actually promotes nucleotide exchange on Ras — Grb2 just bridges RTK to SOS.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which correctly describes the function of a Ras-GEF (guanine nucleotide exchange factor) such as SOS?",
+          "options": [
+            "It phosphorylates Ras on serine residues to activate it",
+            "It hydrolyzes GTP on Ras to inactivate it and terminate signaling",
+            "It promotes dissociation of GDP from Ras and loading of GTP, thereby activating Ras",
+            "It anchors Ras to the plasma membrane by adding a lipid modification",
+            "It ubiquitinates Ras to target it for proteasomal degradation after signaling"
+          ],
+          "answer": 2,
+          "topic": "rtk-activates-ras",
+          "explain": "GEF stands for guanine nucleotide exchange factor — it catalyzes the exchange of GDP for GTP on Ras, activating it. This is not phosphorylation (a common wrong answer). GTP hydrolysis is the inactivating step, carried out by Ras's own intrinsic GTPase activity (analogous to Gα).",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Approximately what percentage of human cancers contain activating mutations in Ras?",
+          "options": [
+            "~5% of human cancers",
+            "~10% of human cancers",
+            "~20% of human cancers",
+            "~30% of human cancers",
+            "~50% of human cancers"
+          ],
+          "answer": 3,
+          "topic": "rtk-activates-ras",
+          "explain": "Approximately 30% of human cancers harbor activating mutations in Ras that lock it in a constitutively GTP-bound state, continuously driving proliferation without upstream signals. This same 30% figure also applies to drugs acting through GPCRs, but the Ras cancer statistic is a distinct exam-relevant fact.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "In the RTK → MAP kinase cascade, what is the correct order of signal transducers downstream of active Ras?",
+          "options": [
+            "Ras → MEK → Raf → MAPK → nucleus",
+            "Ras → Raf → MEK → MAPK → nucleus",
+            "Ras → MAPK → MEK → Raf → nucleus",
+            "Ras → PI3K → PDK1 → Akt → nucleus",
+            "Ras → adenylyl cyclase → cAMP → PKA → nucleus"
+          ],
+          "answer": 1,
+          "topic": "rtk-activates-ras",
+          "explain": "The MAP kinase cascade downstream of Ras proceeds: Ras → Raf (a kinase) → MEK (a kinase) → MAPK → nucleus, where it changes gene expression. The PI3K/Akt branch is a separate RTK downstream pathway and should not be conflated with the Ras/MAPK cascade.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "What molecule does PI3-kinase directly phosphorylate in the RTK → PI3K → Akt pathway?",
+          "options": [
+            "The Akt protein, activating it directly by phosphorylating its activation loop",
+            "PDK1, which then recruits Akt to the plasma membrane",
+            "An inositol phospholipid (PIP₂) in the inner membrane leaflet, generating PIP₃",
+            "The cytoplasmic tail of the RTK, creating additional docking sites",
+            "Ras, converting it from its GDP-bound to GTP-bound active state"
+          ],
+          "answer": 2,
+          "topic": "pi3k-akt-pathway",
+          "explain": "PI3-kinase is a lipid kinase — it phosphorylates the 3-position of the inositol ring on PIP₂ to generate PIP₃. PIP₃ is a lipid second messenger that serves as a membrane docking site for PDK1 and Akt. PI3-kinase does not phosphorylate proteins directly.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following is NOT correct regarding the PI3K/Akt pathway?",
+          "options": [
+            "PI3-kinase generates PIP₃ by phosphorylating a membrane lipid",
+            "PIP₃ recruits both PDK1 and Akt to the inner plasma membrane",
+            "PDK1 phosphorylates and activates Akt",
+            "PTEN opposes PI3-kinase by dephosphorylating PIP₃ back to PIP₂",
+            "Akt directly phosphorylates Ras-GEF to amplify the parallel Ras/MAPK signal"
+          ],
+          "answer": 4,
+          "topic": "pi3k-akt-pathway",
+          "explain": "Akt does not phosphorylate Ras-GEF. The PI3K/Akt and Ras/MAPK pathways are parallel branches activated by different phosphotyrosine docking sites on the RTK; Akt promotes cell survival and growth by phosphorylating its own distinct set of targets, not by feeding into the Ras pathway.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "EGFR is activated by EGF binding. Which two major downstream branches are simultaneously activated by the single activated EGFR dimer?",
+          "options": [
+            "The adenylyl cyclase/cAMP/PKA branch and the PLC/IP₃/Ca²⁺ branch",
+            "The Ras/MAPK branch and the PI3K/Akt branch",
+            "The guanylyl cyclase/cGMP branch and the serine/threonine kinase branch",
+            "The Wnt/β-catenin branch and the Notch/NICD branch",
+            "The JAK/STAT branch and the Smad/TGF-β branch"
+          ],
+          "answer": 1,
+          "topic": "egfr-pathway",
+          "explain": "EGFR simultaneously activates both the Ras/MAPK pathway (via Grb2–SOS docking on one phosphotyrosine) and the PI3K/Akt pathway (via PI3K docking on a different phosphotyrosine). This multiplexing from a single receptor is a hallmark of RTK signaling, not a feature of GPCR signaling.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "A patient's tumor cells express EGFRvIII, a mutant EGFR lacking the extracellular domain. Which statement about EGFRvIII is correct?",
+          "options": [
+            "EGFRvIII requires higher-than-normal EGF concentrations to be activated",
+            "EGFRvIII cannot dimerize and therefore has reduced signaling activity",
+            "EGFRvIII is constitutively active because it lacks the extracellular ligand-binding domain",
+            "EGFRvIII activates only the PI3K/Akt pathway because the Ras-docking site is deleted",
+            "EGFRvIII is sensitive to anti-EGFR monoclonal antibodies that target the extracellular domain"
+          ],
+          "answer": 2,
+          "topic": "egfr-cancer",
+          "explain": "EGFRvIII is a deletion mutant that lacks the extracellular ligand-binding domain. Without this domain, the receptor can no longer be regulated by ligand, and it signals constitutively — driving uncontrolled proliferation. Because EGFRvIII lacks an extracellular domain, anti-EGFR monoclonal antibodies (which target the extracellular domain) would not bind or inhibit it.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "How do EGFR tyrosine kinase inhibitors (TKIs) mechanistically differ from anti-EGFR monoclonal antibodies?",
+          "options": [
+            "TKIs block the extracellular ligand-binding domain; mAbs block the intracellular kinase domain",
+            "TKIs block the intracellular ATP-binding site of the kinase domain; mAbs block the extracellular domain",
+            "TKIs degrade EGFR mRNA; mAbs bind EGFR protein and trigger phagocytosis",
+            "TKIs activate PTEN to dephosphorylate PIP₃; mAbs block Grb2 from docking on phosphotyrosines",
+            "TKIs and mAbs both block the extracellular domain but through different binding epitopes"
+          ],
+          "answer": 1,
+          "topic": "egfr-therapy-strategies",
+          "explain": "TKIs are small molecules that compete with ATP for the intracellular kinase domain, preventing autophosphorylation. Anti-EGFR mAbs are large proteins that bind the extracellular domain, blocking EGF binding and/or receptor dimerization. They target different sites on the same receptor molecule.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which acquired resistance mutation arises in EGFR after treatment with first- or second-generation TKIs, and which generation of TKIs was designed to overcome it?",
+          "options": [
+            "C797S mutation arises; 2nd generation TKIs (Afatinib) overcome it",
+            "T790M mutation arises; 3rd generation TKIs (e.g., Osimertinib/AZD9291) overcome it",
+            "T790M mutation arises; 4th generation TKIs (EAI045) overcome it",
+            "EGFRvIII deletion arises; 3rd generation TKIs overcome it",
+            "C797S mutation arises; 1st generation TKIs overcome it after dose escalation"
+          ],
+          "answer": 1,
+          "topic": "egfr-tki-generations",
+          "explain": "First- and second-generation EGFR TKIs (e.g., Gefitinib, Erlotinib, Afatinib) are effective until tumors acquire the T790M resistance mutation. Third-generation TKIs such as Osimertinib (AZD9291) were specifically designed to target T790M-mutant EGFR. Resistance to 3rd-generation TKIs then emerges via the C797S mutation, which is the target of 4th-generation TKIs like EAI045.",
+          "difficulty": "hard"
+        }
+      ]
     }
   ],
   "topicSectionMap": {
@@ -2640,6 +3492,42 @@
       "excitation-contraction-coupling": 5,
       "troponin-tropomyosin-regulation": 5,
       "cytoskeleton-overview": 5
+    },
+    "17": {
+      "cell-communication-importance": 0,
+      "communication-modes-contact": 0,
+      "communication-modes-paracrine": 0,
+      "communication-modes-endocrine": 0,
+      "communication-modes-synaptic": 0,
+      "three-phases-transduction": 1,
+      "signal-speed": 1,
+      "signal-response-diversity": 1,
+      "signal-combinations": 1,
+      "reception-receptor-types": 2,
+      "intracellular-receptors-cortisol": 2,
+      "cell-surface-receptor-classes": 3,
+      "molecular-switches": 4,
+      "molecular-relay-chain": 4,
+      "intracellular-pathway-functions": 4,
+      "feedback-regulation": 4,
+      "hippo-pathway": 5
+    },
+    "18": {
+      "gpcr-intro": 0,
+      "g-protein-activation": 0,
+      "g-protein-effectors": 1,
+      "adenylyl-cyclase-camp-pka": 1,
+      "phospholipase-c-pkc": 1,
+      "enzyme-coupled-receptors-intro": 2,
+      "enzyme-coupled-subtypes": 2,
+      "rtk-activation-complex": 3,
+      "rtk-mutagenesis": 3,
+      "rtk-activates-ras": 4,
+      "pi3k-akt-pathway": 4,
+      "egfr-pathway": 5,
+      "egfr-cancer": 5,
+      "egfr-therapy-strategies": 5,
+      "egfr-tki-generations": 5
     }
   }
 }

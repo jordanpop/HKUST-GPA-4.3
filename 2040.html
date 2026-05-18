@@ -2128,6 +2128,599 @@ tr.weak-highlight{box-shadow:none}
   </div>
 </div>
 
+<div id="notes-17" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-17" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(17)">Clear Highlights</button>
+  <h1>Lecture 17: Mechanisms of Cellular Communication-I</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    Cells constantly exchange information to coordinate survival, growth, differentiation, and death. This lecture establishes the conceptual framework of signal transduction (訊號傳導): how an extracellular chemical signal is received by a target cell, relayed and amplified through intracellular signaling cascades, and converted into a specific cellular response. Four modes of intercellular communication are distinguished by distance, and three classes of cell-surface receptors are introduced alongside intracellular receptors used by lipid-soluble hormones. The HIPPO pathway provides a concrete example of how signaling controls organ size in vivo.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Why Cell Communication Matters and Four Modes of Signaling</h2>
+    <p data-topic="cell-communication-importance">
+      <ul>
+        <li>Cell communication (細胞通訊) is required for: sensing and responding to the environment (環境), sending orders to other cells, wound healing (傷口癒合), and developmental patterning (發育模式形成).</li>
+        <li>Even unicellular organisms use it: yeast (酵母菌) mating-type cells a and α respond to each other's mating factor (交配因子), elongating toward the partner before fusing.</li>
+        <li>Signal transduction (訊號傳導) — extracellular signals are converted to intracellular responses; an extracellular signal molecule A binds a receptor on the target cell, triggering intracellular signaling molecule B, which produces a response.</li>
+      </ul>
+    </p>
+
+    <p data-topic="communication-modes-contact">
+      <strong>Contact-dependent signaling (接觸依賴性訊號傳遞)</strong>
+      <ul>
+        <li>Signaling cell displays a membrane-bound signal molecule (膜結合訊號分子) that binds a receptor on the directly adjacent target cell; no secreted ligand involved.</li>
+        <li>Example: Delta–Notch signaling (側向抑制 lateral inhibition) — one epithelial cell expressing the inhibitory signal protein Delta activates Notch on all neighbours, suppressing them from adopting the same fate; result: cell specialization from a field of equivalent cells.</li>
+      </ul>
+    </p>
+
+    <p data-topic="communication-modes-paracrine">
+      <strong>Paracrine signaling (旁分泌訊號傳遞) — short distance</strong>
+      <ul>
+        <li>Signal molecules diffuse locally, remaining in the neighbourhood of the secreting cell; these signals are called local mediators (局部介質).</li>
+        <li>Functions: regulate inflammation (發炎) at an infection site; control cell proliferation (細胞增殖) in a healing wound.</li>
+        <li>Autocrine signaling (自分泌) is a variant where the cell responds to its own secreted signal.</li>
+      </ul>
+    </p>
+
+    <p data-topic="communication-modes-endocrine">
+      <strong>Endocrine signaling (內分泌訊號傳遞) — long distance</strong>
+      <ul>
+        <li>Endocrine cells secrete hormones (激素) into the bloodstream (血液循環); signal reaches distant target cells that carry the matching receptor.</li>
+        <li>Classic example: the pancreas (胰臟) secretes insulin (胰島素) into the blood; insulin binds its receptor on cells throughout the body, opening glucose channels (葡萄糖通道) and stimulating glucose uptake (葡萄糖攝取).</li>
+        <li>Slow to reach targets but affects many cell types simultaneously.</li>
+      </ul>
+    </p>
+
+    <p data-topic="communication-modes-synaptic">
+      <strong>Synaptic signaling (突觸訊號傳遞) — long distance, high specificity</strong>
+      <ul>
+        <li>A neuron (神經元) transmits an electrical signal along its axon (軸突) to the nerve terminal (神經末梢), where it triggers release of neurotransmitters (神經傳遞物質) into the synapse (突觸).</li>
+        <li>Neurotransmitters diffuse across the narrow synaptic cleft and bind receptors on the target cell; delivery is fast and spatially precise — "private lines."</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="communication-modes-paracrine"><b>Exam trap:</b> Paracrine is NOT the same as endocrine. Paracrine signals stay local (no bloodstream entry); endocrine hormones travel via the bloodstream to distant targets. Do not write "paracrine = hormone."</div>
+    <div class="exam-trap-inline" data-topic="communication-modes-contact"><b>Exam trap:</b> Delta–Notch is contact-dependent, not paracrine. Delta is membrane-bound and never secreted — physical cell-to-cell contact is required.</div>
+
+    <svg viewBox="0 0 520 100" style="width:100%;max-width:520px;display:block;margin:12px auto;font-family:sans-serif;font-size:10px">
+      <rect x="5" y="20" width="40" height="30" rx="5" fill="#a8d8ea" stroke="#555" stroke-width="1"/>
+      <rect x="55" y="20" width="40" height="30" rx="5" fill="#ffd6a5" stroke="#555" stroke-width="1"/>
+      <line x1="45" y1="35" x2="55" y2="35" stroke="#333" stroke-width="2"/>
+      <text x="25" y="65" text-anchor="middle" fill="#333">Contact</text>
+      <rect x="115" y="20" width="40" height="30" rx="5" fill="#a8d8ea" stroke="#555" stroke-width="1"/>
+      <rect x="175" y="20" width="40" height="30" rx="5" fill="#ffd6a5" stroke="#555" stroke-width="1"/>
+      <circle cx="148" cy="35" r="4" fill="#e63946"/>
+      <circle cx="158" cy="35" r="4" fill="#e63946"/>
+      <text x="155" y="65" text-anchor="middle" fill="#333">Paracrine</text>
+      <rect x="235" y="5" width="40" height="30" rx="5" fill="#a8d8ea" stroke="#555" stroke-width="1"/>
+      <rect x="235" y="65" width="40" height="30" rx="5" fill="#ffd6a5" stroke="#555" stroke-width="1"/>
+      <rect x="240" y="40" width="30" height="20" rx="2" fill="#ffb347" opacity="0.6"/>
+      <text x="255" y="52" text-anchor="middle" fill="#333" font-size="8">blood</text>
+      <text x="255" y="95" text-anchor="middle" fill="#333">Endocrine</text>
+      <rect x="355" y="20" width="40" height="30" rx="5" fill="#a8d8ea" stroke="#555" stroke-width="1"/>
+      <line x1="395" y1="35" x2="450" y2="35" stroke="#777" stroke-width="3" stroke-dasharray="4,2"/>
+      <rect x="450" y="20" width="40" height="30" rx="5" fill="#ffd6a5" stroke="#555" stroke-width="1"/>
+      <text x="420" y="65" text-anchor="middle" fill="#333">Synaptic</text>
+    </svg>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Three Phases of Signal Transduction</h2>
+    <p data-topic="three-phases-transduction">
+      <ul>
+        <li>Reception (接收) — the target cell detects the extracellular signal; a receptor protein (受體蛋白) binds the signal molecule with high specificity (特異性).</li>
+        <li>Transduction (轉導) — conversion of the extracellular signal into a form capable of producing a specific cellular response; involves a cascade of intracellular relay molecules (接力分子).</li>
+        <li>Response (反應) — the specific cellular outcome: altered metabolism (代謝), altered cell shape or movement, or altered gene expression (基因表現).</li>
+        <li>Relay molecules form a signal transduction pathway (訊號傳導路徑) that connects receptor activation to effector proteins (效應蛋白): metabolic enzymes, cytoskeletal proteins, or transcription regulators (轉錄調節因子).</li>
+        <li>Pathway functions during transduction: <b>relay</b> (接力), <b>amplify</b> (放大), <b>integrate</b> (整合), <b>distribute</b> (分配), <b>feedback control</b> (回饋控制).</li>
+      </ul>
+    </p>
+
+    <p data-topic="signal-speed">
+      <strong>Speed of response depends on mechanism:</strong>
+      <ul>
+        <li>Fast responses (&lt; sec to mins) — signal activates pre-existing proteins directly, altering their function without new gene expression; examples: muscle contraction (肌肉收縮), secretion of digestive enzymes.</li>
+        <li>Slow responses (mins to hrs) — signal travels to nucleus, alters transcription (轉錄), new proteins synthesized; examples: cell growth (細胞生長), cell differentiation (細胞分化).</li>
+      </ul>
+    </p>
+
+    <p data-topic="signal-response-diversity">
+      <strong>Same signal, different responses:</strong>
+      <ul>
+        <li>The same signal molecule (e.g., acetylcholine 乙醯膽鹼) produces different responses in different cell types, determined by which receptors and intracellular pathways are present.</li>
+        <li>Heart pacemaker cell (心臟起搏細胞): acetylcholine → decreased rate of firing (放電頻率降低).</li>
+        <li>Salivary gland cell (唾液腺細胞): acetylcholine → secretion (分泌).</li>
+        <li>Skeletal muscle cell (骨骼肌細胞): acetylcholine → contraction (收縮).</li>
+      </ul>
+    </p>
+
+    <p data-topic="signal-combinations">
+      <strong>Signal combinations determine fate:</strong>
+      <ul>
+        <li>Different combinations (組合) of extracellular signals cause different target cell responses: survive, grow and divide (生長與分裂), differentiate (分化), or undergo apoptosis (細胞凋亡).</li>
+        <li>A cell integrates inputs from multiple pathways simultaneously before committing to a response.</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="three-phases-transduction"><b>Exam trap:</b> "Transduction" is not just relaying the signal — it specifically means converting it into a form that drives a response. Students often conflate transduction with reception.</div>
+    <div class="exam-trap-inline" data-topic="signal-speed"><b>Exam trap:</b> Fast responses alter existing protein function; slow responses require new protein synthesis via altered gene expression. These are mechanistically distinct — do not describe both as "signal transduction" without specifying pathway type.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Reception: Intracellular vs. Cell-Surface Receptors</h2>
+    <p data-topic="reception-receptor-types">
+      <ul>
+        <li>Extracellular signal molecules bind either to cell-surface receptors (細胞表面受體) or to intracellular receptors (細胞內受體), depending on whether they can cross the plasma membrane (質膜).</li>
+        <li>Cell-surface receptors: used by large, charged, or hydrophilic (親水性) signal molecules that cannot cross the bilayer; binding triggers intracellular signaling molecules inside the cytosol.</li>
+        <li>Intracellular receptors: used by small, hydrophobic (疏水性) signal molecules (e.g., steroid hormones 類固醇激素) that diffuse freely through the membrane.</li>
+      </ul>
+    </p>
+
+    <p data-topic="intracellular-receptors-cortisol">
+      <strong>Cortisol (皮質醇) — intracellular receptor example:</strong>
+      <ul>
+        <li>Cortisol is a steroid hormone; it crosses the plasma membrane freely due to its hydrophobic nature.</li>
+        <li>Binds the nuclear receptor protein (核受體蛋白) in the cytosol; binding causes a conformational change (構形改變) that activates the receptor.</li>
+        <li>The activated receptor-cortisol complex translocates (移位) into the nucleus.</li>
+        <li>Complex binds the regulatory region (調控區) of target genes and activates transcription (轉錄).</li>
+        <li>Outcome: altered metabolism of proteins, carbohydrates, and lipids in most tissues — a slow, genome-level response.</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="reception-receptor-types"><b>Exam trap:</b> Intracellular receptors are inside the cell but the signal molecule itself comes from outside — students mistakenly call the receptor "extracellular." The receptor is intracellular; the ligand (配體) crosses the membrane.</div>
+    <div class="exam-trap-inline" data-topic="intracellular-receptors-cortisol"><b>Exam trap:</b> Cortisol's receptor is described as a "nuclear receptor" but it is found in the cytosol before ligand binding — it only moves to the nucleus after forming the active complex. Do not say the receptor starts in the nucleus.</div>
+
+    <svg viewBox="0 0 400 80" style="width:100%;max-width:400px;display:block;margin:12px auto;font-family:sans-serif;font-size:9px">
+      <text x="10" y="20" fill="#e63946" font-weight="bold">Cortisol</text>
+      <line x1="55" y1="18" x2="95" y2="18" stroke="#333" stroke-width="1.5"/>
+      <text x="100" y="20" fill="#333">Cross membrane</text>
+      <line x1="175" y1="18" x2="215" y2="18" stroke="#333" stroke-width="1.5"/>
+      <text x="220" y="20" fill="#555">Bind cytosol receptor</text>
+      <line x1="10" y1="35" x2="10" y2="55" stroke="#333" stroke-width="1.5"/>
+      <line x1="10" y1="55" x2="50" y2="55" stroke="#333" stroke-width="1.5"/>
+      <text x="55" y="58" fill="#555">Conformational change → nucleus entry</text>
+      <line x1="10" y1="65" x2="10" y2="75" stroke="#333" stroke-width="1"/>
+      <line x1="10" y1="75" x2="50" y2="75" stroke="#333" stroke-width="1"/>
+      <text x="55" y="78" fill="#2d6a4f">Bind DNA regulatory region → Transcription</text>
+    </svg>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Three Classes of Cell-Surface Receptors</h2>
+    <p data-topic="cell-surface-receptor-classes">
+      <table style="width:100%;border-collapse:collapse;font-size:0.93em">
+        <thead>
+          <tr style="background:#2d6a4f;color:#fff">
+            <th style="padding:6px;text-align:left">Receptor Class</th>
+            <th style="padding:6px;text-align:left">Mechanism</th>
+            <th style="padding:6px;text-align:left">Speed</th>
+            <th style="padding:6px;text-align:left">Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#f1f8f4">
+            <td style="padding:6px">Ion-channel-coupled (離子通道耦聯受體)</td>
+            <td style="padding:6px">Signal binding opens an ion channel (離子通道) in the receptor protein itself; ions flow down electrochemical gradient (電化學梯度)</td>
+            <td style="padding:6px">Very fast (ms)</td>
+            <td style="padding:6px">Neuromuscular junction acetylcholine receptor</td>
+          </tr>
+          <tr>
+            <td style="padding:6px">G-protein-coupled (G蛋白耦聯受體, GPCR)</td>
+            <td style="padding:6px">Signal activates receptor → receptor activates trimeric G protein (三聚體G蛋白); G protein exchanges GDP for GTP (鳥苷三磷酸) and releases active subunit that triggers downstream effectors</td>
+            <td style="padding:6px">Fast–moderate</td>
+            <td style="padding:6px">Adrenaline receptor, odorant receptors</td>
+          </tr>
+          <tr style="background:#f1f8f4">
+            <td style="padding:6px">Enzyme-coupled (酶耦聯受體)</td>
+            <td style="padding:6px">Signal (often a dimer 二聚體) causes receptor dimerization (二聚化), activating an intrinsic catalytic domain (催化結構域) or recruiting an associated enzyme; commonly receptor tyrosine kinases (受體酪氨酸激酶)</td>
+            <td style="padding:6px">Moderate–slow</td>
+            <td style="padding:6px">Insulin receptor, growth factor receptors</td>
+          </tr>
+        </tbody>
+      </table>
+    </p>
+
+    <p data-topic="cell-surface-receptor-classes">
+      <ul>
+        <li>Ion-channel-coupled receptors (離子通道耦聯受體): the receptor protein itself forms the channel; ligand (配體) binding causes conformational change (構形改變) that opens the pore, allowing ions (e.g., Na⁺, Ca²⁺) to enter the cytosol and immediately change membrane potential (膜電位) or trigger downstream effects.</li>
+        <li>GPCRs: 7 transmembrane-helix (跨膜螺旋) receptor; signal activates the coupled G protein, converting it from GDP-bound (inactive) to GTP-bound (active); GTP hydrolysis (水解) returns G protein to OFF state — an intrinsic molecular timer.</li>
+        <li>Enzyme-coupled receptors: two main subtypes: (a) receptor with intrinsic catalytic domain — dimerization activates the kinase domain; (b) receptor associated with a separate enzyme that becomes activated upon ligand binding.</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="cell-surface-receptor-classes"><b>Exam trap:</b> GPCRs do NOT have intrinsic kinase activity — the G protein is the switch, not a kinase. Enzyme-coupled receptors are kinases. Students frequently swap these two classes.</div>
+    <div class="exam-trap-inline" data-topic="cell-surface-receptor-classes"><b>Exam trap:</b> For enzyme-coupled receptors, the signal molecule often acts as a dimer to cross-link two receptor monomers; a monomer signal cannot activate the receptor — specificity depends on this dimerization requirement.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Intracellular Signaling: Molecular Switches, Relay, and Feedback</h2>
+    <p data-topic="molecular-switches">
+      <strong>Molecular switches (分子開關):</strong>
+      <ul>
+        <li>Two main switch mechanisms exist in intracellular signaling proteins:</li>
+        <li>Phosphorylation switch (磷酸化開關): protein kinase (蛋白激酶) transfers phosphate from ATP to the target protein (ON state); protein phosphatase (蛋白磷酸酶) removes the phosphate, returning to OFF state. Reversible and fast.</li>
+        <li>GTP-binding switch (GTP結合開關): GTP binding activates the protein (ON); intrinsic GTPase (GTP水解酶) activity hydrolyzes GTP to GDP + Pᵢ, returning to OFF. Ras is the canonical example.</li>
+      </ul>
+    </p>
+
+    <p data-topic="molecular-relay-chain">
+      <strong>Molecular relay and amplification (放大):</strong>
+      <ul>
+        <li>Cell-surface receptor activation triggers a cascade: receptor → scaffold proteins (支架蛋白) → multiple intracellular signaling molecules → small intracellular messenger molecules (小型細胞內訊息分子, second messengers) → effector proteins.</li>
+        <li>Cascade functions: primary transduction (初級轉導) at receptor; relay (接力); transduce and amplify; integrate; distribute to multiple effectors; feedback regulation (回饋調節).</li>
+        <li>Each amplification step can activate many downstream molecules — one receptor activation can trigger thousands of intracellular events (domino effect 骨牌效應).</li>
+        <li>Effector proteins: metabolic enzyme (代謝酶) → altered metabolism; cytoskeletal protein (細胞骨架蛋白) → altered cell shape/movement; transcription regulator → altered gene expression.</li>
+      </ul>
+    </p>
+
+    <p data-topic="intracellular-pathway-functions">
+      <strong>Pathway functions in detail:</strong>
+      <ul>
+        <li>Relay — passes signal from one protein to the next in sequence.</li>
+        <li>Amplify (放大) — each activated molecule activates multiple next-step molecules; signal strength grows exponentially.</li>
+        <li>Integrate (整合) — convergent inputs from multiple pathways merge at a single protein; the cell senses combinations of signals, not just individual ones.</li>
+        <li>Distribute (分配) — a single receptor can branch to activate multiple downstream pathways simultaneously.</li>
+        <li>Feedback control (回饋控制): product Y of pathway inhibits upstream component X (negative feedback 負回饋); stabilizes output magnitude; prevents runaway signaling.</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="molecular-switches"><b>Exam trap:</b> Protein kinase adds phosphate (ON); protein phosphatase removes it (OFF). Students sometimes reverse which enzyme does what. Also: GTP-binding proteins turn ON with GTP binding, not with phosphorylation — do not confuse the two switch types.</div>
+    <div class="exam-trap-inline" data-topic="feedback-regulation"><b>Exam trap:</b> Feedback regulation is part of transduction, not a separate phase. It occurs within the signaling cascade, not after the response is complete.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="5">
+    <h2>6. The HIPPO Pathway: A Case Study in Enzyme-Coupled Signaling</h2>
+    <p data-topic="hippo-pathway">
+      <ul>
+        <li>The HIPPO pathway (希波訊號路徑) is a conserved signaling cascade that controls organ size by regulating cell proliferation (增殖) and apoptosis.</li>
+        <li>Key transcriptional co-activators: YAP (Yes-associated protein) and TAZ — when active in the nucleus, they drive expression of pro-growth transcription factors (促生長轉錄因子), promoting cell growth and proliferation.</li>
+        <li>Low cell density (低細胞密度): membrane-bound receptors DCH S1/2 and FAT4 are not fully engaged; YAP/TAZ remain unphosphorylated and enter the nucleus → transcription of pro-growth genes → cell proliferation.</li>
+        <li>High cell density (高細胞密度): cell-cell contacts activate membrane-bound regulators (DCH S1/2, FAT4) → downstream kinase cascade phosphorylates (磷酸化) YAP/TAZ → phosphorylated YAP/TAZ are retained in the cytoplasm by 14-3-3 proteins → cannot enter the nucleus → pro-growth gene expression blocked → proliferation halted.</li>
+        <li>This mechanism implements contact inhibition (接觸抑制): when a tissue reaches sufficient density, cells stop dividing.</li>
+      </ul>
+    </p>
+
+    <p data-topic="hippo-pathway">
+      <strong>In vivo evidence:</strong>
+      <ul>
+        <li>Fruit fly (果蠅) wing imaginal discs: HIPPO pathway mutation causing high pathway activation leads to massive tissue overgrowth — wing disc grows many times larger than wild-type (Huang et al., 2005, Cell).</li>
+        <li>Mouse liver experiment (Jixin Dong et al., Cell, 2007): Inducible expression of an activated YAP transgene (using doxycycline 強力黴素) in mouse liver increased liver/body weight ratio from ~5% to ~17% within 2 weeks. Growth was reversible upon turning off the transgene. At 8 weeks, tumors (腫瘤) developed — linking HIPPO pathway dysregulation to cancer.</li>
+        <li>Reversibility of organ size demonstrates that proliferation vs. arrest is a dynamic, signal-dependent decision, not a permanent state.</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="hippo-pathway"><b>Exam trap:</b> In HIPPO signaling, HIGH cell density ACTIVATES the kinase cascade that INACTIVATES YAP/TAZ. Students often reverse this: they say "high density activates YAP" — the opposite is true. High density = HIPPO on = YAP/TAZ off = no proliferation.</div>
+    <div class="exam-trap-inline" data-topic="hippo-pathway"><b>Exam trap:</b> The mouse liver data shows the effect is reversible — removing the YAP signal stops liver overgrowth. This is used to argue that HIPPO signaling is a genuine growth-control switch, not irreversible transformation. Do not say the enlarged liver is permanent unless the 8-week tumor stage is discussed.</div>
+
+    <svg viewBox="0 0 460 90" style="width:100%;max-width:460px;display:block;margin:12px auto;font-family:sans-serif;font-size:9px">
+      <rect x="5" y="5" width="90" height="22" rx="4" fill="#d4edda" stroke="#2d6a4f" stroke-width="1"/>
+      <text x="50" y="20" text-anchor="middle" fill="#155724">Low cell density</text>
+      <line x1="50" y1="27" x2="50" y2="45" stroke="#555" stroke-width="1.5"/>
+      <text x="50" y="57" text-anchor="middle" fill="#333">YAP/TAZ unphosphorylated</text>
+      <line x1="50" y1="60" x2="50" y2="75" stroke="#555" stroke-width="1.5"/>
+      <text x="50" y="85" text-anchor="middle" fill="#2d6a4f" font-weight="bold">Nucleus: Proliferation ON</text>
+      <rect x="250" y="5" width="90" height="22" rx="4" fill="#f8d7da" stroke="#842029" stroke-width="1"/>
+      <text x="295" y="20" text-anchor="middle" fill="#842029">High cell density</text>
+      <line x1="295" y1="27" x2="295" y2="45" stroke="#555" stroke-width="1.5"/>
+      <text x="295" y="57" text-anchor="middle" fill="#333">YAP/TAZ phosphorylated</text>
+      <line x1="295" y1="60" x2="295" y2="75" stroke="#555" stroke-width="1.5"/>
+      <text x="295" y="85" text-anchor="middle" fill="#842029" font-weight="bold">Cytoplasm (14-3-3): Arrest</text>
+    </svg>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Paracrine signals stay local and never enter the bloodstream — endocrine hormones do. Do not use them interchangeably.</li>
+      <li>Delta (in Delta-Notch) is membrane-bound; it is not secreted. Contact-dependent signaling requires physical cell-cell contact.</li>
+      <li>"Transduction" means converting the signal — not merely passing it on. Passing it on is relay, which is one function within transduction.</li>
+      <li>Fast responses (&lt; sec to mins) alter existing protein function; slow responses (mins to hrs) require altered gene expression and new protein synthesis.</li>
+      <li>Intracellular receptors are inside the cell; the hydrophobic signal molecule itself crosses the membrane. Do not call the receptor extracellular.</li>
+      <li>Cortisol's nuclear receptor starts in the cytosol, not the nucleus — it only moves to the nucleus after binding cortisol.</li>
+      <li>GPCRs do NOT have kinase activity. Enzyme-coupled receptors have kinase (or associated enzyme) activity. These are two distinct classes.</li>
+      <li>Protein kinase = ON (adds phosphate); protein phosphatase = OFF (removes phosphate). GTP-binding proteins = ON with GTP, OFF after hydrolysis.</li>
+      <li>Feedback regulation is part of transduction — not a fourth phase of signal transduction.</li>
+      <li>High cell density ACTIVATES the HIPPO kinase cascade → INACTIVATES YAP/TAZ → NO proliferation. High density does NOT activate YAP.</li>
+      <li>Mouse liver HIPPO data shows the size change is reversible — enlarged liver is not permanent without the continuing YAP signal.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Four signaling modes: contact-dependent (Delta-Notch), paracrine (local mediators), endocrine (hormones via blood), synaptic (neurotransmitters via axon).</li>
+      <li>Three phases: Reception → Transduction (relay, amplify, integrate, distribute, feedback) → Response.</li>
+      <li>Two receptor locations: cell-surface (hydrophilic signals) vs. intracellular (hydrophobic signals, e.g., steroids).</li>
+      <li>Three cell-surface receptor classes: ion-channel-coupled, G-protein-coupled (GPCR), enzyme-coupled.</li>
+      <li>GPCR mechanism: GDP (OFF) → GTP binding (ON) → GTP hydrolysis → GDP (OFF).</li>
+      <li>Two molecular switch types: phosphorylation (kinase ON / phosphatase OFF) and GTP-binding (GTP ON / GDP OFF).</li>
+      <li>Cortisol: hydrophobic → crosses membrane → binds cytosol nuclear receptor → receptor-cortisol complex enters nucleus → activates transcription.</li>
+      <li>Acetylcholine example: same signal, different responses in pacemaker (decreased firing), salivary gland (secretion), skeletal muscle (contraction) — determined by receptor/pathway identity in each cell.</li>
+      <li>HIPPO pathway logic: low density → YAP/TAZ nuclear → proliferation; high density → YAP/TAZ phosphorylated/cytoplasmic → arrest.</li>
+      <li>YAP/TAZ are transcriptional co-activators; 14-3-3 proteins sequester phosphorylated YAP/TAZ in the cytoplasm.</li>
+      <li>Enzyme-coupled receptors often require signal dimerization to cross-link two receptor monomers and activate the catalytic domain.</li>
+      <li>Mouse liver experiment: doxycycline-induced YAP → liver/body ratio rises from ~5% to ~17% in 2 weeks; reversible; tumors appear at 8 weeks if unchecked.</li>
+    </ol>
+  </div>
+</div>
+
+<div id="notes-18" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-18" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(18)">Clear Highlights</button>
+  <h1>Lecture 18: Mechanisms of Cellular Communication-II</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    This lecture continues the cell signaling framework by dissecting two major classes of cell-surface receptors: G-protein-coupled receptors (GPCRs) and enzyme-coupled receptors, with a focus on receptor tyrosine kinases (RTKs). Each receptor class activates a distinct set of intracellular cascades — GPCRs work through heterotrimeric G proteins to raise second messengers such as cAMP and Ca²⁺, while RTKs dimerize upon ligand binding and recruit signaling complexes via phosphotyrosine docking sites. Both pathways converge on profound changes in cell behavior, and their dysregulation underpins major diseases including cancer, making them prime therapeutic targets.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. G-Protein-Coupled Receptors (GPCRs): Structure and Activation</h2>
+    <p data-topic="gpcr-intro">
+      <ul>
+        <li>GPCR (G蛋白偶聯受體) structure — seven-pass transmembrane protein (七次跨膜蛋白); the seven helices (螺旋) span the lipid bilayer, with an extracellular ligand-binding face and a cytosolic (細胞質) G-protein-coupling face.</li>
+        <li>Family size — &gt;700 members in humans; ~400 functional olfactory (嗅覺) receptor genes; includes rhodopsin (視紫質, photoreceptor), adrenaline receptors (腎上腺素受體) that regulate heart rate and glycogen (糖原) breakdown in muscle.</li>
+        <li>Clinical relevance — ~30% of all drugs in use today act through GPCRs; Nobel Prize 2012 awarded to Prof. Robert J. Lefkowitz for GPCR work.</li>
+        <li>Signal flow analogy — described as a "domino effect" (骨牌效應): one ligand binding event triggers a molecular relay (A → B → C → D) culminating in cell response.</li>
+      </ul>
+    </p>
+    <p data-topic="g-protein-activation">
+      <ul>
+        <li>Heterotrimeric G protein (異三聚體G蛋白) — three subunits: α, β, γ; β and γ are tethered to the plasma membrane by short lipid tails (脂質尾).</li>
+        <li>Activation switch — α subunit carries GDP (inactive, 非活化) or GTP (active, 活化); in the resting state the trimer is GDP-bound and associated with the receptor's cytosolic face.</li>
+        <li>Activation sequence: ligand binds GPCR → receptor changes conformation (構型改變) → GDP dissociates (解離) from Gα → GTP binds Gα → Gα-GTP dissociates from Gβγ → both Gα-GTP and free Gβγ become active effector-activating units.</li>
+        <li>Diversity — &gt;20 different types of G proteins in mammals; each couples to distinct effectors (效應蛋白).</li>
+        <li>Signal duration — determined by the intrinsic GTPase (鳥苷三磷酸酶) activity of Gα, which hydrolyzes GTP → GDP, returning Gα to the inactive state and allowing reassociation with Gβγ. (Exam-relevant: answer to practice MCQ = option d.)</li>
+      </ul>
+    </p>
+
+    <svg viewBox="0 0 480 130" style="width:100%;max-width:480px;display:block;margin:12px auto;font-family:sans-serif;font-size:11px">
+      <rect x="0" y="0" width="480" height="130" fill="#f0f8ff" rx="8"/>
+      <rect x="10" y="30" width="80" height="70" fill="#b2dfdb" rx="6" stroke="#00897b" stroke-width="1.5"/>
+      <text x="50" y="52" text-anchor="middle" font-weight="bold">GPCR</text>
+      <text x="50" y="66" text-anchor="middle">(inactive)</text>
+      <rect x="20" y="78" width="60" height="18" fill="#ffe082" rx="4"/>
+      <text x="50" y="91" text-anchor="middle">α-GDP βγ</text>
+      <text x="98" y="68" fill="#555">ligand →</text>
+      <rect x="145" y="30" width="80" height="70" fill="#80cbc4" rx="6" stroke="#00897b" stroke-width="1.5"/>
+      <text x="185" y="52" text-anchor="middle" font-weight="bold">GPCR*</text>
+      <text x="185" y="66" text-anchor="middle">(active)</text>
+      <text x="185" y="88" text-anchor="middle" fill="#c62828">GDP out</text>
+      <text x="185" y="100" text-anchor="middle" fill="#1565c0">GTP in</text>
+      <text x="233" y="68" fill="#555">→</text>
+      <rect x="255" y="20" width="70" height="40" fill="#ef9a9a" rx="5"/>
+      <text x="290" y="38" text-anchor="middle" font-weight="bold">Gα-GTP</text>
+      <text x="290" y="52" text-anchor="middle">(active)</text>
+      <rect x="255" y="72" width="70" height="40" fill="#ce93d8" rx="5"/>
+      <text x="290" y="89" text-anchor="middle" font-weight="bold">Gβγ</text>
+      <text x="290" y="103" text-anchor="middle">(active)</text>
+      <text x="332" y="68" fill="#555">→</text>
+      <rect x="350" y="30" width="120" height="70" fill="#fff9c4" rx="6" stroke="#f9a825" stroke-width="1.5"/>
+      <text x="410" y="52" text-anchor="middle" font-weight="bold">Effectors:</text>
+      <text x="410" y="66" text-anchor="middle">Ion channels</text>
+      <text x="410" y="79" text-anchor="middle">Adenylyl cyclase</text>
+      <text x="410" y="92" text-anchor="middle">Phospholipase C</text>
+    </svg>
+
+    <div class="exam-trap-inline" data-topic="gpcr-intro"><b>Exam trap:</b> GPCRs are seven-pass transmembrane proteins, not single-pass. Confusing them with RTKs (single-pass) is a common error. Also: both Gα-GTP AND Gβγ are active after dissociation — students often forget Gβγ activates effectors too.</div>
+    <div class="exam-trap-inline" data-topic="g-protein-activation"><b>Exam trap:</b> Signal duration is set by Gα's own GTPase (鳥苷三磷酸酶) activity, NOT by phosphatases or protein degradation. Cholera toxin locks Gα in GTP-bound active state by blocking this GTPase activity.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. GPCR Downstream Effector Pathways</h2>
+    <p data-topic="g-protein-effectors">
+      <b>Three major effectors activated by G proteins:</b>
+      <ul>
+        <li>Ion channels (離子通道) — Gβγ opens K⁺ channels directly; example: acetylcholine (乙醯膽鹼) binds muscarinic GPCR in heart pacemaker cells (心臟節律細胞) → activated Gβγ complex opens K⁺ channel → K⁺ efflux → hyperpolarization (超極化) → slows heart rate.</li>
+        <li>Adenylyl cyclase (腺苷酸環化酶) — activated by Gα-GTP of stimulatory G protein (Gs); converts ATP → cyclic AMP (環腺苷酸, cAMP); cAMP is the second messenger (第二信使).</li>
+        <li>Phospholipase C (磷脂酶C, PLC) — cleaves the membrane phospholipid PIP₂ into two second messengers: IP₃ (肌醇三磷酸, inositol trisphosphate) and diacylglycerol (二酰甘油, DAG).</li>
+      </ul>
+    </p>
+    <p data-topic="adenylyl-cyclase-camp-pka">
+      <b>cAMP/PKA pathway detail:</b>
+      <ul>
+        <li>Adrenaline (腎上腺素) → adrenergic receptor (GPCR) → Gs protein → adenylyl cyclase activated → ATP → cAMP.</li>
+        <li>cAMP binds and activates Protein Kinase A (蛋白激酶A, PKA); inactive PKA is a tetramer of 2 regulatory + 2 catalytic subunits; cAMP binding to regulatory subunits releases active catalytic subunits.</li>
+        <li>PKA effects (effector activation 效應物活化): increase heart rate (心率); glycogen (糖原) breakdown in muscle cells; transcription (轉錄) of target genes in neuronal cells to regulate long-term memory (長期記憶).</li>
+      </ul>
+    </p>
+    <p data-topic="phospholipase-c-pkc">
+      <b>PLC/Ca²⁺/PKC pathway detail:</b>
+      <ul>
+        <li>Signal → GPCR → G protein → PLC activated → PIP₂ cleaved into IP₃ + DAG.</li>
+        <li>IP₃ (水溶性, water-soluble) diffuses to ER membrane → opens Ca²⁺ channels → Ca²⁺ release from ER into cytosol; Ca²⁺ concentration gradient (濃度梯度): ER ~1 mM, cytosol ~10⁻⁴ mM at steady state (靜止狀態).</li>
+        <li>DAG (脂溶性, lipid-soluble) stays in membrane → activates Protein Kinase C (蛋白激酶C, PKC) together with elevated Ca²⁺.</li>
+        <li>PKC phosphorylates (磷酸化) various target proteins → effector activation → cell response.</li>
+        <li>Biological example: fertilization (受精) of an egg by sperm triggers a Ca²⁺ wave across the egg, visualized by fluorescent Ca²⁺ indicators.</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="phospholipase-c-pkc"><b>Exam trap:</b> PLC produces TWO second messengers — IP₃ (triggers Ca²⁺ release) AND DAG (activates PKC). Students often name only one. Also: Ca²⁺ comes from the ER, not from outside the cell, as the primary initial source.</div>
+    <div class="exam-trap-inline" data-topic="adenylyl-cyclase-camp-pka"><b>Exam trap:</b> cAMP activates PKA, not PKC. PKC is activated by DAG + Ca²⁺ from the PLC pathway, not the adenylyl cyclase pathway.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Enzyme-Coupled Receptors: Structure and Types</h2>
+    <p data-topic="enzyme-coupled-receptors-intro">
+      <ul>
+        <li>Enzyme-coupled receptors (酶聯受體) — single-pass transmembrane proteins (單次跨膜蛋白); extracellular ligand-binding domain + intracellular enzyme/enzyme-associated domain.</li>
+        <li>Activation mechanism — ligand (usually a dimer, 二聚體) causes two receptor monomers (單體) to dimerize (二聚化); dimerization activates the intracellular catalytic domain (催化域).</li>
+        <li>Alternatively: receptor recruits and activates a separate associated enzyme upon ligand binding.</li>
+        <li>Ligands — primarily growth factors (生長因子) that regulate growth (生長), proliferation (增殖), differentiation (分化), and survival (存活) of animal cells.</li>
+        <li>Response — typically leads to changes in gene expression (基因表達).</li>
+        <li>Disease link — major role in development of cancer (癌症).</li>
+      </ul>
+    </p>
+    <p data-topic="enzyme-coupled-subtypes">
+      <b>Three main subtypes:</b>
+      <ul>
+        <li>Tyrosine kinase receptors (酪氨酸激酶受體) — the largest and best-studied class; includes receptor tyrosine kinases (RTKs); relevant to oncology and metabolic disorders.</li>
+        <li>Serine/threonine kinase receptors (絲氨酸/蘇氨酸激酶受體) — phosphorylate (磷酸化) Ser/Thr residues; examples include TGF-β receptors.</li>
+        <li>Guanylyl cyclase-linked receptors (鳥苷酸環化酶聯受體) — produce cGMP (環鳥苷酸) as second messenger.</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="enzyme-coupled-receptors-intro"><b>Exam trap:</b> Enzyme-coupled receptors are single-pass (單次跨膜), not seven-pass like GPCRs. Mixing up transmembrane topology between GPCR and RTK is a very common error.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Receptor Tyrosine Kinases (RTKs): Activation and Signaling Complexes</h2>
+    <p data-topic="rtk-activation-complex">
+      <b>Activation mechanism:</b>
+      <ul>
+        <li>Inactive state — RTK monomers (單體) sit in membrane with inactive intracellular kinase domain (激酶域); tyrosine (酪氨酸) residues on the cytoplasmic tail (細胞質尾部) are unphosphorylated.</li>
+        <li>Ligand binding (配體結合) — growth factor (typically a dimer) bridges two RTK monomers, causing receptor dimerization (受體二聚化).</li>
+        <li>Transautophosphorylation (交叉自磷酸化) — dimerization stimulates kinase activity; each kinase domain phosphorylates multiple tyrosine residues on the adjacent (相鄰) receptor tail; multiple phosphotyrosines (磷酸酪氨酸) are generated.</li>
+        <li>Docking sites — each phosphotyrosine serves as a specific docking site (停靠位點) for a different intracellular signaling protein; different proteins recognize different phosphotyrosine sequences, allowing one RTK to activate multiple parallel pathways simultaneously.</li>
+        <li>Result — assembly of an intracellular signaling complex (訊號複合體) → activation of downstream pathways → altered cell behavior.</li>
+      </ul>
+    </p>
+
+    <svg viewBox="0 0 500 120" style="width:100%;max-width:500px;display:block;margin:12px auto;font-family:sans-serif;font-size:10px">
+      <rect x="0" y="0" width="500" height="120" fill="#fff3e0" rx="8"/>
+      <rect x="10" y="10" width="90" height="100" fill="#b3e5fc" rx="6" stroke="#0288d1" stroke-width="1.5"/>
+      <text x="55" y="28" text-anchor="middle" font-weight="bold">Inactive RTKs</text>
+      <rect x="20" y="35" width="28" height="60" fill="#4fc3f7" rx="3"/>
+      <rect x="55" y="35" width="28" height="60" fill="#4fc3f7" rx="3"/>
+      <text x="34" y="105" text-anchor="middle">Tyr</text>
+      <text x="69" y="105" text-anchor="middle">Tyr</text>
+      <text x="108" y="65" fill="#555" font-size="12">ligand →</text>
+      <rect x="160" y="10" width="90" height="100" fill="#c8e6c9" rx="6" stroke="#388e3c" stroke-width="1.5"/>
+      <text x="205" y="28" text-anchor="middle" font-weight="bold">Active RTKs</text>
+      <rect x="170" y="35" width="28" height="60" fill="#66bb6a" rx="3"/>
+      <rect x="205" y="35" width="28" height="60" fill="#66bb6a" rx="3"/>
+      <circle cx="184" cy="90" r="8" fill="#ffd54f"/>
+      <text x="184" y="94" text-anchor="middle" font-size="9">P</text>
+      <circle cx="219" cy="90" r="8" fill="#ffd54f"/>
+      <text x="219" y="94" text-anchor="middle" font-size="9">P</text>
+      <text x="258" y="65" fill="#555" font-size="12">→</text>
+      <rect x="285" y="10" width="200" height="100" fill="#f3e5f5" rx="6" stroke="#7b1fa2" stroke-width="1.5"/>
+      <text x="385" y="28" text-anchor="middle" font-weight="bold">Signaling Complex</text>
+      <rect x="295" y="35" width="28" height="60" fill="#ba68c8" rx="3"/>
+      <rect x="355" y="35" width="28" height="60" fill="#ba68c8" rx="3"/>
+      <circle cx="309" cy="90" r="8" fill="#ffd54f"/>
+      <text x="309" y="94" text-anchor="middle" font-size="9">P</text>
+      <circle cx="369" cy="90" r="8" fill="#ffd54f"/>
+      <text x="369" y="94" text-anchor="middle" font-size="9">P</text>
+      <rect x="400" y="35" width="70" height="70" fill="#ce93d8" rx="5"/>
+      <text x="435" y="60" text-anchor="middle">Signaling</text>
+      <text x="435" y="74" text-anchor="middle">proteins</text>
+      <text x="435" y="88" text-anchor="middle">1, 2, 3...</text>
+    </svg>
+
+    <p data-topic="rtk-mutagenesis">
+      <b>Experimental approach — mutagenesis (突變分析) to map docking sites:</b>
+      <ul>
+        <li>Individual tyrosine (酪氨酸) residues (Y1, Y2, Y3) mutated one at a time to alanine (丙氨酸, which cannot be phosphorylated).</li>
+        <li>If mutating Y2 to alanine causes loss of binding of a specific signaling protein, then phospho-Y2 is the docking site for that protein.</li>
+        <li>This mutational analysis (突變分析) establishes which phosphotyrosine recruits which downstream effector.</li>
+        <li>Overactive (constitutively active, 持續活化) form of Ras is used to determine the order of proteins in a pathway: cells lacking protein X but expressing constitutively active Ras help deduce whether X acts upstream or downstream of Ras.</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="rtk-activation-complex"><b>Exam trap:</b> RTK dimerization is induced by ligand binding — the receptor does NOT dimerize first and then bind ligand. Also: each phosphotyrosine is a specific docking site for a DIFFERENT protein, enabling pathway multiplexing from one receptor.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. RTK Downstream Pathways: Ras and PI3-Kinase</h2>
+    <p data-topic="rtk-activates-ras">
+      <b>Ras (Ras蛋白) pathway:</b>
+      <ul>
+        <li>Ras — a monomeric GTPase (單體GTP酶) anchored to the inner plasma membrane leaflet; inactive when GDP-bound, active when GTP-bound; analogous in principle to Gα.</li>
+        <li>Activation cascade: activated RTK (phosphotyrosines) → adaptor protein (接頭蛋白, e.g. Grb2) docks on a phosphotyrosine → adaptor recruits Ras-GEF (Ras鳥苷酸交換因子, guanine nucleotide exchange factor, e.g. SOS) → Ras-GEF promotes GDP dissociation from Ras and GTP loading → Ras-GTP = active Ras.</li>
+        <li>Active Ras transmits signal onward through the MAP kinase cascade (絲裂原活化蛋白激酶級聯): Ras → Raf → MEK → MAPK → nucleus → gene expression changes → altered cell behavior (proliferation, differentiation, survival).</li>
+        <li>Cancer link — 30% of human cancers contain activating mutations in Ras (Ras活化突變) that lock it in GTP-bound constitutively active (持續活化) form, bypassing need for upstream signal.</li>
+        <li>Experimental logic — overactive constitutively active form of Ras is used to determine the order of proteins in a pathway; if constitutively active Ras rescues signaling in a cell lacking protein X, then X acts upstream of Ras.</li>
+      </ul>
+    </p>
+    <p data-topic="pi3k-akt-pathway">
+      <b>PI3-kinase (磷脂醯肌醇3-激酶) / Akt pathway:</b>
+      <ul>
+        <li>Activated RTK → PI3-kinase recruited and activated → phosphorylates inositol phospholipid (肌醇磷脂) in the inner membrane leaflet → generates phosphorylated inositol phospholipid (PIP₃).</li>
+        <li>PIP₃ acts as a docking site (停靠位點) at the membrane → recruits Protein Kinase 1 (PDK1) and Akt (蛋白激酶B) to the membrane.</li>
+        <li>PDK1 phosphorylates and activates Akt → activated Akt phosphorylates multiple downstream targets → promotes cell growth (生長) and survival (存活) of many cell types.</li>
+        <li>Signal flow: Signal molecule → RTK → PI3-kinase → phosphorylated inositol phospholipid → protein kinase 1 (PDK1) → Akt kinase → cell response.</li>
+        <li>PTEN (磷酸酶) opposes PI3-kinase by dephosphorylating PIP₃ back to PIP₂; PTEN is a major tumor suppressor (腫瘤抑制基因).</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="rtk-activates-ras"><b>Exam trap:</b> Ras-GEF promotes GTP LOADING onto Ras (it is not a kinase). Ras itself has GTPase activity that shuts off the signal — exactly parallel to Gα. Confusing GEF function with a kinase is common.</div>
+    <div class="exam-trap-inline" data-topic="pi3k-akt-pathway"><b>Exam trap:</b> PI3-kinase phosphorylates a membrane LIPID (inositol phospholipid), not a protein. The product PIP₃ is a lipid-based second messenger that recruits Akt to the membrane.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="5">
+    <h2>6. EGFR as a Cancer Target and Therapeutic Strategies</h2>
+    <p data-topic="egfr-pathway">
+      <b>EGFR (表皮生長因子受體, Epidermal Growth Factor Receptor) pathway overview:</b>
+      <ul>
+        <li>EGFR is an RTK; upon EGF (ligand) binding → dimerization → autophosphorylation → activates both Ras/MAPK branch (via Grb2-SOS/Ras-GEF) and PI3K/AKT branch simultaneously.</li>
+        <li>Downstream outcomes (下游效應): cell survival (存活), proliferation (增殖), invasion (侵潤), metastasis (轉移), angiogenesis (血管生成).</li>
+        <li>PTEN opposes the PI3K arm; loss of PTEN is common in cancer.</li>
+        <li>SOS — the Ras-GEF recruited by the Grb2 adaptor protein in the EGFR-Ras pathway.</li>
+      </ul>
+    </p>
+    <p data-topic="egfr-cancer">
+      <b>EGFR overexpression and cancer:</b>
+      <ul>
+        <li>EGFR is overexpressed (過度表達) in cancers of the head and neck, ovary, cervix, and other epithelial tissues.</li>
+        <li>Many epithelial cancers carry mutations that constitutively activate (持續活化) EGFR without ligand.</li>
+        <li>EGFRvIII mutant — a deletion mutant lacking the extracellular domain; constitutively active; common in glioblastoma (神經膠質母細胞瘤).</li>
+      </ul>
+    </p>
+    <p data-topic="egfr-therapy-strategies">
+      <b>Inhibition strategies (抑制策略):</b>
+      <ul>
+        <li>EGFR tyrosine kinase inhibitors (TKI, 酪氨酸激酶抑制劑) — small molecules that competitively block the ATP-binding site of the intracellular kinase domain, preventing autophosphorylation.</li>
+        <li>Anti-EGFR monoclonal antibody (單株抗體, mAb) inhibitors — bind the extracellular domain of EGFR, blocking ligand binding and/or receptor dimerization.</li>
+      </ul>
+    </p>
+    <p data-topic="egfr-tki-generations">
+      <b>Generations of EGFR TKI therapy and acquired resistance (獲得性耐藥):</b>
+      <ul>
+        <li>1st/2nd generation TKIs (e.g. Gefitinib, Erlotinib, Afatinib) — target EGFR activating mutations; tumors acquire resistance via T790M mutation (position 790 substitution).</li>
+        <li>3rd generation TKIs (e.g. AZD9291/Osimertinib, CO-1686, HM61713) — designed to overcome T790M resistance; tumors then acquire C797S mutation.</li>
+        <li>4th generation TKI (EAI045) — designed to overcome C797S mutation; field is still evolving.</li>
+        <li>Clinical data — T790M-positive patients have significantly shorter progression-free survival (無進展生存期) vs. T790M-negative patients (Kaplan-Meier curves, p&lt;0.001).</li>
+        <li>Progression-free survival (無進展生存期) — length of time during and after treatment that a patient lives with disease but it does not worsen.</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="egfr-therapy-strategies"><b>Exam trap:</b> There are TWO distinct EGFR inhibition strategies — TKIs act intracellularly on the kinase domain; mAbs act extracellularly on the ligand-binding domain. They work at different sites on the same receptor.</div>
+    <div class="exam-trap-inline" data-topic="egfr-tki-generations"><b>Exam trap:</b> Acquired resistance mutations (T790M, C797S) arise AFTER treatment — they are not present at baseline in most patients. The arms race of drug generations reflects sequential resistance acquisition.</div>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>GPCRs are seven-pass transmembrane proteins; RTKs are single-pass — never mix these up.</li>
+      <li>Both Gα-GTP AND free Gβγ are active effector-activating units after G protein dissociation.</li>
+      <li>Signal duration for GPCR signaling is set by the intrinsic GTPase activity of Gα (answer d in practice MCQ), not phosphatases or degradation.</li>
+      <li>PLC produces TWO second messengers: IP₃ (releases ER Ca²⁺) and DAG (activates PKC); naming only one is a common error.</li>
+      <li>cAMP activates PKA; DAG + Ca²⁺ activate PKC — these are separate pathways with separate kinases.</li>
+      <li>RTK dimerization is ligand-induced; each phosphotyrosine is a specific docking site for a different downstream protein.</li>
+      <li>Ras-GEF promotes GTP loading on Ras — it is not a kinase; Ras shuts off via its own GTPase activity.</li>
+      <li>PI3-kinase phosphorylates a membrane lipid (inositol phospholipid), not a protein; PIP₃ recruits Akt to the membrane.</li>
+      <li>30% of human cancers have constitutively activating Ras mutations.</li>
+      <li>EGFR inhibitors: TKIs block the intracellular kinase domain; anti-EGFR mAbs block the extracellular domain.</li>
+      <li>T790M mutation confers resistance to 1st/2nd generation EGFR TKIs; C797S confers resistance to 3rd generation.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>GPCR = 7-pass transmembrane; heterotrimeric G protein (α, β, γ); Gα-GDP inactive → Gα-GTP active; signal off by Gα GTPase activity.</li>
+      <li>Three GPCR effectors: ion channels (Gβγ opens K⁺), adenylyl cyclase (Gα → cAMP → PKA), phospholipase C (Gα → IP₃ + DAG → Ca²⁺ + PKC).</li>
+      <li>Ca²⁺ steady-state: ER ~1 mM; cytosol ~10⁻⁴ mM — large gradient drives Ca²⁺ release when IP₃ opens ER channels.</li>
+      <li>RTK = single-pass; ligand (dimer) → receptor dimerization → transautophosphorylation of tyrosines → phosphotyrosines as specific docking sites.</li>
+      <li>RTK → Ras pathway: adaptor protein (Grb2) + Ras-GEF (SOS) → Ras-GTP → Raf → MEK → MAPK → gene expression.</li>
+      <li>RTK → PI3K pathway: PI3K → PIP₃ → PDK1 + Akt recruited → Akt promotes survival; PTEN opposes PI3K.</li>
+      <li>30% of human cancers: activating Ras mutations (constitutively active, locked GTP-bound).</li>
+      <li>EGFR activates both Ras/MAPK and PI3K/Akt simultaneously via different phosphotyrosine docking sites.</li>
+      <li>EGFR TKI generations and resistance: 1st/2nd gen → T790M resistance → 3rd gen (AZD9291) → C797S resistance → 4th gen (EAI045).</li>
+      <li>~30% of all drugs act through GPCRs; &gt;700 GPCR members in humans; ~400 olfactory receptor genes.</li>
+      <li>Enzyme-coupled receptor subtypes: tyrosine kinase receptors (RTKs), serine/threonine kinase receptors, guanylyl cyclase-linked receptors.</li>
+      <li>Mutagenesis approach: mutate individual tyrosine to alanine → loss of specific signaling protein binding → identifies which phosphotyrosine is the docking site for that protein.</li>
+    </ol>
+  </div>
+</div>
+
 <!-- Quiz containers are generated by JS (see renderQuizContainers). -->
 <div id="quiz-containers"></div>
 
