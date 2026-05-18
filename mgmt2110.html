@@ -121,12 +121,7 @@ tr.weak-highlight{box-shadow:none}
   <div class="reset-zone">
     <button class="btn btn-danger" onclick="resetAllProgress()">Reset All Progress</button>
   </div>
-
-<!--
-  NOTES PAGES go here. For each lecture you add to data/mgmt2110.json,
-  ALSO add a <div id="notes-N" class="page"> block here. See template comment block
-  at the bottom of this file for the exact pattern.
--->
+</div>
 
 <!-- NOTES PAGES go here -->
 <div id="notes-6" class="page">
@@ -2338,7 +2333,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ===== PWA Service Worker (inline via Blob) =====
 if ('serviceWorker' in navigator) {
   const swCode = `
-    const CACHE = 'mgmt2110-v8';
+    const CACHE = 'mgmt2110-v9';
     self.addEventListener('install', e => { self.skipWaiting(); });
     self.addEventListener('activate', e => { e.waitUntil(self.clients.claim()); });
     self.addEventListener('fetch', e => {
