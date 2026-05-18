@@ -53,9 +53,14 @@ def main():
 
     # OCR each PDF
     for pdf_path in pdfs:
-        # Extract lecture number from filename
-        # Patterns: "L1.pdf", "GI2-26.pdf", "LIFS2040-2026 Lecture 15.pdf", "LIFS2040-2026-Lecture 11.pdf"
-        match = re.search(r'(?:[Ll]ecture\s+|[Ll])(\d+)', pdf_path.stem)
+        # Extract lecture number from filename.
+        # Patterns supported:
+        #   "L1.pdf", "GI2-26.pdf", "LIFS2040-2026 Lecture 15.pdf"  → explicit L/Lecture prefix
+        #   "08-Forecasting-2.pdf", "10-Inventory.pdf"               → leading number + dash/space
+        match = (
+            re.search(r'(?:[Ll]ecture\s+|[Ll])(\d+)', pdf_path.stem)
+            or re.match(r'^(\d+)[^0-9]', pdf_path.stem)
+        )
         if not match:
             print(f"⚠ Skipping {pdf_path.name} — cannot detect lecture number")
             continue
