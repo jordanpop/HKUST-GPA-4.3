@@ -1,0 +1,294 @@
+<div id="notes-7" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-7" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(7)">Clear Highlights</button>
+  <h1>Lecture 7: Physiology of Nerve Cells — Ion Channels, Membrane Potential &amp; Action Potentials</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    Neurons communicate by controlling the flow of ions (離子) across the cell membrane through specialised pore-forming proteins called ion channels (離子通道). The selective permeability of the membrane to different ions, especially K<sup>+</sup>, establishes a negative resting membrane potential (靜息膜電位) of about &minus;70 mV. When a depolarising (去極化) stimulus pushes the membrane potential above threshold (閾值), voltage-gated Na<sup>+</sup> channels open in a positive-feedback loop that generates a brief all-or-none action potential (動作電位). The action potential then propagates along the axon — passively decrementing in subthreshold signals, but regeneratively and unidirectionally in the AP — and ultimately triggers neurotransmitter release at the synapse (突觸) to influence the next cell.
+  </div>
+
+  <!-- SECTION 0 -->
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Ion Channels — Structure, Properties &amp; Gating</h2>
+
+    <p data-topic="ion-channel-basics">
+      Ion channels (離子通道) are <strong>pore-forming membrane proteins</strong> that allow specific ions to pass through the cell membrane. Unlike carrier proteins (載體蛋白), channels move ions purely by <strong>passive transport</strong> — they never couple to ATP or co-transport mechanisms. Two hallmark features set them apart from other transporters:
+      <ol>
+        <li>Extremely fast ion flux: &gt;10<sup>6</sup> ions per second.</li>
+        <li>Ions travel <em>downhill</em> along their electrochemical gradient (電化學梯度) — no metabolic energy required.</li>
+      </ol>
+    </p>
+
+    <p data-topic="ion-channel-basics">
+      Ion channels serve four major physiological roles:
+      <ul>
+        <li>Establishing the resting membrane potential (靜息膜電位).</li>
+        <li>Shaping action potentials and other electrical signals.</li>
+        <li>Controlling ion flow across secretory and epithelial cells.</li>
+        <li>Regulating cell volume.</li>
+      </ul>
+    </p>
+
+    <p data-topic="membrane-transport-types">
+      <strong>Membrane transport proteins (膜轉運蛋白)</strong> fall into two broad families:
+      <ul>
+        <li><strong>Channels:</strong> always passive; ions move along electrochemical gradient (downhill / facilitated diffusion).</li>
+        <li><strong>Carriers:</strong> can be passive <em>or</em> active.
+          <ul>
+            <li>Secondary active transport — coupled carriers (e.g., symporters 同向轉運體, antiporters 反向轉運體) use the gradient of one ion to move another uphill.</li>
+            <li>Primary active transport — ATP-driven pumps (e.g., Na<sup>+</sup>/K<sup>+</sup>-ATPase) directly hydrolyse ATP.</li>
+          </ul>
+        </li>
+      </ul>
+      The key rule: <strong>the electrochemical gradient determines the direction of all passive transport</strong> of charged molecules (Electrochemical gradient = membrane potential + concentration gradient).
+    </p>
+
+    <div class="exam-trap-inline" data-topic="membrane-transport-types">
+      <b>Exam trap:</b> Channels are <em>always</em> passive; carriers can be active or passive. Do not say "ion channels can perform active transport."
+    </div>
+
+    <p data-topic="channel-gating">
+      <strong>Gating (閘控)</strong> means the control of channel open and closed states. A single channel fluctuates stochastically between these two conformations. Channels can be gated in different ways:
+      <ul>
+        <li><strong>Voltage-gated (電壓閘控):</strong> open/close in response to changes in membrane potential.</li>
+        <li><strong>Ligand-gated (配體閘控):</strong> open/close when a specific molecule (neurotransmitter, second messenger) binds.</li>
+        <li><strong>Mechanically gated:</strong> respond to mechanical deformation of the membrane.</li>
+      </ul>
+      The patch-clamp technique (膜片鉗技術), developed by Erwin Neher and Bernd Sakmann (Nobel Prize 1991), allows recording of single-channel currents from a tiny membrane patch — the gold standard for studying channel gating, pharmacology, and biophysics.
+    </p>
+
+    <p data-topic="ttx-blocker">
+      <strong>Tetrodotoxin (河豚毒素, TTX)</strong>, produced in puffer fish and certain other animals, is a potent selective blocker of voltage-gated Na<sup>+</sup> channels. It is a classic pharmacological tool used to isolate Na<sup>+</sup> channel contributions in electrophysiological experiments.
+    </p>
+
+    <div class="exam-trap-inline" data-topic="ttx-blocker">
+      <b>Exam trap:</b> TTX blocks <em>voltage-gated Na<sup>+</sup> channels</em>, not all Na<sup>+</sup> transport or other channel types. It does not block K<sup>+</sup> channels.
+    </div>
+  </section>
+
+  <!-- SECTION 1 -->
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Membrane Potential &amp; the Nernst / GHK Equations</h2>
+
+    <p data-topic="resting-membrane-potential">
+      Two conditions are required to build a membrane potential (膜電位):
+      <ol>
+        <li>A <strong>semi-permeable membrane</strong> — different ions have different permeabilities.</li>
+        <li>An <strong>ion concentration gradient</strong> (離子濃度梯度) across the membrane (K<sup>+</sup><sub>out</sub>/K<sup>+</sup><sub>in</sub> ≠ 1).</li>
+      </ol>
+      By convention, the <strong>extracellular side is the reference (ground = 0 mV)</strong>, so the inside of a neuron at rest is negative (~&minus;70 mV in mammalian neurons). The resting potential reflects the membrane being most permeable to K<sup>+</sup> at rest.
+    </p>
+
+    <p data-topic="ion-concentrations">
+      Key ion concentration gradients (mammalian neuron):
+      <table>
+        <thead><tr><th>Ion</th><th>Intracellular (mM)</th><th>Extracellular (mM)</th><th>Direction of driving force</th></tr></thead>
+        <tbody>
+          <tr><td>K<sup>+</sup></td><td>140</td><td>5</td><td>Out (concentration); in (electrical) → net: near equilibrium at rest</td></tr>
+          <tr><td>Na<sup>+</sup></td><td>5–15</td><td>145</td><td>In (both concentration AND electrical gradient)</td></tr>
+          <tr><td>Cl<sup>&minus;</sup></td><td>4–30</td><td>110</td><td>In (concentration); out (electrical) → variable</td></tr>
+          <tr><td>Ca<sup>2+</sup></td><td>0.0001</td><td>1–2</td><td>Strongly in (both)</td></tr>
+        </tbody>
+      </table>
+      Squid giant axon values differ (K<sup>+</sup>: 400 mM in / 20 mM out; Na<sup>+</sup>: 50 mM in / 440 mM out) — note the squid values are used to derive the Nernst equation examples in lectures.
+    </p>
+
+    <div class="exam-trap-inline" data-topic="ion-concentrations">
+      <b>Exam trap:</b> In the Nernst equation, the <strong>reference (outside) concentration goes on top</strong> of the logarithm by convention: E = (RT/Fz) × ln([ion]<sub>out</sub>/[ion]<sub>in</sub>). Putting inside on top gives the wrong sign.
+    </div>
+
+    <p data-topic="nernst-equation">
+      The <strong>Nernst equation (能斯特方程)</strong> calculates the <strong>equilibrium potential (平衡電位)</strong> for a single ion — the membrane voltage at which there is no net flow of that ion:
+      <br>
+      E = (RT / Fz) × ln([ion]<sub>out</sub> / [ion]<sub>in</sub>)
+      <br>
+      At body/room temperature this simplifies to ~58 mV/z × log([ion]<sub>out</sub>/[ion]<sub>in</sub>).
+      <ul>
+        <li><strong>E<sub>K</sub></strong> (squid): 58/1 × log(20/400) = &minus;75 mV → this equals the resting potential when the membrane is selectively permeable to K<sup>+</sup>.</li>
+        <li><strong>E<sub>Na</sub></strong> (squid): 58/1 × log(440/50) = +55 mV → strongly positive, driving Na<sup>+</sup> inward during AP.</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="nernst-equation">
+      <b>Exam trap:</b> The Nernst equilibrium potential is the voltage at which net flux is zero — it is <em>not</em> the same as the resting membrane potential unless that ion is the only one carrying current. The resting potential is set by the <em>relative permeabilities</em> of all ions (GHK equation).
+    </div>
+
+    <p data-topic="ghk-equation">
+      The <strong>Goldman-Hodgkin-Katz (GHK) equation (高曼-霍奇金-卡茨方程)</strong> accounts for the contribution of multiple ions (K<sup>+</sup>, Na<sup>+</sup>, Cl<sup>&minus;</sup>) weighted by their relative membrane permeabilities (相對膜通透性, p):
+      <ul>
+        <li>At rest in a typical neuron: p<sub>K</sub> : p<sub>Na</sub> : p<sub>Cl</sub> = <strong>1 : 0.05 : 0.45</strong>.</li>
+        <li>Because p<sub>K</sub> dominates at rest, V<sub>rest</sub> is close to E<sub>K</sub> (but not exactly, because p<sub>Na</sub> and p<sub>Cl</sub> pull it slightly positive).</li>
+        <li>Permeability values are reported as <em>relative</em> (unitless) with p<sub>K</sub> = 1 as reference.</li>
+      </ul>
+    </p>
+
+    <p data-topic="na-pump">
+      The <strong>Na<sup>+</sup>/K<sup>+</sup>-ATPase (鈉鉀泵)</strong> pumps 3 Na<sup>+</sup> out and 2 K<sup>+</sup> in per ATP hydrolysed. It is not directly responsible for the moment-to-moment resting potential (that is set by ion channel permeabilities and gradients), but it is essential for <strong>long-term maintenance</strong> of the ion concentration gradients that make the resting potential possible.
+    </p>
+
+    <div class="exam-trap-inline" data-topic="na-pump">
+      <b>Exam trap:</b> The Na<sup>+</sup>/K<sup>+</sup>-ATPase is electrogenic (net outward positive charge = slight hyperpolarisation), but its primary role is <em>gradient maintenance</em>, not moment-to-moment potential generation.
+    </div>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Action Potential — Generation &amp; Phases</h2>
+
+    <p data-topic="action-potential-phases">
+      The <strong>action potential (動作電位, AP)</strong> is a rapid, stereotyped voltage transient lasting ~1–2 ms. Its phases are:
+      <ol>
+        <li><strong>Resting potential</strong> (~&minus;70 mV): voltage-gated Na<sup>+</sup> and K<sup>+</sup> channels closed.</li>
+        <li><strong>Depolarisation (去極化) — rising phase:</strong> voltage-gated Na<sup>+</sup> channels open → Na<sup>+</sup> rushes in → membrane rapidly swings toward +55 mV (E<sub>Na</sub>).</li>
+        <li><strong>Repolarisation (復極化) — falling phase:</strong> Na<sup>+</sup> channels inactivate (not simply close); delayed voltage-gated K<sup>+</sup> channels open → K<sup>+</sup> rushes out → membrane returns toward rest.</li>
+        <li><strong>Afterhyperpolarisation (後超極化):</strong> K<sup>+</sup> channels remain open briefly longer than needed → membrane overshoots below resting potential.</li>
+        <li><strong>Return to resting potential</strong> as K<sup>+</sup> channels close.</li>
+      </ol>
+    </p>
+
+    <p data-topic="action-potential-properties">
+      Three key characteristics of the AP:
+      <ul>
+        <li><strong>All-or-none (全或無)</strong> — once threshold is crossed, the AP always has the same amplitude and shape; stimuli below threshold produce no AP.</li>
+        <li><strong>Short duration</strong> — ~1–2 ms.</li>
+        <li><strong>Requires a trigger depolarisation above threshold (閾值)</strong> — typically ~15–20 mV depolarisation from rest.</li>
+      </ul>
+    </p>
+
+    <p data-topic="ap-threshold-mechanism">
+      <strong>Threshold (閾值)</strong> represents a critical tipping point driven by a positive-feedback loop:
+      <ol>
+        <li>Depolarisation exceeds the rate of membrane repolarisation.</li>
+        <li>Na<sup>+</sup> influx exceeds K<sup>+</sup> efflux.</li>
+        <li>More depolarisation → more voltage-gated Na<sup>+</sup> channels open.</li>
+        <li>More open Na<sup>+</sup> channels → more depolarisation → runaway feedback → AP fires.</li>
+      </ol>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="ap-threshold-mechanism">
+      <b>Exam trap:</b> Threshold is a dynamic, regenerative event — once Na<sup>+</sup> influx exceeds K<sup>+</sup> efflux, the process is self-sustaining. A stimulus that is "just below threshold" produces only a graded depolarisation, not an AP.
+    </div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Refractory Periods &amp; AP Propagation</h2>
+
+    <p data-topic="refractory-periods">
+      After an AP, voltage-gated Na<sup>+</sup> channels pass through an <strong>inactivated state</strong> (distinct from simply closed). This produces two refractory phases (不應期):
+      <ul>
+        <li><strong>Absolute refractory period (絕對不應期):</strong> Na<sup>+</sup> channels are fully inactivated → threshold is effectively infinite → no second AP can be generated regardless of stimulus strength.</li>
+        <li><strong>Relative refractory period (相對不應期):</strong> Na<sup>+</sup> channels are partially recovering from inactivation; afterhyperpolarisation means membrane is more negative than rest → threshold is elevated → an AP <em>can</em> be generated but only with a <em>stronger</em> than normal stimulus, and the resulting AP has a smaller amplitude.</li>
+        <li><strong>Normal excitability</strong> returns when channels fully recover and membrane returns to resting potential.</li>
+      </ul>
+      The refractory period sets an <strong>upper limit on spike frequency</strong> and, together with inactivation, ensures <strong>unidirectional propagation</strong> (the region just behind an advancing AP is refractory).
+    </p>
+
+    <div class="exam-trap-inline" data-topic="refractory-periods">
+      <b>Exam trap:</b> Na<sup>+</sup> channel inactivation ≠ simply "closing." Inactivated channels cannot be opened by depolarisation alone — they must first recover (de-inactivate) by returning to hyperpolarised potentials.
+    </div>
+
+    <p data-topic="ap-propagation">
+      <strong>Passive (subthreshold) propagation (被動傳導)</strong>: local current spreads electrotonically but:
+      <ul>
+        <li>Amplitude decays exponentially with distance (determined by the length constant, λ).</li>
+        <li>Signal slows over distance.</li>
+        <li>Spreads in all directions.</li>
+      </ul>
+      <strong>Active (AP) propagation (主動傳導)</strong>:
+      <ul>
+        <li>Regenerative — no decrement in amplitude.</li>
+        <li>Unidirectional — the region behind the AP is in the absolute refractory period.</li>
+        <li>Fast conduction.</li>
+      </ul>
+    </p>
+
+    <p data-topic="saltatory-conduction">
+      In <strong>myelinated axons (有髓軸突)</strong>, the myelin sheath (髓鞘) insulates the internodal membrane and dramatically increases the effective length constant. APs can only be regenerated at the <strong>nodes of Ranvier (朗維爾結)</strong> — gaps in the myelin. The AP appears to "jump" from node to node: this is called <strong>saltatory conduction (跳躍式傳導)</strong>. Benefits: much faster conduction velocity at lower metabolic cost compared to unmyelinated axons of equal diameter.
+    </p>
+
+    <div class="exam-trap-inline" data-topic="saltatory-conduction">
+      <b>Exam trap:</b> Saltatory conduction is faster AND more energetically efficient than conduction in unmyelinated axons — both points are often tested. The AP itself is not different; only the spatial pattern of where it regenerates changes.
+    </div>
+  </section>
+
+  <!-- SECTION 4 -->
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Synaptic Transmission — Chemical Synapses</h2>
+
+    <p data-topic="synaptic-transmission-steps">
+      At a <strong>chemical synapse (化學突觸)</strong>, information is converted from electrical to chemical and back to electrical. The five steps are:
+      <ol>
+        <li><strong>Synthesis (合成):</strong> neurotransmitter (神經遞質) is synthesised in the cell body and/or terminal.</li>
+        <li><strong>Storage (儲存):</strong> packed into synaptic vesicles (突觸小泡) and transported to the terminal.</li>
+        <li><strong>Release / Exocytosis (釋放 / 胞吐):</strong> AP depolarises the terminal → voltage-gated Ca<sup>2+</sup> channels open → Ca<sup>2+</sup> influx → vesicle fusion with presynaptic membrane → transmitter released into synaptic cleft (突觸間隙).</li>
+        <li><strong>Postsynaptic effects (突觸後效應):</strong> transmitter binds postsynaptic receptor → ion channels open/close → electrical change (EPSP or IPSP).</li>
+        <li><strong>Inactivation (失活):</strong> transmitter is removed by (a) diffusion away from cleft, (b) enzymatic degradation (e.g., acetylcholinesterase for ACh), (c) presynaptic re-uptake (e.g., monoamine transporters).</li>
+      </ol>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="synaptic-transmission-steps">
+      <b>Exam trap:</b> Ca<sup>2+</sup> influx is the <em>trigger</em> for vesicle fusion and transmitter release — it is the link between the electrical AP in the terminal and the chemical signal. Blocking Ca<sup>2+</sup> channels abolishes release even if the AP fires normally.
+    </div>
+
+    <p data-topic="epsp-ipsp">
+      <strong>EPSP (興奮性突觸後電位, excitatory post-synaptic potential):</strong> transmitter binding opens channels that depolarise the postsynaptic membrane (e.g., non-selective cation channels → Na<sup>+</sup> in). The membrane moves toward threshold.
+      <br><br>
+      <strong>IPSP (抑制性突觸後電位, inhibitory post-synaptic potential):</strong> transmitter binding opens channels that <em>hyperpolarise</em> the membrane or clamp it below threshold (e.g., K<sup>+</sup> channels open, or Cl<sup>&minus;</sup> channels open → membrane toward E<sub>Cl</sub>). The <strong>nature of the postsynaptic receptor</strong> determines whether the effect is excitatory or inhibitory, not the transmitter identity per se.
+    </p>
+
+    <div class="exam-trap-inline" data-topic="epsp-ipsp">
+      <b>Exam trap:</b> The same transmitter can produce an EPSP at one synapse and an IPSP at another, depending on which receptor and which ion channel it acts on. The receptor type — not the transmitter identity — determines the sign of the postsynaptic response.
+    </div>
+
+    <p data-topic="synaptic-integration">
+      <strong>Synaptic integration (突觸整合)</strong> occurs at the axon hillock (軸丘), the site of AP initiation. EPSPs and IPSPs are summed spatially (from different inputs arriving simultaneously) and temporally (from the same input firing repeatedly). Only when the net depolarisation crosses threshold does an AP fire — the neuron acts as a coincidence detector.
+    </p>
+
+    <p data-topic="transmitter-inactivation">
+      Termination of postsynaptic transmitter action occurs by:
+      <ul>
+        <li><strong>Diffusion</strong> away from the cleft (common for peptide neurotransmitters).</li>
+        <li><strong>Enzymatic degradation</strong> — e.g., acetylcholinesterase (乙醯膽鹼酯酶) breaks down acetylcholine (ACh).</li>
+        <li><strong>Presynaptic re-uptake</strong> (回收) — e.g., monoamine transporters (DAT, SERT, NET) recycle dopamine, serotonin, noradrenaline.</li>
+        <li>Combinations of the above.</li>
+      </ul>
+    </p>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Ion channels are <em>always</em> passive — they never use ATP; carriers can be active or passive.</li>
+      <li>In the Nernst equation the <em>outside</em> concentration goes on top of the logarithm (extracellular = reference by convention).</li>
+      <li>The Nernst equilibrium potential is NOT the resting membrane potential; it is the voltage at which net flux of that <em>single ion</em> is zero.</li>
+      <li>The GHK equation (not Nernst) gives the actual resting potential by weighting all ions by their relative permeabilities (p<sub>K</sub> : p<sub>Na</sub> : p<sub>Cl</sub> = 1 : 0.05 : 0.45 at rest).</li>
+      <li>Repolarisation is due to Na<sup>+</sup> channel <em>inactivation</em> (not simply closing) AND K<sup>+</sup> channel opening — both contribute.</li>
+      <li>Na<sup>+</sup> channel inactivation ≠ channel closing: inactivated channels cannot be re-opened by depolarisation; they need hyperpolarisation to recover.</li>
+      <li>Absolute refractory period: no AP possible (Na<sup>+</sup> channels fully inactivated). Relative refractory period: AP possible but requires stronger stimulus and produces smaller AP.</li>
+      <li>Saltatory conduction is both faster AND more metabolically efficient than unmyelinated conduction.</li>
+      <li>TTX blocks only voltage-gated Na<sup>+</sup> channels, not K<sup>+</sup> channels.</li>
+      <li>The nature of the postsynaptic receptor (not the transmitter identity) determines EPSP vs. IPSP.</li>
+      <li>Ca<sup>2+</sup> influx at the presynaptic terminal triggers vesicle fusion; without Ca<sup>2+</sup>, release does not occur even if the AP fires.</li>
+      <li>The Na<sup>+</sup>/K<sup>+</sup>-ATPase maintains long-term ion gradients; it does not directly generate the resting potential moment-to-moment.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top Things to Memorize</strong>
+    <ol>
+      <li>Ion channels: passive only; &gt;10<sup>6</sup> ions/sec; down electrochemical gradient; no ATP.</li>
+      <li>Resting membrane potential requires (1) semi-permeable membrane + (2) concentration gradient; ~&minus;70 mV in mammalian neurons.</li>
+      <li>Nernst equation: E = (RT/Fz) × ln([ion]<sub>out</sub>/[ion]<sub>in</sub>); E<sub>K</sub> ≈ &minus;75 mV (squid); E<sub>Na</sub> ≈ +55 mV (squid).</li>
+      <li>GHK equation permeability ratios at rest: p<sub>K</sub> : p<sub>Na</sub> : p<sub>Cl</sub> = 1 : 0.05 : 0.45.</li>
+      <li>AP phases: resting → depolarisation (Na<sup>+</sup> in) → repolarisation (Na<sup>+</sup> inactivates + K<sup>+</sup> out) → afterhyperpolarisation → rest; duration ~1–2 ms; all-or-none.</li>
+      <li>AP threshold: positive-feedback loop — Na<sup>+</sup> influx &gt; K<sup>+</sup> efflux → runaway depolarisation.</li>
+      <li>Absolute refractory (Na<sup>+</sup> fully inactivated, no AP possible) vs. relative refractory (partially inactivated, AP possible with stronger stimulus).</li>
+      <li>Saltatory conduction in myelinated axons: AP jumps node-to-node; faster + more efficient.</li>
+      <li>TTX = selective voltage-gated Na<sup>+</sup> channel blocker from puffer fish.</li>
+      <li>Chemical synapse 5 steps: synthesis → storage → release (Ca<sup>2+</sup>-triggered) → postsynaptic effects → inactivation.</li>
+      <li>Postsynaptic receptor type determines EPSP (depolarisation) or IPSP (hyperpolarisation).</li>
+      <li>Transmitter termination: diffusion (peptides), enzymatic degradation (ACh → acetylcholinesterase), re-uptake (monoamines).</li>
+    </ol>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+{
+  "sensory-receptor-types": 0,
+  "sensory-transduction-mechanism": 0,
+  "sensory-coding": 0,
+  "somatosensory-modalities": 1,
+  "somatosensory-pathway": 1,
+  "somatosensory-cortex": 1,
+  "touch-receptors": 1,
+  "temperature-receptors": 1,
+  "nociceptors": 1,
+  "hearing-overview": 2,
+  "sound-properties": 2,
+  "cochlear-anatomy": 3,
+  "auditory-transduction": 3,
+  "ihc-vs-ohc-innervation": 3,
+  "ohc-amplification": 3,
+  "place-theory": 4
+}

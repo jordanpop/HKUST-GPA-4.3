@@ -1,0 +1,272 @@
+Lecture 20: Sexual Reproduction &
+The power of Genetics
+
+Asexual Reproduction
+
+Bacteria reproduce by simple cell division.
+
+Sexual Reproduction
+
+meiosis
+diploid mother
+
+haploid egg
+
+Fertilization
+
+Germ-line cells
+
+meiosis
+diploid father
+
+mitosis
+haploid sperm
+
+Unique diploid organism
+
+Asexual and Sexual Reproduction
+
+https://www.youtube.com/watch?v=fcGDUcGjcyk
+
+Benefits of sexual reproduction
+• Generates diversity
+- Unique sets of maternal and paternal chromosomes
+- Recombination of genes
+
+• Gives organisms a competitive advantage in a changing
+environment
+- Help to survive in an unpredictable environment
+- Eliminating the deleterious genes
+
+Outline
+• Meiosis
+• Mendel and the laws of inheritance
+• Genetics as an experimental tools
+
+Meiosis
+
+https://www.youtube.com/watch?v=kQu6Yfrr6j0
+
+Mitosis vs. Meiosis
+
+Meiosis involves one round of DNA replication, and this step is followed by two rounds of
+cell division without further DNA replication.
+
+Homologous chromosomes
+Chromosome
+duplication
+
+Diploid
+somatic cell
+
+Chromosome
+duplication
+
+Separation of duplicated
+chromosomes
+
+Duplicated
+chromosomes
+line up individually
+on the mitotic spindle
+
+MITOSIS
+
+MEIOSIS I
+
+Paring of duplicated
+chromosomes
+
+Completion of cell division I
+
+MEIOSIS II
+
+Separation of sister
+chromatids
+
+Completion of
+cell division II
+
+Separation of sister
+chromatids
+
+Completion of
+cell division
+
+Duplicated chromosomes pair during meiosis I
+
+Bivalent
+
+Homologous Recombination of Bivalents
+Two of the gametes are parental types
+homologous chromosomes
+replicate and synapse to
+form a bivalent
+bivalent
+
+homologous chromosomes
+undergo crossing-over
+
+Two of the gametes are recombinant types
+
+homologous chromosomes
+contain heterogeneous regions
+
+•
+•
+•
+
+Homologous Recombination
+- Two similar nucleotide sequences exchange genetic information
+Major source of genetic variation in sexual reproduction
+Helps to produce individuals with novel assortments of genes
+
+Duplicated chromosomes pair during meiosis I
+
+Bivalent
+
+Homologous Recombination of Bivalents
+
+Homologous Recombination of Bivalents
+
+Multiple crossovers can occur between the duplicated
+homologous chromosomes in a bivalent
+
+Green: sites of crossing-over marked by a key component of the
+meiotic recombination machinery;
+Blue: centromeres;
+Red: bivalents
+
+Chiasmata help ensure proper segregation of duplicated
+chromosomes in meiosis I
+
+Cohesins glue the sister
+chromatids together
+
+Two sister chromatids are separated during meiosis II
+
+Two kinds of genetic reassortment
+during sexual reproduction:
+• Independent assortment of paternal
+and maternal chromosomes
+• Crossing-over to reassort genes on
+individual chromosome
+Each human with 23 chromosomes can produce
+223 or 8.4x106 genetically distinct gametes
+(haploid cells).
+A
+
+B
+
+Metaphase of meiosis I
+
+Errors in chromosome segregation causes severe problems
+
+A child that receives 3 copies of
+Chromosome 21 will have Down syndrome.
+
+Outline
+• Meiosis
+• Mendel and the laws of inheritance
+• Genetics as an experimental tools
+
+Mendel’s Traits of Inheritance
+
+Peas are easy to breed, and produce large number of offspring.
+Traits are easy to measure and distinct.
+
+Mendel’s Traits of Inheritance
+
+https://www.youtube.com/watch?v=Mehz7tCxjSE
+
+Mendel’s genetic experiment
+
+Mendelian’s Terms
+
+Mendel’s first law (the law of segregation):
+Two alleles for each trait separate during
+gamete formation and then unite at random at
+fertilization
+
+Explanation of Mendel’s laws of segregation
+
+Mendel’s first law (the law of segregation):
+Meiosis I
+Meiosis II
+
+Two alleles for each trait separate during
+gamete formation and then unite at random at
+fertilization
+
+(YyRr, yellow-round)
+
+Mendel’s second law
+(the law of independent assortment):
+Each pair of alleles are independently
+segregated and then unite at random
+at fertilization.
+
+Yellow-round: 90
+Green-wrinkled: 10
+Yellow-wrinkled: 30
+Green-round: 30
+
+Explanation of Mendel’s laws of independent assortment
+
+Mendel’s second law
+(the law of independent assortment):
+Each pair of alleles are independently
+Segregated and then unite at random
+at fertilization.
+
+A
+
+B
+
+Metaphase of meiosis I
+
+Outline
+• Meiosis
+• Mendel and the laws of inheritance
+• Genetics as an experimental tools
+
+Classical Genetic Approach with Random Mutagenesis
+
+Identify genes that
+regulate social behavior
+
+Engage in social feeding
+
+Dine alone
+
+Temperature-sensitive mutants are valuable to identify genes
+mediating essential cellular processes
+
+Genetic Mutations
+
+Normal hemoglobin
+
+sickle-cell anemia
+
+Sickle-cell hemogluobin
+
+Revolutionary DNA Sequencing in Human Genetic Studies
+
+How Next Generation Sequencing (NGS) Works?
+
+https://www.youtube.com/watch?v=aHHyUk8ElnM
+
+Application of genomic studies in therapeutics
+
+• Aid the search for mutations associated with disease
+• Identify genetic abnormalities
+• Reveal outbreaks for infections
+
+Summary
+• Meiosis I and II
+• Major factors that cause genetic variation in sexual reproduction
+• Mendel’s law of segregation and independent assortment
+• Application of genetics as a powerful tool for research and
+therapeutics
+
+

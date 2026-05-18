@@ -1,0 +1,422 @@
+[
+  {
+    "q": "Which of the following best describes how ion channels move ions across the cell membrane?",
+    "options": [
+      "By passive transport down the electrochemical gradient",
+      "By coupling ion movement to ATP hydrolysis",
+      "By secondary active transport using Na+ gradients",
+      "By symport with glucose molecules",
+      "By endocytosis of the channel-ion complex"
+    ],
+    "answer": 0,
+    "topic": "ion-channel-basics",
+    "explain": "Ion channels are pore-forming proteins that allow ions to move passively — purely down their electrochemical gradient — at rates exceeding 10^6 ions per second. They never couple to ATP or co-transport mechanisms, which distinguishes them fundamentally from carrier proteins. Options B, C, and D describe active or secondary active transport performed by carrier proteins, not channels. Option E describes endocytosis, an entirely different cellular process.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "A researcher applies a drug that blocks the Na+/K+-ATPase acutely (over seconds). Which immediate effect is most likely?",
+    "options": [
+      "The resting membrane potential immediately collapses to 0 mV",
+      "Action potentials fire spontaneously and continuously",
+      "The membrane becomes hyperpolarised to −90 mV",
+      "Voltage-gated Na+ channels are directly blocked",
+      "The resting potential is largely unchanged in the short term"
+    ],
+    "answer": 4,
+    "topic": "na-pump",
+    "explain": "The Na+/K+-ATPase maintains ion concentration gradients over the long term but is not directly responsible for moment-to-moment resting membrane potential. The resting potential is set by membrane permeabilities and the existing ion gradients, which do not collapse instantly. Only after prolonged pump inhibition do gradients dissipate enough to meaningfully shift the resting potential. Options A and E are incorrect because the gradients do not change immediately. Options B and D are not direct consequences of pump blockade.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which correctly states the orientation of concentrations in the Nernst equation as taught in this lecture?",
+    "options": [
+      "E = (RT/Fz) × ln([ion]in / [ion]out), giving a negative value for K+",
+      "E = (RT/Fz) × ln([ion]in / [ion]out), with inside on top",
+      "E = (Fz/RT) × ln([ion]out / [ion]in), inverted fraction",
+      "E = (RT/z) × log([ion]out / [ion]in), omitting Faraday's constant",
+      "E = (RT/Fz) × ln([ion]out / [ion]in), with outside on top"
+    ],
+    "answer": 4,
+    "topic": "nernst-equation",
+    "explain": "By convention the extracellular side is the reference (0 mV), and the Nernst equation is written with the outside concentration in the numerator: E = (RT/Fz) × ln([ion]out/[ion]in). Placing the inside concentration on top inverts the sign and gives the wrong answer — a common exam error. Options A, B, C, and D all misstate the formula or its components.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Using the simplified Nernst equation (58 mV/z × log([ion]out/[ion]in)) and squid axon values (K+: 20 mM outside, 400 mM inside), what is E_K?",
+    "options": [
+      "+75 mV",
+      "+55 mV",
+      "−55 mV",
+      "−75 mV",
+      "0 mV"
+    ],
+    "answer": 3,
+    "topic": "nernst-equation",
+    "explain": "Substituting into the formula: 58/1 × log(20/400) = 58 × log(0.05) = 58 × (−1.30) ≈ −75 mV. The negative value reflects that K+ is much more concentrated inside, so the electrical gradient must be negative inside to balance the outward chemical gradient. +55 mV (Option B) is E_Na, not E_K. 0 mV would mean no gradient exists.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "The Goldman-Hodgkin-Katz (GHK) equation differs from the Nernst equation primarily because the GHK equation:",
+    "options": [
+      "Only applies to K+ ions at rest",
+      "Weights the contribution of each ion by its relative membrane permeability",
+      "Uses intracellular concentration in the numerator",
+      "Calculates the equilibrium potential for a single ion",
+      "Does not account for ion valence"
+    ],
+    "answer": 1,
+    "topic": "ghk-equation",
+    "explain": "The GHK equation calculates the actual resting membrane potential by incorporating multiple ions (K+, Na+, Cl−) weighted by their relative membrane permeabilities. At rest, pK : pNa : pCl = 1 : 0.05 : 0.45. The Nernst equation, by contrast, calculates the equilibrium potential for only a single ion, ignoring all others. Options A, C, D, and E all describe features of the Nernst equation or are incorrect statements about GHK.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "At the resting membrane potential of a typical mammalian neuron, which permeability ratio is correct?",
+    "options": [
+      "pK : pNa : pCl = 1 : 0.45 : 0.05",
+      "pK : pNa : pCl = 0.05 : 1 : 0.45",
+      "pK : pNa : pCl = 0.45 : 0.05 : 1",
+      "pK : pNa : pCl = 1 : 1 : 1",
+      "pK : pNa : pCl = 1 : 0.05 : 0.45"
+    ],
+    "answer": 4,
+    "topic": "ghk-equation",
+    "explain": "The resting GHK permeability ratios are pK : pNa : pCl = 1 : 0.05 : 0.45, with K+ as the reference (value 1). Because K+ permeability dominates at rest, the resting potential is close to E_K (≈ −75 mV) but slightly depolarised by the small but non-zero permeability to Na+ and Cl−. The other ratios listed either swap values or are physiologically meaningless.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which two conditions are both necessary to establish a membrane potential?",
+    "options": [
+      "A semi-permeable membrane and an ion concentration gradient across it",
+      "Presence of ATP and a semi-permeable membrane",
+      "An ion concentration gradient and continuous ATP hydrolysis",
+      "Voltage-gated channels and a ligand concentration gradient",
+      "Carrier proteins and an ion concentration gradient"
+    ],
+    "answer": 0,
+    "topic": "resting-membrane-potential",
+    "explain": "Two conditions are required: (1) a semi-permeable membrane — different ions have different permeabilities — and (2) an ion concentration gradient across that membrane. Together they create an electrochemical driving force. ATP is not required to establish the potential itself (only to maintain gradients long-term). Voltage-gated channels and carriers play roles in other processes but are not the two necessary conditions stated in the lecture.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "In a squid giant axon at rest, which statement about Na+ is correct?",
+    "options": [
+      "Both the concentration gradient and electrical gradient drive Na+ inward",
+      "Na+ is at electrochemical equilibrium because E_Na equals the resting potential",
+      "The electrical gradient opposes Na+ entry but the concentration gradient is negligible",
+      "Na+ is more concentrated inside (50 mM) than outside (440 mM)",
+      "Na+ efflux through leak channels keeps the membrane at rest"
+    ],
+    "answer": 0,
+    "topic": "ion-concentrations",
+    "explain": "In the squid axon Na+ is 50 mM inside and 440 mM outside, so the concentration gradient drives Na+ inward. The resting membrane potential (inside negative) also electrically attracts positively charged Na+ inward. Both forces act in the same direction, making Na+ strongly driven inward — it is far from equilibrium at rest. Option D reverses the concentrations. Option A is incorrect; E_Na ≈ +55 mV, far from the resting potential of ≈ −75 mV.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Tetrodotoxin (TTX) is applied to a neuron. Which result is expected?",
+    "options": [
+      "K+ efflux during repolarisation is blocked, prolonging the AP",
+      "The resting membrane potential depolarises immediately to 0 mV",
+      "All ion channels are non-selectively blocked",
+      "Voltage-gated Na+ channel opening is prevented, abolishing the rising phase of the AP",
+      "Ligand-gated Na+ channels are blocked, preventing EPSPs"
+    ],
+    "answer": 3,
+    "topic": "ttx-blocker",
+    "explain": "TTX is a potent and selective blocker of voltage-gated Na+ channels. By preventing Na+ influx during the depolarising phase, it abolishes the rising phase of the action potential — no AP can be generated. It does not block K+ channels (Option A), so repolarisation mechanisms are intact. It does not affect ligand-gated channels or resting potential directly. All other options describe incorrect effects.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which of the following correctly distinguishes ion channels from carrier proteins?",
+    "options": [
+      "Channels can perform primary active transport; carriers cannot",
+      "Carriers move ions faster (>10^6 ions/sec); channels are slower",
+      "Channels are always passive; carriers can be active or passive",
+      "Both channels and carriers require ATP for ion movement",
+      "Channels require a ligand to bind before any ions can pass through"
+    ],
+    "answer": 2,
+    "topic": "membrane-transport-types",
+    "explain": "The defining rule is that ion channels are always passive — ions move down their electrochemical gradient — while carriers can be either passive (facilitated diffusion) or active (primary or secondary active transport). Ion channels are also much faster than carriers (>10^6 ions/s vs. thousands per second for carriers). Options A and D are incorrect; channels never use ATP. Option B reverses the rate comparison. Option E applies only to ligand-gated channels, not all channels.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which gating mechanism is responsible for opening Na+ channels during the rising phase of an action potential?",
+    "options": [
+      "Ligand-gating by acetylcholine binding",
+      "Mechanical deformation of the membrane",
+      "Second-messenger gating via cAMP",
+      "Osmotic pressure changes across the membrane",
+      "Voltage-gating in response to membrane depolarisation"
+    ],
+    "answer": 4,
+    "topic": "channel-gating",
+    "explain": "The Na+ channels responsible for the AP rising phase are voltage-gated — they open when the membrane potential depolarises to threshold. The positive-feedback loop of depolarisation opening more voltage-gated Na+ channels drives the regenerative AP. Ligand-gating (Option A) applies to postsynaptic receptor channels, not the AP-generating Na+ channels. Mechanical gating (Option B) is used in sensory mechanoreceptors. Second-messenger gating (Option C) is too slow for the AP timescale.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "During the repolarisation phase of an action potential, which combination of events occurs?",
+    "options": [
+      "Na+ channels open further; K+ channels close",
+      "Na+ channels inactivate AND voltage-gated K+ channels open",
+      "Na+ channels simply close (return to closed state); K+ efflux drives repolarisation alone",
+      "Na+ channels inactivate; K+ channels also inactivate simultaneously",
+      "Cl− channels open and drive the membrane negative"
+    ],
+    "answer": 1,
+    "topic": "action-potential-phases",
+    "explain": "Repolarisation is caused by two simultaneous events: (1) voltage-gated Na+ channels transition to an inactivated state (not simply closed — a distinct conformational state that cannot be immediately reopened by depolarisation), and (2) delayed voltage-gated K+ channels open, allowing K+ to rush out. Option C is a classic exam trap — Na+ channels inactivate rather than simply closing, and both processes contribute to repolarisation.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "What causes the afterhyperpolarisation phase of an action potential?",
+    "options": [
+      "Voltage-gated K+ channels remaining open longer than necessary after repolarisation",
+      "Na+ channels reopening and driving the membrane below rest",
+      "The Na+/K+-ATPase rapidly pumping out excess Na+",
+      "Cl− channels opening in response to high intracellular Na+",
+      "Inactivation of ligand-gated channels at the membrane"
+    ],
+    "answer": 0,
+    "topic": "action-potential-phases",
+    "explain": "After repolarisation, voltage-gated K+ channels remain open briefly longer than needed, allowing continued K+ efflux that drives the membrane below the resting potential — the afterhyperpolarisation. The channels then close and the membrane returns to rest. The Na+/K+-ATPase (Option C) contributes negligibly to this transient event; it operates on a much slower timescale and is primarily for long-term gradient maintenance.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "The all-or-none property of action potentials means which of the following?",
+    "options": [
+      "Once threshold is crossed, the AP always has the same amplitude and shape regardless of stimulus strength",
+      "The AP amplitude increases proportionally with stimulus intensity above threshold",
+      "Below threshold a small AP is produced; above threshold a full AP is produced",
+      "Every stimulus will eventually produce an AP if given enough time",
+      "The AP can only propagate in one direction"
+    ],
+    "answer": 0,
+    "topic": "action-potential-properties",
+    "explain": "The all-or-none law states that once the membrane potential crosses threshold, the resulting AP is always the same amplitude and shape — it does not scale with stimulus intensity. Stimuli below threshold produce only a graded depolarisation, not an AP. Option B is the opposite of all-or-none (that describes a graded response). Option C is incorrect because no partial AP is produced below threshold. Unidirectionality (Option E) is a separate, distinct property.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "What constitutes the positive-feedback loop responsible for threshold in action potential generation?",
+    "options": [
+      "K+ efflux exceeding Na+ influx, causing progressive depolarisation",
+      "Ca2+ influx triggering more Ca2+ release from intracellular stores",
+      "Acetylcholine binding opening more Na+ channels until threshold is reached",
+      "Membrane depolarisation opening voltage-gated Na+ channels → more Na+ influx → more depolarisation",
+      "The Na+/K+-ATPase increasing its pumping rate to create a positive charge excess"
+    ],
+    "answer": 3,
+    "topic": "ap-threshold-mechanism",
+    "explain": "The threshold mechanism is a regenerative positive-feedback loop: depolarisation opens voltage-gated Na+ channels → Na+ rushes in → further depolarisation → even more Na+ channels open → runaway depolarisation. The loop is sustained when Na+ influx exceeds K+ efflux. Option A reverses the ion roles. Option B describes Ca2+-induced Ca2+ release (a different process in muscle). Option C involves ligand-gated channels, not voltage-gated ones.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "During the absolute refractory period, why is it impossible to generate a second action potential?",
+    "options": [
+      "Voltage-gated K+ channels are fully open, clamping the membrane at E_K",
+      "All voltage-gated Na+ channels are fully inactivated and cannot be reopened by depolarisation",
+      "The Na+/K+-ATPase hyperpolarises the membrane below threshold",
+      "Ligand-gated channels are desensitised to neurotransmitter",
+      "Membrane resistance is too low to allow depolarisation to spread"
+    ],
+    "answer": 1,
+    "topic": "refractory-periods",
+    "explain": "During the absolute refractory period, voltage-gated Na+ channels are in the inactivated state — a distinct conformational state from simply closed. Inactivated channels cannot be re-opened by further depolarisation; they must first recover (de-inactivate) by returning to a hyperpolarised potential. This makes threshold effectively infinite. Option A is partially true during repolarisation but is not the primary mechanism for the absolute refractory period.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "During the relative refractory period, which of the following is true?",
+    "options": [
+      "No action potential can be generated under any circumstances",
+      "Na+ channels are fully recovered and the membrane is at normal resting potential",
+      "An AP can be generated, but only with a stronger-than-normal stimulus, and the AP will be smaller",
+      "K+ channels are fully closed and the membrane sits at exactly the resting potential",
+      "Threshold is lower than normal, making the neuron hyperexcitable"
+    ],
+    "answer": 2,
+    "topic": "refractory-periods",
+    "explain": "During the relative refractory period, Na+ channels are partially (not fully) recovering from inactivation, and the afterhyperpolarisation means the membrane is more negative than rest. A second AP can be generated but requires a stronger stimulus to overcome elevated threshold, and the resulting AP is smaller in amplitude. Option A describes the absolute refractory period. Option E is the opposite — threshold is elevated, not lowered, during the relative refractory period.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "How does the refractory period contribute to unidirectional AP propagation?",
+    "options": [
+      "The region of membrane just behind the advancing AP is in the absolute refractory period, preventing backward re-excitation",
+      "It prevents K+ channels from opening behind the AP wavefront",
+      "It causes voltage-gated Na+ channels to open preferentially in the forward direction only",
+      "It blocks passive electrotonic spread from occurring in reverse",
+      "It increases membrane resistance behind the AP, channelling current forward"
+    ],
+    "answer": 0,
+    "topic": "refractory-periods",
+    "explain": "As an AP advances, the membrane that was just depolarised enters the absolute refractory period (Na+ channels inactivated). When local current from the AP spreads forward and backward, only the forward membrane can be re-excited — the region just behind it cannot respond because its Na+ channels are fully inactivated. This asymmetry enforces unidirectional propagation. The other options describe mechanisms that do not operate in this context.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which of the following correctly compares passive (electrotonic) propagation with active (AP) propagation?",
+    "options": [
+      "Passive propagation is regenerative; active propagation decrements with distance",
+      "Both passive and active propagation spread bidirectionally without decrement",
+      "Active propagation is slower than passive propagation over long distances",
+      "Passive propagation decrements exponentially; active propagation is regenerative and non-decrementing",
+      "Passive propagation is unidirectional; active propagation spreads in all directions"
+    ],
+    "answer": 3,
+    "topic": "ap-propagation",
+    "explain": "Passive (electrotonic) propagation decrements exponentially with distance (characterised by the length constant λ) and spreads in all directions. Active (AP) propagation is regenerative — voltage-gated channels are re-activated at each patch of membrane — so amplitude does not decay. Additionally, active propagation is unidirectional due to refractoriness. Options A and B reverse these properties. Option C is incorrect: AP propagation is faster over long distances because it does not decay.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "What is saltatory conduction, and in which type of axon does it occur?",
+    "options": [
+      "AP spreading continuously along the full length of unmyelinated axons",
+      "AP regeneration at nodes of Ranvier, appearing to jump between nodes in myelinated axons",
+      "Passive electrotonic spread accelerated by high membrane resistance in demyelinated axons",
+      "Ion current flowing through myelin sheaths to depolarise distant regions",
+      "AP propagation driven by Ca2+ channels at the axon hillock"
+    ],
+    "answer": 1,
+    "topic": "saltatory-conduction",
+    "explain": "In myelinated axons, the myelin sheath insulates internodal membrane and increases the effective length constant. APs can only be regenerated at nodes of Ranvier (gaps in myelin), so the AP appears to jump from node to node — saltatory conduction. It is faster and more energetically efficient than continuous conduction in unmyelinated axons of the same diameter. Option C describes what happens in demyelinating disease, not normal saltatory conduction. Option D is incorrect; current does not flow through myelin.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which of the following is NOT an advantage of saltatory conduction over conduction in unmyelinated axons?",
+    "options": [
+      "Higher conduction velocity for the same axon diameter",
+      "Lower metabolic cost because fewer ions cross the membrane",
+      "The AP amplitude increases progressively along the axon",
+      "Less membrane surface area needs to be actively depolarised",
+      "More energetically efficient Na+/K+-ATPase usage"
+    ],
+    "answer": 2,
+    "topic": "saltatory-conduction",
+    "explain": "AP amplitude does not increase along myelinated axons — the action potential is all-or-none and maintains the same amplitude at each node of Ranvier. The genuine advantages of saltatory conduction are faster velocity (Option A), lower metabolic cost (Options B and E), and less membrane area being actively depolarised (Option D). Option C is false and is the NOT answer because APs do not progressively amplify during conduction.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Which ion's influx into the presynaptic terminal triggers neurotransmitter release?",
+    "options": [
+      "Na+ influx through voltage-gated channels",
+      "K+ efflux through delayed rectifier channels",
+      "Ca2+ influx through voltage-gated Ca2+ channels",
+      "Cl− influx through ligand-gated channels",
+      "Mg2+ influx through NMDA receptor channels"
+    ],
+    "answer": 2,
+    "topic": "synaptic-transmission-steps",
+    "explain": "When the AP depolarises the presynaptic terminal, voltage-gated Ca2+ channels open and Ca2+ flows in (driven strongly by both concentration and electrical gradients). This Ca2+ influx triggers synaptic vesicle fusion with the presynaptic membrane (exocytosis) and neurotransmitter release into the synaptic cleft. Blocking Ca2+ channels abolishes transmitter release even if the AP fires normally. Na+ influx (Option A) generates the AP but does not directly trigger vesicle fusion.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "A neurotransmitter produces depolarisation at one synapse and hyperpolarisation at another. This is best explained by:",
+    "options": [
+      "The transmitter changing its chemical structure depending on the target cell",
+      "Different concentrations of the same transmitter at the two synapses",
+      "The presynaptic neuron releasing different transmitters at each terminal",
+      "The type of postsynaptic receptor and the ion channel it gates determining the response",
+      "The resting membrane potential of each target cell determining the response sign"
+    ],
+    "answer": 3,
+    "topic": "epsp-ipsp",
+    "explain": "The nature of the postsynaptic receptor — not the transmitter identity — determines whether the response is excitatory (EPSP) or inhibitory (IPSP). The same transmitter can open different ion channels at different synapses, producing depolarisation at one and hyperpolarisation at another. The transmitter's chemical identity does not change (Option A), and concentration differences (Option B) do not switch the sign of the response.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Which mechanism terminates the action of acetylcholine (ACh) in the synaptic cleft?",
+    "options": [
+      "Re-uptake of ACh by monoamine transporters into the presynaptic terminal",
+      "Phosphorylation of ACh by protein kinase A",
+      "Enzymatic degradation by acetylcholinesterase",
+      "Sequestration of ACh into postsynaptic vesicles",
+      "Diffusion of ACh across the postsynaptic membrane into the cytoplasm"
+    ],
+    "answer": 2,
+    "topic": "transmitter-inactivation",
+    "explain": "Acetylcholine is primarily inactivated by the enzyme acetylcholinesterase (AChE), which breaks ACh into acetate and choline within the synaptic cleft. Choline is then taken back up into the presynaptic terminal for re-synthesis. Monoamine transporters (Option A) handle dopamine, serotonin, and noradrenaline — not ACh. Diffusion (Option E) plays a minor role for some peptide transmitters but is not the primary mechanism for ACh.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Where does synaptic integration occur in a neuron, and what does it involve?",
+    "options": [
+      "At the cell body; integration of metabolic signals from mitochondria",
+      "At the dendrites; summation of voltage-gated channel activity only",
+      "At the presynaptic terminal; summation of Ca2+ signals",
+      "At the nodes of Ranvier; summation of local electrotonic potentials",
+      "At the axon hillock; spatial and temporal summation of EPSPs and IPSPs to reach threshold"
+    ],
+    "answer": 4,
+    "topic": "synaptic-integration",
+    "explain": "Synaptic integration occurs at the axon hillock, which has the highest density of voltage-gated Na+ channels and the lowest threshold for AP initiation. EPSPs and IPSPs from multiple inputs are summed spatially (simultaneous inputs from different locations) and temporally (rapid successive inputs from the same source). Only when the net depolarisation crosses threshold does an AP fire — the neuron acts as a coincidence detector.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which correctly lists all five steps of chemical synaptic transmission in order?",
+    "options": [
+      "Release → Storage → Synthesis → Postsynaptic effects → Inactivation",
+      "Synthesis → Storage → Release → Postsynaptic effects → Inactivation",
+      "Synthesis → Release → Storage → Inactivation → Postsynaptic effects",
+      "Storage → Synthesis → Release → Inactivation → Postsynaptic effects",
+      "Synthesis → Storage → Postsynaptic effects → Release → Inactivation"
+    ],
+    "answer": 1,
+    "topic": "synaptic-transmission-steps",
+    "explain": "The five sequential steps of chemical synaptic transmission are: (1) Synthesis of neurotransmitter, (2) Storage in synaptic vesicles, (3) Release by Ca2+-triggered exocytosis, (4) Postsynaptic effects (receptor binding → ion channel changes → EPSP/IPSP), and (5) Inactivation (degradation, re-uptake, or diffusion). All other options place steps out of order, which would be physiologically impossible.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "A neurotransmitter opens K+ channels at the postsynaptic membrane, producing an IPSP. Why is K+ channel opening inhibitory?",
+    "options": [
+      "K+ influx depolarises the membrane, increasing the distance from threshold",
+      "K+ efflux hyperpolarises the membrane, moving it further from threshold and making AP initiation harder",
+      "K+ efflux directly inactivates voltage-gated Na+ channels",
+      "K+ influx clamps the membrane at E_K, which is above threshold",
+      "K+ efflux reduces the extracellular K+ concentration, blocking Na+ entry"
+    ],
+    "answer": 1,
+    "topic": "epsp-ipsp",
+    "explain": "Opening K+ channels allows K+ to move out of the cell (down its electrochemical gradient at membrane potentials more positive than E_K), hyperpolarising the membrane — moving it further from threshold. This makes it harder for coincident EPSPs to bring the axon hillock to threshold. Option D is incorrect: E_K ≈ −75 mV, which is below (more negative than) threshold, not above it. K+ efflux does not directly inactivate Na+ channels (Option C).",
+    "difficulty": "hard"
+  },
+  {
+    "q": "The patch-clamp technique is significant in channel biology because it allows:",
+    "options": [
+      "Measurement of ion concentrations inside living cells using fluorescent dyes",
+      "Imaging of individual channel protein structures at atomic resolution",
+      "Recording of single-channel currents from a tiny membrane patch to study gating and pharmacology",
+      "Delivery of genes encoding ion channels directly into neurons",
+      "Measurement of neurotransmitter concentrations in the synaptic cleft"
+    ],
+    "answer": 2,
+    "topic": "channel-gating",
+    "explain": "The patch-clamp technique, developed by Erwin Neher and Bernd Sakmann (Nobel Prize 1991), seals a glass pipette onto a tiny membrane patch and records currents from individual ion channels. This allows direct observation of channel gating (open/closed transitions), pharmacological effects of drugs, and biophysical properties of channels. Options A, B, D, and E describe other techniques (fluorescence imaging, cryo-EM, gene delivery, electrochemical sensors, respectively).",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Ca2+ has an intracellular concentration of ~0.0001 mM and an extracellular concentration of ~1–2 mM. At rest (inside ≈ −70 mV), what is the direction of net electrochemical driving force on Ca2+?",
+    "options": [
+      "Strongly outward — both gradients drive Ca2+ out",
+      "Weakly inward — concentration gradient in, electrical gradient out, nearly balanced",
+      "No net force — Ca2+ is at equilibrium at the resting potential",
+      "Weakly outward — electrical gradient slightly exceeds concentration gradient",
+      "Strongly inward — both concentration and electrical gradients drive Ca2+ in"
+    ],
+    "answer": 4,
+    "topic": "ion-concentrations",
+    "explain": "Ca2+ is ~10,000× more concentrated outside than inside, creating a massive inward concentration gradient. The interior of the cell is also negative (≈ −70 mV), which electrically attracts the positively charged Ca2+ inward. Both forces act in the same direction — strongly driving Ca2+ into the cell. This is why opening voltage-gated Ca2+ channels at the presynaptic terminal causes rapid Ca2+ influx that triggers vesicle fusion.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "If demyelination occurs in a previously myelinated axon, which change in conduction is most expected?",
+    "options": [
+      "Conduction velocity increases because more ion channels are now exposed along the axon",
+      "The AP amplitude doubles as it can now regenerate continuously at every point",
+      "No change occurs because the nodes of Ranvier remain structurally intact",
+      "Conduction velocity decreases or conduction fails because the effective length constant is reduced",
+      "Saltatory conduction converts to faster and more efficient continuous conduction"
+    ],
+    "answer": 3,
+    "topic": "saltatory-conduction",
+    "explain": "Myelin dramatically increases the effective length constant of the axon, allowing AP-generated current to spread far enough to reach the next node of Ranvier and re-excite it. If myelin is lost, the length constant shortens, local currents may fail to reach the next excitable region, and conduction slows drastically or fails (conduction block) — as seen in demyelinating diseases like multiple sclerosis. Option E is the opposite of what actually happens: continuous conduction in unmyelinated axons is slower, not faster.",
+    "difficulty": "hard"
+  }
+]

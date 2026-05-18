@@ -1,0 +1,422 @@
+[
+  {
+    "q": "Which structural feature correctly describes G-protein-coupled receptors (GPCRs)?",
+    "options": [
+      "Single-pass transmembrane protein with an intracellular kinase domain",
+      "Double-pass transmembrane protein with two membrane-spanning helices",
+      "Seven-pass transmembrane protein with seven membrane-spanning helices",
+      "Peripheral membrane protein anchored by a GPI lipid tail",
+      "Soluble nuclear receptor that binds lipid-soluble ligands in the cytoplasm"
+    ],
+    "answer": 2,
+    "topic": "gpcr-intro",
+    "explain": "GPCRs are defined by their seven-pass (heptahelical) transmembrane topology. The most common error is confusing GPCRs with RTKs, which are single-pass transmembrane proteins; single-pass is the description of enzyme-coupled receptors, not GPCRs.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Approximately what fraction of currently used drugs exert their effects through GPCRs?",
+    "options": [
+      "~5% of currently used drugs",
+      "~10% of currently used drugs",
+      "~20% of currently used drugs",
+      "~30% of currently used drugs",
+      "~50% of currently used drugs"
+    ],
+    "answer": 3,
+    "topic": "gpcr-intro",
+    "explain": "Approximately 30% of all drugs in clinical use act through GPCRs, reflecting the enormous therapeutic importance of this receptor family. The ~400 olfactory receptor figure is a different statistic about the GPCR family size, not about drug targets.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "When a ligand binds an active GPCR and GDP dissociates from the Gα subunit, what event immediately follows?",
+    "options": [
+      "Gα is phosphorylated by a receptor-associated kinase and becomes active",
+      "GTP binds Gα, causing Gα-GTP to dissociate from Gβγ",
+      "Gβγ hydrolyzes GTP to GDP and reassociates with Gα",
+      "The receptor internalizes and Gα is degraded by the proteasome",
+      "IP₃ is released from the membrane and diffuses to the ER"
+    ],
+    "answer": 1,
+    "topic": "g-protein-activation",
+    "explain": "GDP dissociation creates an empty nucleotide-binding site on Gα; GTP (which is present at high concentrations in the cytosol) rapidly fills this site, producing Gα-GTP, which then dissociates from Gβγ. GTP hydrolysis (not GTP binding) is the inactivating step that comes later.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "What molecular event terminates the activity of Gα-GTP signaling?",
+    "options": [
+      "A cytosolic phosphatase removes the phosphate from Gα",
+      "Gβγ binds back to Gα and blocks its effector-binding surface",
+      "The intrinsic GTPase activity of Gα hydrolyzes GTP to GDP",
+      "The ligand dissociates from the GPCR and allows Gα to re-associate",
+      "Ubiquitin-mediated proteasomal degradation of Gα-GTP"
+    ],
+    "answer": 2,
+    "topic": "g-protein-activation",
+    "explain": "The duration of Gα signaling is determined by the intrinsic GTPase (GTP-hydrolyzing) activity built into the Gα subunit itself. Once GTP is hydrolyzed to GDP, Gα returns to its inactive conformation and reassociates with Gβγ. Phosphatases and protein degradation are not the primary mechanism.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "After a GPCR ligand triggers G protein dissociation, which statement correctly describes the activity of the resulting subunits?",
+    "options": [
+      "Only Gα-GTP is active; Gβγ remains inactive until Gα reassociates",
+      "Only Gβγ is active; Gα-GTP is sequestered by a chaperone protein",
+      "Both Gα-GTP and free Gβγ are active and each can activate distinct effectors",
+      "Neither subunit is active until the receptor is phosphorylated by GRK",
+      "Gα-GTP and Gβγ form a new heterotrimer with a different Gα isoform"
+    ],
+    "answer": 2,
+    "topic": "g-protein-activation",
+    "explain": "Both Gα-GTP and free Gβγ are active effector-activating units after dissociation. For example, Gβγ directly opens K⁺ channels in heart pacemaker cells. Students frequently attribute all downstream activity only to Gα, missing the important role of Gβγ.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which of the following is NOT a direct effector activated by heterotrimeric G proteins downstream of a GPCR?",
+    "options": [
+      "Adenylyl cyclase, producing cAMP from ATP",
+      "Phospholipase C, cleaving PIP₂ into IP₃ and DAG",
+      "Ion channels, such as K⁺ channels in cardiac pacemaker cells",
+      "Receptor tyrosine kinases, triggering phosphotyrosine docking",
+      "None of the above — all four are direct G-protein effectors"
+    ],
+    "answer": 3,
+    "topic": "g-protein-effectors",
+    "explain": "The three canonical G-protein effectors are adenylyl cyclase, phospholipase C, and ion channels. RTKs are a completely separate class of cell-surface receptors activated by growth factors, not by GPCR-coupled G proteins.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "In heart pacemaker cells, which subunit of the G protein directly opens K⁺ channels to slow heart rate after acetylcholine binds its muscarinic GPCR?",
+    "options": [
+      "Gα-GDP, the inactive form of the alpha subunit",
+      "Gα-GTP, the active form of the alpha subunit",
+      "Gβγ, the free beta-gamma complex after G protein dissociation",
+      "The GPCR itself, which changes conformation to gate the channel",
+      "cAMP, generated by adenylyl cyclase after G protein activation"
+    ],
+    "answer": 2,
+    "topic": "g-protein-effectors",
+    "explain": "In heart pacemaker cells, the free Gβγ complex directly opens K⁺ channels, causing K⁺ efflux, hyperpolarization, and slowed heart rate. This is a key example of Gβγ-mediated effector activation, not Gα-mediated, which is a common source of confusion.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Adrenaline binds its adrenergic GPCR, activates the Gs protein, and ultimately increases glycogen breakdown in muscle. Which intracellular relay correctly describes this pathway?",
+    "options": [
+      "Gs → phospholipase C → IP₃ → Ca²⁺ → PKC → glycogen breakdown",
+      "Gs → adenylyl cyclase → cAMP → PKA → glycogen breakdown",
+      "Gs → PI3-kinase → PIP₃ → Akt → glycogen breakdown",
+      "Gs → Ras-GEF → Ras-GTP → MAPK → glycogen breakdown",
+      "Gs → guanylyl cyclase → cGMP → PKG → glycogen breakdown"
+    ],
+    "answer": 1,
+    "topic": "adenylyl-cyclase-camp-pka",
+    "explain": "The Gs/adenylyl cyclase/cAMP/PKA pathway is the canonical route through which adrenaline stimulates glycogen breakdown. The PLC/PKC and PI3K/Akt pathways are distinct and not involved in this adrenaline response.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which second messenger directly activates Protein Kinase A (PKA)?",
+    "options": [
+      "Diacylglycerol (DAG) produced by PLC",
+      "Inositol trisphosphate (IP₃) released into the cytosol",
+      "Cyclic AMP (cAMP) synthesized by adenylyl cyclase",
+      "Calcium ions released from the endoplasmic reticulum",
+      "Phosphatidylinositol trisphosphate (PIP₃) in the inner leaflet"
+    ],
+    "answer": 2,
+    "topic": "adenylyl-cyclase-camp-pka",
+    "explain": "cAMP binds to the regulatory subunits of PKA, releasing the catalytic subunits and activating them. DAG and Ca²⁺ together activate PKC, not PKA — confusing these two pathways and their respective kinases is one of the most common exam errors.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Phospholipase C (PLC) is activated by a G protein. Which pair of molecules does it generate by cleaving PIP₂?",
+    "options": [
+      "cAMP and cGMP, two cyclic nucleotide second messengers",
+      "IP₃ and diacylglycerol (DAG), two distinct second messengers",
+      "PIP₃ and PDK1, a lipid second messenger and a kinase",
+      "GDP and GTP, exchanged on the Gα subunit",
+      "Arachidonic acid and lysophospholipid, prostaglandin precursors"
+    ],
+    "answer": 1,
+    "topic": "phospholipase-c-pkc",
+    "explain": "PLC cleaves the membrane phospholipid PIP₂ into IP₃ (water-soluble, diffuses to ER) and DAG (lipid-soluble, stays in membrane). Both products are second messengers. Students often name only one — the exam expects both.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "After PLC cleaves PIP₂, IP₃ and DAG are generated. What is the primary initial source of the Ca²⁺ that is released into the cytosol?",
+    "options": [
+      "Voltage-gated Ca²⁺ channels in the plasma membrane open in response to IP₃",
+      "IP₃ opens Ca²⁺ channels on the endoplasmic reticulum membrane",
+      "DAG chelates extracellular Ca²⁺ and transports it across the plasma membrane",
+      "Mitochondria release stored Ca²⁺ in response to elevated DAG",
+      "Adenylyl cyclase-generated cAMP opens ER Ca²⁺ channels indirectly"
+    ],
+    "answer": 1,
+    "topic": "phospholipase-c-pkc",
+    "explain": "IP₃ (inositol trisphosphate) is water-soluble and diffuses to the ER membrane, where it binds and opens IP₃-gated Ca²⁺ channels, releasing Ca²⁺ from the ER lumen into the cytosol. The ER Ca²⁺ concentration (~1 mM) is far higher than resting cytosolic levels (~10⁻⁴ mM), driving rapid release.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "A sperm fertilizes an egg and a Ca²⁺ wave sweeps across the egg. Which signaling molecules are responsible for this Ca²⁺ release?",
+    "options": [
+      "cAMP activates PKA, which phosphorylates ER Ca²⁺ pumps to open them",
+      "IP₃ opens Ca²⁺ channels on the ER, releasing stored Ca²⁺ into the cytosol",
+      "PIP₃ recruits Akt, which phosphorylates and opens plasma membrane Ca²⁺ channels",
+      "Ras-GTP activates MAPK, which phosphorylates Ca²⁺ transporters",
+      "Free Gβγ directly opens voltage-gated plasma membrane Ca²⁺ channels"
+    ],
+    "answer": 1,
+    "topic": "phospholipase-c-pkc",
+    "explain": "The sperm-triggered Ca²⁺ wave in an egg is a classic example of IP₃-mediated Ca²⁺ release from ER stores. PLC generates IP₃ from PIP₂, IP₃ opens ER Ca²⁺ channels, and Ca²⁺ floods the cytosol, propagating as a wave. This is the PLC/Ca²⁺ pathway, not the cAMP/PKA or PI3K/Akt pathways.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which description correctly contrasts enzyme-coupled receptors with GPCRs?",
+    "options": [
+      "Enzyme-coupled receptors have seven transmembrane helices; GPCRs have one",
+      "Enzyme-coupled receptors are single-pass transmembrane proteins; GPCRs have seven passes",
+      "Enzyme-coupled receptors couple exclusively to Gβγ; GPCRs couple to Gα only",
+      "Enzyme-coupled receptors act exclusively in the nucleus; GPCRs act at the plasma membrane",
+      "Enzyme-coupled receptors use cAMP as a second messenger; GPCRs use IP₃ only"
+    ],
+    "answer": 1,
+    "topic": "enzyme-coupled-receptors-intro",
+    "explain": "Enzyme-coupled receptors (including RTKs) are single-pass transmembrane proteins, whereas GPCRs are seven-pass. Mixing up these transmembrane topologies is one of the most frequently tested exam traps in cell signaling.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Enzyme-coupled receptors primarily respond to which class of extracellular ligands, and what downstream outcome do they typically regulate?",
+    "options": [
+      "Neurotransmitters that regulate ion channel gating and membrane potential",
+      "Steroid hormones that bind intracellular receptors and directly activate gene transcription",
+      "Growth factors that regulate cell growth, proliferation, differentiation, and survival via gene expression changes",
+      "Second messengers such as cAMP that amplify signals within the same cell",
+      "Odorant molecules that activate olfactory neurons via GPCR cascades"
+    ],
+    "answer": 2,
+    "topic": "enzyme-coupled-receptors-intro",
+    "explain": "Enzyme-coupled receptors respond primarily to growth factors and their activation typically leads to changes in gene expression that regulate proliferation, differentiation, growth, and survival. They are distinct from GPCRs (which handle neurotransmitters and hormones) and steroid receptors (which are intracellular).",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which three subtypes correctly represent the major classes of enzyme-coupled receptors?",
+    "options": [
+      "Ion channel receptors, GPCR-coupled receptors, and nuclear receptors",
+      "cAMP-linked receptors, cGMP-linked receptors, and IP₃-linked receptors",
+      "Tyrosine kinase receptors, serine/threonine kinase receptors, and guanylyl cyclase-linked receptors",
+      "Tyrosine kinase receptors, lipid kinase receptors, and phosphatase-linked receptors",
+      "MAPK-linked receptors, PI3K-linked receptors, and PKC-linked receptors"
+    ],
+    "answer": 2,
+    "topic": "enzyme-coupled-subtypes",
+    "explain": "The three main subtypes of enzyme-coupled receptors are tyrosine kinase receptors (RTKs), serine/threonine kinase receptors (e.g., TGF-β receptors), and guanylyl cyclase-linked receptors. Knowing all three is important — listing only two is a common exam shortfall.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "What is the correct sequence of events when an RTK is activated by a dimeric growth factor ligand?",
+    "options": [
+      "Receptor dimerizes → ligand binds → transautophosphorylation → docking site formation",
+      "Ligand binds → receptor dimerizes → transautophosphorylation of tyrosines → phosphotyrosine docking sites assembled",
+      "Ligand binds → cAMP rises → PKA is activated → tyrosines are phosphorylated",
+      "Receptor dimerizes spontaneously → ligand stabilizes the dimer → GDP dissociates from Gα",
+      "Ligand binds → PI3-kinase phosphorylates the receptor tail → Akt docks directly on RTK"
+    ],
+    "answer": 1,
+    "topic": "rtk-activation-complex",
+    "explain": "Ligand binding is the triggering event that causes RTK dimerization; the receptors do not pre-dimerize. Dimerization activates the intracellular kinase domains, which then transautophosphorylate tyrosine residues on each other's cytoplasmic tails, creating docking sites for downstream signaling proteins.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Each phosphotyrosine on an activated RTK tail serves as a docking site. Which statement about these docking sites is correct?",
+    "options": [
+      "All phosphotyrosines recruit the same adaptor protein, ensuring signal uniformity",
+      "Each phosphotyrosine recruits a different specific signaling protein, enabling multiple parallel pathways",
+      "Phosphotyrosines are recognized by SH2-domain proteins only if GDP is present on Ras",
+      "Docking sites are formed before dimerization to prime the receptor for activation",
+      "Phosphotyrosines recruit only serine kinases that then phosphorylate cytoskeletal proteins"
+    ],
+    "answer": 1,
+    "topic": "rtk-activation-complex",
+    "explain": "A key feature of RTK signaling is pathway multiplexing: each phosphotyrosine sequence is recognized by a different intracellular signaling protein, allowing one activated RTK to simultaneously activate multiple distinct downstream cascades (e.g., both the Ras/MAPK and PI3K/Akt pathways).",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which of the following is NOT a correct statement about RTK activation?",
+    "options": [
+      "Ligand binding induces dimerization of two RTK monomers",
+      "Dimerization activates the intracellular kinase domain of each receptor",
+      "The kinase domain phosphorylates tyrosine residues on the adjacent receptor tail",
+      "RTK monomers spontaneously dimerize in the absence of ligand to pre-activate the receptor",
+      "Multiple phosphotyrosines on the activated RTK create simultaneous parallel signaling"
+    ],
+    "answer": 3,
+    "topic": "rtk-activation-complex",
+    "explain": "RTKs do NOT spontaneously dimerize in the absence of ligand; ligand binding is the event that induces dimerization. Constitutive (ligand-independent) dimerization would lead to uncontrolled, cancer-driving signaling — which is why some EGFR mutations that cause constitutive activity are oncogenic.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "A researcher mutates tyrosine Y3 of an RTK to alanine. They observe that signaling protein X no longer co-immunoprecipitates with the activated receptor. What conclusion is correct?",
+    "options": [
+      "Phospho-Y3 is the specific docking site that recruits signaling protein X",
+      "Y3 is required for GDP–GTP exchange on the Gα subunit of the associated G protein",
+      "Y3 phosphorylation is needed to activate adenylyl cyclase downstream of the RTK",
+      "Alanine at position 3 causes receptor misfolding and prevents all downstream signaling",
+      "Phospho-Y3 recruits Gβγ to the RTK cytoplasmic tail to amplify signal"
+    ],
+    "answer": 0,
+    "topic": "rtk-mutagenesis",
+    "explain": "Mutating a tyrosine to alanine prevents phosphorylation at that site. If a specific signaling protein no longer associates with the receptor after this mutation, it means phospho-Y3 was the docking site for that protein. This tyrosine-to-alanine mutagenesis strategy is the standard experimental method for mapping RTK docking sites.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "A researcher expresses a constitutively active (GTP-locked) form of Ras in cells that lack protein Y. These cells signal normally through the MAPK pathway. What does this result indicate about protein Y?",
+    "options": [
+      "Protein Y acts downstream of Ras in the MAPK cascade",
+      "Protein Y acts upstream of Ras, because bypassing Ras rescues signaling without Y",
+      "Protein Y is the same as Ras-GEF (SOS) and is required for RTK signaling only",
+      "Protein Y acts in a completely separate pathway unrelated to Ras or MAPK",
+      "Protein Y is a tumor suppressor that inhibits Ras-GTP loading"
+    ],
+    "answer": 1,
+    "topic": "rtk-mutagenesis",
+    "explain": "If constitutively active Ras rescues MAPK signaling in cells lacking protein Y, then Y must act upstream of Ras — because bypassing the Ras-activation step is sufficient to restore the pathway. If Y were downstream of Ras, constitutively active Ras would not rescue the defect.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "What is the role of Grb2 in the RTK → Ras signaling cascade?",
+    "options": [
+      "Grb2 acts as a Ras-GEF and directly promotes GDP-to-GTP exchange on Ras",
+      "Grb2 acts as an adaptor protein: it docks on a phosphotyrosine of the RTK and recruits SOS (Ras-GEF)",
+      "Grb2 directly activates adenylyl cyclase to produce cAMP downstream of RTK",
+      "Grb2 is a GTPase-activating protein (GAP) that turns off Ras after signal transmission",
+      "Grb2 phosphorylates Raf to initiate the MAP kinase cascade"
+    ],
+    "answer": 1,
+    "topic": "rtk-activates-ras",
+    "explain": "Grb2 is an adaptor protein that lacks catalytic activity. It docks on an RTK phosphotyrosine via its SH2 domain and simultaneously recruits SOS (the Ras-GEF) via its SH3 domain. SOS is the molecule that actually promotes nucleotide exchange on Ras — Grb2 just bridges RTK to SOS.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which correctly describes the function of a Ras-GEF (guanine nucleotide exchange factor) such as SOS?",
+    "options": [
+      "It phosphorylates Ras on serine residues to activate it",
+      "It hydrolyzes GTP on Ras to inactivate it and terminate signaling",
+      "It promotes dissociation of GDP from Ras and loading of GTP, thereby activating Ras",
+      "It anchors Ras to the plasma membrane by adding a lipid modification",
+      "It ubiquitinates Ras to target it for proteasomal degradation after signaling"
+    ],
+    "answer": 2,
+    "topic": "rtk-activates-ras",
+    "explain": "GEF stands for guanine nucleotide exchange factor — it catalyzes the exchange of GDP for GTP on Ras, activating it. This is not phosphorylation (a common wrong answer). GTP hydrolysis is the inactivating step, carried out by Ras's own intrinsic GTPase activity (analogous to Gα).",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Approximately what percentage of human cancers contain activating mutations in Ras?",
+    "options": [
+      "~5% of human cancers",
+      "~10% of human cancers",
+      "~20% of human cancers",
+      "~30% of human cancers",
+      "~50% of human cancers"
+    ],
+    "answer": 3,
+    "topic": "rtk-activates-ras",
+    "explain": "Approximately 30% of human cancers harbor activating mutations in Ras that lock it in a constitutively GTP-bound state, continuously driving proliferation without upstream signals. This same 30% figure also applies to drugs acting through GPCRs, but the Ras cancer statistic is a distinct exam-relevant fact.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "In the RTK → MAP kinase cascade, what is the correct order of signal transducers downstream of active Ras?",
+    "options": [
+      "Ras → MEK → Raf → MAPK → nucleus",
+      "Ras → Raf → MEK → MAPK → nucleus",
+      "Ras → MAPK → MEK → Raf → nucleus",
+      "Ras → PI3K → PDK1 → Akt → nucleus",
+      "Ras → adenylyl cyclase → cAMP → PKA → nucleus"
+    ],
+    "answer": 1,
+    "topic": "rtk-activates-ras",
+    "explain": "The MAP kinase cascade downstream of Ras proceeds: Ras → Raf (a kinase) → MEK (a kinase) → MAPK → nucleus, where it changes gene expression. The PI3K/Akt branch is a separate RTK downstream pathway and should not be conflated with the Ras/MAPK cascade.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "What molecule does PI3-kinase directly phosphorylate in the RTK → PI3K → Akt pathway?",
+    "options": [
+      "The Akt protein, activating it directly by phosphorylating its activation loop",
+      "PDK1, which then recruits Akt to the plasma membrane",
+      "An inositol phospholipid (PIP₂) in the inner membrane leaflet, generating PIP₃",
+      "The cytoplasmic tail of the RTK, creating additional docking sites",
+      "Ras, converting it from its GDP-bound to GTP-bound active state"
+    ],
+    "answer": 2,
+    "topic": "pi3k-akt-pathway",
+    "explain": "PI3-kinase is a lipid kinase — it phosphorylates the 3-position of the inositol ring on PIP₂ to generate PIP₃. PIP₃ is a lipid second messenger that serves as a membrane docking site for PDK1 and Akt. PI3-kinase does not phosphorylate proteins directly.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which of the following is NOT correct regarding the PI3K/Akt pathway?",
+    "options": [
+      "PI3-kinase generates PIP₃ by phosphorylating a membrane lipid",
+      "PIP₃ recruits both PDK1 and Akt to the inner plasma membrane",
+      "PDK1 phosphorylates and activates Akt",
+      "PTEN opposes PI3-kinase by dephosphorylating PIP₃ back to PIP₂",
+      "Akt directly phosphorylates Ras-GEF to amplify the parallel Ras/MAPK signal"
+    ],
+    "answer": 4,
+    "topic": "pi3k-akt-pathway",
+    "explain": "Akt does not phosphorylate Ras-GEF. The PI3K/Akt and Ras/MAPK pathways are parallel branches activated by different phosphotyrosine docking sites on the RTK; Akt promotes cell survival and growth by phosphorylating its own distinct set of targets, not by feeding into the Ras pathway.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "EGFR is activated by EGF binding. Which two major downstream branches are simultaneously activated by the single activated EGFR dimer?",
+    "options": [
+      "The adenylyl cyclase/cAMP/PKA branch and the PLC/IP₃/Ca²⁺ branch",
+      "The Ras/MAPK branch and the PI3K/Akt branch",
+      "The guanylyl cyclase/cGMP branch and the serine/threonine kinase branch",
+      "The Wnt/β-catenin branch and the Notch/NICD branch",
+      "The JAK/STAT branch and the Smad/TGF-β branch"
+    ],
+    "answer": 1,
+    "topic": "egfr-pathway",
+    "explain": "EGFR simultaneously activates both the Ras/MAPK pathway (via Grb2–SOS docking on one phosphotyrosine) and the PI3K/Akt pathway (via PI3K docking on a different phosphotyrosine). This multiplexing from a single receptor is a hallmark of RTK signaling, not a feature of GPCR signaling.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "A patient's tumor cells express EGFRvIII, a mutant EGFR lacking the extracellular domain. Which statement about EGFRvIII is correct?",
+    "options": [
+      "EGFRvIII requires higher-than-normal EGF concentrations to be activated",
+      "EGFRvIII cannot dimerize and therefore has reduced signaling activity",
+      "EGFRvIII is constitutively active because it lacks the extracellular ligand-binding domain",
+      "EGFRvIII activates only the PI3K/Akt pathway because the Ras-docking site is deleted",
+      "EGFRvIII is sensitive to anti-EGFR monoclonal antibodies that target the extracellular domain"
+    ],
+    "answer": 2,
+    "topic": "egfr-cancer",
+    "explain": "EGFRvIII is a deletion mutant that lacks the extracellular ligand-binding domain. Without this domain, the receptor can no longer be regulated by ligand, and it signals constitutively — driving uncontrolled proliferation. Because EGFRvIII lacks an extracellular domain, anti-EGFR monoclonal antibodies (which target the extracellular domain) would not bind or inhibit it.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "How do EGFR tyrosine kinase inhibitors (TKIs) mechanistically differ from anti-EGFR monoclonal antibodies?",
+    "options": [
+      "TKIs block the extracellular ligand-binding domain; mAbs block the intracellular kinase domain",
+      "TKIs block the intracellular ATP-binding site of the kinase domain; mAbs block the extracellular domain",
+      "TKIs degrade EGFR mRNA; mAbs bind EGFR protein and trigger phagocytosis",
+      "TKIs activate PTEN to dephosphorylate PIP₃; mAbs block Grb2 from docking on phosphotyrosines",
+      "TKIs and mAbs both block the extracellular domain but through different binding epitopes"
+    ],
+    "answer": 1,
+    "topic": "egfr-therapy-strategies",
+    "explain": "TKIs are small molecules that compete with ATP for the intracellular kinase domain, preventing autophosphorylation. Anti-EGFR mAbs are large proteins that bind the extracellular domain, blocking EGF binding and/or receptor dimerization. They target different sites on the same receptor molecule.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Which acquired resistance mutation arises in EGFR after treatment with first- or second-generation TKIs, and which generation of TKIs was designed to overcome it?",
+    "options": [
+      "C797S mutation arises; 2nd generation TKIs (Afatinib) overcome it",
+      "T790M mutation arises; 3rd generation TKIs (e.g., Osimertinib/AZD9291) overcome it",
+      "T790M mutation arises; 4th generation TKIs (EAI045) overcome it",
+      "EGFRvIII deletion arises; 3rd generation TKIs overcome it",
+      "C797S mutation arises; 1st generation TKIs overcome it after dose escalation"
+    ],
+    "answer": 1,
+    "topic": "egfr-tki-generations",
+    "explain": "First- and second-generation EGFR TKIs (e.g., Gefitinib, Erlotinib, Afatinib) are effective until tumors acquire the T790M resistance mutation. Third-generation TKIs such as Osimertinib (AZD9291) were specifically designed to target T790M-mutant EGFR. Resistance to 3rd-generation TKIs then emerges via the C797S mutation, which is the target of 4th-generation TKIs like EAI045.",
+    "difficulty": "hard"
+  }
+]

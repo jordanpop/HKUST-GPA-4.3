@@ -1,0 +1,422 @@
+[
+  {
+    "q": "Which cells in the salivary glands are responsible for secreting mucins that make saliva viscous?",
+    "options": [
+      "Serous cells",
+      "Mucous cells",
+      "Chief cells",
+      "Parietal cells",
+      "ECL cells"
+    ],
+    "answer": 1,
+    "topic": "mouth-structures",
+    "explain": "Mucous cells secrete mucins (glycoproteins) that combine with the watery serous secretion to produce viscous saliva. Serous cells secrete the watery component containing electrolytes, amylase, and antibacterial proteins. Chief and parietal cells are found in the stomach, not in salivary glands.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Salivary amylase breaks starch into which of the following products?",
+    "options": [
+      "Glucose and fructose",
+      "Sucrose and lactose",
+      "Maltose, maltotriose, and oligosaccharides",
+      "Fatty acids and glycerol",
+      "Amino acids and dipeptides"
+    ],
+    "answer": 2,
+    "topic": "saliva-functions",
+    "explain": "Salivary amylase cleaves starch into maltose (2 glucose units), maltotriose (3 glucose units), and oligosaccharides (more than 3 glucose units). It does not produce monosaccharides directly, nor does it act on lipids or proteins.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which of the following correctly describes defensins?",
+    "options": [
+      "Hydrophobic proteins secreted exclusively by immune cells",
+      "Amphipathic cationic proteins secreted by immune and epithelial cells",
+      "Anionic lipids that neutralise bacterial toxins",
+      "Glycoproteins that bind vitamin B12",
+      "Enzymes that digest bacterial cell walls via peptide hydrolysis"
+    ],
+    "answer": 1,
+    "topic": "saliva-functions",
+    "explain": "Defensins are amphipathic (both hydrophilic and hydrophobic regions) and cationic, and they are secreted by both immune cells and epithelial cells. They disrupt pathogen membranes and block viral receptors. Describing them as exclusively produced by immune cells, or as anionic, is incorrect.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Sympathetic stimulation of salivary glands produces which type of saliva?",
+    "options": [
+      "A large volume of watery, amylase-rich saliva",
+      "No saliva at all — sympathetic stimulation fully inhibits secretion",
+      "A small volume of viscous, mucin-rich saliva",
+      "A large volume of alkaline, bicarbonate-rich saliva",
+      "A moderate volume identical in composition to parasympathetically stimulated saliva"
+    ],
+    "answer": 2,
+    "topic": "saliva-regulation",
+    "explain": "Sympathetic stimulation produces a smaller volume of viscous, mucin-rich saliva compared with the moderate watery secretion induced by parasympathetic stimulation. This reduced volume causes the dry-mouth sensation associated with stress but does not completely stop secretion. Parasympathetic nerves (facial and glossopharyngeal) drive the larger, more watery output.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Fear and psychological stress inhibit salivary secretion primarily through which mechanism?",
+    "options": [
+      "Direct blockade of amylase synthesis in serous cells",
+      "Reduction of parasympathetic tone and indirect sympathetic effects mediated via the cerebral cortex and salivary centre",
+      "Increased gastric acid reflux that damages salivary duct cells",
+      "Depletion of mucin stores in mucous cells",
+      "Activation of upper esophageal sphincter that diverts saliva into the esophagus"
+    ],
+    "answer": 1,
+    "topic": "saliva-regulation",
+    "explain": "Fear acts as a psychological stimulus processed through the cerebral cortex, which inhibits the salivary centre in the medulla — reducing the parasympathetic drive that normally promotes secretion. Sleep, fatigue, and dehydration also suppress output via this pathway. There is no direct blockade of amylase synthesis or structural damage to duct cells.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Which region of the pharynx serves exclusively as a passageway for air and NOT for food or fluids?",
+    "options": [
+      "Oropharynx",
+      "Laryngopharynx",
+      "Nasopharynx",
+      "Hypopharynx",
+      "Glossopharynx"
+    ],
+    "answer": 2,
+    "topic": "pharynx-anatomy",
+    "explain": "The nasopharynx communicates only with the nasal cavity and serves exclusively as an air passageway; food and fluids do not normally pass through it. The oropharynx and laryngopharynx are common passageways for both air and ingested material.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "During the swallowing reflex, what prevents food from entering the trachea?",
+    "options": [
+      "The uvula seals the glottis from above",
+      "The upper esophageal sphincter closes the tracheal opening",
+      "The epiglottis folds over the glottis to seal the larynx and trachea",
+      "The vocal cords open widely to divert food into the esophagus",
+      "The soft palate descends to cover the glottis"
+    ],
+    "answer": 2,
+    "topic": "swallowing-reflex",
+    "explain": "During swallowing, the epiglottis tilts posteriorly and inferiorly to cover the glottis (the opening into the larynx and trachea), preventing aspiration of food. Simultaneously, the soft palate elevates to close the nasal passage. The upper esophageal sphincter relaxes to allow the bolus to enter the esophagus, not to seal the trachea.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "GERD (gastroesophageal reflux disease) results from failure of which structure?",
+    "options": [
+      "Upper esophageal sphincter",
+      "Pyloric sphincter",
+      "Sphincter of Oddi",
+      "Lower esophageal sphincter",
+      "Pharyngeal constrictor muscles"
+    ],
+    "answer": 3,
+    "topic": "gerd",
+    "explain": "GERD is caused by failure of the lower esophageal (cardiac) sphincter to close after food enters the stomach, allowing acidic gastric contents to reflux into the esophagus. The upper esophageal sphincter controls entry from the laryngopharynx into the esophagus. The pyloric sphincter controls stomach emptying into the duodenum.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "What is the role of rugae in the stomach?",
+    "options": [
+      "Secretion of HCl during the cephalic phase",
+      "Absorption of vitamin B12 in the fundus",
+      "Large mucosal folds that permit expansion and distension of the empty stomach",
+      "Mechanical churning of food via smooth muscle contractions",
+      "Filtering of chyme before entry into the duodenum"
+    ],
+    "answer": 2,
+    "topic": "stomach-anatomy",
+    "explain": "Rugae are large folds in the gastric mucosa of the empty stomach that allow the organ to greatly expand as food fills it. They are structural features, not active secretory or absorptive units. Mechanical churning is performed by the muscularis externa, not the rugae.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which gastric cell type secretes BOTH pepsinogen AND gastric lipase?",
+    "options": [
+      "Parietal cells",
+      "G cells",
+      "ECL cells",
+      "Chief (zymogenic) cells",
+      "Mucous neck cells"
+    ],
+    "answer": 3,
+    "topic": "gastric-cells",
+    "explain": "Chief cells (also called zymogenic cells) secrete pepsinogen (the precursor to pepsin) and gastric lipase. Parietal cells secrete HCl and intrinsic factor. G cells secrete gastrin. ECL cells secrete histamine. Mucous neck cells secrete mucus and bicarbonate.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "G cells in the stomach are located primarily in which anatomical region?",
+    "options": [
+      "Fundus",
+      "Body (corpus)",
+      "Pyloric antrum",
+      "Cardia",
+      "Esophageal hiatus"
+    ],
+    "answer": 2,
+    "topic": "gastric-cells",
+    "explain": "G cells are located primarily in the pyloric antrum of the stomach (and also in the duodenum and pancreas). Their secretion of gastrin is stimulated by stomach distension and protein digestion products. They are not uniformly distributed throughout the stomach.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "At what pH is pepsinogen converted to pepsin, and at what pH does pepsin show maximal activity?",
+    "options": [
+      "Converted at pH > 7; maximal activity at pH 5",
+      "Converted at pH < 2; maximal activity at pH 4",
+      "Converted at pH < 5; maximal activity at pH ~2",
+      "Converted at pH < 5; maximal activity at pH 5",
+      "Converted at pH 7; maximal activity at pH 7"
+    ],
+    "answer": 2,
+    "topic": "gastric-juice-components",
+    "explain": "Pepsinogen is converted to pepsin when the pH drops below 5, but pepsin's maximal enzymatic activity occurs at a more acidic pH of approximately 2. These are two distinct pH thresholds that are commonly confused in exams. Additionally, pepsin can autocatalytically convert more pepsinogen to pepsin.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Intrinsic factor secreted by parietal cells is essential for absorption of which vitamin, and in which intestinal segment does absorption occur?",
+    "options": [
+      "Vitamin C; absorbed in the jejunum",
+      "Vitamin D; absorbed in the duodenum",
+      "Vitamin B12; absorbed in the ileum",
+      "Vitamin K; absorbed in the colon",
+      "Vitamin B12; absorbed in the duodenum"
+    ],
+    "answer": 2,
+    "topic": "gastric-juice-components",
+    "explain": "Intrinsic factor is a glycoprotein secreted by parietal cells that binds vitamin B12 (cobalamin), which is required for RBC production. The intrinsic factor-B12 complex is absorbed specifically in the ileum. Damage to parietal cells or the ileum results in pernicious anaemia.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "In parietal cell HCl secretion, which apical transporter directly pumps H⁺ into the gastric lumen?",
+    "options": [
+      "Na⁺/K⁺-ATPase",
+      "Cl⁻/HCO₃⁻ exchanger",
+      "H⁺/K⁺-ATPase (proton pump)",
+      "Carbonic anhydrase",
+      "Na⁺/H⁺ exchanger"
+    ],
+    "answer": 2,
+    "topic": "hcl-secretion-mechanism",
+    "explain": "The H⁺/K⁺-ATPase (proton pump) on the apical membrane of parietal cells actively exports H⁺ into the gastric lumen in exchange for K⁺ uptake — this is the key step in HCl secretion. Carbonic anhydrase generates H⁺ and HCO₃⁻ from CO₂ and water but is located basolaterally. The Cl⁻/HCO₃⁻ exchanger provides Cl⁻ to the lumen but does not pump H⁺.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "During parietal cell HCl secretion, bicarbonate (HCO₃⁻) exits the cell via which membrane?",
+    "options": [
+      "Apical membrane into the gastric lumen",
+      "Basolateral membrane into the blood (the \"alkaline tide\")",
+      "Apical membrane via the Cl⁻/HCO₃⁻ exchanger",
+      "Basolateral membrane via the proton pump",
+      "Lateral membrane back into the gastric gland lumen"
+    ],
+    "answer": 1,
+    "topic": "hcl-secretion-mechanism",
+    "explain": "HCO₃⁻ generated by carbonic anhydrase inside parietal cells exits through the basolateral membrane into the blood, causing the post-prandial alkaline tide seen in venous blood draining the stomach. The apical Cl⁻/HCO₃⁻ exchanger moves Cl⁻ into the lumen (not HCO₃⁻ into the lumen).",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Which of the following is the signal type by which histamine stimulates parietal cell HCl secretion?",
+    "options": [
+      "Endocrine — histamine enters the bloodstream to reach parietal cells",
+      "Neurotransmitter — released from vagal nerve terminals",
+      "Paracrine — released locally by ECL cells to act on nearby parietal cells",
+      "Autocrine — released by parietal cells themselves",
+      "Hormonal — released by G cells in the antrum"
+    ],
+    "answer": 2,
+    "topic": "gastric-acid-regulation",
+    "explain": "Histamine is produced by enterochromaffin-like (ECL) cells within the gastric gland epithelium and acts in a paracrine manner — diffusing locally to bind histamine receptors on nearby parietal cells. Gastrin is the endocrine stimulus (from G cells via bloodstream); acetylcholine is the neurotransmitter stimulus (from vagal nerve terminals).",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Cimetidine reduces gastric acid secretion effectively even though it blocks only one of the three stimuli. Why?",
+    "options": [
+      "Cimetidine directly inhibits the H⁺/K⁺-ATPase proton pump",
+      "The three stimuli are synergistic, so blocking histamine reduces the amplified response to all three",
+      "Cimetidine also blocks acetylcholine receptors on parietal cells",
+      "Histamine is the only stimulus active during the intestinal phase",
+      "Cimetidine prevents gastrin release from G cells"
+    ],
+    "answer": 1,
+    "topic": "gastric-acid-regulation",
+    "explain": "The three stimuli — histamine, acetylcholine, and gastrin — are synergistic, meaning they amplify each other's effects on parietal cells. Blocking histamine receptors with cimetidine therefore reduces the overall synergistic response to all three stimuli, making H₂ blockers highly effective. Cimetidine does not block the proton pump directly (that is the mechanism of proton pump inhibitors like omeprazole).",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Which phase of gastric secretion is initiated by the sight, smell, taste, or thought of food?",
+    "options": [
+      "Intestinal phase",
+      "Gastric phase",
+      "Cephalic phase",
+      "Enteric phase",
+      "Pyloric phase"
+    ],
+    "answer": 2,
+    "topic": "gastric-acid-regulation",
+    "explain": "The cephalic phase is controlled by the nervous system and is triggered by sensory and cognitive stimuli — sight, smell, taste, thought, chewing, and swallowing — even before food enters the stomach. The gastric phase begins when food distends the stomach. The intestinal phase occurs when partially digested food enters the duodenum.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "How does H. pylori survive the extremely acidic environment of the stomach?",
+    "options": [
+      "It secretes intrinsic factor to neutralise local HCl",
+      "It shelters inside parietal cells, where the pH is neutral",
+      "It produces large quantities of mucus that dilute stomach acid",
+      "It uses urease to generate ammonia, buffering the local pH",
+      "It expresses H⁺/K⁺-ATPase inhibitors that suppress HCl secretion"
+    ],
+    "answer": 3,
+    "topic": "gastric-acid-regulation",
+    "explain": "H. pylori survives the extreme gastric pH primarily by producing urease, which converts urea to ammonia and CO₂, creating a locally neutral microenvironment around the bacterium. The lecture notes that ~50% of the world population is affected by H. pylori, which increases the risk of gastric ulcers. The other options are not described mechanisms for H. pylori survival.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Which of the following is NOT a function of the stomach?",
+    "options": [
+      "Acting as a food reservoir",
+      "Fragmenting food by mechanical action",
+      "Mixing food with secretions to form chyme",
+      "Absorbing the majority of dietary nutrients",
+      "Emptying gastric contents into the small intestine at a controlled rate"
+    ],
+    "answer": 3,
+    "topic": "stomach-functions",
+    "explain": "The stomach's four main functions are acting as a reservoir, mechanical fragmentation, chemical digestion (forming chyme), and controlled emptying via the pyloric sphincter. The majority of nutrient absorption occurs in the small intestine, not the stomach. The stomach absorbs very few substances (e.g., some alcohol and aspirin).",
+    "difficulty": "easy"
+  },
+  {
+    "q": "What is the primary function of NaHCO₃-rich fluid secreted by pancreatic duct epithelial cells?",
+    "options": [
+      "Activating trypsinogen to trypsin in the pancreatic duct",
+      "Providing the enzyme complement for protein digestion",
+      "Neutralising acidic chyme from the stomach and providing an optimal pH for pancreatic enzymes",
+      "Emulsifying dietary fats before pancreatic lipase can act",
+      "Concentrating bile entering from the common bile duct"
+    ],
+    "answer": 2,
+    "topic": "exocrine-pancreas",
+    "explain": "Duct epithelial cells secrete a large volume of NaHCO₃-rich, watery solution that neutralises the acidic chyme arriving from the stomach and establishes the alkaline pH optimal for pancreatic enzyme activity. It also flushes out sticky enzyme secretions from acinar cells. Emulsification is performed by bile salts, and enzyme secretion is the role of acinar cells.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which cell type in the exocrine pancreas secretes digestive enzymes?",
+    "options": [
+      "Duct epithelial cells",
+      "Islet beta cells",
+      "Acinar cells",
+      "Chief cells",
+      "ECL cells"
+    ],
+    "answer": 2,
+    "topic": "exocrine-pancreas",
+    "explain": "Acinar cells are the enzyme-secreting cells of the exocrine pancreas, producing a small volume of enzyme-rich juice. Duct epithelial cells secrete the large volume of bicarbonate-rich fluid. Islet beta cells are endocrine, secreting insulin. Chief cells and ECL cells belong to the gastric mucosa.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which intestinal enzyme initiates the activation cascade of pancreatic zymogens?",
+    "options": [
+      "Pepsin",
+      "Trypsin",
+      "Enteropeptidase (enterokinase)",
+      "Chymotrypsin",
+      "Salivary amylase"
+    ],
+    "answer": 2,
+    "topic": "zymogen-activation",
+    "explain": "Enteropeptidase (also called enterokinase), a transmembrane brush-border enzyme of the duodenum and jejunum, converts trypsinogen to active trypsin. Trypsin then activates all other pancreatic zymogens (chymotrypsinogen, proelastase, procarboxypeptidases, etc.) and can also autocatalytically activate more trypsinogen. Pepsin is a gastric enzyme unrelated to this cascade.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Most pancreatic proteases are secreted as inactive zymogens. What is the primary physiological reason for this?",
+    "options": [
+      "Zymogens are more stable for long-distance transport via the bloodstream",
+      "Inactive forms allow selective activation only in the presence of bile salts",
+      "To prevent autodigestion of the pancreas before enzymes reach the duodenum",
+      "Zymogens are required to cross the brush-border membrane of enterocytes",
+      "The pancreas lacks the co-factors needed for enzyme activity"
+    ],
+    "answer": 2,
+    "topic": "zymogen-activation",
+    "explain": "Secreting proteases as inactive zymogens protects the pancreas from self-digestion. Active proteases released prematurely within the pancreas can destroy pancreatic tissue — a mechanism underlying acute pancreatitis. Activation occurs safely in the duodenal lumen after enteropeptidase initiates the cascade.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "The liver is described as having both digestive and non-digestive functions. Which of the following is its MAJOR digestive (exocrine) function?",
+    "options": [
+      "Gluconeogenesis and glycogen storage",
+      "Synthesis of clotting factors",
+      "Bile formation and secretion",
+      "Metabolism of steroid hormones",
+      "Urea synthesis from ammonia"
+    ],
+    "answer": 2,
+    "topic": "liver-anatomy",
+    "explain": "Bile formation is the major exocrine (digestive) function of the liver. Hepatocytes secrete approximately 1 L of bile per day into bile canaliculi, which eventually drain into the duodenum. The other options (gluconeogenesis, clotting factor synthesis, steroid metabolism, urea synthesis) are non-digestive metabolic functions of the liver.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "What happens to bile between meals?",
+    "options": [
+      "It continues to flow directly into the duodenum through the sphincter of Oddi",
+      "It is diverted into the gallbladder via the cystic duct, where it is stored and concentrated",
+      "It is reabsorbed by hepatocytes via bile canaliculi for re-synthesis",
+      "It accumulates in the common bile duct until the next meal",
+      "It enters the pancreatic duct and mixes with pancreatic juice"
+    ],
+    "answer": 1,
+    "topic": "bile-storage-secretion",
+    "explain": "Between meals, the sphincter of Oddi is contracted, so bile produced by hepatocytes is diverted through the cystic duct into the gallbladder. The gallbladder stores bile and concentrates it by removing water. During a meal (triggered by CCK and other signals), the gallbladder contracts and the sphincter of Oddi relaxes, releasing bile into the duodenum.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Bile salts are described as amphipathic. Which two functions does this amphipathic property enable?",
+    "options": [
+      "Neutralising stomach acid and activating pancreatic zymogens",
+      "Emulsifying dietary fats and solubilising biliary cholesterol to prevent gallstones",
+      "Binding vitamin B12 and transporting it to the ileum",
+      "Killing oral bacteria and neutralising salivary pH",
+      "Breaking down triglycerides directly and absorbing fat-soluble vitamins"
+    ],
+    "answer": 1,
+    "topic": "bile-composition",
+    "explain": "Bile salts' amphipathic structure (both hydrophilic and hydrophobic regions) allows them to (A) emulsify large fat globules into small droplets, increasing the surface area for pancreatic lipase; and (B) keep cholesterol and phospholipids solubilised in bile, thereby preventing gallstone formation. Bile salts do not have enzymatic activity and do not bind vitamin B12.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Bilirubin, the primary bile pigment, is derived from which molecule, and what clinical sign results from its accumulation in the blood?",
+    "options": [
+      "Cholesterol; hypercholesterolaemia",
+      "Haemoglobin; jaundice",
+      "Myoglobin; cyanosis",
+      "Albumin; oedema",
+      "Haemoglobin; gallstones"
+    ],
+    "answer": 1,
+    "topic": "bile-composition",
+    "explain": "Bilirubin is a breakdown product of haemoglobin and gives bile its characteristic yellow-green colour. Elevated bilirubin in the blood causes jaundice (yellowing of the skin and sclera). It is an excretory product rather than a digestive secretion, distinguishing it from bile salts.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "A patient has significantly decreased secretion of bile salts. Which of the following consequences is most directly predicted by this finding?",
+    "options": [
+      "Increased pepsin activity in the stomach",
+      "Failure of enteropeptidase to activate trypsinogen",
+      "Impaired fat emulsification and increased risk of cholesterol gallstone formation",
+      "Deficiency of intrinsic factor leading to vitamin B12 malabsorption",
+      "Elevated pancreatic enzyme secretion from acinar cells"
+    ],
+    "answer": 2,
+    "topic": "gallstones",
+    "explain": "Bile salts serve two key roles: emulsifying dietary fats (enabling pancreatic lipase to act) and keeping biliary cholesterol solubilised. Decreased bile salt secretion impairs fat digestion and allows cholesterol to precipitate, forming cholesterol gallstones. This is one of the key mechanisms of gallstone formation described in the lecture.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Comparing salivary amylase and pancreatic amylase, which statement is most accurate?",
+    "options": [
+      "Only salivary amylase can break down starch; pancreatic amylase acts solely on proteins",
+      "Both enzymes break down starch to the same products, but pancreatic amylase is secreted as a zymogen requiring activation",
+      "Both enzymes break down starch to maltose, maltotriose, and oligosaccharides, but pancreatic amylase contributes far more to total starch digestion",
+      "Salivary amylase requires an alkaline pH while pancreatic amylase requires an acidic pH",
+      "Pancreatic amylase is secreted by duct epithelial cells; salivary amylase by mucous cells"
+    ],
+    "answer": 2,
+    "topic": "pancreatic-enzymes",
+    "explain": "Both salivary and pancreatic amylase hydrolyse starch to maltose, maltotriose, and oligosaccharides. However, pancreatic amylase is the dominant enzyme for starch digestion in the small intestine, contributing far more than salivary amylase. Unlike proteases, pancreatic amylase is NOT secreted as a zymogen — it is secreted in active form. Pancreatic amylase comes from acinar cells, not duct epithelial cells.",
+    "difficulty": "hard"
+  }
+]

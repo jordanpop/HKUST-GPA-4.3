@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(which libreoffice *)",
+      "Read(//Applications/**)",
+      "Bash(ls ~/.claude/)",
+      "Read(//Users/winter_08.01/.claude/**)",
+      "Bash(mkdir -p ~/.claude/commands)",
+      "Skill(study-html-generator)",
+      "Skill(study-html-generator:*)",
+      "Bash(pdftotext -layout \"Endo1_2-26.pdf\" \"endo1_2.txt\")",
+      "Bash(pdftotext -layout \"Endo3&4-26.pdf\" \"endo3_4.txt\")",
+      "Bash(pdftotext -layout \"Endo5-26.pdf\" \"endo5.txt\")"
+    ],
+    "additionalDirectories": [
+      "/Users/winter_08.01/.claude"
+    ]
+  }
+}

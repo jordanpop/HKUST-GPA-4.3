@@ -1,0 +1,422 @@
+[
+  {
+    "q": "Which of the following correctly defines a sensory receptor?",
+    "options": [
+      "A neuron in the spinal cord that relays signals to the thalamus",
+      "A specialized cell, neural or non-neural, that detects a specific environmental stimulus and converts it into an electrical signal",
+      "Any cell in the body that can generate an action potential in response to touch",
+      "A postsynaptic neuron that integrates signals from multiple sensory pathways",
+      "A glial cell that amplifies sensory signals in peripheral nerves"
+    ],
+    "answer": 1,
+    "topic": "sensory-receptor-types",
+    "explain": "A sensory receptor is defined as a specialized cell — neural or non-neural — that receives a particular environmental stimulus and converts it into an electrical signal the CNS can process. The other options describe interneurons, non-specific excitable cells, or glial cells, none of which match this definition.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which receptor type detects O2 levels, pH, and organic molecules such as glucose?",
+    "options": [
+      "Mechanoreceptors",
+      "Photoreceptors",
+      "Thermoreceptors",
+      "Chemoreceptors",
+      "Nociceptors"
+    ],
+    "answer": 3,
+    "topic": "sensory-receptor-types",
+    "explain": "Chemoreceptors detect chemical stimuli including O2, pH, and organic molecules like glucose. Mechanoreceptors respond to pressure and stretch; photoreceptors to light; thermoreceptors to heat; and nociceptors to noxious tissue-damaging stimuli.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "In a neural sensory receptor, what is the sequence of events after stimulus application?",
+    "options": [
+      "Receptor potential → neurotransmitter release → action potential in downstream neuron",
+      "Action potential → generator potential → receptor potential",
+      "Generator potential → action potential in the same cell",
+      "Neurotransmitter release → generator potential → action potential",
+      "Receptor potential → generator potential → action potential in downstream neuron"
+    ],
+    "answer": 2,
+    "topic": "sensory-transduction-mechanism",
+    "explain": "In a neural sensory receptor, the stimulus produces a graded generator potential in that same cell, which then triggers an action potential in the same neuron. Non-neural receptors instead produce a receptor potential that triggers neurotransmitter release to excite a downstream neuron.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "In a non-neural sensory receptor, the receptor potential leads directly to which of the following?",
+    "options": [
+      "An action potential in the same cell",
+      "Depolarisation of the thalamus",
+      "Neurotransmitter release, which then generates action potentials in downstream neurons",
+      "Hyperpolarisation and inhibition of secondary sensory neurons",
+      "Opening of voltage-gated Na+ channels in the same receptor cell to fire an AP"
+    ],
+    "answer": 2,
+    "topic": "sensory-transduction-mechanism",
+    "explain": "Non-neural receptors produce a receptor potential that drives neurotransmitter release. The released neurotransmitter then excites a downstream (postsynaptic) neuron, generating action potentials there. The receptor cell itself does not fire APs.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "How does the nervous system encode stimulus intensity in sensory pathways?",
+    "options": [
+      "By increasing the amplitude of individual action potentials",
+      "By changing the type of ion channel that opens",
+      "By increasing the frequency of action potentials",
+      "By decreasing the refractory period of the receptor cell only",
+      "By switching from generator potential to receptor potential signalling"
+    ],
+    "answer": 2,
+    "topic": "sensory-coding",
+    "explain": "Stimulus intensity is encoded as the frequency of action potentials (or the amount of neurotransmitter released in non-neural receptors). Action potentials are all-or-none, so their amplitude does not change with stimulus strength. A stronger stimulus increases AP frequency, not AP size.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which of the following accurately describes how stimulus duration is encoded in sensory pathways?",
+    "options": [
+      "Longer stimuli increase the amplitude of each action potential",
+      "Longer stimuli produce a higher-frequency but shorter burst of action potentials",
+      "The duration of the generator/receptor potential determines the duration of the AP train",
+      "Stimulus duration is encoded by the number of receptor types activated, not AP timing",
+      "Longer stimuli trigger faster adaptation, reducing the AP train duration"
+    ],
+    "answer": 2,
+    "topic": "sensory-coding",
+    "explain": "The duration of the generator or receptor potential mirrors stimulus duration, and this determines how long the train of action potentials (or neurotransmitter secretion) lasts. The strength of the potential encodes intensity; the duration encodes how long the stimulus persists.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which neurons cross the midline of the body in the somatosensory pathway?",
+    "options": [
+      "Primary sensory neurons",
+      "Secondary sensory neurons",
+      "Tertiary sensory neurons",
+      "Both primary and secondary sensory neurons",
+      "Thalamic relay neurons"
+    ],
+    "answer": 1,
+    "topic": "somatosensory-pathway",
+    "explain": "Secondary sensory neurons cross the midline (decussate), so that sensations from the left side of the body are processed in the right hemisphere and vice versa. Primary sensory neurons carry signals from the periphery without crossing; tertiary neurons project from thalamus to cortex on the same side.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Where do secondary sensory neurons synapse onto tertiary sensory neurons in the somatosensory pathway?",
+    "options": [
+      "Spinal cord",
+      "Brainstem",
+      "Thalamus",
+      "Somatosensory cortex",
+      "Hippocampus"
+    ],
+    "answer": 2,
+    "topic": "somatosensory-pathway",
+    "explain": "Secondary sensory neurons synapse onto tertiary sensory neurons in the thalamus. Tertiary neurons then project to the somatosensory cortex. The thalamus is the key relay station for virtually all sensory information before it reaches the cortex.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which statement about the somatosensory cortex is CORRECT?",
+    "options": [
+      "Each body region has an equal area of cortical representation regardless of sensitivity",
+      "The cortical map is fixed at birth and does not change with experience",
+      "More sensitive body regions have larger cortical representations, and this size can change with usage",
+      "The cortex processes all body sensations on the ipsilateral (same) side",
+      "Tertiary sensory neurons bypass the thalamus and project directly to the cortex"
+    ],
+    "answer": 2,
+    "topic": "somatosensory-cortex",
+    "explain": "More sensitive body regions (e.g., fingertips, lips) have proportionally larger somatosensory cortical areas. Crucially, this mapping is not fixed — it can change with usage, reflecting cortical plasticity. Sensations are processed contralaterally (opposite side) after secondary neurons cross the midline.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Piezo2 is a mechanosensitive ion channel responsible for which sensory functions?",
+    "options": [
+      "Noxious heat detection and nociception",
+      "Cold sensing and menthol detection",
+      "Gentle touch and proprioception",
+      "Auditory mechanotransduction in hair cells",
+      "Photon detection in photoreceptors"
+    ],
+    "answer": 2,
+    "topic": "touch-receptors",
+    "explain": "Piezo2 mediates gentle touch and proprioception — the sense of self-movement and body position, described as the 'sixth sense.' The discovery of Piezo channels as touch sensors (along with TRPV1 and TRPM8 as temperature sensors) was recognised by the 2021 Nobel Prize.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which ion channel is specifically activated by noxious heat above 43°C AND by capsaicin from chilli peppers?",
+    "options": [
+      "Piezo2",
+      "TRPM8",
+      "TRPC1",
+      "TRPV1",
+      "TRPA1"
+    ],
+    "answer": 3,
+    "topic": "temperature-receptors",
+    "explain": "TRPV1 (a Transient Receptor Potential channel) is activated by noxious heat above 43°C and by capsaicin — the compound responsible for the 'hot' sensation of chilli. TRPM8 senses cold and cooling compounds like menthol; Piezo2 senses touch.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "TRPM8 is activated by which of the following stimuli?",
+    "options": [
+      "Noxious heat above 43°C and capsaicin",
+      "Gentle mechanical touch and proprioception",
+      "Temperatures below body temperature, menthol, and eucalyptol",
+      "Photons in the visible light spectrum",
+      "Osmotic pressure changes and cell stretch"
+    ],
+    "answer": 2,
+    "topic": "temperature-receptors",
+    "explain": "TRPM8 is a cold-sensing TRP channel that responds to temperatures below body temperature and to cooling compounds such as menthol and eucalyptol. Evidence from TRPM8-deficient mice shows they are insensitive to cold. TRPV1, not TRPM8, detects capsaicin and noxious heat.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which of the following is NOT a correct pairing of a TRP channel with its ligand or stimulus?",
+    "options": [
+      "TRPV1 — capsaicin",
+      "TRPM8 — menthol",
+      "TRPV1 — noxious heat >43°C",
+      "TRPM8 — capsaicin",
+      "TRPM8 — eucalyptol"
+    ],
+    "answer": 3,
+    "topic": "temperature-receptors",
+    "explain": "Capsaicin activates TRPV1, not TRPM8. TRPM8 responds to cold and cooling compounds (menthol, eucalyptol). A common exam error is assigning capsaicin to TRPM8 because both involve flavour-linked temperature sensations.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "The 2021 Nobel Prize in Physiology or Medicine was awarded for the discovery of which receptors?",
+    "options": [
+      "Voltage-gated Na+ and K+ channels underlying the action potential",
+      "GABA receptors and glutamate receptors",
+      "TRPV1 and TRPM8 as temperature sensors and Piezo channels as touch/proprioception sensors",
+      "Dopamine and serotonin receptors in the reward pathway",
+      "Nicotinic acetylcholine receptors at the neuromuscular junction"
+    ],
+    "answer": 2,
+    "topic": "temperature-receptors",
+    "explain": "The 2021 Nobel Prize was awarded to David Julius and Ardem Patapoutian for discovering TRPV1 and TRPM8 as temperature sensors and Piezo1/2 as touch/mechanosensation sensors. These discoveries revealed the molecular basis of temperature and touch perception.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Nociceptors respond to which categories of stimuli?",
+    "options": [
+      "Only thermal stimuli above 45°C",
+      "Only chemical irritants in the bloodstream",
+      "Chemical, mechanical, or thermal stimuli that cause or risk tissue damage",
+      "Gentle mechanical touch and proprioceptive feedback",
+      "Only stimuli that produce inflammation, not mechanical pressure"
+    ],
+    "answer": 2,
+    "topic": "nociceptors",
+    "explain": "Nociceptors respond to strong noxious stimuli that cause or have the potential to cause tissue damage, including chemical, mechanical, and thermal stimuli. They are polymodal — responding to multiple stimulus types. They are distinct from touch receptors, which respond to innocuous mechanical stimuli.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Nociceptor activation produces which two downstream effects?",
+    "options": [
+      "Conscious temperature perception and proprioceptive feedback",
+      "Reflexive protective responses at the spinal cord level and ascending pathways to the cortex producing conscious pain",
+      "Neurotransmitter release at the neuromuscular junction and somatic muscle contraction",
+      "Inhibition of all ascending sensory pathways and descending pain modulation only",
+      "Local vasodilation only and cortical suppression of pain"
+    ],
+    "answer": 1,
+    "topic": "nociceptors",
+    "explain": "Nociceptors activate two pathways: (A) reflexive protective responses integrated at the spinal cord (fast, unconscious withdrawal reflexes) and (B) ascending pathways to the cortex that produce conscious pain sensation. Both pathways operate simultaneously.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "What is the definition of timbre (音色) in the context of sound perception?",
+    "options": [
+      "The total energy carried by a sound wave per unit time",
+      "The perceived loudness of a sound measured in decibels",
+      "The pitch of a sound determined by its fundamental frequency",
+      "The quality that makes instruments sound different even at the same pitch and loudness",
+      "The latency between stimulus onset and auditory cortex activation"
+    ],
+    "answer": 3,
+    "topic": "sound-properties",
+    "explain": "Timbre (音色) is the complexity component of sound — the characteristic quality that distinguishes one instrument from another even when they play the same note at the same loudness. It is determined by the pattern of overtones (harmonics) in the sound wave.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "At what sound intensity level can damage to cochlear hair cells occur?",
+    "options": [
+      "Above 40 dB",
+      "Above 60 dB",
+      "Above 80 dB",
+      "Above 100 dB only",
+      "Only at 120 dB or above"
+    ],
+    "answer": 2,
+    "topic": "sound-properties",
+    "explain": "Sounds above 80 dB can damage hair cells. Normal conversation is approximately 60 dB. The lecture specifically states that 80 dB is the threshold for potential hair cell damage, not 100 dB or 120 dB.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "The average human ear hears in the range of 20–20,000 Hz, but at which frequency range is hearing most acute?",
+    "options": [
+      "20–200 Hz",
+      "200–500 Hz",
+      "500–800 Hz",
+      "1,000–3,000 Hz",
+      "10,000–20,000 Hz"
+    ],
+    "answer": 3,
+    "topic": "sound-properties",
+    "explain": "While the human auditory range spans 20–20,000 Hz, the most acute hearing is at 1–3 kHz (1,000–3,000 Hz). This range corresponds to the frequency of important communication sounds including speech. Sensitivity declines at both lower and higher frequencies.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which statement about inner hair cells (IHC) versus outer hair cells (OHC) in the cochlea is CORRECT?",
+    "options": [
+      "There are 12,000 IHCs arranged in three rows and 3,000 OHCs in one row",
+      "OHCs are the primary signal transmitters to the brain; IHCs provide mechanical amplification",
+      "There are 3,000 IHCs in one row and 12,000 OHCs in three rows; IHCs are the primary signal transmitters",
+      "IHCs and OHCs are equally innervated by afferent cochlear nerve fibers",
+      "Both IHCs and OHCs contain prestin for electromotility"
+    ],
+    "answer": 2,
+    "topic": "cochlear-anatomy",
+    "explain": "There are 3,000 IHCs (one row) and 12,000 OHCs (three rows). IHCs are the primary sensory cells transmitting auditory signals to the brain; OHCs function as mechanical amplifiers. Despite fewer in number, IHCs receive the vast majority of afferent innervation.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "What is the approximate ratio of afferent cochlear nerve fibers to inner hair cells?",
+    "options": [
+      "1:10 (one fiber per ten IHCs)",
+      "1:1 (one fiber per IHC)",
+      "3:1 (three fibers per IHC)",
+      "10:1 (ten fibers per IHC)",
+      "100:1 (one hundred fibers per IHC)"
+    ],
+    "answer": 3,
+    "topic": "ihc-vs-ohc-innervation",
+    "explain": "There are 30,000+ fibers in the cochlear nerve and approximately 3,000 IHCs, giving a nearly 10:1 fiber-to-IHC ratio. This massive innervation reflects the IHC's role as the primary sensory signal transmitter to the brain, ensuring high-fidelity signal transmission.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "The majority of afferent cochlear nerve fibers innervate which cochlear cell type?",
+    "options": [
+      "Outer hair cells, because there are four times more of them",
+      "Inner hair cells, despite there being fewer of them",
+      "Support cells of the organ of Corti",
+      "Spiral ganglion efferent neurons",
+      "Both IHCs and OHCs equally, as each contributes 50% of nerve fibers"
+    ],
+    "answer": 1,
+    "topic": "ihc-vs-ohc-innervation",
+    "explain": "Despite OHCs outnumbering IHCs 4:1, the vast majority of afferent cochlear nerve fibers innervate IHCs. Only a sparse number of afferent fibers carry signals from OHCs to the brain; most OHC connections are efferent (descending from brain to OHCs for modulation).",
+    "difficulty": "hard"
+  },
+  {
+    "q": "What is the function of prestin in outer hair cells?",
+    "options": [
+      "It forms the tip-link mechanotransduction channel that opens upon stereocilia deflection",
+      "It releases glutamate onto afferent cochlear nerve fibers in response to sound",
+      "It is a transmembrane motor protein that changes shape with membrane voltage changes, causing OHC electromotility and cochlear amplification",
+      "It maintains the K+ concentration in endolymph required for hair cell function",
+      "It is a TRP channel that converts thermal energy to electrical signals in the cochlea"
+    ],
+    "answer": 2,
+    "topic": "ohc-amplification",
+    "explain": "Prestin is a transmembrane motor protein in OHCs that mechanically contracts and elongates in response to membrane voltage (Vm) changes. This electromotility is the driving force of cochlear amplification — it amplifies the basilar membrane vibration, increasing sensitivity to sound frequencies. Prestin is unique to OHCs, not IHCs.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Cochlear amplification by OHCs increases which of the following?",
+    "options": [
+      "The number of IHCs available for signal transmission",
+      "The sensitivity to incoming sound frequencies by amplifying basilar membrane vibration",
+      "The range of sound frequencies detectable by the human ear beyond 20,000 Hz",
+      "The amplitude of action potentials in the cochlear nerve",
+      "The concentration of K+ ions in the endolymph"
+    ],
+    "answer": 1,
+    "topic": "ohc-amplification",
+    "explain": "OHC electromotility (driven by prestin) amplifies basilar membrane vibration, increasing the sensitivity to incoming sound frequencies and amplifying the signal reaching IHCs. It does not extend frequency range, change AP amplitude (all-or-none), or increase IHC numbers.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which statement about the mechanotransduction channel in auditory hair cells is accurate according to the lecture?",
+    "options": [
+      "It has been fully characterised as TRPV1",
+      "It has been fully characterised as Piezo2",
+      "Its molecular identity is still not fully established and is considered the last frontier of sensory neurobiology",
+      "It is the same channel as the one mediating gentle touch in skin mechanoreceptors",
+      "It was identified in 2021 and awarded the Nobel Prize"
+    ],
+    "answer": 2,
+    "topic": "auditory-transduction",
+    "explain": "The lecture explicitly states that the molecular identity of the mechanotransduction channel in auditory hair cells is 'still not fully established' and is considered the 'last frontier of sensory neurobiology.' TRPV1 and Piezo2 are not the auditory hair cell channel; those are for temperature and touch respectively.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "According to place theory, how is sound frequency encoded in the cochlea?",
+    "options": [
+      "By the frequency of action potentials in a single cochlear nerve fiber",
+      "By the amplitude of the basilar membrane vibration at one fixed point",
+      "By which location along the cochlea is maximally activated, with each place responding to a specific frequency",
+      "By the number of outer hair cells that depolarise simultaneously",
+      "By the time delay between sound onset and cochlear nerve fiber activation"
+    ],
+    "answer": 2,
+    "topic": "place-theory",
+    "explain": "Place theory states that each location along the cochlea corresponds to a specific sound frequency — the cochlea performs a spatial frequency analysis. Low frequencies activate the apex; high frequencies activate the base. This spatial map was established by Georg von Békésy.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which scientist established place theory and won the Nobel Prize for this work?",
+    "options": [
+      "David Julius",
+      "Ardem Patapoutian",
+      "Alan Hodgkin",
+      "Georg von Békésy",
+      "Santiago Ramón y Cajal"
+    ],
+    "answer": 3,
+    "topic": "place-theory",
+    "explain": "Georg von Békésy (1899–1972) established place theory, demonstrating that each location along the cochlea responds maximally to a specific frequency. He won the Nobel Prize for this work. David Julius and Ardem Patapoutian won the 2021 Nobel for TRP channels and Piezo channels.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "A patient loses Piezo2 function in their peripheral sensory neurons. Which two sensory abilities would be most directly impaired?",
+    "options": [
+      "Cold temperature sensing and pain from heat",
+      "Gentle touch and proprioception",
+      "Nociception and auditory frequency discrimination",
+      "Taste and olfaction",
+      "Vision and vestibular balance"
+    ],
+    "answer": 1,
+    "topic": "touch-receptors",
+    "explain": "Piezo2 mediates gentle touch AND proprioception (the sense of body position and self-movement). Loss of Piezo2 would impair both. TRPV1 and TRPM8 handle temperature; auditory transduction involves a different mechanotransduction channel still under investigation.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "A researcher finds that applying a compound to OHCs prevents prestin from changing shape in response to voltage. What would be the expected physiological consequence?",
+    "options": [
+      "IHCs would stop releasing glutamate onto cochlear nerve fibers",
+      "Cochlear amplification would be abolished, reducing hearing sensitivity",
+      "Place frequency coding would shift so all tones are perceived at the cochlear apex",
+      "The tip links in OHC stereocilia would break and prevent mechanotransduction",
+      "Secondary sensory neurons would fail to cross the midline"
+    ],
+    "answer": 1,
+    "topic": "ohc-amplification",
+    "explain": "Prestin's electromotility drives cochlear amplification in OHCs. If prestin cannot change shape, OHCs cannot amplify basilar membrane vibrations, abolishing cochlear amplification and reducing hearing sensitivity. IHC NT release and tip link function are separate mechanisms; midline crossing is a CNS process.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Which of the following is a correct comparison between neural and non-neural sensory receptors?",
+    "options": [
+      "Both fire action potentials directly; they differ only in the type of ion channel used",
+      "Neural receptors produce receptor potentials; non-neural receptors produce generator potentials",
+      "Neural receptors generate a generator potential and fire their own AP; non-neural receptors generate a receptor potential and release neurotransmitter to drive APs in downstream neurons",
+      "Non-neural receptors are faster because they skip the synapse; neural receptors are slower",
+      "Both produce graded potentials of equal amplitude regardless of stimulus strength"
+    ],
+    "answer": 2,
+    "topic": "sensory-transduction-mechanism",
+    "explain": "Neural sensory receptors produce a generator potential that directly triggers an AP in the same cell. Non-neural sensory receptors produce a receptor potential that drives neurotransmitter release, which then generates APs in downstream neurons via synaptic transmission. The terminology is often confused in exams.",
+    "difficulty": "hard"
+  }
+]

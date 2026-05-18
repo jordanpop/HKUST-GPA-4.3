@@ -1,0 +1,422 @@
+[
+  {
+    "q": "Without any anatomical specialisations, the gross surface area of the human small intestine would be approximately:",
+    "options": [
+      "0.33 m²",
+      "3.3 m²",
+      "200 m²",
+      "0.033 m²",
+      "20 m²"
+    ],
+    "answer": 0,
+    "topic": "surface-area-amplification",
+    "explain": "The unmodified gross surface area of the small intestine is ~0.33 m² (equivalent to 7–8 book pages). The true absorptive surface reaches ~200 m² only after amplification by circular folds (×3), villi (×10), and microvilli (×20). 3.3 m² and 20 m² are plausible distractors but are not documented values.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which of the following dietary carbohydrates is classified as indigestible and is excreted in feces?",
+    "options": [
+      "Cellulose",
+      "Sucrose",
+      "Lactose",
+      "Maltose",
+      "Starch"
+    ],
+    "answer": 0,
+    "topic": "dietary-carbohydrates",
+    "explain": "Cellulose is a dietary fibre; humans lack the enzyme to cleave its β-1,4 glycosidic bonds. Sucrose, lactose, and maltose are digestible disaccharides, and starch is a digestible polysaccharide — all are broken down and absorbed.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Oral Rehydration Therapy (ORT) reduces diarrhoea mortality by ~93%. Which mechanism is the primary reason it works?",
+    "options": [
+      "Glucose and Na⁺ are co-transported via SGLT1, and water follows osmotically",
+      "Glucose stimulates secretion of anti-diarrhoeal hormones that seal tight junctions",
+      "KCl replaces lost potassium and stops intestinal secretion",
+      "Sodium citrate alkalinises the lumen, killing pathogenic bacteria",
+      "Glucose is metabolised to ATP which powers Na⁺/K⁺-ATPase directly"
+    ],
+    "answer": 0,
+    "topic": "ort-oral-rehydration",
+    "explain": "ORT exploits SGLT1: glucose drives coupled Na⁺ entry into absorptive cells even during active diarrhoea, and water follows by osmosis. KCl and sodium citrate maintain electrolyte balance but are not the primary mechanism for water recovery.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Vitamins A, D, E, and K are absorbed by which mechanism?",
+    "options": [
+      "Passive diffusion incorporated into mixed micelles along with dietary lipids",
+      "Na⁺-dependent carrier proteins in the brush border",
+      "Binding to intrinsic factor, then receptor-mediated endocytosis",
+      "Active transport driven by inward H⁺ flux via PEPT1",
+      "Aquaporin-mediated facilitated diffusion"
+    ],
+    "answer": 0,
+    "topic": "vitamin-absorption",
+    "explain": "Fat-soluble vitamins (A, D, E, K) are hydrophobic and are incorporated into mixed micelles together with lipid digestion products, then passively diffuse into absorptive cells. Na⁺-dependent carriers are for free amino acids; intrinsic factor is unique to B12; PEPT1 handles di/tripeptides.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "At HIGH dietary calcium intake, Ca²⁺ absorption in the small intestine occurs via which mechanism and location?",
+    "options": [
+      "Paracellular passive diffusion through tight junctions throughout the small intestine",
+      "Transcellular active transport regulated by calcitriol in the duodenum only",
+      "Facilitated diffusion via calbindin across the entire intestinal mucosa",
+      "Ca²⁺-ATPase-driven active transport at the brush border of the jejunum",
+      "Endocytosis of Ca²⁺-containing vesicles in the ascending colon"
+    ],
+    "answer": 0,
+    "topic": "calcium-absorption",
+    "explain": "When dietary Ca²⁺ is high, absorption occurs by paracellular passive diffusion through tight junctions throughout the entire small intestine — a non-regulated, low-effort route. The transcellular route (Ca²⁺ channels → calbindin → Ca²⁺-ATPase, regulated by calcitriol) is activated when Ca²⁺ intake is LOW.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "A researcher specifically blocks SGLT1 in an animal model. Which absorption process would be MOST directly impaired?",
+    "options": [
+      "Glucose and galactose uptake from the intestinal lumen",
+      "Fructose uptake, since fructose competes with glucose for SGLT1",
+      "Dipeptide and tripeptide uptake via PEPT1",
+      "Long-chain fatty acid packaging into chylomicrons",
+      "Transcellular Ca²⁺ entry via brush-border Ca²⁺ channels"
+    ],
+    "answer": 0,
+    "topic": "monosaccharide-transport",
+    "explain": "SGLT1 specifically co-transports glucose and galactose with Na⁺. Blocking it directly impairs these two monosaccharides. Fructose uses a separate passive/facilitated transporter independent of SGLT1. PEPT1, chylomicron packaging, and Ca²⁺ channels are entirely distinct systems.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Which segment of the small intestine constitutes approximately 5% of its total length?",
+    "options": [
+      "Ileum",
+      "Duodenum",
+      "Jejunum",
+      "Cecum",
+      "Sigmoid colon"
+    ],
+    "answer": 1,
+    "topic": "si-segments",
+    "explain": "The duodenum is only ~26 cm long, representing about 5% of the small intestine's total length. The jejunum accounts for ~40% and the ileum the remainder. The cecum and sigmoid colon are parts of the large intestine, not the small intestine.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which anatomical feature of the small intestine provides the LARGEST per-unit surface-area amplification?",
+    "options": [
+      "Circular folds",
+      "Microvilli",
+      "Villi",
+      "Tight junctions",
+      "Aquaporins"
+    ],
+    "answer": 1,
+    "topic": "surface-area-amplification",
+    "explain": "Microvilli multiply the surface area by ×20, which is the largest single multiplier. Villi contribute ×10 and circular folds ×3. Students commonly reverse microvilli and villi — microvilli are the smallest structures yet give the biggest amplification per unit.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Dipeptides and tripeptides are the MAJOR pathway for protein absorption. Which transporter and driving ion are responsible for their uptake at the apical membrane?",
+    "options": [
+      "SGLT1; downhill Na⁺ flux",
+      "PEPT1; inward H⁺ flux",
+      "A Na⁺-dependent AA transporter; Na⁺ gradient",
+      "A basolateral facilitated diffusion carrier; no ion coupling",
+      "A Ca²⁺-ATPase; ATP hydrolysis"
+    ],
+    "answer": 1,
+    "topic": "dipeptide-tripeptide-transport",
+    "explain": "PEPT1 is an H⁺-coupled peptide transporter: the inward H⁺ gradient (generated by Na⁺/H⁺ exchange at the brush border) drives di/tripeptide uptake. SGLT1 (Na⁺-coupled) handles glucose/galactose; Na⁺-dependent transporters handle free AAs; facilitated diffusion mediates basolateral AA exit.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "What is the role of mixed micelles in lipid absorption?",
+    "options": [
+      "They directly fuse with absorptive cell membranes and inject lipids",
+      "They keep hydrophobic lipid products in aqueous solution and replenish free molecules at the brush border",
+      "They hydrolyse triglycerides into fatty acids and monoglycerides",
+      "They package long-chain fatty acids into chylomicrons for lymph transport",
+      "They activate SGLT1 to co-transport lipids with Na⁺"
+    ],
+    "answer": 1,
+    "topic": "micelle-formation",
+    "explain": "Mixed micelles (bile salts, phospholipids, fatty acids, monoglycerides) solubilise hydrophobic lipids and are in dynamic equilibrium with free molecules in solution. It is the free molecules — not the micelles themselves — that passively diffuse into absorptive cells. Micelles do not fuse with or enter the cell membrane.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "A 14-carbon saturated fatty acid is absorbed by the small intestine. Which route does it take after entering the absorptive cell?",
+    "options": [
+      "Directly into the portal vein as a free fatty acid",
+      "Packaged into chylomicrons → expelled into central lacteal → lymph",
+      "Stored permanently in lipid droplets within the absorptive cell",
+      "Converted to glucose via gluconeogenesis in the smooth ER",
+      "Transported via aquaporins into the interstitial fluid"
+    ],
+    "answer": 1,
+    "topic": "lipid-absorption-routes",
+    "explain": "A 14-carbon fatty acid is long-chain (>12C). Long-chain fatty acids are re-synthesised into triglycerides in the ER, packaged with apolipoproteins into chylomicrons in the Golgi, and expelled by exocytosis into the central lacteal (lymph). Short-chain (<12C) fatty acids go directly to the portal vein.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Along the intestine, where is the rate of sodium (Na⁺) absorption HIGHEST?",
+    "options": [
+      "Duodenum",
+      "Jejunum",
+      "Ileum",
+      "Ascending colon",
+      "Descending colon"
+    ],
+    "answer": 1,
+    "topic": "sodium-absorption",
+    "explain": "Na⁺ is absorbed along the entire intestine, but the highest absorption rate occurs in the jejunum. Rates are progressively slower in the ileum and colon. The jejunum is also the primary site of water absorption, which is osmotically driven by Na⁺.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "When dietary calcium intake is LOW, calcium is absorbed by which route and in which specific location?",
+    "options": [
+      "Paracellular (passive) diffusion throughout the entire small intestine",
+      "Transcellular (active) transport in the duodenum and upper jejunum",
+      "Transcellular (active) transport in the ileum and large intestine",
+      "Paracellular (passive) diffusion in the ascending colon",
+      "Aquaporin-mediated transport in the jejunum"
+    ],
+    "answer": 1,
+    "topic": "calcium-absorption",
+    "explain": "When dietary Ca²⁺ is low, the body upregulates transcellular active absorption specifically in the duodenum and upper jejunum via three steps: Ca²⁺ channels at the brush border, calbindin shuttling through the cytosol, and Ca²⁺-ATPase export at the basolateral membrane. High dietary Ca²⁺ uses the simpler paracellular passive route.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Fat-soluble nutrients that form large chylomicrons drain into the venous circulation via which route?",
+    "options": [
+      "Portal vein → liver directly",
+      "Hepatic vein → inferior vena cava",
+      "Central lacteal → lymphatic vessels → venous circulation",
+      "Superior mesenteric vein → portal vein",
+      "Inferior vena cava directly via tight junctions"
+    ],
+    "answer": 2,
+    "topic": "portal-vein-lymph",
+    "explain": "Chylomicrons are too large for blood capillaries and enter the central lacteal. The lymphatic system eventually drains into the venous circulation. Water-soluble nutrients (glucose, amino acids, short-chain fatty acids) use the portal vein and go to the liver first.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which brush-border enzyme hydrolyses sucrose into glucose and fructose?",
+    "options": [
+      "Isomaltase",
+      "Maltase",
+      "Sucrase",
+      "Lactase",
+      "Amylase"
+    ],
+    "answer": 2,
+    "topic": "carb-digestion-enzymes",
+    "explain": "Sucrase specifically cleaves sucrose into glucose and fructose. Isomaltase acts on oligosaccharides with α-1,6 linkages; maltase on maltose/maltotriose; lactase on lactose. Amylase is a luminal enzyme (salivary/pancreatic), not a brush-border enzyme.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "What is the PRIMARY energy source that drives glucose uptake from the intestinal lumen into absorptive cells via SGLT1?",
+    "options": [
+      "Hydrolysis of ATP directly by SGLT1",
+      "An inward K⁺ gradient established by K⁺ channels",
+      "The downhill electrochemical gradient of Na⁺ into the cell",
+      "The uphill flux of Cl⁻ out of the cell",
+      "Phosphorylation of glucose by hexokinase at the brush border"
+    ],
+    "answer": 2,
+    "topic": "monosaccharide-transport",
+    "explain": "SGLT1 is a secondary active transporter that does not hydrolyse ATP itself. It exploits the Na⁺ electrochemical gradient maintained by the basolateral Na⁺/K⁺-ATPase — Na⁺ flows downhill into the cell, and this energy drives glucose/galactose uphill. K⁺ and Cl⁻ gradients and hexokinase are not coupled to SGLT1.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "How do free amino acids exit absorptive cells across the basolateral membrane into the blood?",
+    "options": [
+      "Secondary active transport driven by Na⁺ gradient",
+      "Primary active transport by an AA-ATPase",
+      "Facilitated diffusion (passive carrier-mediated transport)",
+      "Simple diffusion directly through the lipid bilayer",
+      "Exocytosis packaged in membrane vesicles"
+    ],
+    "answer": 2,
+    "topic": "aa-transport",
+    "explain": "Free AAs exit the basolateral membrane by facilitated diffusion (passive), not active transport. Apical entry of free AAs is Na⁺-dependent (secondary active). This asymmetry is a common exam trap — active on the apical side, passive on the basolateral side.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Triglycerides account for approximately what proportion of dietary lipid?",
+    "options": [
+      "50%",
+      "70%",
+      "~90%",
+      "99%",
+      "30%"
+    ],
+    "answer": 2,
+    "topic": "dietary-lipids",
+    "explain": "Triglycerides (triacylglycerols) constitute ~90% of dietary lipid. The remaining ~10% includes cholesterol esters, phospholipids, and fat-soluble vitamins. This proportion matters because different lipid classes use similar but not identical absorption pathways.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which enzymes digest triglycerides into free fatty acids and monoglycerides in the GI tract?",
+    "options": [
+      "Salivary amylase and pancreatic amylase",
+      "Brush-border peptidases and pancreatic proteases",
+      "Gastric lipase and pancreatic lipase",
+      "Bile salts and cholesterol esterase",
+      "Isomaltase and sucrase"
+    ],
+    "answer": 2,
+    "topic": "dietary-lipids",
+    "explain": "Triglycerides are digested by gastric lipase (stomach) and pancreatic lipase (small intestine lumen) to yield free fatty acids and monoglycerides. Bile salts aid emulsification but are not enzymes. Amylases digest carbohydrates; peptidases digest proteins; bile salts/cholesterol esterase is a classic distractor.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "In a patient with complete bile duct obstruction (no bile reaching the intestine), which absorption process would be MOST severely compromised?",
+    "options": [
+      "Glucose absorption via SGLT1",
+      "Dipeptide absorption via PEPT1",
+      "Fat-soluble vitamin absorption (A, D, E, K) via micelle-dependent diffusion",
+      "Water absorption by osmosis following Na⁺",
+      "Ca²⁺ absorption via the calcitriol-regulated transcellular route"
+    ],
+    "answer": 2,
+    "topic": "micelle-formation",
+    "explain": "Bile salts are essential for forming mixed micelles, which solubilise hydrophobic lipid digestion products. Without bile, fat-soluble vitamins (A, D, E, K) and long-chain fatty acids cannot form micelles and cannot be absorbed efficiently. Glucose, dipeptide, water, and transcellular Ca²⁺ absorption do not require bile salts.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Water absorption in the small intestine is best described as:",
+    "options": [
+      "Primary active transport driven by ATP hydrolysis at water-ATPases",
+      "Secondary active transport coupled directly to Na⁺ entry via SGLT1",
+      "Facilitated diffusion through Na⁺-gated channels",
+      "Passive osmosis following absorption of osmotically active solutes",
+      "Endocytosis of luminal fluid into absorptive cells"
+    ],
+    "answer": 3,
+    "topic": "water-absorption",
+    "explain": "Water moves by osmosis, following the absorption of osmotically active solutes (primarily Na⁺, but also glucose and amino acids). It crosses the epithelium through tight junctions (paracellular) and aquaporins on plasma membranes. Water absorption is entirely passive and is maximal in the jejunum, not the duodenum.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "How many segments does the colon have, and which option lists them correctly?",
+    "options": [
+      "Two: ascending and descending",
+      "Three: ascending, transverse, and sigmoid",
+      "Three: ascending, transverse, and descending",
+      "Four: ascending, transverse, descending, and sigmoid",
+      "Five: ascending, transverse, descending, sigmoid, and rectal"
+    ],
+    "answer": 3,
+    "topic": "large-intestine-structure",
+    "explain": "The colon has exactly four segments: ascending, transverse, descending, and sigmoid. The cecum and rectum are separate components of the large intestine but are NOT segments of the colon. Many students list only three segments — the sigmoid colon is most commonly omitted.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which of the following is NOT a function of the duodenum?",
+    "options": [
+      "Neutralisation of gastric acid by pancreatic juice",
+      "Initiation of digestion by pancreatic enzymes and bile",
+      "Secretion of H₂O, electrolytes, and mucus from submucosal intestinal glands",
+      "Serving as the major site of nutrient absorption (~40% of SI length)",
+      "Some nutrient absorption at its lower portion"
+    ],
+    "answer": 3,
+    "topic": "si-segments",
+    "explain": "The jejunum — not the duodenum — accounts for ~40% of small intestinal length and is the MAJOR site of nutrient absorption. The duodenum performs acid neutralisation, initiates digestion, secretes fluids from submucosal glands, and absorbs some nutrients at its lower part, but represents only 5% of SI length.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "After dipeptides and tripeptides enter absorptive cells, what happens before their constituent amino acids cross the basolateral membrane?",
+    "options": [
+      "They are re-exported intact into lymph via exocytosis",
+      "They are phosphorylated and stored in secretory vesicles",
+      "They are re-assembled into larger proteins in the Golgi apparatus",
+      "They are converted to free amino acids by intracellular peptidases",
+      "They are directly secreted as intact peptides into the portal vein"
+    ],
+    "answer": 3,
+    "topic": "dipeptide-tripeptide-transport",
+    "explain": "Intracellular peptidases inside absorptive cells cleave di/tripeptides into free amino acids, which then exit the basolateral membrane by facilitated diffusion into the blood. This is why the portal vein carries free amino acids, not intact peptides.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which of the following correctly compares the absorption efficiency of free amino acids versus dipeptides/tripeptides?",
+    "options": [
+      "Free AAs are absorbed faster and are the major protein absorption pathway",
+      "Both use PEPT1 (H⁺-coupled) and are absorbed with equal efficiency",
+      "Free AAs use H⁺ coupling; dipeptides/tripeptides use Na⁺ coupling",
+      "Dipeptides/tripeptides are absorbed more efficiently and are the major pathway; free AAs are slower",
+      "Both are absorbed exclusively by endocytosis in adults"
+    ],
+    "answer": 3,
+    "topic": "dipeptide-tripeptide-transport",
+    "explain": "Dipeptides and tripeptides are absorbed faster and more efficiently than free amino acids and represent the major pathway for dietary protein absorption. Free AAs are transported more slowly by Na⁺-dependent apical transporters. PEPT1 (H⁺-coupled) is specific to di/tripeptides; free AAs use a distinct Na⁺-coupled transporter.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "A brush-border enzyme deficiency prevents hydrolysis of oligosaccharides with α-1,6 glycosidic linkages. Which enzyme is deficient?",
+    "options": [
+      "Lactase; galactose and glucose cannot be released from lactose",
+      "Sucrase; fructose and glucose cannot be released from sucrose",
+      "Maltase; glucose cannot be released from maltose",
+      "Isomaltase; glucose cannot be released from branched oligosaccharides",
+      "Amylase; starch cannot be cleaved to oligosaccharides in the lumen"
+    ],
+    "answer": 3,
+    "topic": "carb-digestion-enzymes",
+    "explain": "Isomaltase specifically cleaves α-1,6 glycosidic linkages in branched oligosaccharides (the branch points from starch digestion), releasing glucose. Without it, these branched fragments accumulate in the lumen. Maltase acts on α-1,4 linkages in maltose/maltotriose; sucrase on sucrose; lactase on lactose. Amylase is a luminal enzyme, not a brush-border enzyme.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Which vitamin requires intrinsic factor for intestinal absorption, distinguishing it from all other water-soluble vitamins?",
+    "options": [
+      "Vitamin C",
+      "Thiamine (B1)",
+      "Riboflavin (B2)",
+      "Vitamin B6 (pyridoxine)",
+      "Vitamin B12 (cobalamin)"
+    ],
+    "answer": 4,
+    "topic": "vitamin-absorption",
+    "explain": "Vitamin B12 is the only water-soluble vitamin that requires intrinsic factor (secreted by gastric parietal cells) for absorption. Without intrinsic factor, B12 cannot be absorbed and pernicious anaemia results. All other B-complex vitamins and Vitamin C use specific membrane carrier proteins without an additional cofactor.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "A patient with lactose intolerance experiences bloating and diarrhoea after drinking milk. Which pair of mechanisms best explains these symptoms?",
+    "options": [
+      "Lactase excess → rapid glucose absorption → hypertonic blood → osmotic diarrhoea",
+      "Lactose activates mucosal mast cells → histamine release → intestinal secretion",
+      "Undigested lactose is directly absorbed → triggers hepatic toxicity → GI symptoms",
+      "Lactase breaks down lactose into toxic byproducts that irritate the mucosa",
+      "Undigested lactose draws water osmotically; colonic bacteria ferment lactose producing lactic acid and gas"
+    ],
+    "answer": 4,
+    "topic": "lactose-intolerance",
+    "explain": "Without lactase, lactose stays in the lumen and draws water by osmosis (fluid accumulation, diarrhoea). Colonic bacteria ferment undigested lactose, producing lactic acid, CO₂, H₂, and methane (bloating, cramps, gas, nausea). Lactose intolerance is enzymatic/osmotic/fermentation-based, not immunological or hepatotoxic.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which segments of the large intestine are primarily responsible for storing feces prior to defecation?",
+    "options": [
+      "Cecum and ascending colon",
+      "Ascending and transverse colons",
+      "Transverse and descending colons",
+      "Rectum and cecum",
+      "Descending and sigmoid colons"
+    ],
+    "answer": 4,
+    "topic": "large-intestine-functions",
+    "explain": "The descending and sigmoid colons are primarily feces storage sites. The ascending and transverse colons perform the bulk of remaining water and electrolyte absorption and secretion. Once feces reaches the rectum (a separate structure, not a colon segment), the defecation reflex is triggered.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Calcitriol (active Vitamin D) regulates transcellular Ca²⁺ absorption. Which steps of the transcellular pathway does it regulate?",
+    "options": [
+      "Only the Ca²⁺ channel at the brush border (Step 1)",
+      "Only calbindin expression in the cytosol (Step 2)",
+      "Only the Ca²⁺-ATPase at the basolateral membrane (Step 3)",
+      "Steps 1 and 3 only (channel and pump, not calbindin)",
+      "All three steps: Ca²⁺ channel, calbindin, and Ca²⁺-ATPase"
+    ],
+    "answer": 4,
+    "topic": "calcium-absorption",
+    "explain": "Calcitriol upregulates all three steps of transcellular Ca²⁺ absorption: (1) brush-border Ca²⁺ channels, (2) calbindin synthesis in the cytosol, and (3) the basolateral Ca²⁺-ATPase. A common exam trap is assuming it regulates only one or two steps. Note that high dietary Ca²⁺ bypasses all three steps by using the paracellular route.",
+    "difficulty": "hard"
+  }
+]

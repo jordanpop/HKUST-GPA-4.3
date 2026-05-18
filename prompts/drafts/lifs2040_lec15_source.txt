@@ -1,0 +1,451 @@
+Lecture 15
+
+© |
+ag
+S
+ag
+L
+LL
+Qy
+A”
+3
+=
+o~
+Ss)
+y
+a
+(—
+
+I
+
+cell movement-
+Microtubes (green), actin filaments (red)
+
+an * . ; 4 ee a 3
+aa : ee NZ
+
+Does cell have bones? Cytoskeleton is an intricate network of protein
+filaments that extends throughout the cytoplasm.
+
+The cytoskeleton and cell movement
+
+actin filaments intermediate filaments microtubules
+
+https: //www.youtube.com/watch?v=EWF 6jRIS9Fs
+AE
+
+ll
+
+25m
+MICROTUBULES
+
+. ~“
+
+25 nm
+
+25 nm
+Intermediate filaments are anchored to the plasma
+membrane at desmosomes
+
+Function: to enable cell to withstand the mechanical stress when cells are stretched.
+
+TN AAATAP Fi
+
+25 um
+INTERMEDIATE FILAMENTS
+
+0.1
+(A) “——"
+
+Desmosome at the cell junctions
+0.1 wm
+#p([;@;@; »
+
+stretching a sheet
+of cells without
+intermediate filaments
+
+stretching a sheet
+of cells with
+intermediate filaments
+
+Figure 17-4 Essential Cell Biology 3/e (© Garland Science 2010)
+basal cell of epidermis
+
+woe : basal lamina
+
+defective keratin
+filament network
+
+Normal skin 40pm _ '8) Blistered skin (C) hemidesmosomes
+
+Figure 16-21 Molecular Biology of the Cell 5/e (© Garland Science 2008)
+
+aes
+
+Blistered skin (7K)@)
+
+Epidermolysis bullosa simplex:
+mutations in keratin genes
+Animation showing function and assembly of intermediate filament
+
+The Nuclear Envelope is supported by a meshwork of
+intermediate filaments
+
+nuclear envelope
+
+OR eee. FIA a.
+ra vy _ < ¥y. PSS . e{ * coe
+4 ~~» . ~ s
+
+vs »
+= us .
+
+} pt.
+
+“et =
+
+> nuclear
+lamina
+
+>
+oo)
+.
+
+5
+
+“~
+—
+-
+’
+
+chromatin
+(A)
+
+©1998 GARLAND PUBLISHING
+
+The nuclear envelope is supported by a 10-40 nm thick, fibrous meshwork of intermediate filaments called
+
+the Located on the nucleoplasmic surface of the inner nuclear membrane, which provide
+structural integrity and mechanical stability to the nucleus.
+Three types of protein filaments form the cytoskeleton in
+multicellular eukaryotic cells
+
+m m
+
+I
+
+an
+
+.
+
+25 wm , 25 wm
+INTERMEDIATE FILAMENTS , MICROTUBULES
+
+pee me me eid Phi paokee
+
+A highway system for transportation “ J
+
+Vesicles ( (green) m moving on the
+
+microtubule tracks (red)
+Splinter et al., MBoC 2012 23:4226
+
+Microtubules are amazing
+
+A highway system for transportation
+
+An elaborate device (mitotic spindle) for
+separating chromosomes during mitosis
+- Structural role in Cilia and flagella
+
+cS Propeller
+ye like
+
+) motion
+
+passive part
+in motion
+
+Move mucus toward mouth
+
+A »
+
+~~ Movement of sperm
+
+Without this, soerm can not meat with egg
+
+B
+a
+
+{
+
+tubulin heterodimer
+
+microtubule subunit)
+
+(
+
+protofilament
+
+¥
+<
+5
+2
+=
+ws
+A
+5
+2
+5
+wera?
+°
+Thee
+—
+
+tubulin heterodimer
+
+(
+
+(A)
+
+Figure 7-11 Essential Cell Biology
+Dynamic instability of growing microtubules
+
+- Microtubule end may undergo transitions between a growing state and a shrinking state rapidly.
+
+Dynamic instability allows microtubules to
+rapidly explore space. If microtubules are
+preferentially stabilized or destabilized when
+they reach certain locations, the cell can build
+microtubule arrays with specific shapes.
+
+GTP-tubulin dimer
+
+! a B |
+
+exchangeable GTP
+
+Major form in the cytosol
+Stably bound to microtubules
+
+Figure 16-44 Molecular Biology of the Cell
+A single microtubule end may undergo transitions between a growing state
+and a shrinking state.
+
+A growing microtubule has GTP-containing subunits at its end (a GTP cap).
+
+Catastrophe:
+
+If nucleotide hydrolysis proceeds more rapidly than subunit addition, the
+cap is lost and the microtubule begins to shrink.
+
+Rescue:
+
+GTP-containing subunits may still add to the shrinking end and if enough
+add to form a new cap, then microtubule growth resumes.
+
+nucleating sites
+(y-tubulin ring complexes)
+
+centrosome
+“¢ matrix
+
+pair of
+centrioles
+
+(A)
+Figure 17-12 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+
+Centrosome is one of the microtubule organization centers
+(MTOC)
+y-TuSC: y-tubulin small complex
+formed by two copies of y-tubulin and a pair of
+accessory proteins
+
+y-tubulins
+
+accessory
+proteins
+
+(A) y-TuSC «c
+
+Figure 16-46 Molecular Biology of the Cell 6e (© Garland Science 2015)
+
+Seven copies of y-TuSC assembled into a spiral structure resulting in 13 exposed y-tubulin
+subunits in a circular orientation that matches the 13 protofilaments in a microtubule.
+
+Organization of microtubules in cells in interface
+
+microtubule
+
+centrosome
+
+Organization of microtubules in mitosis
+
+microtubule
+
+centrosome
+
+microtubule \
+
+chromosome | |}
+
+Kinesin and dynein move along microbutules using their globular heads
+
+:
+
+kinesin
+
+|
+=
+
+plus end
+
+otubule
+=
+
++
+. a “
+$
+
+nucleus
+centrosome
+
+Different motor proteins transport different types of cargo
+along microtubules
+
+globular head Sw -“ -
+
+microtubule
+
+Figure 17-19 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+Movement of melanosomes
+
+Microtubule Organizing Centers
+Oe ~ gamma-tubulin = =
+
+>
+
+gamma-tubulin ring complex
+
+accessory proteins se Skips rate limiting step Je
+
+https://www.youtube.com/watch?v=ZpEKOH4LBAc
+
+5 wm
+Cilia that project from the surface of the epithelial
+cells in the human respiratory tracts
+© Organs affected by primary ciliary dyskinesia
+
+— Trachea
+
+is lined
+with cells
+covered
+
+in cilia and
+mucus
+
+(Trachea shown
+in cross-section)
+
+Normal! cilia lining trachea
+
+Cilia move together in wave-like motions
+to transport mucus toward the mouth.
+The mucus contains dirt and bacteria.
+
+Faulty cilia lining trachea
+
+Cilia are deformed and do not move together,
+causing a buildup of mucus. The mucus
+contains dirt and bacteria.
+
+Primary ciliary dyskinesia (PCD)
+
+Around 30 different diseases
+are caused by defects in cilia
+
+Cause:
+- Defects in the action of cilia
+lining the respiratory tract
+
+Symptom:
+- Reduced mucus clearance from
+the lungs, and susceptibility
+to chronic recurrent respiratory
+infections
+Immobile Cilia (Cell's Antenna)
+
+gy he he AE “er 4. “oo”
+
+Renal Cilia: sense urine flow
+
+and control cell proliferation Olfactory Cilia: sense the smell
+
+9 Ciliary
+membrane
+Cilium
+
+~ Doublet
+microtubule
+
+Plasma
+
+membrane
+
+Transition 3
+fibers
+
+Terminal plate
+Basal
+Triplet body
+microtubules
+
+a Singla, 2006
+
+linking
+proteins
+
+Figure 17-27 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+Cross-view of the flagellum
+
+Doublet microtubule
+Outer dynein arm £
+
+7
+
+Inner dynein arm
+
+Membrane
+
+¢ Intermediate filaments
+Functions
+Assembly
+
+¢ Microtubules
+Functions
+Assembly
+- Dynamic instability
+Motor proteins: Kinesin and dynein
+
+¢ Cilia
+Function
+Assembly
+Which of the following types of cells would you expect to contain
+a high concentration of intermediate filaments in their cytoplasm?
+
+A. Skin epithelial cell
+
+B. Smooth muscle cell
+
+C. Bacterial such as E.coli
+D. Sperm cell
+
+What will happen to the microtubules if the solution contains only
+GDP but not GTP: A. Shrinkage B. Growth
+
+What will happen to the microtubules if the solution contains only
+an analog of GTP that can not be hydrolyzed:
+A. Shrinkage B. Growth

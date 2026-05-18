@@ -1,0 +1,257 @@
+Lecture 19: THE CELL DIVISION CYCLE
+
+Discovery of the cell
+
+“ Where a cell arrives, there must
+be a previous cell, just as animals
+can only arise from animals and
+plants from plants.”
+- Rudorf Virchow
+
+Rudolph Virchow (1855) - a German physician who stated that all living cells come only from other living
+cells. By combining the work of all of the scientist mentioned, the Cell Theory was born…
+
+The growth, development and survival of all living things
+depends on cell reproduction
+
+Cancer is a disease of uncontrolled cell reproduction
+
+Jeanne Kelly, 2004
+
+Underlying tissue
+
+Cancer is a disease of uncontrolled cell reproduction
+Understanding of cancer absolutely requires
+understanding of molecular mechanisms that
+regulate cell division!
+
+1
+Cancer cells invade
+surrounding tissues and
+blood vessels
+2
+Cancer cells are
+transported by the
+circulatory system
+to distant sites
+
+Jeanne Kelly, 2004
+
+3
+Cancer cells reinvade
+and grow at new
+location
+
+New cells are generated from division of pre-existing cells
+Synthesis (double the amount)
+- Duplicate DNA
+- Synthesize proteins, lipids
+- Growth of organelles
+Division (one cell – two cells)
+- Segregate chromosome
+- Divide cytoplasmic components
+
+Early Embryonic Cell Division
+
+New cells are generated from division of pre-existing cells
+How an eukaryotic cell segregates its duplicated
+contents to produce two identical cells?
+
+How it coordinates the various steps of this
+reproductive cycle? (eg. Why chromosomes
+are duplicated first before segregation?)
+
+The cell cycle occurs in four phases
+
+https://www.youtube.com/watch?v=e6N9_RhD10Q
+
+The cell cycle occurs in four phases
+G1 phase: metabolic activity, cell growth
+S phase: DNA replication
+G2 phase: cell growth and protein synthesis
+to be ready for mitosis
+M phase: nuclear and cytoplasmic division
+
+The cell cycle control system
+G2/M checkpoint
+Is all DNA replicated?
+Are all DNA damages repaired?
+Is environment favorable for cell division?
+Are all chromosomes segregate properly?
+
+metaphase/anaphase
+transition checkpoint
+
+G1/S checkpoint is a
+crossroad for the cell
+
+G1/S checkpoint
+
+Outline
+• The cell-cycle control system
+• Interphase
+• M phase
+– Mitosis
+– Cytokenesis
+
+Identification of proteins that regulate cell cycle in yeast
+
+2001 Nobel Prize
+in Medicine
+
+Cdc7, cyclin-dependent kinase 7
+
+Cyclin and cyclin dependent protein kinases
+
+Active Cdk
+
+Cyclin degradation regulates the activity of Cdks
+
+Cyclins: their concentrations vary in a cyclical fashion during the cell cycle.
+APC: anaphase-promoting complex, an ubiquitin ligase
+
+Accumulation and degradation of cyclins help to regulate
+the activity of Cdks
+
+Cyclins: their concentrations vary in a cyclical fashion during the cell cycle.
+
+Distinct Cdks associate with different cyclins to trigger the
+different events of the cell cycle
+
+Chromosome
+duplication
+
+Chromosome
+segregation
+
+How it coordinates the various steps of this reproductive cycle?
+(eg. Why chromosomes are duplicated first before segregation?)
+
+The major cyclins and Cdks of vertebrates
+
+Outline
+• The cell-cycle control system
+• Interphase
+• M phase
+– Mitosis
+– Cytokenesis
+
+Interphase
+
+•
+•
+•
+•
+
+Chromosome duplicated
+Centrosome duplicated
+Cell and organelle size increased
+More proteins and lipids synthesized
+
+DNA damage can arrest
+the cell cycle in G1
+
+Outline
+• The cell-cycle control system
+• Interphase
+• M phase
+– Mitosis
+– Cytokenesis
+
+M phase
+
+https://www.youtube.com/watch?v=5bq1To_RKEo
+
+Key steps of mitosis: Mitotic spindle pulls the sister
+chromatids apart
+
+Direct observations of movement of mitotic spindles and
+chromosomes during mitosis
+
+Steps of M-Phase
+
+Prophase
+
+• Condensing duplicated chromosomes
+• Assembly of mitotic spindles
+
+compact chromatin
+Human DNA: 2 m
+
+Human nucleus r = 10 µm
+
+28
+
+Condensins function in chromosome condensation
+
+Cohesins function in sister chromatids paring
+
+Kinetochore
+
+Break down of the nuclear envelope
+Attachment of chromosome to spindle microtubules
+via kinetochores
+
+Kinetochore attaches
+chromosomes
+to mitotic spindle
+
+Mitotic spindle
+
+Correct position and orientation
+of mitotic spindle
+
+Separate the sister chromatids
+
+Push the spindle poles further apart
+
+Mitotic spindle
+
+Chromosomes are aligned at the equator of spindle.
+
+APC triggers segregation of sister chromatids by triggering
+destruction of cohesins
+
+Separation of sister chromatids
+
+Two sister chromatids arrive at
+the spindle pole and decondense;
+New nuclear envelope reassembles;
+contractile ring starts to form.
+
+The contractile ring divides the cell in two
+
+Phragmoplast guides cytokinesis in a plant cell
+
+Plant cell division
+
+Summary
+• The cell-cycle control system
+- Cell cycle checkpoints
+- Roles of Cyclin and Cdks
+• Interphase
+- Major event happening during the interphase
+• M phase
+
+- Mitosis
+Major events happening at different stages of mitosis
+- Cytokinesis
+Major events happening during cytokinesis
+
+How microtubules provide force to pull chromosomes
+
+Extensive learning
+
+Westermann et al., Nature 2006
+
+Question
+
+What would be the most obvious outcome of repeated cell cycles consisting
+of S phase and M phase only?
+_______
+(a) Cells would not be able to replicate their DNA.
+(b) The mitotic spindle could not assemble.
+(c) Cells would get larger and larger.
+(d) The cells produced would get smaller and smaller.
+
+

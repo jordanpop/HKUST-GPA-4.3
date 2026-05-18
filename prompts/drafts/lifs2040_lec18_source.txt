@@ -1,0 +1,819 @@
+Mechanisms of cellular communication-II
+
+General principles of cell signaling
+
+¢ Cells communicate with each other via signal transduction in multiple ways
+
+¢ Three phases of signal transduction
+- Reception (Intracellular and Cell surface localized receptor)
+- Transduction
+- Response
+
+Relay molecules in a signal transduction
+pathway
+
+plasma membrane
+cell-surface
+
+receptor protein
+
+extracellular signal
+
+molecule intracellular
+signaling molecule
+
+Cell-surface receptors
+¢ Ion-channel-coupled receptors
+‘e G-protein-coupled receptors ©
+
+¢ Enzyme-coupled receptors
+N S
+
+small hydrophobic
+fr signal molecule
+
+nucleus
+intracellular
+receptor
+
+Figure 16-8b Essential Cell Biology, 4th ed. (© Garland Science 2014)
+EXTRACELLULAR .
+SPACE *® Seven pass transmembrane protein
+
+¢ >700 members in human and Important members:
+Rhodopsin (photoreceptor protein)
+plasma Olfactory (smell) receptors
+error Humans have approximately 400 functional
+genes coding for olfactory receptors
+Adrenaline receptors
+Regulate heart rate in heart
+Control glycogen breakdown in muscle
+
+CYTOSOL
+
+etc....
+
+¢ About 30% of drugs used today work through GPCRs
+
+Prof. Robert J. Lefkowitz
+Nobel Prize in 2012
+
+Domino Effect Chain Reaction
+
+Signal in
+
+STEELE
+
+A molecular relay
+
+coo AVIIIIIITTNNU
+L
+
+Cell response
+
+G proteins:
+-Three subunits: a, B, y
+
+-Two subunits are tethered to
+the plasma membrane by
+short lipid tails
+
+- a subunit has a GDP-bound inactivated
+and GTP-bound activated status
+
+- GTP binding causes dissociation of
+co from By complex and activates both.
+
+More than 20 different types of
+G proteins in mammals.
+
+(A)
+
+inactive receptor protein
+
+signal molecule @ —>—~
+
+CYTOSOL
+
+(B)
+
+APIS
+
+activated
+a subunit
+
+EXTRACELLULAR SPACE
+
+Q
+
+Z
+
+LJ
+inactive G protein
+
+activated receptor
+
+GDP dissociation
+
+activated
+| Bry subunit
+
+EFFECTOR ACTIVATION
+
+Figure 16-19 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+
+Signal
+
+v
+
+GPCR
+
+v
+
+G protein
+
+Ga GBy
+
+¥ v
+\ v
+
+¥ v
+
+Cell response
+G protein coupled receptors
+
+Plasma
+
+Membrane
+
+Signal
+
+v
+¢ Ion channels ae
+G protein
+¢ Enzymes
+- Adenylyl cyclase ri SPy
+- Phospholipase C J :
+v Y
+
+Cell response
+
+%
+-
+=
+
+\
+
+lon channels
+
+fy
+
+Adenylyl cyclase Phospholipase C
+
+plasma membrane
+
+9 activated
+4 By complex
+
+acetylcholine
+
+(A)
+, , /y
+activated a subunit i ences
+K* CHANNEL open K’ channel
+OPENING
+EXTRACELLULAR SPACE
+(B)
+> be Slowing the
+heart rate
+
+CYTOSOL
+
+GPCR
+
+v
+
+G protein
+
+v
+
+lon channels
+
+Y
+
+Cell response
+
+GPCR
+
+Y
+
+G protein
+y
+
+Adenylyl cyclase
+
+@., @. <.3 <
+
+Cell response
+
+-
+Pry
+
+GPCR
+
+Y
+
+G protein
+
+y
+
+Phospholipase C
+
+v
+?
+v
+?
+vy
+?
+
+Cell response
+plasma activated
+
+membrane enzyme EXTRACELLULAR
+
+\ SPACE
+Enzymes
+CYTOSOL
+weo® - Adenylyl cyclase |
+wn, Second messenger: cyclic AMP
+activated om - Phospholipase C
+a subunit Second messenger: Ca7*
+
+of G protein
+
+Figure 16-22 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+adrenaline activated a subunit of
+
+stimulatory G protein (G,)
+
+CYTOSOL
+activated GPCR ——
+(adrenergic receptor)
+
+activated
+
+.
+-
+8 ATP
+adenylyl cyclase TO
+inactive P e °se $ cyclic AMP
+
+= ee
+
+active PKA
+
+Increase heart rate
+
+Pri
+
+[| nse breaking down
+in muscle cells
+
+GPCR
+
+v
+G protein
+v
+
+Adenylyl cyclase
+
+v
+
+cAMP
+
+v
+
+Protein Kinase A (PKA)
+
+v
+
+Effectors
+
+1
+
+Cell response
+
+Effector Y /
+
+\ Transcription of target genes in neuronal
+cells to regulate long term memory
+
+GPCR
+
+v
+
+G protein
+
+v
+
+lon channels
+
+Y
+
+Cell response
+
+GPCR
+
+Y
+
+G protein
+y
+
+Adenylyl cyclase
+
+@., @. <.3 <
+
+Cell response
+
+-
+Pry
+
+GPCR
+
+Y
+
+G protein
+
+y
+
+Phospholipase C
+
+v
+?
+v
+?
+vy
+?
+
+Cell response
+signal molecule
+
+» >} activated GPCR
+
+Figure 16-27 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+
+GPCR
+
+4
+
+G protein
+
+1
+
+Phospholipase C
+
+<™
+
+IP3 diacylglycerol
+
+| |
+
+Ca**_—_» PKC
+
+4 4
+
+Effector activation
+
+1
+
+Cell response
+
+-4
+Ca** concentration at steady state: inside ER 1mM; cytosol: 10 mM
+GPCR
+
+v
+
+G protein
+
+v
+
+lon channels
+
+Y
+
+Cell response
+
+GPCR
+
+\
+
+G protein
+¥
+
+Adenylyl cyclase
+
+y
+
+cAMP
+
+y
+
+PKA
+
+v
+
+Effectors
+
+U
+
+Cell response
+
+-
+Pry
+
+GPCR
+
+Y
+
+G protein
+
+Y
+
+Phospholipase C
+
+x<™
+
+IP3 diacylglyerol
+
+,
+
+Ca2+ —» PKC
+
+Y v
+
+Effectors Fffectors
+y y
+
+Cell response
+signal molecule ~ wp signal molecule
+er a
+
+in form of adim
+L L . ww
+
+OR
+me
+inactive catalytic active catalytic activated
+domain domain associated
+y enzyme
+
+Figure 16-17c Essential Cell Biology, 4th ed. (© Garland Science 2014)
+
+U
+
+Cell response
+
+¢ Ion-channel-coupled receptors
+¢ G-protein-coupled receptors
+* Enzyme-coupled receptors
+
+Tyrosine kinases JS) Cnrereny
+
+receptors Metabolic disorde
+
+Serine/threonine
+kinases receptors
+
+Guanylyl cyclase
+linked receptors
+
+https://www.youtube.com/watch ?v=B3GSBG1prds
+¢ Single pass transmembrane proteins
+¢ Response to growth factors that regulate the growth, proliferation,
+
+differentiation and survival of cells in animal tissues
+
+tyrosine ¢ Have major roles in the development of Cancer
+
+kinase
+domain ° The major class: Receptor tyrosine kinases (RTKs)
+
+Responses usually lead to changes in gene expression
+Receptor Tyrosine Kinases
+
+https://www.youtube.com/watch ?v=44iGSUrJYr8&
+signal molecule in form of a dimer
+
+~e
+
+L
+
+. > | rm — ey EXTRACELLULAR
+
+SPACE
+Pot WF
+
+CYTOSOL
+
+tyrosine
+kinase
+domain
+
+activated
+intracellular
+signaling
+proteins
+
+KINASE ACTIVITY active RTKs
+
+inactive RTKs STIMULATED
+
+ACTIVATION OF DOWNSTREAM
+INTRACELLULAR SIGNALING PATHWAYS
+
+Binding of signaling molecules to RTKs causes two receptor molecules to associate into a dimer.
+
+Dimerization of RTKs activate the intracellular Kinase domain.
+Activated kinase domain phosphorylates the tyrosine residues on the adjacent tail.
+
+Each phosphorylated tyrosine functions to serve as a specific docking site for a different
+intracellular signaling protein to relay the signal.
+signal molecule ee
+
+plasma membrane
+
+activated RTK
+
+Ras-GEF:
+Guanine nucleotide exchange factor for Ras
+
+Promote Ras to bind GTP ™,
+PI 3-kinase
+
+Ras-GEF
+
+signal molecule
+
+plasma membrane
+EXTRACELLULAR
+
+SPACE inactive Ras protein activated Ras protein
+
+CYTOSOL on GDP o
+LAN ae
+GTP
+activated RTK
+
+We
+: /\ j
+
+Signal molecule —> RTK——~> Ras-GEF—> Ras-GTP —> Cell response
+
+adaptor protein Ras-GEF
+
+Figure 16-33 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+
+signal molecule ee
+
+plasma membrane
+
+activated RTK
+
+Ras-GEF
+
+4
+Y 4
+j ?
+
+survival signal
+
+inositol phospholipid
+
+phosphorylated
+inositol
+phospholipid
+activated RTK activated
+Pl 3-kinase
+
+Figure 16-35 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+
+Signal molecule —> RTK ——> PI3-kinase
+
+EXTRACELLULAR SPACE
+
+CYTOSOL
+
+protein nm
+kinase 1 of She protein
+
+. kinase 2
+
+SIGNAL RELAYED ONWARD
+BY ACTIVATED Akt
+
+Protein kinases—> —+ Cell response
+
+Akt: a protien kinase that functions to promote the growth and survival of many cell types
+plasma membrane
+
+activated RTK
+
+™, PI 3-kinase
+Ras-GEF
+phosphorylated
+| inositol
+phospholipid
+
+Ras
+¥
+protein kinase 1
+¥ |
+Akt kinase <—
+
+g i
+
+signal molecule in form of a dimer
+
+~e
+
+wwe EXTRACELLULAR
+
+tL. oe
+
+>
+SPACE
+CYTOSOL
+YY &
+
+tyrosine mn & % activated
+kinase = intracellular
+domain signaling
+
+proteins
+
+KINASE ACTIVITY
+
+ne — (eee
+
+>
+
+Figure 16-32 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+
+Mutagenesis to determine which tyrosine residue in RTKs binds
+a specific intracellular signaling molecule.
+
+signal molecule  ww®
+
+{ plasma membrane
+
+EXTRACELLULAR
+
+. . CYTOSOL
+Mutational analysis
+
+mutant receptor A
+
+Mutagenesis to determine which tyrosine residue in RTKs binds a specific
+intracellular signaling molecule
+
+plasma membrane
+
+activated RTK
+
+™, PI 3-kinase
+Ras-GEF |
+phosphorylated
+| inositol
+
+hospholipid
+Constituitively activated BECER OND!
+v
+
+protein kinase 1
+
+¥
+
+v
+Akt kinase <—
+
+g i
+
+(A) cell with mutant protein X
+
+NO SIGNALING
+
+X => Ras Ras m=m Y
+The use of an overactive form of Ras to determine the order of activating proteins
+
+in a signaling pathway X om Ras => Y
+
+Extensive learning
+
+Cell survival |.” “4 Angiogenesis
+
+Metastasis
+
+Vv
+Invasion . . .
+Proliferation Alyssa M. Krasinskas, 2011
+S
+4
+
+¢ EGFR is overexpr 2rs of the head and
+
+neck, ovary, cerv C rat)
+- AS an example,
+Cancer CdaSeS, dl C axt >
+¢ Many epithelial « tutively activate
+EGER.
+
+t Vv Metastasis
+Invasion proliferation
+
+| Extensive learning
+
+Sharma, et al. Nature reviews. Cancer, 2007
+Inhibition Strategies:
+mAb
+
+ie ¢ EGFR-Tyrosine Kinase inhibitors
+: ¢ Anti-EGFR Antibody inhibitors
+
+_ ~ | aM
+EGFRvill
+\ mutant
+Proliferation \ oe Angiogenesis
+
+Invasion Metastasis
+
+Inhibition
+of Apoptosis
+
+Extensive learning
+Maheswaran, N Engl J Med. 2008
+
+@ 1.0
+* 0.9-
+‘2 0.8-
+e 0.7-
+° g 0.6-
+os 0.5-
+=3 0.4
+7 C*
+
+S 0.3-
+3 0.2-
+a 0.1-
+e 0.0
+
++
+
+P<0.001
+
+T790M-negative
+
+Lrrom positive |
+
+' | | ' | | L
+
+10 15 20 25 30 35 40
+Months
+
+Progression-free survival is “the length of time during and after the treatment of a disease that a
+patient lives with the disease but it does not get worse’.
+
+Extensive learning
+
+Maheswaran, N Engl J Med. 2008
+First/second generation Se eee EGFR activating
+EGFR TKI Afatinib mutation
+
+Acquired
+resistance
+
+Third generation AZD9291 T790M
+CO-1686 7
+EGFR TKI -HM61713 a
+
+Acquired
+resistance
+
+Fourth generation '
+EAI045 C797S mutation
+
+EGFR TKI
+
+Extensive learning ]
+
+Wang et al., 2017
+The length of time a G protein will signal is determined by
+
+(a) the activity of phosphatases that turn off G proteins by
+dephosphorylating Ga.
+
+(b) the activity of phosphatases that turn GTP into GDP.
+
+(c) the degradation of the G protein after Ga separates from GBy.
+
+(d) the GTPase activity of Ga.

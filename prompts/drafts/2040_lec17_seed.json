@@ -1,0 +1,150 @@
+{
+  "lecture_n": 17,
+  "coverage_manifest": [
+    {"pdf_page": 1, "topic_slug": "admin"},
+    {"pdf_page": 2, "topic_slug": "cell-communication-importance"},
+    {"pdf_page": 3, "topic_slug": "signal-transduction-overview"},
+    {"pdf_page": 4, "topic_slug": "signal-transduction-overview"},
+    {"pdf_page": 5, "topic_slug": "communication-modes-contact"},
+    {"pdf_page": 6, "topic_slug": "communication-modes-paracrine"},
+    {"pdf_page": 7, "topic_slug": "communication-modes-endocrine"},
+    {"pdf_page": 8, "topic_slug": "communication-modes-synaptic"},
+    {"pdf_page": 9, "topic_slug": "three-phases-transduction"},
+    {"pdf_page": 10, "topic_slug": "reception-receptor-types"},
+    {"pdf_page": 11, "topic_slug": "three-phases-transduction"},
+    {"pdf_page": 12, "topic_slug": "molecular-relay-chain"},
+    {"pdf_page": 13, "topic_slug": "intracellular-pathway-functions"},
+    {"pdf_page": 14, "topic_slug": "feedback-regulation"},
+    {"pdf_page": 15, "topic_slug": "molecular-switches"},
+    {"pdf_page": 16, "topic_slug": "three-phases-transduction"},
+    {"pdf_page": 17, "topic_slug": "signal-response-diversity"},
+    {"pdf_page": 18, "topic_slug": "signal-combinations"},
+    {"pdf_page": 19, "topic_slug": "signal-speed"},
+    {"pdf_page": 20, "topic_slug": "summary-I"},
+    {"pdf_page": 21, "topic_slug": "reception-receptor-types"},
+    {"pdf_page": 22, "topic_slug": "intracellular-receptors-cortisol"},
+    {"pdf_page": 23, "topic_slug": "reception-receptor-types"},
+    {"pdf_page": 24, "topic_slug": "cell-surface-receptor-classes"},
+    {"pdf_page": 25, "topic_slug": "cell-surface-receptor-classes"},
+    {"pdf_page": 26, "topic_slug": "cell-surface-receptor-classes"},
+    {"pdf_page": 27, "topic_slug": "hippo-pathway"},
+    {"pdf_page": 28, "topic_slug": "hippo-pathway"},
+    {"pdf_page": 29, "topic_slug": "hippo-pathway"},
+    {"pdf_page": 30, "topic_slug": "hippo-pathway"},
+    {"pdf_page": 31, "topic_slug": "summary-final"}
+  ],
+  "exam_points": [
+    {
+      "topic_slug": "cell-communication-importance",
+      "key_facts": ["Cells communicate to sense environment, send orders, heal wounds, and develop", "Yeast mating factor causes a and alpha cells to elongate toward each other before fusing"],
+      "common_confusions": ["Students may think communication only matters in multicellular organisms — yeast example shows it is universal"],
+      "numeric_values": [],
+      "exam_traps": ["Signal transduction converts extracellular signal to intracellular response — not just transmission"]
+    },
+    {
+      "topic_slug": "communication-modes-contact",
+      "key_facts": ["Contact-dependent signaling uses membrane-bound signal molecules", "Delta-Notch system: Delta on signaling cell binds Notch on adjacent cell", "Causes lateral inhibition and cell specialization"],
+      "common_confusions": ["Delta is membrane-bound, NOT secreted — requires direct cell contact", "Contact-dependent vs paracrine: key difference is whether signal is secreted"],
+      "numeric_values": [],
+      "exam_traps": ["Delta-Notch is contact-dependent, not paracrine — Delta never leaves the membrane"]
+    },
+    {
+      "topic_slug": "communication-modes-paracrine",
+      "key_facts": ["Paracrine signals diffuse locally in the neighborhood of the secreting cell", "Called local mediators", "Functions: regulate inflammation, control proliferation in healing wounds"],
+      "common_confusions": ["Paracrine vs endocrine: paracrine stays local, endocrine enters bloodstream"],
+      "numeric_values": [],
+      "exam_traps": ["Paracrine signals do NOT enter the bloodstream — this is the defining distinction from endocrine"]
+    },
+    {
+      "topic_slug": "communication-modes-endocrine",
+      "key_facts": ["Endocrine cells secrete hormones into bloodstream", "Pancreas secretes insulin to regulate glucose uptake in cells throughout the body", "Insulin binds receptor on target cell, opens glucose channel"],
+      "common_confusions": ["Endocrine vs paracrine distance distinction", "Insulin acts on many cell types simultaneously via bloodstream"],
+      "numeric_values": [],
+      "exam_traps": ["Endocrine signaling is slow to reach all targets but acts on many cells; synaptic is fast and specific"]
+    },
+    {
+      "topic_slug": "communication-modes-synaptic",
+      "key_facts": ["Neuron sends electrical signal down axon to nerve terminal", "Neurotransmitters released into synapse, bind target cell receptors", "Fast and spatially precise — private lines"],
+      "common_confusions": ["Synaptic vs paracrine: synaptic is directed through nerve terminal; paracrine diffuses broadly"],
+      "numeric_values": [],
+      "exam_traps": ["Synaptic signaling uses neurotransmitters, NOT hormones — different molecule class and mechanism"]
+    },
+    {
+      "topic_slug": "three-phases-transduction",
+      "key_facts": ["Reception: target cell detects extracellular signal via receptor", "Transduction: converts signal via relay cascade to actionable form", "Response: altered metabolism, cell shape, or gene expression", "Transduction functions: relay, amplify, integrate, distribute, feedback control"],
+      "common_confusions": ["Students confuse relay (passing signal) with transduction (converting signal)", "All three phases are sequential and distinct"],
+      "numeric_values": [],
+      "exam_traps": ["Transduction is conversion, not just passing — relay is one sub-function of transduction"]
+    },
+    {
+      "topic_slug": "reception-receptor-types",
+      "key_facts": ["Cell-surface receptors: for hydrophilic signals that cannot cross membrane", "Intracellular receptors: for small hydrophobic signals that freely cross membrane", "Extracellular signal molecules bind one or the other depending on solubility"],
+      "common_confusions": ["Intracellular receptor is inside the cell, not extracellular", "The signal molecule for intracellular receptors still originates outside the cell"],
+      "numeric_values": [],
+      "exam_traps": ["'Intracellular receptor' describes receptor location, not signal origin — the signal still comes from outside"]
+    },
+    {
+      "topic_slug": "intracellular-receptors-cortisol",
+      "key_facts": ["Cortisol is a steroid hormone — crosses plasma membrane freely", "Binds nuclear receptor protein in cytosol", "Conformational change activates receptor", "Receptor-cortisol complex translocates to nucleus", "Binds regulatory region of target genes → transcription activated", "Affects protein, carbohydrate, lipid metabolism in most tissues"],
+      "common_confusions": ["Nuclear receptor starts in cytosol, not nucleus", "Cortisol pathway is a slow response (gene expression) not fast"],
+      "numeric_values": [],
+      "exam_traps": ["Cortisol's receptor is in the cytosol before ligand binding — only enters nucleus after forming the active complex"]
+    },
+    {
+      "topic_slug": "cell-surface-receptor-classes",
+      "key_facts": ["Three classes: ion-channel-coupled, G-protein-coupled (GPCR), enzyme-coupled", "Ion-channel-coupled: ligand opens ion channel directly — very fast (ms)", "GPCR: 7 transmembrane helices; activates G protein GDP→GTP switch; GTPase returns to OFF", "Enzyme-coupled: receptor dimerization activates intrinsic catalytic domain OR recruits associated enzyme; signal often a dimer"],
+      "common_confusions": ["GPCRs do not have kinase activity — G protein is the switch", "Enzyme-coupled receptors have kinase activity — students mix these up", "Ion-channel-coupled is the only class that directly controls ion flow"],
+      "numeric_values": [],
+      "exam_traps": ["GPCR vs enzyme-coupled: GPCR activates G protein, enzyme-coupled activates kinase — completely different downstream mechanisms"]
+    },
+    {
+      "topic_slug": "molecular-switches",
+      "key_facts": ["Two switch types: phosphorylation (kinase ON, phosphatase OFF) and GTP-binding (GTP ON, GDP OFF)", "Protein kinase transfers phosphate from ATP; protein phosphatase removes it", "GTP-binding proteins turn ON with GTP binding, intrinsic GTPase turns them OFF"],
+      "common_confusions": ["Kinase = ON (adds phosphate); phosphatase = OFF (removes) — students reverse this", "GTP-binding switch is separate from phosphorylation switch"],
+      "numeric_values": [],
+      "exam_traps": ["Protein kinase adds phosphate (ON); protein phosphatase removes (OFF). Never reverse."]
+    },
+    {
+      "topic_slug": "molecular-relay-chain",
+      "key_facts": ["Cascade: receptor → scaffold proteins → intracellular signaling molecules → small messenger molecules → effectors", "Amplification: one receptor activation triggers many downstream events", "Effectors: metabolic enzymes, cytoskeletal proteins, transcription regulators"],
+      "common_confusions": ["Amplification is a property of cascades — one signal does not equal one response molecule", "Scaffold proteins organize cascade components for efficiency"],
+      "numeric_values": [],
+      "exam_traps": ["Amplification means one signal → thousands of downstream events, not a 1:1 relationship"]
+    },
+    {
+      "topic_slug": "intracellular-pathway-functions",
+      "key_facts": ["Relay, amplify, integrate, distribute, feedback control", "Integrate: multiple pathway inputs merge at one protein", "Distribute: one receptor branches to multiple downstream pathways", "Feedback control: product Y inhibits upstream X (negative feedback)"],
+      "common_confusions": ["Feedback regulation occurs within transduction cascade, not after the response"],
+      "numeric_values": [],
+      "exam_traps": ["Feedback regulation is part of transduction — not a fourth phase of signal transduction"]
+    },
+    {
+      "topic_slug": "signal-response-diversity",
+      "key_facts": ["Same signal molecule can produce different responses in different cell types", "Acetylcholine: decreased firing in heart pacemaker, secretion in salivary gland, contraction in skeletal muscle", "Response determined by which receptors and downstream pathways are present in the cell"],
+      "common_confusions": ["Students assume one signal = one universal response; receptor identity determines response"],
+      "numeric_values": [],
+      "exam_traps": ["The signal molecule does not determine the response — the receiving cell's receptor and signaling machinery does"]
+    },
+    {
+      "topic_slug": "signal-combinations",
+      "key_facts": ["Different combinations of extracellular signals lead to survive, grow and divide, differentiate, or apoptosis", "Cells integrate multiple concurrent inputs before committing to a response"],
+      "common_confusions": ["Cell fate is not determined by a single signal alone — combinations matter"],
+      "numeric_values": [],
+      "exam_traps": ["A single signal molecule does not usually determine life vs. death — it is the combination of signals that determines fate"]
+    },
+    {
+      "topic_slug": "signal-speed",
+      "key_facts": ["Fast responses: < sec to mins; alter existing protein function; examples: muscle contraction, enzyme secretion", "Slow responses: mins to hrs; require altered transcription and new protein synthesis; examples: cell growth, differentiation"],
+      "common_confusions": ["Fast response does NOT require new protein synthesis", "Both types are initiated by the same extracellular signal, different downstream pathways"],
+      "numeric_values": ["Fast: < sec to mins", "Slow: mins to hrs"],
+      "exam_traps": ["Fast responses alter protein function; slow responses alter gene expression — mechanistically distinct"]
+    },
+    {
+      "topic_slug": "hippo-pathway",
+      "key_facts": ["HIPPO pathway controls organ size by regulating proliferation and apoptosis", "YAP and TAZ are transcriptional co-activators; nuclear = pro-growth", "Low cell density: YAP/TAZ unphosphorylated → nuclear → proliferation", "High cell density: DCH S1/2 and FAT4 activate kinase cascade → phosphorylate YAP/TAZ → cytoplasmic retention by 14-3-3 → no proliferation", "Fruit fly mutant with activated HIPPO: massive wing disc overgrowth (Huang et al., 2005, Cell)", "Mouse liver: inducible YAP increases liver/body from ~5% to ~17% in 2 weeks; reversible; tumors at 8 weeks (Dong et al., Cell, 2007)"],
+      "common_confusions": ["High density ACTIVATES HIPPO kinase cascade which INACTIVATES YAP/TAZ — students reverse this", "14-3-3 sequesters phosphorylated YAP/TAZ in cytoplasm", "Mouse liver data shows reversibility of size control"],
+      "numeric_values": ["Liver/body ratio wild-type ~5%", "Liver/body ratio after 2 weeks YAP induction ~17%", "Tumors appear at 8 weeks"],
+      "exam_traps": ["High cell density = HIPPO ON = YAP/TAZ phosphorylated = cytoplasmic = no proliferation. Never say high density activates YAP."]
+    }
+  ]
+}

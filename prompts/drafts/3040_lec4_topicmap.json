@@ -1,0 +1,13 @@
+{
+  "types-of-digestion": 0,
+  "nutrient-classes": 0,
+  "gi-tract-regions": 1,
+  "gi-organ-secretions": 1,
+  "gi-wall-layers": 2,
+  "gi-motility-functions": 3,
+  "peristalsis": 3,
+  "segmentation": 3,
+  "motility-control": 4,
+  "enteric-nervous-system": 5,
+  "hirschsprung-disease": 5
+}

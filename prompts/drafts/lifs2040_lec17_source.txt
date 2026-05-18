@@ -1,0 +1,598 @@
+Mechanisms of cellular communication-I
+
+§ ingle Cell Phones
+
+I con't hear you...
+you're breaking up.
+
+6
+6
+IA
+; g
+© Original Artist O
+Reproduction rights obtainable from
+“bit Alege
+
+www Cattoonstock.com
+
+Sense and respond to the environment
+Sending out orders
+
+Wound healing
+
+Development
+
+more and more...
+
+Yeast cells respond to mating factor
+
+Signal transduction: external signal are converted to responses within the cells
+
+extracellular signal
+molecule A
+IN
+
+intracellular
+
+signaling gap Responses
+
+molecule B
+OUT
+
+Signaling cell Target cell
+https: //www.youtube.com/watch?v=-dbRterutHY
+
+Direct contact
+
+signaling cell target cell
+
+membrane-
+bound signal
+molecule
+
+membrane-bound receptor
+inhibitory signal protein
+protein (Delta) (Notch)
+
+\ 4
+
+CELL
+
+SPECIALIZATION
+
+Be
+AND
+
+LATERAL
+INHIBITION
+nerve cell
+unspecified developing from inhibited
+epithelial cells epithelial cell epithelial cell
+
+Figure 16-4 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+
+Allow adjacent cells to form different cell types
+Short distance
+
+MAH i “DIiAIE
+TFAnRALA ~ >=
+a
+
+Description:
+Signal molecules diffuse locally remaining in
+the neighborhood of the cell that secretes them.
+
+signaling
+cell
+
+o” target Function (local mediators):
+
+cells - Regulate inflammation at the infection area
+- Control cell proliferation in a healing wound
+
+ia,
+
+ra  _
+local
+mediator
+
+Long distance
+
+receptor
+
+endocrine cell target cell
+
+e
+
+7 hormone
+~
+
+oe,
+bloodstream
+
+target cell
+
+An example of signaling through hormones:
+Pancreases produce and secrete insulin into
+the bloodstream that regulates glucose
+
+uptake in cells all over the body.
+
+HOW DOES INSULIN WORK
+
+—
+°
+
+Glocose channel!
+open, glucose to
+enter the cell
+
+tneulin Insulin unlocks \
+\ Insulin Glucose the glucose O
+channel
+
+\
+
+ya\\ Receptor Channel
+
+Closed
+
+CELLS
+
+Shutterstock.com « 792237640
+Long distance
+
+receptor
+
+endocrine cell
+target cell
+
+hormone
+
+|
+
+a
+
+bloodstream
+target cell
+
+nerve synapse
+neuron terminal -L,
+
+axon
+
+: target cell
+cell neurotransmitter g
+
+body
+
+An example of signaling through hormones:
+Pancreases produce and secrete insulin into
+the bloodstream that regulates glucose
+uptake in cells all over the body.
+
+Neuronal signaling:
+
+A messages (neurotransmitter) is delivered to
+the target cells quickly and specifically through
+
+private lines.
+
+1. Reception- the target cell detects the extracellular signal
+
+2. Transduction- the conversion of the extracellular signal to a form that can
+bring a specific response
+3. Response- the specific cellular response to the signal molecule
+
+CYTOPLASM
+Plasma membrane
+
+| @ Transduction | | © Response
+
+a
+
+Relay molecules in a signal transduction
+pathway
+
+small hydrophobic
+
+plasma membrane fe signal molecule
+cell-surface .
+
+receptor protein
+
+extracellular signal
+
+molecule intracellular
+signaling molecule
+
+nucleus
+intracellular
+receptor
+
+Figure 16-8b Essential Cell Biology, 4th ed. (© Garland Science 2014)
+
+Figure 16-8a Essential Cell Biology, 4th ed. (© Garland Science 2014)
+
+Extracellular signal molecules bind either to cell-surface receptors or to intracellular receptors.
+1. Reception- the target cell detects the extracellular signal
+
+2. Transduction- the conversion of the extracellular signal to a form that can
+bring a specific response
+3. Response- the specific cellular response to the signal molecule
+
+CYTOPLASM
+Plasma membrane
+
+| @ Transduction | | © Response
+
+a
+
+Relay molecules in a signal transduction
+pathway
+
+RECEPTOR PROTEIN
+
+Domino Effect Chain Reaction
+
+—
+
+Signal in
+
+|
+
+is |
+
+| Seely
+‘
+
+INTRACELLULAR SIGNALING MOLECULES
+
+” - > B>C>D> >
+/ | \ coo ANIMIIUIAUN
+% oo Gh
+
+metabolic cytoskeletal transcription
+enzyme protein regulator
+
+||
+= =.
+
+Figure 16-12 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+
+EFFECTOR PROTEINS J
+
+Cell response
+
+extracellular signal molecule
+
+receptor protein Be
+
+plasma membrane
+
+CYTOSOL
+
+scaffold
+
+small intracellular ®@
+messenger molecules
+
+o~ \ | 7
+Vv
+
+y
+
+ay™
+
+(jum)
+
+t | |
+oan SS rn
+
+Figure 16-13 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+
+(A)
+
+=—
+
+Signaling : > xX ;
+pathway 1
+
+GTP
+
+rotein rotein
++ hydrolysis
+
+kinase phosphatase
+
+GTP
+binding
+
+(A) SIGNALING BY (B) SIGNALING BY GTP-BINDING PROTEINS
+PROTEIN PHOSPHORYLATION
+
+Figure 16-15 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+1. Reception- the target cell detects the extracellular signal
+
+2. Transduction- the conversion of the extracellular signal to a form that can
+bring a specific response
+3. Response- the specific cellular response to the signal molecule
+
+CYTOPLASM
+Plasma membrane
+
+| @ Transduction | | © Response
+
+a
+
+Relay molecules in a signal transduction
+pathway
+
+e— acetylcholine
+
+receptor
+7 protein
+
+Figure 16-5abc Essential Cell Biology, 4th ed. (© Garland Science 2014)
+A
+‘a
+— (@) o= DIFFERENTIATE =>
+“tN
+F
+(@) rer DIE Ea ae ne
+
+Figure 16-6 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+extracellular signal molecule
+
+| cell-surface
+
+intracellular signaling ;
+receptor protein
+
+pathway
+
+nucleus
+
+Contraction of muscle
+
+C th
+Secretion of digestion enzymes ell grow
+
+Cell differentiation
+
+FAST
+
+(< sec to mins)
+
+SLOW
+(mins to hrs)
+
+ALTERED PROTEIN SYNTHESIS
+
+\ /
+
+plasma
+membrane
+
+Figure 16-7 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+¢ Cells communicate with each other via signal transduction
+in multiple ways
+
+¢ Three phases of signal transduction
+- Reception
+Intracellular receptors
+Cell surface receptors
+- Transduction
+Relay, amplify, integrate, distribute, feedback control
+- Response
+small hydrophobic
+
+plasma membrane fe signal molecule
+cell-surface .
+
+receptor protein
+
+extracellular signal
+
+molecule intracellular
+signaling molecule
+
+nucleus
+intracellular
+receptor
+
+Figure 16-8b Essential Cell Biology, 4th ed. (© Garland Science 2014)
+
+Figure 16-8a Essential Cell Biology, 4th ed. (© Garland Science 2014)
+
+Extracellular signal molecules bind either to cell-surface receptors or to intracellular receptors.
+. 4 cortisol
+
+plasma membrane
+
+ST ao
+
+nuclear
+receptor
+protein
+
+CYTOSOL
+
+3
+
+NUCLEUS v
+
+- activated
+= target gene
+
+DNA
+
+Figure 16-10 Essential Cell Biology, 4th ed. (© Garland Science 2014) ¥
+
+Affects metabolism of proteins, carbohydrates and lipids in most tissues
+small hydrophobic
+
+plasma membrane fe signal molecule
+cell-surface .
+
+receptor protein
+
+extracellular signal
+
+molecule intracellular
+signaling molecule
+
+nucleus
+intracellular
+receptor
+
+Figure 16-8b Essential Cell Biology, 4th ed. (© Garland Science 2014)
+
+Figure 16-8a Essential Cell Biology, 4th ed. (© Garland Science 2014)
+
+Extracellular signal molecules bind either to cell-surface receptors or to intracellular receptors.
+plasma => = Cell response
+membrane
+
+CYTOSOL
+
+Figure 16-17a Essential Cell Biology, 4th ed. (© Garland Science 2014)
+signal molecule
+
+receptor
+
+= = be Cell response
+
+i
+
+|
+
+<
+“
+
+vw
+
+G protein activated
+G protein
+
+Figure 16-17b Essential Cell Biology, 4th ed. (© Garland Science 2014)
+signal molecule
+in form of adim
+
+Q- signal molecule
+
+Low
+
+OR
+me
+inactive catalytic active catalytic activated
+domain domain associated
+J enzyme
+
+Figure 16-17c Essential Cell Biology, 4th ed. (© Garland Science 2014)
+
+U
+
+Cell response
+
+¢ Ion-channel-coupled receptors
+¢ G-protein-coupled receptors
+¢ Enzyme-coupled receptors
+LOW CELL DENSITY
+
+Cell growth and proliferation
+
+OW Transcription Factors Receptors
+
+At low cell densities, the co-activators YAP/TAZ
+induce the expression of transcription factors that
+
+lead the pathway toward cell proliferation.
+
+https://www.novusbio.com/hippo-pathway.html
+
+Cell growth and proliferation
+
+W Transcription Factors GB Receptors
+
+At higher cell densities, membrane-bound regulators
+trigger YAP/TAZ phosphorylation, thereby preventing
+them from entering the nucleus to induce the pro-
+growth transcription factors.
+The HIPPO pathway controls organ size in fruit fly
+
+wild-type fly
+
+: 7
+hs aie
+
+Wing imaginal discs (a specific embryonic tissue in fly) from a wild-type fruit fly (left) and a mutant fly in which the HIPPO
+pathway is highly activated (right). High activation of the HIPPO pathway leads to massive tissue overgrowth.
+
+Huang, J. et al. 2005. Cell
+Reversible Control of Organ Size by Activation/Inactivation of
+HIPPO pathway in mice
+
+mutant
+
+RRS ay
+
+wild-type
+
+~ wild-type
+
+mutant
+
+H 20, +Dox
+
+—_
+on
+i
+
+% Liver/Body
+a Ss
+
+Oo
+|
+
+Od 2wks
+Duration of Dox on/off
+
+Jixin Dona, et al. Cell, 2007
+
+LOW CELL DENSITY
+
+Cell growth and proliferation
+
+OW Transcription Factors Receptors
+
+At low cell densities, the co-activators YAP/TAZ
+induce the expression of transcription factors that
+
+lead the pathway toward cell proliferation.
+
+https://www.novusbio.com/hippo-pathway.html
+
+Cell growth and proliferation
+
+W Transcription Factors GB Receptors
+
+At higher cell densities, membrane-bound regulators
+trigger YAP/TAZ phosphorylation, thereby preventing
+them from entering the nucleus to induce the pro-
+growth transcription factors.
+¢ Cells communicate with each other via signal transduction
+in multiple ways
+
+¢ Three phases of signal transduction
+- Reception
+- Transduction
+Relay, amplify, integrate, distribute, feedback control
+- Response
+
+¢ How extracellular signals are received?
+Intracellular receptors
+Cell surface receptors
+lon-channel-coupled receptors
+G-protein-coupled receptors
+Enzyme-coupled receptors

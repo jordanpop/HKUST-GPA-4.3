@@ -1,0 +1,22 @@
+{
+  "si-segments": 0,
+  "surface-area-amplification": 0,
+  "portal-vein-lymph": 0,
+  "dietary-carbohydrates": 1,
+  "carb-digestion-enzymes": 1,
+  "monosaccharide-transport": 1,
+  "ort-oral-rehydration": 1,
+  "lactose-intolerance": 1,
+  "protein-digestion": 2,
+  "dipeptide-tripeptide-transport": 2,
+  "aa-transport": 2,
+  "dietary-lipids": 3,
+  "micelle-formation": 3,
+  "lipid-absorption-routes": 3,
+  "vitamin-absorption": 3,
+  "sodium-absorption": 4,
+  "calcium-absorption": 4,
+  "water-absorption": 4,
+  "large-intestine-structure": 5,
+  "large-intestine-functions": 5
+}

@@ -1,0 +1,8 @@
+{
+  "epinephrine-norepinephrine": 0,
+  "glucocorticoids": 1,
+  "thyroid-hormones": 2,
+  "insulin-glucagon": 3,
+  "growth-hormone-leptin": 4,
+  "water-electrolyte-balance": 5
+}

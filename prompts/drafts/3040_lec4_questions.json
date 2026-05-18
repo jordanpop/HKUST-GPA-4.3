@@ -1,0 +1,422 @@
+[
+  {
+    "q": "Which of the following is the best definition of the digestive system?",
+    "options": [
+      "The alimentary canal alone, responsible for food breakdown",
+      "The alimentary canal and accessory digestive organs as an integrated system for ingestion, digestion, and absorption",
+      "The stomach and intestines working together to absorb nutrients",
+      "The set of organs that produce digestive enzymes and hormones",
+      "The gastrointestinal tract plus the circulatory system"
+    ],
+    "answer": 1,
+    "topic": "types-of-digestion",
+    "explain": "The digestive system is defined as the alimentary canal AND accessory digestive organs (e.g., liver, pancreas, salivary glands) working as an integrated system. The alimentary canal alone is not the complete digestive system, and the circulatory system is not part of it.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Segmentation in the intestine is best classified as which type of digestion?",
+    "options": [
+      "Chemical digestion, because it involves enzyme secretion",
+      "Mechanical digestion, because it physically mixes and breaks down food",
+      "Both mechanical and chemical digestion simultaneously",
+      "Neither; segmentation is a form of absorption",
+      "Chemical digestion, because it requires energy from ATP"
+    ],
+    "answer": 1,
+    "topic": "types-of-digestion",
+    "explain": "Segmentation is rhythmic local constriction of the intestinal wall that physically mixes and breaks food particles — this is mechanical digestion. No enzymes are involved in the segmentation movement itself, so it is not chemical digestion.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which three monosaccharides are produced by carbohydrate digestion and absorbed into the bloodstream?",
+    "options": [
+      "Glucose, sucrose, and galactose",
+      "Fructose, maltose, and glucose",
+      "Glucose, fructose, and galactose",
+      "Galactose, ribose, and glucose",
+      "Sucrose, fructose, and lactose"
+    ],
+    "answer": 2,
+    "topic": "nutrient-classes",
+    "explain": "Carbohydrates are broken down to monosaccharides — specifically glucose, fructose, and galactose — which are then absorbed into the bloodstream. Sucrose, maltose, and lactose are disaccharides that must be further broken down; ribose is a pentose not produced from dietary polysaccharide digestion.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Dietary fats are mainly which type of molecule, and what are their digestion end-products absorbed by the intestine?",
+    "options": [
+      "Phospholipids; broken down into fatty acids and glycerophosphate",
+      "Cholesterol esters; broken down into free cholesterol and fatty acids",
+      "Triglycerides; broken down into glycerol and free fatty acids",
+      "Triglycerides; broken down into glucose and fatty acids",
+      "Sterols; broken down into bile acids and fatty acids"
+    ],
+    "answer": 2,
+    "topic": "nutrient-classes",
+    "explain": "Dietary fat consists mainly of triglycerides. These are hydrolysed into glycerol and free fatty acids, which are then absorbed by the intestine. Phospholipids and cholesterol esters are not the primary dietary fat form, and glucose is not a product of fat digestion.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "What is the primary function of the stomach in the GI tract?",
+    "options": [
+      "Absorption of all major food products into the blood",
+      "Final chemical digestion of all carbohydrates",
+      "Receiving, mechanically mixing food with secretions, and partial digestion — with no absorption",
+      "Secretion of bile to emulsify fats",
+      "Storage and concentration of undigested waste for defecation"
+    ],
+    "answer": 2,
+    "topic": "gi-tract-regions",
+    "explain": "The stomach acts as a reservoir, mechanically mixes food with saliva and gastric secretions, and performs only partial digestion. Critically, no absorption of food products occurs in the stomach. Bile is produced by the liver, and final absorption and waste storage are functions of other regions.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which region of the GI tract is primarily responsible for the absorption of ALL food products?",
+    "options": [
+      "Stomach",
+      "Esophagus",
+      "Large intestine",
+      "Small intestine",
+      "Pharynx"
+    ],
+    "answer": 3,
+    "topic": "gi-tract-regions",
+    "explain": "Absorption of all food products (amino acids, monosaccharides, fatty acids, etc.) occurs in the small intestine (midgut). The stomach performs no significant absorption. The large intestine absorbs water, ions, and some vitamins but not the major food products.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Bile is produced by which organ and stored by which organ?",
+    "options": [
+      "Produced by the gallbladder; stored by the pancreas",
+      "Produced by the pancreas; stored by the liver",
+      "Produced by the liver; stored by the gallbladder",
+      "Produced by the gallbladder; stored by the liver",
+      "Produced and stored by the liver"
+    ],
+    "answer": 2,
+    "topic": "gi-tract-regions",
+    "explain": "Bile is produced (secreted) by the liver and stored and concentrated between meals by the gallbladder. The pancreas produces digestive enzymes and bicarbonate, not bile. Confusing the site of production with the site of storage is a common error.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "What exocrine secretions does the stomach produce, and what is the function of HCl specifically?",
+    "options": [
+      "Amylase, lipase, and bicarbonate; HCl digests proteins",
+      "HCl, pepsin, and mucus; HCl solubilises food particles and kills microbes",
+      "Bile salts, bicarbonate, and pepsin; HCl neutralises alkaline food",
+      "HCl, amylase, and mucus; HCl activates amylase",
+      "Pepsin, lipase, and bicarbonate; HCl emulsifies fat"
+    ],
+    "answer": 1,
+    "topic": "gi-organ-secretions",
+    "explain": "The stomach secretes HCl, pepsin (a protein-digesting enzyme), and mucus. HCl specifically solubilises food particles and kills microbes. Amylase is a salivary/pancreatic enzyme; bile is from the liver; bicarbonate comes from the pancreas and liver.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which organ secretes bicarbonate into the small intestine primarily to neutralise HCl arriving from the stomach?",
+    "options": [
+      "Liver only",
+      "Gallbladder",
+      "Stomach",
+      "Pancreas only",
+      "Both the pancreas and liver secrete bicarbonate for this purpose"
+    ],
+    "answer": 4,
+    "topic": "gi-organ-secretions",
+    "explain": "According to the lecture table, both the pancreas and the liver secrete bicarbonate to neutralise HCl entering the small intestine from the stomach. The gallbladder only stores bile; the stomach secretes HCl itself.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "What are the four microscopic layers of the GI tract wall, listed from innermost (lumen) to outermost?",
+    "options": [
+      "Serosa, muscularis, submucosa, mucosa",
+      "Mucosa, muscularis, submucosa, serosa",
+      "Mucosa, submucosa, muscularis, serosa",
+      "Submucosa, mucosa, serosa, muscularis",
+      "Epithelium, lamina propria, submucosa, serosa"
+    ],
+    "answer": 2,
+    "topic": "gi-wall-layers",
+    "explain": "From the lumen outward, the four layers are: mucosa (innermost), submucosa, muscularis, and serosa (outermost). The muscularis comes after the submucosa, not before it. The epithelium and lamina propria are sub-components of the mucosa, not separate wall layers.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Where is the myenteric plexus (plexus of Auerbach) located in the GI wall?",
+    "options": [
+      "Within the mucosa, between the epithelium and lamina propria",
+      "Within the submucosa",
+      "Between the longitudinal and circular muscle layers of the muscularis",
+      "External to the serosa",
+      "Within the lamina propria of the mucosa"
+    ],
+    "answer": 2,
+    "topic": "gi-wall-layers",
+    "explain": "The myenteric plexus (Auerbach) lies between the longitudinal and circular muscle layers of the muscularis and primarily controls GI motility. The submucosal plexus (Meissner) is in the submucosa and primarily controls secretion. These two plexuses are frequently swapped.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "The submucosal plexus (plexus of Meissner) is located in which layer of the GI wall?",
+    "options": [
+      "Between the two muscle layers of the muscularis",
+      "Within the mucosa",
+      "In the submucosa",
+      "In the serosa",
+      "Between the mucosa and submucosa only"
+    ],
+    "answer": 2,
+    "topic": "gi-wall-layers",
+    "explain": "The submucosal plexus (Meissner) is located within the submucosa and primarily controls glandular secretion and mucosal movement. The myenteric plexus (Auerbach) sits between the muscle layers and controls motility. Exam questions often test this distinction.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Peristalsis differs from segmentation in that peristalsis:",
+    "options": [
+      "Involves only circular muscle and does not produce net propulsion",
+      "Involves both longitudinal and circular muscles and primarily propels food aborally",
+      "Occurs exclusively in the large intestine",
+      "Is initiated by chemical stimulants in the lumen rather than distention",
+      "Involves only longitudinal muscle and is asynchronous"
+    ],
+    "answer": 1,
+    "topic": "peristalsis",
+    "explain": "Peristalsis is a travelling wave of constriction caused by coordinated action of BOTH longitudinal and circular smooth muscles, moving food aborally (away from the mouth). Segmentation, by contrast, involves only circular muscle and is asynchronous — its primary function is mixing, not net propulsion.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which statement about segmentation is correct?",
+    "options": [
+      "It involves both longitudinal and circular muscles contracting in sequence",
+      "Its primary function is to propel food aborally",
+      "It is a travelling wave that moves along the intestine",
+      "It involves asynchronous contractions of circular muscle only, with no longitudinal muscle",
+      "It occurs exclusively in the esophagus"
+    ],
+    "answer": 3,
+    "topic": "segmentation",
+    "explain": "Segmentation is an asynchronous, non-travelling constriction of the gut tube that involves ONLY the circular muscle — the longitudinal muscle is NOT involved. Its primary purpose is to mix and break down food particles, not to propel them. It occurs mainly in the small and large intestines.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "What initiates peristalsis in the GI tract?",
+    "options": [
+      "Chemical composition of the chyme acting on chemoreceptors",
+      "Hormonal signals from the pancreas",
+      "Distention (stretching) of the gut wall",
+      "Sympathetic nerve stimulation",
+      "Temperature changes within the lumen"
+    ],
+    "answer": 2,
+    "topic": "peristalsis",
+    "explain": "According to the lecture, peristalsis is initiated mainly by distention (stretching) of the gut wall. While chemoreceptors and hormones can modulate GI motility, the primary trigger for peristalsis is mechanical stretching from luminal contents. Sympathetic stimulation is inhibitory to motility.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "In which sites does peristalsis occur?",
+    "options": [
+      "Only in the esophagus",
+      "Esophagus, distal stomach, small intestine, and large intestine",
+      "Small intestine and large intestine only",
+      "Stomach and small intestine only",
+      "Esophagus and small intestine only"
+    ],
+    "answer": 1,
+    "topic": "peristalsis",
+    "explain": "The lecture states peristalsis occurs in the esophagus, the distal stomach, the small intestine, and the large intestine. Segmentation (not peristalsis) is confined to the small and large intestines. The esophagus uses peristalsis exclusively for propulsion.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which of the following is NOT a function of GI tract movement?",
+    "options": [
+      "Translocation of food from one location to another",
+      "Mechanical breakdown of food particles",
+      "Mixing food to renew contact with secreting and absorbing surfaces",
+      "Chemical digestion of proteins by proteolytic enzymes",
+      "All of the above are functions of GI movement"
+    ],
+    "answer": 3,
+    "topic": "gi-motility-functions",
+    "explain": "The three functions of GI movement are translocation, mechanical breakdown, and mixing for renewal of surface contact. Chemical digestion by enzymes is a function of secretory glands, not of the movement itself. Movement and chemical digestion are distinct processes.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "What does intrinsic control of GI motility involve?",
+    "options": [
+      "Sympathetic and parasympathetic nervous systems acting on gut smooth muscle",
+      "GI peptide hormones secreted in response to luminal chemical stimulants",
+      "The enteric nervous system, modulated by gut wall stretching and chyme composition",
+      "Central nervous system commands transmitted via the vagus nerve only",
+      "Hormonal signals from the pancreas and liver"
+    ],
+    "answer": 2,
+    "topic": "motility-control",
+    "explain": "Intrinsic control is mediated by the enteric nervous system (ENS) and is triggered by stretching of the GI tract wall and by substances in the chyme. GI hormones and the autonomic nervous system represent extrinsic control. The vagus nerve is a component of extrinsic parasympathetic control, not intrinsic.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "How do the sympathetic and parasympathetic nervous systems differ in their effects on GI motility?",
+    "options": [
+      "Both are excitatory; they differ only in speed of action",
+      "Sympathetic is excitatory; parasympathetic is inhibitory",
+      "Sympathetic is inhibitory; parasympathetic is excitatory",
+      "Both are inhibitory under resting conditions",
+      "Sympathetic controls secretion; parasympathetic controls motility only"
+    ],
+    "answer": 2,
+    "topic": "motility-control",
+    "explain": "The sympathetic nervous system is inhibitory to GI motility (reducing it), while the parasympathetic nervous system is excitatory (increasing motility and secretion). This is a classic exam distinction — the \"fight or flight\" sympathetic response slows digestion, while the \"rest and digest\" parasympathetic response promotes it.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "The enteric nervous system (ENS) is sometimes called the 'little brain in the gut' because it:",
+    "options": [
+      "Is directly controlled by the cerebral cortex for all digestive reflexes",
+      "Contains approximately 100 million neurons and operates as an independent integrative system",
+      "Contains more neurons than the human brain",
+      "Is formed entirely of sensory neurons that relay signals to the CNS",
+      "Consists only of the myenteric plexus"
+    ],
+    "answer": 1,
+    "topic": "enteric-nervous-system",
+    "explain": "The ENS contains about 100 million neurons — more than a mouse brain — and is organised as an independent integrative system capable of coordinating GI reflexes without CNS input. It contains more neurons than a mouse brain, not the human brain (which has ~86 billion neurons). It consists of both myenteric and submucosal plexuses.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which of the following correctly lists the three types of neurons found in the enteric nervous system?",
+    "options": [
+      "Sensory neurons, motor neurons, and glial cells",
+      "Mechanoreceptors, chemoreceptors, and thermoreceptors",
+      "Sensory neurons, interneurons, and motor neurons",
+      "Preganglionic, postganglionic, and interneurons",
+      "Adrenergic, cholinergic, and serotonergic neurons"
+    ],
+    "answer": 2,
+    "topic": "enteric-nervous-system",
+    "explain": "The ENS contains sensory neurons (detecting mechanical, chemical, and thermal stimuli), interneurons (coordinating reflexes and motor programs), and motor neurons (excitatory or inhibitory, targeting muscle, secretory epithelium, endocrine cells, and blood vessels). Mechanoreceptors, chemoreceptors, and thermoreceptors are subtypes of sensory neurons, not the three broad neuron types.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "The ENS myenteric plexus consists of two named components. What is a 'plexus' in this context?",
+    "options": [
+      "A gland that secretes digestive enzymes",
+      "A layer of smooth muscle",
+      "A network of neurons",
+      "A bundle of blood vessels",
+      "A mucous membrane lining"
+    ],
+    "answer": 2,
+    "topic": "enteric-nervous-system",
+    "explain": "According to the lecture, a plexus is defined as 'a network of neurons.' Both the myenteric plexus (between muscle layers) and the submucosal plexus (in submucosa) are neural networks, not glands, muscles, or blood vessels.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "In Hirschsprung's disease, which segment of the large intestine is abnormal, and what is the clinical consequence?",
+    "options": [
+      "The proximal (normal) colon lacks nerve cells and becomes narrow",
+      "Nerve cells fail to form in part or all of the large intestine, causing the affected segment to block waste and the normal colon proximal to it to swell",
+      "Nerves form in excess, causing uncontrolled propulsion and diarrhoea",
+      "The small intestine loses its nerve supply, blocking absorption",
+      "The rectum hypertrophies and prevents defecation"
+    ],
+    "answer": 1,
+    "topic": "hirschsprung-disease",
+    "explain": "In Hirschsprung's disease, nerves fail to form in the affected (aganglionic) segment of the large intestine, so waste cannot pass through it. The normal colon proximal to the blockage swells with accumulated stool. It is the normal segment that dilates — not the diseased segment.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Saliva from the salivary glands serves which two primary roles in the mouth?",
+    "options": [
+      "Solubilises proteins and activates bile production",
+      "Lubricates food (mechanical aid) and contains amylase for chemical digestion of starch",
+      "Provides HCl for disinfection and mucus for lubrication",
+      "Begins fat emulsification and lubricates the esophagus",
+      "Contains pepsin for protein digestion and water to dissolve minerals"
+    ],
+    "answer": 1,
+    "topic": "gi-tract-regions",
+    "explain": "Saliva serves two roles: it lubricates food to aid mechanical digestion, and it contains salivary amylase which begins chemical digestion of polysaccharides (starch). HCl and pepsin are gastric, not salivary, secretions. Bile emulsifies fat in the small intestine, not the mouth.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "What is the primary function of the large intestine (hindgut)?",
+    "options": [
+      "Absorption of all food macronutrients",
+      "Secretion of digestive enzymes and bicarbonate",
+      "Accumulation and dehydration of digestion waste; absorption of water, ions, and some vitamins",
+      "Mechanical shaking and mixing of food for enzymatic digestion",
+      "Propulsion of food by peristalsis into the small intestine"
+    ],
+    "answer": 2,
+    "topic": "gi-tract-regions",
+    "explain": "The large intestine (hindgut/colon) accumulates and dehydrates digestion waste and absorbs water, ions, and some vitamins. Macro-nutrient absorption is the function of the small intestine. The large intestine does not secrete digestive enzymes; this is mainly a pancreatic and small intestinal function.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "A patient's colon lacks the myenteric plexus in a segment. Which motility type would be most directly impaired in that segment?",
+    "options": [
+      "Chemical digestion, because the plexus releases enzymes",
+      "Bile secretion into the intestine",
+      "Peristalsis and segmentation, because both depend on ENS coordination of smooth muscle",
+      "Only absorption, because the plexus controls mucosal transport",
+      "Salivary secretion, because the ENS controls all secretions"
+    ],
+    "answer": 2,
+    "topic": "enteric-nervous-system",
+    "explain": "The myenteric plexus (Auerbach) coordinates smooth muscle activity for both peristalsis and segmentation. Without it, the smooth muscle of the affected segment cannot receive the neural signals needed for coordinated motility. Chemical digestion uses enzymes from glands, not the plexus; absorption and salivation are not directly controlled by the myenteric plexus.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Why does food move through the GI tract even in the absence of gravity, as seen in space?",
+    "options": [
+      "Osmotic pressure gradients drive fluid and food toward the large intestine",
+      "Enzymatic activity creates pressure that pushes food along",
+      "GI motility is driven entirely by smooth muscle contractions, independent of gravity",
+      "Bile secretion creates a pressure gradient that propels food distally",
+      "The negative pressure of the thorax draws food into the gut"
+    ],
+    "answer": 2,
+    "topic": "gi-motility-functions",
+    "explain": "The lecture specifically notes that food moves down the GI tract in the absence of gravity (e.g., in space), demonstrating that GI mobility is entirely dependent on muscle-driven motility — peristalsis and segmentation — not gravity. Osmotic pressure, enzymatic activity, and bile flow do not drive food translocation.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which of the following correctly compares peristalsis and segmentation?",
+    "options": [
+      "Peristalsis: circular muscle only, mixing; Segmentation: both muscles, propulsion",
+      "Peristalsis: both longitudinal and circular, propulsion, aboral; Segmentation: circular only, mixing, non-travelling",
+      "Peristalsis: longitudinal only, propulsion; Segmentation: both muscles, mixing",
+      "Peristalsis: non-travelling, mixing; Segmentation: travelling, propulsion",
+      "Peristalsis and segmentation both use both muscle layers and have the same primary function"
+    ],
+    "answer": 1,
+    "topic": "segmentation",
+    "explain": "Peristalsis uses both longitudinal and circular smooth muscles to produce a travelling wave that propels food aborally. Segmentation uses only circular muscle in an asynchronous, non-travelling pattern whose primary function is mixing and mechanical breakdown. These are the definitive distinctions tested in exams.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "The pancreas is classified as an accessory digestive organ. Which of the following statements about it is correct according to this lecture?",
+    "options": [
+      "It produces bile salts to emulsify fats",
+      "It secretes HCl and pepsin for protein digestion",
+      "It secretes hydrolytic enzymes and bicarbonate; it also has nondigestive endocrine functions",
+      "It stores and concentrates bile between meals",
+      "It is part of the hindgut and absorbs vitamins"
+    ],
+    "answer": 2,
+    "topic": "gi-organ-secretions",
+    "explain": "The pancreas secretes hydrolytic enzymes (to digest carbohydrates, fats, proteins, and nucleic acids) and bicarbonate (to neutralise gastric acid in the small intestine). The lecture also notes it has nondigestive endocrine functions (e.g., insulin secretion). Bile salts are from the liver; HCl and pepsin are from the stomach; bile storage is the gallbladder.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "A student claims the headgut performs absorption of amino acids. Based on the lecture, this is incorrect because:",
+    "options": [
+      "The headgut absorbs fats, not amino acids",
+      "The headgut only receives and begins processing food; no absorption occurs there",
+      "Amino acid absorption requires bile from the liver, which is only available in the hindgut",
+      "The headgut lacks a lumen through which nutrients could pass",
+      "Amino acids are absorbed only by the large intestine"
+    ],
+    "answer": 1,
+    "topic": "gi-tract-regions",
+    "explain": "The headgut (mouth and pharynx) is responsible only for food intake and primary mechanical processing — chewing, lubrication, and initiation of starch digestion. No absorption occurs in the headgut. Absorption of amino acids (and all other food products) is a function of the small intestine (midgut).",
+    "difficulty": "hard"
+  }
+]

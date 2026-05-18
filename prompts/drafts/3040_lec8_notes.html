@@ -1,0 +1,215 @@
+<div id="notes-8" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-8" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(8)">Clear Highlights</button>
+  <h1>Lecture 8: Neuro2 — Properties of Sensory Cells and Sensory Systems</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    Sensory receptors (感受器) are specialised cells — neural or non-neural — that detect a specific environmental stimulus and convert it into an electrical signal the CNS can interpret, a process called sensory transduction (換能). The strength and duration of the resulting generator or receptor potential are graded with stimulus intensity, and the CNS reads intensity as action-potential frequency and duration. The somatosensory system handles four modalities — touch, proprioception, temperature, and nociception — each mediated by distinct receptor types and molecular channels including the Nobel Prize-winning Piezo2, TRPV1, and TRPM8. Hearing is a special sense that relies on cochlear hair cells to convert mechanical vibrations into electrical signals; inner hair cells (IHC, 內毛細胞) are the primary signal transmitters while outer hair cells (OHC, 外毛細胞) act as mechanical amplifiers via the motor protein prestin. Place theory explains how frequency is encoded spatially along the cochlea (耳蝸), with each location responding maximally to a particular frequency — a principle established by Georg von Békésy.
+  </div>
+
+  <!-- Section 0: Sensory Receptors and Transduction -->
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Sensory Receptors and Transduction</h2>
+
+    <p data-topic="sensory-receptor-types">
+      A <strong>sensory receptor (感受器)</strong> is a specialised cell — neural or non-neural — that detects a specific environmental stimulus and converts it into an electrical signal. Four major types exist:
+      <table>
+        <thead><tr><th>Receptor Type</th><th>Examples of Stimuli</th></tr></thead>
+        <tbody>
+          <tr><td>Chemoreceptors (化學感受器)</td><td>O<sub>2</sub>, pH, glucose and other organic molecules</td></tr>
+          <tr><td>Mechanoreceptors (機械感受器)</td><td>Pressure (baroreceptors), cell stretch (osmoreceptors), vibration, acceleration, sound</td></tr>
+          <tr><td>Photoreceptors (光感受器)</td><td>Photons of light</td></tr>
+          <tr><td>Thermoreceptors (溫度感受器)</td><td>Varying degrees of heat</td></tr>
+        </tbody>
+      </table>
+    </p>
+
+    <p data-topic="sensory-transduction-mechanism">
+      <strong>Sensory transduction (換能)</strong> is the conversion of stimulus energy into information the CNS can process. The environmental stimulus depolarises the membrane by opening ion channels directly or indirectly. Two broad receptor categories differ in how they generate downstream signals:
+      <ul>
+        <li><strong>Neural sensory receptors:</strong> depolarisation produces a <strong>generator potential (發生器電位)</strong>, which triggers action potentials (AP) in the same cell.</li>
+        <li><strong>Non-neural sensory receptors:</strong> depolarisation produces a <strong>receptor potential (感受器電位)</strong>, which drives neurotransmitter release, generating APs in downstream (postsynaptic) neurons.</li>
+      </ul>
+      Three basic transmission patterns (Type 1, Type 2, Type 3) describe how sensory signals reach the CNS, with Type 3 being relevant to non-neural receptors.
+    </p>
+
+    <div class="exam-trap-inline" data-topic="sensory-transduction-mechanism">
+      <b>Exam trap:</b> Do not confuse <em>generator potential</em> (in neural receptors — fires its own AP) with <em>receptor potential</em> (in non-neural receptors — triggers NT release to excite a downstream neuron). Both are graded, but the downstream mechanism differs.
+    </div>
+
+    <p data-topic="sensory-coding">
+      <strong>Sensory coding (感覺編碼)</strong> translates stimulus properties into neural signals:
+      <ul>
+        <li>The <strong>strength</strong> of the generator/receptor potential → <strong>frequency</strong> of APs (or amount of NT released).</li>
+        <li>The <strong>duration</strong> of the generator/receptor potential → <strong>duration</strong> of the AP train (or NT secretion).</li>
+      </ul>
+      This means a stronger stimulus makes neurons fire faster, not harder (APs are all-or-none).
+    </p>
+
+    <div class="exam-trap-inline" data-topic="sensory-coding">
+      <b>Exam trap:</b> Stimulus intensity is encoded as AP <em>frequency</em>, not AP amplitude. AP amplitude does not change with stimulus strength.
+    </div>
+  </section>
+
+  <!-- Section 1: Somatosensory System -->
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. The Somatosensory System</h2>
+
+    <p data-topic="somatosensory-modalities">
+      The somatosensory system (體感系統) covers four modalities: <strong>touch (觸覺), proprioception (本體感覺), temperature (溫度覺), and nociception (傷害感覺 / 痛覺 and itching)</strong>. Each modality has dedicated receptor types.
+    </p>
+
+    <p data-topic="somatosensory-pathway">
+      The <strong>somatosensory pathway (體感傳導路徑)</strong> follows a three-neuron chain:
+      <ol>
+        <li><strong>Primary sensory neurons</strong> — activated by receptor stimulation; carry signals from the periphery.</li>
+        <li><strong>Secondary sensory neurons</strong> — interneurons that <strong>cross the midline</strong> of the body, so left-body sensations are processed in the right hemisphere and vice versa.</li>
+        <li><strong>Tertiary sensory neurons</strong> — receive input in the thalamus (丘腦) and project to the <strong>somatosensory cortex (體感皮層)</strong> of the cerebral cortex.</li>
+      </ol>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="somatosensory-pathway">
+      <b>Exam trap:</b> It is the <em>secondary</em> sensory neurons (not primary or tertiary) that cross the midline. Also, all pathways relay in the thalamus before reaching cortex.
+    </div>
+
+    <p data-topic="somatosensory-cortex">
+      The <strong>somatosensory cortex (體感皮層)</strong> maps the body topographically — each body region corresponds to a specific cortical area. More sensitive body regions have proportionally larger cortical representations. Importantly, the size of a region's cortical representation is <strong>not fixed</strong>; it can change with usage (cortical plasticity 皮層可塑性).
+    </p>
+
+    <p data-topic="touch-receptors">
+      <strong>Touch receptors (觸覺感受器)</strong> respond to stretch, steady pressure, fluttering, vibration, and texture. They include free nerve endings and complex encapsulated receptors. The <strong>Piezo2 channel</strong> is a mechanosensitive ion channel that mediates gentle touch; it is also responsible for proprioception (本體感覺), described as the "sixth sense" — the sense of self-movement and body position.
+    </p>
+
+    <p data-topic="temperature-receptors">
+      <strong>Temperature receptors (溫度感受器)</strong> are free nerve endings in two functional classes:
+      <ul>
+        <li><strong>Cold receptors:</strong> respond to temperatures below body temperature; use the <strong>TRPM8 channel</strong> (a Transient Receptor Potential channel). TRPM8 also senses cooling compounds like menthol (薄荷醇) and eucalyptol (桉葉油醇). TRPM8-deficient mice are insensitive to cold.</li>
+        <li><strong>Warm receptors:</strong> respond from body temperature to ~45°C; other TRP channels handle intermediate ranges. <strong>TRPV1</strong> responds to noxious heat above 43°C and also to capsaicin (辣椒素) from chilli peppers.</li>
+      </ul>
+      Discovery of TRPV1 and TRPM8 as temperature sensors, and Piezo channels as touch sensors, earned the <strong>2021 Nobel Prize in Physiology or Medicine</strong>.
+    </p>
+
+    <div class="exam-trap-inline" data-topic="temperature-receptors">
+      <b>Exam trap:</b> TRPV1 senses <em>noxious heat</em> (above 43°C) <em>and</em> capsaicin — not all warm temperatures. TRPM8 senses cold <em>and</em> menthol/eucalyptol. Do not assign capsaicin to TRPM8 or menthol to TRPV1.
+    </div>
+
+    <p data-topic="nociceptors">
+      <strong>Nociceptors (傷害感受器)</strong>, also called pain receptors, are free nerve endings that respond to strong noxious stimuli — chemical, mechanical, or thermal — that cause or risk tissue damage. They activate two pathways:
+      <ul>
+        <li><strong>A. Reflexive protective responses</strong> integrated at the spinal cord level (fast, unconscious).</li>
+        <li><strong>B. Ascending pathways to the cortex</strong> producing conscious pain sensation.</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="nociceptors">
+      <b>Exam trap:</b> Nociceptors activate <em>two</em> pathways — a fast spinal reflex arc AND a slower ascending conscious pathway. Pain is not purely cortical.
+    </div>
+  </section>
+
+  <!-- Section 2: Hearing — Properties of Sound -->
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Hearing: Properties of Sound</h2>
+
+    <p data-topic="hearing-overview">
+      <strong>Hearing (聽覺)</strong> is the perception of energy carried by sound waves, characterised by three properties: <strong>amplitude (振幅), frequency (頻率), and complexity (複雜性 / 音色)</strong>. Disabling hearing loss affects 5.3% of the world population and one third of people over 65. The molecular identity of the mechanotransduction channel in auditory hair cells is still not fully established, making it the "last frontier" of sensory neurobiology.
+    </p>
+
+    <p data-topic="sound-properties">
+      The three basic properties of sound:
+      <ul>
+        <li><strong>Amplitude:</strong> perceived as loudness, measured in decibels (dB). Normal conversation is ~60 dB. Sounds above 80 dB can damage hair cells.</li>
+        <li><strong>Frequency:</strong> perceived as pitch, measured in Hz. The average human ear hears 20–20,000 Hz, with most acute hearing at 1–3 kHz.</li>
+        <li><strong>Complexity (Timbre, 音色):</strong> what makes two instruments sound different even at the same pitch and loudness — determined by the mix of overtones in the sound wave.</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="sound-properties">
+      <b>Exam trap:</b> The most acute human hearing is at 1–3 kHz, NOT across the full 20–20,000 Hz range. Also, hearing range narrows with age.
+    </div>
+  </section>
+
+  <!-- Section 3: Cochlear Anatomy and Auditory Transduction -->
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Cochlear Anatomy and Auditory Transduction</h2>
+
+    <p data-topic="cochlear-anatomy">
+      The <strong>cochlea (耳蝸)</strong> houses the <strong>organ of Corti (科蒂氏器)</strong>, which contains two key cell types:
+      <ul>
+        <li><strong>Inner hair cells (IHC, 內毛細胞):</strong> 3,000 per cochlea; arranged in one row. They are the primary sensory cells that transmit auditory signals to the brain.</li>
+        <li><strong>Outer hair cells (OHC, 外毛細胞):</strong> 12,000 per cochlea; arranged in three rows. They are mechanical amplifiers.</li>
+      </ul>
+      Hair cells bear <strong>stereocilia (靜纖毛)</strong> connected by <strong>tip links (尖端連結)</strong>, which are crucial for mechanotransduction.
+    </p>
+
+    <p data-topic="auditory-transduction">
+      <strong>Auditory transduction (聽覺換能)</strong> — mechano-electrical transduction (機電換能) — occurs in the cochlear hair cells. Sound waves cause the basilar membrane to vibrate, deflecting the stereocilia. This deflection pulls on tip links, opening mechanically gated ion channels. The resulting ion influx generates a receptor potential, triggering neurotransmitter release onto the cochlear nerve fibers.
+    </p>
+
+    <p data-topic="ihc-vs-ohc-innervation">
+      <strong>Innervation asymmetry:</strong> The cochlear nerve contains 30,000+ fibers. There is a nearly <strong>10:1 fiber-to-IHC ratio</strong> — meaning each IHC receives massive innervation. By contrast, very few afferent fibers innervate OHCs. A small number of efferent fibers descend from the brain to OHCs (for modulation). This confirms that IHCs are the primary signal senders to the brain.
+    </p>
+
+    <div class="exam-trap-inline" data-topic="ihc-vs-ohc-innervation">
+      <b>Exam trap:</b> Despite there being 4× more OHCs (12,000) than IHCs (3,000), the vast majority of afferent cochlear nerve fibers innervate IHCs, not OHCs. OHCs receive mainly efferent (descending) input.
+    </div>
+
+    <p data-topic="ohc-amplification">
+      <strong>OHC mechanical amplification:</strong> OHCs contain <strong>prestin (普雷斯汀)</strong>, a transmembrane motor protein that changes shape (contracts and elongates) in response to membrane voltage changes (electromotility, 電動性). This electromotility amplifies the vibration of the basilar membrane, increasing sensitivity to incoming sound frequencies and amplifying the signal — a process called <strong>cochlear amplification (耳蝸放大)</strong>.
+    </p>
+
+    <div class="exam-trap-inline" data-topic="ohc-amplification">
+      <b>Exam trap:</b> Prestin drives OHC motility in response to <em>voltage changes</em> (electromotility), not directly to sound. Prestin is in OHCs, not IHCs. IHCs transmit the signal; OHCs amplify the mechanical wave.
+    </div>
+  </section>
+
+  <!-- Section 4: Place Theory of Frequency Coding -->
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Sensory Coding for Sound Frequency — Place Theory</h2>
+
+    <p data-topic="place-theory">
+      <strong>Place theory (位置理論)</strong> states that each location along the cochlea responds maximally to a specific sound frequency — thus the cochlea performs a spatial frequency analysis. Low frequencies are encoded near the apex; high frequencies near the base. This was established by <strong>Georg von Békésy (1899–1972)</strong>, who won the Nobel Prize for this work. The analogy is that different keys on a piano correspond to different positions along the cochlea.
+    </p>
+
+    <div class="exam-trap-inline" data-topic="place-theory">
+      <b>Exam trap:</b> Place theory means frequency is encoded by <em>which</em> cochlear neurons are activated (location), not by the firing rate of a single neuron. Do not confuse with rate/frequency coding.
+    </div>
+  </section>
+
+  <!-- Exam Traps Summary -->
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Generator potential (neural receptors) ≠ receptor potential (non-neural receptors); both are graded but differ in what they drive.</li>
+      <li>Stimulus intensity is encoded as AP <em>frequency</em>, not AP amplitude (APs are all-or-none).</li>
+      <li>It is <em>secondary</em> sensory neurons that cross the midline, not primary or tertiary.</li>
+      <li>Somatosensory cortical map size is <em>not fixed</em> — it changes with body part usage.</li>
+      <li>TRPV1 = noxious heat (&gt;43°C) AND capsaicin; TRPM8 = cold AND menthol/eucalyptol. Do not swap these.</li>
+      <li>Nociceptors activate two pathways: spinal reflex arc (unconscious) AND ascending cortical pathway (conscious).</li>
+      <li>Most acute human hearing is at 1–3 kHz, not across the full 20–20,000 Hz range.</li>
+      <li>Despite 4× more OHCs than IHCs, most afferent cochlear nerve fibers innervate IHCs (~10:1 fiber-to-IHC ratio).</li>
+      <li>Prestin drives OHC <em>electromotility</em> in response to voltage changes — it is in OHCs, not IHCs.</li>
+      <li>Place theory = frequency encoded by cochlear <em>location</em>, not by AP firing rate of a single neuron.</li>
+      <li>The molecular identity of the mechanotransduction channel in hair cells is still not fully established.</li>
+      <li>Piezo2 mediates both gentle touch AND proprioception (the "sixth sense").</li>
+    </ul>
+  </div>
+
+  <!-- Top Things to Memorize -->
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Four receptor types: chemo-, mechano-, photo-, thermoreceptors with their stimuli.</li>
+      <li>Neural receptor → generator potential → AP in same cell; non-neural receptor → receptor potential → NT release → AP in downstream neuron.</li>
+      <li>Stimulus intensity = AP frequency; stimulus duration = AP train duration.</li>
+      <li>Three-neuron somatosensory pathway: primary → secondary (crosses midline) → tertiary → somatosensory cortex via thalamus.</li>
+      <li>Piezo2: gentle touch AND proprioception; Nobel 2021.</li>
+      <li>TRPV1: noxious heat (&gt;43°C) + capsaicin; TRPM8: cold + menthol/eucalyptol; both Nobel 2021.</li>
+      <li>IHC: 3,000; one row; primary signal transmitter; ~10 afferent fibers each. OHC: 12,000; three rows; mechanical amplifier.</li>
+      <li>Prestin: motor protein in OHC; electromotility (contracts/elongates with Vm changes) → cochlear amplification.</li>
+      <li>Tip links connect stereocilia in hair cells; deflection opens mechanotransduction channels.</li>
+      <li>Sound amplitude &gt;80 dB damages hair cells; most acute hearing at 1–3 kHz.</li>
+      <li>Place theory (Békésy): each cochlear location responds maximally to one frequency.</li>
+      <li>Mechanotransduction channel identity in auditory hair cells remains the "last frontier" of sensory neurobiology.</li>
+    </ol>
+  </div>
+</div>

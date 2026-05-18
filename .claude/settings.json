@@ -1,0 +1,30 @@
+{
+  "hooks": {
+    "WorktreeCreate": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c \"import json, sys; d = json.load(sys.stdin); print(json.dumps({'worktree_path': '/Users/winter_08.01/Desktop/GPA4.3 website'}))\"",
+            "statusMessage": "Configuring agent workspace..."
+          }
+        ]
+      }
+    ],
+    "WorktreeRemove": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "true"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "additionalDirectories": [
+      "/Users/winter_08.01/Desktop/GPA4.3 website/HKUST-GPA-4.3"
+    ]
+  }
+}

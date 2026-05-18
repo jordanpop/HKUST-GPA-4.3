@@ -1,0 +1,588 @@
+Lecture 19: THE CELL DIVISION CYCLE
+
+; “ | a,
+~ ‘
+‘\
+
+Discovery of the cell |
+
+“Where a cell arrives, there must
+be a previous cell, just as animals
+can only arise from animals and
+plants from plants.’
+
+- Rudorf Virchow
+
+Rudolph Virchow (1855) - a German physician who stated that all living cells come only from other living
+cells. By combining the work of all of the scientist mentioned, the Cell Theory was born...
+The growth, development and survival of all living things
+depends on cell reproduction
+
+CeCOCes
+MYCXOOIO
+
+Underlying tissue
+
+Jeanne Kelly, 2004
+Jeanne Kelly, 2004
+
+1
+
+Cancer cells invade
+surrounding tissues and
+blood vessels
+
+2
+
+Cancer cells are
+transported by the
+circulatory system
+to distant sites
+
+3
+
+Cancer cells reinvade
+and grow at new
+location
+a eceiae wells Synthesis (double the amount)
+
+- Duplicate DNA
+- Synthesize proteins, lipids
+ores - Growth of organelles
+IVISION Division (one cell — two cells)
+
+- Segregate chromosome
+
+- Divide cytoplasmic components
+CELL 1 CELL GROWTI
+
+Figure 18-1 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+
+Figure 18-1 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+
+daughter cells
+
+How an eukaryotic cell segregates its duplicated
+contents to produce two identical cells?
+
+How it coordinates the various steps of this
+reproductive cycle? (eg. Why chromosomes
+are duplicated first before segregation?)
+
+SP SOs eielsus sulseliesl jyiselize All elisyinsa rlssaruse,
+
+https: //www.youtube.com/watch?v=e6N9_RhD10Q
+mitosis
+(nuclear
+division) cytokinesis
+(cytoplasmic
+division) -7
+
+Gl phase: metabolic activity, cell growth
+
+S phase: DNA replication
+
+G2 phase: cell growth and protein synthesis
+to be ready for mitosis
+
+M phase: nuclear and cytoplasmic division
+
+INTERPHASE
+
+= -r= fo |
+PE: T i ar ad | =
+
+(DNA replication)
+
+Figure 18-2 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+Is all DNA replicated?
+Are all DNA damages repaired?
+ls environment favorable for cell division?
+
+Are all chromosomes segregate properly?
+
+G1/S checkpoint is a
+crossroad for the cell
+
+Proceed to S phase?
+Pause?
+
+Withdraw to G,?
+Withdraw permanently
+and terminally differentiate?
+
+J terminal
+differentiation /—
+
+S
+
+oO
+
+CONTROLLER
+
+- The cell-cycle control system
+
+mitosis
+
+(nuclear
+division) cytokinesis
+(cytoplasmic
+division) -7
+
+¢ Interphase
+
+¢ M phase
+— Mitosis
+
+— Cytokenesis
+
+(DNA replication)
+
+Figure 18-2 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+Lee Hartwell
+
+7.
+
+-
+
+2 successive cell cycles in the budding yeast Pe
+Saccharomyces cerevisiae |
+
+7 Cdc7, cyclin- — kinase 7 |
+
+permissive temperature (22°C) restrictive temperature (36 C)
+
+2001 Nobel Prize
+in Medicine
+
+Cells grow asynchronously,and —_ Cells arrest at a particular stage
+all stages of the cell cycle can of the cell cycle. Here, they are
+be observed all “large budded cells.”
+cyclin
+
+Active Cdk
+
+cyclin-dependent
+kinase (Cdk)
+—— ubiquitin chain
+
+cyclin
+
+active
+Cdk
+UBIQUITYLATION DESTRUCTION
+OF CYCLIN OF CYCLIN IN & aj A
+iy BY APC iy, PROTEASOME +
+y > > "> aie
+active cyclin-Cdk inactive Cdk
+
+complex
+
+Figure 18-9 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+
+Cyclins: their concentrations vary in a cyclical fashion during the cell cycle.
+
+APC: anaphase-promoting complex, an ubiquitin ligase
+M-Cdk —
+activity
+
+M-cyclin
+concentration
+
+Figure 18-5 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+
+Cyclins: their concentrations vary in a cyclical fashion during the cell cycle.
+S cyclin M cyclin
+
+Ya
+“oY ¢
+
+ae M
+Chromosome Chromosome
+duplication segregation
+S cyclin y - M cyclin
+active S-Cdk active M-Cdk
+
+Figure 18-8 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+
+How it coordinates the various steps of this reproductive cycle?
+(eg. Why chromosomes are duplicated first before segregation?)
+
+Cyclin-Cdk Complex Cdk Partner
+
+G1-Cdk cyclin D* Cdk4, Cdké
+G,/S-Cdk cyclin E Cdk2
+S-Cdk cyclin A Cdk2
+M-Cdk cyclin B Cdk1
+
+-MPHASE
+
+| mitosis
+' (nuclear ie:
+division) cytokinesis
+(cytoplasmic
+division) --~
+
+INTERPHASE
+
+(DNA replication)
+
+Figure 18-2 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+¢ The cell-cycle control system
+
+mitosis
+
+(nuclear
+division) cytokinesis
+(cytoplasmic
+division) -7
+
+- Interphase
+
+¢ M phase
+— Mitosis
+
+— Cytokenesis
+
+(DNA replication)
+
+Figure 18-2 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+duplicated centrosome
+microtubules
+
+* Chromosome duplicated
+
+¢ Centrosome duplicated
+
+¢ Cell and organelle size increased
+
+¢ More proteins and lipids synthesized
+
+cytosol
+
+nuclear
+envelope
+
+decondensed
+chromosomes
+in nucleus
+
+plasma
+membrane
+X-rays cause DNA damage
+
+'
+'
+
+ACTIVATION OF PROTEIN KINASES
+
+THAT PHOSPHORYLATE p53,
+“3 STABILIZING "t ACTIVATING IT
+p
+pie stable,
+\~ activated p53
+ACTIVE p53 BINDS TO
+orice REGION
+OF p21 GENE
+IN ABSENCE OF
+DNA DAMAGE, ye
+IN PROTEASOMES
+
+TRANSCRIPTION S —
+
+Es p21 mRNA
+TRANSLATION }
+
+p21 (Cdk
+inhibitor protein)
+
+= oe
+\iZe
+
+cE nacre
+
+G,/S-Cdk G,/S-Cdk and S-Cdk
+and S-Cdk complexed with p21
+
+Figure 18-15 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+
+¢ The cell-cycle control system
+
+mitosis
+
+(nuclear
+division) cytokinesis
+(cytoplasmic
+division) -7
+
+¢ Interphase
+
+7 M phase .
+— Mitosis
+
+— Cytokenesis
+
+(DNA replication)
+
+Figure 18-2 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+Spey pep eels yulseliessil jyiselizn Al riisjiies rizsspusel,
+
+https: //www.youtube.com/watch?v=5bqlTo_RKEo
+chromosomes
+
+>
+
+PROGRESSION
+THROUGH
+M PHASE
+
+microtubules of the actin and myosin filaments of the
+
+mitotic spindle contractile ring
+
+Figure 18-19 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+Cytokinesis | |
+
+Mitosis
+
+MITOTIC (M) PHASE
+
+*,
+Telophase and
+Cytokinesis
+
+ern heres bane =
+centrosome
+intact forming
+nuclear mitotic
+envelope spindle
+
+ees
+
+SS
+
+kinetochore
+
+condensing duplicated chromosome
+with two sister chromatids held
+together along their length
+
+* Condensing duplicated chromosomes
+¢ Assembly of mitotic spindles
+compact chromatin
+
+Human nucleus r = 10 um
+
+om
+
+Human DNA
+
+iy
+
+Wiese
+
+28
+
+Figure 18-18c Essential Cell Biology, 4th ed. (© Garland Science 2014)
+nes )
+
+ee
+
+4;
+‘y
+‘7
+4s
+
+4
+
+Figure 18-18b Essential Cell Biology, 4th ed. (© Garland Science 2014)
+cohesin rings
+
+sister
+chromatids
+
+Figure 18-18c Essential Cell Biology, 4th ed. (© Garland Science 2014)
+PROMETAPHASE
+
+spindle pole
+
+Break down of the nuclear envelope
+Attachment of chromosome to spindle microtubules
+via kinetochores
+
+fragments of
+nuclear envelope
+
+kinetochore “—__ chromosome in
+microtubule motion
+
+replicated
+chromosome
+
+centromere region
+of chromosome
+
+a Kinetochore attaches
+chromosomes
+kinetochore == s T. Mitotic spindle
+
+microtubules
+
+L__J
+chromatid
+Figure 18-23b Essential Cell Biology, 4th ed. (© Garland Science 2014)
+
+spindle pole chromosome kinetochore
+(sister chromatids)
+
+pS SSeS /
+
+SS
+eS @ & @ @'
+
+aster microtubules kinetochore microtubules
+
+Correct position and orientation Separate the sister chromatids Push the spindle poles further apart
+of mitotic spindle
+
+METAPHASE
+
+spindle pole
+
+astral
+microtubule
+spindle
+pole
+kinetochor
+microtubule
+
+kinetochores of all chromosomes
+aligned in a plane midway between
+two spindle poles
+
+replicated
+—
+
+centromere region
+
+of chromosome kinetochore
+
+Chromosomes are aligned at the equator of spindle.
+
+— =
+microtubules
+
+ch es
+Figure 18-23b Essential Cell Biology, 4th ed, (© Garland Science 2014)
+inhibitory
+protein
+(securin)
+
+inactive
+proteolytic
+enzyme
+& (separase)
+a. TT)
+My
+active APC Ne = +
+active 4
+separase
+!
+
+dissociated cohesins
+mitotic PIV oa.
+spindle ~~ EN |
+N\ 7 N“
+— _—[— ——— PF —
+if \s * f
+
+metaphase anaphase
+
+oS
+
+Figure 18-28 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+ANAPHASE chromosomes
+
+shortening — er
+kinetochore ae spindle pole
+microtubule moving outward
+TELOPHASE
+set of chromosomes
+
+at spindle pole
+
+contractile ring
+
+[ aay “——____ starting to form
+~~ =
+0 (Se ' i} \
+™ \e ») SA spindle pole
+. =, pon —_— &
+microtubules —
+
+nuclear envelope reassembling
+around individual chromosomes
+
+Separation of sister chromatids
+
+Two sister chromatids arrive at
+the spindle pole and decondense;
+New nuclear envelope reassembles;
+contractile ring starts to form.
+The contractile ring divides the cell in two
+
+remaining interpolar microtubules
+from central spindle
+
+contractile ring of actin and
+myosin filaments in cleavage furrow
+
+(B)
+
+remaining interpolar microtubules plasma membrane
+
+Figure 18-32 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+new cell
+wall forming
+Ty
+‘Ss _
+
+—
+Wil M
+\QYy)
+
+derived | Phragmoplast
+vesicles | microtubules
+
+(D) |
+
+completed
+
+membrane cell wall new cell wall
+(A) telophase (B) cytokinesis (C) G,
+
+Figure 18-34 Essential Cell Biology, 4th ed. (© Garland Science 2014)
+¢ The cell-cycle control system
+- Cell cycle checkpoints
+- Roles of Cyclin and Cdks
+
+e Interphase
+- Major event happening during the interphase
+
+¢ M phase
+- Mitosis
+Major events happening at different stages of mitosis
+- Cytokinesis
+Major events happening during cytokinesis
+citi * , F
+es —_-
+a
+
+Extensive learning _| Westermann et al., Nature 2006
+What would be the most obvious outcome of repeated cell cycles consisting
+of S phase and M phase only?
+(a) Cells would not be able to replicate their DNA.
+(b) The mitotic spindle could not assemble.
+(c) Cells would get larger and larger.
+(d) The cells produced would get smaller and smaller.
+

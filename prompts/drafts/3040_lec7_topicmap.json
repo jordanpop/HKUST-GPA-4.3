@@ -1,0 +1,21 @@
+{
+  "ion-channel-basics": 0,
+  "membrane-transport-types": 0,
+  "channel-gating": 0,
+  "ttx-blocker": 0,
+  "resting-membrane-potential": 1,
+  "ion-concentrations": 1,
+  "nernst-equation": 1,
+  "ghk-equation": 1,
+  "na-pump": 1,
+  "action-potential-phases": 2,
+  "action-potential-properties": 2,
+  "ap-threshold-mechanism": 2,
+  "refractory-periods": 3,
+  "ap-propagation": 3,
+  "saltatory-conduction": 3,
+  "synaptic-transmission-steps": 4,
+  "epsp-ipsp": 4,
+  "synaptic-integration": 4,
+  "transmitter-inactivation": 4
+}

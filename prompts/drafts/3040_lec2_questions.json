@@ -1,0 +1,422 @@
+[
+  {
+    "q": "Which layer of the adrenal gland secretes catecholamines, and what is its embryological origin?",
+    "options": [
+      "Adrenal medulla; ectodermal (neural)",
+      "Adrenal cortex; mesodermal (non-neural)",
+      "Adrenal medulla; mesodermal (non-neural)",
+      "Adrenal cortex; ectodermal (neural)",
+      "Both layers equally; mixed ectodermal and mesodermal"
+    ],
+    "answer": 0,
+    "topic": "epinephrine-norepinephrine",
+    "explain": "The adrenal medulla is the inner layer of the adrenal gland, is neural (ectodermal) in origin, and is the source of catecholamines (epinephrine and norepinephrine). The adrenal cortex is the outer layer, is non-neural (mesodermal), and secretes mineralocorticoids, glucocorticoids, and androgens — not catecholamines. Confusing medulla with cortex is a classic exam error.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Epinephrine is synthesized from norepinephrine by the enzyme PNMT. Which condition is required for this conversion step to occur?",
+    "options": [
+      "Activation of preganglionic sympathetic fibers releasing acetylcholine",
+      "Cortisol stimulation from the adrenal cortex",
+      "High blood glucose stimulating chromaffin cells",
+      "Dopamine β-hydroxylase activity in the adrenal medulla",
+      "TSH stimulation from the anterior pituitary"
+    ],
+    "answer": 1,
+    "topic": "epinephrine-norepinephrine",
+    "explain": "PNMT (phenylethanolamine-N-methyltransferase) converts norepinephrine to epinephrine, and this step specifically requires cortisol from the adrenal cortex. Preganglionic acetylcholine activates chromaffin cells in general but does not specifically enable the PNMT-catalyzed conversion. Dopamine β-hydroxylase converts dopamine to norepinephrine — an earlier step in the pathway.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which of the following is NOT an effect of epinephrine?",
+    "options": [
+      "Increased insulin secretion",
+      "Increased glycogenolysis in the liver",
+      "Increased lipolysis in adipose tissue",
+      "Increased glucagon secretion",
+      "Vasodilation in skeletal muscle"
+    ],
+    "answer": 0,
+    "topic": "epinephrine-norepinephrine",
+    "explain": "Epinephrine actually DECREASES insulin secretion — a key metabolic effect that helps mobilize glucose during the fight-or-flight response. All other options are true effects: glycogenolysis and lipolysis provide fuel, glucagon secretion is increased, and vasodilation in skeletal muscle ensures blood flow to working muscles. This is a direct lecture quiz question.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Secretion of catecholamines from the adrenal medulla is regulated by which of the following?",
+    "options": [
+      "Adrenocorticotropic hormone (ACTH) from the anterior pituitary",
+      "Chromaffinotropic hormone from the hypothalamus",
+      "Growth hormone from the anterior pituitary",
+      "Insulin from the pancreatic beta cells",
+      "Neural input from preganglionic sympathetic fibers only"
+    ],
+    "answer": 4,
+    "topic": "epinephrine-norepinephrine",
+    "explain": "Catecholamine secretion from the adrenal medulla is regulated exclusively by neural input — preganglionic sympathetic fibers releasing acetylcholine activate chromaffin cells. There is no specific tropic hormone dedicated to controlling catecholamine release. The lecture explicitly states the answer is 'none of the above' when listing hormones, meaning neural control only.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "A patient presents with periodic hypertension, palpitations, sweating, and headaches. Imaging reveals a tumor of the adrenal medulla. Which hormone is most likely overproduced?",
+    "options": [
+      "Cortisol",
+      "Aldosterone",
+      "Epinephrine",
+      "TSH",
+      "Glucagon"
+    ],
+    "answer": 2,
+    "topic": "epinephrine-norepinephrine",
+    "explain": "This describes pheochromocytoma, a tumor of the adrenal medulla that causes excess catecholamine (primarily epinephrine) secretion. The symptoms — periodic hypertension, palpitations, sweating, headaches, anxiety — result from excessive adrenergic stimulation. Cortisol excess causes Cushing's syndrome; aldosterone excess causes Conn's syndrome. Adrenal medulla tumors do not produce cortisol.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which adrenoreceptor subtype signals through adenylate cyclase inhibition to decrease intracellular cAMP?",
+    "options": [
+      "α₂ receptor — inhibits adenylate cyclase, decreasing cAMP",
+      "α₁ receptor — signals via phospholipase C",
+      "β₁ receptor — signals via adenylate cyclase activation",
+      "β₂ receptor — signals via adenylate cyclase activation",
+      "All β receptors use the same inhibitory pathway"
+    ],
+    "answer": 0,
+    "topic": "epinephrine-norepinephrine",
+    "explain": "The α₂ receptor inhibits adenylate cyclase, decreasing cAMP. In contrast, α₁ receptors signal via phospholipase C → IP₃/DAG pathway, and β₁/β₂ receptors activate adenylate cyclase to increase cAMP. Clonidine is a clinical α₂ agonist. The other receptor subtypes listed all use different, non-inhibitory mechanisms.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Epinephrine is the first-line treatment for anaphylaxis. Which combination of effects makes it effective?",
+    "options": [
+      "Vasodilation and immunosuppression to reduce the allergic cascade",
+      "Histamine antagonism and mast cell stabilization at mucosal surfaces",
+      "Parasympathetic activation to counteract the hypotensive response",
+      "Vasoconstriction, bronchodilation, and cardiac inotropic/chronotropic effects",
+      "Increased insulin secretion to stabilize blood glucose during shock"
+    ],
+    "answer": 3,
+    "topic": "epinephrine-norepinephrine",
+    "explain": "In anaphylaxis, epinephrine prevents laryngeal edema and hypotension via vasoconstriction, opens airways via bronchodilation, and supports the heart via inotropic (increased force) and chronotropic (increased rate) effects. It does not antagonize histamine directly; that is the role of antihistamines. Epinephrine decreases insulin secretion, not increases it.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Cortisol (hydrocortisone) was used with Ribavirin to treat SARS patients. Which action of cortisol provides the therapeutic rationale?",
+    "options": [
+      "Increasing gluconeogenesis to restore blood glucose depleted by viral infection",
+      "Stimulating glycogen synthesis to sequester glucose from inflammatory cells",
+      "Promoting amino acid uptake in the liver to synthesize antiviral proteins",
+      "Suppressing the overactive immune response to prevent immune-mediated lung damage",
+      "Increasing lipolysis to provide energy substrates for activated immune cells"
+    ],
+    "answer": 3,
+    "topic": "glucocorticoids",
+    "explain": "In SARS, much of the lung damage is caused by an overactive immune response (cytokine storm). Cortisol (hydrocortisone) suppresses inflammation and the immune system, reducing immune-mediated lung damage. Glucocorticoids are used as immunosuppressants after organ transplantation for the same reason. Increasing blood glucose or gluconeogenesis are effects of cortisol but are not the therapeutic rationale here.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "The HPA axis regulates glucocorticoid secretion. Which correctly describes the order of this axis?",
+    "options": [
+      "ACTH (hypothalamus) → CRH (pituitary) → cortisol (adrenal cortex)",
+      "TRH (hypothalamus) → TSH (anterior pituitary) → cortisol (adrenal cortex)",
+      "CRH (hypothalamus) → ACTH (posterior pituitary) → cortisol (adrenal medulla)",
+      "GRH (hypothalamus) → GH (anterior pituitary) → cortisol (adrenal cortex)",
+      "CRH (hypothalamus) → ACTH (anterior pituitary) → cortisol (adrenal cortex)"
+    ],
+    "answer": 4,
+    "topic": "glucocorticoids",
+    "explain": "The correct HPA axis sequence is: CRH from hypothalamic neurosecretory cells → ACTH from the anterior pituitary → cortisol secretion from the adrenal cortex. TRH/TSH controls thyroid hormones; GRH/GH is the growth hormone axis. Cortisol comes from the cortex not the medulla, and ACTH is from the anterior (not posterior) pituitary.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which set of metabolic effects best describes the primary actions of glucocorticoids (cortisol) during stress?",
+    "options": [
+      "Increased glycogen synthesis in liver; increased glucose uptake in muscle and adipose",
+      "Decreased gluconeogenesis in liver; increased protein synthesis in muscle; increased lipogenesis in adipose",
+      "Increased gluconeogenesis in liver; decreased protein synthesis and glucose uptake in muscle; lipid mobilization in adipose",
+      "Increased glucose uptake in all tissues; decreased lipolysis in adipose",
+      "Stimulation of insulin secretion from pancreatic beta cells to counteract stress hyperglycemia"
+    ],
+    "answer": 2,
+    "topic": "glucocorticoids",
+    "explain": "Cortisol's primary effect is to promote gluconeogenesis in the liver, forming glucose from fats and proteins during stress. In skeletal muscle it decreases protein synthesis, increases protein degradation (supplying amino acids for gluconeogenesis), and reduces glucose uptake. In adipose tissue it decreases glucose uptake and increases lipid mobilization. This provides energy to critical tissues like the brain during starvation.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "A patient exhibits rapid weight gain, muscle weakness, skin thinning, immune suppression, and mood changes with elevated plasma cortisol. Which condition does this describe?",
+    "options": [
+      "Addison's disease — adrenal cortex insufficiency",
+      "Conn's syndrome — excess aldosterone",
+      "Acromegaly — excess growth hormone in adulthood",
+      "Pheochromocytoma — adrenal medulla tumor",
+      "Cushing's syndrome — excess glucocorticoids"
+    ],
+    "answer": 4,
+    "topic": "glucocorticoids",
+    "explain": "Cushing's syndrome is caused by excessive cortisol, whether from exogenous glucocorticoid drugs or from tumors producing cortisol, ACTH, or CRH. Hallmark symptoms include rapid weight gain, muscle weakness, skin thinning, immune suppression, and mood changes/depression. Addison's disease is adrenal insufficiency (low cortisol); Conn's is excess aldosterone; acromegaly involves GH excess.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which of the following tissues is EXCLUDED from thyroid hormone stimulation of cellular respiration?",
+    "options": [
+      "Liver",
+      "Skeletal muscle",
+      "Adipose tissue",
+      "Cardiac muscle",
+      "Spleen"
+    ],
+    "answer": 4,
+    "topic": "thyroid-hormones",
+    "explain": "Thyroid hormones stimulate cellular respiration (basal metabolic rate) in almost all tissues, but the brain, spleen, testes/uterus, and the thyroid gland itself are explicitly excluded. Spleen is the correct excluded tissue among these options. Liver, skeletal muscle, adipose tissue, and cardiac muscle are all responsive to thyroid hormone metabolic stimulation.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "T4 is the major form of thyroid hormone released, but T3 is more potent. Which statement correctly describes the relationship between them?",
+    "options": [
+      "T3 is secreted directly by the thyroid; T4 is produced by peripheral tissue deiodination",
+      "T4 is synthesized from one iodinated tyrosine; T3 from two iodinated tyrosines",
+      "T4 is the major form released by the thyroid and is converted to T3 in target tissues",
+      "Both T3 and T4 are released in equal amounts; potency is determined by receptor affinity only",
+      "T4 contains 3 iodine atoms; T3 contains 4 iodine atoms"
+    ],
+    "answer": 2,
+    "topic": "thyroid-hormones",
+    "explain": "T4 (tetraiodothyronine, 4 iodines) is the major form released by the thyroid gland. In target tissues, T4 is converted to the more potent T3 (triiodothyronine, 3 iodines). T4 has 4 iodines and T3 has 3 — the naming reflects iodine count directly. Both are formed from two iodinated tyrosine precursors joined together.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "A patient with hyperthyroidism shows increased heart rate and stronger cardiac contractions. Which thyroid hormone action most directly explains this?",
+    "options": [
+      "Stimulating secretion of catecholamines from the adrenal medulla",
+      "Inhibiting the parasympathetic nervous system's effect on the heart",
+      "Directly stimulating cardiac beta-adrenergic receptors without epinephrine",
+      "Sensitizing cardiac tissues to epinephrine",
+      "Stimulating cellular respiration specifically in cardiac muscle"
+    ],
+    "answer": 3,
+    "topic": "thyroid-hormones",
+    "explain": "Thyroid hormones sensitize tissues to epinephrine. In hyperthyroidism, elevated thyroid hormone levels amplify the cardiac response to normal circulating epinephrine levels, causing increased heart rate and contractility. Thyroid hormones do not stimulate catecholamine secretion from the adrenal medulla — that is a distinct process. This is a specific lecture quiz distinction.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Iodine deficiency leads to goiter (thyroid enlargement). What is the hormonal mechanism?",
+    "options": [
+      "Low iodine → low T3/T4 → reduced negative feedback → high TSH → thyroid gland growth",
+      "Low iodine → low T3/T4 → reduced negative feedback → high CRH → thyroid hypertrophy",
+      "Low iodine → high T4 conversion to T3 → excessive TSH suppression → compensatory atrophy reversal",
+      "Low iodine → high TRH only → direct stimulation of thyroid cell division",
+      "Low iodine → low TSH → compensatory hypertrophy of thyroid follicular cells"
+    ],
+    "answer": 0,
+    "topic": "thyroid-hormones",
+    "explain": "Iodine deficiency prevents adequate T3/T4 synthesis. Low T3/T4 means reduced negative feedback on the hypothalamus and pituitary, so TSH levels rise markedly. TSH not only stimulates thyroid hormone secretion but also thyroid gland growth — leading to goiter. CRH is part of the glucocorticoid axis, not the thyroid axis, and low iodine does not raise TSH by reducing TSH.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Insulin and glucagon are secreted by different cells in the islets of Langerhans. Which statement about their structure is correct?",
+    "options": [
+      "Both insulin and glucagon are steroid hormones acting via nuclear receptors",
+      "Insulin is a single-chain peptide of 29 amino acids; glucagon has 2 chains of 51 amino acids",
+      "Insulin is synthesized in alpha cells; glucagon is synthesized in beta cells",
+      "Both are single-chain peptides of identical length and opposite charge",
+      "Insulin is a 2-chain peptide of 51 amino acids; glucagon is a single-chain peptide of 29 amino acids"
+    ],
+    "answer": 4,
+    "topic": "insulin-glucagon",
+    "explain": "Insulin (from beta cells) consists of 2 chains with 51 amino acids total. Glucagon (from alpha cells) is a single-chain peptide of 29 amino acids. Both are peptide hormones — not steroids. The cell type assignments are frequently swapped in distractors: beta cells produce insulin, alpha cells produce glucagon.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which nutrient molecule has OPPOSITE effects on insulin secretion versus glucagon secretion?",
+    "options": [
+      "Amino acids — stimulate both insulin and glucagon equally",
+      "Fatty acids — stimulate insulin but inhibit glucagon",
+      "Blood glucose — stimulates insulin and stimulates glucagon equally",
+      "Fatty acids — inhibit insulin but stimulate glucagon",
+      "Amino acids — stimulate glucagon but inhibit insulin"
+    ],
+    "answer": 1,
+    "topic": "insulin-glucagon",
+    "explain": "Fatty acids stimulate insulin secretion but inhibit glucagon secretion — opposite effects on the two hormones. Amino acids stimulate BOTH insulin and glucagon (same direction). Blood glucose stimulates insulin and inhibits glucagon — also opposite, but the comparison table in the lecture specifically highlights fatty acids as the classic differentiator between the two hormones' responses.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "A patient with Type 1 diabetes has absent insulin secretion. Which mechanism best explains development of ketoacidosis?",
+    "options": [
+      "Low insulin → low glucose uptake → cells burn amino acids excessively → ammonia toxicity",
+      "Low insulin → reduced gluconeogenesis → brain starvation → lactic acidosis buildup",
+      "Low insulin → high glucagon (no inhibition) → excess ketone formation by liver → ketoacidosis",
+      "Low insulin → increased fatty acid storage → reduced beta-oxidation → organic acid buildup",
+      "Low insulin → reduced glycogenolysis → severe energy deficit → metabolic acidosis"
+    ],
+    "answer": 2,
+    "topic": "insulin-glucagon",
+    "explain": "In Type 1 diabetes, absent insulin removes its inhibitory effect on glucagon, so glucagon levels become very high. Excess glucagon drives ketone body formation by the liver, leading to ketoacidosis, electrolyte imbalance, dehydration, and potentially coma or death. Lactic acidosis and ammonia toxicity are not the primary mechanisms of diabetic ketoacidosis.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which of the following is NOT usually associated with Type 1 diabetes mellitus?",
+    "options": [
+      "High blood glucose (hyperglycemia)",
+      "Excessive urination and thirst",
+      "Ketoacidosis from elevated glucagon",
+      "Low glucagon level in blood",
+      "Retinopathy (damaged retinal vessels)"
+    ],
+    "answer": 3,
+    "topic": "insulin-glucagon",
+    "explain": "In Type 1 diabetes, glucagon levels are HIGH (not low), because insulin normally suppresses glucagon secretion and that suppression is absent. Hyperglycemia, excessive urination and thirst, ketoacidosis from high glucagon, and retinopathy (a chronic vascular complication) are all typically associated with Type 1 diabetes. Low glucagon is the one that does NOT belong.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "GH promotes linear skeletal growth primarily through which mechanism?",
+    "options": [
+      "GH promotes amino acid uptake in muscle; tension from enlarged muscle secondarily stimulates bone",
+      "GH acts on the liver to produce IGF-II, which specifically promotes linear bone growth",
+      "GH directly stimulates chondrocytes in growth plates via its anti-insulin effects",
+      "Direct action of GH on osteoblasts in bone to stimulate bone matrix deposition",
+      "GH acts on the liver to produce IGF-I, which then promotes linear growth of the skeleton"
+    ],
+    "answer": 4,
+    "topic": "growth-hormone-leptin",
+    "explain": "Most growth-promoting effects of GH are indirect, mediated by IGFs (somatomedins) produced by the liver. IGF-I specifically promotes linear growth of the skeleton; IGF-II promotes growth of many other tissues and organs. GH's direct action on osteoblasts is not the primary mechanism for linear growth. IGF-II is not the skeletal-specific factor — that is IGF-I.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which of the following is a STIMULUS for growth hormone secretion?",
+    "options": [
+      "High blood glucose (hyperglycemia)",
+      "Arginine (amino acid)",
+      "REM sleep (dreaming stage)",
+      "GIH (somatostatin) from the hypothalamus",
+      "High IGF levels feeding back on the pituitary"
+    ],
+    "answer": 1,
+    "topic": "growth-hormone-leptin",
+    "explain": "Arginine is a specific stimulus for GH secretion and is used clinically in GH stimulation tests. Hyperglycemia inhibits GH; hypoglycemia stimulates it. REM (dreaming) sleep inhibits GH, while deep non-REM sleep stimulates it. Somatostatin (GIH) inhibits GH from the hypothalamus. High IGF levels provide negative feedback, inhibiting GH release.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "GH deficiency in a child versus in an adult leads to different outcomes. Which comparison is correct?",
+    "options": [
+      "Child: acromegaly; Adult: gigantism — bone response reverses with age",
+      "Child: dwarfism; Adult: no evident effect — bone growth is already complete in adults",
+      "Child: no evident effect; Adult: dwarfism — adults are more sensitive to GH loss",
+      "Child: dwarfism; Adult: acromegaly — GH deficiency causes paradoxical bone thickening",
+      "Child: gigantism; Adult: no evident effect — excess GH causes growth in children only"
+    ],
+    "answer": 1,
+    "topic": "growth-hormone-leptin",
+    "explain": "GH deficiency during childhood (when bone growth plates are open) causes dwarfism. GH deficiency in adults (after normal bone growth is complete) has no evident effect. Gigantism and acromegaly result from GH EXCESS, not deficiency. In adults, excess GH causes acromegaly (enlarged extremities, not increased height) because bone plates are fused.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "A doctor proposes injecting insulin into a patient to test whether the patient's pituitary can secrete growth hormone. What is the physiological rationale?",
+    "options": [
+      "Insulin directly stimulates the anterior pituitary to release GH via cAMP signaling",
+      "Insulin → hyperglycemia → stimulates GH release as a metabolic counter-measure",
+      "Insulin → hypoglycemia → stimulates GH release as a counter-regulatory response",
+      "Insulin competes with somatostatin for hypothalamic receptors, releasing GH inhibition",
+      "Insulin raises plasma amino acid levels, which are a strong GH stimulus"
+    ],
+    "answer": 2,
+    "topic": "growth-hormone-leptin",
+    "explain": "Injecting insulin causes hypoglycemia (low blood glucose), which is a strong stimulus for GH secretion. If the pituitary is functioning normally, GH levels should rise after the insulin-induced hypoglycemia. This is a legitimate clinical test of GH secretory capacity. Insulin does not directly stimulate the pituitary, cause hyperglycemia, or compete with somatostatin.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Leptin is encoded by the obese (ob) gene. Which receptor type does it signal through, and where is this receptor primarily expressed?",
+    "options": [
+      "GPCR linked to cAMP signaling; primarily expressed in adipose tissue",
+      "Nuclear steroid receptor acting as transcription factor; expressed in the hypothalamus",
+      "Receptor tyrosine kinase with intrinsic kinase activity; expressed in peripheral organs",
+      "Cytokine family receptor (JAK-associated); primarily expressed in the brain",
+      "Ion-channel-linked receptor; expressed in hypothalamic arcuate nucleus neurons"
+    ],
+    "answer": 3,
+    "topic": "growth-hormone-leptin",
+    "explain": "The leptin receptor (LepR/OB-R) is a cytokine family receptor that is associated with JAK tyrosine kinases (it does not have intrinsic kinase activity). It is expressed primarily in the brain, and most of leptin's effects on end organs are indirect via the CNS. Leptin is a peptide hormone, so it does not use nuclear steroid receptors. The insulin receptor is the receptor tyrosine kinase with intrinsic activity.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Obese individuals paradoxically have HIGH leptin levels despite leptin normally reducing appetite. Which is the best explanation?",
+    "options": [
+      "Obesity causes downregulation of the ob gene, so less leptin is produced per fat cell",
+      "Obese individuals produce no leptin because their adipose tissue becomes dysfunctional",
+      "Obese individuals have low cortisol, which normally suppresses leptin production",
+      "High body fat suppresses leptin receptor expression specifically in peripheral tissues",
+      "Partial leptin resistance at the site of action means more leptin is needed for the same effect"
+    ],
+    "answer": 4,
+    "topic": "growth-hormone-leptin",
+    "explain": "High leptin in obesity is explained by: (1) greater percentage body fat producing more leptin overall, (2) partial leptin resistance at the brain receptor site requiring higher concentrations for the same inhibitory effect on appetite, and (3) obese individuals being in a state of perceived starvation. The ob gene is not downregulated in obesity. Leptin resistance in the brain is the key mechanism explaining elevated leptin alongside obesity.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "ADH increases water reabsorption in the kidney through which molecular mechanism?",
+    "options": [
+      "Activating Na⁺/K⁺-ATPase to increase sodium-driven osmotic water reabsorption",
+      "Increasing surface expression of aquaporin water channels in kidney tubule cells",
+      "Stimulating aldosterone receptors on kidney collecting duct cells to retain water",
+      "Blocking K⁺ excretion channels, creating an osmotic gradient for water retention",
+      "Activating angiotensin-converting enzyme to produce angiotensin II in the kidney"
+    ],
+    "answer": 1,
+    "topic": "water-electrolyte-balance",
+    "explain": "ADH increases water reabsorption by increasing the surface expression of aquaporin water channel proteins in kidney tubule cells. This allows water to move osmotically from the tubule lumen into the blood. ADH does not activate aldosterone receptors — aldosterone works on sodium channels independently. ADH is distinct from the RAAS pathway involving angiotensin-converting enzyme.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which of the following will NOT stimulate ADH secretion?",
+    "options": [
+      "Eating salty food (raises plasma osmolality)",
+      "Hemorrhage exceeding 10% of blood volume",
+      "Increased plasma osmolality above 280 mOsm",
+      "Drinking a large volume of water",
+      "Stretch receptor signals from the cardiovascular system due to low blood pressure"
+    ],
+    "answer": 3,
+    "topic": "water-electrolyte-balance",
+    "explain": "Drinking a large volume of water DECREASES plasma osmolality, which INHIBITS ADH secretion (reducing water reabsorption to restore normal osmolality). Salty food increases osmolality → stimulates ADH. Hemorrhage → decreased blood volume/pressure → stretch receptors signal the pituitary → ADH rises. Increased plasma osmolality also stimulates ADH via osmoreceptors in the anterior hypothalamus.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "The renin-angiotensin-aldosterone system (RAAS) is activated when blood pressure falls. Which is the correct sequence of events?",
+    "options": [
+      "Low BP → juxtaglomerular apparatus releases renin → angiotensinogen → angiotensin I → ACE (lung/kidney) → angiotensin II → aldosterone secretion",
+      "Low BP → adrenal cortex releases renin → angiotensinogen → angiotensin I → ACE (liver) → angiotensin II → aldosterone",
+      "Low BP → posterior pituitary releases ADH → angiotensin II → aldosterone from adrenal medulla",
+      "Low BP → anterior pituitary releases ACTH → angiotensin I → ACE → angiotensin II → aldosterone",
+      "Low BP → hypothalamus releases CRH → angiotensin II → aldosterone from adrenal cortex"
+    ],
+    "answer": 0,
+    "topic": "water-electrolyte-balance",
+    "explain": "In the RAAS: decreased renal perfusion → juxtaglomerular apparatus releases renin → renin cleaves angiotensinogen to angiotensin I → ACE in lung/kidney endothelium converts angiotensin I to angiotensin II → angiotensin II stimulates aldosterone from the adrenal cortex, causes vasoconstriction, stimulates ADH, and increases sympathetic activity. Renin comes from the kidney (juxtaglomerular apparatus), not the adrenal cortex.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Atrial natriuretic peptide (ANP) is secreted in response to which stimulus, and what is its primary effect?",
+    "options": [
+      "Low blood volume → decreases sodium excretion to conserve fluid volume",
+      "High plasma osmolality → increases water reabsorption in kidney tubules",
+      "High plasma K⁺ → stimulates Na⁺ reabsorption similar to aldosterone",
+      "Low blood pressure → vasoconstriction and water retention to restore perfusion",
+      "Mechanical stretch of cardiac atria due to high blood volume → increases Na⁺ excretion, opposes ADH/aldosterone"
+    ],
+    "answer": 4,
+    "topic": "water-electrolyte-balance",
+    "explain": "ANP is secreted by endocrine cells in the cardiac atria in response to mechanical stretch, which signals high blood volume. It acts on the kidneys to increase Na⁺ excretion (natriuresis) and urine production, thereby reducing blood volume and pressure. ANP OPPOSES the effects of ADH and aldosterone — it does not promote water or sodium retention. It lowers blood pressure, not increases it.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "ADH, aldosterone, and ANP all influence kidney function and blood pressure. Which statement correctly compares their actions?",
+    "options": [
+      "All three increase blood pressure via vasoconstriction or increased blood volume",
+      "All three increase Na⁺ reabsorption in the kidney collecting duct",
+      "All three are peptide hormones and share the same second messenger pathway",
+      "All three act on the kidney, but their net effects on Na⁺ and blood pressure are not uniform — none of the above statements is true",
+      "All three are regulated primarily by changes in plasma osmolality"
+    ],
+    "answer": 3,
+    "topic": "water-electrolyte-balance",
+    "explain": "ADH and aldosterone increase blood pressure, while ANP decreases it — so they do not all raise BP. ADH promotes water retention (indirect Na⁺ effect), aldosterone promotes Na⁺ reabsorption, ANP promotes Na⁺ excretion — they do not all increase Na⁺ reabsorption. Aldosterone is a steroid hormone, not a peptide — so not all three are peptides. The lecture's quiz answer is 'none of the above' because no single listed property applies uniformly to all three.",
+    "difficulty": "hard"
+  }
+]

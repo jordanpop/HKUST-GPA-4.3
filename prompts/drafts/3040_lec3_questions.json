@@ -1,0 +1,422 @@
+[
+  {
+    "q": "Which of the following correctly describes the biosynthetic pathway of steroid reproductive hormones?",
+    "options": [
+      "Cholesterol → androgens → progesterone → estrogens",
+      "Cholesterol → estrogens → progesterone → androgens",
+      "Cholesterol → progesterone → androgens → estrogens",
+      "Progesterone → cholesterol → androgens → estrogens",
+      "Cholesterol → androgens → estrogens → progesterone"
+    ],
+    "answer": 2,
+    "topic": "hormone-overview",
+    "explain": "The lecture explicitly states the biosynthetic sequence: cholesterol → progesterone → androgens → estrogens. Options A and E place progesterone after androgens, reversing the order. This pathway is the foundation for understanding why estrogens are the final product and require prior androgen intermediates.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which of the following is TRUE regarding reproductive hormones?",
+    "options": [
+      "All reproductive hormones are steroids.",
+      "All steroids are reproductive hormones.",
+      "All reproductive hormones are secreted from sex organs.",
+      "Androgens are present only in males.",
+      "None of the above."
+    ],
+    "answer": 4,
+    "topic": "hormone-overview",
+    "explain": "None of statements 1–4 is true. Oxytocin and prolactin are peptide reproductive hormones, not steroids. Many steroids (e.g. cortisol) are not reproductive. Oxytocin and prolactin are secreted from the pituitary, not sex organs. Androgens are also produced by the female adrenal cortex. This is a verbatim in-lecture quiz question.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Leydig cells are BEST characterised as cells that:",
+    "options": [
+      "Line the interior of seminiferous tubules and form the blood-testes barrier",
+      "Synthesise inhibin in response to FSH stimulation",
+      "Produce testosterone in response to LH stimulation",
+      "Nourish developing germ cells by producing seminiferous tubular fluid",
+      "Differentiate into mature sperm after a series of divisions"
+    ],
+    "answer": 2,
+    "topic": "spermatogenesis",
+    "explain": "Leydig (interstitial) cells are located outside the seminiferous tubules and produce testosterone in response to LH. Options A, B, and D describe Sertoli cell functions. Option E describes germ cells. The Leydig/Sertoli distinction is a frequent exam point.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which of the following concerning Leydig cells is FALSE?",
+    "options": [
+      "They secrete androgens.",
+      "They are the target of LH.",
+      "They are located outside the seminiferous tubules.",
+      "They secrete inhibin.",
+      "They are also called interstitial cells."
+    ],
+    "answer": 3,
+    "topic": "spermatogenesis",
+    "explain": "Inhibin is secreted by Sertoli cells in males, not by Leydig cells. Leydig cells do secrete androgens (testosterone), respond to LH, lie outside the seminiferous tubules, and are called interstitial cells — all of these are true. This is a direct in-lecture quiz question.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Sertoli cells perform all of the following functions EXCEPT:",
+    "options": [
+      "Binding LH and transducing its signal to Leydig cells",
+      "Contributing to seminiferous tubular fluid production",
+      "Nourishing developing sperm",
+      "Secreting inhibin",
+      "Forming the blood-testes barrier"
+    ],
+    "answer": 0,
+    "topic": "spermatogenesis",
+    "explain": "Sertoli cells respond to FSH, not LH; LH acts directly on Leydig cells. Sertoli cells do produce seminiferous tubular fluid, nourish developing sperm, secrete inhibin, and form the blood-testes barrier. This is a direct in-lecture quiz question.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which of the following best describes the role of inhibin in the male?",
+    "options": [
+      "It inhibits both LH and FSH release from the anterior pituitary.",
+      "It inhibits GnRH release from the hypothalamus.",
+      "It selectively inhibits FSH release from the anterior pituitary.",
+      "It stimulates Leydig cells to produce testosterone.",
+      "It promotes differentiation of spermatogonia into spermatozoa."
+    ],
+    "answer": 2,
+    "topic": "male-axis",
+    "explain": "Inhibin, a peptide hormone from Sertoli cells, specifically provides negative feedback to inhibit FSH release from the anterior pituitary only. Testosterone handles negative feedback on GnRH, LH, and FSH. Inhibin does not act on Leydig cells or directly on spermatogenesis.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Both LH and FSH are required for spermatogenesis. Which pairing best summarises their respective primary targets and direct outcomes?",
+    "options": [
+      "LH → Sertoli cells → inhibin; FSH → Leydig cells → testosterone",
+      "LH → Leydig cells → testosterone; FSH → Sertoli cells → spermatogenesis support",
+      "LH → seminiferous tubules → sperm maturation; FSH → Leydig cells → androgen synthesis",
+      "LH → hypothalamus → GnRH; FSH → Sertoli cells → inhibin",
+      "LH → Sertoli cells → spermatogenesis; FSH → Leydig cells → testosterone"
+    ],
+    "answer": 1,
+    "topic": "male-axis",
+    "explain": "LH targets Leydig cells to drive testosterone production. FSH targets Sertoli cells to support spermatogenesis (which also requires testosterone). All other options swap the targets or assign incorrect outcomes.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Prolonged aerobic exercise inhibits GnRH secretion. What is the DIRECT consequence in a male?",
+    "options": [
+      "Increased testosterone due to direct Leydig cell stimulation",
+      "Increased inhibin secretion from Sertoli cells",
+      "Decreased FSH and LH, leading to inhibition of sperm production",
+      "Increased LH surge, triggering release of stored sperm",
+      "Decreased inhibin, causing compensatory rise in FSH"
+    ],
+    "answer": 2,
+    "topic": "male-axis",
+    "explain": "Suppressed GnRH means less stimulation of the anterior pituitary, so FSH and LH fall. With less LH, Leydig cell testosterone production drops; with less FSH and testosterone, spermatogenesis is inhibited. Exercise does not directly stimulate Leydig cells or cause LH surges.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Testosterone:",
+    "options": [
+      "Is secreted only by Sertoli cells.",
+      "Is secreted only by Leydig cells.",
+      "Acts only on Sertoli cells.",
+      "Promotes protein degradation.",
+      "None of the above."
+    ],
+    "answer": 4,
+    "topic": "testosterone-actions",
+    "explain": "None of the first four options is correct. Testosterone is produced by Leydig cells AND the adrenal cortex. It acts on many target tissues (seminiferous tubules, somatic tissues, brain, primary and secondary sex organs), not only Sertoli cells. It promotes protein synthesis, not degradation. This is a direct in-lecture quiz question.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which of the following is NOT a recognised action of testosterone?",
+    "options": [
+      "Triggering primary male sex characteristics in prenatal development",
+      "Stimulating spermatogenesis",
+      "Promoting closure of epiphyseal plates in long bones",
+      "Increasing muscle mass through protein synthesis",
+      "Causing behavioural changes such as increased aggression"
+    ],
+    "answer": 2,
+    "topic": "testosterone-actions",
+    "explain": "Epiphyseal (骨骺) closure from sex steroid exposure is primarily an effect of estrogen, not testosterone. The lecture attributes early epiphyseal closure to estrogen. All other options — prenatal primary sex characteristic development, spermatogenesis, muscle protein synthesis, and aggression — are explicitly listed as testosterone actions.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "The scrotum houses the testes externally because:",
+    "options": [
+      "It provides easier access for sperm transport through the vas deferens.",
+      "Spermatogenesis requires a temperature lower than normal body temperature.",
+      "Leydig cells require lower blood pressure to produce testosterone.",
+      "The epididymis requires warming to complete sperm maturation.",
+      "External placement allows direct hormonal sensing of ambient temperature."
+    ],
+    "answer": 1,
+    "topic": "male-anatomy",
+    "explain": "The lecture explicitly states that the scrotum houses the testes outside the abdominal cavity because sperm production does not occur at normal body temperature. Lower scrotal temperature (~2°C below core) is required for spermatogenesis. Temperature plays no role in Leydig cell testosterone synthesis or epididymal maturation in this context.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which gland contributes approximately 60% of semen fluid volume and provides fructose as an energy source for sperm?",
+    "options": [
+      "Prostate gland",
+      "Bulbourethral gland",
+      "Epididymis",
+      "Seminal vesicle",
+      "Adrenal cortex"
+    ],
+    "answer": 3,
+    "topic": "male-anatomy",
+    "explain": "The seminal vesicles add 60% of fluid to semen and contain fructose (energy source), prostaglandins, and coagulating proteins. The prostate gland neutralises acid. The bulbourethral gland also contributes fluid. The epididymis is where final sperm maturation occurs, not fluid production.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "What is the site of final sperm maturation in the male reproductive tract?",
+    "options": [
+      "Seminiferous tubules",
+      "Vas deferens",
+      "Prostate gland",
+      "Epididymis",
+      "Urethra"
+    ],
+    "answer": 3,
+    "topic": "male-anatomy",
+    "explain": "The epididymis is the site of final sperm maturation, a process that takes several weeks. Spermatogenesis (production) occurs in the seminiferous tubules. The vas deferens transports sperm. The prostate and urethra do not perform maturation functions.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "In the female, fertilisation of the ovum normally occurs in which structure?",
+    "options": [
+      "Uterus",
+      "Ovary",
+      "Endometrium",
+      "Cervix",
+      "Fallopian tube (oviduct)"
+    ],
+    "answer": 4,
+    "topic": "female-anatomy",
+    "explain": "The fallopian tube (uterine tube / oviduct) is the site of fertilisation; the fertilised ovum then travels to the uterus for implantation in the endometrium. The ovary produces ova but is not the site of fertilisation. This is a direct in-lecture quiz question (oviduct function).",
+    "difficulty": "easy"
+  },
+  {
+    "q": "A woman's ovaries are best described as:",
+    "options": [
+      "Secondary sex organs that transport ova to the uterus",
+      "Primary sex organs that produce ova and secrete estrogens and progesterone within follicles",
+      "Endocrine glands that secrete only estrogen and no progesterone",
+      "Structures whose hormonal production occurs primarily in the endometrium",
+      "Organs whose sole function is oogenesis with no endocrine role"
+    ],
+    "answer": 1,
+    "topic": "female-anatomy",
+    "explain": "The ovaries are the primary sex organs; they produce ova and secrete both estrogens and progesterone, with egg production and hormone production all occurring within the follicles. They are not secondary sex organs. Both estrogen and progesterone are produced (not estrogen alone). The endometrium does not produce reproductive hormones.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "After ovulation, what happens to the ruptured follicle?",
+    "options": [
+      "It degenerates immediately and stops hormone secretion.",
+      "It transforms into the corpus luteum and secretes progesterone and some estrogen.",
+      "It becomes the primary follicle of the next cycle.",
+      "It migrates to the uterus and becomes the endometrium.",
+      "It is reabsorbed into the ovarian stroma without any hormonal activity."
+    ],
+    "answer": 1,
+    "topic": "oogenesis",
+    "explain": "After ovulation, the ruptured follicle transforms into the corpus luteum, which secretes progesterone and some estrogen. These hormones maintain the endometrium and exert negative feedback on the hypothalamus. The corpus luteum only degenerates if no fertilisation/implantation occurs.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "During the follicular phase of the ovarian cycle, rising estrogen levels provide which type of feedback to the hypothalamus, and what is the consequence?",
+    "options": [
+      "Negative feedback, suppressing GnRH and preventing premature LH surge",
+      "Positive feedback, amplifying GnRH/LH/FSH release and ultimately triggering ovulation",
+      "No feedback; estrogen acts only on the uterus during this phase",
+      "Negative feedback on FSH only, while stimulating LH directly",
+      "Positive feedback on inhibin, which then stimulates FSH release"
+    ],
+    "answer": 1,
+    "topic": "reproductive-cycle",
+    "explain": "During the late follicular phase (days 10–12), increasing estrogen from the growing follicle provides positive feedback to the hypothalamus, increasing GnRH/LH/FSH release. This culminates in the LH/FSH surge around day 12–14, which triggers ovulation. Negative feedback is the mode in the luteal phase, not the follicular phase.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which of the following is FALSE concerning the female reproductive cycle?",
+    "options": [
+      "LH secretion is inhibited by estrogen and progesterone in the luteal phase.",
+      "The corpus luteum secretes estradiol and progesterone.",
+      "FSH release is partly responsible for follicular maturation.",
+      "The corpus luteum does not regress if human chorionic gonadotropins are produced.",
+      "Ovulation is prevented by follicular estrogen secretion."
+    ],
+    "answer": 4,
+    "topic": "reproductive-cycle",
+    "explain": "Statement 5 is false: follicular estrogen does NOT prevent ovulation — instead, high follicular estrogen triggers the LH surge that CAUSES ovulation. Ovulation is prevented during the luteal phase by high progesterone and estrogen combined. Statements 1–4 are all true and are directly from the lecture.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Ovulation can be prevented by:",
+    "options": [
+      "High levels of estrogen and progesterone together",
+      "FSH alone",
+      "LH alone",
+      "GnRH alone",
+      "None of the above"
+    ],
+    "answer": 0,
+    "topic": "reproductive-cycle",
+    "explain": "High combined levels of estrogen and progesterone (as in the luteal phase or during pregnancy) provide negative feedback on the hypothalamus and pituitary, suppressing FSH and LH and preventing further ovulation. GnRH, FSH, and LH individually stimulate rather than prevent ovulation. This is a direct in-lecture quiz question.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "What is the role of chorionic gonadotropin (CG/hCG) in early pregnancy?",
+    "options": [
+      "It stimulates the anterior pituitary to release more FSH for follicle development.",
+      "It triggers ovulation of a second egg after fertilisation.",
+      "It rescues the corpus luteum, preventing its degeneration and maintaining progesterone/estrogen production.",
+      "It directly stimulates endometrial growth by binding estrogen receptors.",
+      "It replaces progesterone production by the corpus luteum immediately after implantation."
+    ],
+    "answer": 2,
+    "topic": "pregnancy-hormones",
+    "explain": "Within a day of implantation, the placenta begins secreting hCG, which acts like LH to rescue the corpus luteum from degeneration. This allows the corpus luteum to continue producing progesterone and estrogen through the first trimester. hCG does not trigger FSH release, does not cause a second ovulation, and does not replace progesterone immediately.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "During the luteal phase, inhibin released from the follicle at ovulation specifically inhibits which pituitary hormone?",
+    "options": [
+      "LH only",
+      "Both FSH and LH equally",
+      "FSH only",
+      "Prolactin only",
+      "Both GnRH and FSH"
+    ],
+    "answer": 2,
+    "topic": "reproductive-cycle",
+    "explain": "The lecture states that inhibin released from the follicle at ovulation inhibits FSH release specifically. In males, Sertoli cell-derived inhibin also selectively inhibits FSH. Testosterone and the combined estrogen/progesterone exert the broader negative feedback on LH and GnRH.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "A 24-week pregnant woman is found to have elevated blood glucose. Which mechanism, as described in the lecture, best explains this finding?",
+    "options": [
+      "Excess progesterone stimulating hepatic gluconeogenesis",
+      "Placental estrogen decreasing peripheral tissue sensitivity to insulin",
+      "Oxytocin directly inhibiting insulin secretion from the pancreas",
+      "Increased carbohydrate absorption in the GI tract during pregnancy",
+      "Excessive secretion of glucagon from the pancreatic alpha cells"
+    ],
+    "answer": 1,
+    "topic": "estrogen-effects",
+    "explain": "The lecture attributes gestational diabetes to placental estrogen decreasing peripheral insulin sensitivity. As the placenta grows it produces more estrogen, worsening insulin resistance. Options A, C, D, and E are not stated in the lecture as mechanisms; gestational diabetes is specifically an estrogen-mediated phenomenon.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which of the following correctly pairs an effect with the hormone responsible, according to the lecture?",
+    "options": [
+      "Bone protection against loss in women — progesterone",
+      "Stimulation of mammary gland development — estrogen only",
+      "Prevention of further ovulation during pregnancy — progesterone",
+      "Antagonism of dihydrotestosterone effects — estrogen",
+      "Early closure of epiphyseal plates — testosterone"
+    ],
+    "answer": 2,
+    "topic": "progesterone-effects",
+    "explain": "Progesterone provides negative feedback to the hypothalamus to prevent further ovulation during pregnancy. Bone protection against loss is attributed to estrogen, not progesterone. Mammary gland development involves both. Antagonism of DHT effects is attributed to progesterone. Epiphyseal closure is driven by estrogen, not testosterone.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "The contraceptive pill prevents pregnancy by which TWO primary mechanisms?",
+    "options": [
+      "Blocking estrogen receptors in the ovary and thickening the fallopian tube wall",
+      "Suppressing gonadotropin release to prevent ovulation, and increasing cervical mucus viscosity to inhibit sperm mobility",
+      "Preventing implantation of the fertilised ovum in the endometrium and suppressing FSH only",
+      "Destroying the corpus luteum and blocking progesterone receptors in the uterus",
+      "Stimulating inhibin release and directly inactivating sperm in the vagina"
+    ],
+    "answer": 1,
+    "topic": "contraception-ivf",
+    "explain": "The lecture states the pill works by suppressing gonadotropin release (preventing ovulation) and by increasing cervical mucus viscosity (inhibiting sperm mobility). It does not block estrogen receptors, destroy the corpus luteum, or act on sperm directly.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "For in vitro fertilisation (IVF), which hormones are used for ovarian hyperstimulation and for final oocyte maturation induction, respectively?",
+    "options": [
+      "FSH for hyperstimulation; LH for final maturation",
+      "LH for hyperstimulation; FSH for final maturation",
+      "FSH for hyperstimulation; human chorionic gonadotropin (hCG) for final maturation",
+      "GnRH for hyperstimulation; oxytocin for final maturation",
+      "Estrogen for hyperstimulation; progesterone for final maturation"
+    ],
+    "answer": 2,
+    "topic": "contraception-ivf",
+    "explain": "The lecture specifies that IVF uses FSH for ovarian hyperstimulation to generate multiple eggs, and hCG for final maturation induction of oocytes. LH alone is not the maturation agent used in IVF. This reflects the clinical use of these hormones in the IVF protocol.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which of the following correctly distinguishes primary sex characteristics from secondary sex characteristics?",
+    "options": [
+      "Primary sex characteristics develop at puberty; secondary sex characteristics are present at birth.",
+      "Primary sex characteristics are directly related to reproduction and include the genitalia; secondary sex characteristics distinguish the sexes but are not directly reproductive.",
+      "Primary sex characteristics include voice quality and breast development; secondary sex characteristics include the gonads.",
+      "Primary sex characteristics are regulated by peptide hormones; secondary sex characteristics are regulated by steroids.",
+      "There is no functional distinction; both categories include the genitalia."
+    ],
+    "answer": 1,
+    "topic": "sex-characteristics",
+    "explain": "Primary sex characteristics are directly related to reproduction and include the genitalia. Secondary sex characteristics (e.g. voice, facial hair, breast development) distinguish the sexes without being directly reproductive. Options A, C, D, and E misattribute or conflate the two categories.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which statement about progesterone is correct?",
+    "options": [
+      "It stimulates gonadotropin release during the luteal phase.",
+      "It promotes ovulation by triggering an LH surge.",
+      "It antagonises the effects of testosterone and dihydrotestosterone in females.",
+      "It is produced exclusively by the corpus luteum.",
+      "It decreases sensitivity of peripheral tissues to insulin."
+    ],
+    "answer": 2,
+    "topic": "progesterone-effects",
+    "explain": "The lecture explicitly states that progesterone antagonises the effects of testosterone and dihydrotestosterone, preventing target tissues from responding to androgens in the female. Progesterone inhibits (not stimulates) gonadotropin release and suppresses ovulation during pregnancy. It is produced by both the corpus luteum and the adrenal cortex. Insulin sensitivity reduction is an effect of estrogen, not progesterone.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "A male athlete undergoes months of intensive training. He is found to have reduced sperm count. Which is the most likely hormonal explanation based on lecture content?",
+    "options": [
+      "Excess testosterone from physical training directly suppresses spermatogenesis.",
+      "Prolonged exercise stress suppresses GnRH, reducing FSH and LH, impairing spermatogenesis.",
+      "Increased inhibin from Leydig cells suppresses FSH selectively, halting sperm production.",
+      "Exercise increases blood pressure, damaging seminiferous tubules directly.",
+      "Increased prolactin during exercise inhibits testosterone synthesis."
+    ],
+    "answer": 1,
+    "topic": "male-axis",
+    "explain": "The lecture states that prolonged stress (e.g. protracted aerobic exercise) inhibits GnRH secretion, which reduces FSH and LH from the anterior pituitary, thereby impairing spermatogenesis. Option C incorrectly attributes inhibin to Leydig cells. Options D and E are not in the lecture.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "The endometrium undergoes which sequence of changes in the uterine cycle?",
+    "options": [
+      "Proliferative → secretory → menses",
+      "Menses → secretory → proliferative",
+      "Secretory → menses → proliferative",
+      "Menses → proliferative → secretory",
+      "Proliferative → menses → secretory"
+    ],
+    "answer": 3,
+    "topic": "reproductive-cycle",
+    "explain": "The uterine cycle begins with menses (menstrual bleeding as the old endometrium is shed), followed by the proliferative phase (endometrium rebuilds under estrogen influence), and then the secretory phase (corpus luteum hormones enhance endometrium secretions in preparation for implantation). This aligns with the ovarian follicular → ovulation → luteal phases.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which of the following is NOT a function of the gonads?",
+    "options": [
+      "Producing gametes",
+      "Secreting sex hormones that regulate the reproductive process",
+      "Regulating development and function of secondary sex organs",
+      "Transporting and nourishing the embryo during development",
+      "Acting as endocrine glands that influence secondary sex characteristics"
+    ],
+    "answer": 3,
+    "topic": "sex-characteristics",
+    "explain": "Transporting and nourishing the embryo is the function of secondary sex organs (such as the uterus and fallopian tubes), not the gonads. Gonads produce gametes, secrete sex hormones, and regulate the development and function of other reproductive organs.",
+    "difficulty": "medium"
+  }
+]

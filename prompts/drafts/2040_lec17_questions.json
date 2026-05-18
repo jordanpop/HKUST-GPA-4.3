@@ -1,0 +1,422 @@
+[
+  {
+    "q": "Which of the following best describes the purpose of cell communication (細胞通訊) in multicellular organisms?",
+    "options": [
+      "To eliminate waste products from the extracellular space",
+      "To directly transfer genetic material between neighboring cells",
+      "To maintain membrane potential by regulating ion concentrations",
+      "To recycle intracellular proteins through the proteasome pathway",
+      "To coordinate survival, growth, differentiation, and death through signal exchange"
+    ],
+    "answer": 4,
+    "topic": "cell-communication-importance",
+    "explain": "Cell communication allows cells to sense the environment, send orders to other cells, heal wounds, and guide developmental patterning — all requiring coordinated information exchange. Waste elimination, genetic transfer, membrane potential, and protein recycling are not the defining functions of cell-to-cell communication as a signaling framework.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Yeast mating-type cells a and α secrete mating factors that cause the partner cell to elongate toward it before fusing. This is an example of which signaling phenomenon?",
+    "options": [
+      "Contact-dependent signaling requiring direct membrane contact",
+      "Endocrine signaling carried through the yeast bloodstream",
+      "Synaptic signaling delivered by specialized nerve terminals",
+      "Autocrine signaling where cells respond to their own secreted factors",
+      "Signal transduction converting an extracellular chemical signal into a cellular response"
+    ],
+    "answer": 4,
+    "topic": "cell-communication-importance",
+    "explain": "Yeast mating involves secreted mating factors that bind receptors on the partner cell and trigger intracellular changes — a classic signal transduction event. Yeast lack a bloodstream (ruling out endocrine), the cells do not need to touch before responding (ruling out contact-dependent), and the signal targets the partner, not the secreting cell (ruling out autocrine).",
+    "difficulty": "medium"
+  },
+  {
+    "q": "In contact-dependent signaling, what feature makes it distinct from all other modes of cell communication?",
+    "options": [
+      "The signaling molecule is membrane-bound and requires direct cell-to-cell contact",
+      "The signal is secreted into the extracellular matrix and diffuses to nearby cells",
+      "The signal travels through the bloodstream to reach distant target cells",
+      "The signal is carried along an axon and released at a specialized terminal",
+      "The signal activates a G-protein-coupled receptor on the target cell surface"
+    ],
+    "answer": 0,
+    "topic": "communication-modes-contact",
+    "explain": "Contact-dependent signaling uses membrane-bound signal molecules that never leave the cell surface, so physical contact between the signaling and target cells is mandatory. All other modes (paracrine, endocrine, synaptic) involve secreted or released molecules that travel some distance through extracellular space or fluid.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "In the Delta–Notch signaling system, one epithelial cell expressing Delta activates Notch on all its neighbors. What is the functional outcome of this lateral inhibition?",
+    "options": [
+      "All neighboring cells adopt the same specialized fate as the Delta-expressing cell",
+      "Neighboring cells are suppressed from adopting the same fate, producing cell specialization",
+      "The Delta-expressing cell is destroyed so that only Notch-bearing cells remain",
+      "Notch activation triggers apoptosis in all cells simultaneously",
+      "Delta is secreted and diffuses broadly to pattern the entire tissue layer"
+    ],
+    "answer": 1,
+    "topic": "communication-modes-contact",
+    "explain": "Lateral inhibition via Delta–Notch suppresses neighbors from adopting the same fate as the Delta-expressing cell, generating diversity from a field of equivalent cells — this is the mechanism of cell specialization. Delta remains membrane-bound and is not secreted, and Notch activation promotes differentiation into a different fate, not cell destruction.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "A student states: 'Paracrine and endocrine signaling both use secreted signal molecules, so the only difference is how far the signal travels.' Which part of this statement is correct, and what is the most important omission?",
+    "options": [
+      "Both use secreted molecules — correct; but endocrine signals travel via the bloodstream while paracrine signals remain local — the route is the key distinction",
+      "The statement is fully correct; distance is the sole distinction between these modes",
+      "The statement is incorrect; paracrine signals are membrane-bound and endocrine signals are secreted",
+      "The statement is incorrect; endocrine signals are electrical and paracrine signals are chemical",
+      "Both use secreted molecules — correct; but paracrine signals enter the bloodstream whereas endocrine signals stay local"
+    ],
+    "answer": 0,
+    "topic": "communication-modes-paracrine",
+    "explain": "Paracrine signals (local mediators) are secreted but remain in the neighborhood of the secreting cell without entering the bloodstream; endocrine hormones are also secreted but travel via the bloodstream to distant targets. Distance and route through the bloodstream are both important distinctions — the student captured half the picture. Option E reverses which mode uses the bloodstream.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Autocrine signaling is considered a variant of which broader signaling mode?",
+    "options": [
+      "Contact-dependent signaling, because the signal never leaves the cell membrane",
+      "Endocrine signaling, because the hormone enters the bloodstream before re-binding",
+      "Synaptic signaling, because autocrine factors are released at specialized terminals",
+      "Intracellular signaling, because the signal molecule never crosses the plasma membrane",
+      "Paracrine signaling, because the cell secretes a local mediator and then responds to it itself"
+    ],
+    "answer": 4,
+    "topic": "communication-modes-paracrine",
+    "explain": "Autocrine signaling is a variant of paracrine signaling in which the same cell that secretes the local mediator also bears the receptor and responds to its own signal. Like paracrine, the signal is secreted and diffuses locally — the distinction is only that the source and target are the same cell.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Insulin secreted by the pancreas travels through the bloodstream to cells throughout the body. Which property of endocrine signaling does this best illustrate?",
+    "options": [
+      "High spatial precision — only cells immediately adjacent to the pancreas respond",
+      "Fast signal delivery — insulin reaches its target in milliseconds via the blood",
+      "Membrane-bound transmission — insulin remains attached to pancreatic cells during signaling",
+      "Broad reach — a single endocrine organ can simultaneously regulate many distant cell types",
+      "Synaptic precision — insulin is released only at nerve terminals adjacent to target cells"
+    ],
+    "answer": 3,
+    "topic": "communication-modes-endocrine",
+    "explain": "Endocrine signaling allows one secretory organ (the pancreas) to simultaneously affect many cell types throughout the body via the bloodstream — broad reach is the hallmark of this mode. Endocrine signaling is not spatially precise like synaptic signaling, is not fast like ion channel activation, and insulin is clearly secreted, not membrane-bound.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "A neuron releases neurotransmitters into the synaptic cleft, where they bind receptors on the target cell. Which property distinguishes synaptic signaling from paracrine signaling?",
+    "options": [
+      "Synaptic signals are secreted molecules, while paracrine signals are membrane-bound",
+      "Paracrine signaling uses electrical impulses, while synaptic signaling uses chemical transmitters",
+      "Synaptic signaling requires the signal to enter the bloodstream for delivery to target cells",
+      "Synaptic signaling is spatially directed through specialized nerve terminals — like private lines — whereas paracrine signals diffuse broadly in the tissue",
+      "Paracrine signaling operates only in neural tissue, while synaptic signaling operates in all tissues"
+    ],
+    "answer": 3,
+    "topic": "communication-modes-synaptic",
+    "explain": "Synaptic signaling is delivered with high spatial precision through the nerve terminal directly to the synapse — neurotransmitters cross a narrow cleft to a specific target cell. Paracrine signals diffuse more broadly in the extracellular space. Both use chemical messengers, and neither requires entry into the bloodstream.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which sequence correctly describes the three phases of signal transduction in order?",
+    "options": [
+      "Response → Transduction → Reception",
+      "Transduction → Reception → Response",
+      "Reception → Response → Transduction",
+      "Reception → Transduction → Response",
+      "Amplification → Reception → Response"
+    ],
+    "answer": 3,
+    "topic": "three-phases-transduction",
+    "explain": "The canonical order is Reception (the receptor detects the extracellular signal), then Transduction (the signal is converted and relayed through intracellular cascades), then Response (the cellular outcome — altered metabolism, shape, or gene expression). All other orderings break the logical flow of extracellular → intracellular → output.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "A signaling pathway converts receptor activation into altered gene expression. Which phase of signal transduction includes the functions of relay, amplification, integration, distribution, and feedback control?",
+    "options": [
+      "Reception, because the receptor coordinates all downstream events",
+      "Response, because it encompasses all changes in cell behavior",
+      "Secretion, because the ligand must be processed before it can relay information",
+      "Elimination, because signal inactivation is required before any response occurs",
+      "Transduction, because it converts and processes the signal through intracellular cascades"
+    ],
+    "answer": 4,
+    "topic": "three-phases-transduction",
+    "explain": "Transduction is the phase that converts the extracellular signal into an intracellular form capable of driving a response; it encompasses relay, amplification (one signal activates many downstream molecules), integration of multiple inputs, distribution to multiple effectors, and feedback control. Reception is only the binding event; response is the final output.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which type of signal molecule uses a cell-surface receptor rather than an intracellular receptor, and why?",
+    "options": [
+      "Small hydrophobic molecules, because they require a receptor embedded in the membrane to cross it",
+      "Large hydrophilic molecules, because they cannot cross the hydrophobic lipid bilayer and bind receptors on the cell surface",
+      "Steroid hormones, because they are too large to be detected by intracellular machinery",
+      "Gas-phase signals, because they bind receptors on the extracellular face of the membrane",
+      "All signal molecules, because every signal requires an initial interaction with a cell-surface protein"
+    ],
+    "answer": 1,
+    "topic": "reception-receptor-types",
+    "explain": "Large, charged, or hydrophilic signal molecules cannot diffuse through the hydrophobic lipid bilayer, so they bind receptors anchored on the cell surface that transmit the signal inside. Small hydrophobic molecules (e.g., steroid hormones) cross the membrane freely and bind intracellular receptors.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "A researcher describes an intracellular receptor as 'extracellular' because 'the signal comes from outside the cell.' What is the error in this reasoning?",
+    "options": [
+      "There is no error — any receptor that detects an external signal is extracellular by definition",
+      "The error is that intracellular receptors are always located on the plasma membrane, not inside the cell",
+      "The error is conflating the receptor's location with the signal's origin — the receptor itself is inside the cell even though the signal molecule originates outside",
+      "The error is that intracellular receptors only detect signals synthesized within the cytosol",
+      "The error is that extracellular signals always bind cell-surface receptors, making intracellular receptors impossible"
+    ],
+    "answer": 2,
+    "topic": "reception-receptor-types",
+    "explain": "The term 'intracellular receptor' refers to where the receptor protein resides — inside the cell (cytosol or nucleus). The signal molecule (e.g., cortisol) does originate outside but crosses the membrane before binding its intracellular receptor. Location of the receptor and origin of the signal are independent facts.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Cortisol is a steroid hormone. What property allows it to reach its receptor without a cell-surface receptor?",
+    "options": [
+      "Cortisol is actively transported into the cell by a dedicated membrane pump",
+      "Cortisol binds a channel protein that opens and allows it to enter",
+      "Cortisol is hydrophobic and freely diffuses through the lipid bilayer of the plasma membrane",
+      "Cortisol is broken down at the membrane and reconstructed inside the cell",
+      "Cortisol enters through gap junctions shared between adjacent cells"
+    ],
+    "answer": 2,
+    "topic": "intracellular-receptors-cortisol",
+    "explain": "Cortisol is a steroid hormone with a hydrophobic structure that allows it to dissolve in and diffuse through the lipid bilayer without the assistance of a transporter or channel. This is what distinguishes steroid hormones from large hydrophilic signals that need cell-surface receptors.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Where is the cortisol nuclear receptor located BEFORE cortisol binds to it?",
+    "options": [
+      "On the outer surface of the plasma membrane",
+      "Inside the nucleus, already bound to DNA regulatory regions",
+      "In the cytosol, in an inactive conformation",
+      "In the endoplasmic reticulum, awaiting ligand-induced secretion",
+      "In the lysosome, protected from premature activation"
+    ],
+    "answer": 2,
+    "topic": "intracellular-receptors-cortisol",
+    "explain": "Before cortisol binds, the nuclear receptor protein resides in the cytosol in an inactive conformation. Cortisol binding causes a conformational change that activates the receptor, and only then does the receptor-cortisol complex translocate into the nucleus to bind DNA regulatory regions. Students commonly but incorrectly assume the receptor starts in the nucleus.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Place the following steps of cortisol signaling in the correct order: (1) receptor-cortisol complex binds DNA regulatory region; (2) cortisol crosses the plasma membrane; (3) conformational change activates receptor; (4) complex translocates to nucleus; (5) cortisol binds cytosolic nuclear receptor.",
+    "options": [
+      "2 → 5 → 3 → 4 → 1",
+      "5 → 2 → 3 → 1 → 4",
+      "2 → 3 → 5 → 4 → 1",
+      "1 → 2 → 5 → 3 → 4",
+      "2 → 5 → 4 → 3 → 1"
+    ],
+    "answer": 0,
+    "topic": "intracellular-receptors-cortisol",
+    "explain": "Cortisol first crosses the plasma membrane (2) due to its hydrophobic nature, then binds the cytosolic nuclear receptor (5), triggering a conformational change that activates it (3), after which the active complex translocates to the nucleus (4), and finally binds the DNA regulatory region to activate transcription (1). This ordered sequence is the canonical cortisol signaling pathway.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Which of the three cell-surface receptor classes directly controls ion flow as an immediate consequence of ligand binding?",
+    "options": [
+      "G-protein-coupled receptors, because they activate a G protein that opens separate ion channels",
+      "Enzyme-coupled receptors, because receptor dimerization creates a pore in the membrane",
+      "Ion-channel-coupled receptors, because ligand binding opens the channel built into the receptor protein itself",
+      "Intracellular receptors, because they translocate to the nucleus and activate ion transporter genes",
+      "Receptor tyrosine kinases, because phosphorylation of the receptor creates an ion-conducting pathway"
+    ],
+    "answer": 2,
+    "topic": "cell-surface-receptor-classes",
+    "explain": "Ion-channel-coupled receptors contain the ion channel as an integral part of the receptor protein — ligand binding causes a conformational change that opens the pore, allowing ions to flow immediately (within milliseconds). GPCRs activate G proteins that may indirectly regulate separate channels; enzyme-coupled receptors activate kinase domains, not ion pores.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "A GPCR is activated by its ligand. Which molecular event directly converts the G protein from its inactive to its active state?",
+    "options": [
+      "The activated receptor phosphorylates the G protein on a tyrosine residue",
+      "The G protein subunit exchanges GDP for GTP, releasing the active subunit to trigger downstream effectors",
+      "The G protein cleaves GTP to GDP, releasing energy to drive conformational change",
+      "The receptor dimerizes, allowing two G proteins to simultaneously bind and cross-activate each other",
+      "The G protein translocates to the nucleus and binds a DNA regulatory element"
+    ],
+    "answer": 1,
+    "topic": "cell-surface-receptor-classes",
+    "explain": "Activated GPCRs catalyze exchange of GDP for GTP on the G protein alpha subunit; the GTP-bound active subunit then dissociates and triggers downstream effectors. GTP hydrolysis (not an activating event but the inactivation step) returns the G protein to its OFF state. GPCRs have no intrinsic kinase activity and do not phosphorylate the G protein.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Enzyme-coupled receptors are often activated by a dimeric signal molecule. Why does dimerization of the signal matter?",
+    "options": [
+      "A dimeric signal doubles the amount of ligand, increasing receptor occupancy by mass action",
+      "A dimeric signal cross-links two receptor monomers, bringing their cytoplasmic catalytic domains into proximity to activate each other",
+      "A dimeric signal prevents receptor internalization, prolonging signaling duration",
+      "A dimeric signal activates the receptor's G protein by stabilizing the GDP-bound conformation",
+      "A dimeric signal allows the receptor to form an ion channel by bridging two membrane leaflets"
+    ],
+    "answer": 1,
+    "topic": "cell-surface-receptor-classes",
+    "explain": "Enzyme-coupled receptors (e.g., receptor tyrosine kinases) require dimerization — a dimeric signal molecule simultaneously binds two receptor monomers, cross-linking them and bringing their cytoplasmic catalytic (kinase) domains into proximity so they can transphosphorylate and activate each other. This structural requirement explains why a monomeric signal cannot activate the receptor.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Which of the following statements about cell-surface receptor classes is NOT correct?",
+    "options": [
+      "Ion-channel-coupled receptors operate on a millisecond timescale after ligand binding",
+      "GPCRs contain seven transmembrane helices",
+      "GPCRs activate intrinsic tyrosine kinase domains upon ligand binding",
+      "Enzyme-coupled receptors include receptor tyrosine kinases",
+      "Enzyme-coupled receptors are activated by signal-induced dimerization of receptor monomers"
+    ],
+    "answer": 2,
+    "topic": "cell-surface-receptor-classes",
+    "explain": "GPCRs do NOT have intrinsic kinase activity — their signaling mechanism relies on activating trimeric G proteins, not phosphorylating targets directly. Intrinsic tyrosine kinase activity belongs to enzyme-coupled receptors (receptor tyrosine kinases). All other statements accurately describe the respective receptor classes.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Protein kinase and protein phosphatase are both enzymes that regulate signaling proteins. Which statement correctly describes their opposing roles in the phosphorylation switch?",
+    "options": [
+      "Protein kinase adds a phosphate group from ATP (turns signaling ON); protein phosphatase removes the phosphate (turns signaling OFF)",
+      "Protein kinase removes a phosphate group (turns signaling ON); protein phosphatase adds a phosphate group (turns signaling OFF)",
+      "Both protein kinase and phosphatase add phosphate groups, but to different residues",
+      "Protein kinase hydrolyzes GTP to GDP to activate signaling; phosphatase reverses this by adding GTP",
+      "Protein kinase activates signaling by cleaving the substrate protein; phosphatase restores it by ligating the fragments"
+    ],
+    "answer": 0,
+    "topic": "molecular-switches",
+    "explain": "Protein kinase transfers a phosphate group from ATP to the target protein, switching it ON; protein phosphatase catalyzes hydrolytic removal of that phosphate, switching the protein OFF and returning it to its basal state. This reversible modification is one of the two main molecular switch mechanisms in signaling cascades.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Ras is a canonical GTP-binding switch protein. In its active state, what molecular event eventually returns Ras to its OFF (inactive) state?",
+    "options": [
+      "A protein phosphatase removes a phosphate from Ras, releasing GDP",
+      "A protein kinase phosphorylates Ras on its catalytic arginine, blocking GTP binding",
+      "GDP spontaneously dissociates from Ras, leaving an empty nucleotide-binding pocket",
+      "A guanine nucleotide exchange factor (GEF) re-loads Ras with GDP to inactivate it",
+      "Ras intrinsic GTPase activity hydrolyzes GTP to GDP plus inorganic phosphate"
+    ],
+    "answer": 4,
+    "topic": "molecular-switches",
+    "explain": "Active (GTP-bound) Ras is returned to its OFF state by its intrinsic GTPase activity, which slowly hydrolyzes GTP to GDP + Pᵢ; the GDP-bound form is inactive. This built-in timer is important for signal termination. GEFs actually promote GDP release and GTP loading (activation), not inactivation.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which of the following correctly distinguishes the two molecular switch mechanisms used in intracellular signaling?",
+    "options": [
+      "Phosphorylation switch: kinase adds GTP; GTP-binding switch: GTPase adds phosphate",
+      "Phosphorylation switch: kinase ON / phosphatase OFF; GTP-binding switch: GTP binding ON / GTP hydrolysis OFF",
+      "Phosphorylation switch: reversible; GTP-binding switch: irreversible once GTP is bound",
+      "Both switches use the same mechanism but differ only in which downstream pathway they activate",
+      "Phosphorylation switch: uses GDP/GTP exchange; GTP-binding switch: uses ATP/ADP phosphorylation"
+    ],
+    "answer": 1,
+    "topic": "molecular-switches",
+    "explain": "The phosphorylation switch is driven by protein kinase (adds phosphate from ATP → ON) and protein phosphatase (removes phosphate → OFF). The GTP-binding switch is driven by GTP binding (ON) and intrinsic GTPase-catalyzed hydrolysis to GDP (OFF). These are mechanistically distinct and must not be conflated.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "In a signaling cascade, activating one receptor eventually activates thousands of intracellular effector molecules. Which function of intracellular signaling pathways does this best describe?",
+    "options": [
+      "Integration — multiple input signals are merged at a single protein",
+      "Distribution — one receptor branches to activate multiple parallel pathways",
+      "Amplification — each step activates many more downstream molecules, exponentially increasing signal strength",
+      "Feedback control — downstream products inhibit upstream components to limit the response",
+      "Relay — the signal is passed sequentially from one protein to the next"
+    ],
+    "answer": 2,
+    "topic": "intracellular-pathway-functions",
+    "explain": "Amplification describes the cascade property whereby one activated receptor triggers many molecules at the next step, each of which activates many more — producing an exponential increase (domino effect) so that a single receptor activation event can yield thousands of downstream molecular events. Relay is just sequential passing; distribution involves branching, not numerical expansion.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "A cell simultaneously receives signals from three different receptors. These signals converge and are processed together at a single intracellular signaling protein before a response is committed. Which pathway function does this illustrate?",
+    "options": [
+      "Amplification, because each of the three signals multiplies the total signal strength",
+      "Relay, because each signal passes through the shared protein in sequence",
+      "Feedback control, because three inputs compete to inhibit each other",
+      "Integration, because multiple concurrent inputs from different pathways are merged at one protein",
+      "Distribution, because one receptor splits its signal to three downstream branches"
+    ],
+    "answer": 3,
+    "topic": "intracellular-pathway-functions",
+    "explain": "Integration is the pathway function where inputs from multiple signaling pathways converge at a single protein so the cell can sense combinations of signals rather than each in isolation. This allows nuanced decision-making (e.g., survive vs. apoptose). Distribution is the inverse — one receptor sending to multiple branches.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Acetylcholine causes decreased firing rate in heart pacemaker cells, secretion in salivary gland cells, and contraction in skeletal muscle cells. What does this phenomenon demonstrate?",
+    "options": [
+      "Acetylcholine is three different molecules with different structures in each tissue",
+      "Acetylcholine must be modified after secretion to acquire tissue-specific activity",
+      "Different cell types have different signal-transduction phases — some lack transduction entirely",
+      "The same signal molecule can produce different responses depending on which receptors and signaling pathways are present in the target cell",
+      "Acetylcholine binds only one receptor type but that receptor produces different ligands in each tissue"
+    ],
+    "answer": 3,
+    "topic": "signal-response-diversity",
+    "explain": "The acetylcholine example classically illustrates that it is not the signal molecule itself but the receptor identity and downstream signaling machinery of the receiving cell that determines the response. Acetylcholine is structurally identical in all cases; the heart, salivary gland, and muscle cells express different receptor subtypes and pathway components.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Muscle contraction occurs within seconds of nerve stimulation, while cell differentiation requires hours. What is the mechanistic basis for this difference in response speed?",
+    "options": [
+      "Fast responses require new protein synthesis; slow responses use pre-existing proteins",
+      "Fast responses require gene expression changes; slow responses use pre-existing protein activation",
+      "Fast responses alter the function of pre-existing proteins; slow responses require new protein synthesis via altered gene expression",
+      "Fast responses use paracrine signals; slow responses use endocrine hormones",
+      "Fast responses are driven by endocrine signaling; slow responses by contact-dependent signaling"
+    ],
+    "answer": 2,
+    "topic": "signal-speed",
+    "explain": "Fast responses (seconds to minutes) alter pre-existing protein function directly — no gene expression or new synthesis needed, just activation of dormant machinery (e.g., opening ion channels or activating existing enzymes). Slow responses (minutes to hours) require the signal to alter transcription so new proteins can be synthesized. Options A and B reverse the relationship.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which of the following is the primary function of YAP and TAZ in the HIPPO pathway?",
+    "options": [
+      "To phosphorylate DCH S1/2 and FAT4 receptors to activate the kinase cascade",
+      "To sequester 14-3-3 proteins in the cytoplasm, preventing their nuclear entry",
+      "To act as transcriptional co-activators in the nucleus, driving expression of pro-growth genes",
+      "To hydrolyze GTP on Ras-like proteins, terminating the proliferation signal",
+      "To form ion channels that allow Ca²⁺ entry and trigger downstream kinase activation"
+    ],
+    "answer": 2,
+    "topic": "hippo-pathway",
+    "explain": "YAP and TAZ are transcriptional co-activators; when unphosphorylated they enter the nucleus and drive expression of pro-growth transcription factors, promoting cell proliferation. 14-3-3 proteins sequester phosphorylated YAP/TAZ in the cytoplasm (not the other way around), and YAP/TAZ have no GTPase or ion channel function.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "At high cell density, how does the HIPPO pathway prevent cell proliferation?",
+    "options": [
+      "Cell-cell contacts inactivate DCH S1/2 and FAT4, allowing YAP/TAZ to enter the nucleus freely",
+      "Cell-cell contacts activate DCH S1/2 and FAT4, triggering a kinase cascade that phosphorylates YAP/TAZ, which are then retained in the cytoplasm by 14-3-3 proteins",
+      "High density directly inhibits transcription factor binding to pro-growth gene promoters without requiring kinase activity",
+      "YAP/TAZ phosphorylation at high density promotes their nuclear import and activation of apoptotic genes",
+      "High cell density saturates extracellular growth factor receptors, indirectly activating HIPPO by depleting available ligand"
+    ],
+    "answer": 1,
+    "topic": "hippo-pathway",
+    "explain": "At high cell density, membrane-bound regulators DCH S1/2 and FAT4 are engaged by cell-cell contacts, activating a downstream kinase cascade that phosphorylates YAP/TAZ. Phosphorylated YAP/TAZ are recognized and sequestered in the cytoplasm by 14-3-3 proteins, preventing nuclear entry and blocking pro-growth gene expression — implementing contact inhibition.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Which of the following statements about the mouse liver HIPPO experiment (Dong et al., Cell, 2007) is NOT correct?",
+    "options": [
+      "Inducible expression of activated YAP was triggered using doxycycline",
+      "Liver/body weight ratio increased from approximately 5% to approximately 17% within two weeks",
+      "The liver overgrowth was reversible upon turning off the YAP transgene",
+      "Tumors developed within one week of transgene induction, demonstrating rapid oncogenesis",
+      "At eight weeks of continuous YAP activity, tumors developed in the liver"
+    ],
+    "answer": 3,
+    "topic": "hippo-pathway",
+    "explain": "Tumors appeared at eight weeks, not within one week — the overgrowth over the first two weeks was reversible hyperplasia, not immediate tumor formation. Statements A, B, C, and E accurately describe the experimental data from Dong et al. The one-week claim in option D is a fabricated timeline that contradicts the published findings.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "A loss-of-function mutation in HIPPO pathway kinases (that normally phosphorylate YAP/TAZ) would be predicted to cause which outcome?",
+    "options": [
+      "Constitutive YAP/TAZ inactivation and arrest of cell proliferation in all tissues",
+      "Constitutive nuclear localization of unphosphorylated YAP/TAZ and excessive cell proliferation or organ overgrowth",
+      "Increased 14-3-3-mediated cytoplasmic sequestration of YAP/TAZ, reducing pro-growth signaling",
+      "Enhanced activation of DCH S1/2 and FAT4 leading to accelerated contact inhibition",
+      "Selective apoptosis of high-density cell populations due to failure of the survival signal"
+    ],
+    "answer": 1,
+    "topic": "hippo-pathway",
+    "explain": "If HIPPO kinases cannot phosphorylate YAP/TAZ, then YAP/TAZ remain unphosphorylated regardless of cell density and constitutively enter the nucleus to drive pro-growth gene expression — mimicking the low-density state even in crowded tissue. This leads to uncontrolled proliferation and organ overgrowth, consistent with the fruit fly wing disc data showing massive overgrowth when HIPPO signaling is disrupted.",
+    "difficulty": "hard"
+  }
+]

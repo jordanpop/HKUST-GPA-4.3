@@ -1,0 +1,262 @@
+{
+  "lecture_n": 18,
+  "coverage_manifest": [
+    {"pdf_page": 1, "topic_slug": "admin"},
+    {"pdf_page": 2, "topic_slug": "prev-lecture-summary"},
+    {"pdf_page": 3, "topic_slug": "receptor-types-overview"},
+    {"pdf_page": 4, "topic_slug": "gpcr-intro"},
+    {"pdf_page": 5, "topic_slug": "gpcr-signal-relay"},
+    {"pdf_page": 6, "topic_slug": "g-protein-activation"},
+    {"pdf_page": 7, "topic_slug": "gpcr-animation"},
+    {"pdf_page": 8, "topic_slug": "g-protein-effectors"},
+    {"pdf_page": 9, "topic_slug": "k-channel-heart"},
+    {"pdf_page": 10, "topic_slug": "effector-pathways-overview"},
+    {"pdf_page": 11, "topic_slug": "second-messengers"},
+    {"pdf_page": 12, "topic_slug": "adenylyl-cyclase-camp-pka"},
+    {"pdf_page": 13, "topic_slug": "effector-pathways-overview"},
+    {"pdf_page": 14, "topic_slug": "phospholipase-c-pkc"},
+    {"pdf_page": 15, "topic_slug": "ca2-fertilization"},
+    {"pdf_page": 16, "topic_slug": "gpcr-summary"},
+    {"pdf_page": 17, "topic_slug": "enzyme-coupled-receptors-intro"},
+    {"pdf_page": 18, "topic_slug": "enzyme-coupled-subtypes"},
+    {"pdf_page": 19, "topic_slug": "rtk-intro"},
+    {"pdf_page": 20, "topic_slug": "rtk-video"},
+    {"pdf_page": 21, "topic_slug": "rtk-activation-complex"},
+    {"pdf_page": 22, "topic_slug": "rtk-pathways-overview"},
+    {"pdf_page": 23, "topic_slug": "rtk-activates-ras"},
+    {"pdf_page": 24, "topic_slug": "rtk-pathways-overview"},
+    {"pdf_page": 25, "topic_slug": "pi3k-akt-pathway"},
+    {"pdf_page": 26, "topic_slug": "rtk-summary"},
+    {"pdf_page": 27, "topic_slug": "rtk-mutagenesis"},
+    {"pdf_page": 28, "topic_slug": "rtk-mutagenesis"},
+    {"pdf_page": 29, "topic_slug": "rtk-summary"},
+    {"pdf_page": 30, "topic_slug": "overactive-ras-method"},
+    {"pdf_page": 31, "topic_slug": "egfr-pathway"},
+    {"pdf_page": 32, "topic_slug": "egfr-cancer"},
+    {"pdf_page": 33, "topic_slug": "egfr-therapy-strategies"},
+    {"pdf_page": 34, "topic_slug": "egfr-therapy-challenges"},
+    {"pdf_page": 35, "topic_slug": "egfr-tki-generations"},
+    {"pdf_page": 36, "topic_slug": "mcq-practice"}
+  ],
+  "exam_points": [
+    {
+      "topic_slug": "gpcr-intro",
+      "key_facts": [
+        "GPCR is a seven-pass transmembrane protein",
+        ">700 members in humans",
+        "~400 functional olfactory receptor genes",
+        "~30% of drugs work through GPCRs",
+        "Examples: rhodopsin, olfactory receptors, adrenaline receptors"
+      ],
+      "common_confusions": [
+        "GPCR (7-pass) vs RTK (single-pass) transmembrane topology",
+        "Confusing GPCR with ion-channel-coupled receptors"
+      ],
+      "numeric_values": [">700 GPCR members in humans", "~400 olfactory receptor genes", "~30% of drugs act through GPCRs"],
+      "exam_traps": ["GPCR is 7-pass NOT single-pass", "Nobel Prize 2012 to Lefkowitz for GPCR research"]
+    },
+    {
+      "topic_slug": "g-protein-activation",
+      "key_facts": [
+        "Heterotrimeric G protein has alpha, beta, gamma subunits",
+        "beta and gamma tethered to plasma membrane by lipid tails",
+        "alpha subunit: GDP-bound = inactive; GTP-bound = active",
+        "Ligand binding -> GDP dissociates -> GTP binds -> Galpha-GTP + Gbetagamma both become active",
+        "Signal turned off by intrinsic GTPase activity of Galpha",
+        ">20 types of G proteins in mammals"
+      ],
+      "common_confusions": [
+        "Thinking only Galpha is active after dissociation — Gbetagamma is also active",
+        "Thinking signal duration is controlled by phosphatases — it is controlled by Galpha GTPase activity"
+      ],
+      "numeric_values": [">20 types of G proteins in mammals"],
+      "exam_traps": ["Both Galpha AND Gbetagamma activate effectors", "Signal duration = Galpha GTPase activity (answer d in the practice MCQ)"]
+    },
+    {
+      "topic_slug": "g-protein-effectors",
+      "key_facts": [
+        "Three major effectors: ion channels, adenylyl cyclase, phospholipase C",
+        "Gbetagamma opens K+ channels in heart pacemaker cells -> slows heart rate",
+        "Adenylyl cyclase activated by Galpha of Gs -> ATP -> cAMP",
+        "PLC activated -> PIP2 -> IP3 + DAG"
+      ],
+      "common_confusions": [
+        "Mixing up which G protein subunit activates which effector",
+        "Forgetting that Gbetagamma (not just Galpha) opens K+ channels"
+      ],
+      "numeric_values": [],
+      "exam_traps": ["Gbetagamma opens K+ channel in heart — it is Gbetagamma not Galpha"]
+    },
+    {
+      "topic_slug": "adenylyl-cyclase-camp-pka",
+      "key_facts": [
+        "Adrenaline -> adrenergic GPCR -> Gs -> adenylyl cyclase -> ATP -> cAMP",
+        "cAMP activates PKA",
+        "PKA effects: increase heart rate, glycogen breakdown in muscle, gene transcription in neurons (long-term memory)"
+      ],
+      "common_confusions": [
+        "cAMP activates PKA not PKC",
+        "Mixing up PKA (cAMP pathway) with PKC (DAG+Ca2+ pathway)"
+      ],
+      "numeric_values": [],
+      "exam_traps": ["cAMP -> PKA (not PKC); DAG + Ca2+ -> PKC"]
+    },
+    {
+      "topic_slug": "phospholipase-c-pkc",
+      "key_facts": [
+        "PLC cleaves PIP2 -> IP3 + DAG",
+        "IP3 opens Ca2+ channels on ER membrane -> Ca2+ release into cytosol",
+        "Ca2+ steady state: ER ~1 mM; cytosol ~10^-4 mM",
+        "DAG stays in membrane, activates PKC together with Ca2+",
+        "Fertilization of egg by sperm triggers Ca2+ wave"
+      ],
+      "common_confusions": [
+        "Naming only IP3 and forgetting DAG, or vice versa",
+        "Thinking Ca2+ comes from outside the cell — initial source is ER"
+      ],
+      "numeric_values": ["Ca2+ in ER: ~1 mM", "Ca2+ in cytosol at steady state: ~10^-4 mM"],
+      "exam_traps": ["PLC makes TWO second messengers: IP3 AND DAG", "Ca2+ source = ER (not extracellular) for the initial signal"]
+    },
+    {
+      "topic_slug": "enzyme-coupled-receptors-intro",
+      "key_facts": [
+        "Single-pass transmembrane proteins",
+        "Ligand (usually dimer) causes receptor dimerization",
+        "Respond to growth factors regulating growth, proliferation, differentiation, survival",
+        "Responses lead to gene expression changes",
+        "Major role in cancer development"
+      ],
+      "common_confusions": [
+        "Confusing single-pass (RTK) with seven-pass (GPCR)"
+      ],
+      "numeric_values": [],
+      "exam_traps": ["Enzyme-coupled receptors are single-pass; GPCRs are 7-pass"]
+    },
+    {
+      "topic_slug": "enzyme-coupled-subtypes",
+      "key_facts": [
+        "Three subtypes: tyrosine kinase receptors (RTKs), serine/threonine kinase receptors, guanylyl cyclase-linked receptors",
+        "RTKs are the major class relevant to cancer and metabolic disorders"
+      ],
+      "common_confusions": [
+        "Thinking there are only two subtypes of enzyme-coupled receptors"
+      ],
+      "numeric_values": [],
+      "exam_traps": ["Three subtypes of enzyme-coupled receptors, not two"]
+    },
+    {
+      "topic_slug": "rtk-activation-complex",
+      "key_facts": [
+        "Ligand binding causes RTK dimerization",
+        "Dimerization activates intracellular kinase domain",
+        "Kinase domain phosphorylates tyrosines on adjacent tail (transautophosphorylation)",
+        "Each phosphotyrosine = specific docking site for a different signaling protein",
+        "Multiple parallel pathways activated simultaneously"
+      ],
+      "common_confusions": [
+        "Thinking RTKs dimerize before ligand binding",
+        "Thinking all phosphotyrosines recruit the same signaling protein"
+      ],
+      "numeric_values": [],
+      "exam_traps": ["Ligand induces dimerization; each phosphotyrosine recruits a DIFFERENT specific protein"]
+    },
+    {
+      "topic_slug": "rtk-mutagenesis",
+      "key_facts": [
+        "Mutate individual tyrosine to alanine (cannot be phosphorylated)",
+        "Loss of a specific signaling protein binding identifies which phosphotyrosine is its docking site",
+        "Overactive constitutively active Ras used to determine ordering of proteins in pathway"
+      ],
+      "common_confusions": [
+        "Confusing what conclusion can be drawn: absence of binding after Y to A mutation means that tyrosine is the docking site"
+      ],
+      "numeric_values": [],
+      "exam_traps": ["Y to Alanine mutation: if protein X no longer binds, phospho-Y is the docking site for X"]
+    },
+    {
+      "topic_slug": "rtk-activates-ras",
+      "key_facts": [
+        "RTK -> adaptor protein (Grb2) docks on phosphotyrosine -> recruits Ras-GEF (SOS)",
+        "Ras-GEF promotes GDP to GTP exchange on Ras",
+        "Active Ras-GTP -> Raf -> MEK -> MAPK -> altered gene expression",
+        "30% of human cancers have activating Ras mutations",
+        "Constitutively active Ras used to determine pathway order"
+      ],
+      "common_confusions": [
+        "Thinking Ras-GEF is a kinase — it promotes nucleotide exchange, not phosphorylation",
+        "Confusing Ras pathway with PI3K pathway"
+      ],
+      "numeric_values": ["30% of human cancers have activating Ras mutations"],
+      "exam_traps": ["Ras-GEF = guanine nucleotide exchange factor, NOT a kinase", "Ras turns off via its own GTPase activity (parallel to Galpha)"]
+    },
+    {
+      "topic_slug": "pi3k-akt-pathway",
+      "key_facts": [
+        "RTK -> PI3-kinase -> phosphorylates inositol phospholipid -> PIP3",
+        "PIP3 recruits PDK1 and Akt to membrane",
+        "PDK1 activates Akt",
+        "Akt promotes cell growth and survival",
+        "PTEN dephosphorylates PIP3 -> opposes PI3K; PTEN is tumor suppressor"
+      ],
+      "common_confusions": [
+        "Thinking PI3-kinase phosphorylates a protein — it phosphorylates a lipid",
+        "Forgetting PTEN as the negative regulator"
+      ],
+      "numeric_values": [],
+      "exam_traps": ["PI3-kinase substrate is a membrane LIPID not a protein; PIP3 is the lipid second messenger"]
+    },
+    {
+      "topic_slug": "egfr-pathway",
+      "key_facts": [
+        "EGFR is an RTK activated by EGF",
+        "Activates both Ras/MAPK (via Grb2-SOS) and PI3K/AKT simultaneously",
+        "Downstream: survival, proliferation, invasion, metastasis, angiogenesis",
+        "PTEN opposes PI3K arm"
+      ],
+      "common_confusions": [
+        "Thinking EGFR activates only one pathway — it activates multiple simultaneously"
+      ],
+      "numeric_values": [],
+      "exam_traps": ["EGFR simultaneously activates Ras/MAPK AND PI3K/Akt via different phosphotyrosines"]
+    },
+    {
+      "topic_slug": "egfr-cancer",
+      "key_facts": [
+        "EGFR overexpressed in head/neck, ovary, cervix cancers",
+        "Many epithelial cancers have mutations constitutively activating EGFR",
+        "EGFRvIII = deletion mutant lacking extracellular domain; constitutively active"
+      ],
+      "common_confusions": [],
+      "numeric_values": [],
+      "exam_traps": ["EGFRvIII is constitutively active even without ligand due to deletion of extracellular domain"]
+    },
+    {
+      "topic_slug": "egfr-therapy-strategies",
+      "key_facts": [
+        "TKIs: block intracellular ATP-binding site of kinase domain",
+        "Anti-EGFR mAbs: block extracellular domain to prevent ligand binding or dimerization",
+        "Two distinct inhibition sites on the same receptor"
+      ],
+      "common_confusions": [
+        "Confusing TKI (intracellular) with mAb (extracellular) mechanisms"
+      ],
+      "numeric_values": [],
+      "exam_traps": ["TKI = intracellular kinase domain; mAb = extracellular domain — different sites"]
+    },
+    {
+      "topic_slug": "egfr-tki-generations",
+      "key_facts": [
+        "1st/2nd gen TKIs (Gefitinib, Erlotinib, Afatinib) -> acquire T790M resistance mutation",
+        "3rd gen TKIs (AZD9291/Osimertinib, CO-1686, HM61713) overcome T790M -> acquire C797S resistance",
+        "4th gen TKI (EAI045) designed for C797S",
+        "T790M-positive patients have shorter progression-free survival than T790M-negative"
+      ],
+      "common_confusions": [
+        "Mixing up which generation targets which mutation",
+        "Thinking resistance mutations are pre-existing — they are acquired after treatment"
+      ],
+      "numeric_values": ["T790M-positive vs T790M-negative: significant difference in PFS, p<0.001"],
+      "exam_traps": ["Resistance mutations are ACQUIRED after treatment, not present at baseline in most patients"]
+    }
+  ]
+}

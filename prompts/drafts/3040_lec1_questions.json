@@ -1,0 +1,422 @@
+[
+  {
+    "q": "Ernest Starling (1905) defined hormones as chemical messengers that coordinate activities of different parts of the body. Which of the following is NOT one of the three key properties of a classical hormone as defined by Starling?",
+    "options": [
+      "Secreted into the blood in very small amounts by specialized cells or glands",
+      "Carried to other parts of the body by the bloodstream",
+      "Interacts with specific receptors in target tissue cells to produce a biological response",
+      "Stored in vesicles within target cells until needed for a response",
+      "Acts on tissues distant from the site of secretion"
+    ],
+    "answer": 3,
+    "topic": "endocrine-overview",
+    "explain": "Starling's three properties are: (1) secreted into blood in small amounts, (2) carried by the bloodstream, and (3) interacts with specific receptors in target cells. Storage in target cell vesicles is not part of Starling's definition — hormones are synthesized and secreted by specialized glands, not stored by target cells. Option E is implicit in property 2 and is not a separate defining criterion in Starling's original formulation.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which of the following newly recognized endocrine organs produces atrial natriuretic peptide (ANP), renin, and calcitriol — correctly matched to their respective sources?",
+    "options": [
+      "ANP: heart; renin: kidney; calcitriol: kidney",
+      "ANP: kidney; renin: heart; calcitriol: liver",
+      "ANP: liver; renin: kidney; calcitriol: adrenal gland",
+      "ANP: adipose tissue; renin: heart; calcitriol: bone",
+      "ANP: stomach; renin: liver; calcitriol: pancreas"
+    ],
+    "answer": 0,
+    "topic": "endocrine-overview",
+    "explain": "The heart secretes ANP (atrial natriuretic peptide), while the kidneys secrete both renin and calcitriol. Students often confuse ANP with renal hormones since ANP acts on the kidney, but its origin is cardiac. The liver secretes somatomedin (IGF), not calcitriol. Option A has ANP and renin sources swapped.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "GLP-1 (Glucagon-Like Peptide-1) exerts multiple physiological effects through its G protein-coupled receptor. Which combination of effects is correct?",
+    "options": [
+      "Enhances glucagon release, promotes satiety, and accelerates gastric emptying",
+      "Inhibits insulin secretion, promotes satiety, and slows gastric emptying",
+      "Enhances insulin secretion, inhibits glucagon release, slows gastric emptying, and promotes satiety",
+      "Inhibits insulin secretion, inhibits glucagon release, and slows gastric emptying",
+      "Enhances insulin secretion, promotes glucagon release, and accelerates gastric emptying"
+    ],
+    "answer": 2,
+    "topic": "endocrine-overview",
+    "explain": "GLP-1 acts on a GPCR to enhance insulin secretion, inhibit glucagon release, slow gastric emptying, and promote satiety — all four effects together make it a major drug target for type 2 diabetes and obesity. Option A incorrectly states glucagon enhancement and gastric acceleration. Options B and D incorrectly state that GLP-1 inhibits insulin. Option E has both insulin and glucagon directions wrong.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which of the three types of stimuli that regulate hormone secretion applies when low blood Ca²⁺ levels trigger release of parathyroid hormone?",
+    "options": [
+      "Neural stimuli, because the nervous system detects ionic changes in blood",
+      "Hormonal stimuli, because Ca²⁺ acts as a second messenger for upstream hormones",
+      "Humoral changes, because blood composition (Ca²⁺ concentration) directly triggers secretion",
+      "Paracrine stimuli, because adjacent parathyroid cells detect the ionic change locally",
+      "Autocrine stimuli, because parathyroid cells self-regulate their own secretion"
+    ],
+    "answer": 2,
+    "topic": "hormone-regulation",
+    "explain": "Humoral changes refer to alterations in blood composition — such as changes in Ca²⁺, blood glucose, or osmolarity — that directly stimulate hormone secretion. Parathyroid hormone release in response to low blood Ca²⁺ is the classic humoral example. Neural stimuli involve nerve impulses (e.g., sympathetic control of adrenal medulla), and hormonal stimuli involve upstream hormones controlling downstream gland secretion.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "The endocrine and nervous systems can use the same molecule to transmit signals. Which of the following molecules serves as BOTH a neurotransmitter and a hormone?",
+    "options": [
+      "Cortisol",
+      "Oxytocin",
+      "Norepinephrine",
+      "Thyroxine",
+      "Estradiol"
+    ],
+    "answer": 2,
+    "topic": "endocrine-vs-nervous",
+    "explain": "Norepinephrine (去甲腎上腺素) serves as a neurotransmitter in the sympathetic nervous system and as a hormone when secreted by the adrenal medulla into the bloodstream. Cortisol, thyroxine, and estradiol are exclusively hormones; oxytocin functions as a hormone (from posterior pituitary) and as a neurotransmitter in the brain — but norepinephrine is the canonical lecture example for this dual role.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which hormone is an amino acid derivative but is classified as lipid-soluble and acts via nuclear receptors — unlike the other amino acid derivative hormones?",
+    "options": [
+      "Epinephrine, derived from tyrosine",
+      "Melatonin, derived from tryptophan",
+      "Norepinephrine, derived from tyrosine",
+      "Thyroxine, derived from tyrosine",
+      "Serotonin, derived from tryptophan"
+    ],
+    "answer": 3,
+    "topic": "amino-acid-derivatives",
+    "explain": "Thyroxine is derived from tyrosine (an amino acid) but is lipid-soluble and acts via intracellular/nuclear receptors — making it the notable exception among amino acid derivatives. Epinephrine and norepinephrine (also tyrosine-derived) are lipid-insoluble and use surface receptors. Melatonin (tryptophan-derived) is also lipid-insoluble. This exception is frequently tested.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Insulin is first synthesized as preproinsulin, then processed to proinsulin, and finally cleaved to insulin with two polypeptide chains. Which chemical class of hormones does this processing exemplify, and what general rule does it illustrate?",
+    "options": [
+      "Steroids; all steroid hormones undergo enzymatic cleavage from a cholesterol precursor",
+      "Eicosanoids; prostaglandins are all first synthesized as larger arachidonic-acid-based precursors",
+      "Amino acid derivatives; tyrosine-derived hormones are always first made as larger precursors",
+      "Polypeptides; they are often produced as larger precursor molecules that are proteolytically cleaved to the active form",
+      "Prostaglandins; phospholipase cleavage of membrane lipids yields the active hormone directly"
+    ],
+    "answer": 3,
+    "topic": "polypeptide-hormones",
+    "explain": "Polypeptide hormones are often synthesized as larger molecular weight precursors (preprohormones → prohormones → active hormone) that are proteolytically cleaved to generate the active form. Insulin is a classic example. Steroids are derived from cholesterol by enzymatic modification, not proteolytic cleavage of a protein precursor. Amino acid derivative hormones like thyroxine and epinephrine are not made as large protein precursors in the same way.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which of the following is the key structural feature shared by ALL steroid hormones?",
+    "options": [
+      "All are derived from arachidonic acid and contain a 20-carbon polyunsaturated chain",
+      "All are derived from cholesterol and are lipid-soluble",
+      "All are derived from tyrosine and contain an aromatic ring structure",
+      "All contain a disulfide bond linking two polypeptide chains",
+      "All are derived from tryptophan and contain an indole ring"
+    ],
+    "answer": 1,
+    "topic": "steroid-hormones",
+    "explain": "All steroid hormones are derived from cholesterol and are lipid-soluble. Differences in their ring structure and side chains create functional diversity (e.g., cortisol, aldosterone, testosterone, estradiol). Arachidonic acid is the precursor for prostaglandins/eicosanoids, not steroids. Tyrosine yields amino acid derivative hormones like epinephrine and thyroxine; tryptophan yields melatonin.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Prostaglandins are lipid-soluble but do NOT act like other lipid-soluble hormones. Which of the following correctly describes how their mechanism of action differs from other lipid-soluble hormones such as steroids?",
+    "options": [
+      "Prostaglandins enter the nucleus and bind to different nuclear receptor subtypes than steroids, modifying different gene sets",
+      "Prostaglandins bypass receptors entirely and directly activate ion channels in the plasma membrane",
+      "Prostaglandins are packaged into lipoproteins that deliver them directly into the cytoplasm of target cells",
+      "Prostaglandins act exclusively through receptor tyrosine kinases, whereas steroids use nuclear receptors",
+      "Prostaglandins bind to surface receptors coupled with cAMP signaling, rather than to intracellular nuclear receptors"
+    ],
+    "answer": 4,
+    "topic": "prostaglandins",
+    "explain": "Despite being lipid-soluble, prostaglandins bind to surface receptors (GPCRs) coupled with cAMP signaling — behaving like lipid-insoluble hormones in terms of their signaling mechanism. This is the opposite of what would be expected for a lipid-soluble molecule. Steroids and thyroxine, by contrast, diffuse across the membrane to bind intracellular/nuclear receptors. This distinction is one of the most commonly tested points in this lecture.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "NSAIDs (non-steroidal anti-inflammatory drugs) such as aspirin and ibuprofen reduce fever, pain, and inflammation. These drugs are also being investigated for treating Alzheimer's disease. What is the mechanism by which NSAIDs exert their anti-inflammatory effects?",
+    "options": [
+      "They block G protein-coupled surface receptors for prostaglandins, preventing receptor activation",
+      "They directly inhibit phospholipase enzymes, blocking arachidonic acid release from membranes",
+      "They compete with prostaglandins for binding to intracellular nuclear receptors in immune cells",
+      "They inhibit enzymes involved in prostaglandin synthesis, reducing the formation of prostaglandins",
+      "They chelate calcium ions in the blood, preventing prostaglandin-mediated inflammatory cell activation"
+    ],
+    "answer": 3,
+    "topic": "prostaglandins",
+    "explain": "NSAIDs inhibit cyclooxygenase (COX) enzymes involved in prostaglandin biosynthesis, reducing the formation of prostaglandins that mediate fever, pain, and inflammation. They do not block prostanoid surface receptors (that would be receptor antagonism) nor do they act on nuclear receptors (prostaglandins use surface receptors). Option B describes blocking phospholipase — a different step in the pathway upstream of COX.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Elwood Jensen first described the estrogen receptor in 1958 and later discovered the superfamily of nuclear hormone receptors. Which class of hormones uses these nuclear receptors to produce its effects?",
+    "options": [
+      "Lipid-soluble hormones including steroids and thyroxine, which diffuse across the membrane and bind intracellular receptors that act on DNA",
+      "Polypeptide hormones that bind surface GPCRs and activate cAMP second messengers",
+      "Amino acid derivatives that bind surface receptors with intrinsic tyrosine kinase activity",
+      "Prostaglandins that bind surface receptors coupled to cGMP production",
+      "All hormones, because every hormone class contains members that use nuclear receptors"
+    ],
+    "answer": 0,
+    "topic": "lipid-soluble-hormones",
+    "explain": "Lipid-soluble hormones (steroids and thyroxine) diffuse freely across the plasma membrane and bind to intracellular receptors in the nucleus or cytoplasm. The hormone-receptor complex then acts directly on DNA to modify gene transcription, producing long-lasting effects (hours to days). Polypeptides and most amino acid derivatives use surface receptors. Prostaglandins are lipid-soluble but exceptionally use surface cAMP-coupled receptors, not nuclear receptors.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "A researcher is studying cortisol, a lipid-soluble steroid hormone. To prepare a 100 mM stock solution for cell culture experiments, which solvent should be used?",
+    "options": [
+      "Ethanol, because cortisol is a lipid-soluble steroid that does not dissolve in aqueous solutions",
+      "Distilled water, because it is the most physiologically neutral and widely used lab solvent",
+      "Saline (0.9% NaCl), because it best mimics the ionic composition of extracellular fluid",
+      "Acidic buffer at pH 5, because cortisol solubility increases substantially under acidic conditions",
+      "Phosphate-buffered saline (PBS), because it maintains pH and prevents protein denaturation"
+    ],
+    "answer": 0,
+    "topic": "lipid-soluble-hormones",
+    "explain": "Cortisol is a lipid-soluble steroid hormone and does not dissolve in water-based solvents such as distilled water, saline, or PBS. An organic solvent such as ethanol must be used to prepare a concentrated stock solution, which is then diluted 1000-fold into aqueous cell culture media. This is a direct practical application of the principle that lipid-soluble hormones are insoluble in water — a quiz question explicitly given in the lecture.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Which of the following is a key distinguishing feature of lipid-insoluble hormone signaling compared to lipid-soluble hormone signaling?",
+    "options": [
+      "Lipid-insoluble hormones bind surface receptors and produce rapid, short-lived responses via second messengers or catalytic receptor activity",
+      "Lipid-insoluble hormones produce long-lasting effects lasting hours to days due to transcriptional changes",
+      "Lipid-insoluble hormones enter the nucleus by active transport and directly modify DNA transcription",
+      "Lipid-insoluble hormones dissolve in the lipid bilayer and gate ion channels from within the membrane",
+      "Lipid-insoluble hormones always trigger apoptosis in target cells as part of their short-lived signaling"
+    ],
+    "answer": 0,
+    "topic": "lipid-insoluble-hormones",
+    "explain": "Lipid-insoluble hormones (polypeptides and most amino acid derivatives) bind surface receptors and produce rapid, short-lived responses mediated by second messengers (like cAMP or IP3/DAG) or intrinsic catalytic activity of receptors (like tyrosine kinases). Lipid-soluble hormones, not lipid-insoluble ones, produce long-lasting effects via nuclear receptor-DNA interactions. Both GPCRs and enzyme-coupled receptors can mediate lipid-insoluble hormone signaling.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Epinephrine can both stimulate and inhibit adenylate cyclase depending on the receptor subtype it binds. Which pairing correctly identifies the receptor subtypes and their effects on cAMP?",
+    "options": [
+      "Alpha-1 adrenoceptors stimulate adenylate cyclase; beta-adrenoceptors inhibit it",
+      "Alpha-2 adrenoceptors stimulate adenylate cyclase; beta-adrenoceptors inhibit it",
+      "Beta-adrenoceptors stimulate adenylate cyclase; alpha-1 adrenoceptors inhibit it",
+      "Dopamine receptors stimulate adenylate cyclase; beta-adrenoceptors inhibit it",
+      "Beta-adrenoceptors stimulate adenylate cyclase; alpha-2 adrenoceptors inhibit it"
+    ],
+    "answer": 4,
+    "topic": "gpcr-signaling",
+    "explain": "Epinephrine activates adenylate cyclase (stimulatory cAMP signaling) via beta-adrenoceptors, and inhibits adenylate cyclase via alpha-2 adrenoceptors. Alpha-1 adrenoceptors use the IP3/DAG pathway rather than cAMP (so they are not directly involved in adenylate cyclase regulation). This bidirectional regulation by the same molecule through different GPCR subtypes is a high-yield exam concept.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Which of the following is NOT a characteristic of the insulin receptor?",
+    "options": [
+      "It has intrinsic tyrosine kinase activity that is activated by insulin binding",
+      "It phosphorylates tyrosine residues on cytoplasmic proteins when activated by insulin",
+      "It autophosphorylates upon ligand binding, creating a positive feedback increase in kinase activity",
+      "It binds a water-soluble polypeptide ligand at its extracellular domain",
+      "It is coupled to a G protein that activates adenylate cyclase to generate cAMP"
+    ],
+    "answer": 4,
+    "topic": "enzyme-coupled-receptors",
+    "explain": "The insulin receptor is a receptor tyrosine kinase (RTK), NOT a GPCR. It is NOT coupled to G proteins or adenylate cyclase. It has intrinsic kinase activity, phosphorylates cytoplasmic tyrosine residues, and autophosphorylates (positive feedback). Insulin itself is water-soluble and binds the extracellular domain. Confusing insulin's receptor with GPCR signaling is the most common exam error on this topic.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "The ANP (atrial natriuretic peptide) receptor differs fundamentally from both GPCRs and receptor tyrosine kinases in the type of enzymatic activity it possesses. Which of the following correctly describes the ANP receptor?",
+    "options": [
+      "It is a receptor adenylate cyclase that generates cAMP upon ANP binding",
+      "It is a receptor guanylate cyclase that generates cGMP upon ANP binding",
+      "It is a receptor tyrosine kinase that phosphorylates tyrosine residues on cytoplasmic proteins",
+      "It is a ligand-gated ion channel that allows Ca²⁺ influx upon ANP binding",
+      "It is a nuclear receptor that ANP enters the cell to bind, modifying gene transcription"
+    ],
+    "answer": 1,
+    "topic": "enzyme-coupled-receptors",
+    "explain": "The ANP receptor is a receptor guanylate cyclase — its extracellular domain binds ANP, and its intracellular domain has guanylate cyclase activity that converts GTP to cGMP. This is distinct from adenylate cyclase (cAMP, used by many GPCRs) and receptor tyrosine kinases (phosphotyrosine signals). The cGMP produced mediates ANP's vasodilatory and natriuretic effects. ANP is a peptide hormone and cannot cross the membrane to use nuclear receptors.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Neurosecretory (neuroendocrine) cells differ structurally from ordinary neurons. Which of the following correctly describes a structural feature unique to neurosecretory cells?",
+    "options": [
+      "They contain synaptic vesicles (30–60 nm) identical to those of ordinary neurons but in greater numbers",
+      "They contain secretory granules (100–400 nm) that are much larger than the synaptic vesicles (30–60 nm) of ordinary neurons",
+      "They lack axons and release hormones by passive diffusion from the cell body",
+      "They are non-excitable and lack voltage-gated ion channels required for action potentials",
+      "They form conventional synapses on postsynaptic neurons and secrete hormones only at these synaptic terminals"
+    ],
+    "answer": 1,
+    "topic": "neurosecretory-cells",
+    "explain": "Neurosecretory cells contain secretory granules of 100–400 nm, significantly larger than the synaptic vesicles (30–60 nm) found in ordinary neurons. They terminate near capillary beds (the neurohemal organ) rather than at conventional synapses. They ARE excitable neurons — stating they are non-excitable (option D) is explicitly FALSE per the lecture.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which of the following statements about neurosecretory cells in the hypothalamus is FALSE?",
+    "options": [
+      "They are specialized neurons that release hormones called neurohormones",
+      "They respond to sensory inputs from other parts of the body like ordinary neurons",
+      "They form an interface between the neural and endocrine systems",
+      "Chromaffin cells of the adrenal medulla are a type of neurosecretory cell sharing neural embryological origin",
+      "They are non-excitable cells that release hormones by passive diffusion rather than action potentials"
+    ],
+    "answer": 4,
+    "topic": "neurosecretory-cells",
+    "explain": "Neurosecretory cells ARE excitable neurons — they can be depolarized and fire action potentials, which triggers regulated hormone release by exocytosis. The statement that they are 'non-excitable' is explicitly false per the lecture quiz. They secrete neurohormones, respond to sensory inputs, form a neuroendocrine interface, and chromaffin cells of the adrenal medulla share neural embryological origin.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Magnocellular neurons project to the posterior pituitary, while parvocellular neurons project to the portal capillaries. What is the primary functional difference between these two populations of hypothalamic neurosecretory neurons?",
+    "options": [
+      "Magnocellular neurons release CRH and TRH into portal blood; parvocellular neurons release ADH and oxytocin into systemic blood",
+      "Magnocellular neurons are larger and control growth hormone; parvocellular neurons are smaller and control reproductive hormones",
+      "Both neuron types release identical neurohormones but the destination (posterior pituitary vs. portal system) determines the hormonal effect",
+      "Magnocellular neurons synthesize releasing hormones for the anterior pituitary; parvocellular neurons synthesize neurohormones for systemic release",
+      "Magnocellular neurons synthesize and release ADH and oxytocin (stored in posterior pituitary) into systemic blood; parvocellular neurons release releasing/inhibiting hormones into the portal system to control the anterior pituitary"
+    ],
+    "answer": 4,
+    "topic": "neurosecretory-cells",
+    "explain": "Magnocellular neurons (in SON and PVN) synthesize ADH (vasopressin) and oxytocin, stored and released from the posterior pituitary into systemic circulation. Parvocellular neurons release hypothalamic releasing and release-inhibiting hormones into the hypophyseal portal capillaries to control anterior pituitary glandular hormone secretion. Option A has the two populations' hormones and destinations reversed.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which of the following correctly distinguishes the anterior pituitary (adenohypophysis) from the posterior pituitary (neurohypophysis) in terms of tissue type and function?",
+    "options": [
+      "Anterior pituitary: neural tissue (axon terminals of hypothalamic neurons); synthesizes ADH and oxytocin",
+      "Anterior pituitary: true endocrine glandular tissue; synthesizes glandular hormones such as GH, prolactin, and ACTH",
+      "Posterior pituitary: true endocrine tissue; synthesizes releasing hormones for the hypothalamus",
+      "Posterior pituitary: glandular endocrine tissue; synthesizes TSH, FSH, and LH",
+      "Both lobes are identical in tissue type; the difference is only in which bloodstream the hormones drain into"
+    ],
+    "answer": 1,
+    "topic": "pituitary-anatomy",
+    "explain": "The anterior pituitary (adenohypophysis) is true endocrine glandular tissue and synthesizes its own glandular hormones (GH, prolactin, MSH, ACTH, FSH, LH, TSH). The posterior pituitary (neurohypophysis) is neural tissue — composed of axon terminals of magnocellular hypothalamic neurons — and only stores and releases ADH and oxytocin, which are actually synthesized in SON and PVN of the hypothalamus.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "The hypothalamic-hypophyseal portal system is defined as two capillary beds directly joined by portal blood vessels. What physiological advantage does this vascular arrangement provide?",
+    "options": [
+      "It enables the posterior pituitary to receive releasing hormones from the hypothalamus at high concentrations",
+      "It dilutes hypothalamic neurohormones before they enter systemic circulation, protecting the body from high concentrations",
+      "It delivers hypothalamic releasing and inhibiting hormones to the anterior pituitary at high local concentrations, ensuring effective control without systemic exposure",
+      "It allows the anterior pituitary to recycle hormones back to the hypothalamus for feedback inhibition via direct blood flow",
+      "It concentrates ADH and oxytocin in the posterior pituitary by countercurrent exchange between the two capillary beds"
+    ],
+    "answer": 2,
+    "topic": "portal-system",
+    "explain": "The portal system delivers parvocellular-released hormones directly from hypothalamic capillaries to the anterior pituitary at high local concentrations through two capillary beds joined by portal vessels, before they reach systemic blood where they would be diluted. This ensures effective control of anterior pituitary secretion without requiring systemically high concentrations of hypothalamic hormones. The posterior pituitary is not connected via the portal system — it receives its hormones directly from axon terminals of magnocellular neurons.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which of the following is a direct-acting anterior pituitary hormone that acts on somatic, non-endocrine target tissues rather than on other endocrine glands?",
+    "options": [
+      "ACTH (adrenocorticotropic hormone), which stimulates the adrenal cortex",
+      "TSH (thyroid-stimulating hormone), which stimulates the thyroid gland",
+      "LH (luteinizing hormone), which stimulates the gonads",
+      "FSH (follicle-stimulating hormone), which stimulates ovarian follicles",
+      "Prolactin, which stimulates milk protein synthesis in mammary glands"
+    ],
+    "answer": 4,
+    "topic": "direct-acting-hormones",
+    "explain": "Prolactin is a direct-acting anterior pituitary hormone that acts on somatic non-endocrine targets such as the mammary gland (stimulating milk protein synthesis and mammary gland growth). ACTH, TSH, FSH, and LH are all tropic hormones — they act on other endocrine glands (adrenal cortex, thyroid, and gonads respectively) to stimulate hormone secretion. GH and MSH are also direct-acting hormones.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "Prolactin secretion is regulated by inhibitory and stimulatory inputs. Which of the following correctly identifies the inhibitory and stimulatory regulators of prolactin release?",
+    "options": [
+      "Inhibited by dopamine; stimulated by TRH and estrogen",
+      "Inhibited by serotonin; stimulated by TSH and progesterone",
+      "Inhibited by TRH; stimulated by dopamine and estrogen",
+      "Inhibited by estrogen; stimulated by dopamine and TRH",
+      "Inhibited by FSH; stimulated by LH and prolactin-releasing factor only"
+    ],
+    "answer": 0,
+    "topic": "direct-acting-hormones",
+    "explain": "Prolactin is inhibited by dopamine (also called prolactin-inhibiting hormone) and stimulated by TRH (thyrotropin-releasing hormone) and estrogen. This is why dopamine agonists (e.g., bromocriptine) reduce prolactin levels, and why hyperprolactinemia can occur in hypothyroidism (elevated TRH stimulates prolactin). Option B has the inhibitory and stimulatory roles of dopamine and TRH reversed.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Both MSH and ACTH are derived from pro-opiomelanocortin (POMC). Which of the following correctly explains the mechanism of skin darkening in Addison's disease?",
+    "options": [
+      "Addison's disease damages the adrenal medulla, causing excess epinephrine that directly stimulates melanocytes to produce melanin",
+      "Addison's disease reduces cortisol production, eliminating negative feedback on CRH, which rises and drives increased POMC cleavage, elevating both ACTH and MSH, causing hyperpigmentation",
+      "Addison's disease increases cortisol production, which stimulates POMC cleavage and raises MSH levels, causing skin darkening",
+      "Addison's disease damages the anterior pituitary, reducing ACTH and MSH equally, causing pale rather than darkened skin",
+      "Addison's disease elevates estrogen, which directly stimulates melanocyte production of melanin at the receptor level"
+    ],
+    "answer": 1,
+    "topic": "pomc-msh",
+    "explain": "In Addison's disease, destruction of the adrenal cortex reduces cortisol. Without cortisol's negative feedback, hypothalamic CRH rises. High CRH drives increased POMC processing in the anterior pituitary, simultaneously elevating both ACTH and MSH. The elevated MSH stimulates melanocytes in the skin, causing characteristic hyperpigmentation. Addison's disease damages the adrenal cortex, not the adrenal medulla or pituitary.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "According to the lecture mnemonic about hypothalamic releasing and release-inhibiting hormones, which of the following statements is correct?",
+    "options": [
+      "Both direct-acting and tropic hormones have releasing hormones AND release-inhibiting hormones from the hypothalamus",
+      "Only tropic hormones have hypothalamic releasing hormones; direct-acting hormones are not regulated by the hypothalamus",
+      "All direct-acting and tropic hormones have releasing hormones, but ONLY direct-acting hormones also have release-inhibiting hormones",
+      "All anterior pituitary hormones have release-inhibiting hormones, but only tropic hormones have releasing hormones",
+      "MSH has a unique releasing hormone entirely separate from the CRH pathway, because it comes from pars intermedia"
+    ],
+    "answer": 2,
+    "topic": "hypothalamic-releasing-hormones",
+    "explain": "The lecture mnemonic: all direct-acting (GH, prolactin, MSH) and tropic (ACTH, FSH, LH, TSH) hormones have corresponding releasing hormones from hypothalamic parvocellular neurons. However, only direct-acting hormones also have release-inhibiting hormones (e.g., somatostatin for GH, dopamine for prolactin). Tropic hormones lack release-inhibiting counterparts. MSH and ACTH share CRH as the main hypothalamic signal because both are derived from POMC.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "ADH (antidiuretic hormone/vasopressin) acts on two distinct target organs through different mechanisms. Which pairing correctly matches each target to its mechanism of action?",
+    "options": [
+      "Kidney: vasoconstriction via IP3/DAG; Vascular smooth muscle: aquaporin insertion via cAMP",
+      "Kidney: direct vasoconstriction to increase filtration; Vascular smooth muscle: aquaporin upregulation",
+      "Kidney: water excretion via aquaporin blocking; Vascular smooth muscle: vasodilation to lower blood pressure",
+      "Kidney: aquaporin upregulation via adenylate cyclase (cAMP) to promote water retention; Vascular smooth muscle: direct vasoconstriction to regulate blood pressure",
+      "Kidney: cGMP-mediated diuresis via receptor guanylate cyclase; Vascular smooth muscle: cAMP-mediated vasoconstriction"
+    ],
+    "answer": 3,
+    "topic": "adh-vasopressin",
+    "explain": "In the kidney, ADH receptors are coupled to adenylate cyclase (cAMP signaling), increasing surface expression of aquaporin water channels and promoting water retention (antidiuresis). In vascular smooth muscle, ADH causes direct vasoconstriction, raising blood pressure — hence the name 'vasopressin.' Option D incorrectly states ADH blocks aquaporins and causes diuresis, which is the opposite. The cGMP pathway (option E) is characteristic of ANP, not ADH.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Prolactin and oxytocin both relate to lactation, but they differ in origin, type, and specific function. Which statement correctly distinguishes the two hormones?",
+    "options": [
+      "Prolactin is a neurohormone from the posterior pituitary that stimulates milk ejection; oxytocin is a glandular hormone from the anterior pituitary that stimulates milk synthesis",
+      "Both prolactin and oxytocin are synthesized in hypothalamic SON and PVN neurons and released from the posterior pituitary",
+      "Prolactin (glandular hormone, anterior pituitary) stimulates milk synthesis; oxytocin (neurohormone, posterior pituitary) stimulates milk ejection",
+      "Prolactin stimulates uterine contractions during parturition; oxytocin stimulates milk protein synthesis in mammary acini",
+      "Both prolactin and oxytocin are tropic hormones that act on other endocrine glands to regulate lactation"
+    ],
+    "answer": 2,
+    "topic": "posterior-pituitary-hormones",
+    "explain": "Prolactin is a glandular hormone secreted by the anterior pituitary (adenohypophysis) that stimulates milk protein synthesis and mammary gland growth. Oxytocin is a neurohormone synthesized in hypothalamic magnocellular neurons (SON/PVN), stored in the posterior pituitary, and released to stimulate milk ejection (the milk ejection reflex) and uterine contractions. Options A and B have origins and functions reversed or incorrectly grouped.",
+    "difficulty": "easy"
+  },
+  {
+    "q": "ADH and oxytocin are both 9-amino-acid nonapeptides with a disulfide bond. At which positions in the amino acid sequence do they differ?",
+    "options": [
+      "Positions 1 and 9 — the terminal amino acids are different",
+      "Positions 2 and 7 — the tyrosine and proline positions are swapped",
+      "Positions 3 and 8 — phenylalanine (ADH) vs. isoleucine at position 3; arginine (ADH) vs. leucine at position 8",
+      "Positions 4 and 6 — the glutamine and cysteine positions",
+      "Positions 5 and 9 — the asparagine and glycine positions"
+    ],
+    "answer": 2,
+    "topic": "adh-oxytocin-sequences",
+    "explain": "ADH (argipressin) sequence: Cys-Tyr-Phe-Gln-Asn-Cys-Pro-Arg-Gly. Oxytocin: Cys-Tyr-Ile-Gln-Asn-Cys-Pro-Leu-Gly. Position 3 differs (Phe in ADH vs. Ile in oxytocin) and position 8 differs (Arg in ADH vs. Leu in oxytocin). Positions 1 and 2 (Cys and Tyr) and 4–7 (Gln-Asn-Cys-Pro) and 9 (Gly) are identical in both. The disulfide bond connects the cysteines at positions 1 and 6.",
+    "difficulty": "hard"
+  },
+  {
+    "q": "Oxytocin has been called 'the hormone of love and bonding.' Which of the following correctly describes oxytocin's physiological roles beyond milk ejection?",
+    "options": [
+      "Oxytocin inhibits uterine contractions during labor and promotes mammary gland synthesis of milk proteins",
+      "Oxytocin promotes social recognition, bonding, and trust in the brain as a neurotransmitter, and stimulates uterine contractions during and after parturition",
+      "Oxytocin acts as a tropic hormone on the ovaries to stimulate estrogen secretion during pregnancy",
+      "Oxytocin is released exclusively in females and has no role in male physiology",
+      "Oxytocin is a direct-acting anterior pituitary hormone released during suckling to stimulate milk synthesis"
+    ],
+    "answer": 1,
+    "topic": "oxytocin",
+    "explain": "Beyond milk ejection, oxytocin: (1) stimulates uterine contractions during and after parturition; (2) acts as a neurotransmitter in the brain, where it is involved in social recognition, bonding, trust, and generosity, and is released during hugging, touching, and orgasm in BOTH sexes. Oxytocin is a neurohormone from the posterior pituitary (not an anterior pituitary direct-acting hormone), and it does not act on the ovaries as a tropic hormone.",
+    "difficulty": "medium"
+  },
+  {
+    "q": "Which of the following is the correct sequence of events by which the hypothalamus controls cortisol secretion, starting from the hypothalamus and ending at the adrenal cortex?",
+    "options": [
+      "Cortisol (adrenal cortex) → negative feedback to hypothalamus → CRH → anterior pituitary → ACTH (this is a feedback loop, not the stimulus pathway)",
+      "ACTH (released by hypothalamus) → travels in portal blood → reaches anterior pituitary → triggers CRH secretion → CRH stimulates adrenal cortex",
+      "CRH (from magnocellular parvocellular neurons, posterior pituitary) → systemic blood → adrenal cortex → ACTH → cortisol",
+      "CRH (from parvocellular neurons) → hypothalamic-hypophyseal portal system → anterior pituitary → ACTH released → adrenal cortex → cortisol",
+      "TRH (from parvocellular neurons) → portal system → anterior pituitary → ACTH → adrenal cortex → cortisol"
+    ],
+    "answer": 3,
+    "topic": "hypothalamic-releasing-hormones",
+    "explain": "Parvocellular neurons in the hypothalamus release CRH (corticotropin-releasing hormone) into the hypophyseal portal system. CRH travels via portal blood to the anterior pituitary, stimulating ACTH secretion. ACTH enters systemic circulation and stimulates the adrenal cortex to produce cortisol. Magnocellular neurons project to the posterior pituitary (not the portal system). TRH stimulates TSH (not ACTH). Option A describes the negative feedback loop, not the stimulus cascade.",
+    "difficulty": "hard"
+  }
+]
