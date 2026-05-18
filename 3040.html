@@ -1641,513 +1641,697 @@ tr.weak-highlight{box-shadow:none}
 </div>
 
 <div id="notes-7" class="page">
-  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <a class="btn back" onclick="showPage('home')">&#8592; Home</a>
   <button id="clear-hl-7" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(7)">Clear Highlights</button>
-  <h1>Lecture 7: Physiology of Nerve Cells — Ion Channels, Membrane Potential &amp; Action Potentials</h1>
+  <h1>Lecture 7: Neuro1: Physiology of Nerve Cells &#8212; Ion Channels, Membrane Potential &amp; Action Potentials</h1>
 
   <div class="bigpic reveal-on-scroll">
-    Neurons communicate by controlling the flow of ions (離子) across the cell membrane through specialised pore-forming proteins called ion channels (離子通道). The selective permeability of the membrane to different ions, especially K<sup>+</sup>, establishes a negative resting membrane potential (靜息膜電位) of about &minus;70 mV. When a depolarising (去極化) stimulus pushes the membrane potential above threshold (閾值), voltage-gated Na<sup>+</sup> channels open in a positive-feedback loop that generates a brief all-or-none action potential (動作電位). The action potential then propagates along the axon — passively decrementing in subthreshold signals, but regeneratively and unidirectionally in the AP — and ultimately triggers neurotransmitter release at the synapse (突觸) to influence the next cell.
+    Neurons communicate by generating and propagating electrical signals called action potentials (動作電位), made possible by the selective movement of ions across the cell membrane through ion channels (離子通道). Understanding how a resting membrane potential (靜息膜電位) is established, how it can be transiently reversed to produce an action potential, and how that signal travels reliably from one end of a neuron to the other is the foundation of all neuroscience. This lecture also introduces synaptic transmission (突觸傳遞), completing the circuit from electrical signal to chemical message and back.
   </div>
 
-  <!-- SECTION 0 -->
   <section class="reveal-on-scroll" data-sec="0">
-    <h2>1. Ion Channels — Structure, Properties &amp; Gating</h2>
+    <h2>1. Ion Channels &#8212; Structure, Properties and Gating</h2>
 
-    <p data-topic="ion-channel-basics">
-      Ion channels (離子通道) are <strong>pore-forming membrane proteins</strong> that allow specific ions to pass through the cell membrane. Unlike carrier proteins (載體蛋白), channels move ions purely by <strong>passive transport</strong> — they never couple to ATP or co-transport mechanisms. Two hallmark features set them apart from other transporters:
-      <ol>
-        <li>Extremely fast ion flux: &gt;10<sup>6</sup> ions per second.</li>
-        <li>Ions travel <em>downhill</em> along their electrochemical gradient (電化學梯度) — no metabolic energy required.</li>
-      </ol>
-    </p>
+    <p data-topic="ion-channel-basics">Ion channels (離子通道) are pore-forming membrane proteins (孔狀膜蛋白) that allow specific ions to pass through the channel pore (通道孔) down their electrochemical gradient (電化學梯度), without any metabolic energy (代謝能量) such as ATP.</p>
 
-    <p data-topic="ion-channel-basics">
-      Ion channels serve four major physiological roles:
-      <ul>
-        <li>Establishing the resting membrane potential (靜息膜電位).</li>
-        <li>Shaping action potentials and other electrical signals.</li>
-        <li>Controlling ion flow across secretory and epithelial cells.</li>
-        <li>Regulating cell volume.</li>
-      </ul>
-    </p>
+    <ul data-topic="ion-channel-basics">
+      <li><strong>Two defining features</strong> that distinguish ion channels from other ion transporter proteins (離子轉運蛋白):
+        <ul>
+          <li>Rate of ion transport (離子轉運速率) is very high: greater than 10<sup>6</sup> ions/sec.</li>
+          <li>Ions pass "downhill" along their electrochemical gradient &#8212; no ATP or co-transport (共轉運) required.</li>
+        </ul>
+      </li>
+      <li><strong>Four functions</strong> of ion channels:
+        <ul>
+          <li>Establishing resting membrane potential (靜息膜電位).</li>
+          <li>Shaping action potentials (動作電位) and other electrical signals (電信號).</li>
+          <li>Controlling ion flow across secretory (分泌) and epithelial (上皮) cells.</li>
+          <li>Regulating cell volume (細胞體積).</li>
+        </ul>
+      </li>
+    </ul>
 
-    <p data-topic="membrane-transport-types">
-      <strong>Membrane transport proteins (膜轉運蛋白)</strong> fall into two broad families:
-      <ul>
-        <li><strong>Channels:</strong> always passive; ions move along electrochemical gradient (downhill / facilitated diffusion).</li>
-        <li><strong>Carriers:</strong> can be passive <em>or</em> active.
-          <ul>
-            <li>Secondary active transport — coupled carriers (e.g., symporters 同向轉運體, antiporters 反向轉運體) use the gradient of one ion to move another uphill.</li>
-            <li>Primary active transport — ATP-driven pumps (e.g., Na<sup>+</sup>/K<sup>+</sup>-ATPase) directly hydrolyse ATP.</li>
-          </ul>
-        </li>
-      </ul>
-      The key rule: <strong>the electrochemical gradient determines the direction of all passive transport</strong> of charged molecules (Electrochemical gradient = membrane potential + concentration gradient).
-    </p>
+    <h3>Membrane Transport Proteins &#8212; Classification</h3>
+    <table data-topic="membrane-transport-types">
+      <tr><th>Type</th><th>Mode</th><th>Energy Required?</th><th>Examples</th></tr>
+      <tr><td>Channel (通道)</td><td>Passive only; facilitated diffusion (促進擴散)</td><td>No</td><td>Na<sup>+</sup>, K<sup>+</sup>, leak channels</td></tr>
+      <tr><td>Carrier &#8212; passive (被動攜帶)</td><td>Facilitated diffusion</td><td>No</td><td>Glucose uniporter</td></tr>
+      <tr><td>Coupled carrier / symport (同向轉運) or antiport (反向轉運)</td><td>Secondary active (次級主動)</td><td>Indirect (uses ion gradient)</td><td>Na<sup>+</sup>/glucose symporter</td></tr>
+      <tr><td>ATP-driven pump (ATP驅動泵)</td><td>Primary active (初級主動)</td><td>Yes (ATP)</td><td>Na<sup>+</sup>/K<sup>+</sup>-ATPase</td></tr>
+    </table>
 
-    <div class="exam-trap-inline" data-topic="membrane-transport-types">
-      <b>Exam trap:</b> Channels are <em>always</em> passive; carriers can be active or passive. Do not say "ion channels can perform active transport."
-    </div>
+    <div class="exam-trap-inline" data-topic="membrane-transport-types"><b>Exam trap:</b> Ion channels are <em>always</em> passive &#8212; they never use ATP or couple to another ion. Carriers can be active or passive. Never say "ion channels can perform active transport."</div>
 
-    <p data-topic="channel-gating">
-      <strong>Gating (閘控)</strong> means the control of channel open and closed states. A single channel fluctuates stochastically between these two conformations. Channels can be gated in different ways:
-      <ul>
-        <li><strong>Voltage-gated (電壓閘控):</strong> open/close in response to changes in membrane potential.</li>
-        <li><strong>Ligand-gated (配體閘控):</strong> open/close when a specific molecule (neurotransmitter, second messenger) binds.</li>
-        <li><strong>Mechanically gated:</strong> respond to mechanical deformation of the membrane.</li>
-      </ul>
-      The patch-clamp technique (膜片鉗技術), developed by Erwin Neher and Bernd Sakmann (Nobel Prize 1991), allows recording of single-channel currents from a tiny membrane patch — the gold standard for studying channel gating, pharmacology, and biophysics.
-    </p>
+    <h3>Channel Gating</h3>
+    <p data-topic="channel-gating">Gating (閘控) refers to the control of open and closed states of a channel. A single channel fluctuates stochastically (隨機地) between closed and open conformations (構象).</p>
+    <ul data-topic="channel-gating">
+      <li><strong>Voltage-gated (電壓閘控)</strong> &#8212; opened by changes in membrane potential (膜電位); e.g., Na<sup>+</sup>, K<sup>+</sup>, Ca<sup>2+</sup> channels.</li>
+      <li><strong>Ligand-gated, extracellular ligand (細胞外配體閘控)</strong> &#8212; opened by binding of a neurotransmitter (神經遞質) to the extracellular domain; e.g., nicotinic ACh receptor.</li>
+      <li><strong>Ligand-gated, intracellular ligand (細胞內配體閘控)</strong> &#8212; opened by intracellular second messengers (第二信使); e.g., Ca<sup>2+</sup>-gated K<sup>+</sup> channel.</li>
+      <li><strong>Mechanically gated (機械閘控)</strong> &#8212; opened by physical deformation of the membrane; e.g., hair cell stretch receptors.</li>
+    </ul>
 
-    <p data-topic="ttx-blocker">
-      <strong>Tetrodotoxin (河豚毒素, TTX)</strong>, produced in puffer fish and certain other animals, is a potent selective blocker of voltage-gated Na<sup>+</sup> channels. It is a classic pharmacological tool used to isolate Na<sup>+</sup> channel contributions in electrophysiological experiments.
-    </p>
+    <h3>Key Axonal Ion Channels</h3>
+    <table data-topic="axonal-channels">
+      <tr><th>Channel</th><th>Activation</th><th>Selective Blocker</th><th>Function</th></tr>
+      <tr><td>Leak channel (滲漏通道)</td><td>Open at rest</td><td>Tetraethylammonium (TEA) (四乙銨) &#8212; partial</td><td>Sets resting V<sub>m</sub></td></tr>
+      <tr><td>Voltage-gated Na<sup>+</sup> channel (電壓閘控鈉通道)</td><td>Rapid depolarization; inactivates even if V<sub>m</sub> stays depolarized</td><td>Tetrodotoxin (TTX) (河豚毒素)</td><td>Rising phase of AP</td></tr>
+      <tr><td>Voltage-gated Ca<sup>2+</sup> channel (電壓閘控鈣通道)</td><td>Slower than Na<sup>+</sup>; inactivated by high [Ca<sup>2+</sup>]<sub>i</sub> or V<sub>m</sub></td><td>Verapamil, Co<sup>2+</sup>, Cd<sup>2+</sup>, Mn<sup>2+</sup>, La<sup>3+</sup></td><td>Slow depolarization; Ca<sup>2+</sup> enters as second messenger (第二信使)</td></tr>
+      <tr><td>Voltage-gated K<sup>+</sup> "delayed rectifier" (延遲整流鉀通道)</td><td>Slower than Na<sup>+</sup>; inactivates slowly and incompletely</td><td>TEA, aminopyridines</td><td>Rapid repolarization (復極化) to terminate AP</td></tr>
+      <tr><td>Ca<sup>2+</sup>-dependent K<sup>+</sup> channel (鈣依賴性鉀通道)</td><td>Depolarization + elevated [Ca<sup>2+</sup>]<sub>i</sub></td><td>Extracellular TEA</td><td>Repolarization after AP; limits I<sub>Ca</sub>-driven depolarization</td></tr>
+    </table>
 
-    <div class="exam-trap-inline" data-topic="ttx-blocker">
-      <b>Exam trap:</b> TTX blocks <em>voltage-gated Na<sup>+</sup> channels</em>, not all Na<sup>+</sup> transport or other channel types. It does not block K<sup>+</sup> channels.
-    </div>
+    <div class="exam-trap-inline" data-topic="axonal-channels"><b>Exam trap:</b> TTX (tetrodotoxin 河豚毒素) blocks voltage-gated Na<sup>+</sup> channels specifically &#8212; it does NOT block K<sup>+</sup> channels or leak channels. TEA blocks K<sup>+</sup> channels. These are separate, ion-specific blockers.</div>
+
+    <h3>Patch-Clamp Technique</h3>
+    <p data-topic="patch-clamp">The patch-clamp (膜片鉗) technique &#8212; developed by Erwin Neher and Bernd Sakmann, Nobel Prize 1991 &#8212; allows recording of current through single ion channels from isolated membrane patches (膜片). It enables pharmacological and biophysical (生物物理) characterization of individual channels, revealing the stochastic opening and closing events (開閉事件) of single channels.</p>
   </section>
 
-  <!-- SECTION 1 -->
   <section class="reveal-on-scroll" data-sec="1">
-    <h2>2. Membrane Potential &amp; the Nernst / GHK Equations</h2>
+    <h2>2. Membrane Potential &#8212; Resting Potential, Nernst and GHK Equations</h2>
 
-    <p data-topic="resting-membrane-potential">
-      Two conditions are required to build a membrane potential (膜電位):
-      <ol>
-        <li>A <strong>semi-permeable membrane</strong> — different ions have different permeabilities.</li>
-        <li>An <strong>ion concentration gradient</strong> (離子濃度梯度) across the membrane (K<sup>+</sup><sub>out</sub>/K<sup>+</sup><sub>in</sub> ≠ 1).</li>
-      </ol>
-      By convention, the <strong>extracellular side is the reference (ground = 0 mV)</strong>, so the inside of a neuron at rest is negative (~&minus;70 mV in mammalian neurons). The resting potential reflects the membrane being most permeable to K<sup>+</sup> at rest.
-    </p>
+    <p data-topic="resting-membrane-potential">The resting membrane potential (靜息膜電位) is the steady-state voltage (電壓) across the plasma membrane (質膜) when a neuron is not firing, approximately &#8722;70 to &#8722;80 mV in mammalian neurons (哺乳動物神經元), with the intracellular side negative relative to outside.</p>
 
-    <p data-topic="ion-concentrations">
-      Key ion concentration gradients (mammalian neuron):
-      <table>
-        <thead><tr><th>Ion</th><th>Intracellular (mM)</th><th>Extracellular (mM)</th><th>Direction of driving force</th></tr></thead>
-        <tbody>
-          <tr><td>K<sup>+</sup></td><td>140</td><td>5</td><td>Out (concentration); in (electrical) → net: near equilibrium at rest</td></tr>
-          <tr><td>Na<sup>+</sup></td><td>5–15</td><td>145</td><td>In (both concentration AND electrical gradient)</td></tr>
-          <tr><td>Cl<sup>&minus;</sup></td><td>4–30</td><td>110</td><td>In (concentration); out (electrical) → variable</td></tr>
-          <tr><td>Ca<sup>2+</sup></td><td>0.0001</td><td>1–2</td><td>Strongly in (both)</td></tr>
-        </tbody>
-      </table>
-      Squid giant axon values differ (K<sup>+</sup>: 400 mM in / 20 mM out; Na<sup>+</sup>: 50 mM in / 440 mM out) — note the squid values are used to derive the Nernst equation examples in lectures.
-    </p>
+    <ul data-topic="resting-membrane-potential">
+      <li><strong>Two requirements</strong> for a membrane potential:
+        <ul>
+          <li>Semi-permeable membrane (半透膜) &#8212; selectively permeable (選擇性可通過的) to some ions but not others.</li>
+          <li>Ion concentration gradient (離子濃度梯度) &#8212; the ratio [ion]<sub>out</sub>/[ion]<sub>in</sub> must not equal 1.</li>
+        </ul>
+      </li>
+    </ul>
 
-    <div class="exam-trap-inline" data-topic="ion-concentrations">
-      <b>Exam trap:</b> In the Nernst equation, the <strong>reference (outside) concentration goes on top</strong> of the logarithm by convention: E = (RT/Fz) × ln([ion]<sub>out</sub>/[ion]<sub>in</sub>). Putting inside on top gives the wrong sign.
-    </div>
+    <h3>Ion Concentration Gradients</h3>
+    <table data-topic="ion-concentrations">
+      <tr><th>Ion</th><th>Intracellular (mM) squid / mammal</th><th>Extracellular (mM) squid / mammal</th><th>Net driving direction at rest</th></tr>
+      <tr><td>K<sup>+</sup></td><td>400 / 140</td><td>20 / 5</td><td>Out (concentration dominates)</td></tr>
+      <tr><td>Na<sup>+</sup></td><td>50 / 5&#8211;15</td><td>440 / 145</td><td>In (both concentration and electrical)</td></tr>
+      <tr><td>Cl<sup>&#8722;</sup></td><td>40&#8211;150 / 4&#8211;30</td><td>560 / 110</td><td>Variable (concentration drives in; electrical may oppose)</td></tr>
+      <tr><td>Ca<sup>2+</sup></td><td>0.0001 / 0.0001</td><td>10 / 1&#8211;2</td><td>Strongly in</td></tr>
+    </table>
 
-    <p data-topic="nernst-equation">
-      The <strong>Nernst equation (能斯特方程)</strong> calculates the <strong>equilibrium potential (平衡電位)</strong> for a single ion — the membrane voltage at which there is no net flow of that ion:
-      <br>
-      E = (RT / Fz) × ln([ion]<sub>out</sub> / [ion]<sub>in</sub>)
-      <br>
-      At body/room temperature this simplifies to ~58 mV/z × log([ion]<sub>out</sub>/[ion]<sub>in</sub>).
-      <ul>
-        <li><strong>E<sub>K</sub></strong> (squid): 58/1 × log(20/400) = &minus;75 mV → this equals the resting potential when the membrane is selectively permeable to K<sup>+</sup>.</li>
-        <li><strong>E<sub>Na</sub></strong> (squid): 58/1 × log(440/50) = +55 mV → strongly positive, driving Na<sup>+</sup> inward during AP.</li>
-      </ul>
-    </p>
+    <div class="exam-trap-inline" data-topic="ion-concentrations"><b>Exam trap:</b> In the Nernst equation, the <em>outside</em> concentration goes on top by convention: E = (RT/Fz) &#215; ln([ion]<sub>out</sub>/[ion]<sub>in</sub>). Reversing inside and outside gives the wrong sign.</div>
 
-    <div class="exam-trap-inline" data-topic="nernst-equation">
-      <b>Exam trap:</b> The Nernst equilibrium potential is the voltage at which net flux is zero — it is <em>not</em> the same as the resting membrane potential unless that ion is the only one carrying current. The resting potential is set by the <em>relative permeabilities</em> of all ions (GHK equation).
-    </div>
+    <h3>Nernst Equation</h3>
+    <ul data-topic="nernst-equation">
+      <li>Formula: E<sub>x</sub> = (RT / Fz) &#215; ln([X]<sub>out</sub>/[X]<sub>in</sub>), or at room/body temperature: E<sub>x</sub> = (58 mV / z) &#215; log([X]<sub>out</sub>/[X]<sub>in</sub>).</li>
+      <li>R = universal gas constant (通用氣體常數); T = absolute temperature (絕對溫度); F = Faraday constant (法拉第常數); z = valence (化合價) of ion.</li>
+      <li>Gives the equilibrium potential (平衡電位) for ONE ion &#8212; the voltage at which net flux (淨通量) of that ion is zero.</li>
+      <li>E<sub>K</sub> (squid): 58/1 &#215; log(20/400) = &#8722;75 mV &#8212; matches resting potential closely, confirming K<sup>+</sup> is the dominant permeant (可通過的) ion at rest.</li>
+      <li>E<sub>Na</sub> (squid): 58/1 &#215; log(440/50) = +55 mV &#8212; strongly positive; Na<sup>+</sup> is far from equilibrium at rest and is driven inward when channels open.</li>
+    </ul>
 
-    <p data-topic="ghk-equation">
-      The <strong>Goldman-Hodgkin-Katz (GHK) equation (高曼-霍奇金-卡茨方程)</strong> accounts for the contribution of multiple ions (K<sup>+</sup>, Na<sup>+</sup>, Cl<sup>&minus;</sup>) weighted by their relative membrane permeabilities (相對膜通透性, p):
-      <ul>
-        <li>At rest in a typical neuron: p<sub>K</sub> : p<sub>Na</sub> : p<sub>Cl</sub> = <strong>1 : 0.05 : 0.45</strong>.</li>
-        <li>Because p<sub>K</sub> dominates at rest, V<sub>rest</sub> is close to E<sub>K</sub> (but not exactly, because p<sub>Na</sub> and p<sub>Cl</sub> pull it slightly positive).</li>
-        <li>Permeability values are reported as <em>relative</em> (unitless) with p<sub>K</sub> = 1 as reference.</li>
-      </ul>
-    </p>
+    <div class="exam-trap-inline" data-topic="nernst-equation"><b>Exam trap:</b> The Nernst equilibrium potential is NOT the resting membrane potential &#8212; it is the voltage at which that one ion has zero net flux. The actual resting V<sub>m</sub> is set by the relative permeabilities (相對通透性) of ALL contributing ions together, described by the GHK equation.</div>
 
-    <p data-topic="na-pump">
-      The <strong>Na<sup>+</sup>/K<sup>+</sup>-ATPase (鈉鉀泵)</strong> pumps 3 Na<sup>+</sup> out and 2 K<sup>+</sup> in per ATP hydrolysed. It is not directly responsible for the moment-to-moment resting potential (that is set by ion channel permeabilities and gradients), but it is essential for <strong>long-term maintenance</strong> of the ion concentration gradients that make the resting potential possible.
-    </p>
+    <h3>Goldman-Hodgkin-Katz (GHK) Equation</h3>
+    <ul data-topic="ghk-equation">
+      <li>Accounts for contribution of multiple ions (K<sup>+</sup>, Na<sup>+</sup>, Cl<sup>&#8722;</sup>) weighted by their relative membrane permeabilities (相對膜通透性).</li>
+      <li>At rest in a typical neuron: P<sub>K</sub> : P<sub>Na</sub> : P<sub>Cl</sub> = <strong>1 : 0.05 : 0.45</strong> &#8212; K<sup>+</sup> permeability dominates.</li>
+      <li>Because P<sub>K</sub> dominates at rest, V<sub>m</sub> is closer to E<sub>K</sub> than to E<sub>Na</sub> &#8212; but slightly depolarized from E<sub>K</sub> because P<sub>Na</sub> and P<sub>Cl</sub> also contribute.</li>
+      <li>Permeability values are unitless relative values with P<sub>K</sub> = 1 as reference (參考值).</li>
+    </ul>
 
-    <div class="exam-trap-inline" data-topic="na-pump">
-      <b>Exam trap:</b> The Na<sup>+</sup>/K<sup>+</sup>-ATPase is electrogenic (net outward positive charge = slight hyperpolarisation), but its primary role is <em>gradient maintenance</em>, not moment-to-moment potential generation.
-    </div>
+    <h3>Na<sup>+</sup>/K<sup>+</sup>-ATPase Pump</h3>
+    <ul data-topic="na-pump">
+      <li>Pumps 3 Na<sup>+</sup> out and 2 K<sup>+</sup> in per ATP hydrolyzed (水解); electrogenic (生電性) &#8212; net outward positive charge creates a small hyperpolarizing (超極化) current.</li>
+      <li>Primary role: long-term maintenance (長期維持) of ion concentration gradients; without it, gradients would dissipate over time due to leak currents (滲漏電流).</li>
+      <li>Does NOT directly generate the moment-to-moment resting potential &#8212; that is set by channel permeabilities and the existing gradients.</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="na-pump"><b>Exam trap:</b> The Na<sup>+</sup>/K<sup>+</sup>-ATPase is important for long-term gradient maintenance, not for directly generating the resting membrane potential moment-to-moment. Blocking the pump changes V<sub>m</sub> only gradually as gradients dissipate over time.</div>
+
+    <!-- SVG: Ion gradient and pump schematic -->
+    <svg viewBox="0 0 500 180" xmlns="http://www.w3.org/2000/svg" style="max-width:500px;width:100%;margin:1rem 0;display:block;font-family:Georgia,serif;font-size:12px">
+      <rect x="0" y="82" width="500" height="16" fill="#c8b97a" opacity="0.45"/>
+      <text x="250" y="94" text-anchor="middle" fill="#666" font-size="10">Plasma membrane (質膜)</text>
+      <text x="14" y="30" fill="#333" font-weight="bold" font-size="12">Extracellular</text>
+      <text x="14" y="50" fill="#555" font-size="11">[K+] LOW 5 mM</text>
+      <text x="14" y="66" fill="#555" font-size="11">[Na+] HIGH 145 mM</text>
+      <text x="14" y="118" fill="#333" font-weight="bold" font-size="12">Intracellular (cytosol 細胞質)</text>
+      <text x="14" y="138" fill="#555" font-size="11">[K+] HIGH 140 mM</text>
+      <text x="14" y="154" fill="#555" font-size="11">[Na+] LOW 5-15 mM</text>
+      <line x1="200" y1="82" x2="200" y2="42" stroke="#4a90d9" stroke-width="2" marker-end="url(#a1)"/>
+      <text x="208" y="65" fill="#4a90d9" font-size="11">K+ leaks out</text>
+      <line x1="270" y1="42" x2="270" y2="82" stroke="#e07a5f" stroke-width="2" marker-end="url(#a2)"/>
+      <text x="278" y="65" fill="#e07a5f" font-size="11">Na+ leaks in</text>
+      <rect x="360" y="60" width="120" height="58" rx="8" fill="#7ab87a" opacity="0.75"/>
+      <text x="420" y="80" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11">Na+/K+-ATPase</text>
+      <text x="420" y="97" text-anchor="middle" fill="#fff" font-size="10">3 Na+ OUT</text>
+      <text x="420" y="112" text-anchor="middle" fill="#fff" font-size="10">2 K+ IN / ATP</text>
+      <defs>
+        <marker id="a1" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#4a90d9"/></marker>
+        <marker id="a2" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#e07a5f"/></marker>
+      </defs>
+    </svg>
   </section>
 
-  <!-- SECTION 2 -->
   <section class="reveal-on-scroll" data-sec="2">
-    <h2>3. Action Potential — Generation &amp; Phases</h2>
+    <h2>3. Action Potential &#8212; Generation and Phases</h2>
 
-    <p data-topic="action-potential-phases">
-      The <strong>action potential (動作電位, AP)</strong> is a rapid, stereotyped voltage transient lasting ~1–2 ms. Its phases are:
-      <ol>
-        <li><strong>Resting potential</strong> (~&minus;70 mV): voltage-gated Na<sup>+</sup> and K<sup>+</sup> channels closed.</li>
-        <li><strong>Depolarisation (去極化) — rising phase:</strong> voltage-gated Na<sup>+</sup> channels open → Na<sup>+</sup> rushes in → membrane rapidly swings toward +55 mV (E<sub>Na</sub>).</li>
-        <li><strong>Repolarisation (復極化) — falling phase:</strong> Na<sup>+</sup> channels inactivate (not simply close); delayed voltage-gated K<sup>+</sup> channels open → K<sup>+</sup> rushes out → membrane returns toward rest.</li>
-        <li><strong>Afterhyperpolarisation (後超極化):</strong> K<sup>+</sup> channels remain open briefly longer than needed → membrane overshoots below resting potential.</li>
-        <li><strong>Return to resting potential</strong> as K<sup>+</sup> channels close.</li>
-      </ol>
-    </p>
+    <p data-topic="action-potential">An action potential (動作電位; AP) is a rapid, transient reversal of membrane potential (膜電位) that follows a stereotyped (固定形態的) "all-or-none" (全或無) waveform whenever the membrane depolarizes above threshold voltage (閾值電壓). Duration: ~1&#8211;2 ms.</p>
 
-    <p data-topic="action-potential-properties">
-      Three key characteristics of the AP:
-      <ul>
-        <li><strong>All-or-none (全或無)</strong> — once threshold is crossed, the AP always has the same amplitude and shape; stimuli below threshold produce no AP.</li>
-        <li><strong>Short duration</strong> — ~1–2 ms.</li>
-        <li><strong>Requires a trigger depolarisation above threshold (閾值)</strong> — typically ~15–20 mV depolarisation from rest.</li>
-      </ul>
-    </p>
+    <h3>Phases of the Action Potential</h3>
+    <ul data-topic="action-potential">
+      <li><strong>Resting potential (靜息電位)</strong> &#8212; ~&#8722;70 to &#8722;80 mV; K<sup>+</sup> leak channels open, voltage-gated Na<sup>+</sup> and K<sup>+</sup> channels closed.</li>
+      <li><strong>Depolarization / rising phase (上升相)</strong> &#8212; voltage-gated Na<sup>+</sup> channels open; Na<sup>+</sup> rushes in; V<sub>m</sub> rises rapidly toward E<sub>Na</sub> (+55 mV).</li>
+      <li><strong>Peak (峰值)</strong> &#8212; approximately +20 to +40 mV; brief overshoot above 0 mV.</li>
+      <li><strong>Repolarization / falling phase (下降相)</strong> &#8212; Na<sup>+</sup> channels inactivate (失活; NOT simply close); delayed voltage-gated K<sup>+</sup> channels open; K<sup>+</sup> rushes out; V<sub>m</sub> falls.</li>
+      <li><strong>After-hyperpolarization (後超極化)</strong> &#8212; K<sup>+</sup> channels remain open briefly after V<sub>m</sub> passes rest; V<sub>m</sub> dips below resting level.</li>
+      <li><strong>Return to resting potential</strong> &#8212; K<sup>+</sup> channels close; V<sub>m</sub> stabilizes.</li>
+    </ul>
 
-    <p data-topic="ap-threshold-mechanism">
-      <strong>Threshold (閾值)</strong> represents a critical tipping point driven by a positive-feedback loop:
-      <ol>
-        <li>Depolarisation exceeds the rate of membrane repolarisation.</li>
-        <li>Na<sup>+</sup> influx exceeds K<sup>+</sup> efflux.</li>
-        <li>More depolarisation → more voltage-gated Na<sup>+</sup> channels open.</li>
-        <li>More open Na<sup>+</sup> channels → more depolarisation → runaway feedback → AP fires.</li>
-      </ol>
-    </p>
+    <h3>Threshold and Positive Feedback</h3>
+    <ul data-topic="ap-threshold">
+      <li>Threshold (閾值) is reached when Na<sup>+</sup> influx (內流) exceeds K<sup>+</sup> efflux (外流).</li>
+      <li><strong>Positive feedback loop (正反饋迴路)</strong>: depolarization &#8594; more voltage-gated Na<sup>+</sup> channels open &#8594; more Na<sup>+</sup> in &#8594; more depolarization &#8594; runaway regenerative (再生的) AP.</li>
+      <li>All-or-none (全或無): once threshold is crossed, the AP always has the same amplitude and shape regardless of stimulus strength.</li>
+    </ul>
 
-    <div class="exam-trap-inline" data-topic="ap-threshold-mechanism">
-      <b>Exam trap:</b> Threshold is a dynamic, regenerative event — once Na<sup>+</sup> influx exceeds K<sup>+</sup> efflux, the process is self-sustaining. A stimulus that is "just below threshold" produces only a graded depolarisation, not an AP.
-    </div>
+    <div class="exam-trap-inline" data-topic="ap-threshold"><b>Exam trap:</b> The AP is all-or-none (全或無) &#8212; once threshold is crossed, the AP always has the same amplitude and shape. Sub-threshold stimuli produce only a graded depolarization (漸進去極化), not an AP, no matter how many times they are applied (unless they summate above threshold).</div>
+
+    <!-- SVG: AP waveform schematic -->
+    <svg viewBox="0 0 440 190" xmlns="http://www.w3.org/2000/svg" style="max-width:440px;width:100%;margin:1rem 0;display:block;font-family:Georgia,serif;font-size:11px">
+      <line x1="35" y1="10" x2="35" y2="170" stroke="#999" stroke-width="1.5"/>
+      <line x1="35" y1="170" x2="430" y2="170" stroke="#999" stroke-width="1.5"/>
+      <line x1="35" y1="130" x2="430" y2="130" stroke="#ccc" stroke-width="1" stroke-dasharray="4"/>
+      <text x="5" y="133" fill="#999" font-size="10">-70</text>
+      <line x1="35" y1="100" x2="430" y2="100" stroke="#eee" stroke-width="1" stroke-dasharray="2"/>
+      <text x="12" y="103" fill="#bbb" font-size="10">0</text>
+      <text x="8" y="48" fill="#999" font-size="10">+40</text>
+      <polyline points="35,130 90,130 135,45 175,150 215,143 260,130 430,130" fill="none" stroke="#e07a5f" stroke-width="2.5"/>
+      <text x="55" y="148" fill="#666" font-size="10">Rest</text>
+      <text x="92" y="115" fill="#4a90d9" font-size="10">Depol.</text>
+      <text x="128" y="40" fill="#e07a5f" font-size="10">Peak</text>
+      <text x="170" y="168" fill="#7ab87a" font-size="10">Repol.</text>
+      <text x="205" y="160" fill="#9b59b6" font-size="10">After-hyperpol.</text>
+      <text x="265" y="148" fill="#666" font-size="10">Rest</text>
+      <text x="100" y="85" fill="#4a90d9" font-size="10">Na+ in</text>
+      <text x="155" y="85" fill="#7ab87a" font-size="10">K+ out</text>
+    </svg>
+
+    <h3>Refractory Periods</h3>
+    <p data-topic="refractory-periods">After an AP, the neuron passes through refractory phases (不應期) that limit firing frequency (放電頻率) and enforce unidirectional propagation (單向傳播).</p>
+    <ul data-topic="refractory-periods">
+      <li><strong>Absolute refractory period (絕對不應期)</strong> &#8212; Na<sup>+</sup> channels fully inactivated (失活); no AP possible regardless of stimulus strength; threshold is effectively infinite.</li>
+      <li><strong>Relative refractory period (相對不應期)</strong> &#8212; Na<sup>+</sup> channels partially recovering; threshold elevated (提高); a stronger-than-normal stimulus can trigger a smaller-amplitude AP.</li>
+      <li><strong>Normal excitability</strong> &#8212; restored when Na<sup>+</sup> channels fully recover and K<sup>+</sup> channels close.</li>
+      <li>Refractory periods set the upper limit of spike frequency and &#8212; because the region behind an advancing AP is refractory &#8212; enforce unidirectional conduction.</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="refractory-periods"><b>Exam trap:</b> Na<sup>+</sup> channel inactivation (失活) is NOT the same as simply "closing." Inactivated channels cannot be re-opened by depolarization alone; they must first recover (de-inactivate) by returning to a hyperpolarized (超極化) potential. During the absolute refractory period, even a maximal stimulus produces no AP.</div>
   </section>
 
-  <!-- SECTION 3 -->
   <section class="reveal-on-scroll" data-sec="3">
-    <h2>4. Refractory Periods &amp; AP Propagation</h2>
+    <h2>4. Action Potential Propagation</h2>
 
-    <p data-topic="refractory-periods">
-      After an AP, voltage-gated Na<sup>+</sup> channels pass through an <strong>inactivated state</strong> (distinct from simply closed). This produces two refractory phases (不應期):
-      <ul>
-        <li><strong>Absolute refractory period (絕對不應期):</strong> Na<sup>+</sup> channels are fully inactivated → threshold is effectively infinite → no second AP can be generated regardless of stimulus strength.</li>
-        <li><strong>Relative refractory period (相對不應期):</strong> Na<sup>+</sup> channels are partially recovering from inactivation; afterhyperpolarisation means membrane is more negative than rest → threshold is elevated → an AP <em>can</em> be generated but only with a <em>stronger</em> than normal stimulus, and the resulting AP has a smaller amplitude.</li>
-        <li><strong>Normal excitability</strong> returns when channels fully recover and membrane returns to resting potential.</li>
-      </ul>
-      The refractory period sets an <strong>upper limit on spike frequency</strong> and, together with inactivation, ensures <strong>unidirectional propagation</strong> (the region just behind an advancing AP is refractory).
-    </p>
+    <p data-topic="ap-propagation">Once generated at the axon hillock (軸丘), an AP travels from the initiation site (起始位點) to synaptic terminals. The mode of propagation depends on whether the axon is myelinated (有髓鞘的) or unmyelinated (無髓鞘的).</p>
 
-    <div class="exam-trap-inline" data-topic="refractory-periods">
-      <b>Exam trap:</b> Na<sup>+</sup> channel inactivation ≠ simply "closing." Inactivated channels cannot be opened by depolarisation alone — they must first recover (de-inactivate) by returning to hyperpolarised potentials.
-    </div>
+    <h3>Passive vs. Active Propagation</h3>
+    <table data-topic="ap-propagation">
+      <tr><th>Property</th><th>Passive sub-threshold (被動傳播)</th><th>Active AP propagation (主動傳播)</th></tr>
+      <tr><td>Amplitude over distance</td><td>Decays exponentially (length constant 長度常數, &#955;)</td><td>No decrement; regenerative (再生性)</td></tr>
+      <tr><td>Speed</td><td>Slows over distance</td><td>Fast, constant</td></tr>
+      <tr><td>Direction</td><td>All directions</td><td>Unidirectional (單向)</td></tr>
+      <tr><td>Mechanism</td><td>Electrotonic current spread (電緊張擴散)</td><td>Sequential Na<sup>+</sup> channel activation in adjacent membrane patches</td></tr>
+    </table>
 
-    <p data-topic="ap-propagation">
-      <strong>Passive (subthreshold) propagation (被動傳導)</strong>: local current spreads electrotonically but:
-      <ul>
-        <li>Amplitude decays exponentially with distance (determined by the length constant, λ).</li>
-        <li>Signal slows over distance.</li>
-        <li>Spreads in all directions.</li>
-      </ul>
-      <strong>Active (AP) propagation (主動傳導)</strong>:
-      <ul>
-        <li>Regenerative — no decrement in amplitude.</li>
-        <li>Unidirectional — the region behind the AP is in the absolute refractory period.</li>
-        <li>Fast conduction.</li>
-      </ul>
-    </p>
+    <h3>Mechanism of Unidirectional Propagation</h3>
+    <ul data-topic="ap-propagation">
+      <li>Active AP patch depolarizes the adjacent resting patch via local current (局部電流).</li>
+      <li>Adjacent patch reaches threshold and fires its own AP.</li>
+      <li>Patch behind the AP is in absolute refractory period &#8212; cannot re-fire; signal travels only forward.</li>
+      <li>After refractory period ends, that patch is ready to be activated again.</li>
+    </ul>
 
-    <p data-topic="saltatory-conduction">
-      In <strong>myelinated axons (有髓軸突)</strong>, the myelin sheath (髓鞘) insulates the internodal membrane and dramatically increases the effective length constant. APs can only be regenerated at the <strong>nodes of Ranvier (朗維爾結)</strong> — gaps in the myelin. The AP appears to "jump" from node to node: this is called <strong>saltatory conduction (跳躍式傳導)</strong>. Benefits: much faster conduction velocity at lower metabolic cost compared to unmyelinated axons of equal diameter.
-    </p>
+    <h3>Saltatory Conduction in Myelinated Axons</h3>
+    <p data-topic="saltatory-conduction">In myelinated axons (有髓鞘軸突), the myelin sheath (髓鞘) &#8212; formed by Schwann cells (雪旺細胞) in the PNS &#8212; acts as an electrical insulator (絕緣體), forcing current to jump between nodes of Ranvier (蘭維爾節點) where ion channels are concentrated.</p>
+    <ul data-topic="saltatory-conduction">
+      <li><strong>Saltatory conduction (跳躍式傳導)</strong> &#8212; AP jumps from node to node; dramatically increases conduction velocity (傳導速度).</li>
+      <li>More energy-efficient (能量效率更高) than unmyelinated conduction &#8212; fewer ion movements per unit length needed to regenerate the AP.</li>
+      <li>Loss of myelin (e.g., multiple sclerosis 多發性硬化症) slows or blocks conduction.</li>
+    </ul>
 
-    <div class="exam-trap-inline" data-topic="saltatory-conduction">
-      <b>Exam trap:</b> Saltatory conduction is faster AND more energetically efficient than conduction in unmyelinated axons — both points are often tested. The AP itself is not different; only the spatial pattern of where it regenerates changes.
-    </div>
+    <div class="exam-trap-inline" data-topic="saltatory-conduction"><b>Exam trap:</b> Saltatory conduction is both faster AND more metabolically efficient than unmyelinated conduction &#8212; both points are tested. The AP waveform itself is not different; only where it regenerates spatially changes.</div>
+
+    <!-- SVG: Saltatory conduction diagram -->
+    <svg viewBox="0 0 500 110" xmlns="http://www.w3.org/2000/svg" style="max-width:500px;width:100%;margin:1rem 0;display:block;font-family:Georgia,serif;font-size:11px">
+      <rect x="10" y="48" width="480" height="14" rx="3" fill="#d4c68a" opacity="0.5"/>
+      <rect x="40" y="40" width="70" height="30" rx="6" fill="#7ab87a" opacity="0.45"/>
+      <rect x="150" y="40" width="70" height="30" rx="6" fill="#7ab87a" opacity="0.45"/>
+      <rect x="260" y="40" width="70" height="30" rx="6" fill="#7ab87a" opacity="0.45"/>
+      <rect x="370" y="40" width="70" height="30" rx="6" fill="#7ab87a" opacity="0.45"/>
+      <text x="75" y="91" text-anchor="middle" fill="#7ab87a" font-size="10">Myelin (髓鞘)</text>
+      <text x="112" y="38" text-anchor="middle" fill="#c0392b" font-size="10">Node</text>
+      <text x="222" y="38" text-anchor="middle" fill="#c0392b" font-size="10">Node</text>
+      <text x="332" y="38" text-anchor="middle" fill="#c0392b" font-size="10">Node</text>
+      <text x="442" y="38" text-anchor="middle" fill="#c0392b" font-size="10">Node</text>
+      <path d="M112,55 Q167,18 222,55" fill="none" stroke="#e07a5f" stroke-width="2" marker-end="url(#as)"/>
+      <path d="M222,55 Q277,18 332,55" fill="none" stroke="#e07a5f" stroke-width="2" marker-end="url(#as)"/>
+      <path d="M332,55 Q387,18 442,55" fill="none" stroke="#e07a5f" stroke-width="2" marker-end="url(#as)"/>
+      <text x="250" y="105" text-anchor="middle" fill="#555">Direction of propagation &#8594;</text>
+      <defs>
+        <marker id="as" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#e07a5f"/></marker>
+      </defs>
+    </svg>
   </section>
 
-  <!-- SECTION 4 -->
   <section class="reveal-on-scroll" data-sec="4">
-    <h2>5. Synaptic Transmission — Chemical Synapses</h2>
+    <h2>5. Synaptic Transmission</h2>
 
-    <p data-topic="synaptic-transmission-steps">
-      At a <strong>chemical synapse (化學突觸)</strong>, information is converted from electrical to chemical and back to electrical. The five steps are:
-      <ol>
-        <li><strong>Synthesis (合成):</strong> neurotransmitter (神經遞質) is synthesised in the cell body and/or terminal.</li>
-        <li><strong>Storage (儲存):</strong> packed into synaptic vesicles (突觸小泡) and transported to the terminal.</li>
-        <li><strong>Release / Exocytosis (釋放 / 胞吐):</strong> AP depolarises the terminal → voltage-gated Ca<sup>2+</sup> channels open → Ca<sup>2+</sup> influx → vesicle fusion with presynaptic membrane → transmitter released into synaptic cleft (突觸間隙).</li>
-        <li><strong>Postsynaptic effects (突觸後效應):</strong> transmitter binds postsynaptic receptor → ion channels open/close → electrical change (EPSP or IPSP).</li>
-        <li><strong>Inactivation (失活):</strong> transmitter is removed by (a) diffusion away from cleft, (b) enzymatic degradation (e.g., acetylcholinesterase for ACh), (c) presynaptic re-uptake (e.g., monoamine transporters).</li>
-      </ol>
-    </p>
+    <p data-topic="synaptic-transmission">Synaptic transmission (突觸傳遞) converts an electrical signal in the presynaptic neuron (突觸前神經元) to a chemical signal (化學信號) and back to an electrical signal in the postsynaptic cell (突觸後細胞) at a chemical synapse (化學突觸).</p>
 
-    <div class="exam-trap-inline" data-topic="synaptic-transmission-steps">
-      <b>Exam trap:</b> Ca<sup>2+</sup> influx is the <em>trigger</em> for vesicle fusion and transmitter release — it is the link between the electrical AP in the terminal and the chemical signal. Blocking Ca<sup>2+</sup> channels abolishes release even if the AP fires normally.
-    </div>
+    <h3>Five Steps of Chemical Synaptic Transmission</h3>
+    <ol data-topic="synaptic-transmission">
+      <li><strong>Synthesis (合成)</strong> &#8212; neurotransmitter (神經遞質) synthesized in cell body or terminal; transported to terminal.</li>
+      <li><strong>Storage (儲存)</strong> &#8212; packed into synaptic vesicles (突觸小泡); transported to active zone (活化區) near synaptic cleft (突觸間隙).</li>
+      <li><strong>Release / exocytosis (釋放/胞吐)</strong> &#8212; arriving AP depolarizes terminal; voltage-gated Ca<sup>2+</sup> channels open; Ca<sup>2+</sup> influx triggers SNARE-mediated vesicle fusion (小泡融合) with presynaptic membrane; transmitter released into cleft.</li>
+      <li><strong>Postsynaptic effects (突觸後效應)</strong> &#8212; transmitter binds receptor proteins (受體蛋白); ligand-gated ion channels open; V<sub>m</sub> changes (EPSP or IPSP).</li>
+      <li><strong>Inactivation / termination (失活/終止)</strong> &#8212; transmitter removed by: (a) enzymatic degradation (酶解; e.g., acetylcholinesterase 乙酰膽鹼酯酶 for ACh), (b) presynaptic re-uptake (突觸前再攝取; monoamines 單胺類), (c) diffusion away (e.g., peptide transmitters 肽類遞質), or (d) combination.</li>
+    </ol>
 
-    <p data-topic="epsp-ipsp">
-      <strong>EPSP (興奮性突觸後電位, excitatory post-synaptic potential):</strong> transmitter binding opens channels that depolarise the postsynaptic membrane (e.g., non-selective cation channels → Na<sup>+</sup> in). The membrane moves toward threshold.
-      <br><br>
-      <strong>IPSP (抑制性突觸後電位, inhibitory post-synaptic potential):</strong> transmitter binding opens channels that <em>hyperpolarise</em> the membrane or clamp it below threshold (e.g., K<sup>+</sup> channels open, or Cl<sup>&minus;</sup> channels open → membrane toward E<sub>Cl</sub>). The <strong>nature of the postsynaptic receptor</strong> determines whether the effect is excitatory or inhibitory, not the transmitter identity per se.
-    </p>
+    <div class="exam-trap-inline" data-topic="synaptic-transmission"><b>Exam trap:</b> Ca<sup>2+</sup> influx at the presynaptic terminal is the trigger for vesicle fusion and transmitter release. Blocking voltage-gated Ca<sup>2+</sup> channels at the terminal abolishes synaptic transmission even if the presynaptic AP fires normally.</div>
 
-    <div class="exam-trap-inline" data-topic="epsp-ipsp">
-      <b>Exam trap:</b> The same transmitter can produce an EPSP at one synapse and an IPSP at another, depending on which receptor and which ion channel it acts on. The receptor type — not the transmitter identity — determines the sign of the postsynaptic response.
-    </div>
+    <h3>Molecular Mechanism of Vesicle Release &#8212; SNARE Proteins</h3>
+    <ul data-topic="snare-exocytosis">
+      <li><strong>SNARE proteins (SNARE蛋白)</strong> &#8212; v-SNARE (vesicle-associated 小泡端) and t-SNARE (target membrane 靶膜端) complex docks the vesicle to the presynaptic membrane (突觸前膜).</li>
+      <li><strong>Synaptotagmin (突觸小泡蛋白)</strong> &#8212; Ca<sup>2+</sup> sensor (鈣感應蛋白); Ca<sup>2+</sup> binding triggers membrane fusion (膜融合).</li>
+      <li>Actin (肌動蛋白) facilitates vesicle movement toward the active zone.</li>
+      <li>After exocytosis, fused membrane is recycled via endocytosis (胞吞).</li>
+    </ul>
 
-    <p data-topic="synaptic-integration">
-      <strong>Synaptic integration (突觸整合)</strong> occurs at the axon hillock (軸丘), the site of AP initiation. EPSPs and IPSPs are summed spatially (from different inputs arriving simultaneously) and temporally (from the same input firing repeatedly). Only when the net depolarisation crosses threshold does an AP fire — the neuron acts as a coincidence detector.
-    </p>
+    <h3>EPSP vs. IPSP</h3>
+    <table data-topic="epsp-ipsp">
+      <tr><th>Property</th><th>EPSP (興奮性突觸後電位)</th><th>IPSP (抑制性突觸後電位)</th></tr>
+      <tr><td>V<sub>m</sub> change</td><td>Depolarization (去極化)</td><td>Hyperpolarization (超極化)</td></tr>
+      <tr><td>Ion movement</td><td>Na<sup>+</sup> in (and K<sup>+</sup> out)</td><td>Cl<sup>&#8722;</sup> in or K<sup>+</sup> out</td></tr>
+      <tr><td>Effect on AP initiation</td><td>Increases probability</td><td>Decreases probability</td></tr>
+      <tr><td>Example receptor</td><td>Nicotinic ACh receptor</td><td>GABA<sub>A</sub> receptor (Cl<sup>&#8722;</sup> channel)</td></tr>
+    </table>
 
-    <p data-topic="transmitter-inactivation">
-      Termination of postsynaptic transmitter action occurs by:
-      <ul>
-        <li><strong>Diffusion</strong> away from the cleft (common for peptide neurotransmitters).</li>
-        <li><strong>Enzymatic degradation</strong> — e.g., acetylcholinesterase (乙醯膽鹼酯酶) breaks down acetylcholine (ACh).</li>
-        <li><strong>Presynaptic re-uptake</strong> (回收) — e.g., monoamine transporters (DAT, SERT, NET) recycle dopamine, serotonin, noradrenaline.</li>
-        <li>Combinations of the above.</li>
-      </ul>
-    </p>
+    <div class="exam-trap-inline" data-topic="epsp-ipsp"><b>Exam trap:</b> The nature of the postsynaptic response (EPSP vs. IPSP) is determined by the TYPE OF RECEPTOR on the postsynaptic membrane, NOT by the transmitter identity alone. The same transmitter can be excitatory at one synapse and inhibitory at another depending on the receptor expressed.</div>
+
+    <h3>Synaptic Integration at the Axon Hillock</h3>
+    <p data-topic="synaptic-integration">The axon hillock (軸丘) is the site of AP initiation (起始位點). EPSPs and IPSPs from many inputs are summated (總和) to determine whether threshold is reached.</p>
+    <ul data-topic="synaptic-integration">
+      <li><strong>Temporal summation (時間總和)</strong> &#8212; repeated inputs from the same synapse add depolarizations before each decays.</li>
+      <li><strong>Spatial summation (空間總和)</strong> &#8212; simultaneous inputs from multiple synapses converge at the axon hillock.</li>
+      <li>If net depolarization exceeds threshold, an AP is initiated and propagates via saltatory conduction in myelinated axons.</li>
+    </ul>
+
+    <h3>Major Neurotransmitter Classes</h3>
+    <table data-topic="neurotransmitters">
+      <tr><th>Class</th><th>Examples</th></tr>
+      <tr><td>Acetylcholine (乙酰膽鹼; ACh)</td><td>ACh (nicotinic, muscarinic receptors)</td></tr>
+      <tr><td>Amino acids (氨基酸)</td><td>Glutamate (谷氨酸; excitatory 興奮性), GABA (&#947;-氨基丁酸; inhibitory 抑制性), Glycine (甘氨酸; inhibitory)</td></tr>
+      <tr><td>Monoamines (單胺類)</td><td>Dopamine (多巴胺), Norepinephrine (去甲腎上腺素), Epinephrine (腎上腺素), Serotonin (血清素), Octopamine</td></tr>
+      <tr><td>Peptides (肽類)</td><td>Met-Enkephalin (腦啡肽), Substance P (物質P), Angiotensin II (血管緊張素II), Oxytocin (催產素), Vasopressin (加壓素), Opioids (阿片類), Glucagon, Neurotensin, Somatostatin, Proctolin</td></tr>
+      <tr><td>Gases (氣體)</td><td>Nitric oxide (一氧化氮; NO), Carbon monoxide (一氧化碳; CO)</td></tr>
+      <tr><td>Nucleotides (核苷酸)</td><td>ATP (腺苷三磷酸), GTP (鳥苷三磷酸)</td></tr>
+    </table>
   </section>
 
   <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
     <strong>Exam Traps Summary</strong>
     <ul>
-      <li>Ion channels are <em>always</em> passive — they never use ATP; carriers can be active or passive.</li>
-      <li>In the Nernst equation the <em>outside</em> concentration goes on top of the logarithm (extracellular = reference by convention).</li>
-      <li>The Nernst equilibrium potential is NOT the resting membrane potential; it is the voltage at which net flux of that <em>single ion</em> is zero.</li>
-      <li>The GHK equation (not Nernst) gives the actual resting potential by weighting all ions by their relative permeabilities (p<sub>K</sub> : p<sub>Na</sub> : p<sub>Cl</sub> = 1 : 0.05 : 0.45 at rest).</li>
-      <li>Repolarisation is due to Na<sup>+</sup> channel <em>inactivation</em> (not simply closing) AND K<sup>+</sup> channel opening — both contribute.</li>
-      <li>Na<sup>+</sup> channel inactivation ≠ channel closing: inactivated channels cannot be re-opened by depolarisation; they need hyperpolarisation to recover.</li>
-      <li>Absolute refractory period: no AP possible (Na<sup>+</sup> channels fully inactivated). Relative refractory period: AP possible but requires stronger stimulus and produces smaller AP.</li>
-      <li>Saltatory conduction is both faster AND more metabolically efficient than unmyelinated conduction.</li>
-      <li>TTX blocks only voltage-gated Na<sup>+</sup> channels, not K<sup>+</sup> channels.</li>
-      <li>The nature of the postsynaptic receptor (not the transmitter identity) determines EPSP vs. IPSP.</li>
-      <li>Ca<sup>2+</sup> influx at the presynaptic terminal triggers vesicle fusion; without Ca<sup>2+</sup>, release does not occur even if the AP fires.</li>
-      <li>The Na<sup>+</sup>/K<sup>+</sup>-ATPase maintains long-term ion gradients; it does not directly generate the resting potential moment-to-moment.</li>
+      <li>Ion channels are always passive &#8212; they never use ATP; carriers can be active or passive.</li>
+      <li>TTX (tetrodotoxin 河豚毒素) blocks voltage-gated Na<sup>+</sup> channels; TEA blocks K<sup>+</sup> channels. They are separate, ion-specific blockers.</li>
+      <li>In the Nernst equation, outside concentration goes on top: E = (RT/Fz) &#215; ln([ion]<sub>out</sub>/[ion]<sub>in</sub>). Reversing gives wrong sign.</li>
+      <li>Nernst equilibrium potential is NOT the resting membrane potential &#8212; it is the voltage at which net flux of that one ion is zero. GHK gives the actual resting V<sub>m</sub>.</li>
+      <li>Resting V<sub>m</sub> is close to E<sub>K</sub> but NOT exactly E<sub>K</sub>: P<sub>Na</sub> and P<sub>Cl</sub> shift it slightly positive (permeability ratio at rest: P<sub>K</sub> : P<sub>Na</sub> : P<sub>Cl</sub> = 1 : 0.05 : 0.45).</li>
+      <li>Na<sup>+</sup>/K<sup>+</sup>-ATPase maintains long-term ion gradients; it does NOT directly generate the resting membrane potential moment-to-moment.</li>
+      <li>AP is all-or-none (全或無): amplitude and shape are fixed once threshold is crossed. Sub-threshold stimuli produce no AP.</li>
+      <li>Repolarization is due to Na<sup>+</sup> channel INACTIVATION (not simply closing) AND K<sup>+</sup> channel opening &#8212; both contribute.</li>
+      <li>Na<sup>+</sup> channel inactivation &#8800; channel closing: inactivated channels cannot be re-opened by depolarization; they need hyperpolarization to recover.</li>
+      <li>Absolute refractory period (絕對不應期): NO AP possible with any stimulus. Relative refractory period (相對不應期): AP CAN occur but requires stronger stimulus and produces smaller peak.</li>
+      <li>Saltatory conduction is both faster AND more metabolically efficient than unmyelinated conduction &#8212; both points are tested.</li>
+      <li>Ca<sup>2+</sup> influx at presynaptic terminal triggers vesicle fusion. Blocking presynaptic Ca<sup>2+</sup> channels abolishes transmission even with a normal presynaptic AP.</li>
+      <li>EPSP vs. IPSP is determined by the receptor type on the postsynaptic cell, not by the transmitter identity alone.</li>
     </ul>
   </div>
 
   <div class="memorize reveal-on-scroll reveal-delay-2">
-    <strong>Top Things to Memorize</strong>
+    <strong>Top things to memorize</strong>
     <ol>
-      <li>Ion channels: passive only; &gt;10<sup>6</sup> ions/sec; down electrochemical gradient; no ATP.</li>
-      <li>Resting membrane potential requires (1) semi-permeable membrane + (2) concentration gradient; ~&minus;70 mV in mammalian neurons.</li>
-      <li>Nernst equation: E = (RT/Fz) × ln([ion]<sub>out</sub>/[ion]<sub>in</sub>); E<sub>K</sub> ≈ &minus;75 mV (squid); E<sub>Na</sub> ≈ +55 mV (squid).</li>
-      <li>GHK equation permeability ratios at rest: p<sub>K</sub> : p<sub>Na</sub> : p<sub>Cl</sub> = 1 : 0.05 : 0.45.</li>
-      <li>AP phases: resting → depolarisation (Na<sup>+</sup> in) → repolarisation (Na<sup>+</sup> inactivates + K<sup>+</sup> out) → afterhyperpolarisation → rest; duration ~1–2 ms; all-or-none.</li>
-      <li>AP threshold: positive-feedback loop — Na<sup>+</sup> influx &gt; K<sup>+</sup> efflux → runaway depolarisation.</li>
-      <li>Absolute refractory (Na<sup>+</sup> fully inactivated, no AP possible) vs. relative refractory (partially inactivated, AP possible with stronger stimulus).</li>
-      <li>Saltatory conduction in myelinated axons: AP jumps node-to-node; faster + more efficient.</li>
-      <li>TTX = selective voltage-gated Na<sup>+</sup> channel blocker from puffer fish.</li>
-      <li>Chemical synapse 5 steps: synthesis → storage → release (Ca<sup>2+</sup>-triggered) → postsynaptic effects → inactivation.</li>
-      <li>Postsynaptic receptor type determines EPSP (depolarisation) or IPSP (hyperpolarisation).</li>
-      <li>Transmitter termination: diffusion (peptides), enzymatic degradation (ACh → acetylcholinesterase), re-uptake (monoamines).</li>
+      <li>Ion channel definition: pore-forming proteins, always passive (electrochemical gradient, no ATP), rate &gt;10<sup>6</sup> ions/sec.</li>
+      <li>Four types of channel gating: voltage-gated, extracellular ligand-gated, intracellular ligand-gated, mechanically gated.</li>
+      <li>TTX blocks voltage-gated Na<sup>+</sup> channels (rising phase of AP); TEA blocks K<sup>+</sup> channels (repolarization).</li>
+      <li>Two requirements for membrane potential: semi-permeable membrane + ion concentration gradient.</li>
+      <li>Nernst equation: E<sub>x</sub> = (58 mV / z) &#215; log([X]<sub>out</sub>/[X]<sub>in</sub>); E<sub>K</sub> &#8776; &#8722;75 mV; E<sub>Na</sub> &#8776; +55 mV (squid values).</li>
+      <li>GHK resting permeability ratio: P<sub>K</sub> : P<sub>Na</sub> : P<sub>Cl</sub> = 1 : 0.05 : 0.45 &#8212; K<sup>+</sup> dominates, so V<sub>m</sub> &#8776; E<sub>K</sub>.</li>
+      <li>AP phases in order: resting &#8594; depolarization (Na<sup>+</sup> in) &#8594; peak &#8594; repolarization (K<sup>+</sup> out, Na<sup>+</sup> inactivated) &#8594; after-hyperpolarization &#8594; rest; ~1&#8211;2 ms.</li>
+      <li>Absolute refractory = Na<sup>+</sup> channels inactivated, no AP possible; relative refractory = partial recovery, elevated threshold, smaller AP.</li>
+      <li>Saltatory conduction (跳躍式傳導): AP jumps between nodes of Ranvier (蘭維爾節點); faster and more energy-efficient than unmyelinated.</li>
+      <li>Na<sup>+</sup>/K<sup>+</sup>-ATPase: 3 Na<sup>+</sup> out, 2 K<sup>+</sup> in per ATP; electrogenic; maintains long-term ion gradients.</li>
+      <li>5 steps of synaptic transmission: synthesis &#8594; storage &#8594; release (Ca<sup>2+</sup>-dependent) &#8594; postsynaptic effect &#8594; inactivation.</li>
+      <li>EPSP = depolarization (Na<sup>+</sup> in); IPSP = hyperpolarization (Cl<sup>&#8722;</sup> in or K<sup>+</sup> out); determined by receptor type, not transmitter identity.</li>
     </ol>
+  </div>
+
+  <div class="lower-yield reveal-on-scroll">
+    <strong>Lower-yield / skip if short on time</strong>
+    <ul>
+      <li>Specific Ca<sup>2+</sup> channel blockers beyond verapamil (La<sup>3+</sup>, Ni<sup>2+</sup>, Mn<sup>2+</sup>, Cd<sup>2+</sup>) &#8212; know the class, not all individual blockers.</li>
+      <li>Full GHK equation formula &#8212; understand the concept (multiple permeabilities weighted); deriving the exact formula is rarely tested.</li>
+      <li>Squid axon ion concentrations vs. mammalian &#8212; know mammalian values; squid numbers are illustrative for Nernst examples.</li>
+      <li>All specific peptide neurotransmitter names (Proctolin, Neurotensin, Angiotensin II, Substance P structure) &#8212; know the categories, not every member.</li>
+      <li>Patch-clamp circuit details (headstage, amplifier wiring) &#8212; know the purpose and Nobel context, not the circuit diagram.</li>
+      <li>Exact chemical structures of individual neurotransmitters shown in lecture slides.</li>
+    </ul>
   </div>
 </div>
 
 <div id="notes-8" class="page">
   <a class="btn back" onclick="showPage('home')">← Home</a>
   <button id="clear-hl-8" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(8)">Clear Highlights</button>
-  <h1>Lecture 8: Neuro2 — Properties of Sensory Cells and Sensory Systems</h1>
+  <h1>Lecture 8: Neuro2: Properties of Sensory Cells and Sensory Systems</h1>
 
   <div class="bigpic reveal-on-scroll">
-    Sensory receptors (感受器) are specialised cells — neural or non-neural — that detect a specific environmental stimulus and convert it into an electrical signal the CNS can interpret, a process called sensory transduction (換能). The strength and duration of the resulting generator or receptor potential are graded with stimulus intensity, and the CNS reads intensity as action-potential frequency and duration. The somatosensory system handles four modalities — touch, proprioception, temperature, and nociception — each mediated by distinct receptor types and molecular channels including the Nobel Prize-winning Piezo2, TRPV1, and TRPM8. Hearing is a special sense that relies on cochlear hair cells to convert mechanical vibrations into electrical signals; inner hair cells (IHC, 內毛細胞) are the primary signal transmitters while outer hair cells (OHC, 外毛細胞) act as mechanical amplifiers via the motor protein prestin. Place theory explains how frequency is encoded spatially along the cochlea (耳蝸), with each location responding maximally to a particular frequency — a principle established by Georg von Békésy.
+    This lecture examines how the nervous system detects, converts, and encodes information from the environment. Sensory receptors (感覺受器) transduce (轉換) diverse physical stimuli into electrical signals the CNS can interpret, following one of three transmission patterns. The lecture then traces how somatic, temperature, pain, and auditory information travel from receptor to cortex, with special focus on the molecular identity of mechanosensitive channels (機械感覺離子通道) and the cochlear amplifier (耳蝸放大器).
   </div>
 
-  <!-- Section 0: Sensory Receptors and Transduction -->
   <section class="reveal-on-scroll" data-sec="0">
     <h2>1. Sensory Receptors and Transduction</h2>
-
-    <p data-topic="sensory-receptor-types">
-      A <strong>sensory receptor (感受器)</strong> is a specialised cell — neural or non-neural — that detects a specific environmental stimulus and converts it into an electrical signal. Four major types exist:
-      <table>
-        <thead><tr><th>Receptor Type</th><th>Examples of Stimuli</th></tr></thead>
-        <tbody>
-          <tr><td>Chemoreceptors (化學感受器)</td><td>O<sub>2</sub>, pH, glucose and other organic molecules</td></tr>
-          <tr><td>Mechanoreceptors (機械感受器)</td><td>Pressure (baroreceptors), cell stretch (osmoreceptors), vibration, acceleration, sound</td></tr>
-          <tr><td>Photoreceptors (光感受器)</td><td>Photons of light</td></tr>
-          <tr><td>Thermoreceptors (溫度感受器)</td><td>Varying degrees of heat</td></tr>
-        </tbody>
-      </table>
+    <p data-topic="sensory-receptors">
+      A <strong>sensory receptor</strong> (感覺受器) is a specialized cell (neural or non-neural) that detects a specific environmental stimulus (刺激) and converts (轉換) it into an electrical signal the CNS can process. Conversion of stimulus energy into a CNS-readable signal is called <strong>sensory transduction</strong> (感覺轉換).
     </p>
+    <ul data-topic="sensory-receptors">
+      <li><strong>Selective receptor structures</strong> (選擇性受體結構) on the cell surface ensure only the appropriate stimulus is detected.</li>
+      <li>The stimulus depolarizes (去極化) the membrane by opening ion channels (離子通道).</li>
+      <li><strong>Neural sensory receptors</strong> (神經性感覺受器): stimulus generates a <strong>generator potential</strong> (產生器電位) at the receptor membrane, which spreads electrotonically (以電緊張方式傳播) to the spike-initiating zone (脈衝起始區) and triggers action potentials (動作電位).</li>
+      <li><strong>Non-neural sensory receptors</strong> (非神經性感覺受器): stimulus generates a <strong>receptor potential</strong> (受體電位), which drives neurotransmitter (神經傳遞物質) release onto a downstream afferent neuron (傳入神經元) that then fires action potentials.</li>
+      <li>Signal amplification (訊號放大) occurs via cascades of intracellular second messengers (第二信使).</li>
+    </ul>
 
-    <p data-topic="sensory-transduction-mechanism">
-      <strong>Sensory transduction (換能)</strong> is the conversion of stimulus energy into information the CNS can process. The environmental stimulus depolarises the membrane by opening ion channels directly or indirectly. Two broad receptor categories differ in how they generate downstream signals:
-      <ul>
-        <li><strong>Neural sensory receptors:</strong> depolarisation produces a <strong>generator potential (發生器電位)</strong>, which triggers action potentials (AP) in the same cell.</li>
-        <li><strong>Non-neural sensory receptors:</strong> depolarisation produces a <strong>receptor potential (感受器電位)</strong>, which drives neurotransmitter release, generating APs in downstream (postsynaptic) neurons.</li>
-      </ul>
-      Three basic transmission patterns (Type 1, Type 2, Type 3) describe how sensory signals reach the CNS, with Type 3 being relevant to non-neural receptors.
-    </p>
+    <h3>Receptor types by stimulus modality</h3>
+    <table data-topic="sensory-receptors">
+      <tr><th>Receptor Type</th><th>Stimulus Examples</th></tr>
+      <tr><td>Mechanoreceptors (機械感受器)</td><td>Pressure (baroreceptors 壓力感受器), stretch (osmoreceptors 滲透壓感受器), vibration, acceleration, sound</td></tr>
+      <tr><td>Photoreceptors (光感受器)</td><td>Photons of light</td></tr>
+      <tr><td>Thermoreceptors (溫度感受器)</td><td>Varying degrees of heat</td></tr>
+      <tr><td>Chemoreceptors (化學感受器)</td><td>Chemical signals (implied by olfactory and taste examples in lecture)</td></tr>
+      <tr><td>Nociceptors (傷害感受器)</td><td>Strong noxious stimuli (chemical, mechanical, or thermal)</td></tr>
+    </table>
 
-    <div class="exam-trap-inline" data-topic="sensory-transduction-mechanism">
-      <b>Exam trap:</b> Do not confuse <em>generator potential</em> (in neural receptors — fires its own AP) with <em>receptor potential</em> (in non-neural receptors — triggers NT release to excite a downstream neuron). Both are graded, but the downstream mechanism differs.
-    </div>
+    <h3>Three transmission patterns</h3>
+    <table data-topic="sensory-transduction-types">
+      <tr><th>Type</th><th>Receptor cell</th><th>Signal flow</th><th>Examples</th></tr>
+      <tr><td>Type 1</td><td>Neural (receptor = afferent neuron)</td><td>Stimulus → generator potential → AP in same cell</td><td>Olfactory receptor neurons (嗅覺受器神經元)</td></tr>
+      <tr><td>Type 2</td><td>Neural, but separated from spike zone</td><td>Generator potential spreads electronically to distant spike-initiating zone → AP</td><td>Some somatic receptors</td></tr>
+      <tr><td>Type 3</td><td>Non-neural</td><td>Receptor potential → neurotransmitter release → AP in afferent neuron</td><td>Taste bud cells (味蕾細胞), auditory hair cells (聽覺毛細胞)</td></tr>
+    </table>
 
-    <p data-topic="sensory-coding">
-      <strong>Sensory coding (感覺編碼)</strong> translates stimulus properties into neural signals:
-      <ul>
-        <li>The <strong>strength</strong> of the generator/receptor potential → <strong>frequency</strong> of APs (or amount of NT released).</li>
-        <li>The <strong>duration</strong> of the generator/receptor potential → <strong>duration</strong> of the AP train (or NT secretion).</li>
-      </ul>
-      This means a stronger stimulus makes neurons fire faster, not harder (APs are all-or-none).
-    </p>
+    <h3>Sensory coding: intensity and duration</h3>
+    <ul data-topic="sensory-coding">
+      <li><strong>Stimulus intensity</strong> (刺激強度) is encoded by the <strong>frequency</strong> (頻率) of action potentials (or amount of neurotransmitter secretion in Type 3).</li>
+      <li><strong>Stimulus duration</strong> (刺激持續時間) is encoded by the <strong>duration</strong> of the AP series (or neurotransmitter secretion period).</li>
+      <li>The generator/receptor potential amplitude (振幅) and duration vary with the stimulus; this graded (級差) event is integrated at the trigger zone.</li>
+      <li><strong>Absolute refractory period</strong> (絕對不反應期) and <strong>relative refractory period</strong> (相對不反應期) shape the maximum and graded AP firing rates.</li>
+    </ul>
 
-    <div class="exam-trap-inline" data-topic="sensory-coding">
-      <b>Exam trap:</b> Stimulus intensity is encoded as AP <em>frequency</em>, not AP amplitude. AP amplitude does not change with stimulus strength.
-    </div>
+    <div class="exam-trap-inline" data-topic="sensory-coding"><b>Exam trap:</b> AP frequency codes stimulus <em>intensity</em>, not quality. Stimulus quality (modality) is determined by which receptor pathway is activated, not by AP waveform or frequency.</div>
   </section>
 
-  <!-- Section 1: Somatosensory System -->
   <section class="reveal-on-scroll" data-sec="1">
-    <h2>2. The Somatosensory System</h2>
-
-    <p data-topic="somatosensory-modalities">
-      The somatosensory system (體感系統) covers four modalities: <strong>touch (觸覺), proprioception (本體感覺), temperature (溫度覺), and nociception (傷害感覺 / 痛覺 and itching)</strong>. Each modality has dedicated receptor types.
+    <h2>2. Conscious vs. Subconscious Sensory Processing</h2>
+    <p data-topic="conscious-subconscious">
+      Sensory information is processed at two levels: <strong>conscious</strong> (有意識) processing (special senses and somatic senses) and <strong>subconscious</strong> (無意識) processing (visceral stimuli and proprioceptive feedback).
     </p>
 
+    <table data-topic="conscious-subconscious">
+      <tr><th>Conscious Processing</th><th>Subconscious Processing</th></tr>
+      <tr><td>Special senses: vision (視覺), hearing (聽覺), taste (味覺), smell (嗅覺), equilibrium (平衡)</td><td>Muscle length and tension (肌肉長度與張力); proprioception (本體感覺)</td></tr>
+      <tr><td>Somatic senses: touch (觸覺), temperature (溫度感覺), pain (痛覺), itch (搔癢), proprioception (conscious portion)</td><td>Visceral stimuli: blood pressure (血壓), blood pH (血液酸鹼值) and O2 content, CSF pH (腦脊髓液酸鹼值), lung inflation (肺部充氣), osmolarity (滲透壓), GI distension (腸胃道膨脹), blood glucose (血糖)</td></tr>
+    </table>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Somatosensory Pathway and Cortex</h2>
     <p data-topic="somatosensory-pathway">
-      The <strong>somatosensory pathway (體感傳導路徑)</strong> follows a three-neuron chain:
-      <ol>
-        <li><strong>Primary sensory neurons</strong> — activated by receptor stimulation; carry signals from the periphery.</li>
-        <li><strong>Secondary sensory neurons</strong> — interneurons that <strong>cross the midline</strong> of the body, so left-body sensations are processed in the right hemisphere and vice versa.</li>
-        <li><strong>Tertiary sensory neurons</strong> — receive input in the thalamus (丘腦) and project to the <strong>somatosensory cortex (體感皮層)</strong> of the cerebral cortex.</li>
-      </ol>
+      The <strong>somatosensory system</strong> (體感覺系統) covers four modalities (感覺模式): touch (觸覺), proprioception (本體感覺), temperature (溫度感覺), and nociception (傷害感覺，pain and itch).
     </p>
+    <ul data-topic="somatosensory-pathway">
+      <li><strong>Primary sensory neurons</strong> (第一級感覺神經元): receptor activation generates APs that ascend to the spinal cord.</li>
+      <li><strong>Secondary sensory neurons</strong> (第二級感覺神經元): interneurons (介神經元) in the spinal cord that <strong>cross the midline</strong> (交叉至對側) — left-body sensations are processed in the right hemisphere (右半球) and vice versa.</li>
+      <li><strong>Tertiary sensory neurons</strong> (第三級感覺神經元): secondary neurons synapse (突觸) in the <strong>thalamus</strong> (視丘); tertiary neurons project to the somatosensory cortex (體感覺皮質).</li>
+    </ul>
 
-    <div class="exam-trap-inline" data-topic="somatosensory-pathway">
-      <b>Exam trap:</b> It is the <em>secondary</em> sensory neurons (not primary or tertiary) that cross the midline. Also, all pathways relay in the thalamus before reaching cortex.
-    </div>
+    <!-- SVG: 3-neuron sensory pathway -->
+    <svg viewBox="0 0 480 120" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px;display:block;margin:12px auto;font-family:Georgia,serif;font-size:12px;">
+      <rect x="10" y="45" width="90" height="30" rx="6" fill="#e8f5e9" stroke="#4caf50" stroke-width="1.5"/>
+      <text x="55" y="64" text-anchor="middle" fill="#2e7d32">Receptor (1°)</text>
+      <line x1="100" y1="60" x2="145" y2="60" stroke="#666" stroke-width="1.5" marker-end="url(#arr)"/>
+      <rect x="145" y="45" width="100" height="30" rx="6" fill="#fff9c4" stroke="#f9a825" stroke-width="1.5"/>
+      <text x="195" y="60" text-anchor="middle" fill="#6d4c41">Spinal cord (2°)</text>
+      <text x="195" y="73" text-anchor="middle" fill="#6d4c41">crosses midline</text>
+      <line x1="245" y1="60" x2="290" y2="60" stroke="#666" stroke-width="1.5" marker-end="url(#arr)"/>
+      <rect x="290" y="45" width="80" height="30" rx="6" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
+      <text x="330" y="64" text-anchor="middle" fill="#0d47a1">Thalamus (3°)</text>
+      <line x1="370" y1="60" x2="415" y2="60" stroke="#666" stroke-width="1.5" marker-end="url(#arr)"/>
+      <rect x="415" y="45" width="55" height="30" rx="6" fill="#fce4ec" stroke="#c62828" stroke-width="1.5"/>
+      <text x="442" y="60" text-anchor="middle" fill="#b71c1c">Cortex</text>
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+          <polygon points="0 0, 8 3, 0 6" fill="#666"/>
+        </marker>
+      </defs>
+    </svg>
 
     <p data-topic="somatosensory-cortex">
-      The <strong>somatosensory cortex (體感皮層)</strong> maps the body topographically — each body region corresponds to a specific cortical area. More sensitive body regions have proportionally larger cortical representations. Importantly, the size of a region's cortical representation is <strong>not fixed</strong>; it can change with usage (cortical plasticity 皮層可塑性).
+      The <strong>somatosensory cortex</strong> (體感覺皮質) is the region of the cerebral cortex (大腦皮質) that identifies the location of sensations. Key properties:
     </p>
+    <ul data-topic="somatosensory-cortex">
+      <li>Each body region maps to a specific cortical area (皮質區域); all right-leg signals terminate in one defined region.</li>
+      <li>Cortical space (皮質空間) devoted to a body part is proportional (成比例) to that part's sensory sensitivity (感覺靈敏度), not its physical size.</li>
+      <li>Cortical map size is <strong>not fixed</strong> (非固定) — it changes according to the frequency of use of that body part (neuroplasticity 神經可塑性).</li>
+    </ul>
 
-    <p data-topic="touch-receptors">
-      <strong>Touch receptors (觸覺感受器)</strong> respond to stretch, steady pressure, fluttering, vibration, and texture. They include free nerve endings and complex encapsulated receptors. The <strong>Piezo2 channel</strong> is a mechanosensitive ion channel that mediates gentle touch; it is also responsible for proprioception (本體感覺), described as the "sixth sense" — the sense of self-movement and body position.
-    </p>
-
-    <p data-topic="temperature-receptors">
-      <strong>Temperature receptors (溫度感受器)</strong> are free nerve endings in two functional classes:
-      <ul>
-        <li><strong>Cold receptors:</strong> respond to temperatures below body temperature; use the <strong>TRPM8 channel</strong> (a Transient Receptor Potential channel). TRPM8 also senses cooling compounds like menthol (薄荷醇) and eucalyptol (桉葉油醇). TRPM8-deficient mice are insensitive to cold.</li>
-        <li><strong>Warm receptors:</strong> respond from body temperature to ~45°C; other TRP channels handle intermediate ranges. <strong>TRPV1</strong> responds to noxious heat above 43°C and also to capsaicin (辣椒素) from chilli peppers.</li>
-      </ul>
-      Discovery of TRPV1 and TRPM8 as temperature sensors, and Piezo channels as touch sensors, earned the <strong>2021 Nobel Prize in Physiology or Medicine</strong>.
-    </p>
-
-    <div class="exam-trap-inline" data-topic="temperature-receptors">
-      <b>Exam trap:</b> TRPV1 senses <em>noxious heat</em> (above 43°C) <em>and</em> capsaicin — not all warm temperatures. TRPM8 senses cold <em>and</em> menthol/eucalyptol. Do not assign capsaicin to TRPM8 or menthol to TRPV1.
-    </div>
-
-    <p data-topic="nociceptors">
-      <strong>Nociceptors (傷害感受器)</strong>, also called pain receptors, are free nerve endings that respond to strong noxious stimuli — chemical, mechanical, or thermal — that cause or risk tissue damage. They activate two pathways:
-      <ul>
-        <li><strong>A. Reflexive protective responses</strong> integrated at the spinal cord level (fast, unconscious).</li>
-        <li><strong>B. Ascending pathways to the cortex</strong> producing conscious pain sensation.</li>
-      </ul>
-    </p>
-
-    <div class="exam-trap-inline" data-topic="nociceptors">
-      <b>Exam trap:</b> Nociceptors activate <em>two</em> pathways — a fast spinal reflex arc AND a slower ascending conscious pathway. Pain is not purely cortical.
-    </div>
+    <div class="exam-trap-inline" data-topic="somatosensory-cortex"><b>Exam trap:</b> The amount of cortex devoted to a body part reflects sensitivity, not body-part size. Fingertips get more cortex than the back, even though the back is physically larger.</div>
   </section>
 
-  <!-- Section 2: Hearing — Properties of Sound -->
-  <section class="reveal-on-scroll" data-sec="2">
-    <h2>3. Hearing: Properties of Sound</h2>
-
-    <p data-topic="hearing-overview">
-      <strong>Hearing (聽覺)</strong> is the perception of energy carried by sound waves, characterised by three properties: <strong>amplitude (振幅), frequency (頻率), and complexity (複雜性 / 音色)</strong>. Disabling hearing loss affects 5.3% of the world population and one third of people over 65. The molecular identity of the mechanotransduction channel in auditory hair cells is still not fully established, making it the "last frontier" of sensory neurobiology.
-    </p>
-
-    <p data-topic="sound-properties">
-      The three basic properties of sound:
-      <ul>
-        <li><strong>Amplitude:</strong> perceived as loudness, measured in decibels (dB). Normal conversation is ~60 dB. Sounds above 80 dB can damage hair cells.</li>
-        <li><strong>Frequency:</strong> perceived as pitch, measured in Hz. The average human ear hears 20–20,000 Hz, with most acute hearing at 1–3 kHz.</li>
-        <li><strong>Complexity (Timbre, 音色):</strong> what makes two instruments sound different even at the same pitch and loudness — determined by the mix of overtones in the sound wave.</li>
-      </ul>
-    </p>
-
-    <div class="exam-trap-inline" data-topic="sound-properties">
-      <b>Exam trap:</b> The most acute human hearing is at 1–3 kHz, NOT across the full 20–20,000 Hz range. Also, hearing range narrows with age.
-    </div>
-  </section>
-
-  <!-- Section 3: Cochlear Anatomy and Auditory Transduction -->
   <section class="reveal-on-scroll" data-sec="3">
-    <h2>4. Cochlear Anatomy and Auditory Transduction</h2>
+    <h2>4. Touch, Temperature, and Pain Receptors</h2>
 
-    <p data-topic="cochlear-anatomy">
-      The <strong>cochlea (耳蝸)</strong> houses the <strong>organ of Corti (科蒂氏器)</strong>, which contains two key cell types:
-      <ul>
-        <li><strong>Inner hair cells (IHC, 內毛細胞):</strong> 3,000 per cochlea; arranged in one row. They are the primary sensory cells that transmit auditory signals to the brain.</li>
-        <li><strong>Outer hair cells (OHC, 外毛細胞):</strong> 12,000 per cochlea; arranged in three rows. They are mechanical amplifiers.</li>
-      </ul>
-      Hair cells bear <strong>stereocilia (靜纖毛)</strong> connected by <strong>tip links (尖端連結)</strong>, which are crucial for mechanotransduction.
-    </p>
+    <h3>Touch receptors</h3>
+    <p data-topic="touch-receptors">Touch receptors respond to various forms of physical contact: stretch (伸展), steady pressure (持續壓力), flutter (顫動), vibration (振動), and texture (質感).</p>
 
-    <p data-topic="auditory-transduction">
-      <strong>Auditory transduction (聽覺換能)</strong> — mechano-electrical transduction (機電換能) — occurs in the cochlear hair cells. Sound waves cause the basilar membrane to vibrate, deflecting the stereocilia. This deflection pulls on tip links, opening mechanically gated ion channels. The resulting ion influx generates a receptor potential, triggering neurotransmitter release onto the cochlear nerve fibers.
-    </p>
+    <table data-topic="touch-receptors">
+      <tr><th>Receptor</th><th>Stimulus</th><th>Notes</th></tr>
+      <tr><td>Merkel receptors (梅克爾受器)</td><td>Steady pressure and texture</td><td>Slow-adapting; fine spatial resolution</td></tr>
+      <tr><td>Meissner's corpuscle (邁斯納小體)</td><td>Flutter and stroking movements</td><td>Fast-adapting; fingertips</td></tr>
+      <tr><td>Pacinian corpuscle (巴齊尼小體)</td><td>Vibration</td><td>Fast-adapting; deep skin</td></tr>
+      <tr><td>Ruffini corpuscle (魯菲尼小體)</td><td>Skin stretch</td><td>Slow-adapting; directional stretch</td></tr>
+      <tr><td>Free nerve endings of hair root (毛根自由神經末梢)</td><td>Hair movement</td><td>Detects light touch/movement</td></tr>
+      <tr><td>Free nerve endings of nociceptors (傷害感受器自由神經末梢)</td><td>Noxious stimuli</td><td>Pain signaling</td></tr>
+    </table>
 
-    <p data-topic="ihc-vs-ohc-innervation">
-      <strong>Innervation asymmetry:</strong> The cochlear nerve contains 30,000+ fibers. There is a nearly <strong>10:1 fiber-to-IHC ratio</strong> — meaning each IHC receives massive innervation. By contrast, very few afferent fibers innervate OHCs. A small number of efferent fibers descend from the brain to OHCs (for modulation). This confirms that IHCs are the primary signal senders to the brain.
-    </p>
+    <p data-topic="piezo2-touch"><strong>Piezo2 channel</strong> (Piezo2 離子通道) is a mechanosensitive channel (機械感覺通道) that is the <strong>major transducer</strong> (主要轉換器) of mechanical forces for touch sensation.</p>
+    <ul data-topic="piezo2-touch">
+      <li>Piezo2 mediates gentle touch; found at Merkel cell-LTMR afferent synapses (低閾值機械感受器傳入突觸).</li>
+      <li>Piezo2 is also responsible for <strong>proprioception</strong> (本體感覺) — the "sixth sense" of self-movement and body position.</li>
+      <li>Patients with <strong>PIEZO2 mutations</strong> (PIEZO2 基因突變) have problems with both touch and proprioception (confirmed in NIH clinical study).</li>
+      <li><strong>Nobel Prize 2021</strong>: awarded to David Julius and Ardem Patapoutian for discovery of TRPV1 and TRPM8 as temperature sensors and Piezo channels as touch/proprioception sensors.</li>
+    </ul>
 
-    <div class="exam-trap-inline" data-topic="ihc-vs-ohc-innervation">
-      <b>Exam trap:</b> Despite there being 4× more OHCs (12,000) than IHCs (3,000), the vast majority of afferent cochlear nerve fibers innervate IHCs, not OHCs. OHCs receive mainly efferent (descending) input.
-    </div>
+    <div class="exam-trap-inline" data-topic="piezo2-touch"><b>Exam trap:</b> Piezo2 is responsible for BOTH gentle touch AND proprioception, not just touch. Patients with Piezo2 mutations lose body-position sense, especially when eyes are closed.</div>
 
-    <p data-topic="ohc-amplification">
-      <strong>OHC mechanical amplification:</strong> OHCs contain <strong>prestin (普雷斯汀)</strong>, a transmembrane motor protein that changes shape (contracts and elongates) in response to membrane voltage changes (electromotility, 電動性). This electromotility amplifies the vibration of the basilar membrane, increasing sensitivity to incoming sound frequencies and amplifying the signal — a process called <strong>cochlear amplification (耳蝸放大)</strong>.
-    </p>
+    <h3>Temperature receptors</h3>
+    <p data-topic="temperature-receptors">Temperature is detected by free nerve endings (自由神經末梢) expressing <strong>TRP channels</strong> (瞬態受體電位通道, Transient Receptor Potential channels).</p>
 
-    <div class="exam-trap-inline" data-topic="ohc-amplification">
-      <b>Exam trap:</b> Prestin drives OHC motility in response to <em>voltage changes</em> (electromotility), not directly to sound. Prestin is in OHCs, not IHCs. IHCs transmit the signal; OHCs amplify the mechanical wave.
-    </div>
+    <table data-topic="temperature-receptors">
+      <tr><th>Channel</th><th>Stimulus</th><th>Temperature Range / Notes</th></tr>
+      <tr><td>TRPM8</td><td>Cold; also menthol (薄荷醇) and eucalyptol (桉油精, cooling compounds)</td><td>Below body temperature; TRPM8-knockout mice are insensitive to cold</td></tr>
+      <tr><td>TRPV1</td><td>Noxious heat (有害熱); also capsaicin (辣椒素, from chili)</td><td>Over 43°C; responsible for "hot chili" burning sensation</td></tr>
+      <tr><td>TRPA1, TRPM3, other TRP channels</td><td>Various temperature ranges</td><td>Cover broad temperature spectrum between cold and noxious heat</td></tr>
+    </table>
+
+    <h3>Nociceptors (pain receptors)</h3>
+    <ul data-topic="nociceptors">
+      <li><strong>Nociceptors</strong> (傷害感受器, also called pain receptors) are free nerve endings that respond to strong noxious stimuli (強烈有害刺激) — chemical, mechanical, or thermal — that cause or could cause tissue damage (組織損傷).</li>
+      <li>Activate two pathways:
+        <ul>
+          <li><strong>A. Spinal reflex</strong> (脊髓反射): reflexive protective responses integrated at the spinal cord level (e.g. withdrawal reflex 縮退反射).</li>
+          <li><strong>B. Ascending cortical pathway</strong> (上行皮質路徑): signals travel to the cortex and become conscious pain sensation (有意識的痛覺).</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="nociceptors"><b>Exam trap:</b> Nociceptors activate two separate pathways simultaneously: a fast spinal reflex (no cortex required) AND a slower ascending pathway to cortex for conscious pain. Do not confuse the two.</div>
   </section>
 
-  <!-- Section 4: Place Theory of Frequency Coding -->
   <section class="reveal-on-scroll" data-sec="4">
-    <h2>5. Sensory Coding for Sound Frequency — Place Theory</h2>
-
-    <p data-topic="place-theory">
-      <strong>Place theory (位置理論)</strong> states that each location along the cochlea responds maximally to a specific sound frequency — thus the cochlea performs a spatial frequency analysis. Low frequencies are encoded near the apex; high frequencies near the base. This was established by <strong>Georg von Békésy (1899–1972)</strong>, who won the Nobel Prize for this work. The analogy is that different keys on a piano correspond to different positions along the cochlea.
+    <h2>5. Hearing: Anatomy and Sound Physics</h2>
+    <p data-topic="hearing-basics">
+      Hearing is the perception of energy carried by <strong>sound waves</strong> (聲波), including their frequency (頻率), amplitude (振幅), and complexity (複雜度). Disabling hearing loss affects <strong>5.3% of the world population</strong> and one third of persons over 65 years.
     </p>
 
-    <div class="exam-trap-inline" data-topic="place-theory">
-      <b>Exam trap:</b> Place theory means frequency is encoded by <em>which</em> cochlear neurons are activated (location), not by the firing rate of a single neuron. Do not confuse with rate/frequency coding.
-    </div>
+    <table data-topic="hearing-basics">
+      <tr><th>Physical Dimension</th><th>Physical Stimulus</th><th>Perceptual Dimension</th></tr>
+      <tr><td>Amplitude (振幅)</td><td>Pressure magnitude</td><td>Loudness (響度) — loud vs. soft</td></tr>
+      <tr><td>Frequency (頻率)</td><td>Cycles per second (Hz)</td><td>Pitch (音高) — low vs. high</td></tr>
+      <tr><td>Complexity (複雜度)</td><td>Waveform shape</td><td>Timbre (音色, 音質) — what makes instruments sound different at same pitch and loudness</td></tr>
+    </table>
+
+    <ul data-topic="hearing-basics">
+      <li>Normal conversation: ~60 dB; sounds >80 dB can damage hair cells (毛細胞).</li>
+      <li>Human hearing range: <strong>20 to 20,000 Hz</strong>; most acute hearing at <strong>1-3 kHz</strong>.</li>
+      <li>Hearing sensitivity declines with age (特別是高頻率 high frequencies lost first); loss is more pronounced in men than women at equivalent ages.</li>
+    </ul>
+
+    <h3>Gross anatomy of the ear</h3>
+    <ul data-topic="ear-anatomy">
+      <li><strong>Outer ear</strong> (外耳): concha (耳甲) + flange (耳廓) + external auditory canal (外耳道) — funnels sound to the tympanic membrane (鼓膜).</li>
+      <li><strong>Middle ear</strong> (中耳): tympanic membrane + three ossicles (聽小骨) — malleus (錘骨), incus (砧骨), stapes (鐙骨); Eustachian tube (耳咽管) equalizes pressure.</li>
+      <li><strong>Inner ear</strong> (內耳): cochlea (耳蝸) + vestibular organ (前庭器官); vestibulocochlear nerve (前庭耳蝸神經) transmits signals to brain.</li>
+    </ul>
+
+    <h3>Cochlea and Organ of Corti</h3>
+    <ul data-topic="cochlea-structure">
+      <li>Cochlea is divided into three fluid-filled ducts (液體充填管道):
+        <ul>
+          <li><strong>Scala vestibuli</strong> (前庭階) — filled with perilymph (外淋巴).</li>
+          <li><strong>Cochlear duct / scala media</strong> (蝸管/中階) — filled with endolymph (內淋巴).</li>
+          <li><strong>Scala tympani</strong> (鼓階) — filled with perilymph.</li>
+        </ul>
+      </li>
+      <li><strong>Reissner's membrane</strong> (萊斯納膜) separates scala vestibuli from cochlear duct.</li>
+      <li><strong>Basilar membrane</strong> (基底膜) separates cochlear duct from scala tympani; supports the Organ of Corti (科爾蒂器).</li>
+      <li><strong>Tectorial membrane</strong> (蓋膜) overlies the Organ of Corti and contacts stereocilia (靜纖毛) of hair cells.</li>
+      <li><strong>Helicotrema</strong> (蝸頂孔) connects scala vestibuli and scala tympani at the cochlear apex.</li>
+      <li><strong>Oval window</strong> (卵圓窗): stapes footplate attaches here; transmits vibrations to cochlear fluid.</li>
+      <li><strong>Round window</strong> (圓窗): allows fluid pressure to dissipate back to middle ear.</li>
+    </ul>
+
+    <h3>Hair cell types</h3>
+    <table data-topic="hair-cells">
+      <tr><th>Cell Type</th><th>Count per cochlea</th><th>Innervation ratio</th><th>Primary Role</th></tr>
+      <tr><td>Inner hair cells (內毛細胞, IHC)</td><td>~3,000</td><td>~10 cochlear nerve fibers per IHC</td><td>Primary afferent signal to brain (signal detection)</td></tr>
+      <tr><td>Outer hair cells (外毛細胞, OHC)</td><td>~12,000</td><td>Sparse efferent innervation from brain; few afferent fibers</td><td>Mechanical amplification (cochlear amplifier 耳蝸放大器)</td></tr>
+    </table>
+    <ul data-topic="hair-cells">
+      <li>Total cochlear nerve (耳蝸神經) fibers: >30,000; nearly 10:1 fiber-to-IHC ratio confirms IHCs as main signal source.</li>
+      <li>Small number of fibers descend <strong>from brain to OHCs</strong> (efferent control 傳出控制).</li>
+    </ul>
   </section>
 
-  <!-- Exam Traps Summary -->
+  <section class="reveal-on-scroll" data-sec="5">
+    <h2>6. Auditory Transduction and Cochlear Amplification</h2>
+
+    <h3>Sound transmission pathway</h3>
+    <ol data-topic="auditory-transduction">
+      <li>Sound waves strike the <strong>tympanic membrane</strong> (鼓膜) and set it vibrating.</li>
+      <li>Vibrations transfer to the three <strong>ossicles</strong> (聽小骨): malleus (錘骨) → incus (砧骨) → stapes (鐙骨).</li>
+      <li>Stapes footplate vibrates the <strong>oval window</strong> (卵圓窗) membrane, creating fluid waves in the <strong>scala vestibuli</strong> (前庭階) (perilymph).</li>
+      <li>Fluid waves push on the flexible membranes of the <strong>cochlear duct</strong> (蝸管).</li>
+      <li>Energy transfers across the cochlear duct into the <strong>scala tympani</strong> (鼓階) and is dissipated back to the middle ear at the <strong>round window</strong> (圓窗).</li>
+      <li>Movement of the basilar membrane (基底膜) causes a shearing force (剪切力) between basilar and tectorial membranes, bending the stereocilia (靜纖毛) of hair cells.</li>
+      <li>Hair cells (in the Organ of Corti) generate action potentials in <strong>cochlear nerve</strong> (耳蝸神經) sensory neurons.</li>
+    </ol>
+
+    <!-- SVG: stereocilia mechanotransduction -->
+    <svg viewBox="0 0 480 130" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px;display:block;margin:12px auto;font-family:Georgia,serif;font-size:11px;">
+      <!-- At rest -->
+      <rect x="10" y="30" width="130" height="70" rx="5" fill="#f5f5f5" stroke="#bbb" stroke-width="1"/>
+      <text x="75" y="18" text-anchor="middle" fill="#333" font-size="11">At rest</text>
+      <rect x="45" y="55" width="15" height="35" rx="3" fill="#80cbc4"/>
+      <rect x="70" y="55" width="15" height="35" rx="3" fill="#80cbc4"/>
+      <rect x="95" y="55" width="15" height="35" rx="3" fill="#80cbc4"/>
+      <text x="75" y="108" text-anchor="middle" fill="#555">~10% channels open</text>
+      <text x="75" y="120" text-anchor="middle" fill="#555">tonic signal</text>
+      <!-- Excitation -->
+      <rect x="170" y="30" width="130" height="70" rx="5" fill="#e8f5e9" stroke="#66bb6a" stroke-width="1"/>
+      <text x="235" y="18" text-anchor="middle" fill="#2e7d32" font-size="11">Excitation (bend right)</text>
+      <rect x="205" y="45" width="15" height="35" rx="3" fill="#4caf50"/>
+      <rect x="230" y="45" width="15" height="35" rx="3" fill="#4caf50"/>
+      <rect x="255" y="45" width="15" height="35" rx="3" fill="#4caf50"/>
+      <text x="235" y="108" text-anchor="middle" fill="#2e7d32">Channels open</text>
+      <text x="235" y="120" text-anchor="middle" fill="#2e7d32">Depolarization, more APs</text>
+      <!-- Inhibition -->
+      <rect x="330" y="30" width="140" height="70" rx="5" fill="#fce4ec" stroke="#ef9a9a" stroke-width="1"/>
+      <text x="400" y="18" text-anchor="middle" fill="#b71c1c" font-size="11">Inhibition (bend left)</text>
+      <rect x="365" y="65" width="15" height="25" rx="3" fill="#e57373"/>
+      <rect x="390" y="65" width="15" height="25" rx="3" fill="#e57373"/>
+      <rect x="415" y="65" width="15" height="25" rx="3" fill="#e57373"/>
+      <text x="400" y="108" text-anchor="middle" fill="#c62828">Channels close</text>
+      <text x="400" y="120" text-anchor="middle" fill="#c62828">Hyperpolarization, fewer APs</text>
+    </svg>
+
+    <h3>Mechanotransduction at hair cells</h3>
+    <ul data-topic="auditory-transduction">
+      <li>Stereocilia (靜纖毛) have "trap door" ion channels linked by <strong>tip links</strong> (頂端連接絲) between adjacent stereocilia.</li>
+      <li><strong>At rest:</strong> ~10% of ion channels are open; a tonic (持續性) signal is sent to the sensory neuron.</li>
+      <li><strong>Excitation</strong> (興奮): deflection toward tallest stereocilia opens more channels → Ca2+ and K+ influx → depolarization (去極化) → increased neurotransmitter release → more APs in cochlear nerve.</li>
+      <li><strong>Inhibition</strong> (抑制): deflection in opposite direction closes channels → hyperpolarization (超極化) → reduced neurotransmitter release → fewer APs.</li>
+      <li>The mechanotransduction ion channel complex includes <strong>TMC1</strong> (Transmembrane Channel-Like 1) and <strong>CIB2</strong> proteins (key molecular identities; note: still not fully established as of lecture date).</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="auditory-transduction"><b>Exam trap:</b> At rest, ~10% of hair cell channels are already open, so the system can signal both increases AND decreases in stimulus. Depolarization increases AP frequency; hyperpolarization decreases it. It is not a simple on/off switch.</div>
+
+    <h3>Outer hair cells: cochlear amplification</h3>
+    <ul data-topic="cochlear-amplification">
+      <li><strong>Prestin</strong> (普雷斯汀) is a transmembrane protein (跨膜蛋白) in OHCs that mechanically contracts and elongates in response to voltage (V_m) changes.</li>
+      <li>This property is called <strong>electromotility</strong> (電動性): OHCs physically change length with membrane potential.</li>
+      <li>Electromotility is the driving force of <strong>cochlear amplification</strong> (耳蝸放大), which:
+        <ul>
+          <li>Increases sensitivity to incoming sound wave frequencies.</li>
+          <li>Amplifies the signal received by inner hair cells.</li>
+          <li>Sharpens frequency tuning (頻率調諧) of the basilar membrane.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>Place theory of frequency coding</h3>
+    <ul data-topic="place-theory">
+      <li><strong>Place theory</strong> (位置理論, Georg von Bekesy, Nobel Prize): each location along the basilar membrane resonates maximally at a specific frequency.</li>
+      <li>High frequencies (高頻率) activate the <strong>base</strong> of the cochlea (耳蝸底部); low frequencies activate the <strong>apex</strong> (耳蝸頂端, near helicotrema).</li>
+      <li>The CNS determines sound frequency by detecting <em>which</em> IHCs are most active (frequency-place map, 頻率-位置圖).</li>
+      <li>Georg von Bekesy received the Nobel Prize for discovering the traveling wave (行波) mechanism underlying place coding.</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="place-theory"><b>Exam trap:</b> Frequency coding in hearing uses PLACE theory (which region of basilar membrane vibrates most), not just rate coding. High-frequency sounds activate the cochlear base; low-frequency sounds activate the apex — the opposite is a common mistake.</div>
+  </section>
+
   <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
     <strong>Exam Traps Summary</strong>
     <ul>
-      <li>Generator potential (neural receptors) ≠ receptor potential (non-neural receptors); both are graded but differ in what they drive.</li>
-      <li>Stimulus intensity is encoded as AP <em>frequency</em>, not AP amplitude (APs are all-or-none).</li>
-      <li>It is <em>secondary</em> sensory neurons that cross the midline, not primary or tertiary.</li>
-      <li>Somatosensory cortical map size is <em>not fixed</em> — it changes with body part usage.</li>
-      <li>TRPV1 = noxious heat (&gt;43°C) AND capsaicin; TRPM8 = cold AND menthol/eucalyptol. Do not swap these.</li>
-      <li>Nociceptors activate two pathways: spinal reflex arc (unconscious) AND ascending cortical pathway (conscious).</li>
-      <li>Most acute human hearing is at 1–3 kHz, not across the full 20–20,000 Hz range.</li>
-      <li>Despite 4× more OHCs than IHCs, most afferent cochlear nerve fibers innervate IHCs (~10:1 fiber-to-IHC ratio).</li>
-      <li>Prestin drives OHC <em>electromotility</em> in response to voltage changes — it is in OHCs, not IHCs.</li>
-      <li>Place theory = frequency encoded by cochlear <em>location</em>, not by AP firing rate of a single neuron.</li>
-      <li>The molecular identity of the mechanotransduction channel in hair cells is still not fully established.</li>
-      <li>Piezo2 mediates both gentle touch AND proprioception (the "sixth sense").</li>
+      <li>AP frequency codes stimulus <em>intensity</em>, not sensory quality (modality). Modality is determined by which receptor pathway is activated.</li>
+      <li>Cortical map size reflects sensory <em>sensitivity</em>, not physical body-part size. Fingertips have more cortex than the back.</li>
+      <li>Piezo2 mediates BOTH gentle touch AND proprioception. Piezo2 mutation patients lose both, especially proprioception when eyes are closed.</li>
+      <li>Nociceptors activate two separate pathways simultaneously: a spinal reflex (no cortex) and an ascending pathway to cortex for conscious pain.</li>
+      <li>Hair cell channels are ~10% open at rest, enabling bidirectional signaling: depolarization increases APs, hyperpolarization decreases them.</li>
+      <li>High-frequency sounds activate the BASE of the cochlea; low-frequency sounds activate the APEX. Reversed order is a common exam error.</li>
+      <li>IHCs (3,000) are the main signal source despite OHCs (12,000) being more numerous. OHC role is amplification, not primary signal transmission.</li>
+      <li>TRPV1 responds to noxious heat (over 43°C) AND capsaicin (chili). TRPM8 responds to cold AND menthol/eucalyptol. These channels won the 2021 Nobel Prize along with Piezo channels.</li>
     </ul>
   </div>
 
-  <!-- Top Things to Memorize -->
   <div class="memorize reveal-on-scroll reveal-delay-2">
     <strong>Top things to memorize</strong>
     <ol>
-      <li>Four receptor types: chemo-, mechano-, photo-, thermoreceptors with their stimuli.</li>
-      <li>Neural receptor → generator potential → AP in same cell; non-neural receptor → receptor potential → NT release → AP in downstream neuron.</li>
-      <li>Stimulus intensity = AP frequency; stimulus duration = AP train duration.</li>
-      <li>Three-neuron somatosensory pathway: primary → secondary (crosses midline) → tertiary → somatosensory cortex via thalamus.</li>
-      <li>Piezo2: gentle touch AND proprioception; Nobel 2021.</li>
-      <li>TRPV1: noxious heat (&gt;43°C) + capsaicin; TRPM8: cold + menthol/eucalyptol; both Nobel 2021.</li>
-      <li>IHC: 3,000; one row; primary signal transmitter; ~10 afferent fibers each. OHC: 12,000; three rows; mechanical amplifier.</li>
-      <li>Prestin: motor protein in OHC; electromotility (contracts/elongates with Vm changes) → cochlear amplification.</li>
-      <li>Tip links connect stereocilia in hair cells; deflection opens mechanotransduction channels.</li>
-      <li>Sound amplitude &gt;80 dB damages hair cells; most acute hearing at 1–3 kHz.</li>
-      <li>Place theory (Békésy): each cochlear location responds maximally to one frequency.</li>
-      <li>Mechanotransduction channel identity in auditory hair cells remains the "last frontier" of sensory neurobiology.</li>
+      <li>Three transmission types: Type 1/2 = neural receptor (generator potential to AP in same/nearby neuron); Type 3 = non-neural receptor (receptor potential → neurotransmitter release → AP in afferent neuron). Taste buds and hair cells are Type 3.</li>
+      <li>Sensory coding: AP frequency = stimulus intensity; AP duration series = stimulus duration.</li>
+      <li>Somatosensory pathway: 3 neurons; 2nd-order neurons always cross midline; synapse in thalamus before cortex.</li>
+      <li>Touch receptor table: Merkel (steady pressure/texture), Meissner (flutter/stroke), Pacinian (vibration), Ruffini (skin stretch), free nerve endings (hair movement, nociception).</li>
+      <li>Piezo2 = touch sensor AND proprioception sensor; Nobel Prize 2021 (Julius and Patapoutian).</li>
+      <li>TRP channel table: TRPV1 = heat/capsaicin (>43°C); TRPM8 = cold/menthol/eucalyptol; TRPM8-KO mice insensitive to cold.</li>
+      <li>Sound properties: amplitude = loudness; frequency = pitch; complexity = timbre. Human range 20-20,000 Hz, most acute at 1-3 kHz; >80 dB damages hair cells.</li>
+      <li>Ear anatomy: outer (tympanic membrane) → middle (3 ossicles + Eustachian tube) → inner (cochlea + vestibular organ).</li>
+      <li>Cochlear fluid compartments: scala vestibuli and scala tympani (perilymph); cochlear duct (endolymph). Oval window = stapes input; round window = pressure release.</li>
+      <li>IHC vs. OHC: 3,000 IHC (10:1 fiber ratio, signal detection) vs. 12,000 OHC (amplification via prestin/electromotility).</li>
+      <li>Place theory: base of cochlea = high frequency; apex = low frequency. Georg von Bekesy Nobel Prize.</li>
+      <li>5.3% of world population has disabling hearing loss; the molecular identity of the auditory hair cell mechanotransduction channel is still not fully established (TMC1/CIB2 complex is current leading candidate).</li>
     </ol>
+  </div>
+
+  <div class="lower-yield reveal-on-scroll">
+    <strong>Lower-yield / skip if short on time</strong>
+    <ul>
+      <li>Specific decibel values for common environmental sounds (whisper, subway, traffic) beyond the 60 dB conversation / 80 dB damage thresholds.</li>
+      <li>Species-specific hearing ranges (bats, elephants, dogs) and detailed age-specific audiograms beyond the principle that high-frequency loss occurs with age.</li>
+      <li>Detailed molecular structure of TMC1/CIB2 complex and exact paper citations (Qiu and Muller, 2022).</li>
+      <li>Vertebrate vs. insect olfactory receptor structural comparisons (shown in lecture diagram but not emphasized in text).</li>
+      <li>Exact name "Toccata and Fugue in D minor" video reference for place theory visualization.</li>
+      <li>Absolute vs. relative refractory period waveform details beyond understanding that they limit and shape AP firing rate.</li>
+    </ul>
   </div>
 </div>
 
@@ -2736,7 +2920,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ===== PWA Service Worker (inline via Blob) =====
 if ('serviceWorker' in navigator) {
   const swCode = `
-    const CACHE = 'endo-study-v8';
+    const CACHE = 'endo-study-v9';
     self.addEventListener('install', e => { self.skipWaiting(); });
     self.addEventListener('activate', e => { e.waitUntil(self.clients.claim()); });
     self.addEventListener('fetch', e => {
