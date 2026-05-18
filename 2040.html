@@ -3000,6 +3000,815 @@ tr.weak-highlight{box-shadow:none}
 </div>
 
 <!-- NOTES PAGES go here -->
+<div id="notes-23" class="page">
+<div id="notes-23" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-23" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(23)">Clear Highlights</button>
+  <h1>Lecture 23: Stem Cell Biology and Cancer</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    This lecture covers two connected topics: stem cell biology (幹細胞生物學) — the biology of cells capable of self-renewal and differentiation — and cancer (癌症), the disease that arises when normal growth controls break down. Understanding how stem cells replenish tissues and how oncogenes and tumor suppressors regulate proliferation explains both regenerative medicine and the multi-step process that drives malignancy. The central throughline is that controlled cell division is essential for life, and its disruption — whether exploited therapeutically or corrupted by mutation — defines both fields.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Stem Cell Types and Potency</h2>
+    <p data-topic="stem-cell-types">
+      <ul>
+        <li><b>Stem cell (幹細胞)</b> — a cell capable of both <b>self-renewal</b> (自我更新) and differentiation (分化) into specialised tissue cells; forms the foundation of tissue maintenance and repair.</li>
+        <li><b>Embryonic stem (ES) cells (胚胎幹細胞)</b> — derived from the <b>inner cell mass (ICM, 內細胞群)</b> of the blastocyst (囊胚); classified as <b>totipotent</b> (全能性) — can generate all tissues of the body.</li>
+        <li><b>Adult stem cells (成體幹細胞)</b> — found in mature tissues; classified as either multipotent or unipotent:
+          <ul>
+            <li><b>Multipotent (多能性)</b> — generate several tissue types (e.g., hematopoietic stem cells 造血幹細胞 produce red blood cells, T lymphocytes, B lymphocytes, macrophages).</li>
+            <li><b>Unipotent (單能性)</b> — generate one tissue type (e.g., epidermal stem cells 表皮幹細胞 → epidermis; liver stem cells 肝臟幹細胞 → hepatocytes 肝細胞).</li>
+          </ul>
+        </li>
+        <li><b>Proliferating precursor cells (增殖前驅細胞)</b> — intermediate population between stem cells and terminally differentiated (終末分化) tissue cells; amplify stem cell output.</li>
+      </ul>
+    </p>
+
+    <table>
+      <thead>
+        <tr><th>Cell Type</th><th>Potency</th><th>Source</th><th>Example Derivatives</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Embryonic stem (ES) cells</td><td>Totipotent</td><td>Blastocyst ICM</td><td>All body tissues</td></tr>
+        <tr><td>Hematopoietic stem cells</td><td>Multipotent</td><td>Bone marrow</td><td>RBCs, T/B lymphocytes, macrophages, platelets</td></tr>
+        <tr><td>Epidermal stem cells</td><td>Unipotent</td><td>Basal layer of skin</td><td>Epidermis (keratinocytes)</td></tr>
+        <tr><td>Liver stem cells</td><td>Unipotent</td><td>Liver</td><td>Hepatocytes</td></tr>
+      </tbody>
+    </table>
+
+    <div class="exam-trap-inline" data-topic="stem-cell-types"><b>Exam trap:</b> "Totipotent" applies to embryonic stem cells only — adult stem cells are at most multipotent, never totipotent. Do not confuse multipotent (幾種組織) with pluripotent (多種組織, used in iPS context).</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Embryonic Stem Cells: Source and Applications</h2>
+    <p data-topic="es-cells">
+      <ul>
+        <li><b>Blastocyst (囊胚)</b> — an early embryo a few days old; contains the ICM (which develops into the fetus) and the <b>trophoblast (滋養層細胞)</b> — feeder cells that support the ICM.</li>
+        <li>ICM cells can be isolated and cultured in a dish; under different growth factors (生長因子), they can be directed toward neurons (神經元), macrophages, heart muscle cells (心肌細胞), and more.</li>
+        <li><b>Demonstrated in the lab:</b> beating heart cells and neuronal cells have been generated from ES cells, proving therapeutic potential.</li>
+        <li><b>Potential therapeutic targets:</b>
+          <ul>
+            <li>Nerve cells — Parkinson's disease (帕金森病), Alzheimer's disease (阿茲海默症), spinal cord injuries (脊髓損傷) causing paralysis.</li>
+            <li>Pancreatic islet cells (胰島細胞) — diabetes (糖尿病).</li>
+            <li>Muscle cells (肌肉細胞) — muscular dystrophy (肌肉萎縮症).</li>
+            <li>Immune cells (免疫細胞) — immunodeficiency disorders (免疫缺陷疾病).</li>
+          </ul>
+        </li>
+        <li><b>Ethical issues (倫理問題):</b> human ES cells are typically cultured from fertilised eggs, which requires destruction of a fetus (胎兒).</li>
+        <li><b>Immune rejection (免疫排斥):</b> the immune system recognises foreign cells and eliminates them — transplanted ES-derived cells may be rejected.</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="es-cells"><b>Exam trap:</b> ES cells come from the ICM of the blastocyst, NOT from the trophoblast — the trophoblast is the feeder/support layer.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Solving ES Cell Limitations: Nuclear Transfer and iPS Cells</h2>
+    <p data-topic="nuclear-transfer">
+      <b>Somatic cell nuclear transfer (體細胞核移植, SCNT)</b> — the technology used to clone Dolly the sheep (1996):
+      <ul>
+        <li>Remove and discard the nucleus (細胞核) of an unfertilised oocyte (未受精卵母細胞).</li>
+        <li>Replace it with the nucleus from an adult somatic cell (體細胞, e.g. skin cell).</li>
+        <li>The hybrid oocyte (雜交卵母細胞) proliferates into a blastocyst → can be placed in a foster mother to produce a cloned organism, OR cultured in a dish to obtain personalised ES cells.</li>
+        <li><b>Advantage:</b> personalised ES cells are genetically identical to the donor — minimises immune rejection.</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="nuclear-transfer"><b>Exam trap:</b> Nuclear transplantation produces personalised ES cells — it avoids immune rejection but still requires an enucleated oocyte and raises some ethical concerns. It is NOT the same as iPS cell creation.</div>
+
+    <p data-topic="ips-cells">
+      <b>Induced pluripotent stem (iPS) cells (誘導性多能幹細胞)</b> — Nobel Prize 2012 (Gurdon &amp; Yamanaka):
+      <ul>
+        <li>Created by introducing (轉導) a set of <b>key transcription regulators (轉錄調控因子)</b> into adult fibroblasts (纖維母細胞) from a skin biopsy.</li>
+        <li>These reprogrammed (重新編程) cells become pluripotent — able to differentiate into a variety of cell types.</li>
+        <li>Nobel citation: "for the discovery that mature cells can be reprogrammed to become pluripotent."</li>
+        <li><b>Advantages over ES cells:</b> no embryo destruction; patient-specific (autologous 自體) cells eliminate immune rejection.</li>
+        <li><b>iPS cells are NOT created by nuclear transplantation</b> — that is SCNT. iPS uses gene introduction into somatic cells.</li>
+        <li>iPS cells do NOT require a supply of embryonic stem cells.</li>
+        <li>iPS cells do NOT differentiate into a greater variety of tissues than ES cells — both are pluripotent; ES cells may retain a slight edge in totipotency.</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="ips-cells"><b>Exam trap:</b> iPS cells are created by introducing key transcription factor genes into adult cells — NOT by nuclear transplantation and NOT from embryonic stem cells. Confusing iPS with SCNT is a common exam error.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Adult Stem Cells and Therapeutic Applications</h2>
+    <p data-topic="adult-stem-cells">
+      <ul>
+        <li><b>Hematopoietic stem cells (造血幹細胞)</b> — located in bone marrow (骨髓); multipotent; give rise to: red blood cells (紅血球), T lymphocytes (T淋巴球), B lymphocytes (B淋巴球), eosinophils (嗜酸性粒細胞), basophils (嗜鹼性粒細胞), neutrophils (嗜中性粒細胞), monocytes/macrophages (單核細胞/巨噬細胞), megakaryocytes → platelets (巨核細胞→血小板), osteoclasts (破骨細胞).</li>
+        <li>Red blood cells are produced from precursors that <b>lose their nucleus</b> during maturation — a key feature distinguishing RBCs from other blood cells.</li>
+        <li><b>Therapeutic application:</b> hematopoietic stem cell transplants treat blood and immune disorders (e.g. leukaemia, immunodeficiency).</li>
+        <li><b>Epidermal stem cells (表皮幹細胞)</b> — unipotent; located in the <b>basal layer (基底層)</b> of the epidermis (表皮) on top of the basal lamina (基底膜); continuously divide to replace the outermost dead, flattened cells packed with keratin (角蛋白) filaments that are shed (~30 µm cycle).</li>
+        <li><b>Therapeutic application of epidermal stem cells:</b> skin regeneration (皮膚再生) for severely burned patients.</li>
+      </ul>
+    </p>
+
+    <!-- SVG: Epidermis layer diagram -->
+    <svg width="320" height="140" viewBox="0 0 320 140" style="display:block;margin:12px auto;font-family:Georgia,serif;font-size:12px">
+      <!-- Dead layer -->
+      <rect x="20" y="10" width="280" height="30" fill="#d4c5a9" rx="3"/>
+      <text x="160" y="30" text-anchor="middle" fill="#555">Dead, flattened keratinocytes — shed continuously</text>
+      <!-- Living epidermis -->
+      <rect x="20" y="40" width="280" height="35" fill="#c5dfa0" rx="3"/>
+      <text x="160" y="62" text-anchor="middle" fill="#333">Epidermis — differentiating cells migrating upward</text>
+      <!-- Basal layer -->
+      <rect x="20" y="75" width="280" height="25" fill="#8fbc5e" rx="3"/>
+      <text x="160" y="92" text-anchor="middle" fill="#fff">Basal layer — dividing stem cells (on basal lamina)</text>
+      <!-- Dermis -->
+      <rect x="20" y="100" width="280" height="30" fill="#e0d0b8" rx="3"/>
+      <text x="160" y="120" text-anchor="middle" fill="#555">Dermis (connective tissue)</text>
+      <!-- Arrows -->
+      <text x="8" y="60" fill="#333" font-size="18">↑</text>
+      <text x="8" y="45" fill="#333" font-size="18">↑</text>
+    </svg>
+
+    <div class="exam-trap-inline" data-topic="adult-stem-cells"><b>Exam trap:</b> Red blood cells lose their nucleus during differentiation — this is unique among blood cells and is a common MCQ point. Also note: hematopoietic stem cells are multipotent, epidermal/liver stem cells are unipotent.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Cancer: Characteristics, Classification, and Causes</h2>
+    <p data-topic="cancer-overview">
+      <b>Cancer (癌症)</b> epidemiology:
+      <ul>
+        <li>USA incidence: 1 in 3 people will develop cancer; mortality: 1 in 4.</li>
+        <li>Global: &gt;8 million deaths per year; trending to become the leading cause of death globally.</li>
+      </ul>
+    </p>
+    <p data-topic="cancer-classification">
+      <b>Cancer classification (癌症分類) by cell of origin:</b>
+      <ul>
+        <li><b>Carcinoma (癌)</b> — derived from epithelial cells (上皮細胞); the most common category.</li>
+        <li><b>Sarcoma (肉瘤)</b> — arising from connective tissue (結締組織) e.g. bone, muscle, fat.</li>
+        <li><b>Lymphoma (淋巴瘤) and leukemia (白血病)</b> — arise from cells that make blood (造血細胞).</li>
+        <li><b>Germ cell tumour (生殖細胞腫瘤)</b> — derived from pluripotent cells; most often in the testicle (睪丸) or ovary (卵巢).</li>
+        <li><b>Blastoma (胚細胞瘤)</b> — derived from immature precursor cells or embryonic tissue.</li>
+      </ul>
+    </p>
+    <p data-topic="cancer-characteristics">
+      <b>Key characteristics of cancer cells (癌細胞特徵):</b>
+      <ul>
+        <li>Reduced dependence on external signals (外部信號) for growth.</li>
+        <li>Proliferate (增殖) indefinitely — do not undergo normal growth arrest.</li>
+        <li>Genetically unstable (基因不穩定) — increased mutation rate (突變率); chromosomes often highly abnormal (e.g. breast cancer cells showing 48 chromosomes and multiple translocations 易位).</li>
+        <li>Abnormally invasive (侵入性) — breach the basal lamina and invade surrounding tissue.</li>
+        <li>Avid for nutrients (需求大量營養) — upregulate nutrient uptake pathways.</li>
+        <li>Survive and proliferate in abnormal localisations (異常位置) — basis of metastasis (轉移).</li>
+      </ul>
+    </p>
+    <p data-topic="cancer-metastasis">
+      <b>Metastasis (轉移) sequence:</b>
+      <ul>
+        <li>Cancer cells invade surrounding tissues → enter blood vessels (血管) → travel through bloodstream → reinvade and grow at new (distant) sites (e.g. melanoma 黑色素瘤 → brain, liver).</li>
+        <li>Visualised directly in living animals using fluorescence microscopy (螢光顯微鏡) — human breast cancer cells (green) in blood vessels (magenta).</li>
+      </ul>
+    </p>
+    <p data-topic="cancer-multistep">
+      <b>Multi-step clonal evolution (多步驟克隆進化) of cancer:</b>
+      <ul>
+        <li>A single mutation (突變) in one epithelial cell confers a growth advantage → that clone expands.</li>
+        <li>A second mutation in the expanded clone increases the advantage further.</li>
+        <li>A third mutation can make cells invasive — conferring survival, proliferation, AND invasion.</li>
+        <li>Each proliferation step enlarges the population at risk of acquiring an additional mutation → cancer cells accumulate high genetic instability (高度基因不穩定性).</li>
+      </ul>
+    </p>
+    <p data-topic="cancer-causes">
+      <b>Causes of cancer mutations:</b>
+      <ul>
+        <li>Inherited mutations (遺傳突變) from parents.</li>
+        <li>Errors that occur as cells divide (複製錯誤).</li>
+        <li>Environmental damage — chemicals (化學物質), radiation (輻射), viruses (病毒), bacteria (細菌) infection.</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="cancer-characteristics"><b>Exam trap:</b> Cancer is NOT caused by a single mutation — it requires the accumulation of multiple mutations over time. Each additional mutation gives a further growth advantage to the clone.</div>
+    <div class="exam-trap-inline" data-topic="cancer-classification"><b>Exam trap:</b> Leukemia and lymphoma both arise from blood-forming cells. Carcinoma is from epithelial cells — most common cancers (e.g. lung, breast, colon) are carcinomas, not sarcomas.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="5">
+    <h2>6. Oncogenes, Tumor Suppressors, and Cancer Treatment</h2>
+    <p data-topic="oncogenes">
+      <b>Proto-oncogene (原癌基因) → Oncogene (癌基因):</b>
+      <ul>
+        <li>Proto-oncogenes — normal genes encoding proteins that promote cell growth (細胞生長), invasion, and proliferation under controlled conditions.</li>
+        <li>When mutated/activated → oncogenes that cause unregulated (不受調控) cell growth and transformation (惡性轉化).</li>
+        <li><b>Only one mutated allele (等位基因) is needed</b> — oncogene mutations are <b>dominant</b> (顯性) gain-of-function.</li>
+      </ul>
+    </p>
+    <p data-topic="tumor-suppressors">
+      <b>Tumor suppressor genes (腫瘤抑制基因):</b>
+      <ul>
+        <li>Genes whose expression suppresses cancer — they brake (煞車) cell proliferation and promote DNA repair (DNA修復) or apoptosis (細胞凋亡).</li>
+        <li>Mutations cause <b>loss-of-function (功能喪失)</b>.</li>
+        <li><b>Both copies (alleles) must be mutated</b> before loss-of-function manifests — tumor suppressor mutations are <b>recessive</b> (隱性).</li>
+        <li>First mutation → susceptible carrier (易感攜帶者); second mutation → loss of braking → cancer.</li>
+      </ul>
+    </p>
+    <p data-topic="dna-repair">
+      <b>DNA repair genes (DNA修復基因):</b>
+      <ul>
+        <li>Normally correct base-pair mismatches (鹼基對錯配) and other replication errors.</li>
+        <li>When DNA repair fails, mutations accumulate in other cancer-driving genes → increased cancer risk.</li>
+      </ul>
+    </p>
+
+    <table>
+      <thead>
+        <tr><th>Gene Class</th><th>Normal Function</th><th>Mutation Effect</th><th>Alleles Required</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Proto-oncogene → Oncogene</td><td>Promote growth (controlled)</td><td>Gain-of-function: unregulated growth</td><td>1 (dominant)</td></tr>
+        <tr><td>Tumor suppressor gene</td><td>Suppress proliferation</td><td>Loss-of-function: no growth braking</td><td>2 (recessive)</td></tr>
+        <tr><td>DNA repair gene</td><td>Fix replication errors</td><td>Mutation accumulation in other genes</td><td>Varies</td></tr>
+      </tbody>
+    </table>
+
+    <p data-topic="cancer-treatment">
+      <b>Cancer treatment (癌症治療) — standard modalities:</b>
+      <ul>
+        <li><b>Surgery (手術)</b> — remove the tumour.</li>
+        <li><b>Chemotherapy (化學療法)</b> — use medicine to weaken and destroy cancer cells.</li>
+        <li><b>Radiation therapy (放射治療)</b> — high-energy rays damage cancer cells and stop them from growing and dividing.</li>
+      </ul>
+    </p>
+    <p data-topic="immunotherapy">
+      <b>Immunotherapy — PD-1/PD-L1 checkpoint blockade (免疫檢查點阻斷):</b>
+      <ul>
+        <li><b>PD-1 (programmed cell death-1, 程序性細胞死亡受體-1)</b> — a receptor expressed by activated T cells (活化T細胞).</li>
+        <li><b>PD-L1 (PD-1配體)</b> — its ligand (配體); tumour cells overexpress (過量表達) PD-L1, which binds PD-1 on T cells → T-lymphocyte suppression (T淋巴球抑制) — the tumour evades immune surveillance.</li>
+        <li>Treatment: <b>anti-PD-1 or anti-PD-L1 antibodies (抗體)</b> block this binding → interrupt immunosuppression (免疫抑制) → restored cytotoxic (細胞毒性) T-cell activity kills tumour cells.</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="oncogenes"><b>Exam trap:</b> Oncogene mutations need only ONE mutated allele (dominant gain-of-function); tumor suppressor mutations need BOTH alleles mutated (recessive loss-of-function). Mixing these up is the most common exam error in this topic.</div>
+    <div class="exam-trap-inline" data-topic="immunotherapy"><b>Exam trap:</b> Tumour cells overexpress PD-L1 (the ligand) to suppress T cells, not PD-1 (the receptor). Anti-PD-L1 therapy restores T-cell killing — it does NOT directly activate T cells; it removes the suppression.</div>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>"Totipotent" applies only to embryonic stem cells — adult stem cells are at most multipotent, never totipotent.</li>
+      <li>ES cells come from the ICM of the blastocyst, NOT from the trophoblast (which is the feeder/support layer).</li>
+      <li>iPS cells are created by introducing key transcription factor genes into adult somatic cells — NOT by nuclear transplantation and NOT from embryonic stem cells.</li>
+      <li>Nuclear transplantation (SCNT) produces personalised ES cells; iPS cell generation does not require an enucleated oocyte.</li>
+      <li>Red blood cells lose their nucleus during differentiation — a unique feature among blood cells.</li>
+      <li>Hematopoietic stem cells are multipotent; epidermal and liver stem cells are unipotent.</li>
+      <li>Cancer requires the accumulation of multiple mutations — it is NOT caused by a single mutation event.</li>
+      <li>Leukemia and lymphoma both arise from blood-forming cells. Carcinoma (from epithelial cells) is the most common category — do not confuse with sarcoma (connective tissue).</li>
+      <li>Oncogene mutations are dominant (one allele sufficient); tumor suppressor mutations are recessive (both alleles must be lost).</li>
+      <li>Tumour cells overexpress PD-L1 (the ligand) to suppress T cells — anti-PD-L1 therapy removes suppression; it does not directly activate T cells.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Potency hierarchy: ES cells = totipotent; hematopoietic stem cells = multipotent; epidermal/liver stem cells = unipotent.</li>
+      <li>iPS cells (Gurdon &amp; Yamanaka, Nobel 2012) — created by introducing key transcription regulators into adult fibroblasts; no embryo needed, patient-specific.</li>
+      <li>SCNT (Dolly, 1996) — replace oocyte nucleus with somatic cell nucleus → personalised ES cells or cloned organism.</li>
+      <li>Oncogene = dominant gain-of-function (1 allele); tumor suppressor = recessive loss-of-function (2 alleles).</li>
+      <li>Cancer multi-step progression: each mutation gives a further growth advantage; genetic instability accumulates.</li>
+      <li>Five cancer types: carcinoma (epithelial), sarcoma (connective tissue), lymphoma/leukemia (blood), germ cell tumour (pluripotent cells), blastoma (embryonic precursor cells).</li>
+      <li>PD-1 on T cells; PD-L1 overexpressed by tumour cells → T-cell suppression; anti-PD-L1 antibodies restore cytotoxic immunity.</li>
+      <li>Three standard cancer treatments: surgery, chemotherapy, radiation therapy.</li>
+      <li>Cancer statistics: USA incidence 1 in 3; mortality 1 in 4; global &gt;8 million deaths/year.</li>
+      <li>Hematopoietic stem cells (bone marrow) → red blood cells, T/B lymphocytes, macrophages, platelets, osteoclasts — used to treat blood and immune disorders.</li>
+    </ol>
+  </div>
+</div>
+</div>
+
+<div id="notes-22" class="page">
+<div id="notes-22" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-22" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(22)">Clear Highlights</button>
+  <h1>Lecture 22: Cell Communities, Tissue Formation, and Apoptosis</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    Multicellular life depends on cells cooperating as organised communities — held together by specialised junctions (連接), organised into tissues (組織), and regulated by a balance between proliferation (增殖) and programmed cell death. This lecture covers how epithelial cells form coherent sheets using five distinct junction types, how tissues maintain themselves through constant cell turnover (細胞更新), and how apoptosis (細胞凋亡) — the cellular suicide programme mediated by caspase cascades (半胱天冬蛋白酶連鎖反應) and the mitochondrial intrinsic pathway — keeps tissue homeostasis and eliminates damaged or surplus cells.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Levels of Organisation and Epithelial Tissue</h2>
+    <p data-topic="tissue-organisation">
+      Biological complexity is nested: molecules → intracellular compartments (細胞內隔室) → cells → tissues → organs → organ systems → organism. Epithelial tissue (上皮組織) is the most widespread tissue type and performs a wide range of specialised functions:
+    </p>
+    <ul data-topic="tissue-organisation">
+      <li>Protective barrier (保護屏障) — skin epidermis (表皮) shields underlying tissues from mechanical damage and pathogens</li>
+      <li>Secretion (分泌) — glands secrete hormones, tears, and milk; goblet cells (杯狀細胞) secrete mucus (黏液) into intestinal lumen</li>
+      <li>Absorption (吸收) — microvilli (微絨毛)-lined epithelium of the gut absorbs nutrients across the apical surface (頂端表面)</li>
+      <li>Sensory reception — retinal photoreceptors detect light; cochlear hair cells (毛細胞) transduce sound</li>
+    </ul>
+    <p data-topic="epithelial-polarity">
+      Epithelial cells are polarised (極化的): the apical (頂端) face contacts the lumen or external environment; the basal (基底) face rests on basal lamina (基底膜) — a sheet of extracellular matrix. Polarity is maintained by tight junctions sealing the lateral membrane between apical and basolateral (基底外側) domains.
+    </p>
+    <div class="exam-trap-inline" data-topic="epithelial-polarity"><b>Exam trap:</b> "Basal lamina" is extracellular matrix secreted by the epithelium — do not confuse it with "basement membrane" (基底膜), which also includes connective tissue beneath.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Cell Junctions in Epithelial Sheets</h2>
+    <p data-topic="cell-junctions-overview">
+      Five major junction types (連接類型) organise and mechanically reinforce epithelial sheets. They differ in cytoskeletal linkage (細胞骨架連接), protein composition, and function. Animal cells use four; plants use plasmodesmata (胞間連絲) instead of gap junctions.
+    </p>
+
+    <table data-topic="cell-junctions-overview">
+      <thead>
+        <tr>
+          <th>Junction</th>
+          <th>Key Proteins</th>
+          <th>Cytoskeletal Link</th>
+          <th>Function</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tight junction (緊密連接)</td>
+          <td>Occludin (閉合蛋白), Claudin (克勞丁蛋白), JAM</td>
+          <td>Actin (肌動蛋白)</td>
+          <td>Seals intercellular space (細胞間隙); maintains apical-basolateral polarity; diffusion barrier (擴散屏障)</td>
+        </tr>
+        <tr>
+          <td>Adherens junction (黏附連接)</td>
+          <td>Cadherin (鈣黏蛋白), linker proteins</td>
+          <td>Actin bundle (肌動蛋白束)</td>
+          <td>Joins actin bundles between adjacent cells; provides mechanical strength (機械強度) to the epithelial sheet</td>
+        </tr>
+        <tr>
+          <td>Desmosome (橋粒)</td>
+          <td>Cadherin proteins, cytoplasmic plaque (胞質斑塊) of intracellular linker proteins</td>
+          <td>Keratin intermediate filaments (角蛋白中間絲)</td>
+          <td>Joins intermediate filaments of adjacent cells; resists mechanical stress</td>
+        </tr>
+        <tr>
+          <td>Hemidesmosome (半橋粒)</td>
+          <td>Integrin (整合素), linker proteins</td>
+          <td>Keratin intermediate filaments</td>
+          <td>Anchors basal surface of epithelial cell to basal lamina</td>
+        </tr>
+        <tr>
+          <td>Gap junction (間隙連接)</td>
+          <td>Connexon (連接子) hexamers of connexin subunits (連接素次單元)</td>
+          <td>None (channel protein)</td>
+          <td>Forms 1.5 nm channels (通道) for ions (離子) and small metabolites (&lt;1 kDa) to pass directly between cells; electrical and metabolic coupling (電氣及代謝耦合)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p data-topic="tight-junctions">
+      Tight junctions form sealing strands (封閉束) of occludin and claudin proteins that encircle the apical perimeter of each cell. They create a paracellular (細胞旁) barrier ~0.3 µm wide, preventing solute (溶質) diffusion between apical and basolateral compartments and locking membrane proteins in their correct domains.
+    </p>
+    <div class="exam-trap-inline" data-topic="tight-junctions"><b>Exam trap:</b> Tight junctions do NOT provide mechanical strength — that role belongs to adherens junctions and desmosomes. Tight junctions seal but do not physically link cytoskeletons of adjacent cells.</div>
+
+    <p data-topic="gap-junctions">
+      Gap junctions are assembled from connexons (連接子): a hexamer of connexin proteins forms a hemi-channel (半通道) in one cell membrane; two connexons from adjacent cells dock to create an open channel ~1.5 nm in diameter. This size excludes macromolecules (大分子) but passes ions, cAMP, glucose, and amino acids. Classic example: electrical waves spread synchronously (同步地) through cardiac muscle (心肌) via gap junctions, allowing coordinated contraction (協調收縮).
+    </p>
+    <div class="exam-trap-inline" data-topic="gap-junctions"><b>Exam trap:</b> Gap junctions in animal cells are ~0.2 nm (gap between membranes) but the channel pore is 1.5 nm. Plasmodesmata in plant cells are much larger (~70 nm) and contain a desmotubule (胞間連絲管) connected to ER.</div>
+
+    <p data-topic="adherens-desmosome">
+      Adherens junctions (黏附連接) require Ca²⁺-dependent cadherin interactions (鈣依賴性鈣黏蛋白相互作用); loss of Ca²⁺ (e.g. EDTA treatment) disassembles them. Desmosomes use a cytoplasmic plaque (胞質斑塊) made of intracellular linker proteins that recruit keratin filaments, making desmosomes especially tough — they resist tensile (張力) and shear forces in skin and heart.
+    </p>
+    <div class="exam-trap-inline" data-topic="adherens-desmosome"><b>Exam trap:</b> Both adherens junctions and desmosomes use cadherin-family proteins, but they link different cytoskeletal filaments: adherens → actin; desmosomes → keratin intermediate filaments.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Tissue Organisation and Renewal</h2>
+    <p data-topic="tissue-types">
+      Every tissue is a mixture of cell types coexisting in a shared environment (共同環境). Four major animal tissue types:
+    </p>
+    <ul data-topic="tissue-types">
+      <li>Epithelial tissue (上皮組織) — forms sheets, linings, glands</li>
+      <li>Connective tissue (結締組織) — fibroblasts (成纖維細胞), collagen fibres (膠原纖維), elastic fibres (彈性纖維), macrophages (巨噬細胞), lymphocytes (淋巴細胞), melanocytes (黑色素細胞); e.g. dermis (真皮)</li>
+      <li>Muscle tissue — skeletal (骨骼肌), cardiac (心肌), smooth (平滑肌)</li>
+      <li>Nervous tissue (神經組織) — neurons and glia</li>
+    </ul>
+    <p data-topic="tissue-renewal">
+      Tissues constantly undergo turnover (更新); cell lifespans (細胞壽命) vary widely:
+    </p>
+    <ul data-topic="tissue-renewal">
+      <li>Red blood cells (紅血球) — ~90 days</li>
+      <li>Some immune and gut epithelial cells — 2–3 years</li>
+      <li>Neurons and skeletal muscle cells — 15–30 years (largely post-mitotic)</li>
+    </ul>
+    <p data-topic="tissue-renewal">
+      Organisation (組織結構) must be preserved throughout life via selective cell adhesion (選擇性細胞黏附), cell memory (細胞記憶 — retention of differentiated state), and regulated apoptosis/proliferation balance (增殖/死亡平衡).
+    </p>
+    <div class="exam-trap-inline" data-topic="tissue-renewal"><b>Exam trap:</b> "Tissue renewal" does not mean all cells divide continuously. Neurons are largely non-dividing; their numbers are maintained by preventing apoptosis, not by replacement.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Apoptosis: Programmed Cell Death</h2>
+    <p data-topic="apoptosis-overview">
+      Apoptosis (細胞凋亡) is programmed cellular suicide (程序性細胞自殺) — an active, genetically controlled process distinct from necrosis (壞死). Key morphological (形態學) features:
+    </p>
+    <ul data-topic="apoptosis-overview">
+      <li>Cell shrinkage (細胞縮小) — cytoplasm (細胞質) condenses</li>
+      <li>Membrane blebbing (膜起泡) — plasma membrane forms irregular protrusions</li>
+      <li>Chromatin condensation (染色質凝縮) — nuclear chromatin (核染色質) compacts into dense masses</li>
+      <li>Nuclear membrane breakdown (核膜分解)</li>
+      <li>DNA fragmentation (DNA 片段化) — internucleosomal cleavage (核小體間切割) by DNases activated downstream of caspases</li>
+      <li>Apoptotic body formation (凋亡小體形成) — cytoplasm and nucleus partition into membrane-enclosed fragments</li>
+      <li>Phagocytosis (吞噬作用) — apoptotic bodies are engulfed by neighbouring cells or macrophages; no inflammatory response (炎症反應)</li>
+    </ul>
+    <p data-topic="apoptosis-functions">
+      Physiological roles of apoptosis:
+    </p>
+    <ul data-topic="apoptosis-functions">
+      <li>Normal development (正常發育) — tissue sculpting (組織塑形); e.g. digit separation (指間細胞死亡) in limb development; 131 of 1090 cells die during C. elegans development</li>
+      <li>Immune system homeostasis (免疫系統恆定) — elimination of used/autoreactive lymphocytes (自身反應性淋巴細胞)</li>
+      <li>Tissue homeostasis (組織恆定) — balancing cell proliferation and death rates</li>
+      <li>Deletion of damaged cells (損傷細胞清除) — sunburn cells, chemically or radiation-damaged cells, virus-infected cells (病毒感染細胞)</li>
+    </ul>
+    <p data-topic="apoptosis-disease">
+      Dysregulation of apoptosis leads to disease:
+    </p>
+    <ul data-topic="apoptosis-disease">
+      <li>Too much apoptosis — neurodegenerative diseases (神經退行性疾病), radiation injury (放射性損傷)</li>
+      <li>Too little apoptosis — cancer (癌症); tumour cells escape normal death signals and accumulate</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="apoptosis-overview"><b>Exam trap:</b> Apoptosis does NOT trigger inflammation — apoptotic bodies are neatly packaged and phagocytosed. Necrosis releases cell contents and DOES trigger inflammation.</div>
+
+    <p data-topic="c-elegans-apoptosis">
+      C. elegans (線蟲) provided the genetic framework for understanding apoptosis. Key features: all 1090 somatic cell fates are traceable; exactly 131 cells die by apoptosis at defined times and positions. Prof. Robert Horvitz (MIT) used random mutagenesis (隨機誘變) to identify cells that failed to die, then traced the genetic pathway controlling cell death — work awarded the Nobel Prize.
+    </p>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Caspase Cascade and the Intrinsic Apoptotic Pathway</h2>
+    <p data-topic="caspase-cascade">
+      Caspases (半胱天冬蛋白酶) are cysteine proteases (半胱氨酸蛋白酶) that cleave substrates after aspartate residues (天冬氨酸殘基). They exist as inactive procaspases (前半胱天冬蛋白酶); cleavage removes the prodomain (前結構域) to yield an active heterotetramer (異四聚體) of two large and two small subunits.
+    </p>
+    <ul data-topic="caspase-cascade">
+      <li>Initiator caspases (起始型 caspase) — e.g. Caspase-9; activated first, cleave and activate executioner caspases</li>
+      <li>Executioner caspases (執行型 caspase) — Caspase-3 and Caspase-7; directly cleave cellular substrates:
+        <ul>
+          <li>Nuclear lamin (核纖層蛋白) → nuclear envelope (核膜) breakdown</li>
+          <li>Cytosolic proteins → cell shrinkage and blebbing</li>
+          <li>CAD (caspase-activated DNase) via ICAD inhibitor cleavage → internucleosomal DNA fragmentation</li>
+          <li>Histone H1 and core histones (核心組蛋白) → chromatin condensation</li>
+        </ul>
+      </li>
+      <li>The cascade is self-amplifying (自我放大的): activated executioner caspases can activate more procaspases, ensuring irreversible commitment (不可逆的承諾) to death</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="caspase-cascade"><b>Exam trap:</b> Caspase-3 and -7 are the main executioners; Caspase-9 is the initiator in the intrinsic pathway. Do not confuse initiator with executioner caspases.</div>
+
+    <p data-topic="intrinsic-pathway">
+      The intrinsic (mitochondrial) pathway (內在途徑 / 粒線體途徑) is triggered by intracellular stress signals (intracellular DNA damage, oxidative stress, etc.):
+    </p>
+    <ul data-topic="intrinsic-pathway">
+      <li>Pro-apoptotic proteins Bax and Bak (促凋亡蛋白) are activated and insert into the outer mitochondrial membrane (粒線體外膜)</li>
+      <li>Cytochrome c (細胞色素 c) is released from the intermembrane space (膜間隙) into the cytosol</li>
+      <li>Cytochrome c binds Apaf-1 (凋亡蛋白酶激活因子-1) — an adaptor protein (接頭蛋白); in the presence of dATP this triggers a conformational change</li>
+      <li>Seven Apaf-1/cytochrome c complexes oligomerise (寡聚化) into the apoptosome (凋亡體) — a heptameric wheel-shaped complex (七聚體輪狀複合物)</li>
+      <li>The apoptosome recruits and activates multiple procaspase-9 molecules, which then cleave and activate Caspase-3 and -7</li>
+    </ul>
+
+    <!-- SVG diagram: Intrinsic pathway flow -->
+    <svg viewBox="0 0 540 110" width="100%" style="max-width:540px;display:block;margin:1rem auto;font-family:Georgia,serif;font-size:11px;">
+      <defs>
+        <marker id="arr22" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#5a7a5a"/>
+        </marker>
+      </defs>
+      <!-- Boxes -->
+      <rect x="2" y="35" width="90" height="36" rx="5" fill="#e8f0e8" stroke="#5a7a5a"/>
+      <text x="47" y="51" text-anchor="middle" fill="#2d4a2d">Bax/Bak</text>
+      <text x="47" y="64" text-anchor="middle" fill="#2d4a2d">activation</text>
+
+      <rect x="118" y="35" width="90" height="36" rx="5" fill="#e8f0e8" stroke="#5a7a5a"/>
+      <text x="163" y="51" text-anchor="middle" fill="#2d4a2d">Cytochrome c</text>
+      <text x="163" y="64" text-anchor="middle" fill="#2d4a2d">release</text>
+
+      <rect x="234" y="35" width="90" height="36" rx="5" fill="#e8f0e8" stroke="#5a7a5a"/>
+      <text x="279" y="51" text-anchor="middle" fill="#2d4a2d">Apaf-1 +</text>
+      <text x="279" y="64" text-anchor="middle" fill="#2d4a2d">dATP binding</text>
+
+      <rect x="350" y="35" width="86" height="36" rx="5" fill="#e8f0e8" stroke="#5a7a5a"/>
+      <text x="393" y="51" text-anchor="middle" fill="#2d4a2d">Apoptosome</text>
+      <text x="393" y="64" text-anchor="middle" fill="#2d4a2d">formation</text>
+
+      <rect x="462" y="35" width="74" height="36" rx="5" fill="#f5e8e8" stroke="#9a4a4a"/>
+      <text x="499" y="51" text-anchor="middle" fill="#6a2020">Caspase-9</text>
+      <text x="499" y="64" text-anchor="middle" fill="#6a2020">activation</text>
+
+      <!-- Arrows -->
+      <line x1="93" y1="53" x2="116" y2="53" stroke="#5a7a5a" stroke-width="1.5" marker-end="url(#arr22)"/>
+      <line x1="209" y1="53" x2="232" y2="53" stroke="#5a7a5a" stroke-width="1.5" marker-end="url(#arr22)"/>
+      <line x1="325" y1="53" x2="348" y2="53" stroke="#5a7a5a" stroke-width="1.5" marker-end="url(#arr22)"/>
+      <line x1="437" y1="53" x2="460" y2="53" stroke="#5a7a5a" stroke-width="1.5" marker-end="url(#arr22)"/>
+      <!-- Labels -->
+      <text x="270" y="10" text-anchor="middle" fill="#5a7a5a" font-size="10">Intrinsic (Mitochondrial) Apoptotic Pathway</text>
+      <text x="47" y="90" text-anchor="middle" fill="#777" font-size="9">mitochondria</text>
+      <text x="163" y="90" text-anchor="middle" fill="#777" font-size="9">outer membrane pore</text>
+      <text x="393" y="90" text-anchor="middle" fill="#777" font-size="9">7-subunit wheel</text>
+      <text x="499" y="90" text-anchor="middle" fill="#777" font-size="9">→ Casp-3/-7</text>
+    </svg>
+
+    <p data-topic="cytochrome-c-experiment">
+      Key biochemical evidence (Liu et al., Cell, 1996; Xiaodong Wang lab): HeLa cell cytosol was fractionated on a phosphocellulose column (磷酸纖維素柱) and incubated with purified Procaspase-3. Only the fraction containing cytochrome c (bound fraction, eluted with 0.3 M NaCl) plus dATP activated Procaspase-3. The bound fraction also contained Apaf-1 (分子量 ~130 kDa) and Procaspase-9. This experiment identified the minimal components of the apoptosome.
+    </p>
+    <div class="exam-trap-inline" data-topic="intrinsic-pathway"><b>Exam trap:</b> The intrinsic pathway is initiated by mitochondria (粒線體), not the ER, lysosomes, or peroxisomes. The key signal is cytochrome c release from the mitochondrial intermembrane space.</div>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Tight junctions seal intercellular space and maintain polarity — they do NOT provide mechanical strength.</li>
+      <li>Adherens junctions link to actin; desmosomes link to keratin intermediate filaments — both use cadherin-family proteins.</li>
+      <li>Gap junctions (connexon channels, 1.5 nm) are for metabolic/electrical coupling, not sealing or adhesion. Plant equivalents (plasmodesmata) are much larger (~70 nm) and contain desmotubules.</li>
+      <li>Hemidesmosome anchors the cell to the basal lamina (not to a neighbour); desmosome anchors cell to cell.</li>
+      <li>Apoptosis is non-inflammatory (no necrosis, no content release); apoptotic bodies are phagocytosed cleanly.</li>
+      <li>Too little apoptosis → cancer; too much → neurodegeneration/radiation injury.</li>
+      <li>Caspase-9 = initiator; Caspase-3 and -7 = executioners. Do not mix these up.</li>
+      <li>The intrinsic apoptotic pathway is initiated at the mitochondria (cytochrome c release), not ER, lysosomes, or peroxisomes.</li>
+      <li>dATP is required for apoptosome assembly along with cytochrome c and Apaf-1.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Five junction types, their key proteins, cytoskeletal links, and functions (tight → occludin/claudin/actin; adherens → cadherin/actin; desmosome → cadherin/keratin; hemidesmosome → integrin/keratin/basal lamina; gap → connexon/ions)</li>
+      <li>Intrinsic apoptosis pathway order: stress → Bax/Bak → cytochrome c release → Apaf-1 + dATP → apoptosome (7-mer) → Procaspase-9 activation → Caspase-3/-7 → cell death</li>
+      <li>Caspase-9 = initiator; Caspase-3 and Caspase-7 = executioners; procaspases activated by cleavage</li>
+      <li>Apoptotic morphology: shrinkage, blebbing, chromatin condensation, DNA fragmentation, apoptotic body formation, phagocytosis</li>
+      <li>Four functions of apoptosis: developmental sculpting, immune homeostasis, tissue homeostasis, deletion of damaged cells</li>
+      <li>C. elegans: 131/1090 cells die; traceable cell lineage; Horvitz identified genetic pathway via mutagenesis</li>
+      <li>Gap junction channel diameter = 1.5 nm; plasmodesmata = ~70 nm; tight junction sealing strand proteins = occludin + claudin</li>
+      <li>dATP + cytochrome c + Apaf-1 = minimal apoptosome components (Liu et al., 1996 fractionation experiment)</li>
+    </ol>
+  </div>
+</div>
+</div>
+
+<div id="notes-21" class="page">
+<div id="notes-21" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-21" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(21)">Clear Highlights</button>
+  <h1>Lecture 21: The Extracellular Matrix (ECM)</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    Every cell in a multicellular organism lives within a scaffold of its own making — the extracellular matrix (細胞外基質). This lecture examines how the ECM is built from collagen, proteoglycans, and adhesion proteins such as fibronectin; how cells anchor to it and sense its mechanical properties via integrin receptors; and how the ECM controls everything from stem-cell differentiation and milk-protein expression in mammary glands to cancer progression and metastasis. The key insight from Prof. Mina Bissell's work is that context — the ECM — is as instructive as the genome.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. ECM Overview: Composition, Location, and Functions</h2>
+    <p data-topic="ecm-overview">
+      <ul>
+        <li>ECM occurs in all multicellular animals; bacteria, fungi, algae, and plants have analogous <strong>cell walls</strong> (細胞壁).</li>
+        <li><strong>Basal lamina</strong> (基底膜板) — thin specialised ECM layer on which epithelial (上皮) cells rest; also surrounds muscle, adipose (脂肪), and peripheral nerve cells.</li>
+        <li><strong>Basement membrane</strong> (基底膜) = basal lamina + reticular lamina (網狀膜板); lies directly beneath the epithelium above connective tissue (結締組織).</li>
+        <li><strong>Connective tissue ECM</strong> — varies by tissue:
+          <ul>
+            <li>Tendons (肌腱) and dermis (真皮) — tough and flexible</li>
+            <li>Bone (骨) — hard and dense</li>
+            <li>Cartilage (軟骨) — resilient and shock-absorbing</li>
+            <li>Vitreous humour (玻璃體) of the eye — soft gel</li>
+          </ul>
+        </li>
+        <li>Physical features (物理特性): rigidity (硬度), porosity (多孔性), insolubility (不溶性), spatial arrangement and orientation.</li>
+        <li>Matrix macromolecules are secreted by resident cells:
+          <ul>
+            <li><strong>Osteoblasts</strong> (成骨細胞) — in bone</li>
+            <li><strong>Chondroblasts</strong> (成軟骨細胞) — in cartilage</li>
+            <li><strong>Fibroblasts</strong> (纖維母細胞) — in skin, tendon, and most other tissues</li>
+          </ul>
+        </li>
+      </ul>
+    </p>
+
+    <p data-topic="ecm-functions">
+      <strong>Major functions of ECM:</strong>
+      <ul>
+        <li><strong>Structural support</strong> (結構支撐) — maintains cell organisation and compartmentalises (分隔) tissues.</li>
+        <li><strong>Hardness</strong> — provides rigidity to bone and teeth.</li>
+        <li><strong>Anchorage site</strong> (錨定位點) — anchorage to the basement membrane is essential for:
+          <ul>
+            <li>Asymmetric cell division (不對稱細胞分裂)</li>
+            <li>Differentiation (分化) of stem cells</li>
+            <li>Maintenance of tissue polarity (組織極性)</li>
+          </ul>
+        </li>
+        <li><strong>Migration regulation</strong> — ECM provides movement tracks (移動軌道) and migration barriers (遷移障礙) for cells.</li>
+        <li><strong>Signal regulation</strong> — ECM acts as a signal reservoir (信號儲庫), co-receptor (共受體), signal presenter, and precursor of signalling molecules.</li>
+        <li>Biomechanical properties (生物力學特性) of ECM influence cell differentiation and tissue function.</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="ecm-overview"><b>Exam trap:</b> The basal lamina and the basement membrane are NOT the same thing. The basement membrane includes both the basal lamina and the reticular lamina beneath it.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Collagen: Structure, Synthesis, and Assembly</h2>
+    <p data-topic="collagen-structure">
+      <strong>Key facts:</strong>
+      <ul>
+        <li>Fibrous protein (纖維蛋白) providing tensile strength (抗拉強度).</li>
+        <li>~20 different collagen genes in mammals; collagen constitutes ~25% of total body protein mass.</li>
+        <li>Chief proteins of skin (皮膚), bone (骨), and tendon (肌腱).</li>
+        <li>Made by fibroblasts (skin, tendon) and osteoblasts (bone).</li>
+        <li>Hierarchical structure:
+          <ul>
+            <li>Single collagen polypeptide (多肽鏈) → triple-stranded collagen molecule (三股螺旋) ~1.5 nm diameter → collagen fibril (膠原纖維絲) 10–300 nm → collagen fiber (膠原纖維)</li>
+          </ul>
+        </li>
+        <li>Fibroblasts influence the alignment (排列) of collagen fibers — migrating fibroblasts produce aligned fibers.</li>
+      </ul>
+    </p>
+
+    <p data-topic="collagen-synthesis">
+      <strong>Synthesis and secretion pathway:</strong>
+      <ul>
+        <li>Synthesised intracellularly (細胞內) on ribosomes; transported through ER and Golgi.</li>
+        <li>Secreted by exocytosis (胞吐) in precursor form called <strong>procollagen</strong> (前膠原蛋白).</li>
+        <li>Procollagen contains additional propeptides (前肽) at both ends that <em>block</em> premature assembly into fibrils inside the cell.</li>
+        <li><strong>Collagenase</strong> (膠原蛋白酶) / proteinase cleaves off terminal propeptide extensions in the extracellular space (細胞外空間), converting procollagen → collagen molecule.</li>
+        <li>Collagen molecules then self-assemble (自組裝) into fibrils only outside the cell — this spatial control prevents intracellular aggregation (聚集).</li>
+      </ul>
+    </p>
+
+    <p data-topic="collagen-vesicle">
+      <strong>Transport of large procollagen in COPII vesicles:</strong>
+      <ul>
+        <li>Standard COPII vesicles (60–80 nm) are normally too small for the 300 nm procollagen rod.</li>
+        <li><strong>KLHL12</strong> — an adaptor protein that targets substrates to the ubiquitin ligase (泛素連接酶); promotes formation of enlarged COPII vesicles to accommodate large cargo.</li>
+        <li>The outer COPII cage (SEC13–SEC31) expands; inner-layer components remain; an undefined protein may also assist.</li>
+      </ul>
+    </p>
+
+    <p data-topic="collagen-disease">
+      <strong>Disease link — hyperextensible skin:</strong>
+      <ul>
+        <li>Incorrect collagen assembly causes abnormally stretchable (hyperextensible 過度延展) skin.</li>
+        <li>Can arise from a genetic defect in collagen assembly, e.g. lack of the enzyme that converts procollagen → collagen (a form of Ehlers-Danlos syndrome 埃勒斯-當洛斯症候群).</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="collagen-synthesis"><b>Exam trap:</b> Procollagen propeptides are cleaved OUTSIDE the cell, not inside. Assembly into fibrils occurs only in the extracellular space — this is the regulatory mechanism preventing intracellular fibril formation.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Fibronectin and Integrin: Linking ECM to Cytoskeleton</h2>
+    <p data-topic="fibronectin">
+      <strong>Fibronectin (纖維連結蛋白):</strong>
+      <ul>
+        <li>Adhesion protein (黏附蛋白) that links components of the matrix to one another and to cells.</li>
+        <li>Has distinct binding sites: collagen-binding site (膠原結合位點), cell-attachment site (細胞附著位點), and additional matrix-binding domains.</li>
+        <li>Connects the collagen fibril network to cell-surface integrins.</li>
+      </ul>
+    </p>
+
+    <p data-topic="integrin">
+      <strong>Integrins (整合素):</strong>
+      <ul>
+        <li>Heterodimeric (異二聚體) transmembrane receptors composed of α and β subunits.</li>
+        <li><strong>Extracellular side</strong>: binds ECM components (fibronectin, laminin, collagen) with high affinity (強結合力) when activated.</li>
+        <li><strong>Intracellular side</strong>: binds cytoskeleton (細胞骨架) — specifically actin microfilaments (肌動蛋白微絲) via <strong>adaptor proteins</strong> (銜接蛋白) such as talin and vinculin.</li>
+        <li>Integrin activation is bidirectional (雙向): "outside-in" (ECM binding triggers intracellular signalling) and "inside-out" (cytoplasmic signals change ECM-binding affinity).</li>
+        <li>Malignant (惡性) breast cells express ~6× more β1-integrin than normal cells.</li>
+        <li>Treating malignant cells with inhibitory antibodies against β1-integrin causes dramatic <strong>phenotypic reversion</strong> (表現型逆轉) — cells resume normal morphology and behaviour (Weaver et al., JCB 1997).</li>
+      </ul>
+    </p>
+
+    <!-- SVG diagram: Fibronectin-Integrin bridge -->
+    <svg viewBox="0 0 520 180" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;display:block;margin:12px auto;font-family:Georgia,serif;font-size:12px;">
+      <!-- Collagen fibers -->
+      <rect x="10" y="30" width="120" height="20" rx="4" fill="#c8b89a" stroke="#8b6914" stroke-width="1.5"/>
+      <text x="70" y="45" text-anchor="middle" fill="#3a2a00">Collagen fibers</text>
+      <!-- Fibronectin bar -->
+      <rect x="140" y="25" width="100" height="30" rx="5" fill="#a7c4a0" stroke="#3d6b37" stroke-width="1.5"/>
+      <text x="190" y="45" text-anchor="middle" fill="#1a3a18">Fibronectin</text>
+      <!-- Connecting line col–fibro -->
+      <line x1="130" y1="40" x2="140" y2="40" stroke="#555" stroke-width="2"/>
+      <!-- Integrin -->
+      <rect x="250" y="10" width="80" height="80" rx="5" fill="#b8d0e8" stroke="#2d5a8e" stroke-width="1.5"/>
+      <text x="290" y="35" text-anchor="middle" fill="#1a2a4a">Integrin</text>
+      <text x="290" y="55" text-anchor="middle" fill="#1a2a4a" font-size="10">(α/β dimer)</text>
+      <text x="290" y="80" text-anchor="middle" fill="#1a2a4a" font-size="10">binds ECM ↑</text>
+      <!-- Connecting line fibro–integrin -->
+      <line x1="240" y1="40" x2="250" y2="40" stroke="#555" stroke-width="2"/>
+      <!-- Plasma membrane -->
+      <rect x="10" y="100" width="500" height="20" rx="3" fill="#f0d080" stroke="#8a7000" stroke-width="1.5"/>
+      <text x="260" y="115" text-anchor="middle" fill="#3a2a00">Plasma Membrane</text>
+      <!-- Integrin stalk -->
+      <line x1="290" y1="90" x2="290" y2="100" stroke="#2d5a8e" stroke-width="3"/>
+      <!-- Actin filaments -->
+      <rect x="230" y="130" width="120" height="20" rx="4" fill="#e8b0b0" stroke="#8b2a2a" stroke-width="1.5"/>
+      <text x="290" y="145" text-anchor="middle" fill="#3a0000">Actin filaments</text>
+      <!-- Adaptor proteins -->
+      <text x="300" y="128" text-anchor="start" fill="#555" font-size="10">adaptor proteins</text>
+      <line x1="290" y1="120" x2="290" y2="130" stroke="#2d5a8e" stroke-width="2" stroke-dasharray="3,2"/>
+    </svg>
+
+    <div class="exam-trap-inline" data-topic="integrin"><b>Exam trap:</b> Integrins do NOT have enzymatic activity themselves — they relay signals via adaptor proteins that connect to the actin cytoskeleton and downstream kinase cascades.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Proteoglycans and Glycosaminoglycans (GAGs)</h2>
+    <p data-topic="proteoglycan">
+      <strong>Glycosaminoglycans (GAGs) (糖胺聚醣):</strong>
+      <ul>
+        <li>Large, highly negatively charged (高度帶負電) polysaccharides (多醣) composed of repeating disaccharide (雙醣) units.</li>
+        <li>Example: chondroitin sulfate (硫酸軟骨素) with N-acetylglucosamine (N-乙醯葡萄糖胺) and glucuronic acid (葡萄糖醛酸).</li>
+        <li>Covalently linked to core proteins (核心蛋白) to form <strong>proteoglycans</strong> (蛋白聚醣).</li>
+      </ul>
+
+      <strong>Proteoglycan properties and functions:</strong>
+      <ul>
+        <li>Strongly <strong>hydrophilic</strong> (親水性) — attract large volumes of water; occupy a huge volume relative to their mass.</li>
+        <li><strong>Resist compression</strong> (抗壓縮) — act as space fillers (空間填充物); cartilage aggrecan aggregates can support hundreds of kg/cm².</li>
+        <li>Major components of:
+          <ul>
+            <li>Interior of the eye (眼睛內部) — vitreous humour</li>
+            <li>Cartilage matrix (軟骨基質)</li>
+          </ul>
+        </li>
+        <li><strong>Aggrecan</strong> (聚蛋白聚醣) aggregate structure: chondroitin sulfate chains on core proteins, linked via link proteins (連接蛋白) to a hyaluronan (玻尿酸) backbone.</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="proteoglycan"><b>Exam trap:</b> GAGs are covalently attached to core proteins — proteoglycans are NOT pure polysaccharides. Hyaluronan (a GAG) is an exception: it is NOT covalently attached to protein and is not technically a proteoglycan.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. ECM and Cancer Progression</h2>
+    <p data-topic="ecm-cancer">
+      <strong>ECM remodelling in the tumour microenvironment (腫瘤微環境):</strong>
+      <ul>
+        <li>Normal epithelial cells depend on correct ECM context for proper behaviour (milk protein expression in mammary gland requires basement membrane — Streuli et al., JCB 1991).</li>
+        <li>EHS matrix / <strong>Matrigel</strong> (馬特基質) — reconstituted basement membrane made from EHS mouse sarcoma cells; used experimentally to restore normal morphology.</li>
+        <li>Key steps in ECM-driven cancer progression (Lu et al., JCB 2012):
+          <ol>
+            <li>Generation/activation of <strong>cancer-associated fibroblasts (CAFs)</strong> (癌症相關纖維母細胞)</li>
+            <li>Removal of normal ECM remodelling enzyme balance</li>
+            <li>CAFs promote growth and invasion of tumour cells</li>
+            <li>Immune cells (eosinophils, macrophages, neutrophils) recruited to promote cancer progression</li>
+            <li>Promotion of tumour-associated blood vessel formation (angiogenesis 血管新生)</li>
+            <li>Generation of leaky tumour blood vessels (漏洞性血管) that facilitate tumour cell invasion and metastasis (轉移)</li>
+          </ol>
+        </li>
+        <li><strong>Lysyl oxidase (LOX)</strong> (離胺酸氧化酶) — enzyme that cross-links ECM, stiffens matrix, promotes invasion.</li>
+      </ul>
+    </p>
+
+    <p data-topic="integrin-cancer">
+      <strong>β1-integrin and phenotypic reversion:</strong>
+      <ul>
+        <li>Malignant breast tumour cells have ~<strong>6×</strong> more β1-integrin than normal cells.</li>
+        <li>Treating malignant cells with inhibitory antibodies against β1-integrin causes them to revert to a normal phenotype (表現型) — form organised acini (腺泡), stop proliferating abnormally.</li>
+        <li>"Reverted" cells incubated without the antibody return to malignant behaviour, confirming the dependence on integrin–ECM signalling.</li>
+        <li>Conclusion: malignant cells can be induced to be phenotypically "normal" simply by changing their linkage to the ECM — context dominates genotype (基因型).</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="ecm-cancer"><b>Exam trap:</b> The β1-integrin antibody experiment shows phenotypic reversion, NOT genetic correction — the tumour cell genome is unchanged. This is evidence that ECM context regulates cell behaviour independently of genetic mutations.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="5">
+    <h2>6. Plant Cell Wall</h2>
+    <p data-topic="plant-cell-wall">
+      <strong>Composition of the plant cell wall (植物細胞壁):</strong>
+      <ul>
+        <li><strong>Cellulose microfibrils</strong> (纖維素微纖維) — provide strength against tension (抗拉力); long glucose polymers arranged in crystalline bundles.</li>
+        <li><strong>Cross-linking polysaccharides</strong> (交聯多醣) — fill spaces between cellulose microfibrils; connect adjacent fibrils.</li>
+        <li><strong>Pectin</strong> (果膠) — fills the <strong>middle lamella</strong> (中間層), cementing cell walls together; also fills spaces between cellulose microfibrils.</li>
+        <li>Plasma membrane (質膜) lies interior to the primary cell wall (初生細胞壁).</li>
+      </ul>
+
+      <strong>Layers (from outside in):</strong>
+      <ul>
+        <li>Middle lamella (rich in pectin) → Primary cell wall (cellulose + cross-linking polysaccharide + pectin) → Plasma membrane → Cytosol</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="plant-cell-wall"><b>Exam trap:</b> The middle lamella is the outermost shared layer between adjacent plant cells — it is NOT part of one cell's wall alone. It consists mainly of pectin, not cellulose.</div>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Basal lamina ≠ basement membrane: basement membrane = basal lamina + reticular lamina.</li>
+      <li>Procollagen propeptides are cleaved OUTSIDE the cell; fibril assembly occurs only in the extracellular space.</li>
+      <li>Integrins have no enzymatic activity — they signal via cytoplasmic adaptor proteins.</li>
+      <li>GAGs are covalently linked to core proteins to form proteoglycans; hyaluronan is a GAG but NOT a proteoglycan.</li>
+      <li>β1-integrin antibody experiment shows phenotypic reversion without genetic correction — ECM context controls cell behaviour.</li>
+      <li>Middle lamella (plant) is pectin-rich, not cellulose-rich; it is the outermost shared layer between adjacent cells.</li>
+      <li>KLHL12 enables procollagen export by enlarging COPII vesicles, not by breaking procollagen into smaller pieces.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>ECM functions: structural support, anchorage site (stem cell differentiation, tissue polarity), migration track/barrier, signal reservoir/co-receptor/presenter.</li>
+      <li>Collagen: 25% of total body protein; made by fibroblasts and osteoblasts; secreted as procollagen; propeptides cleaved extracellularly by collagenase; self-assembles into fibrils.</li>
+      <li>Procollagen export via enlarged COPII vesicles — KLHL12 adaptor required to accommodate 300 nm rod.</li>
+      <li>Integrin: α/β heterodimer; bridges ECM (fibronectin → collagen) to actin cytoskeleton via adaptor proteins; bidirectional signalling.</li>
+      <li>Proteoglycans: GAGs covalently on core protein; strongly hydrophilic; resist compression; aggrecan in cartilage supports hundreds kg/cm².</li>
+      <li>ECM in cancer: CAFs, matrix stiffening (LOX), leaky vessels, immune-cell recruitment all promote metastasis (Lu et al.).</li>
+      <li>β1-integrin ×6 in malignant cells; inhibitory antibodies cause phenotypic reversion — ECM context ≥ genotype (Weaver et al.).</li>
+      <li>Matrigel/EHS matrix — reconstituted basement membrane; used to restore normal mammary epithelial behaviour in vitro (Streuli et al.; Lee and Bissell).</li>
+      <li>Plant cell wall layers: middle lamella (pectin) → primary cell wall (cellulose microfibrils + cross-linking polysaccharide + pectin) → plasma membrane.</li>
+      <li>Cellulose — tensile strength; pectin — cements cells via middle lamella; cross-linking polysaccharides — space-filling between microfibrils.</li>
+    </ol>
+  </div>
+</div>
+</div>
+
 <!-- Quiz containers are generated by JS (see renderQuizContainers). -->
 <div id="quiz-containers"></div>
 
@@ -3632,7 +4441,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ===== PWA Service Worker (inline via Blob) =====
 if ('serviceWorker' in navigator) {
   const swCode = `
-    const CACHE = 'lifs2040-v4';
+    const CACHE = 'lifs2040-v7';
     self.addEventListener('install', e => { self.skipWaiting(); });
     self.addEventListener('activate', e => { e.waitUntil(self.clients.claim()); });
     self.addEventListener('fetch', e => {
