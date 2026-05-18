@@ -217,7 +217,12 @@ def merge_template_html(html_text, lecture_n, notes_html):
     marker = "<!-- NOTES PAGES go here -->"
     if marker not in html_text:
         fail(f"HTML file does not contain '{marker}'")
-    insert = f'\n<div id="notes-{lecture_n}" class="page">\n{notes_html.strip()}\n</div>\n'
+    # Strip outer wrapper div if the agent already included it (prevents double-wrapping)
+    inner = notes_html.strip()
+    outer_open = f'<div id="notes-{lecture_n}" class="page">'
+    if inner.startswith(outer_open) and inner.endswith('</div>'):
+        inner = inner[len(outer_open):-len('</div>')].strip()
+    insert = f'\n<div id="notes-{lecture_n}" class="page">\n{inner}\n</div>\n'
     return html_text.replace(marker, marker + insert, 1)
 
 
