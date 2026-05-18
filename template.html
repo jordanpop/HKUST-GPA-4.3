@@ -643,7 +643,10 @@ function renderGlobalReport() {
 
 // ===== Reveal-on-scroll =====
 function initReveal() {
-  const els = document.querySelectorAll('.reveal-on-scroll:not(.is-visible)');
+  const activePage = document.querySelector('.page.active');
+  const scope = activePage || document;
+  const els = scope.querySelectorAll('.reveal-on-scroll:not(.is-visible)');
+  if (!els.length) return;
   if (!('IntersectionObserver' in window)) {
     els.forEach(el => el.classList.add('is-visible'));
     return;
@@ -655,8 +658,9 @@ function initReveal() {
         observer.unobserve(entry.target);
       }
     });
-  }, { root:null, rootMargin:'0px', threshold:0.15 });
+  }, { root:null, rootMargin:'0px', threshold:0.1 });
   els.forEach(el => obs.observe(el));
+  setTimeout(() => { els.forEach(el => el.classList.add('is-visible')); }, 600);
 }
 
 // ===== Init on load =====
