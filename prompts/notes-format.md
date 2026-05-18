@@ -4,6 +4,59 @@ You are generating structured study notes for one university lecture. Follow eve
 
 ---
 
+## HARD REQUIREMENTS — your output MUST contain
+
+Before writing the file, plan each item below. After writing, **self-count each one**. If any is 0 (or below the minimum), rewrite the relevant section before saving — the merge script rejects drafts that fail these checks.
+
+- [ ] **Sections**: 3–6 `<section>` blocks (up to 8 only with strong justification)
+- [ ] `data-sec="N"` on every section, where N is an **integer** (not the literal letter N)
+- [ ] **Tables**: ≥1 `<table>` block. Any time 3+ items share the same attributes (source, signal, function, location, etc.), render as a table — never as a bullet list.
+- [ ] **Inline exam traps**: ≥2 `<div class="exam-trap">…</div>` placed in the body **where the confusion happens**. These are separate from and in addition to the final summary block.
+- [ ] **Exam traps summary**: exactly 1 `<div class="exam-traps-summary">` at the end, listing all traps in one place.
+- [ ] **SVG diagram**: ≥1 inline `<svg>` showing a process flow, gradient, anatomical relationship, or comparison. No external image files. Use simple shapes, arrows, labels.
+- [ ] **Bullet lists**: ≥5 total `<ul>` / `<ol>` blocks across the document. Don't lump everything into one giant list.
+- [ ] **Memorize block**: `<div class="memorize"><ol>` with 5–12 `<li>` items.
+- [ ] **Lower-yield block**: `<div class="lower-yield">` listing skip-if-short-on-time items.
+- [ ] **Traditional Chinese (繁體)** annotation in parentheses on first mention of each technical term. Density: roughly 1 annotation per 80 words per section.
+
+### Bad vs Good examples
+
+❌ **BAD** — 3 parallel items rendered as bullets:
+```html
+<ul>
+  <li>Acid stimulus 1: gastrin from G cells, hormonal signal</li>
+  <li>Acid stimulus 2: histamine from ECL cells, paracrine signal</li>
+  <li>Acid stimulus 3: acetylcholine from vagus, neural signal</li>
+</ul>
+```
+
+✅ **GOOD** — same content as a table:
+```html
+<table>
+  <tr><th>Stimulus</th><th>Source cell</th><th>Signal type</th></tr>
+  <tr><td>Gastrin</td><td>G cells</td><td>Hormonal</td></tr>
+  <tr><td>Histamine</td><td>ECL cells</td><td>Paracrine</td></tr>
+  <tr><td>Acetylcholine</td><td>Vagus nerve</td><td>Neural</td></tr>
+</table>
+```
+
+❌ **BAD** — only a summary, no inline warnings:
+```html
+<!-- (body has no <div class="exam-trap"> at all) -->
+<div class="exam-traps-summary"><ul><li>...</li></ul></div>
+```
+
+✅ **GOOD** — inline warning right where the confusion is, AND a summary at the end:
+```html
+<p>Tight junctions seal cells together at the apical membrane…</p>
+<div class="exam-trap">Exam trap: tight junctions ≠ desmosomes. Tight junctions seal; desmosomes anchor.</div>
+<p>(continue explaining)…</p>
+<!-- ... -->
+<div class="exam-traps-summary"><strong>Exam Traps Summary</strong><ul>…</ul></div>
+```
+
+---
+
 ## Output: one complete `<div id="notes-N">` block
 
 Replace N with the confirmed lecture number. The block must follow this structure character-for-character:

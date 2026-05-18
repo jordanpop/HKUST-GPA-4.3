@@ -76,6 +76,37 @@ def check_notes(html, lecture_n):
     if 'class="exam-traps-summary' not in html:
         errors.append("exam-traps-summary div not found")
 
+    # Inline exam-trap divs (separate from summary) — required for in-context warnings
+    inline_traps = len(re.findall(r'class="exam-trap"', html))
+    if inline_traps < 2:
+        errors.append(
+            f"inline exam-trap divs = {inline_traps}, expected ≥2 (use <div class=\"exam-trap\">…</div> "
+            f"in the body where confusion happens; this is separate from the exam-traps-summary block)"
+        )
+
+    # Tables — required when 3+ items share attributes (comparisons, parallel structures)
+    tables = len(re.findall(r'<table\b', html))
+    if tables < 1:
+        errors.append(
+            f"<table> count = {tables}, expected ≥1 (render 3+ items sharing attributes as a table, not bullets)"
+        )
+
+    # SVG diagrams — at least one visual concept graphic per lecture
+    svgs = len(re.findall(r'<svg\b', html))
+    if svgs < 1:
+        errors.append(
+            f"<svg> count = {svgs}, expected ≥1 inline SVG diagram (process flow, gradient, or anatomical relationship)"
+        )
+
+    # Bullet lists — body must use multiple lists, not one giant list
+    body_lists = len(re.findall(r'<(?:ul|ol)\b', html))
+    # The memorize <ol>, lower-yield <ul>, and exam-traps-summary <ul> contribute 3 baseline lists
+    if body_lists < 5:
+        errors.append(
+            f"<ul>/<ol> count = {body_lists}, expected ≥5 (use bullet lists liberally in section bodies, "
+            f"not just in memorize / exam-traps-summary)"
+        )
+
     # Chinese annotation density check per section
     section_blocks = re.findall(r'(<section\b.*?</section>)', html, re.DOTALL)
     for i, block in enumerate(section_blocks):
