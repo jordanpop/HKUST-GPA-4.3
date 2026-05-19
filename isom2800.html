@@ -2192,7 +2192,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ===== PWA Service Worker (inline via Blob) =====
 if ('serviceWorker' in navigator) {
   const swCode = `
-    const CACHE = 'isom2800-v8';
+    const CACHE = 'isom2800-v9';
     self.addEventListener('install', e => { self.skipWaiting(); });
     self.addEventListener('activate', e => {
       e.waitUntil(
@@ -2263,7 +2263,7 @@ if ('serviceWorker' in navigator) {
            <p data-topic="Topic name used in questions">Explanation...</p>
          </section>
 
-         <!-- More sections with data-sec="1", "2", ... -->
+         (More sections with data-sec="1", "2", ...)
 
          <div class="memorize">
            <strong>Top things to memorize</strong>
