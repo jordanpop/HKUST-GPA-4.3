@@ -1,0 +1,2319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ISOM 2800 Study Guide — ISOM2800</title>
+<style>
+<style>
+:root{
+  --bg:#faf6ef; --paper:#fffdf7; --ink:#2b2a26; --muted:#6b6a63;
+  --accent:#4a6b4a; --accent-soft:#d9e4d3;
+  --wrong:#b85042; --wrong-soft:#f3dad6; --border:#d8d2c4;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.6;}
+.wrap{max-width:760px;margin:0 auto;padding:40px 24px 120px;}
+.page{display:none}
+.page.active{display:block}
+h1{font-size:2.2em;margin:0 0 8px;letter-spacing:.5px}
+h2{font-size:1.5em;color:var(--accent);border-bottom:1px solid var(--border);padding-bottom:6px;margin-top:38px}
+h3{font-size:1.15em;color:var(--ink);margin-top:24px}
+.subtitle{color:var(--muted);font-style:italic;margin-bottom:30px}
+.card{background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:22px;margin:14px 0;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.lec-row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.lec-title{font-size:1.15em;font-weight:bold}
+.btn{display:inline-block;padding:8px 18px;border:1px solid var(--accent);background:var(--paper);color:var(--accent);font-family:inherit;font-size:.95em;cursor:pointer;border-radius:4px;text-decoration:none;transition:all .2s}
+.btn:hover{background:var(--accent);color:var(--paper)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn-primary{background:var(--accent);color:var(--paper)}
+.btn-primary:hover{background:#3a5439}
+.back{margin-bottom:20px;font-size:.9em}
+.bigpic{background:var(--accent-soft);border-left:4px solid var(--accent);padding:14px 18px;margin:18px 0;font-style:italic}
+.callout{background:#fdf4d9;border-left:4px solid #c9a227;padding:14px 18px;margin:20px 0;border-radius:3px}
+.callout-title{font-weight:bold;color:#7a5e0a;margin-bottom:6px;font-style:normal}
+table{border-collapse:collapse;width:100%;margin:14px 0;background:var(--paper)}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--accent-soft)}
+.exam-trap-inline{background:#fdf4d9;border-left:3px solid #c9a227;padding:6px 12px;margin:10px 0;font-size:.92em}
+.exam-trap-inline b{color:#7a5e0a}
+.preview-q{background:var(--accent-soft);border-radius:4px;padding:14px 18px;margin:10px 0}
+.preview-q ol{margin:0;padding-left:22px}
+.lower-yield{color:var(--muted);font-size:.93em;border-top:1px dashed var(--border);padding-top:14px;margin-top:24px}
+.lower-yield ul{margin-top:6px}
+.score-bar{position:sticky;top:0;background:var(--paper);border:1px solid var(--border);padding:12px 18px;margin-bottom:20px;border-radius:4px;font-weight:bold;z-index:10;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.q-block{background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:20px;margin:18px 0}
+.q-num{color:var(--muted);font-size:.88em;margin-bottom:6px}
+.q-text{font-weight:bold;margin-bottom:14px}
+.opt{display:block;padding:10px 14px;margin:6px 0;border:1px solid var(--border);border-radius:4px;cursor:pointer;background:var(--paper);transition:background .15s}
+.opt:hover{background:var(--accent-soft)}
+.opt input{margin-right:10px}
+.opt.correct{background:var(--accent-soft);border-color:var(--accent);animation:slideIn .3s ease}
+.opt.wrong{background:var(--wrong-soft);border-color:var(--wrong);animation:slideIn .3s ease}
+.opt.disabled{cursor:default;opacity:.85}
+@keyframes slideIn{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:translateX(0)}}
+.opt.disabled:hover{background:var(--paper)}
+.opt.disabled.correct:hover{background:var(--accent-soft)}
+.opt.disabled.wrong:hover{background:var(--wrong-soft)}
+.explain{margin-top:12px;padding:12px;background:#f4efe2;border-radius:4px;font-size:.94em;color:var(--ink)}
+.explain b{color:var(--accent)}
+.summary{background:var(--paper);border:2px solid var(--accent);border-radius:6px;padding:24px;margin:30px 0}
+.summary h2{margin-top:0;color:var(--accent);border-bottom:none}
+.score-big{font-size:2.5em;color:var(--accent);font-weight:bold}
+.verdict{font-size:1.1em;margin:10px 0;font-style:italic}
+.theme-list{margin:12px 0}
+.theme-list li{margin:4px 0}
+.review-card{background:var(--paper);border:1px solid var(--wrong);border-radius:6px;padding:18px;margin:14px 0}
+.review-card .q-text{color:var(--wrong)}
+.memorize ol{padding-left:24px}
+.memorize li{margin:6px 0}
+.reveal-on-scroll{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.4,0,.2,1);will-change:opacity,transform}
+.reveal-on-scroll.is-visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+.submit-q{margin-top:10px}
+.quiz-settings{margin-top:12px;padding:10px 14px;background:var(--accent-soft);border-radius:4px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:.92em}
+.quiz-settings label{display:flex;align-items:center;gap:6px;color:var(--ink)}
+.quiz-settings select{font-family:inherit;font-size:.95em;padding:4px 8px;border:1px solid var(--border);border-radius:3px;background:var(--paper);color:var(--ink)}
+.reset-zone{text-align:center;margin-top:20px}
+.btn-danger{border-color:var(--wrong);color:var(--wrong)}
+.btn-danger:hover{background:var(--wrong);color:var(--paper)}
+.weak-highlight{background:rgba(253,222,90,.45);border-radius:3px;transition:background .3s;box-shadow:inset 3px 0 0 #c9a227}
+p.weak-highlight,li.weak-highlight,ul.weak-highlight,ol.weak-highlight,div.weak-highlight,table.weak-highlight{padding:6px 10px;margin:4px 0}
+tr.weak-highlight td,tr.weak-highlight th{background:rgba(253,222,90,.45)}
+tr.weak-highlight{box-shadow:none}
+.weak-h2{background:linear-gradient(transparent 60%,rgba(253,222,90,.55) 60%);padding:0 6px;border-radius:2px}
+/* Progress Ring + Chart Styles */
+.progress-ring-container{position:relative;width:120px;height:120px;margin:20px auto}
+.progress-ring-container svg{width:100%;height:100%}
+.progress-ring-label{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none}
+.progress-percentage{font-size:1.8em;font-weight:bold;color:var(--ink);line-height:1.2}
+.progress-score{font-size:0.9em;color:var(--muted);margin-top:4px}
+.chart-container{margin:20px 0;padding:20px;background:var(--paper);border-radius:6px}
+.bar-chart-item{display:flex;align-items:center;margin:14px 0;gap:12px}
+.bar-chart-label{width:140px;font-size:0.95em;color:var(--ink);flex-shrink:0}
+.bar-chart-bar{flex:1;height:24px;background:var(--accent-soft);border-radius:3px;position:relative;overflow:hidden;border:1px solid var(--accent)}
+.bar-chart-fill{height:100%;background:var(--accent);border-radius:2px;transition:width .6s ease;display:flex;align-items:center;justify-content:flex-end;padding-right:8px}
+.bar-chart-count{font-size:0.85em;color:var(--paper);font-weight:bold}
+.progress-badge{display:inline-block;font-size:0.85em;padding:4px 10px;background:var(--accent-soft);border-radius:4px;color:var(--ink);font-weight:500}
+.verdict-excellent{color:#2d5a2d}
+.verdict-good{color:#4a6b4a}
+.verdict-review{color:#7a6b3a}
+.verdict-weak{color:var(--wrong)}
+@media(max-width:600px){.progress-ring-container{width:100px;height:100px}.progress-percentage{font-size:1.4em}.bar-chart-label{width:100px;font-size:0.88em}}
+</style>
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div id="home" class="page active">
+  <a class="btn back" onclick="window.location.href='index.html'">← Subjects</a>
+  <h1>ISOM 2800 Study Guide</h1>
+  <div class="subtitle">ISOM2800 — Operations Management, Lectures 7-11</div>
+
+  <!-- Lecture cards are generated by JS from data/isom2800.json (see renderHomeCards). -->
+  <div id="lecture-cards"></div>
+
+  <div style="text-align:center;margin-top:40px">
+    <button id="globalReportBtn" class="btn" disabled onclick="showGlobalReport()">Full Summary Report</button>
+  </div>
+  <div class="reset-zone">
+    <button class="btn btn-danger" onclick="resetAllProgress()">Reset All Progress</button>
+  </div>
+</div>
+
+<!-- NOTES PAGES go here -->
+<div id="notes-11" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-11" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(11)">Clear Highlights</button>
+  <h1>Lecture 11: Revenue Management and Pricing Decisions: Supply Chain Issues, and Multi-Product Cases</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    When a supplier and retailer each set prices independently, both end up charging too much — a phenomenon called double marginalization (雙重加價). This lecture traces why decentralized supply chains destroy value, surveys the remedies available, then extends revenue management to booking limits and multi-product pricing where customer segments differ in their willingness to pay.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Double Marginalization and Supply Chain Inefficiency</h2>
+    <p data-topic="double-marginalization">
+      The base model has three parameters: marginal cost (邊際成本) c = $7, wholesale price (批發價格) w set by the supplier, and retail price (零售價格) p set by the retailer. Consumer demand (消費者需求) follows q = 100 − 2p.
+    </p>
+    <ul data-topic="double-marginalization">
+      <li>Retailer maximises π<sub>r</sub> = (p − w)(100 − 2p); first-order condition gives p* = 25 + w/2 and q* = 50 − w.</li>
+      <li>Supplier maximises π<sub>s</sub> = (w − 7)q*; first-order condition gives w* = $28.5.</li>
+      <li>Resulting retail price p* = $39.25; retailer profit = $231.13; supplier profit = $462.25; total channel profit (渠道利潤) = $693.38.</li>
+      <li>Supply-chain optimal (整合最優) price: maximise π<sub>sc</sub> = (p − 7)(100 − 2p) → p* = $28.5; total profit = $924.50.</li>
+      <li>Efficiency loss (效率損失): decentralized channel earns only $693.38 vs. integrated optimum of $924.50 — roughly 25% profit destroyed.</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="double-marginalization"><b>Exam trap:</b> Double marginalization raises both the wholesale price AND the retail price above supply-chain-optimal levels. Students often assume only the retail price is distorted; in fact both parties price too high.</div>
+    <p data-topic="double-marginalization-mechanism">
+      Root cause: the supplier ignores the retailer's lost revenue when raising w; the retailer ignores the supplier's foregone profit when raising p. Each party externalises (外部化) a cost onto the other.
+    </p>
+
+    <svg width="420" height="110" viewBox="0 0 420 110" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:1rem auto">
+      <rect x="10" y="35" width="90" height="40" rx="6" fill="#d4edda" stroke="#5a9e6f" stroke-width="1.5"/>
+      <text x="55" y="52" text-anchor="middle" font-size="12" fill="#2d4a35">Supplier</text>
+      <text x="55" y="67" text-anchor="middle" font-size="11" fill="#2d4a35">c = $7</text>
+      <line x1="100" y1="55" x2="155" y2="55" stroke="#5a9e6f" stroke-width="1.5" marker-end="url(#arr)"/>
+      <text x="127" y="48" text-anchor="middle" font-size="10" fill="#555">w=$28.5</text>
+      <rect x="155" y="35" width="90" height="40" rx="6" fill="#d4edda" stroke="#5a9e6f" stroke-width="1.5"/>
+      <text x="200" y="52" text-anchor="middle" font-size="12" fill="#2d4a35">Retailer</text>
+      <text x="200" y="67" text-anchor="middle" font-size="11" fill="#2d4a35">p*=$39.25</text>
+      <line x1="245" y1="55" x2="300" y2="55" stroke="#5a9e6f" stroke-width="1.5" marker-end="url(#arr)"/>
+      <text x="272" y="48" text-anchor="middle" font-size="10" fill="#555">buys</text>
+      <rect x="300" y="35" width="110" height="40" rx="6" fill="#fff3cd" stroke="#b8860b" stroke-width="1.5"/>
+      <text x="355" y="52" text-anchor="middle" font-size="12" fill="#5a4200">Consumer</text>
+      <text x="355" y="67" text-anchor="middle" font-size="11" fill="#5a4200">q=21.5 units</text>
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#5a9e6f"/>
+        </marker>
+      </defs>
+      <text x="210" y="100" text-anchor="middle" font-size="10" fill="#888">Decentralized: total π=$693.38 vs. integrated $924.50</text>
+    </svg>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Remedial Measures for Double Marginalization</h2>
+    <p data-topic="remedial-measures">
+      Several coordination mechanisms (協調機制) can restore supply-chain efficiency, each with different assumptions about information and enforceability.
+    </p>
+    <table data-topic="remedial-measures">
+      <thead>
+        <tr><th>Mechanism (機制)</th><th>How It Works</th><th>Key Condition</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Vertical integration (垂直整合)</td><td>Merge supplier and retailer; single entity sets p = supply-chain optimal price</td><td>Feasible but may raise antitrust (反壟斷) concerns</td></tr>
+        <tr><td>Marginal cost pricing (邊際成本定價)</td><td>Supplier sets w = c = $7; supplier earns zero profit; retailer sets supply-chain-optimal retail price</td><td>Supplier must be willing to accept zero margin</td></tr>
+        <tr><td>Franchise fee / two-part tariff (特許費用 / 兩部分收費)</td><td>Supplier charges fixed fee F + per-unit price w = c; supplier recovers profit via F; retailer maximises as if vertically integrated</td><td>Works best under low demand uncertainty (需求不確定性)</td></tr>
+        <tr><td>Quantity discounts (數量折扣)</td><td>Supplier offers lower w for higher volumes, inducing retailer to lower price and sell more</td><td>Requires observable quantities</td></tr>
+        <tr><td>Supplier-set retail price</td><td>Supplier selects a low retail price, forces retailer to buy larger quantity to meet demand</td><td>Legal constraints in some jurisdictions</td></tr>
+        <tr><td>Encourage competition (促進競爭)</td><td>Add competing retailers; retail competition lowers price and increases total demand</td><td>Requires market structure (市場結構) allowing multiple retailers</td></tr>
+        <tr><td>Buy-backs (回購)</td><td>Supplier buys back unsold inventory; shifts risk; incentivises retailer to order more</td><td>Useful under demand uncertainty</td></tr>
+      </tbody>
+    </table>
+    <div class="exam-trap-inline" data-topic="remedial-measures"><b>Exam trap:</b> The two-part tariff works well only when demand uncertainty is LOW. Under high uncertainty the fixed fee may overcompensate or undercompensate the supplier, breaking the coordination.</div>
+
+    <h3>Why Retail Competition Helps</h3>
+    <ul data-topic="competition-effect">
+      <li>Two competing retailers face demand q<sub>1</sub> = 50 − 2p<sub>1</sub> + p<sub>2</sub> and q<sub>2</sub> = 50 − 2p<sub>2</sub> + p<sub>1</sub>; total demand = 100 − p<sub>1</sub> − p<sub>2</sub>.</li>
+      <li>With single retailer: wholesale $28.50, retail $39.25, SC profit $693.38.</li>
+      <li>With competing retailers: wholesale $28.50, retail $35.67, SC profit $821.78.</li>
+      <li>Supply-chain optimal: wholesale —, retail $28.50, SC profit $924.50.</li>
+      <li>Competition (競爭) reduces each retailer's profit margin but raises total channel efficiency closer to the integrated optimum.</li>
+    </ul>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Seven Core Concepts of Revenue Management</h2>
+    <p data-topic="seven-core-concepts">
+      Revenue management (收益管理) reframes pricing away from cost-recovery toward value capture across differentiated customer segments (差異化顧客細分).
+    </p>
+    <ol data-topic="seven-core-concepts">
+      <li>Focus on price rather than costs when balancing supply and demand — replace cost-based pricing (成本定價) with market-based pricing (市場定價).</li>
+      <li>Sell to segmented micro-markets (微市場), not to mass markets (大眾市場).</li>
+      <li>Save your products for your most valuable customers.</li>
+      <li>Make decisions based on knowledge, not supposition (假設).</li>
+      <li>Exploit each product's value cycle (價值週期).</li>
+      <li>Continually reevaluate your revenue opportunities (收益機會).</li>
+    </ol>
+    <p data-topic="single-price-vs-segmented">
+      Single-price example: demand curve (需求曲線) from 1 to 99 units; at $50, profit-maximising firm sells 50 units, revenue = $2,500. This leaves consumer surplus (消費者剩餘) — the 49 customers willing to pay above $50 — and rejects 49 customers willing to pay below $50.
+    </p>
+    <ul data-topic="single-price-vs-segmented">
+      <li>Consumer surplus (per customer) = Willingness to Pay (支付意願) − Offered Price.</li>
+      <li>Rejected customers (被拒顧客): those whose willingness to pay falls below the single offered price.</li>
+      <li>Segmenting into 4 price tiers ($20, $40, $60, $80) sells 80 units total vs. 50 under single price — a ~60% revenue increase (收益增加).</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="single-price-vs-segmented"><b>Exam trap:</b> "60% increase" refers to revenue/units sold from segmented pricing vs. a single average price — not a 60% increase in profit margin. Remember the calculation basis.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Booking Limits and the Newsvendor Framework</h2>
+    <p data-topic="booking-limits">
+      Booking limits (預訂限額) apply when capacity is insufficient for all demand segments. The airline seats two customer types: H (高價) at price p<sub>H</sub> and L (低價) at price p<sub>L</sub>. The carrier reserves seats for H-type customers while selling remaining seats to L-type.
+    </p>
+    <ul data-topic="booking-limits">
+      <li>Relevant only when capacity (產能) is insufficient to serve the more profitable segment fully after selling to the lower-value segment.</li>
+      <li>The problem mirrors the newsvendor (報童) framework: reserve too many seats for H → unsold capacity (overage cost = p<sub>L</sub>, opportunity cost of not selling to L-type); reserve too few → H customers turned away (underage cost = p<sub>H</sub> − p<sub>L</sub>).</li>
+      <li>Critical ratio (臨界比率) = (p<sub>H</sub> − p<sub>L</sub>) / p<sub>H</sub>.</li>
+      <li>Booking limit for L-type = Available Capacity − Reserved Quantity for H-type.</li>
+    </ul>
+
+    <table data-topic="booking-limits-examples">
+      <thead>
+        <tr><th>Scenario</th><th>p<sub>H</sub></th><th>p<sub>L</sub></th><th>Underage Cost</th><th>Overage Cost</th><th>Critical Ratio</th><th>Optimal Reserve</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Example 1</td><td>$1,000</td><td>$500</td><td>$500</td><td>$500</td><td>$500/$1,000 = 0.50</td><td>Mean demand for H (no z-adjustment)</td></tr>
+        <tr><td>Example 2</td><td>$1,500</td><td>$500</td><td>$1,000</td><td>$500</td><td>$1,000/$1,500 = 2/3 ≈ 0.667</td><td>Mean + NORMSINV(2/3) × Stdev of H demand</td></tr>
+      </tbody>
+    </table>
+    <ul data-topic="booking-limits-examples">
+      <li>In Example 1 the critical ratio = 0.5, so reserve exactly mean H demand (symmetric underage/overage costs).</li>
+      <li>In Example 2 the critical ratio = 2/3; reserve mean H demand plus NORMSINV(2/3) × standard deviation (標準差) of H demand because underage cost exceeds overage cost.</li>
+    </ul>
+
+    <h3>Other Pricing Mechanisms</h3>
+    <ul data-topic="other-pricing-mechanisms">
+      <li>Dynamic pricing (動態定價): adjust price in response to observed/estimated inventory (存貨), evolving demand (需求演變), and time.</li>
+      <li>Cost-plus pricing (成本加成定價): add fixed markup to unit cost.</li>
+      <li>Willingness-to-pay pricing (支付意願定價): set price based on estimated maximum a segment will pay.</li>
+      <li>Overbooking (超額預訂): intentionally sell more than capacity to hedge against cancellations (取消).</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="booking-limits"><b>Exam trap:</b> The overage cost in the booking limit problem is p<sub>L</sub> (revenue lost from an empty seat that could have been sold to an L-type), NOT zero. Students often set overage cost to zero, inflating the optimal reserve quantity.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Multi-Product Revenue Management</h2>
+    <p data-topic="multi-product-rm">
+      When a firm offers multiple product versions (產品版本) — Basic, Professional, Advanced — to multiple customer segments (顧客細分), pricing decisions interact across products and segments.
+    </p>
+
+    <h3>Market Segments and Costs</h3>
+    <table data-topic="multi-product-segments">
+      <thead>
+        <tr><th>Segment (細分市場)</th><th>Bus. Dev. Cost (Fixed)</th><th>Market Size (# Units)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Consultants</td><td>$200,000</td><td>20,000</td></tr>
+        <tr><td>Small Businesses</td><td>$200,000</td><td>15,000</td></tr>
+        <tr><td>Large Corporations</td><td>$150,000</td><td>5,000</td></tr>
+        <tr><td>Laboratories</td><td>$100,000</td><td>2,000</td></tr>
+        <tr><td>Students</td><td>$300,000</td><td>500,000</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Products and Development Costs</h3>
+    <table data-topic="multi-product-products">
+      <thead>
+        <tr><th>Product (產品)</th><th>Development Cost (開發成本)</th><th>Marginal Cost ($/unit)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Basic</td><td>$100,000</td><td>$15</td></tr>
+        <tr><td>Professional</td><td>$200,000</td><td>$25</td></tr>
+        <tr><td>Advanced</td><td>$500,000</td><td>$35</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Segment Valuations (支付意願) by Product</h3>
+    <table data-topic="multi-product-valuations">
+      <thead>
+        <tr><th>Segment</th><th>Basic</th><th>Professional</th><th>Advanced</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Consultants</td><td>$200</td><td>$300</td><td>$600</td></tr>
+        <tr><td>Small Businesses</td><td>$175</td><td>$225</td><td>$300</td></tr>
+        <tr><td>Large Corporations</td><td>$150</td><td>$1,200</td><td>$2,500</td></tr>
+        <tr><td>Laboratories</td><td>$100</td><td>$1,000</td><td>$2,000</td></tr>
+        <tr><td>Students (Bookstore 40% commission)</td><td>$50</td><td>$60</td><td>$100</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Key Objectives in Multi-Product RM</h3>
+    <ul data-topic="multi-product-objectives">
+      <li>Best single price (最佳單一定價) per product if offered alone — compare revenue to development + marginal costs.</li>
+      <li>Optimal product set (最優產品組合) when multiple products can be sold and segments can be prevented from crossing over (跨越) to unintended products (second-degree price discrimination, 二級價格歧視).</li>
+      <li>Optimal product set when segments cannot be prevented from crossing over — must model customer self-selection (自我選擇) behavior.</li>
+      <li>Customer behavior model (顧客行為模型): customers choose the product that maximises their surplus (剩餘) = Valuation − Price; firm must ensure incentive compatibility (激勵相容).</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="multi-product-objectives"><b>Exam trap:</b> When segments can self-select, the firm cannot simply price each product at each segment's full valuation. Setting Advanced at $2,500 for Large Corporations would cause them to defect to a lower-priced product if that also yields positive surplus. Incentive-compatible pricing (激勵相容定價) requires a downward adjustment.</div>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Double marginalization raises BOTH the wholesale price and the retail price above supply-chain-optimal levels — both parties price too high, not just the retailer.</li>
+      <li>The two-part tariff (franchise fee) restores efficiency only under low demand uncertainty; high uncertainty breaks coordination.</li>
+      <li>The "60% revenue increase" from segmented pricing is measured against a single average price — it is a revenue/volume figure, not a profit margin figure.</li>
+      <li>In booking limits, overage cost = p<sub>L</sub> (foregone L-type revenue), NOT zero. Setting it to zero inflates the optimal reserve quantity.</li>
+      <li>When critical ratio = 0.5 (equal underage and overage costs), reserve exactly mean H demand — no z-score adjustment needed.</li>
+      <li>When segments can freely self-select across products, prices cannot be set at each segment's full valuation — incentive compatibility requires lower prices on higher-tier products to prevent profitable defection.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Double marginalization formula: decentralized w* = (c + monopoly_markup)/2, causing both w and p to exceed integrated optimum.</li>
+      <li>Numerical result: c=$7 → w*=$28.5 → p*=$39.25; channel profit $693.38 vs. integrated $924.50.</li>
+      <li>Critical ratio for booking limits: CR = (p<sub>H</sub> − p<sub>L</sub>) / p<sub>H</sub>; when CR = 0.5, reserve = mean demand; when CR > 0.5, reserve = mean + NORMSINV(CR) × stdev.</li>
+      <li>Seven core concepts of revenue management — especially #1 (price over cost), #2 (micro-segments), #3 (save for valuable customers).</li>
+      <li>Consumer surplus = Willingness to Pay − Offered Price; rejected customers = those with WTP below price.</li>
+      <li>Segmented pricing (4 tiers) yields ~60% more revenue than a single average price on the linear demand example.</li>
+      <li>Two-part tariff: supplier charges fixed fee F + w = c; recovers profit via F; works best under low demand uncertainty.</li>
+      <li>Competition effect: competing retailers bring SC profit from $693.38 (single) to $821.78 (competing) vs. $924.50 (optimal).</li>
+      <li>Booking limit for L-type = Available Capacity − Reserved Quantity for H-type.</li>
+      <li>Multi-product RM requires considering incentive compatibility when segments can self-select products.</li>
+      <li>Students segment has a 40% bookstore commission affecting net price received — factor this into profitability calculations.</li>
+    </ol>
+  </div>
+</div>
+
+<div id="notes-10" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-10" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(10)">Clear Highlights</button>
+  <h1>Lecture 10: What is Common Between Zara and 7-Eleven: Supply Chain Management Best Practices</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    This lecture uses Zara and 7-Eleven as twin case studies to illustrate how world-class supply chains are built around speed, responsiveness, and information. Both firms reject the traditional model of forecasting far in advance and instead use fast feedback loops, tight distribution control, and deliberate inventory strategies to stay ahead of demand uncertainty. The key throughline is that operational design choices — batch size, lead time, postponement, and IT architecture — directly determine competitive position in fashion and convenience retail.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Zara's Positioning and Operations Model</h2>
+
+    <p data-topic="zara-positioning">Zara occupies the "cheap chic" (廉價時尚) quadrant: fashion quality closer to Banana Republic, price closer to Old Navy. It is a trend follower (潮流跟隨者) — a fashion imitator, not an originator. Key competitors in fast fashion (快時尚) include Forever 21, Uniqlo, and Renner (Brazil).</p>
+
+    <ul>
+      <li>Marketing spend (行銷支出) — 0.3% of revenue vs. industry average ~3.5%; relies on store location and product turnover instead of advertising</li>
+      <li>Manufacturing mix (製造結構) — 34% outsourced to Asia, 14% to Europe (Italy, Turkey) for basic items; 49% (high-fashion items) cut and finished in proximity: Spain, Portugal, Morocco</li>
+      <li>Factory wages — Spain ~$1,650/month vs. China Guangdong minimum wage ~$289/month; proximity manufacturing chosen for speed, not cost</li>
+      <li>Batch size (批量) — small batches create artificial scarcity (人工稀缺感); consumers buy immediately ("buy now or never")</li>
+      <li>Fail rate (失敗率) — ~10% of Zara designs fail vs. ~1% industry average; acceptable because small batches limit downside</li>
+      <li>Markdown (折價) — ~50% of items marked down vs. ~15% industry average; higher because Zara accepts rapid trend turnover</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="zara-positioning"><b>Exam trap:</b> Students often assume Zara's proximity manufacturing (Spain/Portugal/Morocco) is purely about cost savings. It is actually about lead-time speed and responsiveness for high-fashion items — labor costs are much higher than Asia.</div>
+
+    <p data-topic="zara-store-operations">Store and distribution operations (門店與配送運作):</p>
+    <ul>
+      <li>Shipment frequency (出貨頻率) — twice a week ("Z-Day"); fixed schedule creates predictable restocking</li>
+      <li>Out-of-stock (缺貨) is intentional — encourages repeat visits; Zara customers visit ~17 times/year vs. ~3 times/year industry average</li>
+      <li>Store product mix (產品組合) decided by local store managers, not headquarters — decentralized decision-making</li>
+      <li>Warehouses/DCs located in Spain — 24-hour delivery within Europe; high-end merchandise flown to US and Asia</li>
+      <li>Clothes ironed in advance, packed on hangers with security and price tags pre-attached at DC</li>
+      <li>Distribution center processes more than 2.6 million items per week</li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Zara</th>
+          <th>Industry Average</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Marketing spend (行銷支出)</td>
+          <td>0.3% of revenue</td>
+          <td>~3.5% of revenue</td>
+        </tr>
+        <tr>
+          <td>Markdown rate (折價率)</td>
+          <td>~50%</td>
+          <td>~15%</td>
+        </tr>
+        <tr>
+          <td>Product fail rate (失敗率)</td>
+          <td>~10%</td>
+          <td>~1%</td>
+        </tr>
+        <tr>
+          <td>Customer store visits/year</td>
+          <td>~17</td>
+          <td>~3</td>
+        </tr>
+        <tr>
+          <td>Design-to-store lead time (前置時間)</td>
+          <td>As fast as 1 week</td>
+          <td>Months (traditional)</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Zara's Product Design, IT, and JIT/Postponement</h2>
+
+    <p data-topic="zara-design-it">Cross-functional design and development teams (跨職能設計開發團隊) at Zara span product design, merchandise planning, global sourcing, vendor management, and distribution. Prototypes can be examined, a design chosen, and resources committed in a few hours if necessary.</p>
+
+    <ul>
+      <li>Trend spotting (趨勢偵測) — sourced from streets, movies, couture fashion shows, and direct customer feedback</li>
+      <li>Design to store in as little as 1 week at the quickest</li>
+      <li>POS data (銷售點數據) — hard data collected at store level</li>
+      <li>Soft data (軟性數據) — store staff use PDAs to ask customers directly about preferences</li>
+      <li>Production technology — fabric cut and dyed by robots using laser cutting (雷射裁切)</li>
+      <li>Systems used — ERP (企業資源規劃), SCM (供應鏈管理), CRM (客戶關係管理), e-commerce website</li>
+    </ul>
+
+    <p data-topic="zara-closed-loop">Closed-loop information and order loop (閉環資訊與訂單循環):</p>
+    <ul>
+      <li>Customer → Store Manager</li>
+      <li>Store Manager → Fashion Buyer (採購員)</li>
+      <li>Buyer → Designer (設計師)</li>
+      <li>Designer → Production Manager (生產經理)</li>
+    </ul>
+
+    <svg width="520" height="80" viewBox="0 0 520 80" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:12px 0;font-family:Georgia,serif;font-size:12px">
+      <rect x="0" y="20" width="90" height="36" rx="6" fill="#e8f5e9" stroke="#4caf50"/>
+      <text x="45" y="43" text-anchor="middle" fill="#2e7d32">Customer</text>
+      <polygon points="90,38 104,38 98,32 110,38 98,44" fill="#4caf50"/>
+      <rect x="110" y="20" width="90" height="36" rx="6" fill="#e8f5e9" stroke="#4caf50"/>
+      <text x="155" y="43" text-anchor="middle" fill="#2e7d32">Store Mgr</text>
+      <polygon points="200,38 214,38 208,32 220,38 208,44" fill="#4caf50"/>
+      <rect x="220" y="20" width="70" height="36" rx="6" fill="#e8f5e9" stroke="#4caf50"/>
+      <text x="255" y="43" text-anchor="middle" fill="#2e7d32">Buyer</text>
+      <polygon points="290,38 304,38 298,32 310,38 298,44" fill="#4caf50"/>
+      <rect x="310" y="20" width="80" height="36" rx="6" fill="#e8f5e9" stroke="#4caf50"/>
+      <text x="350" y="43" text-anchor="middle" fill="#2e7d32">Designer</text>
+      <polygon points="390,38 404,38 398,32 410,38 398,44" fill="#4caf50"/>
+      <rect x="410" y="20" width="100" height="36" rx="6" fill="#e8f5e9" stroke="#4caf50"/>
+      <text x="460" y="37" text-anchor="middle" fill="#2e7d32">Production</text>
+      <text x="460" y="51" text-anchor="middle" fill="#2e7d32">Manager</text>
+    </svg>
+
+    <p data-topic="zara-jit-postponement">Just-in-Time (即時生產) and Postponement (延遲策略):</p>
+    <ul>
+      <li>JIT approach developed with help from Toyota (豐田)</li>
+      <li>Postponement (延遲策略) — over 50% of fabrics kept undyed so colors can be adapted mid-season in response to actual demand</li>
+      <li>Postponement enables speed and flexibility (速度與彈性); concept pioneered by Benetton</li>
+    </ul>
+
+    <p data-topic="zara-production-planning">Production planning comparison (生產規劃比較) — Traditional industry vs. Zara:</p>
+    <ul>
+      <li>Traditional industry — 4-season model; visits to exhibitions, design, introduction to collection, manufacturing, distribution and sales all scheduled across 5 quarters</li>
+      <li>Zara — 7-season model; design and raw material sourcing overlap; external manufacturing: 55% in early stage, 45% later; internal manufacturing: 15% in early stage, 85% later — allows heavy late-stage production commitment based on actual demand signals</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="zara-jit-postponement"><b>Exam trap:</b> Postponement is NOT about delaying production entirely — it means keeping a portion of inputs (fabrics) in an uncommitted (undyed) state so final configuration can happen after demand is clearer. JIT and postponement are complementary, not the same concept.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Push vs. Pull Supply Chain Frameworks</h2>
+
+    <p data-topic="push-pull-framework">Supply chain strategies (供應鏈策略) differ based on where demand information drives production and inventory decisions. The four key archetypes are mapped by SKU variety and demand predictability.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Strategy</th>
+          <th>SKU Variety</th>
+          <th>Demand</th>
+          <th>Responsiveness Mechanism</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Make-to-Stock (備貨生產)</td>
+          <td>Low to medium; no substitution</td>
+          <td>Stable; low margins</td>
+          <td>Finished goods inventory (FGI 成品庫存) buffer</td>
+        </tr>
+        <tr>
+          <td>Push / WIP Buffer</td>
+          <td>Few categories, high SKU variety</td>
+          <td>Stable</td>
+          <td>Work-in-progress (WIP 在製品) buffer + fast fulfillment</td>
+        </tr>
+        <tr>
+          <td>Build-to-Order (接單生產)</td>
+          <td>High component variety; high margins</td>
+          <td>Risky / unpredictable</td>
+          <td>Fast fulfillment after order received</td>
+        </tr>
+        <tr>
+          <td>JIT-Push (即時推式)</td>
+          <td>High component variety; not substitutable</td>
+          <td>End-product substitution possible</td>
+          <td>FGI buffer stocks</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ul>
+      <li>Push supply chain (推式供應鏈) — production driven by forecasts (預測); goods produced before demand is confirmed</li>
+      <li>Pull supply chain (拉式供應鏈) — production triggered by actual customer orders; Kanban ordering is a classic example</li>
+      <li>Push-pull boundary (推拉分界點) — the decoupling point where the supply chain transitions from forecast-based to order-based</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="push-pull-framework"><b>Exam trap:</b> "JIT-Push" is not a contradiction — the "push" refers to how components are supplied to the assembly stage based on schedules, while JIT refers to timing. Do not conflate JIT with pure pull systems in all contexts.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. 7-Eleven's Supply Chain Strategy</h2>
+
+    <p data-topic="7eleven-strategy">7-Eleven (日本711) operates 47,000+ stores globally (2014 data); Japan alone had 12,105 stores in 2007. Its supply chain is built around convenience (便利性), freshness (新鮮度), and dense store clustering (集群擴張).</p>
+
+    <ul>
+      <li>Small stores, many SKUs (庫存單位) — wide product variety in limited floor space</li>
+      <li>New products and new services — continual menu and service refreshment</li>
+      <li>Customer segmentation (客戶細分) — product assortment tailored to local customer profiles</li>
+      <li>Freshness and quality — core differentiator, especially for fresh food items</li>
+      <li>Store control and IT — store managers use data tools to manage ordering</li>
+      <li>Clustered growth (集群成長) — expand densely in one region before moving to the next; enables shared distribution infrastructure</li>
+      <li>Linked IT and distribution (IT與配送整合) — information system tightly coupled to physical logistics</li>
+      <li>Temperature-controlled distribution (溫控配送) — separate delivery runs for different temperature zones (frozen, chilled, ambient, hot)</li>
+    </ul>
+
+    <p data-topic="7eleven-supplier-relations">Supplier relations (供應商關係):</p>
+    <ul>
+      <li>Joint product development (聯合產品開發) — 7-Eleven collaborates with suppliers on new items</li>
+      <li>Use of distributors (經銷商) as intermediaries who aggregate deliveries</li>
+      <li>Joint delivery (聯合配送) — multiple suppliers consolidate into shared delivery runs to reduce truck trips</li>
+    </ul>
+
+    <p data-topic="7eleven-product-demand-matrix">Supply chain type selection — matches product type to fulfillment strategy:</p>
+    <ul>
+      <li>Functional products (功能性產品) with predictable demand → Efficient supply chain (高效供應鏈)</li>
+      <li>Innovative products (創新性產品) with unpredictable demand → Responsive supply chain (響應性供應鏈)</li>
+    </ul>
+
+    <p data-topic="7eleven-hub-spoke">Hub-and-spoke distribution model (輪轂輻射配送模式) used by 7-Eleven:</p>
+    <ul>
+      <li>OS/Pull/Kanban (看板) ordering from stores to distributors — orders pulled based on actual shelf needs</li>
+      <li>Economies of scale (規模經濟) from full truckloads (整車運輸) between suppliers and distributors</li>
+    </ul>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Achieving Greater Responsiveness: Reactive and Speculative Capacity</h2>
+
+    <p data-topic="responsiveness-capacity">Responsiveness (響應性) in supply chains depends on how and when capacity commitments (產能承諾) are made relative to demand information arrival.</p>
+
+    <ul>
+      <li>Improve demand forecasts (需求預測) as a starting point</li>
+      <li>Low-risk items — can be produced/delivered in early season stages</li>
+      <li>High-risk items — should be left for production in second or later selling season stages</li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Capacity Type</th>
+          <th>When Committed</th>
+          <th>Information Available</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Speculative Capacity (投機性產能)</td>
+          <td>Before accurate demand information is available</td>
+          <td>Probabilistic forecast (機率性預測) only</td>
+        </tr>
+        <tr>
+          <td>Reactive Capacity (反應性產能)</td>
+          <td>After stable demand information is available</td>
+          <td>Demand known with certainty or 70–80% confidence</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p data-topic="reactive-capacity-quick-response">Reactive capacity for quick response (快速響應反應性產能):</p>
+    <ul>
+      <li>Shorten production and material lead times (縮短前置時間)</li>
+      <li>Accelerate information flow (加速資訊流動)</li>
+      <li>Reduce batch sizes (縮減批量)</li>
+      <li>Modify supply chain to enhance ability to produce quickly in response to actual demand</li>
+    </ul>
+
+    <p data-topic="reactive-capacity-accurate-response">Reactive capacity for accurate response (準確響應反應性產能) — minimize impact of inaccurate forecasts:</p>
+    <ul>
+      <li>Overstocking costs (過剩庫存成本) — holding, obsolescence</li>
+      <li>Lost sales costs (失銷成本) — stockout opportunity cost</li>
+      <li>Assess forecast accuracy — distinguish predictable demand products from unpredictable ones</li>
+      <li>Use early-season demand (~20% of season) as a signal for the rest of the season</li>
+      <li>Reserve reactive capacity specifically to fulfill unpredictable demand late in the game</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="responsiveness-capacity"><b>Exam trap:</b> Speculative capacity does NOT mean reckless overproduction — it is capacity committed under the best available probabilistic forecast. Reactive capacity is NOT always better; it typically requires higher unit costs or shorter lead-time supply agreements.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="5">
+    <h2>6. 7-Eleven's IT Evolution and Tanpin Kanri</h2>
+
+    <p data-topic="7eleven-it-evolution">7-Eleven Japan evolved its IT system (資訊系統) across three generations to build an increasingly sophisticated demand intelligence platform.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Era</th>
+          <th>Data Added</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1990s</td>
+          <td>POS data (銷售點數據) + Inventory data (庫存數據); Defective items tracking; Weather data (天氣數據); Order data</td>
+        </tr>
+        <tr>
+          <td>Late 1990s</td>
+          <td>System utilization data; Location selection data (選址數據); Facility data; Discarded items data; Customer classification (客戶分類)</td>
+        </tr>
+        <tr>
+          <td>Late 2000s</td>
+          <td>Long-term data integration for trend and pattern analysis</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p data-topic="tanpin-kanri">Tanpin Kanri (單品管理 — item-by-item management) is 7-Eleven's signature demand management philosophy:</p>
+    <ul>
+      <li>Customer segments (客戶細分) — identify who buys what, when, and why</li>
+      <li>Product attributes (產品屬性) — track characteristics linked to sales patterns</li>
+      <li>Timing of demand (需求時機) — understand when items sell (time of day, day of week, season)</li>
+      <li>Help customers choose — offer new ideas matched to local preferences</li>
+      <li>Replenish based on evolving demand — not fixed schedules</li>
+      <li>Maximize revenue given shelf space (貨架空間) constraints</li>
+      <li>Use POS data as the primary demand signal</li>
+      <li>Synchronize deliveries with shelf needs — avoid overstock and stockout simultaneously</li>
+    </ul>
+
+    <p data-topic="pos-pitfalls">Pitfalls of ordering based on POS data alone (單純依賴POS數據的陷阱):</p>
+    <ul>
+      <li>History information — why we see different POS data patterns may be unclear without context</li>
+      <li>Demand changes quickly — POS history may be irrelevant if trends shift</li>
+      <li>Existing inventory levels affect POS signals — stockouts make sales appear lower than actual demand</li>
+      <li>Assortment decisions — different selling plan could yield different POS sales</li>
+      <li>Discounts and weather — external factors distort POS data</li>
+      <li>Stock-outs — POS cannot capture lost sales (失銷), only recorded sales</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="pos-pitfalls"><b>Exam trap:</b> POS data records only completed transactions — it cannot capture lost sales from stockouts. Ordering purely from POS data therefore systematically under-orders high-demand items, especially when stock was already depleted during the measurement period.</div>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Zara's proximity manufacturing (Spain/Portugal/Morocco) is for lead-time speed, NOT cost savings — labor there is far more expensive than Asia.</li>
+      <li>Postponement means keeping inputs uncommitted (e.g. undyed fabric), not delaying all production — it enables mid-season flexibility, not inaction.</li>
+      <li>"JIT-Push" is not a contradiction — JIT refers to timing of production; "push" describes how components are supplied to the line via schedules.</li>
+      <li>Speculative capacity is committed under the best probabilistic forecast available, not recklessly; reactive capacity typically costs more per unit.</li>
+      <li>POS data cannot capture lost sales from stockouts — ordering based on POS alone systematically under-orders high-demand items when stock ran out.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Zara key numbers: marketing 0.3% vs 3.5%, markdown 50% vs 15%, fail rate 10% vs 1%, store visits 17 vs 3/year, design-to-store as fast as 1 week</li>
+      <li>Zara manufacturing split: 34% Asia, 14% Europe (basic items), 49% proximity (Spain/Portugal/Morocco) for high-fashion — proximity chosen for speed</li>
+      <li>Postponement: 50%+ of Zara fabrics kept undyed for mid-season color flexibility; pioneered by Benetton</li>
+      <li>Zara production planning: 7-season model; internal manufacturing 15% early / 85% late — heavy commitment after demand signals</li>
+      <li>Closed-loop information flow: Customer → Store Manager → Buyer → Designer → Production Manager</li>
+      <li>Four supply chain archetypes: Make-to-Stock (FGI buffer), Push/WIP buffer, Build-to-Order (fast fulfillment), JIT-Push (FGI + substitution)</li>
+      <li>Speculative capacity = committed before accurate demand info (probabilistic); Reactive capacity = committed after demand is 70–80% certain</li>
+      <li>Reactive capacity tools: shorten lead times, accelerate info flow, reduce batch sizes</li>
+      <li>7-Eleven Tanpin Kanri (單品管理): item-by-item management using customer segments, product attributes, timing — maximize revenue per shelf space</li>
+      <li>7-Eleven IT evolution: 1990s (POS + inventory + weather) → Late 1990s (location, customer classification, discarded items) → Late 2000s (long-term data)</li>
+      <li>POS data pitfall: stockouts make recorded sales lower than actual demand — lost sales are invisible in POS data</li>
+      <li>7-Eleven distribution: hub-and-spoke, temperature-controlled, joint delivery, clustered growth for shared logistics infrastructure</li>
+    </ol>
+  </div>
+</div>
+
+<div id="notes-9" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-9" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(9)">Clear Highlights</button>
+  <h1>Lecture 9: Revenue Management and Pricing Part I</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    Revenue management (收益管理) is the practice of selling the right product to the right customer at the right price and time to maximize total revenue. This lecture establishes the seven core concepts underpinning revenue and profit management, then applies the newsvendor framework to booking limits — the mechanism by which airlines, hotels, and events ration capacity across fare classes. It also introduces customer willingness-to-pay segmentation and multi-product pricing as tools to capture consumer surplus (消費者剩餘) that a single average price inevitably leaves on the table.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Seven Core Concepts of Revenue Management</h2>
+    <p data-topic="core-concepts">Revenue management (收益管理) rests on seven operating principles that shift a firm's mindset from cost-focus to market-focus:</p>
+    <ul>
+      <li data-topic="core-concepts"><b>Focus on price (價格), not costs</b> — balance supply and demand by adjusting price, not by cutting costs</li>
+      <li data-topic="core-concepts"><b>Market-based pricing (市場定價)</b> — replace cost-plus pricing with prices driven by what the market will bear</li>
+      <li data-topic="core-concepts"><b>Micro-market segmentation (微市場細分)</b> — sell to segmented micro-markets, not undifferentiated mass markets (大眾市場)</li>
+      <li data-topic="core-concepts"><b>Save capacity for high-value customers (高價值顧客)</b> — protect inventory for the most valuable buyers</li>
+      <li data-topic="core-concepts"><b>Knowledge-based decisions (知識型決策)</b> — act on data, not supposition (臆測)</li>
+      <li data-topic="core-concepts"><b>Exploit the value cycle (價值週期)</b> — each product's perceived value changes over time; price accordingly</li>
+      <li data-topic="core-concepts"><b>Continual re-evaluation (持續重新評估)</b> — revenue opportunities shift; reassess regularly</li>
+    </ul>
+
+    <h3>Pricing Methods Based on Available Inventory or Capacity</h3>
+    <ul>
+      <li data-topic="pricing-methods"><b>Dynamic pricing (動態定價)</b> — price responds to observed or estimated inventory (存貨), evolving demand (需求), and time</li>
+      <li data-topic="pricing-methods"><b>Cost-plus (成本加成)</b> — set price as cost + fixed markup; ignores market signal</li>
+      <li data-topic="pricing-methods"><b>Willingness-to-pay (支付意願)</b> — price anchored to the maximum a customer will pay</li>
+      <li data-topic="pricing-methods"><b>Booking limits (預訂限額)</b> — decision model analogous to the newsvendor framework; only relevant when capacity is insufficient for the most profitable customers</li>
+      <li data-topic="pricing-methods"><b>Overbooking (超額預訂)</b> — accept more reservations than physical capacity, anticipating no-shows</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="core-concepts"><b>Exam trap:</b> Concept 1 says focus on <em>price</em>, not costs, when balancing supply and demand — do not confuse this with cutting costs as a lever for balance.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Booking Limits — Structure and Deployment</h2>
+    <p data-topic="booking-limits-structure">A booking limit (預訂限額) caps how many units of a product can be sold at a given price tier, rationing capacity across multiple fare classes (票價等級) from low to high.</p>
+
+    <h3>Industries Where Booking Limits Are Common</h3>
+    <ul>
+      <li data-topic="booking-limits-structure">Airlines (航空公司) — same seat, multiple fare classes</li>
+      <li data-topic="booking-limits-structure">Hotels (酒店) — same room type, different rate levels</li>
+      <li data-topic="booking-limits-structure">Car rentals (租車) — same vehicle category, tiered pricing</li>
+      <li data-topic="booking-limits-structure">Movie theaters, concerts, and events</li>
+    </ul>
+
+    <h3>Conditions for Deployment</h3>
+    <ul>
+      <li data-topic="booking-limits-conditions">Same capacity (容量) serves multiple customer segments (客戶細分市場)</li>
+      <li data-topic="booking-limits-conditions">Segments value the service differently — willingness to pay differs</li>
+      <li data-topic="booking-limits-conditions">Firm can legally price discriminate (價格歧視)</li>
+      <li data-topic="booking-limits-conditions">Demand (需求) is uncertain and total demand likely exceeds capacity</li>
+    </ul>
+
+    <h3>Two Functions of Booking Limits</h3>
+    <ul>
+      <li data-topic="booking-limits-structure"><b>Lock in demand</b> — secures low-fare buyers early, fills the plane/venue</li>
+      <li data-topic="booking-limits-structure"><b>Price discrimination (差別定價)</b> — enables different prices for the same product across segments</li>
+    </ul>
+
+    <h3>Nested Control (巢狀控制) — Three Fare Classes</h3>
+    <p data-topic="nested-control">With fare classes Discount, Medium, and Full, nested control (巢狀控制) stacks access so higher fare classes can always use any remaining seat:</p>
+
+    <svg width="520" height="140" viewBox="0 0 520 140" style="display:block;margin:1rem auto;font-family:Georgia,serif;">
+      <!-- Full bar -->
+      <rect x="20" y="20" width="480" height="40" fill="#d4edda" stroke="#2d6a4f" stroke-width="1.5" rx="4"/>
+      <text x="30" y="44" font-size="13" fill="#1b4332">All 100 seats: Discount + Medium + Full fares open</text>
+      <!-- Medium+Full bar -->
+      <rect x="20" y="70" width="300" height="30" fill="#a8d5ba" stroke="#2d6a4f" stroke-width="1.5" rx="4"/>
+      <text x="30" y="90" font-size="12" fill="#1b4332">Medium + Full fare seats</text>
+      <!-- Full-only bar -->
+      <rect x="20" y="110" width="120" height="20" fill="#52b788" stroke="#2d6a4f" stroke-width="1.5" rx="4"/>
+      <text x="30" y="124" font-size="11" fill="#fff">Full fare protected</text>
+      <!-- Arrow labels -->
+      <text x="340" y="88" font-size="11" fill="#6c757d">← block discount</text>
+      <text x="150" y="124" font-size="11" fill="#6c757d">← block medium</text>
+    </svg>
+
+    <ul>
+      <li data-topic="nested-control">Discount fares are blocked first (earliest in booking window)</li>
+      <li data-topic="nested-control">Medium fares are blocked next, closer to departure</li>
+      <li data-topic="nested-control">Full fare remains available until the plane takes off</li>
+      <li data-topic="nested-control">Booking opens ~2 weeks before departure in this simplified model</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="nested-control"><b>Exam trap:</b> Nested control means higher fare classes can always use remaining lower-class seats — a full-fare passenger is never blocked. Do not think of fare classes as separate, non-overlapping buckets.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Booking Limits and the Newsvendor Framework</h2>
+    <p data-topic="booking-limits-newsvendor">The capacity reservation decision (容量預留決策) Q — how many seats to protect for high-fare (H) passengers — must be made before uncertain demand (不確定需求) D is realized. This maps directly onto the newsvendor problem (報童問題).</p>
+
+    <table>
+      <thead>
+        <tr><th>Cost Type</th><th>When It Occurs</th><th>Formula</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Overage cost (超額成本)</td>
+          <td>D &lt; Q — over-protected; some H seats go empty but could have sold at low fare (L)</td>
+          <td>c<sub>o</sub> = p<sub>L</sub></td>
+        </tr>
+        <tr>
+          <td>Underage cost (不足成本)</td>
+          <td>D &gt; Q — under-protected; some seats sold at p<sub>L</sub> instead of p<sub>H</sub></td>
+          <td>c<sub>u</sub> = p<sub>H</sub> − p<sub>L</sub></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ul>
+      <li data-topic="booking-limits-newsvendor"><b>Critical ratio (臨界比率)</b> = c<sub>u</sub> / (c<sub>u</sub> + c<sub>o</sub>) = (p<sub>H</sub> − p<sub>L</sub>) / p<sub>H</sub></li>
+      <li data-topic="booking-limits-newsvendor">Optimal Q = NORMINV(Critical Ratio, μ<sub>H</sub>, σ<sub>H</sub>)</li>
+      <li data-topic="booking-limits-newsvendor">Booking Limit for L type = Total Capacity − Q</li>
+    </ul>
+
+    <h3>Example 1: p<sub>H</sub> = $1,000, p<sub>L</sub> = $500</h3>
+    <ul>
+      <li data-topic="booking-limits-example1">Underage cost = $1,000 − $500 = <b>$500</b></li>
+      <li data-topic="booking-limits-example1">Overage cost = p<sub>L</sub> = <b>$500</b></li>
+      <li data-topic="booking-limits-example1">Critical ratio = $500 / ($500 + $500) = <b>0.50</b></li>
+      <li data-topic="booking-limits-example1">At CR = 0.50, optimal Q = Mean demand for H type (NORMSINV(0.5) = 0, so no z adjustment)</li>
+    </ul>
+
+    <h3>Example 2: p<sub>H</sub> = $1,500, p<sub>L</sub> = $500</h3>
+    <ul>
+      <li data-topic="booking-limits-example2">Underage cost = $1,500 − $500 = <b>$1,000</b></li>
+      <li data-topic="booking-limits-example2">Overage cost = p<sub>L</sub> = <b>$500</b></li>
+      <li data-topic="booking-limits-example2">Critical ratio = $1,000 / ($1,000 + $500) = <b>2/3 ≈ 0.667</b></li>
+      <li data-topic="booking-limits-example2">Optimal Q = μ<sub>H</sub> + NORMSINV(2/3) × σ<sub>H</sub></li>
+      <li data-topic="booking-limits-example2">Booking Limit for L = Total Capacity − Q</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="booking-limits-newsvendor"><b>Exam trap:</b> The overage cost is p<sub>L</sub> (the revenue foregone by not selling to an L customer), NOT p<sub>H</sub>. The underage cost is p<sub>H</sub> − p<sub>L</sub>, not p<sub>H</sub> alone.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Willingness to Pay and Consumer Surplus</h2>
+    <p data-topic="wtp-single-price">A demand curve (需求曲線) shows the relationship between price and quantity sold. A single average price cannot capture all market segments (市場細分).</p>
+
+    <h3>Single-Price Problem</h3>
+    <ul>
+      <li data-topic="wtp-single-price">Example demand: at $99, only 1 unit sold; at $1, 99 units sold; linear relationship</li>
+      <li data-topic="wtp-single-price">Profit-maximizing single price = $50; quantity = 50 units; revenue = <b>$2,500</b></li>
+      <li data-topic="wtp-single-price"><b>Consumer surplus (消費者剩餘)</b> = willingness to pay (支付意願) − offered price; 49 customers pay &lt; their max WTP, leaving value uncaptured</li>
+      <li data-topic="wtp-single-price"><b>Rejected customers (被拒絕顧客)</b> = 49 customers willing to pay &lt;$50; revenue entirely missed</li>
+    </ul>
+
+    <h3>Segmented Pricing — Four Price Levels</h3>
+    <ul>
+      <li data-topic="wtp-segmented">Charge $20, $40, $60, $80 instead of one price</li>
+      <li data-topic="wtp-segmented">Sells 20 units at each price = 80 units total; revenue = 20×(20+40+60+80) = <b>$4,000</b></li>
+      <li data-topic="wtp-segmented">60% revenue increase over single average price ($2,500 → $4,000)</li>
+      <li data-topic="wtp-segmented">Caution: offering multiple prices openly is "dangerous" — segments may cross over to lower-priced tiers</li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr><th>Scenario</th><th>Revenue</th><th>Segments Captured</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Single price ($50)</td><td>$2,500</td><td>50 customers; surplus + rejected customers lost</td></tr>
+        <tr><td>Four prices ($20/$40/$60/$80)</td><td>$4,000</td><td>80 customers; less surplus forgone</td></tr>
+        <tr><td>Perfect price discrimination (完全差別定價)</td><td>Max possible</td><td>All 99 customers; zero consumer surplus left</td></tr>
+      </tbody>
+    </table>
+
+    <div class="exam-trap-inline" data-topic="wtp-single-price"><b>Exam trap:</b> Consumer surplus is the gap between WTP and offered price — it belongs to the customer, not the firm. Revenue management aims to convert surplus into firm revenue, not to eliminate buyer welfare as a policy goal.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Multi-Product Revenue Management</h2>
+    <p data-topic="multi-product-setup">When a firm serves multiple segments with multiple products, pricing and product-line decisions interact. The goal is to choose which products to offer and at what prices, accounting for segment valuations (細分市場估值) and development costs.</p>
+
+    <h3>Market Segments (五個市場細分)</h3>
+    <table>
+      <thead>
+        <tr><th>Segment</th><th>Business Dev. Cost (Fixed)</th><th>Market Size (Units)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Consultants (顧問)</td><td>$200,000</td><td>20,000</td></tr>
+        <tr><td>Small Businesses (小型企業)</td><td>$200,000</td><td>15,000</td></tr>
+        <tr><td>Large Corporations (大型企業)</td><td>$150,000</td><td>5,000</td></tr>
+        <tr><td>Laboratories (實驗室)</td><td>$100,000</td><td>2,000</td></tr>
+        <tr><td>Students (學生)</td><td>$300,000</td><td>500,000</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Product Options (三個產品版本)</h3>
+    <table>
+      <thead>
+        <tr><th>Product</th><th>Development Cost</th><th>Variable Cost (變動成本)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Basic (基礎版)</td><td>$100,000</td><td>$15</td></tr>
+        <tr><td>Professional (專業版)</td><td>$200,000</td><td>$25</td></tr>
+        <tr><td>Advanced (高階版)</td><td>$500,000</td><td>$35</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Segment Valuations (各細分市場估值)</h3>
+    <table>
+      <thead>
+        <tr><th>Segment</th><th>Basic WTP</th><th>Professional WTP</th><th>Advanced WTP</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Consultants</td><td>$200</td><td>$300</td><td>$600</td></tr>
+        <tr><td>Small Businesses</td><td>$175</td><td>$225</td><td>$300</td></tr>
+        <tr><td>Large Corporations</td><td>$150</td><td>$1,200</td><td>$2,500</td></tr>
+        <tr><td>Laboratories</td><td>$100</td><td>$1,000</td><td>$2,000</td></tr>
+        <tr><td>Students* (40% commission to bookstore)</td><td>$50</td><td>$60</td><td>$100</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Key Decision Questions</h3>
+    <ul>
+      <li data-topic="multi-product-objectives">What is the best price for each product if offered <em>alone</em>?</li>
+      <li data-topic="multi-product-objectives">What is the optimal product set (最優產品組合) when multiple products are offered and segments <em>cannot</em> cross over to unintended tiers?</li>
+      <li data-topic="multi-product-objectives">What is the optimal product set when segments <em>can</em> cross over (product line cannibalization, 產品線蠶食)?</li>
+      <li data-topic="multi-product-objectives">How to model customer behavior (顧客行為模型) when presented with a menu of products?</li>
+    </ul>
+
+    <ul>
+      <li data-topic="multi-product-objectives">Student channel note: bookstore takes 40% commission (佣金), so the firm nets only 60% of the student price</li>
+      <li data-topic="multi-product-objectives">Large corporations and laboratories show extremely high WTP for Professional and Advanced — strong case for premium pricing in those segments</li>
+    </ul>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Core Concept 1 says balance supply and demand via <em>price</em>, not cost-cutting — do not conflate the two.</li>
+      <li>Nested control means higher fare classes can always access remaining seats; fare classes are not separate sealed buckets.</li>
+      <li>In the newsvendor booking-limit model, overage cost = p<sub>L</sub> (revenue lost by leaving a seat empty that an L-type would have bought), NOT p<sub>H</sub>.</li>
+      <li>Underage cost = p<sub>H</sub> − p<sub>L</sub> (the margin gap), not p<sub>H</sub> alone.</li>
+      <li>When the critical ratio = 0.50 (Example 1), optimal Q equals the mean H demand — NORMSINV(0.5) = 0, so there is no z-score adjustment.</li>
+      <li>Consumer surplus belongs to the buyer (WTP minus price paid); it is not firm revenue — revenue management converts surplus into firm revenue by raising prices to WTP.</li>
+      <li>Offering multiple prices openly is described as "dangerous" because customers may cross over to cheaper tiers — fences or restrictions must prevent this.</li>
+      <li>Students receive a 40% bookstore commission — the firm's net revenue per student unit is only 60% of the listed student price.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Seven core concepts of revenue management — especially Concept 1 (price, not cost) and Concept 3 (micro-markets)</li>
+      <li>Booking limit critical ratio = (p<sub>H</sub> − p<sub>L</sub>) / p<sub>H</sub></li>
+      <li>Overage cost = p<sub>L</sub>; Underage cost = p<sub>H</sub> − p<sub>L</sub></li>
+      <li>Optimal Q (booking protection) = NORMINV(CR, μ<sub>H</sub>, σ<sub>H</sub>); Booking Limit<sub>L</sub> = Capacity − Q</li>
+      <li>Example 1 CR = 0.50 → Q = mean demand (no z adjustment); Example 2 CR = 2/3 → Q = μ + NORMSINV(2/3)×σ</li>
+      <li>Single price at $50 → revenue $2,500; four prices ($20/$40/$60/$80) → revenue $4,000; 60% increase</li>
+      <li>Consumer surplus = WTP − offered price; rejected customers = buyers with WTP &lt; offered price</li>
+      <li>Nested control: discount blocked first, then medium, full fare always available last</li>
+      <li>Three product versions: Basic ($15 variable cost), Professional ($25), Advanced ($35)</li>
+      <li>Large corporations and laboratories have extremely high WTP for Advanced ($2,500 / $2,000) — high-value premium segments</li>
+      <li>Student channel: bookstore takes 40% commission, firm nets 60% of student price</li>
+      <li>Four conditions for deploying booking limits: same capacity for multiple segments, different valuations, legal price discrimination, uncertain demand exceeding capacity</li>
+    </ol>
+  </div>
+</div>
+
+<div id="notes-8" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-8" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(8)">Clear Highlights</button>
+  <h1>Lecture 8: Fundamentals of Inventory Management</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    Revenue management (收益管理) is the discipline of pricing and allocating limited capacity so that the right product reaches the right customer at the right price. It shifts the firm's focus from cost-based thinking to market-based thinking, using demand uncertainty as the central challenge. The lecture covers booking limits modeled as a newsvendor problem, the revenue loss from single-price selling, and multi-product pricing when customers differ in willingness to pay.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Seven Core Concepts of Revenue Management</h2>
+    <p data-topic="revenue-management-concepts">Revenue management (收益管理) is built on seven strategic principles that together shift a firm from cost-centric to market-centric decision-making:</p>
+    <ul>
+      <li>Focus on price (價格) rather than costs when balancing supply and demand — cost reductions have limits; pricing flexibility does not.</li>
+      <li>Replace cost-based pricing (成本加成定價) with market-based pricing (市場定價) — charge what the market bears, not what cost dictates.</li>
+      <li>Sell to segmented micro-markets (細分市場), not to mass markets (大眾市場) — different segments have different valuations.</li>
+      <li>Save your products for your most valuable customers (最有價值的顧客) — rationing capacity for high-value buyers increases total revenue.</li>
+      <li>Make decisions based on knowledge (知識), not supposition (臆測) — use data on demand distributions, not gut feel.</li>
+      <li>Exploit each product's value cycle (價值週期) — prices should vary over the product's lifetime and booking horizon.</li>
+      <li>Continually reevaluate your revenue opportunities (收益機會) — demand conditions change; pricing must adapt.</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="revenue-management-concepts"><b>Exam trap:</b> Revenue management is NOT just about lowering prices to fill capacity. Core concept #1 says to focus on price over costs, and concept #4 says to save capacity for high-value customers — both imply charging more, not less, in the right contexts.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Pricing Methods and Booking Limits Overview</h2>
+    <p data-topic="pricing-methods">Three pricing approaches (定價方法) apply when inventory or capacity is limited:</p>
+    <ul>
+      <li>Dynamic pricing (動態定價) — price adjusts in real time based on observed/estimated inventory, evolving demand, and remaining time.</li>
+      <li>Cost-plus pricing (成本加成定價) — price = variable cost + markup; ignores market willingness to pay.</li>
+      <li>Willingness-to-pay pricing (支付意願定價) — price anchored to what customers are willing to pay at a given moment.</li>
+    </ul>
+    <p data-topic="booking-limits-intro">Booking limits (預訂上限) are a capacity-rationing tool used when capacity is insufficient to serve all segments at all price points:</p>
+    <ul>
+      <li>Decision model mirrors the newsvendor framework (報童模型) — a quantity decision made before uncertain demand is realized.</li>
+      <li>Only relevant when there is not sufficient capacity for more profitable customers — if capacity is ample, no rationing is needed.</li>
+      <li>Commonly used in: airlines (航空公司), hotels (酒店), car rentals (租車).</li>
+      <li>Inventory or capacity is rationed at different price points — typically from low to high price levels.</li>
+      <li>Locks in demand (鎖定需求) early and provides opportunity for price discrimination (價格歧視).</li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr><th>Pricing Method</th><th>Key Input</th><th>Best Used When</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Dynamic Pricing</td><td>Real-time inventory + demand signals</td><td>Continuous repricing possible (e.g., airlines, ride-share)</td></tr>
+        <tr><td>Cost-Plus</td><td>Variable cost + fixed markup</td><td>Stable cost structure, low demand uncertainty</td></tr>
+        <tr><td>Willingness-to-Pay</td><td>Customer valuation estimates</td><td>Segment valuations are measurable</td></tr>
+        <tr><td>Booking Limits</td><td>Demand distribution by segment</td><td>Same capacity serves multiple segments at different prices</td></tr>
+      </tbody>
+    </table>
+
+    <div class="exam-trap-inline" data-topic="booking-limits-intro"><b>Exam trap:</b> Booking limits are only relevant when total demand likely exceeds capacity. If capacity is always sufficient, booking limits add no value — you would simply sell to every customer at their segment price.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Booking Limits: When Deployed and How Implemented</h2>
+    <p data-topic="booking-limits-deployment">Conditions (部署條件) required before booking limits are appropriate:</p>
+    <ul>
+      <li>Same capacity (相同容量) can serve multiple customer segments — e.g., one aircraft cabin, one hotel room type.</li>
+      <li>Customer segments (客戶細分) value the service differently.</li>
+      <li>Firms can legally price discriminate (合法價格歧視) — using fences such as advance purchase, refundability, or product version.</li>
+      <li>Demand is uncertain (需求不確定); total demand likely exceeds capacity.</li>
+      <li>Industries: airlines, hotels, movie theaters (電影院), concerts and events (演唱會及活動).</li>
+    </ul>
+    <p data-topic="booking-limits-implementation">Nested control (嵌套控制) implementation with three fare classes:</p>
+    <ul>
+      <li>Three fare classes (票價等級): full fare (全價), medium fare (中等票價), discount fare (折扣票價).</li>
+      <li>Nested structure: the full-fare bucket is protected (受保護) from lower-fare sales; medium-fare bucket includes full-fare; discount bucket includes all.</li>
+      <li>A protected quantity (保護數量) N of seats is set aside exclusively for full-fare buyers.</li>
+      <li>As the departure date approaches, blocks are released (解除封鎖): discount fares blocked first, then medium fares, until the plane takes off.</li>
+      <li>Timeline: open booking → ~2 weeks before departure, block discount fares → then block medium fares → departure.</li>
+    </ul>
+
+    <svg width="480" height="120" viewBox="0 0 480 120" style="display:block;margin:12px auto;font-family:Georgia,serif;font-size:12px;">
+      <!-- Timeline bar -->
+      <rect x="20" y="50" width="440" height="20" rx="4" fill="#c8e6c9"/>
+      <!-- Markers -->
+      <line x1="20" y1="50" x2="20" y2="80" stroke="#555" stroke-width="1.5"/>
+      <line x1="240" y1="50" x2="240" y2="80" stroke="#555" stroke-width="1.5"/>
+      <line x1="360" y1="50" x2="360" y2="80" stroke="#555" stroke-width="1.5"/>
+      <line x1="460" y1="50" x2="460" y2="80" stroke="#555" stroke-width="1.5"/>
+      <!-- Labels below -->
+      <text x="20" y="98" text-anchor="middle" fill="#333">Open</text>
+      <text x="20" y="110" text-anchor="middle" fill="#333">Booking</text>
+      <text x="240" y="98" text-anchor="middle" fill="#c0392b">Block</text>
+      <text x="240" y="110" text-anchor="middle" fill="#c0392b">Discount</text>
+      <text x="360" y="98" text-anchor="middle" fill="#e67e22">Block</text>
+      <text x="360" y="110" text-anchor="middle" fill="#e67e22">Medium</text>
+      <text x="460" y="98" text-anchor="middle" fill="#27ae60">Take</text>
+      <text x="460" y="110" text-anchor="middle" fill="#27ae60">Off</text>
+      <!-- Arrow -->
+      <line x1="20" y1="60" x2="455" y2="60" stroke="#388e3c" stroke-width="2"/>
+      <polygon points="455,55 465,60 455,65" fill="#388e3c"/>
+      <!-- 2 weeks label -->
+      <text x="300" y="44" text-anchor="middle" fill="#555">← ~2 weeks →</text>
+    </svg>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Booking Limits as a Newsvendor Problem</h2>
+    <p data-topic="booking-limits-newsvendor">The booking limit decision maps directly onto the newsvendor framework (報童框架):</p>
+    <ul>
+      <li>Capacity reservation quantity Q (保留數量) is decided before uncertain high-fare demand D is realized.</li>
+      <li>Overage cost (超額成本) — if D &lt; Q, too many seats were protected; empty seats could have been sold to a low-fare (低票價) traveler. Cost = p<sub>L</sub>.</li>
+      <li>Underage cost (短缺成本) — if D &gt; Q, too few seats were protected; some high-fare buyers were turned away. Cost = p<sub>H</sub> − p<sub>L</sub>.</li>
+      <li>Optimal Q balances (平衡) overage and underage costs.</li>
+    </ul>
+    <p data-topic="booking-limits-formula">Critical ratio (臨界比率) and optimal quantity formula:</p>
+    <ul>
+      <li>Critical Ratio (CR) = (p<sub>H</sub> − p<sub>L</sub>) / p<sub>H</sub> — the service level (服務水平) for the high-fare class.</li>
+      <li>Booking Limit for low-fare class = Available Capacity − Reserved Quantity for high-fare class.</li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr><th>Example</th><th>p<sub>H</sub></th><th>p<sub>L</sub></th><th>Underage Cost</th><th>Overage Cost</th><th>CR</th><th>Optimal Q</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Example 1</td>
+          <td>$1,000</td>
+          <td>$500</td>
+          <td>$500</td>
+          <td>$500</td>
+          <td>$500/$1,000 = 0.50</td>
+          <td>Mean demand for H type (no stdev adjustment)</td>
+        </tr>
+        <tr>
+          <td>Example 2</td>
+          <td>$1,500</td>
+          <td>$500</td>
+          <td>$1,000</td>
+          <td>$500</td>
+          <td>$1,000/$1,500 = 2/3 ≈ 0.667</td>
+          <td>Mean + NORMSINV(2/3) × Stdev of H demand</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p data-topic="booking-limits-formula">Key insight from the two examples:</p>
+    <ul>
+      <li>When CR = 0.50, optimal Q = mean of H demand — symmetric costs mean protecting exactly the mean is optimal.</li>
+      <li>When CR = 2/3 &gt; 0.50, optimal Q = mean + positive stdev adjustment — asymmetric costs favor protecting more seats for H.</li>
+      <li>NORMSINV(2/3) ≈ 0.431 — used with the standard deviation (標準差) of H-type demand.</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="booking-limits-formula"><b>Exam trap:</b> The underage cost is NOT p<sub>H</sub>. It is p<sub>H</sub> − p<sub>L</sub>, because a seat not protected for H can still be sold to L; the true loss is only the fare difference. The overage cost is p<sub>L</sub> (the revenue forgone by leaving that seat empty instead of selling it at the low fare).</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Willingness to Pay, Consumer Surplus, and Revenue Loss from Single-Price Selling</h2>
+    <p data-topic="willingness-to-pay">A demand curve (需求曲線) shows how many units are sold at each price. Using a single average price (單一均價) leaves revenue on the table:</p>
+    <ul>
+      <li>At $99, only 1 unit sold; at $1, 99 units sold — linear demand from $99 to $1.</li>
+      <li>Profit-maximizing single price (最大化利潤的單一價格) = $50; 50 units sold; Revenue = $2,500.</li>
+      <li>Consumer surplus (消費者剩餘) = Willingness to Pay − Offered Price; 49 customers willing to pay &gt; $50 capture surplus the firm does not collect.</li>
+      <li>Rejected customers (拒絕顧客): 49 customers willing to pay &lt; $50 are not served at all.</li>
+    </ul>
+    <p data-topic="price-segmentation">Segmenting by willingness to pay (按支付意願細分) recovers lost revenue:</p>
+    <ul>
+      <li>Charging four prices ($20, $40, $60, $80) instead of one — 20 units at each price tier.</li>
+      <li>Total revenue = 20×$20 + 20×$40 + 20×$60 + 20×$80 = $400 + $800 + $1,200 + $1,600 = $4,000.</li>
+      <li>That is a 60% increase over the single-price revenue of $2,500.</li>
+      <li>Price discrimination (價格歧視) is described as "dangerous" — requires legal fences and segment separation to avoid cannibalization (蠶食).</li>
+    </ul>
+
+    <svg width="320" height="180" viewBox="0 0 320 180" style="display:block;margin:12px auto;font-family:Georgia,serif;font-size:11px;">
+      <!-- Axes -->
+      <line x1="40" y1="10" x2="40" y2="150" stroke="#555" stroke-width="1.5"/>
+      <line x1="40" y1="150" x2="300" y2="150" stroke="#555" stroke-width="1.5"/>
+      <!-- Demand line: price from 100 at x=40 to 0 at x=300 -->
+      <line x1="40" y1="10" x2="300" y2="150" stroke="#2980b9" stroke-width="2"/>
+      <!-- Single price $50 line -->
+      <line x1="40" y1="80" x2="170" y2="80" stroke="#c0392b" stroke-width="1" stroke-dasharray="4,3"/>
+      <line x1="170" y1="80" x2="170" y2="150" stroke="#c0392b" stroke-width="1" stroke-dasharray="4,3"/>
+      <!-- Consumer surplus shading -->
+      <polygon points="40,10 170,80 40,80" fill="#aed6f1" opacity="0.5"/>
+      <!-- Rejected customers shading -->
+      <polygon points="170,80 300,150 170,150" fill="#f9e79f" opacity="0.6"/>
+      <!-- Labels -->
+      <text x="6" y="84" fill="#c0392b" font-size="10">$50</text>
+      <text x="160" y="165" fill="#c0392b" font-size="10">50</text>
+      <text x="70" y="50" fill="#2471a3" font-size="10">Consumer</text>
+      <text x="70" y="62" fill="#2471a3" font-size="10">Surplus</text>
+      <text x="195" y="130" fill="#9a7d0a" font-size="10">Rejected</text>
+      <text x="195" y="142" fill="#9a7d0a" font-size="10">Customers</text>
+      <text x="36" y="8" fill="#555" font-size="10">P</text>
+      <text x="295" y="163" fill="#555" font-size="10">Q</text>
+    </svg>
+
+    <div class="exam-trap-inline" data-topic="price-segmentation"><b>Exam trap:</b> The 60% revenue increase from four-price segmentation compares to the single-price revenue of $2,500, not to any cost figure. The gain is purely from capturing consumer surplus — costs are not mentioned in this model.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="5">
+    <h2>6. Multi-Product Revenue Management</h2>
+    <p data-topic="multi-product-setup">A multi-product (多產品) pricing problem involves choosing which products to offer and at what price, given heterogeneous (異質) customer segments with different valuations (估值):</p>
+    <ul>
+      <li>Five market segments (市場細分): Consultants, Small Businesses, Large Corporations, Laboratories, Students.</li>
+      <li>Business development cost (業務開發成本) per segment varies: Consultants $200k, Small Businesses $200k, Large Corporations $150k, Laboratories $100k, Students $300k.</li>
+      <li>Market size (市場規模): Consultants 20,000; Small Businesses 15,000; Large Corporations 5,000; Laboratories 2,000; Students 500,000.</li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr><th>Product</th><th>Development Cost</th><th>Variable Cost</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Basic</td><td>$100,000</td><td>$15</td></tr>
+        <tr><td>Professional</td><td>$200,000</td><td>$25</td></tr>
+        <tr><td>Advanced</td><td>$500,000</td><td>$35</td></tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead>
+        <tr><th>Segment</th><th>Basic Valuation</th><th>Pro Valuation</th><th>Advanced Valuation</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Consultants</td><td>$200</td><td>$300</td><td>$600</td></tr>
+        <tr><td>Small Businesses</td><td>$175</td><td>$225</td><td>$300</td></tr>
+        <tr><td>Large Corporations</td><td>$150</td><td>$1,200</td><td>$2,500</td></tr>
+        <tr><td>Laboratories</td><td>$100</td><td>$1,000</td><td>$2,000</td></tr>
+        <tr><td>Students (40% commission to bookstore)</td><td>$50</td><td>$60</td><td>$100</td></tr>
+      </tbody>
+    </table>
+
+    <p data-topic="multi-product-objectives">Three key questions (核心問題) in multi-product revenue management:</p>
+    <ul>
+      <li>Best single-product price (最佳單一產品定價) — if only one product is offered, what price maximizes profit?</li>
+      <li>Optimal product set (最優產品組合) when multiple products can be sold and segments can be prevented from crossing over (跨越) to unintended products.</li>
+      <li>Optimal product set when segments cannot be prevented from crossing over — requires modeling customer self-selection (自我選擇) behavior.</li>
+      <li>Predictive model (預測模型) for customer behavior when facing a menu of multiple products.</li>
+    </ul>
+    <ul>
+      <li>Students receive a 40% bookstore commission (書店佣金) — effective revenue per unit is 60% of list price; this changes the profitability calculation for that segment.</li>
+      <li>Large Corporations and Laboratories have very high valuations for Pro and Advanced — these segments are the natural targets for premium products.</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="multi-product-objectives"><b>Exam trap:</b> When segments can cross over (自由跨越) to cheaper products, you cannot independently optimize price for each segment. A high price on Advanced may push Large Corporations to buy Professional instead — inter-product cannibalization must be modeled explicitly.</div>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Revenue management is NOT just about lowering prices. Core concepts #1 and #4 imply raising prices for high-value customers and rationing capacity for them.</li>
+      <li>Booking limits are only relevant when total demand likely exceeds capacity. With ample capacity, no rationing is needed.</li>
+      <li>Underage cost = p<sub>H</sub> − p<sub>L</sub>, NOT p<sub>H</sub>. The true cost of under-protecting is only the fare difference, because the seat can still be sold to L.</li>
+      <li>Overage cost = p<sub>L</sub> (revenue forgone from leaving a seat empty that could have been sold to L).</li>
+      <li>When CR = 0.50, optimal Q = mean demand only (no stdev term). When CR ≠ 0.50, use mean ± NORMSINV(CR) × stdev.</li>
+      <li>The 60% revenue gain from four-price segmentation is relative to the single-price revenue of $2,500 — it has nothing to do with costs.</li>
+      <li>Students' effective revenue is 60% of list price due to the 40% bookstore commission — do not use list price in profit calculations for that segment.</li>
+      <li>When segments can cross over to cheaper products, independent per-segment optimization is invalid — self-selection effects must be modeled.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Seven core concepts of revenue management — especially: price over costs (#1), micro-markets (#3), save for valuable customers (#4).</li>
+      <li>Critical Ratio formula: CR = (p<sub>H</sub> − p<sub>L</sub>) / p<sub>H</sub>.</li>
+      <li>Underage cost = p<sub>H</sub> − p<sub>L</sub>; Overage cost = p<sub>L</sub>.</li>
+      <li>Optimal Q = Mean + NORMSINV(CR) × Stdev; when CR = 0.50, Q = Mean only.</li>
+      <li>Booking Limit for L = Available Capacity − Reserved Quantity for H.</li>
+      <li>Booking limits require: same capacity for multiple segments, legal price discrimination, demand uncertainty, and likely excess demand.</li>
+      <li>Single-price at $50 on a $1–$99 demand curve → Revenue = $2,500; four prices → $4,000 (60% more).</li>
+      <li>Consumer Surplus = Willingness to Pay − Offered Price; capturing it via segmentation increases firm revenue.</li>
+      <li>Nested control timeline: open → block discount → block medium → departure (~2 weeks before).</li>
+      <li>Multi-product: Large Corporations and Laboratories have disproportionately high valuations for Pro and Advanced versions.</li>
+      <li>Students: effective net revenue = 60% of list price due to 40% bookstore commission.</li>
+    </ol>
+  </div>
+</div>
+
+<div id="notes-7" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-7" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(7)">Clear Highlights</button>
+  <h1>Lecture 7: Demand Forecasting Methods</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    Forecasting (預測) is the process of projecting future values of a variable — most commonly demand — to support informed business decisions. This lecture surveys the full forecasting toolkit: qualitative judgment-based approaches and quantitative time-series methods including naive forecasts, moving averages, exponential smoothing, linear trend equations, and seasonality models. Accuracy measurement ties the toolkit together, giving managers a principled way to choose among competing techniques.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Forecasting Fundamentals</h2>
+    <p data-topic="forecast-basics">
+      <ul>
+        <li>Forecast (預測) — a projection of the future value of a variable of interest (e.g. weather, demand, resource availability)</li>
+        <li>Forecasts enable informed decisions; sometimes the output is a probability (e.g. probability of purchase vs. no purchase)</li>
+      </ul>
+    </p>
+    <p data-topic="good-forecast-attributes">
+      <strong>Elements of a good forecast — all four must be present:</strong>
+      <ul>
+        <li>Accurate (準確) — forecast values are close to actual outcomes</li>
+        <li>Reliable (可靠) — consistently accurate over repeated use</li>
+        <li>Meaningful (有意義) — relevant to the decision at hand</li>
+        <li>Effective (有效) — delivered in time to act on</li>
+      </ul>
+    </p>
+    <p data-topic="forecasting-approaches">
+      <strong>Two broad approaches:</strong>
+      <ul>
+        <li>Qualitative forecasting (質化預測) — uses soft information: human factors, personal opinions, hunches; some inputs are difficult to quantify</li>
+        <li>Quantitative forecasting (量化預測) — data-based; often relates a dependent variable (因變量, e.g. demand) to one or more independent/causal variables (自變量, e.g. time, weather, price, competitor action)</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="forecasting-approaches"><b>Exam trap:</b> Qualitative methods are not inferior — they are appropriate when data are unavailable or when soft factors (human judgment, expert opinion) dominate. Do not equate "quantitative" with "better".</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Qualitative Forecasting Methods</h2>
+    <p data-topic="qualitative-methods">
+      Qualitative methods use subjective inputs from people rather than historical data patterns.
+      <ul>
+        <li>Executive opinions (高管意見) — senior managers pool judgment to generate a forecast</li>
+        <li>Salesforce opinions (銷售人員意見) — frontline staff closest to customers provide estimates</li>
+        <li>Consumer surveys (消費者調查) — direct polling of customers about purchase intent</li>
+        <li>Delphi method (德爾菲法) — developed by RAND Corporation in the 1950s; iterative (反覆) surveys completed by a panel of experts; results are shared anonymously between rounds until convergence</li>
+      </ul>
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Key Source</th>
+          <th>Best Used When</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Executive opinions</td>
+          <td>Senior managers</td>
+          <td>Strategic / long-horizon decisions</td>
+        </tr>
+        <tr>
+          <td>Salesforce opinions</td>
+          <td>Field sales staff</td>
+          <td>Short-term, product-level demand</td>
+        </tr>
+        <tr>
+          <td>Consumer surveys</td>
+          <td>Customers</td>
+          <td>New product launch, preference shifts</td>
+        </tr>
+        <tr>
+          <td>Delphi method</td>
+          <td>Expert panel</td>
+          <td>Long-range, no historical data</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="exam-trap-inline" data-topic="qualitative-methods"><b>Exam trap:</b> The Delphi method was developed by RAND Corp. in the 1950s — not the 1960s or 1970s. Iterative rounds + anonymity are its defining features.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Time-Series Concepts and Behaviors</h2>
+    <p data-topic="time-series-basics">
+      <ul>
+        <li>Time-series forecast (時間序列預測) — projects patterns identified in recent time-ordered observations taken at regular intervals</li>
+        <li>Core assumption: future values can be estimated from past values of the same series</li>
+      </ul>
+    </p>
+    <p data-topic="time-series-behaviors">
+      <strong>Five time-series behaviors (時間序列行為):</strong>
+      <ul>
+        <li>Trend (趨勢) — long-term upward or downward movement (e.g. population shifts, changing income)</li>
+        <li>Seasonality (季節性) — short-term, fairly regular variations tied to the calendar or time of day (e.g. restaurants, call centers, theaters)</li>
+        <li>Cycle (周期) — wavelike variations lasting more than one year; often linked to economic, political, or agricultural conditions</li>
+        <li>Irregular variation (不規則變動) — unusual, non-recurring events that do not reflect typical behavior (e.g. labor strike, weather event)</li>
+        <li>Random variation (隨機變動) — residual variation remaining after all other behaviors are accounted for</li>
+      </ul>
+    </p>
+
+    <svg width="520" height="120" viewBox="0 0 520 120" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:12px auto;">
+      <rect x="0" y="0" width="520" height="120" fill="#f9f6ef" rx="8"/>
+      <!-- boxes -->
+      <rect x="10" y="40" width="90" height="40" fill="#c8e6c9" rx="4"/>
+      <text x="55" y="65" text-anchor="middle" font-size="11" fill="#1b5e20">Trend</text>
+      <rect x="120" y="40" width="90" height="40" fill="#c8e6c9" rx="4"/>
+      <text x="165" y="65" text-anchor="middle" font-size="11" fill="#1b5e20">Seasonality</text>
+      <rect x="230" y="40" width="70" height="40" fill="#c8e6c9" rx="4"/>
+      <text x="265" y="65" text-anchor="middle" font-size="11" fill="#1b5e20">Cycle</text>
+      <rect x="315" y="40" width="90" height="40" fill="#ffe0b2" rx="4"/>
+      <text x="360" y="60" text-anchor="middle" font-size="10" fill="#bf360c">Irregular</text>
+      <text x="360" y="73" text-anchor="middle" font-size="10" fill="#bf360c">Variation</text>
+      <rect x="420" y="40" width="90" height="40" fill="#ffe0b2" rx="4"/>
+      <text x="465" y="60" text-anchor="middle" font-size="10" fill="#bf360c">Random</text>
+      <text x="465" y="73" text-anchor="middle" font-size="10" fill="#bf360c">Variation</text>
+      <!-- arrows -->
+      <line x1="100" y1="60" x2="118" y2="60" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+      <line x1="210" y1="60" x2="228" y2="60" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+      <line x1="300" y1="60" x2="313" y2="60" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+      <line x1="405" y1="60" x2="418" y2="60" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+      <defs>
+        <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#555"/>
+        </marker>
+      </defs>
+      <text x="260" y="15" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">Five Time-Series Behaviors</text>
+      <text x="55" y="100" text-anchor="middle" font-size="9" fill="#555">Systematic</text>
+      <text x="265" y="100" text-anchor="middle" font-size="9" fill="#555">Systematic</text>
+      <text x="440" y="100" text-anchor="middle" font-size="9" fill="#555">Non-systematic</text>
+    </svg>
+
+    <div class="exam-trap-inline" data-topic="time-series-behaviors"><b>Exam trap:</b> Irregular variation and random variation are not the same. Irregular variation is caused by identifiable unusual events (strike, natural disaster); random variation is truly unexplained residual noise.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Time-Series Forecasting Methods</h2>
+    <p data-topic="naive-forecast">
+      <strong>Naive Forecast (樸素預測法):</strong>
+      <ul>
+        <li>Simplest method — forecast for period t equals the actual value from the previous period: F<sub>t</sub> = A<sub>t-1</sub></li>
+        <li>Applicable to: stable time series, series with seasonal variation, series with trend (with appropriate adjustment)</li>
+        <li>F = forecast; A = actual (observed) value; t = time period</li>
+      </ul>
+    </p>
+    <p data-topic="moving-average">
+      <strong>Moving Average (移動平均):</strong>
+      <ul>
+        <li>Averages the n most recent actual values to produce a forecast</li>
+        <li>Formula: F<sub>t</sub> = MA<sub>n</sub> = (A<sub>t-1</sub> + A<sub>t-2</sub> + … + A<sub>t-n</sub>) / n</li>
+        <li>As new data arrive, the newest value is added and the oldest is dropped; average is recomputed</li>
+        <li>n (number of periods) controls sensitivity (靈敏度): fewer periods → more responsive (響應快), less stable; more periods → less responsive, more stable (穩定)</li>
+        <li>Use smaller n when fluctuations are low and responsiveness is needed; use larger n when fluctuations are high and stability matters</li>
+      </ul>
+    </p>
+    <p data-topic="weighted-moving-average">
+      <strong>Weighted Moving Average (加權移動平均):</strong>
+      <ul>
+        <li>Assigns different weights (權重) w to each past period — more recent periods typically receive higher weight</li>
+        <li>Formula: F<sub>t</sub> = w<sub>t-1</sub>A<sub>t-1</sub> + w<sub>t-2</sub>A<sub>t-2</sub> + … + w<sub>t-n</sub>A<sub>t-n</sub></li>
+        <li>Weight choices are somewhat arbitrary and require trial and error (試誤法)</li>
+        <li>Weights must sum to 1</li>
+      </ul>
+    </p>
+    <p data-topic="exponential-smoothing">
+      <strong>Exponential Smoothing (指數平滑法):</strong>
+      <ul>
+        <li>Special case of weighted moving average — weights decline exponentially for older periods</li>
+        <li>Formula: F<sub>t</sub> = F<sub>t-1</sub> + α(A<sub>t-1</sub> − F<sub>t-1</sub>)</li>
+        <li>Equivalently: F<sub>t</sub> = αA<sub>t-1</sub> + (1 − α)F<sub>t-1</sub></li>
+        <li>α (smoothing constant 平滑常數) ∈ (0, 1): higher α → more weight on recent data → more responsive; lower α → smoother, more stable</li>
+        <li>(A<sub>t-1</sub> − F<sub>t-1</sub>) is the error term (誤差項); α is the percentage feedback (反饋比例)</li>
+      </ul>
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Key Parameter</th>
+          <th>Responsiveness</th>
+          <th>Stability</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Simple Moving Average</td>
+          <td>n (periods)</td>
+          <td>↑ when n is small</td>
+          <td>↑ when n is large</td>
+        </tr>
+        <tr>
+          <td>Weighted Moving Average</td>
+          <td>weights w</td>
+          <td>↑ with higher weight on recent data</td>
+          <td>↑ with balanced weights</td>
+        </tr>
+        <tr>
+          <td>Exponential Smoothing</td>
+          <td>α</td>
+          <td>↑ when α is high</td>
+          <td>↑ when α is low</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="exam-trap-inline" data-topic="exponential-smoothing"><b>Exam trap:</b> Exponential smoothing is a special case of weighted moving average, not a completely separate method. Also, a higher α means MORE weight on the most recent observation — students often confuse the direction.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Linear Trend and Seasonality</h2>
+    <p data-topic="linear-trend">
+      <strong>Linear Trend Equation (線性趨勢方程):</strong>
+      <ul>
+        <li>Used when data show a consistent upward or downward trend over time</li>
+        <li>Formula: F<sub>t</sub> = a + b × t</li>
+        <li>F<sub>t</sub> = forecast for period t; a = value of F<sub>t</sub> at t = 0 (intercept 截距); b = slope of the line (斜率); t = number of time periods</li>
+        <li>Slope b = [n∑ty − (∑t)(∑y)] / [n∑t² − (∑t)²]</li>
+        <li>Intercept a = (∑y − b∑t) / n</li>
+        <li>n = number of time periods; y = actual demand or value of the time series</li>
+      </ul>
+    </p>
+    <p data-topic="seasonality-models">
+      <strong>Seasonality models (季節性模型):</strong>
+      <ul>
+        <li>Seasonality — regularly repeating movements in series values tied to recurring events; expressed as deviation from average</li>
+        <li>Additive model (加法模型) — seasonal effect is a fixed quantity added to or subtracted from the time-series average</li>
+        <li>Multiplicative model (乘法模型) — seasonal effect is expressed as a percentage of the average (or trend) amount, then multiplied into the series value</li>
+      </ul>
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Model</th>
+          <th>Seasonal Effect Expressed As</th>
+          <th>Operation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Additive</td>
+          <td>Fixed quantity (absolute amount)</td>
+          <td>Average ± seasonal quantity</td>
+        </tr>
+        <tr>
+          <td>Multiplicative</td>
+          <td>Percentage of average / trend</td>
+          <td>Average × seasonal index</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="exam-trap-inline" data-topic="seasonality-models"><b>Exam trap:</b> In the additive model, the seasonal component has the same absolute magnitude regardless of the level of the series. In the multiplicative model, the seasonal swing grows proportionally as the average grows — a common mix-up in exam questions.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="5">
+    <h2>6. Forecast Accuracy and Technique Selection</h2>
+    <p data-topic="forecast-accuracy">
+      <ul>
+        <li>Forecasters aim to minimize forecast errors (預測誤差); perfect accuracy is nearly impossible in practice</li>
+        <li>Error = Actual − Forecast (e<sub>t</sub> = A<sub>t</sub> − F<sub>t</sub>)</li>
+        <li>If errors exceed acceptable bounds, corrective action is necessary</li>
+        <li>Forecast accuracy is an important criterion for selecting among forecasting techniques</li>
+      </ul>
+    </p>
+    <p data-topic="accuracy-metrics">
+      <strong>Three standard accuracy metrics (準確度指標):</strong>
+      <ul>
+        <li>MAD — Mean Absolute Deviation (平均絕對偏差): MAD = ∑|A<sub>t</sub> − F<sub>t</sub>| / n; weights all errors evenly</li>
+        <li>MSE — Mean Squared Error (均方誤差): MSE = ∑(A<sub>t</sub> − F<sub>t</sub>)² / (n−1); weights larger errors more heavily due to squaring (note: in Excel, divide by n, which is acceptable)</li>
+        <li>MAPE — Mean Absolute Percentage Error (平均絕對百分比誤差): MAPE = [∑(|A<sub>t</sub> − F<sub>t</sub>| / A<sub>t</sub>) × 100] / n; weights errors by relative size</li>
+      </ul>
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Formula</th>
+          <th>Weighting Property</th>
+          <th>Excel Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>MAD</td>
+          <td>∑|A−F| / n</td>
+          <td>All errors equal weight</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>MSE</td>
+          <td>∑(A−F)² / (n−1)</td>
+          <td>Larger errors penalized more</td>
+          <td>Divide by n in Excel (OK)</td>
+        </tr>
+        <tr>
+          <td>MAPE</td>
+          <td>[∑(|A−F|/A)×100] / n</td>
+          <td>Errors weighted by relative size</td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p data-topic="technique-selection">
+      <strong>Factors for choosing a forecasting technique (預測技術選擇因素):</strong>
+      <ul>
+        <li>Cost (成本) — resources required to implement and run the method</li>
+        <li>Accuracy (準確度) — measured by MAD, MSE, MAPE</li>
+        <li>Availability of historical data (歷史數據可用性)</li>
+        <li>Availability of forecasting software (預測軟件可用性)</li>
+        <li>Time needed to gather, analyze data, and prepare the forecast</li>
+        <li>Forecast horizon (預測時域) — short-term vs. long-term outlook</li>
+      </ul>
+    </p>
+
+    <div class="exam-trap-inline" data-topic="accuracy-metrics"><b>Exam trap:</b> MSE divides by (n−1) in theory, but Excel divides by n — the question may specify which to use. MAPE is the only metric that expresses error as a percentage, making it useful for comparing accuracy across series with different scales.</div>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Qualitative methods are not inferior to quantitative ones — they are appropriate when soft information dominates or historical data are unavailable.</li>
+      <li>The Delphi method was developed by RAND Corp. in the 1950s; its defining features are iterative rounds and expert anonymity.</li>
+      <li>Irregular variation (identifiable unusual events) and random variation (unexplained residual) are distinct behaviors — do not conflate them.</li>
+      <li>Exponential smoothing is a special case of weighted moving average, not a separate family of methods.</li>
+      <li>Higher α in exponential smoothing means MORE weight on the most recent observation (more responsive, less stable) — not less.</li>
+      <li>Additive seasonality: fixed absolute swing regardless of series level. Multiplicative seasonality: swing grows proportionally with the level.</li>
+      <li>MSE divides by (n−1) theoretically; Excel uses n — note which denominator the question specifies.</li>
+      <li>MAPE is the only accuracy metric expressed as a percentage, enabling comparison across series of different scales.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Four attributes of a good forecast: Accurate, Reliable, Meaningful, Effective</li>
+      <li>Naive forecast formula: F<sub>t</sub> = A<sub>t-1</sub></li>
+      <li>Moving average: F<sub>t</sub> = (A<sub>t-1</sub> + … + A<sub>t-n</sub>) / n; smaller n = more responsive</li>
+      <li>Exponential smoothing: F<sub>t</sub> = F<sub>t-1</sub> + α(A<sub>t-1</sub> − F<sub>t-1</sub>); higher α = more responsive</li>
+      <li>Linear trend: F<sub>t</sub> = a + b×t; b = slope, a = intercept at t=0</li>
+      <li>Additive seasonality = fixed quantity added/subtracted; Multiplicative = percentage multiplied</li>
+      <li>Five time-series behaviors: trend, seasonality, cycle, irregular variation, random variation</li>
+      <li>MAD weights all errors equally; MSE penalizes large errors (squared); MAPE gives relative % error</li>
+      <li>Delphi method: RAND Corp., 1950s, iterative expert surveys with anonymity</li>
+      <li>Six technique-selection factors: cost, accuracy, historical data availability, software availability, time to prepare, forecast horizon</li>
+    </ol>
+  </div>
+</div>
+
+
+<!-- Quiz containers are generated by JS (see renderQuizContainers). -->
+<div id="quiz-containers"></div>
+
+<div id="global-report" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <h1>Full Summary Report</h1>
+  <div id="global-body"></div>
+</div>
+
+</div>
+<script>
+// ===== Data + state (loaded from data/3040.json) =====
+let lectures = [];
+let STORAGE_KEY = "endoQuizState";
+let quizState = {};
+let TOPIC_SECTION_MAP = {};
+
+function initQuizStateFromLectures() {
+  lectures.forEach(l => {
+    quizState[l.id] = { answered:0, correct:0, wrongQuestions:[], completed:false, choices:{}, filteredIndices:null, total:30, weakSections:[], weakTopics:[] };
+  });
+}
+
+function saveState() {
+  try {
+    const out = {};
+    Object.keys(quizState).forEach(k => {
+      const s = quizState[k];
+      out[k] = { answered:s.answered, correct:s.correct, wrongQuestions:s.wrongQuestions, completed:s.completed, choices:s.choices, filteredIndices:s.filteredIndices, total:s.total, weakSections:s.weakSections, weakTopics:s.weakTopics };
+    });
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(out));
+  } catch(e){ console.warn("save failed", e); }
+}
+
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return;
+    const data = JSON.parse(raw);
+    Object.keys(data).forEach(k => {
+      if (quizState[k]) Object.assign(quizState[k], data[k]);
+    });
+  } catch(e){ console.warn("load failed", e); }
+}
+
+function resetAllProgress() {
+  if (!confirm("Reset ALL quiz progress? This cannot be undone.")) return;
+  localStorage.removeItem(STORAGE_KEY);
+  location.reload();
+}
+
+// ===== Navigation =====
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const el = document.getElementById(id);
+  if (el) el.classList.add('active');
+  window.scrollTo(0,0);
+  if (id === 'global-report') renderGlobalReport();
+  if (id.startsWith('notes-')) {
+    const lid = parseInt(id.split('-')[1]);
+    applyWeakHighlights(lid);
+  }
+  setTimeout(initReveal, 50);
+}
+
+function computeWeakSections(lid) {
+  const s = quizState[lid];
+  const lec = lectures.find(l => l.id === lid);
+  const map = TOPIC_SECTION_MAP[lid] || {};
+  const topicSet = new Set();
+  const secSet = new Set();
+  s.wrongQuestions.forEach(qi => {
+    const t = lec.questions[qi].topic;
+    if (t) topicSet.add(t);
+    if (map[t] !== undefined) secSet.add(map[t]);
+  });
+  s.weakTopics = Array.from(topicSet);
+  s.weakSections = Array.from(secSet).sort((a,b)=>a-b);
+}
+
+function applyWeakHighlights(lid) {
+  const s = quizState[lid];
+  const weakTopics = new Set(s.weakTopics || []);
+  const weakSecs = new Set(s.weakSections || []);
+  const page = document.getElementById('notes-'+lid);
+  if (!page) return;
+
+  // Clear existing highlights
+  page.querySelectorAll('.weak-highlight, .weak-h2').forEach(el => {
+    el.classList.remove('weak-highlight');
+    el.classList.remove('weak-h2');
+  });
+
+  // Per-element highlighting: substring match of any wrong topic name in the data-topic attribute
+  page.querySelectorAll('[data-topic]').forEach(el => {
+    const attr = el.getAttribute('data-topic') || '';
+    for (const t of weakTopics) {
+      if (attr.includes(t)) { el.classList.add('weak-highlight'); break; }
+    }
+  });
+
+  // Fallback: if a weak section has no inner match, lightly mark its h2
+  page.querySelectorAll('section[data-sec]').forEach(sec => {
+    const idx = parseInt(sec.dataset.sec);
+    if (!weakSecs.has(idx)) return;
+    if (sec.querySelector('.weak-highlight')) return;
+    const h = sec.querySelector('h2');
+    if (h) h.classList.add('weak-h2');
+  });
+
+  const clearBtn = document.getElementById('clear-hl-'+lid);
+  if (clearBtn) clearBtn.style.display = (weakTopics.size > 0 || weakSecs.size > 0) ? 'inline-block' : 'none';
+}
+
+function clearWeakHighlights(lid) {
+  quizState[lid].weakSections = [];
+  quizState[lid].weakTopics = [];
+  saveState();
+  applyWeakHighlights(lid);
+}
+
+function startQuiz(lid) {
+  const state = quizState[lid];
+  const countSel = document.getElementById('count-'+lid);
+  const desiredCount = countSel ? parseInt(countSel.value)||30 : 30;
+
+  // If there is saved progress AND requested count differs from saved, prompt to restart
+  const hasProgress = state.answered > 0 && state.filteredIndices && state.filteredIndices.length > 0;
+  let needNew = !state.filteredIndices;
+  if (hasProgress) {
+    if (state.filteredIndices.length !== desiredCount) {
+      if (confirm("You have saved progress for this lecture with a different question count. Start a new quiz with the new count? (This will erase saved progress for this lecture.)")) {
+        resetLectureState(lid);
+        needNew = true;
+      }
+    }
+  } else if (state.answered === 0) {
+    needNew = true;
+  }
+
+  if (needNew) {
+    const picked = buildBalancedSet(lid, desiredCount);
+    state.filteredIndices = picked;
+    state.total = picked.length;
+    state.answered = 0;
+    state.correct = 0;
+    state.wrongQuestions = [];
+    state.choices = {};
+    state.completed = false;
+    state.weakSections = [];
+    state.weakTopics = [];
+    saveState();
+    const body = document.getElementById('quizbody-'+lid);
+    if (body) body.dataset.rendered = "";
+    const post = document.getElementById('postquiz-'+lid);
+    if (post) post.innerHTML = '';
+  }
+
+  showPage('quiz-'+lid);
+  renderQuiz(lid);
+}
+
+function resetLectureState(lid) {
+  quizState[lid] = { answered:0, correct:0, wrongQuestions:[], completed:false, choices:{}, filteredIndices:null, total:30, weakSections:[], weakTopics:[] };
+  saveState();
+}
+
+// Balanced sampling across easy/medium/hard. Target ratios:
+//   10 → 3 easy, 3 medium, 4 hard
+//   20 → 7 easy, 7 medium, 6 hard
+//   30 → 10 easy, 10 medium, 10 hard
+function buildBalancedSet(lid, count) {
+  const lec = lectures.find(l => l.id === lid);
+  const pools = { easy: [], medium: [], hard: [] };
+  lec.questions.forEach((q, i) => {
+    if (pools[q.difficulty]) pools[q.difficulty].push(i);
+  });
+  shuffle(pools.easy); shuffle(pools.medium); shuffle(pools.hard);
+
+  let targets;
+  if (count <= 10) targets = { easy: 3, medium: 3, hard: 4 };
+  else if (count <= 20) targets = { easy: 7, medium: 7, hard: 6 };
+  else targets = { easy: 10, medium: 10, hard: 10 };
+
+  // Scale targets if requested count differs from preset
+  if (count !== 10 && count !== 20 && count !== 30) {
+    const total = targets.easy + targets.medium + targets.hard;
+    targets = {
+      easy:   Math.round(targets.easy   * count / total),
+      medium: Math.round(targets.medium * count / total),
+      hard:   Math.round(targets.hard   * count / total),
+    };
+  }
+
+  const picked = [];
+  const taken = { easy: 0, medium: 0, hard: 0 };
+  ['easy','medium','hard'].forEach(d => {
+    const want = Math.min(targets[d], pools[d].length);
+    for (let i = 0; i < want; i++) picked.push(pools[d][i]);
+    taken[d] = want;
+  });
+
+  // If short of target count (some pool too small), fill from leftovers
+  const leftovers = [];
+  ['easy','medium','hard'].forEach(d => {
+    for (let i = taken[d]; i < pools[d].length; i++) leftovers.push(pools[d][i]);
+  });
+  shuffle(leftovers);
+  while (picked.length < count && leftovers.length > 0) picked.push(leftovers.shift());
+
+  picked.sort((a,b)=>a-b);
+  return picked;
+}
+
+function shuffle(arr) {
+  for (let i=arr.length-1; i>0; i--) {
+    const j = Math.floor(Math.random()*(i+1));
+    [arr[i],arr[j]] = [arr[j],arr[i]];
+  }
+  return arr;
+}
+
+// ===== Quiz rendering =====
+function renderQuiz(lid) {
+  const lec = lectures.find(l => l.id === lid);
+  const body = document.getElementById('quizbody-' + lid);
+  const state = quizState[lid];
+  if (!state.filteredIndices || state.filteredIndices.length === 0) {
+    // fallback: all 30
+    state.filteredIndices = lec.questions.map((_,i)=>i);
+    state.total = 30;
+  }
+  if (body.dataset.rendered === "1") {
+    updateScoreBar(lid);
+    return;
+  }
+  body.dataset.rendered = "1";
+  let h = '';
+  state.filteredIndices.forEach((qi, displayIdx) => {
+    const q = lec.questions[qi];
+    h += '<div class="q-block reveal-on-scroll" id="q-'+lid+'-'+qi+'">';
+    h += '<div class="q-num">Question ' + (displayIdx+1) + ' of ' + state.filteredIndices.length + ' <span style="margin-left:8px;padding:1px 6px;background:var(--accent-soft);border-radius:3px;font-size:.85em">'+q.difficulty+'</span></div>';
+    h += '<div class="q-text">' + escapeHtml(q.q) + '</div>';
+    q.options.forEach((opt, oi) => {
+      h += '<label class="opt" id="opt-'+lid+'-'+qi+'-'+oi+'"><input type="radio" name="q-'+lid+'-'+qi+'" value="'+oi+'"> '+String.fromCharCode(65+oi)+'. '+escapeHtml(opt)+'</label>';
+    });
+    h += '<button class="btn submit-q" onclick="submitQ('+lid+','+qi+')">Submit</button>';
+    h += '<div class="explain" id="exp-'+lid+'-'+qi+'" style="display:none"></div>';
+    h += '</div>';
+  });
+  body.innerHTML = h;
+
+  // Restore answered states from saved choices
+  state.filteredIndices.forEach(qi => {
+    if (state.choices[qi] !== undefined) restoreAnswered(lid, qi);
+  });
+
+  updateScoreBar(lid);
+
+  if (state.completed) {
+    renderPostQuiz(lid);
+  }
+}
+
+function restoreAnswered(lid, qi) {
+  const state = quizState[lid];
+  const lec = lectures.find(l => l.id === lid);
+  const q = lec.questions[qi];
+  const chosen = state.choices[qi];
+  for (let oi=0; oi<q.options.length; oi++) {
+    const el = document.getElementById('opt-'+lid+'-'+qi+'-'+oi);
+    if (!el) continue;
+    el.classList.add('disabled');
+    if (oi === q.answer) el.classList.add('correct');
+    if (oi === chosen && chosen !== q.answer) el.classList.add('wrong');
+    const input = el.querySelector('input');
+    if (input) input.checked = (oi === chosen);
+    if (input) input.disabled = true;
+  }
+  const exp = document.getElementById('exp-'+lid+'-'+qi);
+  if (exp) {
+    exp.style.display = 'block';
+    exp.innerHTML = '<b>'+(chosen===q.answer?"Correct.":"Incorrect.")+'</b> '+escapeHtml(q.explain);
+  }
+  const btn = document.querySelector('#q-'+lid+'-'+qi+' .submit-q');
+  if (btn) { btn.disabled = true; btn.textContent = 'Submitted'; }
+}
+
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+
+// ===== SVG Progress Ring Generator =====
+function createProgressRing(percent, size = 120) {
+  const radius = (size - 12) / 2;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (percent / 100) * circumference;
+  const cx = size / 2;
+  const cy = size / 2;
+
+  return `
+    <svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" style="transform: rotate(-90deg)">
+      <circle cx="${cx}" cy="${cy}" r="${radius}" fill="none" stroke="var(--accent-soft)" stroke-width="6"/>
+      <circle cx="${cx}" cy="${cy}" r="${radius}" fill="none" stroke="var(--accent)" stroke-width="6"
+              stroke-dasharray="${circumference}" stroke-dashoffset="${offset}" stroke-linecap="round"
+              style="transition: stroke-dashoffset 0.6s ease"/>
+    </svg>
+  `;
+}
+
+function getVerdictClass(pct) {
+  if (pct >= 90) return 'verdict-excellent';
+  if (pct >= 75) return 'verdict-good';
+  if (pct >= 60) return 'verdict-review';
+  return 'verdict-weak';
+}
+
+function submitQ(lid, qi) {
+  const state = quizState[lid];
+  if (state.choices[qi] !== undefined) return;
+  const lec = lectures.find(l => l.id === lid);
+  const q = lec.questions[qi];
+  const radios = document.getElementsByName('q-'+lid+'-'+qi);
+  let chosen = -1;
+  radios.forEach(r => { if (r.checked) chosen = parseInt(r.value); });
+  if (chosen === -1) { alert("Please select an option."); return; }
+  state.choices[qi] = chosen;
+  state.answered += 1;
+  for (let oi=0; oi<q.options.length; oi++) {
+    const el = document.getElementById('opt-'+lid+'-'+qi+'-'+oi);
+    el.classList.add('disabled');
+    if (oi === q.answer) el.classList.add('correct');
+    if (oi === chosen && chosen !== q.answer) el.classList.add('wrong');
+  }
+  if (chosen === q.answer) state.correct += 1;
+  else state.wrongQuestions.push(qi);
+  const exp = document.getElementById('exp-'+lid+'-'+qi);
+  exp.style.display = 'block';
+  exp.innerHTML = '<b>'+(chosen===q.answer?"Correct.":"Incorrect.")+'</b> '+escapeHtml(q.explain);
+  const btn = document.querySelector('#q-'+lid+'-'+qi+' .submit-q');
+  btn.disabled = true;
+  btn.textContent = 'Submitted';
+  updateScoreBar(lid);
+  saveState();
+  if (state.answered === state.total) {
+    state.completed = true;
+    computeWeakSections(lid);
+    saveState();
+    document.getElementById('globalReportBtn').disabled = false;
+    renderPostQuiz(lid);
+    setTimeout(() => {
+      document.getElementById('postquiz-'+lid).scrollIntoView({behavior:'smooth'});
+    }, 200);
+  }
+}
+
+function updateScoreBar(lid) {
+  const s = quizState[lid];
+  const totalAvail = s.filteredIndices ? s.filteredIndices.length : 30;
+  document.getElementById('scorebar-'+lid).textContent = "Score: " + s.correct + " / " + s.answered + " (of " + totalAvail + " filtered)";
+}
+
+function renderPostQuiz(lid) {
+  const lec = lectures.find(l => l.id === lid);
+  const s = quizState[lid];
+  const total = s.total || 30;
+  const pct = Math.round((s.correct/total)*100);
+  let verdict;
+  if (pct >= 90) verdict = "Excellent. You have mastered this lecture.";
+  else if (pct >= 75) verdict = "Solid grasp. A few targeted reviews and you are exam-ready.";
+  else if (pct >= 60) verdict = "Reasonable foundation. Revisit the weak topics below.";
+  else verdict = "Needs more review. Go back to the notes for the topics flagged below.";
+
+  const themeCount = {};
+  s.wrongQuestions.forEach(qi => {
+    const t = lec.questions[qi].topic;
+    themeCount[t] = (themeCount[t] || 0) + 1;
+  });
+  const themes = Object.keys(themeCount).sort((a,b)=>themeCount[b]-themeCount[a]);
+
+  let h = '<div class="summary reveal-on-scroll reveal-delay-1">';
+  h += '<h2>Summary Report</h2>';
+
+  // Add progress ring visualization
+  h += '<div class="progress-ring-container">';
+  h += createProgressRing(pct);
+  h += '<div class="progress-ring-label">';
+  h += '<div class="progress-percentage">'+pct+'%</div>';
+  h += '<div class="progress-score">'+s.correct+'/'+total+'</div>';
+  h += '</div></div>';
+
+  h += '<div class="verdict '+getVerdictClass(pct)+'">'+verdict+'</div>';
+
+  // Add wrong topics bar chart
+  if (themes.length) {
+    h += '<h3>Wrong Topics Breakdown</h3>';
+    h += '<div class="chart-container">';
+    const maxWrong = Math.max(...themes.map(t => themeCount[t]));
+    themes.forEach(t => {
+      const count = themeCount[t];
+      const pctBar = Math.round((count / maxWrong) * 100);
+      h += '<div class="bar-chart-item">';
+      h += '<div class="bar-chart-label">'+escapeHtml(t)+'</div>';
+      h += '<div class="bar-chart-bar">';
+      h += '<div class="bar-chart-fill" style="width:'+pctBar+'%"><span class="bar-chart-count">'+count+'</span></div>';
+      h += '</div></div>';
+    });
+    h += '</div>';
+    h += '<h3>Topics to Revisit</h3><ul class="theme-list">';
+    themes.forEach(t => { h += '<li><b>'+escapeHtml(t)+'</b> — '+themeCount[t]+' wrong</li>'; });
+    h += '</ul>';
+  } else {
+    h += '<p>No weak topics — perfect run.</p>';
+  }
+  h += '<p style="color:var(--muted);font-style:italic">Take a short break, then revisit the notes for any flagged topic before moving on.</p>';
+  h += '</div>';
+  h += '<h2>Wrong Answer Review</h2>';
+  if (s.wrongQuestions.length === 0) {
+    h += '<p>No wrong answers to review. Great job.</p>';
+  } else {
+    s.wrongQuestions.forEach((qi, idx) => {
+      const q = lec.questions[qi];
+      const chosen = s.choices[qi];
+      const delay = ['','reveal-delay-1','reveal-delay-2','reveal-delay-3'][idx%4];
+      h += '<div class="review-card reveal-on-scroll '+delay+'">';
+      h += '<div class="q-num">Question '+(qi+1)+'</div>';
+      h += '<div class="q-text">'+escapeHtml(q.q)+'</div>';
+      q.options.forEach((opt, oi) => {
+        let cls = "opt disabled";
+        if (oi === q.answer) cls += " correct";
+        if (oi === chosen && chosen !== q.answer) cls += " wrong";
+        h += '<div class="'+cls+'">'+String.fromCharCode(65+oi)+'. '+escapeHtml(opt)+'</div>';
+      });
+      h += '<div class="explain"><b>Explanation:</b> '+escapeHtml(q.explain)+'</div>';
+      h += '</div>';
+    });
+  }
+  document.getElementById('postquiz-'+lid).innerHTML = h;
+  setTimeout(initReveal, 50);
+}
+
+function showGlobalReport(){ showPage('global-report'); }
+
+function renderGlobalReport() {
+  let totalCorrect = 0, totalAnswered = 0;
+  const allThemes = {};
+  const lectureScores = [];
+
+  lectures.forEach(lec => {
+    const s = quizState[lec.id];
+    if (s.answered > 0) {
+      totalCorrect += s.correct;
+      totalAnswered += s.answered;
+      const pct = s.answered ? Math.round(s.correct/s.answered*100) : 0;
+      lectureScores.push({ title: lec.title, correct: s.correct, answered: s.answered, pct });
+      s.wrongQuestions.forEach(qi => {
+        const t = lec.questions[qi].topic;
+        allThemes[t] = (allThemes[t]||0)+1;
+      });
+    }
+  });
+
+  const overallPct = totalAnswered ? Math.round(totalCorrect/totalAnswered*100) : 0;
+
+  let h = '<p style="color:var(--muted);font-style:italic">Shows saved quiz data (persisted across reloads).</p>';
+
+  // Overall progress ring
+  h += '<h2>Overall Score</h2>';
+  h += '<div class="progress-ring-container">';
+  h += createProgressRing(overallPct, 140);
+  h += '<div class="progress-ring-label">';
+  h += '<div class="progress-percentage">'+overallPct+'%</div>';
+  h += '<div class="progress-score">'+totalCorrect+'/'+totalAnswered+'</div>';
+  h += '</div></div>';
+  h += '<p style="text-align:center;color:var(--ink)"><b>'+totalCorrect+' / '+totalAnswered+'</b> across all completed quizzes</p>';
+
+  // Lecture breakdown bar chart
+  if (lectureScores.length) {
+    h += '<h2>Lecture Breakdown</h2>';
+    h += '<div class="chart-container">';
+    lectureScores.forEach(lec => {
+      const pctBar = lec.pct;
+      const verdictClass = getVerdictClass(lec.pct);
+      h += '<div class="bar-chart-item">';
+      h += '<div class="bar-chart-label" title="'+escapeHtml(lec.title)+'">'+escapeHtml(lec.title.substring(0, 25))+'...</div>';
+      h += '<div class="bar-chart-bar">';
+      h += '<div class="bar-chart-fill '+verdictClass+'" style="width:'+pctBar+'%"><span class="bar-chart-count">'+lec.pct+'%</span></div>';
+      h += '</div></div>';
+    });
+    h += '</div>';
+  }
+
+  // Weak topics summary
+  const sortedThemes = Object.keys(allThemes).sort((a,b)=>allThemes[b]-allThemes[a]);
+  if (sortedThemes.length) {
+    h += '<h2>Topics to Revisit (Combined)</h2>';
+    h += '<div class="chart-container">';
+    const maxThemeWrong = Math.max(...sortedThemes.map(t => allThemes[t]));
+    sortedThemes.slice(0, 8).forEach(t => {
+      const count = allThemes[t];
+      const pctBar = Math.round((count / maxThemeWrong) * 100);
+      h += '<div class="bar-chart-item">';
+      h += '<div class="bar-chart-label">'+escapeHtml(t)+'</div>';
+      h += '<div class="bar-chart-bar">';
+      h += '<div class="bar-chart-fill" style="width:'+pctBar+'%"><span class="bar-chart-count">'+count+'</span></div>';
+      h += '</div></div>';
+    });
+    h += '</div>';
+    if (sortedThemes.length > 8) {
+      h += '<p style="color:var(--muted);font-size:0.9em">... and '+(sortedThemes.length-8)+' more topics</p>';
+    }
+  } else {
+    h += '<p>No weak topics across completed quizzes.</p>';
+  }
+
+  document.getElementById('global-body').innerHTML = h;
+}
+
+// ===== Reveal-on-scroll =====
+function initReveal() {
+  const activePage = document.querySelector('.page.active');
+  const scope = activePage || document;
+  const els = scope.querySelectorAll('.reveal-on-scroll:not(.is-visible)');
+  if (!els.length) return;
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+  const obs = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { root:null, rootMargin:'0px', threshold:0.1 });
+  els.forEach(el => obs.observe(el));
+  setTimeout(() => { els.forEach(el => el.classList.add('is-visible')); }, 600);
+}
+
+// ===== Init on load =====
+function updateHomeStatus() {
+  lectures.forEach(lec => {
+    const s = quizState[lec.id];
+    const el = document.getElementById('status-'+lec.id);
+    const progressEl = document.getElementById('progress-'+lec.id);
+    if (!el) return;
+    if (s.answered > 0 && s.total) {
+      const pct = Math.round((s.correct/s.total)*100);
+      el.textContent = "Saved: "+s.correct+"/"+s.answered+" of "+s.total+(s.completed?" (completed)":"");
+      if (progressEl) {
+        progressEl.innerHTML = '<div class="progress-badge">'+pct+'% ('+s.correct+'/'+s.total+')</div>';
+      }
+      if (s.completed) document.getElementById('globalReportBtn').disabled = false;
+    }
+  });
+}
+
+
+// ===== Dynamic card / quiz container generation =====
+function renderHomeCards() {
+  const container = document.getElementById('lecture-cards');
+  if (!container) return;
+  const delays = ['reveal-delay-1','reveal-delay-2','reveal-delay-3'];
+  container.innerHTML = lectures.map((lec, idx) => {
+    const delay = delays[idx % 3];
+    const titleHtml = escapeHtml(lec.title);
+    return `
+    <div class="card reveal-on-scroll ${delay}">
+      <div class="lec-row">
+        <div class="lec-title">${titleHtml}</div>
+        <div>
+          <button class="btn" onclick="showPage('notes-${lec.id}')">Notes</button>
+          <button class="btn btn-primary" onclick="startQuiz(${lec.id})">Quiz</button>
+        </div>
+      </div>
+      <div class="quiz-settings">
+        <label>Questions:
+          <select id="count-${lec.id}"><option value="10">10</option><option value="20">20</option><option value="30" selected>30</option></select>
+        </label>
+        <span id="progress-${lec.id}"></span>
+        <span id="status-${lec.id}" style="color:var(--muted);font-size:.9em"></span>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderQuizContainers() {
+  const container = document.getElementById('quiz-containers');
+  if (!container) return;
+  container.innerHTML = lectures.map(lec => {
+    const titleHtml = escapeHtml(lec.title);
+    return `
+    <div id="quiz-${lec.id}" class="page">
+      <a class="btn back" onclick="showPage('home')">← Home</a>
+      <h1>${titleHtml} — Quiz</h1>
+      <div class="score-bar" id="scorebar-${lec.id}">Score: 0 / 0 (of 30)</div>
+      <div id="quizbody-${lec.id}"></div>
+      <div id="postquiz-${lec.id}"></div>
+    </div>`;
+  }).join('');
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  fetch('data/isom2800.json')
+    .then(r => {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(data => {
+      lectures = data.lectures || [];
+      STORAGE_KEY = data.storageKey || STORAGE_KEY;
+      TOPIC_SECTION_MAP = data.topicSectionMap || {};
+      initQuizStateFromLectures();
+      renderHomeCards();
+      renderQuizContainers();
+      loadState();
+      // Migrate older saved states: recompute weak topics/sections if missing
+      lectures.forEach(lec => {
+        const s = quizState[lec.id];
+        const hasTopics = s.weakTopics && s.weakTopics.length > 0;
+        if (s.completed && !hasTopics && s.wrongQuestions.length > 0) {
+          computeWeakSections(lec.id);
+        }
+      });
+      saveState();
+      updateHomeStatus();
+      initReveal();
+    })
+    .catch(err => {
+      console.error('Failed to load data/isom2800.json:', err);
+      alert('Failed to load lecture data. If you opened this file directly (file://), please serve via a local HTTP server. See CLAUDE.md.');
+    });
+});
+
+// ===== PWA Service Worker (inline via Blob) =====
+if ('serviceWorker' in navigator) {
+  const swCode = `
+    const CACHE = 'isom2800-v6';
+    self.addEventListener('install', e => { self.skipWaiting(); });
+    self.addEventListener('activate', e => { e.waitUntil(self.clients.claim()); });
+    self.addEventListener('fetch', e => {
+      if (e.request.method !== 'GET') return;
+      e.respondWith(
+        caches.open(CACHE).then(cache =>
+          cache.match(e.request).then(cached => {
+            const fetchPromise = fetch(e.request).then(resp => {
+              if (resp && resp.status === 200 && resp.type === 'basic') cache.put(e.request, resp.clone());
+              return resp;
+            }).catch(() => cached);
+            return cached || fetchPromise;
+          })
+        )
+      );
+    });
+  `;
+  try {
+    const blob = new Blob([swCode], {type:'application/javascript'});
+    navigator.serviceWorker.register(URL.createObjectURL(blob)).catch(e => console.warn('SW reg failed', e));
+  } catch(e) { console.warn('SW setup failed', e); }
+}
+</script>
+
+<!--
+  ============================================================================
+  TEMPLATE INSTRUCTIONS — READ BEFORE EDITING
+  ============================================================================
+
+  This file is a universal subject template. To create a new subject:
+
+  1. Copy this file to a new subject HTML, e.g.  cp template.html 3015.html
+  2. In the copy, find-and-replace these placeholders:
+       ISOM 2800 Study Guide     e.g. "Endocrine Study Guide"
+       ISOM2800      e.g. "LIFS3040"
+       Operations Management, Lectures 7-11  e.g. "Endocrine, GI & Neuroscience, Lectures 1-10"
+       isom2800         e.g. "3040"  (matches data/3040.json — appears TWICE)
+       isom2800        e.g. "lifs3040"  (service-worker cache namespace)
+  3. Create data/{isom2800}.json with this shape (see CLAUDE.md for full schema):
+       {
+         "storageKey": "lifs3040_quiz_state",
+         "lectures": [
+           { "id": 1, "title": "Lecture 1: ...", "questions": [ ... 30 question objects ... ] }
+         ],
+         "topicSectionMap": { "1": { "topic-name": 0 } }
+       }
+  4. For EACH lecture you add to the JSON, also add a notes page block to THIS HTML,
+     placed where the comment "NOTES PAGES go here" is above. Use this pattern:
+
+       <div id="notes-N" class="page">
+         <a class="btn back" onclick="showPage('home')">← Home</a>
+         <button id="clear-hl-N" class="btn btn-danger" style="display:none;float:right"
+                 onclick="clearWeakHighlights(N)">Clear Highlights</button>
+         <h1>Lecture N: Title</h1>
+
+         <div class="bigpic reveal-on-scroll">
+           One-paragraph framing of why this topic matters.
+         </div>
+
+         <section class="reveal-on-scroll" data-sec="0">
+           <h2>1. Section heading</h2>
+           <p data-topic="Topic name used in questions">Explanation...</p>
+         </section>
+
+         <!-- More sections with data-sec="1", "2", ... -->
+
+         <div class="memorize">
+           <strong>Top things to memorize</strong>
+           <ol>...</ol>
+         </div>
+       </div>
+
+  5. Add a subject card linking to this HTML on index.html.
+  6. Add this subject to CLAUDE.md's Content Status table.
+
+  WHAT NOT TO DO:
+  - Do NOT hand-write the home page lecture cards or quiz containers — they are
+    generated by renderHomeCards() / renderQuizContainers() from JSON.
+  - Do NOT rename question schema fields. Canonical: q, options, answer, explain,
+    topic, difficulty. The renderQuiz / submitQ functions assume these exact names.
+  - Do NOT use the field name `name` for lecture titles — always `title`.
+
+  CACHE INVALIDATION:
+  When you change data/JSON or this HTML, bump isom2800-v1 → v2 in the
+  service worker block above so returning users do not get the old version.
+  ============================================================================
+-->
+
+</body>
+</html>

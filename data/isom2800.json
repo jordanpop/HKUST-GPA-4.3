@@ -1,0 +1,2216 @@
+{
+  "storageKey": "isom2800_quiz_state",
+  "lectures": [
+    {
+      "id": 7,
+      "title": "Lecture 7: Demand Forecasting Methods",
+      "questions": [
+        {
+          "q": "What is the primary purpose of demand forecasting in business decision-making?",
+          "options": [
+            "To eliminate all business risk",
+            "To project future values and support informed decisions",
+            "To guarantee accurate sales predictions",
+            "To replace historical data analysis",
+            "To reduce the cost of operations"
+          ],
+          "answer": 1,
+          "topic": "forecast-basics",
+          "explain": "A forecast is a projection of future values to support informed business decisions. The correct answer directly reflects the definition. Forecasting cannot eliminate risk or guarantee accuracy — it reduces uncertainty by providing systematic projections.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which of the following is NOT listed as an element of a good forecast?",
+          "options": [
+            "Accurate",
+            "Reliable",
+            "Affordable",
+            "Meaningful",
+            "Effective"
+          ],
+          "answer": 2,
+          "topic": "good-forecast-attributes",
+          "explain": "The four required attributes are: accurate, reliable, meaningful, and effective. Cost (affordability) is relevant to technique selection but is not listed as a fundamental attribute of the forecast itself. The exam trap is that affordability sounds reasonable but is not part of the core definition.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In qualitative forecasting, what is the primary source of information?",
+          "options": [
+            "Historical time-series data",
+            "Statistical regression models",
+            "Human judgment, opinions, and soft information",
+            "Automated sensor networks",
+            "Computer algorithms"
+          ],
+          "answer": 2,
+          "topic": "forecasting-approaches",
+          "explain": "Qualitative forecasting relies on subjective inputs from people rather than data-based methods. Historical data and algorithms are hallmarks of quantitative forecasting. Qualitative methods are appropriate when data are unavailable or soft factors dominate.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which statement about qualitative vs. quantitative forecasting is correct?",
+          "options": [
+            "Quantitative methods are always superior to qualitative methods",
+            "Qualitative methods are inferior because they rely on opinion",
+            "Quantitative methods relate dependent variables to causal variables",
+            "Qualitative methods use historical time-series patterns",
+            "Quantitative methods are never appropriate for new products"
+          ],
+          "answer": 2,
+          "topic": "forecasting-approaches",
+          "explain": "Quantitative forecasting relates a dependent variable (e.g. demand) to one or more independent/causal variables (e.g. time, weather, price). The exam trap is equating 'quantitative' with 'better' — qualitative methods are appropriate when data are unavailable or soft factors dominate.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "The Delphi method was developed by which organization in the 1950s?",
+          "options": [
+            "The World Bank",
+            "RAND Corporation",
+            "McKinsey & Company",
+            "Harvard Business School",
+            "The United Nations"
+          ],
+          "answer": 1,
+          "topic": "qualitative-methods",
+          "explain": "The Delphi method was developed by the RAND Corporation in the 1950s. It is an iterative survey process where expert opinions are shared anonymously between rounds until convergence. This is a factual detail commonly tested.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "What is the defining characteristic of the Delphi method?",
+          "options": [
+            "Survey responses are collected face-to-face",
+            "Experts discuss their opinions in a group meeting",
+            "Iterative surveys are conducted with anonymity between rounds",
+            "Results converge to a single forecast immediately",
+            "Salesperson opinions are weighted most heavily"
+          ],
+          "answer": 2,
+          "topic": "qualitative-methods",
+          "explain": "The Delphi method is defined by iterative (repeated) surveys and expert anonymity, which prevents groupthink and dominant personalities from influencing results. Face-to-face meetings and immediate convergence are not part of the method.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "When should executive opinions be preferred as a forecasting method?",
+          "options": [
+            "For short-term, product-level demand forecasts",
+            "For strategic and long-horizon decisions",
+            "For new product launches where customer preference is unknown",
+            "When historical data are abundant and reliable",
+            "When accuracy is the only selection criterion"
+          ],
+          "answer": 1,
+          "topic": "qualitative-methods",
+          "explain": "Executive opinions are best used for strategic and long-horizon decisions because senior managers have broad strategic insight. Salesforce opinions are better for short-term, product-level forecasts. Consumer surveys are appropriate for new product launches.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which forecasting method is most appropriate when no historical data are available?",
+          "options": [
+            "Linear trend equation",
+            "Exponential smoothing",
+            "Delphi method",
+            "Moving average",
+            "Naive forecast"
+          ],
+          "answer": 2,
+          "topic": "qualitative-methods",
+          "explain": "The Delphi method is explicitly designed for long-range forecasting when no historical data exist. All other options (trend, smoothing, moving average, naive) require historical time-series data to function.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "What is a time-series forecast?",
+          "options": [
+            "A forecast that only predicts seasonal variations",
+            "A projection that relates demand to economic conditions",
+            "A projection of patterns identified in time-ordered observations taken at regular intervals",
+            "A method that requires expert opinion",
+            "A forecast that eliminates all random variation"
+          ],
+          "answer": 2,
+          "topic": "time-series-basics",
+          "explain": "A time-series forecast projects patterns from recent time-ordered observations taken at regular intervals, assuming future values can be estimated from past values of the same series. It does not eliminate variation — it accounts for systematic patterns.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which of the following is the core assumption underlying all time-series forecasting methods?",
+          "options": [
+            "Future demand depends only on competitor behavior",
+            "Past patterns will repeat in the future",
+            "Random variation can be completely eliminated",
+            "Human judgment is always required",
+            "Trend always increases over time"
+          ],
+          "answer": 1,
+          "topic": "time-series-basics",
+          "explain": "The core assumption is that future values can be estimated from past values of the same series — i.e., past patterns will repeat or continue. This assumption underlies all time-series techniques.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following is an example of a systematic time-series behavior?",
+          "options": [
+            "A gradual population shift",
+            "A labor strike",
+            "A natural disaster",
+            "An equipment breakdown",
+            "An unexpected competitor entry"
+          ],
+          "answer": 0,
+          "topic": "time-series-behaviors",
+          "explain": "A gradual population shift is an example of trend — a long-term systematic upward or downward movement. Labor strikes, natural disasters, and equipment breakdowns are examples of irregular variation (identifiable unusual events), not systematic behaviors.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the distinction between a cycle and seasonality in time-series data?",
+          "options": [
+            "Cycles occur yearly; seasonality occurs monthly",
+            "Seasonality is tied to calendar events; cycles last more than one year",
+            "Cycles are predictable; seasonality is random",
+            "Seasonality is systematic; cycles are always irregular",
+            "They are synonymous terms with different names"
+          ],
+          "answer": 1,
+          "topic": "time-series-behaviors",
+          "explain": "Seasonality is short-term, fairly regular variation tied to the calendar or time of day. A cycle is a wavelike variation lasting more than one year, often linked to economic, political, or agricultural conditions. This is a common exam confusion point.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which statement correctly distinguishes irregular variation from random variation?",
+          "options": [
+            "They are the same phenomenon with different labels",
+            "Irregular variation is caused by identifiable events; random variation is unexplained residual noise",
+            "Random variation can be forecast; irregular variation cannot",
+            "Irregular variation is random; random variation is predictable",
+            "Irregular variation is systematic; random variation is non-systematic"
+          ],
+          "answer": 1,
+          "topic": "time-series-behaviors",
+          "explain": "Irregular variation results from identifiable unusual events (strike, natural disaster). Random variation is truly unexplained residual noise that remains after all other behaviors are accounted for. This distinction is an important exam trap.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "What is the formula for a naive forecast?",
+          "options": [
+            "F_t = a + b × t",
+            "F_t = (A_t-1 + A_t-2 + ... + A_t-n) / n",
+            "F_t = A_t-1",
+            "F_t = F_t-1 + α(A_t-1 − F_t-1)",
+            "F_t = F_t-1 × seasonal index"
+          ],
+          "answer": 2,
+          "topic": "naive-forecast",
+          "explain": "The naive forecast formula is F_t = A_t-1; the forecast for period t equals the actual value from the previous period. This is the simplest method and assumes the most recent value is the best predictor of the next value.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "When is a naive forecast most appropriate to use?",
+          "options": [
+            "Only for data with strong upward trends",
+            "When data show seasonal variation or are stable",
+            "For forecasts more than five years into the future",
+            "When a large amount of historical data is available",
+            "When qualitative methods have failed"
+          ],
+          "answer": 1,
+          "topic": "naive-forecast",
+          "explain": "Naive forecasts are applicable to stable time series, series with seasonal variation (using appropriate adjustment), and even series with trend (with adjustment). They work well when recent past values are good predictors of the future.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "How does increasing the number of periods (n) in a moving average affect forecast responsiveness?",
+          "options": [
+            "It increases responsiveness to new data",
+            "It decreases responsiveness but increases stability",
+            "It has no effect on either responsiveness or stability",
+            "It improves accuracy but reduces forecast speed",
+            "It eliminates the need for weighting"
+          ],
+          "answer": 1,
+          "topic": "moving-average",
+          "explain": "A larger n (more periods) makes the moving average less responsive to recent changes but more stable. A smaller n makes it more responsive to new data but less stable. This inverse relationship is key to understanding parameter selection.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "A moving average forecast uses the average of the five most recent actual values. Which statement is true?",
+          "options": [
+            "All historical values remain in the calculation",
+            "The oldest value is dropped and the newest value is added",
+            "As new data arrive, both the oldest and newest values are dropped",
+            "Only the newest value affects the next forecast",
+            "The weights are uniform across all historical data"
+          ],
+          "answer": 1,
+          "topic": "moving-average",
+          "explain": "In a moving average, as new data arrive, the newest value is added and the oldest is dropped; the average is recomputed with only the n most recent values. This rolling window gives equal weight to each value within it.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the primary advantage of weighted moving average over simple moving average?",
+          "options": [
+            "It requires fewer historical data points",
+            "It automatically selects the best weights",
+            "It allows more recent periods to receive higher weight",
+            "It eliminates the need to choose a value for n",
+            "It guarantees perfect accuracy"
+          ],
+          "answer": 2,
+          "topic": "weighted-moving-average",
+          "explain": "Weighted moving average assigns different weights to each past period, typically giving higher weight to recent data. This provides more control than simple moving average, though weight selection requires trial and error.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In a weighted moving average, what constraint must apply to the weights?",
+          "options": [
+            "They must sum to 1",
+            "They must all be equal",
+            "They must be positive integers",
+            "They must decrease monotonically",
+            "No constraint — weights can be any number"
+          ],
+          "answer": 0,
+          "topic": "weighted-moving-average",
+          "explain": "The weights in a weighted moving average must sum to 1 (or 100%). This ensures that the result is a true weighted average, not an arbitrary linear combination.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Exponential smoothing can be understood as a special case of which other method?",
+          "options": [
+            "Naive forecasting",
+            "Linear trend equation",
+            "Weighted moving average",
+            "Delphi method",
+            "Seasonal adjustment"
+          ],
+          "answer": 2,
+          "topic": "exponential-smoothing",
+          "explain": "Exponential smoothing is a special case of weighted moving average in which weights decline exponentially for older periods. This relationship is an important exam trap — students often treat it as a completely separate method.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "What does a high smoothing constant (α) in exponential smoothing imply?",
+          "options": [
+            "More weight on older data",
+            "More weight on the most recent observation",
+            "Less responsive to recent changes",
+            "Lower forecast accuracy",
+            "Greater stability in the forecast"
+          ],
+          "answer": 1,
+          "topic": "exponential-smoothing",
+          "explain": "Higher α (e.g. 0.9) means more weight on the most recent observation A_t-1, making the forecast more responsive. Lower α (e.g. 0.1) gives more weight to the previous forecast, yielding a smoother, more stable forecast. This direction is commonly confused on exams.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "In the exponential smoothing formula F_t = F_t-1 + α(A_t-1 − F_t-1), what does the term (A_t-1 − F_t-1) represent?",
+          "options": [
+            "The seasonal adjustment",
+            "The error from the previous period",
+            "The forecast for the next period",
+            "The trend slope",
+            "The weighting adjustment factor"
+          ],
+          "answer": 1,
+          "topic": "exponential-smoothing",
+          "explain": "The term (A_t-1 − F_t-1) is the error from the previous period — the difference between actual and forecast. The parameter α (smoothing constant) determines what percentage of this error is fed back into the next forecast.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What does the linear trend equation F_t = a + b×t measure?",
+          "options": [
+            "Seasonal patterns in the data",
+            "A consistent upward or downward movement in the data over time",
+            "Random variation around the trend",
+            "The moving average of recent values",
+            "Cyclical business behavior"
+          ],
+          "answer": 1,
+          "topic": "linear-trend",
+          "explain": "The linear trend equation models a consistent upward or downward movement (trend) over time. The slope b represents the rate of change, and the intercept a is the forecast value at t=0.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "In a linear trend equation F_t = a + b×t, what does the slope (b) represent?",
+          "options": [
+            "The number of observations used",
+            "The rate of change per time period",
+            "The average value of the series",
+            "The starting forecast value",
+            "The seasonal adjustment factor"
+          ],
+          "answer": 1,
+          "topic": "linear-trend",
+          "explain": "The slope b is the rate of change per time period — it tells you how much the forecast changes for each additional period. A positive slope indicates upward trend; negative indicates downward trend.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which model is appropriate when seasonal variations grow larger as the series level increases?",
+          "options": [
+            "Naive forecast with adjustment",
+            "Linear trend model",
+            "Multiplicative seasonality model",
+            "Additive seasonality model",
+            "Exponential smoothing without adjustment"
+          ],
+          "answer": 2,
+          "topic": "seasonality-models",
+          "explain": "In the multiplicative model, the seasonal effect is expressed as a percentage of the average/trend, then multiplied into the series value. As the level increases, the seasonal swing grows proportionally. In the additive model, the seasonal component has fixed absolute magnitude.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "What is the key difference between additive and multiplicative seasonality models?",
+          "options": [
+            "Additive models work with trends; multiplicative models do not",
+            "Additive: fixed quantity added/subtracted; Multiplicative: percentage multiplied by series level",
+            "They are mathematically equivalent but differently named",
+            "Multiplicative models are less accurate than additive",
+            "Additive models are for long-term forecasts only"
+          ],
+          "answer": 1,
+          "topic": "seasonality-models",
+          "explain": "Additive seasonality expresses the seasonal effect as a fixed quantity (absolute amount). Multiplicative seasonality expresses it as a percentage of the average/trend, then multiplies into the series. This difference is a frequent exam trap.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is forecast error defined as in this course?",
+          "options": [
+            "Actual minus Forecast",
+            "The difference between two forecasts",
+            "Forecast minus Actual",
+            "The variance of the forecast distribution",
+            "The percentage change from one period to the next"
+          ],
+          "answer": 0,
+          "topic": "forecast-accuracy",
+          "explain": "Forecast error is defined as e_t = A_t − F_t (Actual minus Forecast). This is the standard definition in forecasting. Positive errors mean actual exceeded forecast; negative errors mean actual fell short.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which accuracy metric penalizes large forecast errors more heavily than small ones?",
+          "options": [
+            "MSE (Mean Squared Error)",
+            "MAD (Mean Absolute Deviation)",
+            "MAPE (Mean Absolute Percentage Error)",
+            "All three metrics weight errors equally",
+            "None of the metrics differentiate error sizes"
+          ],
+          "answer": 0,
+          "topic": "accuracy-metrics",
+          "explain": "MSE (Mean Squared Error) penalizes large errors more heavily because the errors are squared before averaging. MAD weights all errors equally; MAPE weights errors by relative size. This difference is critical for selecting the appropriate metric.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "When should MAPE be preferred over MAD or MSE for measuring forecast accuracy?",
+          "options": [
+            "When all series have similar average values",
+            "When comparing accuracy across series with different scales or units",
+            "When the forecast horizon exceeds one year",
+            "When human judgment is the primary data source",
+            "When demand is seasonal"
+          ],
+          "answer": 1,
+          "topic": "accuracy-metrics",
+          "explain": "MAPE (Mean Absolute Percentage Error) expresses error as a percentage, making it useful for comparing accuracy across series with different absolute scales (e.g. comparing a product with 1,000 units sold to one with 100,000 units sold).",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following is NOT a factor in selecting a forecasting technique?",
+          "options": [
+            "Cost of implementation and operation",
+            "The color of the data visualization",
+            "Availability of historical data",
+            "Accuracy (measured by MAD, MSE, MAPE)",
+            "Forecast horizon (short-term vs. long-term)"
+          ],
+          "answer": 1,
+          "topic": "technique-selection",
+          "explain": "The six legitimate selection factors are: cost, accuracy, historical data availability, software availability, time to prepare, and forecast horizon. The color of visualization is irrelevant to technique selection. This is a straightforward identification question.",
+          "difficulty": "easy"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Lecture 8: Fundamentals of Inventory Management",
+      "questions": [
+        {
+          "q": "Which of the following is NOT one of the seven core concepts of revenue management?",
+          "options": [
+            "Focus on price rather than costs",
+            "Replace cost-based pricing with market-based pricing",
+            "Maximize market share through volume discounts",
+            "Save products for most valuable customers",
+            "Continually reevaluate revenue opportunities"
+          ],
+          "answer": 2,
+          "topic": "revenue-management-concepts",
+          "explain": "The seven core concepts focus on pricing strategy, customer segmentation, data-driven decisions, and value cycles. Maximizing market share through volume discounts contradicts concept #4 (saving capacity for high-value customers). This is an exam trap because volume growth may seem aligned with revenue thinking, but it sacrifices margin.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the primary advantage of market-based pricing over cost-plus pricing?",
+          "options": [
+            "Lower administrative costs",
+            "Pricing flexibility not constrained by cost structure",
+            "Easier to implement across all customer segments",
+            "Reduced competition from rivals",
+            "Automatic quality improvements"
+          ],
+          "answer": 1,
+          "topic": "pricing-methods",
+          "explain": "Market-based pricing is anchored to customer willingness to pay, which can adjust regardless of cost changes. Cost-plus pricing is rigid: if costs stay flat but demand spikes, the firm leaves money on the table. Market-based pricing leverages demand uncertainty as an advantage rather than hiding behind costs.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "In the newsvendor booking limit model, what does the underage cost represent?",
+          "options": [
+            "The variable cost per low-fare ticket sold",
+            "The loss from turning away high-fare customers when protecting too few seats",
+            "The revenue forgone by leaving a seat empty",
+            "The administrative cost of managing booking blocks",
+            "The discount rate applied by discount-tier customers"
+          ],
+          "answer": 1,
+          "topic": "booking-limits-newsvendor",
+          "explain": "Underage cost = p_H − p_L, not p_H. It is the fare difference lost when a high-fare customer cannot be served because the seat was sold to a low-fare buyer. This is an exam trap because students often think the underage cost is the full high fare, forgetting that the alternative use (low fare) still generates revenue.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "When is the booking limit decision framework most relevant?",
+          "options": [
+            "When a firm has excess capacity and can serve all customers",
+            "When demand for all segments is deterministic and known",
+            "When total demand likely exceeds capacity and the same resource serves multiple segments",
+            "When customers have identical willingness to pay",
+            "When legal price discrimination is prohibited"
+          ],
+          "answer": 2,
+          "topic": "booking-limits-intro",
+          "explain": "Booking limits ration limited capacity across high- and low-value segments. With excess capacity, there is no need to protect seats — all customers are served at their segment price. Booking limits only add value when demand is uncertain and likely to exceed capacity.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the critical ratio (CR) formula?",
+          "options": [
+            "(p_L) / (p_H)",
+            "(p_H − p_L) / p_L",
+            "(p_H − p_L) / p_H",
+            "(p_H + p_L) / 2",
+            "p_H / (p_H + p_L)"
+          ],
+          "answer": 2,
+          "topic": "booking-limits-formula",
+          "explain": "CR = (p_H − p_L) / p_H represents the service level for the high-fare class. This ratio determines how much of the demand distribution to include in the optimal reservation quantity. When CR = 0.50, optimal Q = mean demand; when CR > 0.50, the mean is adjusted upward by a multiple of the standard deviation.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "How does the nested booking structure protect revenue for high-fare customers?",
+          "options": [
+            "By offering high-fare customers a separate aircraft",
+            "By ensuring a protected quantity of seats is reserved and not released to low-fare sales",
+            "By charging lower prices early and higher prices closer to departure",
+            "By limiting the total number of bookings on any flight",
+            "By segregating customers based on their purchase history"
+          ],
+          "answer": 1,
+          "topic": "booking-limits-implementation",
+          "explain": "Nested control reserves N seats for full-fare buyers; this protected quantity is not offered to discount-fare or medium-fare buyers. Lower-fare sales only consume from the unprotected pool. As departure approaches, protections are released progressively to fill remaining empty seats.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "A firm uses single-price selling at $50 on a demand curve ranging from $99 to $1 (linear). Approximately how much additional revenue is captured by switching to four equal-priced tiers ($20, $40, $60, $80)?",
+          "options": [
+            "10% increase",
+            "40% increase",
+            "60% increase",
+            "100% increase",
+            "200% increase"
+          ],
+          "answer": 2,
+          "topic": "willingness-to-pay",
+          "explain": "Single price $50 → 50 units × $50 = $2,500. Four-tier pricing → 20 units at each of $20, $40, $60, $80 = $400 + $800 + $1,200 + $1,600 = $4,000. The increase is (4000 − 2500) / 2500 = 60%. This is a direct application of the lecture example and demonstrates the revenue loss from ignoring willingness-to-pay segmentation.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "What problem does consumer surplus represent in the single-price revenue model?",
+          "options": [
+            "The total cost of production for all units sold",
+            "The value that customers capture when willing to pay more than the offered price",
+            "The number of unsatisfied customers who cannot afford the product",
+            "The difference between variable cost and selling price",
+            "The profit margin on each unit sold at the optimal price"
+          ],
+          "answer": 1,
+          "topic": "willingness-to-pay",
+          "explain": "Consumer surplus = Willingness to Pay − Offered Price. At a single price of $50, customers willing to pay $99 capture surplus of $49 each. Price segmentation recovers this surplus for the firm. This is not a cost; it is captured value being left with customers.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Under what conditions are booking limits appropriate?",
+          "options": [
+            "The firm produces custom products for each customer",
+            "Same capacity serves multiple segments with different valuations, demand exceeds capacity, and price discrimination is legal",
+            "All customers must be served at identical prices",
+            "Demand is perfectly predictable and deterministic",
+            "The product has infinite supply"
+          ],
+          "answer": 1,
+          "topic": "booking-limits-deployment",
+          "explain": "Booking limits require: shared capacity across segments, different segment valuations, legal price discrimination fences, and demand uncertainty with excess demand. All four conditions must hold. If any is missing, booking limits add no value.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following best illustrates the shift from cost-centric to market-centric thinking in revenue management?",
+          "options": [
+            "Reducing production costs by 10%",
+            "Charging what the market bears rather than basing price on cost plus a fixed markup",
+            "Increasing product volume sold annually",
+            "Improving manufacturing efficiency",
+            "Lowering the break-even quantity"
+          ],
+          "answer": 1,
+          "topic": "revenue-management-concepts",
+          "explain": "Revenue management's core concept #2 explicitly states: replace cost-based pricing (cost + markup) with market-based pricing (what customers will pay). The shift recognizes that pricing has more flexibility than cost reduction and exploits demand uncertainty as an advantage.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "If the critical ratio CR = 0.667 for a booking limit problem, how does this affect the optimal reservation quantity compared to the case when CR = 0.50?",
+          "options": [
+            "Optimal Q decreases below the mean",
+            "Optimal Q stays at the mean (no adjustment for CR)",
+            "Optimal Q increases above the mean by a multiple of the standard deviation",
+            "Optimal Q is set to the maximum possible capacity",
+            "Optimal Q becomes zero (protect no seats for high-fare)"
+          ],
+          "answer": 2,
+          "topic": "booking-limits-formula",
+          "explain": "When CR = 0.50, optimal Q = mean. When CR = 0.667 > 0.50, underage cost exceeds overage cost, so the firm protects more seats; optimal Q = mean + NORMSINV(0.667) × stdev ≈ mean + 0.431 × stdev. Higher CR incentivizes higher protection.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "What is the overage cost in the newsvendor booking limit model?",
+          "options": [
+            "The full high-fare price p_H",
+            "The difference p_H − p_L",
+            "The low-fare price p_L",
+            "The variable cost of the service",
+            "The cost of blocking a seat for discount fares"
+          ],
+          "answer": 2,
+          "topic": "booking-limits-newsvendor",
+          "explain": "Overage cost = p_L because if the firm protects more seats than demanded for high-fare, those unoccupied seats are forgone sales at the low-fare price. Every empty seat is lost low-fare revenue. Underage cost is p_H − p_L because a turned-away high-fare customer loses only the fare difference from what the low-fare customer would pay.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which pricing method is explicitly designed for real-time capacity and demand adjustments?",
+          "options": [
+            "Cost-plus pricing",
+            "Willingness-to-pay pricing",
+            "Dynamic pricing",
+            "Fixed segment pricing",
+            "Historical average pricing"
+          ],
+          "answer": 2,
+          "topic": "pricing-methods",
+          "explain": "Dynamic pricing adjusts price in real time based on observed inventory, evolving demand, and remaining time. This is the hallmark of modern revenue management (airlines, ride-share, hotels) and contrasts with static approaches like cost-plus or segment-fixed pricing.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "In the nested booking control system, what happens ~2 weeks before departure?",
+          "options": [
+            "All remaining inventory is sold at deep discounts",
+            "Discount fares are blocked from booking, followed later by medium fares",
+            "Full-fare seats are released to all customer classes",
+            "The entire pricing structure is reset to a single price",
+            "All bookings are cancelled and refunded"
+          ],
+          "answer": 1,
+          "topic": "booking-limits-implementation",
+          "explain": "The timeline is: open booking → ~2 weeks before, block discount fares (stop selling them) → then block medium fares → departure. This progressively releases protected seats as the departure date approaches. By the time the flight departs, only booked seats remain.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "How does price discrimination via segmentation increase firm revenue in the lecture's $1–$99 demand example?",
+          "options": [
+            "By lowering costs on all units",
+            "By capturing consumer surplus that was previously left with customers or lost to rejected demand",
+            "By reducing the quantity demanded",
+            "By forcing customers to pay higher prices on average",
+            "By eliminating the need for customer market research"
+          ],
+          "answer": 1,
+          "topic": "price-segmentation",
+          "explain": "The single-price firm leaves consumer surplus with high-willingness-to-pay customers and rejects price-sensitive customers entirely. Segmentation captures surplus from the first group and serves the second group at a lower price. Both effects increase total revenue, moving it from $2,500 to $4,000.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What does the term 'cannibalization' in the context of multi-product pricing refer to?",
+          "options": [
+            "Destruction of a competitor's market position",
+            "Intentional price wars to drive competitors out",
+            "Lower-tier customers switching to cheaper products or lower-priced segments to avoid paying premium prices",
+            "The physical degradation of product quality over time",
+            "A decrease in total market size"
+          ],
+          "answer": 2,
+          "topic": "multi-product-objectives",
+          "explain": "Cannibalization occurs when offering a low-priced tier causes customers to shift from a higher-priced tier. For example, if a firm offers both a Professional and a Basic version, some Large Corporations might buy Basic instead of Professional, reducing overall revenue. This is why multi-product optimization must model self-selection behavior.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which core concept of revenue management directly contradicts the goal of maximizing volume sales through low prices?",
+          "options": [
+            "Exploit value cycles",
+            "Save products for most valuable customers",
+            "Continually reevaluate revenue opportunities",
+            "Use data-driven decisions",
+            "Replace cost-based pricing"
+          ],
+          "answer": 1,
+          "topic": "revenue-management-concepts",
+          "explain": "Concept #4 explicitly states to 'save products for most valuable customers,' which means rationing capacity to high-value segments rather than flooding the market with low-price sales. This is fundamentally opposed to pure volume maximization.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In a booking limit decision, if actual high-fare demand D exceeds the protected quantity Q, what is the consequence?",
+          "options": [
+            "Extra revenue is earned by selling more at high fares",
+            "High-fare customers are turned away and the firm forgoes fare-difference revenue",
+            "The firm must immediately increase the price of low-fare tickets",
+            "Low-fare inventory is automatically released to high-fare",
+            "No consequence; demand can always be satisfied"
+          ],
+          "answer": 1,
+          "topic": "booking-limits-newsvendor",
+          "explain": "If D > Q (underage), the firm has protected too few seats and cannot serve all high-fare demand. The cost is p_H − p_L per turned-away customer, not the full p_H, because those seats could have been sold at the low fare. This is why the critical ratio balances underage and overage costs.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "What is the relationship between market-based pricing and demand uncertainty in revenue management?",
+          "options": [
+            "Demand uncertainty makes pricing impossible",
+            "Market-based pricing is indifferent to demand conditions",
+            "Demand uncertainty is the central challenge that makes market-based pricing and segmentation valuable",
+            "Demand certainty enables market-based pricing",
+            "Market-based pricing eliminates demand uncertainty"
+          ],
+          "answer": 2,
+          "topic": "revenue-management-concepts",
+          "explain": "The lecture states that revenue management 'uses demand uncertainty as the central challenge,' not a liability. Uncertainty justifies maintaining flexible pricing and reserving capacity for high-value demand, which may materialize late in the booking horizon.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Why might willingness-to-pay pricing require 'dangerous' price discrimination fences?",
+          "options": [
+            "To prevent customer confusion about pricing",
+            "To avoid legal challenges to price discrimination and prevent customers from arbitraging between price tiers",
+            "To ensure low-income customers are excluded",
+            "To increase administrative complexity",
+            "To reduce competition from rival firms"
+          ],
+          "answer": 1,
+          "topic": "price-segmentation",
+          "explain": "Price discrimination is 'dangerous' because customers may find ways to circumvent price tiers (e.g., by falsely claiming student status). Fences like advance purchase, refundability, or product version differentiation legally separate customer classes and prevent arbitrage that would collapse the segmentation.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Under what circumstance is the overage cost in the newsvendor booking limit model equal to zero?",
+          "options": [
+            "When p_H equals p_L",
+            "When the low-fare price is zero or the empty seat cannot be sold to any customer",
+            "When all customers are willing to pay the high fare",
+            "When the firm has unlimited capacity",
+            "When demand is perfectly predictable"
+          ],
+          "answer": 1,
+          "topic": "booking-limits-newsvendor",
+          "explain": "Overage cost = p_L. If p_L = 0 (no salvage value for unsold seats), then overage cost is zero. In airlines, empty seats cannot be sold at any price once the flight departs, making p_L effectively zero. This would shift the optimal quantity toward higher protection.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "How does the seven-concept framework reframe the firm's strategic focus in revenue management?",
+          "options": [
+            "From sales volume to profit maximization",
+            "From production efficiency to market-driven pricing and segmentation",
+            "From customer satisfaction to pure cost reduction",
+            "From innovation to maintaining status quo",
+            "From global expansion to domestic markets only"
+          ],
+          "answer": 1,
+          "topic": "revenue-management-concepts",
+          "explain": "The lecture states that revenue management 'shifts the firm's focus from cost-based thinking to market-based thinking.' The seven concepts emphasize pricing flexibility, customer segmentation, data-driven decisions, and value cycles — all rooted in market dynamics rather than internal cost structures.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the primary risk of ignoring willingness-to-pay segmentation?",
+          "options": [
+            "Prices become too low for all customers",
+            "Revenue is left on the table through consumer surplus and rejected demand",
+            "Costs increase due to complex pricing systems",
+            "Customers stop purchasing entirely",
+            "Competitors will copy the pricing structure"
+          ],
+          "answer": 1,
+          "topic": "willingness-to-pay",
+          "explain": "The lecture example shows that single-price selling at $50 generates $2,500 revenue while ignoring 49 customers willing to pay > $50 (consumer surplus) and rejecting 49 customers willing to pay < $50. Segmentation recovers $4,000, a 60% increase. The risk is thus lost revenue, not cost inflation.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In multi-product revenue management, why might Large Corporations and Laboratories be considered 'natural targets' for premium products?",
+          "options": [
+            "They have the largest number of employees",
+            "They have the lowest willingness to pay for any product",
+            "They have very high valuations for Professional and Advanced products relative to other segments",
+            "They reject all discount products",
+            "They offer the lowest profit margins"
+          ],
+          "answer": 2,
+          "topic": "multi-product-setup",
+          "explain": "The valuation table shows Large Corporations willing to pay $1,200 (Pro) and $2,500 (Advanced), and Laboratories willing to pay $1,000 (Pro) and $2,000 (Advanced). These are disproportionately high compared to other segments, making premium products the natural revenue driver for these segments.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What adjustment to the optimal booking quantity is needed when the critical ratio CR deviates from 0.50?",
+          "options": [
+            "The quantity decreases proportionally to CR",
+            "The quantity remains fixed at the mean regardless of CR",
+            "The quantity is adjusted by adding or subtracting a multiple of the standard deviation using NORMSINV(CR)",
+            "The quantity is set to the maximum capacity",
+            "The quantity is set to zero"
+          ],
+          "answer": 2,
+          "topic": "booking-limits-formula",
+          "explain": "When CR = 0.50, costs are symmetric and optimal Q = mean. When CR ≠ 0.50, asymmetric costs justify a mean adjustment: optimal Q = mean + NORMSINV(CR) × stdev. For example, CR = 2/3 ≈ 0.667 gives NORMSINV(2/3) ≈ 0.431, so Q = mean + 0.431 × stdev.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "What does the 'booking limit for the low-fare class' equal in nested booking control?",
+          "options": [
+            "The high-fare price divided by the low-fare price",
+            "Available Capacity minus the Reserved Quantity for the high-fare class",
+            "The total demand minus low-fare demand",
+            "The number of seats available after departure",
+            "The average of high-fare and low-fare prices"
+          ],
+          "answer": 1,
+          "topic": "booking-limits-implementation",
+          "explain": "The lecture states: 'Booking Limit for low-fare class = Available Capacity − Reserved Quantity for high-fare class.' This formula ensures that high-fare reservations are protected; any remaining capacity after reservations can be offered to low-fare customers.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "When students receive a 40% bookstore commission on sales, how does this affect the effective revenue per unit for the student segment?",
+          "options": [
+            "Effective revenue becomes 40% of list price",
+            "Effective revenue remains 100% of list price",
+            "Effective revenue becomes 60% of list price",
+            "Effective revenue increases to 140% of list price",
+            "Effective revenue becomes 160% of list price"
+          ],
+          "answer": 2,
+          "topic": "multi-product-objectives",
+          "explain": "If students must pay a 40% commission to the bookstore, the firm retains only 60% of the list price as effective revenue. This 60% multiplier must be applied when calculating profit margins and pricing optimization for the student segment.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which of the following scenarios would most clearly violate the conditions for applying booking limits?",
+          "options": [
+            "An airline with multiple fare classes and uncertain demand",
+            "A hotel with high-season and low-season room rates",
+            "A software company with unlimited license capacity and no demand uncertainty",
+            "A concert with VIP and standard seating tiers",
+            "A rental car company with early-bird and last-minute rates"
+          ],
+          "answer": 2,
+          "topic": "booking-limits-deployment",
+          "explain": "Booking limits require: same capacity for multiple segments, demand uncertainty, and total demand likely exceeding capacity. Unlimited software licenses eliminate the scarcity condition (no capacity constraint), and deterministic demand eliminates uncertainty. Without these, booking limits add no value.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the key insight about protecting seats in the booking limit formula when CR = 0.50 versus CR = 2/3?",
+          "options": [
+            "When CR = 0.50, protect more seats than when CR = 2/3",
+            "When CR = 0.50, protect fewer seats than when CR = 2/3",
+            "Both CR values lead to identical protection levels",
+            "CR has no effect on the protection quantity",
+            "Protection decreases linearly as CR increases"
+          ],
+          "answer": 1,
+          "topic": "booking-limits-formula",
+          "explain": "CR = 0.50 yields symmetric costs; optimal Q = mean only. CR = 2/3 yields asymmetric costs favoring protection; optimal Q = mean + 0.431 × stdev. Higher CR (stronger underprotection cost) justifies protecting more seats.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "How do the booking limits and dynamic pricing strategies differ in their approach to capacity allocation?",
+          "options": [
+            "Booking limits and dynamic pricing are identical approaches",
+            "Booking limits fix a protection quantity in advance; dynamic pricing continuously adjusts prices based on real-time conditions",
+            "Booking limits allow continuous repricing; dynamic pricing sets prices once",
+            "Booking limits are only for airlines; dynamic pricing is only for hotels",
+            "Both strategies ignore demand uncertainty"
+          ],
+          "answer": 1,
+          "topic": "pricing-methods",
+          "explain": "Booking limits decide a protected quantity Q before demand is realized (newsvendor-style), using the critical ratio. Dynamic pricing continuously adjusts price based on observed inventory and demand signals. Booking limits are discrete (protect N or don't); dynamic pricing is continuous.",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Lecture 9: Revenue Management and Pricing Part I",
+      "questions": [
+        {
+          "q": "Which of the following best describes the primary focus shift in revenue management?",
+          "options": [
+            "From market-based pricing to cost-plus pricing",
+            "From cost focus to market-based price focus",
+            "From segmentation to mass market targeting",
+            "From price discrimination to uniform pricing",
+            "From data-driven decisions to intuition-based strategies"
+          ],
+          "answer": 1,
+          "topic": "core-concepts",
+          "explain": "Revenue management's core concept 1 explicitly shifts focus from costs to price as the lever for balancing supply and demand. Cost-plus pricing is what it replaces, not what it adopts.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "What is meant by 'micro-market segmentation' in the context of revenue management?",
+          "options": [
+            "Selling identical products at identical prices to all customers",
+            "Selling to multiple small segments with different willingness-to-pay rather than one undifferentiated mass market",
+            "Dividing costs equally across market regions",
+            "Reducing the number of customer groups to simplify operations",
+            "Using geographic location as the only segmentation variable"
+          ],
+          "answer": 1,
+          "topic": "core-concepts",
+          "explain": "Micro-market segmentation (Core Concept 3) explicitly targets multiple smaller segments with tailored pricing, the opposite of undifferentiated mass market sales. Geography alone is too coarse.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "In the booking limit framework, what are the two primary functions of booking limits?",
+          "options": [
+            "Reduce costs and increase inventory",
+            "Lock in demand early and enable price discrimination across segments",
+            "Eliminate no-shows and prevent overbooking",
+            "Standardize pricing and reduce customer confusion",
+            "Maximize occupancy of low-value seats only"
+          ],
+          "answer": 1,
+          "topic": "booking-limits-structure",
+          "explain": "Booking limits secure early low-fare demand and permit different prices for the same capacity across customer segments, directly enabling revenue management's goal of capturing surplus.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which of the following is NOT a necessary condition for deploying booking limits?",
+          "options": [
+            "Same capacity serves multiple customer segments",
+            "Segments have different willingness to pay",
+            "Firm can legally price discriminate",
+            "Total demand is certain and equals capacity exactly",
+            "Demand is uncertain and likely exceeds capacity"
+          ],
+          "answer": 3,
+          "topic": "booking-limits-conditions",
+          "explain": "Booking limits require uncertain demand that exceeds capacity; if demand equals capacity exactly, there is no rationing decision to make. All other conditions are required.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "What does 'nested control' mean in the context of fare classes?",
+          "options": [
+            "Lower fare classes can access seats reserved for higher fare classes",
+            "Higher fare classes can always access any remaining seats at lower fare prices",
+            "Each fare class gets a separate, non-overlapping bucket of seats",
+            "Fare classes are determined by nested algorithms only",
+            "Control is transferred from airlines to customers"
+          ],
+          "answer": 1,
+          "topic": "nested-control",
+          "explain": "Nested control means the capacity hierarchy is stacked such that full-fare passengers are never blocked — they can use any remaining seat, regardless of which class it was initially allocated to.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "In the newsvendor booking-limit framework, what does the 'underage cost' represent?",
+          "options": [
+            "The cost of overselling capacity beyond physical limits",
+            "The revenue lost when not enough high-fare customers materialize, forcing sales at low fare instead",
+            "The cost of holding excess inventory unsold",
+            "The administrative cost of managing multiple fare classes",
+            "The penalty charged by customers for long wait times"
+          ],
+          "answer": 1,
+          "topic": "booking-limits-newsvendor",
+          "explain": "Underage cost (c_u) = p_H − p_L. It is the margin lost when a high-fare customer could have paid p_H but instead sells at p_L due to under-protection of capacity.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In the newsvendor booking-limit model, the overage cost is equal to which value?",
+          "options": [
+            "p_H (the high fare price)",
+            "p_H − p_L (the margin)",
+            "p_L (the low fare price)",
+            "p_H + p_L (the sum)",
+            "p_L − p_H (the negative difference)"
+          ],
+          "answer": 2,
+          "topic": "booking-limits-newsvendor",
+          "explain": "Overage cost (c_o) = p_L because over-protecting leaves a seat empty that could have sold to a low-fare customer. The exam trap warns that c_o is NOT p_H.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Given the formula Critical Ratio = (p_H − p_L) / p_H, what does this ratio represent?",
+          "options": [
+            "The percentage of seats to allocate to discount fares",
+            "The threshold quantile of the demand distribution for optimal protection",
+            "The profit margin for high-fare passengers",
+            "The percentage increase in revenue from price discrimination",
+            "The ratio of high-fare to low-fare customers"
+          ],
+          "answer": 1,
+          "topic": "booking-limits-newsvendor",
+          "explain": "The critical ratio is the probability threshold used with NORMINV to find the optimal protection level Q. It balances overage and underage costs.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "When the critical ratio equals 0.50, what is NORMSINV(0.5)?",
+          "options": [
+            "−1.0",
+            "0",
+            "1.0",
+            "0.5",
+            "Undefined"
+          ],
+          "answer": 1,
+          "topic": "booking-limits-example1",
+          "explain": "NORMSINV(0.5) = 0 because 0.5 is the median of the standard normal distribution. Thus Q = μ_H + 0×σ_H = μ_H (the mean demand).",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In Example 1 (p_H = $1,000, p_L = $500), what is the critical ratio?",
+          "options": [
+            "0.25",
+            "0.33",
+            "0.50",
+            "0.67",
+            "1.00"
+          ],
+          "answer": 2,
+          "topic": "booking-limits-example1",
+          "explain": "CR = ($1,000 − $500) / $1,000 = $500 / $1,000 = 0.50. Underage and overage costs are equal, so the critical ratio is exactly 0.5.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "In Example 2 (p_H = $1,500, p_L = $500), what is the critical ratio?",
+          "options": [
+            "0.33",
+            "0.50",
+            "0.60",
+            "0.67",
+            "0.75"
+          ],
+          "answer": 3,
+          "topic": "booking-limits-example2",
+          "explain": "CR = ($1,500 − $500) / $1,500 = $1,000 / $1,500 = 2/3 ≈ 0.667. The higher high-fare price increases the underage penalty relative to overage.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In Example 2, how does the optimal booking protection Q change compared to Example 1?",
+          "options": [
+            "Q remains equal to μ_H with no z-score adjustment",
+            "Q increases by adding a positive z-score multiple to μ_H",
+            "Q decreases by subtracting from μ_H",
+            "Q becomes independent of the demand distribution",
+            "Q equals the booking limit for low-fare passengers"
+          ],
+          "answer": 1,
+          "topic": "booking-limits-example2",
+          "explain": "In Example 2, CR = 2/3 > 0.5, so NORMSINV(2/3) > 0. Thus Q = μ_H + (positive value)×σ_H, protecting more capacity than the mean demand.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "What is consumer surplus in the context of price and willingness to pay?",
+          "options": [
+            "The total revenue earned by the firm",
+            "The difference between what a customer is willing to pay and the actual price paid",
+            "The cost savings achieved by bulk purchasing",
+            "The remaining inventory after all sales",
+            "The profit margin on each unit sold"
+          ],
+          "answer": 1,
+          "topic": "wtp-single-price",
+          "explain": "Consumer surplus is WTP minus the offered price. It represents value that the customer retains; revenue management aims to capture this surplus by raising prices closer to WTP.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "In the single-price demand scenario (linear, 1 unit at $99, 99 units at $1), what is the profit-maximizing single price?",
+          "options": [
+            "$1",
+            "$25",
+            "$50",
+            "$75",
+            "$99"
+          ],
+          "answer": 2,
+          "topic": "wtp-single-price",
+          "explain": "With linear demand, the profit-maximizing price occurs at the midpoint: $50. At this price, 50 units sell, generating revenue of $2,500.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "How much revenue is lost due to consumer surplus and rejected customers when using a single $50 price in the demand example?",
+          "options": [
+            "$1,500",
+            "$2,000",
+            "$2,500",
+            "$3,500",
+            "$4,000"
+          ],
+          "answer": 1,
+          "topic": "wtp-single-price",
+          "explain": "At price $50, 50 units sell for $2,500 revenue. The remaining 49 customers have WTP < $50, so they are rejected. A perfectly discriminating firm could capture all 99 units.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "When offering four price levels ($20, $40, $60, $80) in the demand example, approximately what is the total revenue?",
+          "options": [
+            "$2,000",
+            "$2,500",
+            "$3,000",
+            "$4,000",
+            "$4,500"
+          ],
+          "answer": 3,
+          "topic": "wtp-segmented",
+          "explain": "Selling 20 units at each of $20, $40, $60, and $80 gives 20×(20+40+60+80) = 20×200 = $4,000. This is a 60% increase over the single-price revenue.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What percentage increase in revenue occurs when moving from single-price to four-tier pricing in the demand example?",
+          "options": [
+            "20%",
+            "40%",
+            "60%",
+            "80%",
+            "100%"
+          ],
+          "answer": 2,
+          "topic": "wtp-segmented",
+          "explain": "Revenue increases from $2,500 to $4,000: ($4,000 − $2,500) / $2,500 = $1,500 / $2,500 = 60% increase.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the main risk when offering multiple price tiers openly to customers?",
+          "options": [
+            "Customers are confused by too many options",
+            "Segments may cross over to lower-priced tiers, requiring fences or restrictions to prevent cannibalization",
+            "Inventory runs out too quickly",
+            "Administrative costs increase exponentially",
+            "Regulatory agencies prohibit price discrimination"
+          ],
+          "answer": 1,
+          "topic": "wtp-segmented",
+          "explain": "The notes explicitly state that offering multiple prices openly is 'dangerous' because customers may shift to cheaper tiers. Firms must use fences (e.g., advance purchase, restrictions) to maintain segmentation.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In multi-product revenue management, what does 'segment valuation' refer to?",
+          "options": [
+            "The cost to develop a new product",
+            "The maximum price each market segment is willing to pay for each product version",
+            "The number of units each segment will purchase",
+            "The total market size in dollars",
+            "The profit margin on each product"
+          ],
+          "answer": 1,
+          "topic": "multi-product-setup",
+          "explain": "Segment valuations are the willingness-to-pay amounts for each product tier (Basic/Professional/Advanced) within each segment (Consultants/Small Business/etc.).",
+          "difficulty": "easy"
+        },
+        {
+          "q": "According to the multi-product example, which segment shows the highest willingness-to-pay for the Advanced product?",
+          "options": [
+            "Consultants ($600)",
+            "Small Businesses ($300)",
+            "Large Corporations ($2,500)",
+            "Laboratories ($2,000)",
+            "Students ($100)"
+          ],
+          "answer": 2,
+          "topic": "multi-product-objectives",
+          "explain": "Large Corporations have the highest Advanced WTP at $2,500, followed by Laboratories at $2,000. This segment is a premium target for Advanced pricing.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "In the multi-product example, what unique adjustment is required for the student segment pricing?",
+          "options": [
+            "Students receive a 50% discount on all products",
+            "Bookstores take a 40% commission, so the firm nets only 60% of student prices",
+            "Students must pay upfront before delivery",
+            "Students are excluded from the Advanced product tier",
+            "The firm charges students a higher development cost"
+          ],
+          "answer": 1,
+          "topic": "multi-product-objectives",
+          "explain": "The example explicitly notes that bookstores take 40% commission on student sales, meaning the firm's net revenue is only 60% of the listed student price — a key adjustment in profitability calculations.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the development cost for the Professional product in the multi-product example?",
+          "options": [
+            "$100,000",
+            "$150,000",
+            "$200,000",
+            "$300,000",
+            "$500,000"
+          ],
+          "answer": 2,
+          "topic": "multi-product-setup",
+          "explain": "According to the Product Options table, Professional has a development cost of $200,000 and a variable cost of $25 per unit.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which dynamic pricing method is based on the assumption that price responds to observed inventory and demand conditions?",
+          "options": [
+            "Cost-plus pricing",
+            "Booking limits",
+            "Dynamic pricing",
+            "Willingness-to-pay pricing",
+            "Overbooking strategy"
+          ],
+          "answer": 2,
+          "topic": "pricing-methods",
+          "explain": "Dynamic pricing explicitly adjusts price in response to observed or estimated inventory levels, demand, and time — the core operational tool of revenue management.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "How does the 'exploit the value cycle' principle apply to revenue management?",
+          "options": [
+            "Products should maintain constant prices throughout their lifecycle",
+            "Prices should be adjusted as a product's perceived value changes over time",
+            "Costs decrease over time, so prices should also decrease",
+            "Only new products are subject to pricing adjustments",
+            "The value cycle is irrelevant to pricing decisions"
+          ],
+          "answer": 1,
+          "topic": "core-concepts",
+          "explain": "Core Concept 6 states that each product's perceived value changes over time; firms should capitalize on these shifts by adjusting prices dynamically.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What does 'continual re-evaluation' in the seven core concepts mean?",
+          "options": [
+            "Prices should never change once set",
+            "Revenue opportunities are fixed and predictable",
+            "Firms must regularly reassess revenue opportunities as conditions shift",
+            "Only executives are responsible for decisions",
+            "Re-evaluation occurs only annually"
+          ],
+          "answer": 2,
+          "topic": "core-concepts",
+          "explain": "Core Concept 7 emphasizes that revenue opportunities are dynamic; firms must reassess regularly to stay aligned with market conditions.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "In the context of overbooking, what is the underlying assumption?",
+          "options": [
+            "The firm intentionally oversells to increase revenue regardless of no-shows",
+            "The firm accepts more reservations than capacity, anticipating some customers will not show up",
+            "Overbooking is illegal in all industries",
+            "It applies only to hotels, not airlines",
+            "It eliminates the need for booking limits"
+          ],
+          "answer": 1,
+          "topic": "pricing-methods",
+          "explain": "Overbooking is a risk-management strategy where firms accept more reservations than physical capacity, betting that some percentage of customers will be no-shows.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which industries commonly use booking limits according to the lecture?",
+          "options": [
+            "Manufacturing and wholesaling only",
+            "Airlines, hotels, car rentals, movie theaters, concerts, and events",
+            "Only financial services and insurance",
+            "Retail stores exclusively",
+            "Government agencies only"
+          ],
+          "answer": 1,
+          "topic": "booking-limits-structure",
+          "explain": "The lecture explicitly lists airlines, hotels, car rentals, movie theaters, concerts, and events as common users of booking limits.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "When blocking discount fares in nested control, when does this typically occur?",
+          "options": [
+            "Immediately after the booking window opens",
+            "Earliest in the booking window, well before departure",
+            "Only on the day of departure",
+            "After medium fares are fully booked",
+            "Never — discount fares are always available"
+          ],
+          "answer": 1,
+          "topic": "nested-control",
+          "explain": "In nested control, discount fares are blocked first because the firm wants to secure high-value full-fare customers closer to departure. The booking window in this model opens ~2 weeks before departure.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the relationship between the booking limit for low-fare passengers and the optimal protection level Q?",
+          "options": [
+            "They are the same value",
+            "Booking Limit (L) = Total Capacity − Q",
+            "Q = Booking Limit (L) + 1",
+            "Booking Limit (L) = Q × 2",
+            "There is no fixed relationship"
+          ],
+          "answer": 1,
+          "topic": "booking-limits-newsvendor",
+          "explain": "Once Q (optimal protection for high-fare) is determined via the critical ratio and NORMINV, the booking limit for low-fare passengers is simply: Total Capacity − Q.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "How many of the five market segments in the multi-product example have a development cost of at least $200,000?",
+          "options": [
+            "One",
+            "Two",
+            "Three",
+            "Four",
+            "All five"
+          ],
+          "answer": 2,
+          "topic": "multi-product-objectives",
+          "explain": "Consultants ($200,000), Small Businesses ($200,000), and Students ($300,000) all have development costs ≥ $200,000. That is three segments.",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Lecture 10: What is Common Between Zara and 7-Eleven: Supply Chain Management Best Practices",
+      "questions": [
+        {
+          "q": "What is Zara's market positioning in the fashion industry?",
+          "options": [
+            "Luxury designer brand with premium pricing",
+            "Cheap chic — fashion quality like Banana Republic with Old Navy prices",
+            "High-end fast fashion competing on design originality",
+            "Budget brand with basic item focus and minimal variety",
+            "Value retailer sourcing entirely from low-cost Asian manufacturers"
+          ],
+          "answer": 1,
+          "topic": "zara-positioning",
+          "explain": "Zara explicitly occupies the 'cheap chic' (廉價時尚) quadrant, combining mid-tier fashion quality with accessible pricing. Students often confuse Zara with pure luxury brands; the key insight is that Zara is a trend follower and imitator, not a high-end originator.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "How much does Zara spend on marketing as a percentage of revenue compared to the industry average?",
+          "options": [
+            "0.3% vs. 3.5%",
+            "1% vs. 5%",
+            "2% vs. 4%",
+            "0.5% vs. 2%",
+            "3% vs. 6%"
+          ],
+          "answer": 0,
+          "topic": "zara-positioning",
+          "explain": "Zara's marketing spend is only 0.3% of revenue versus the industry average of ~3.5%. This stark difference reveals Zara's strategy: rely on store location and rapid product turnover ('buy now or never' urgency) instead of expensive advertising campaigns.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which of the following best explains why Zara manufactures high-fashion items in Spain, Portugal, and Morocco despite much higher labor costs than Asia?",
+          "options": [
+            "To maintain European brand prestige and luxury positioning",
+            "To reduce distribution and logistics costs within Europe",
+            "To achieve fast lead times and responsiveness — speed is prioritized over cost savings",
+            "To comply with European Union trade regulations",
+            "To support local communities and fulfill corporate social responsibility"
+          ],
+          "answer": 2,
+          "topic": "zara-positioning",
+          "explain": "Proximity manufacturing is chosen explicitly for speed and responsiveness, NOT cost savings — Spanish labor costs (~$1,650/month) far exceed Guangdong minimums (~$289/month). This illustrates that operational design choices about lead time directly determine competitive position. Students often incorrectly assume cost is the primary driver.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the primary purpose of Zara's small batch size strategy?",
+          "options": [
+            "To reduce manufacturing waste and defects",
+            "To create artificial scarcity and encourage immediate purchase ('buy now or never')",
+            "To test new designs with minimal financial risk",
+            "To optimize warehouse storage efficiency",
+            "To improve inventory turnover across all SKUs equally"
+          ],
+          "answer": 1,
+          "topic": "zara-positioning",
+          "explain": "Small batches deliberately create artificial scarcity (人工稀缺感), triggering consumer psychology: if the item is not in stock now, it may never return. This drives the remarkably high visitation rate (17 times/year vs. 3 industry average). While it also limits downside on failures, the primary mechanism is psychological urgency.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Zara achieves design-to-store lead times as fast as 1 week through which combination of operational choices?",
+          "options": [
+            "Exclusively outsourcing manufacturing to pre-positioned supplier networks in low-cost countries",
+            "Maintaining internal design teams with cross-functional collaboration, proximity manufacturing, and rapid decision approval",
+            "Using pure make-to-order production to minimize inventory risk",
+            "Relying entirely on advanced demand forecasting to pre-produce inventory",
+            "Centralizing all decision-making authority at global headquarters"
+          ],
+          "answer": 1,
+          "topic": "zara-design-it",
+          "explain": "Cross-functional teams (spanning design, merchandising, sourcing, and distribution) can examine prototypes, choose a design, and commit resources in hours. Proximity manufacturing enables 24-hour European delivery. Decentralized store-level decisions keep momentum high. No single element alone achieves this speed.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "In Zara's closed-loop information flow, which role acts as the bridge between customer demand signals and production commitments?",
+          "options": [
+            "Fashion Buyer — translates store signals into design and sourcing decisions",
+            "Store Manager — directly captures customer feedback",
+            "Designer — interprets buyer requests into producible prototypes",
+            "Production Manager — schedules manufacturing based on designer specifications",
+            "Warehouse Manager — determines final assortment shipped to stores"
+          ],
+          "answer": 0,
+          "topic": "zara-closed-loop",
+          "explain": "The information flow is: Customer → Store Manager → Buyer → Designer → Production Manager. The Fashion Buyer's role is critical as the translator: they receive POS data and soft data from stores, then direct the designer and production manager. Store managers feed raw demand signals; the buyer turns them into actionable decisions.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What does Zara's use of undyed fabrics and colors adapted mid-season illustrate about the postponement strategy?",
+          "options": [
+            "Postponement means delaying all production until customer orders arrive",
+            "Postponement keeps inputs uncommitted so final configuration happens after demand clarity — a portion of inventory remains flexible",
+            "Postponement requires smaller total inventory compared to traditional forecasting",
+            "Postponement eliminates the need for demand forecasting entirely",
+            "Postponement applies only to commodity products with stable demand"
+          ],
+          "answer": 1,
+          "topic": "zara-jit-postponement",
+          "explain": "Over 50% of Zara's fabrics are kept undyed, allowing color choices to be made mid-season in response to actual demand signals. This is NOT complete production delay — it is strategic inventory flexibility. The exam trap is that students think postponement means inaction; it actually means phasing commitment strategically. Benetton pioneered this concept.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "How does Zara's 7-season production model differ fundamentally from the traditional 4-season model?",
+          "options": [
+            "Zara introduces designs twice as frequently as traditional retailers",
+            "Zara overlaps design and raw material sourcing phases, allowing heavier late-stage production commitment based on actual demand signals",
+            "Zara extends lead times to allow for more thorough quality control",
+            "Zara divides the year into seven equal inventory replenishment cycles",
+            "Zara manufactures continuously without seasonal inventory resets"
+          ],
+          "answer": 1,
+          "topic": "zara-production-planning",
+          "explain": "The 7-season model (vs. traditional 4-season) allows Zara to commit only 15% of internal manufacturing early and reserve 85% for later stages when demand is clearer. External manufacturing splits 55% early / 45% late. This is operationalized 'responsiveness' — a structural choice that prioritizes flexibility over forecast accuracy.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "In supply chain strategy frameworks, what defines the 'push-pull boundary' or decoupling point?",
+          "options": [
+            "The transition point where the supply chain shifts from forecast-driven to order-driven production",
+            "The location where finished goods are shipped to retail stores",
+            "The moment when customer payment is processed",
+            "The warehouse where inventory safety stock is held",
+            "The supplier where raw materials are purchased"
+          ],
+          "answer": 0,
+          "topic": "push-pull-framework",
+          "explain": "The push-pull boundary marks where the supply chain strategy transitions: upstream is forecast-driven ('push'), downstream is order-driven ('pull'). For Zara, this boundary is quite far downstream due to postponement and fast information flow. Traditional fashion pushes far upstream; Zara pulls much closer to the customer.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which supply chain strategy is most appropriate for products with high SKU variety, high margins, and unpredictable demand?",
+          "options": [
+            "Build-to-Order — fast fulfillment only after order is received",
+            "Make-to-Stock with finished goods inventory buffers",
+            "Push with work-in-progress (WIP) buffers for rapid fulfillment",
+            "JIT-Push — scheduled component delivery with final assembly flexibility",
+            "Kanban pull system with fixed reorder points"
+          ],
+          "answer": 0,
+          "topic": "push-pull-framework",
+          "explain": "Build-to-Order minimizes inventory risk for high-margin, unpredictable products by producing only after demand is confirmed. Margins are high enough to justify longer lead times. 'JIT-Push' is a common trap because it sounds like it combines JIT with pull; in reality, it refers to component scheduling (push) while final assembly may vary.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the defining characteristic of 7-Eleven's supply chain design philosophy?",
+          "options": [
+            "Optimize for convenience, freshness, and item-by-item responsiveness using dense store clustering and tight IT integration",
+            "Minimize labor costs through automation and centralized distribution",
+            "Maximize inventory turns by carrying only the slowest-moving SKUs",
+            "Standardize product assortment across all store locations globally",
+            "Reduce supplier complexity by consolidating to a few large vendors"
+          ],
+          "answer": 0,
+          "topic": "7eleven-strategy",
+          "explain": "7-Eleven's strategy revolves around convenience (便利性), freshness (新鮮度), and dense clustering (集群擴張) supported by tight IT-logistics integration. Item-by-item management (Tanpin Kanri) drives localized assortment decisions. This is fundamentally different from Zara's 'trend-chasing' approach — 7-Eleven optimizes for local demand precision and freshness.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Why does 7-Eleven use joint delivery arrangements with multiple suppliers?",
+          "options": [
+            "To consolidate deliveries and reduce truck trips, lowering logistics costs while improving frequency",
+            "To reduce negotiating power of individual suppliers",
+            "To ensure price competition among carriers",
+            "To comply with antitrust regulations",
+            "To simplify store-level inventory management software"
+          ],
+          "answer": 0,
+          "topic": "7eleven-supplier-relations",
+          "explain": "Joint delivery pools shipments from multiple suppliers into shared delivery runs, achieving economies of scale (full truckloads) while increasing delivery frequency. This enables responsiveness: stores can order smaller quantities more often. It's a logistics design choice that supports the underlying 'freshness and frequency' strategy.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "According to 7-Eleven's product-demand classification, which type of product should use an efficient supply chain?",
+          "options": [
+            "Functional products with stable, predictable demand",
+            "Products with innovative features and unpredictable demand",
+            "Products requiring customization and personalization",
+            "Newly launched items with uncertain market reception",
+            "Premium products with high margins and niche appeal"
+          ],
+          "answer": 0,
+          "topic": "7eleven-product-demand-matrix",
+          "explain": "Functional products (basic staples with predictable demand) pair with efficient supply chains (cost-optimized, high-volume). Innovative products (new items, unpredictable demand) require responsive supply chains (fast, flexible). This classification allows 7-Eleven to route different products through different supply chain architectures.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "In 7-Eleven's hub-and-spoke distribution model, what type of ordering mechanism is used between stores and distributors?",
+          "options": [
+            "Order-point (Kanban) pull based on actual shelf depletion",
+            "Supplier-initiated replenishment based on forecasts",
+            "Centralized push from distribution centers on fixed schedules",
+            "Demand-driven promotions triggered by seasonal events",
+            "Consensus-based ordering negotiated monthly"
+          ],
+          "answer": 0,
+          "topic": "7eleven-hub-spoke",
+          "explain": "7-Eleven uses OS/Pull/Kanban (看板) ordering: stores pull goods from distributors based on actual shelf needs, not forecasts. This reduces obsolescence and stockouts simultaneously. The hub-and-spoke structure (distributors as aggregation nodes) enables the economics to work: many small store orders consolidated into full truckloads upstream.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the key distinction between speculative capacity and reactive capacity?",
+          "options": [
+            "Speculative capacity is committed before accurate demand info exists; reactive capacity is committed after demand is 70-80% certain",
+            "Speculative capacity is cheaper; reactive capacity requires more skilled workers",
+            "Speculative capacity applies only to manufacturing; reactive capacity applies to distribution",
+            "Speculative capacity is used for high-volume products; reactive capacity for niche products",
+            "Speculative capacity reduces inventory; reactive capacity increases it"
+          ],
+          "answer": 0,
+          "topic": "responsiveness-capacity",
+          "explain": "Speculative capacity (投機性產能) is committed under probabilistic forecasts before true demand arrives. Reactive capacity (反應性產能) is reserved and committed only after demand signals clarify. Both are deliberate supply chain design choices. The exam trap is thinking reactive is always superior — it typically incurs higher unit costs or requires premium lead-time agreements.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which of the following is NOT a recommended tactic for building reactive capacity for quick response?",
+          "options": [
+            "Increase forecast accuracy before committing capacity",
+            "Shorten production and material lead times",
+            "Accelerate information flow from customers to production",
+            "Reduce batch sizes to increase flexibility",
+            "Modify supply chain architecture to enable rapid production in response to actual demand"
+          ],
+          "answer": 0,
+          "topic": "reactive-capacity-quick-response",
+          "explain": "Reactive capacity for quick response focuses on structural changes (lead-time reduction, information acceleration, batch reduction, supply chain redesign). Improving forecast accuracy is a helpful but separate initiative; reactive capacity assumes that even with accurate forecasts, market dynamics demand flexibility. The four listed tactics all strengthen reactive capability; forecast improvement does not directly.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "When using reactive capacity to cope with inaccurate forecasts, which principle should guide the allocation of capacity between predictable and unpredictable items?",
+          "options": [
+            "Reserve reactive capacity specifically for unpredictable items; produce low-risk predictable items early in the season",
+            "Allocate equal capacity to all items regardless of predictability",
+            "Produce all high-margin items early; postpone low-margin items",
+            "Use early-season sales data only for replenishing the top-performing 20% of SKUs",
+            "Implement strict inventory caps to force demand discipline"
+          ],
+          "answer": 0,
+          "topic": "reactive-capacity-accurate-response",
+          "explain": "The strategy is to produce high-confidence, stable-demand items early using speculative capacity, then use the early-season demand (~20% of season) as a signal to allocate reactive capacity to high-risk items in later stages. This minimizes overstocking and lost sales simultaneously. The key insight is selective capacity commitment, not uniform production.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "What is the purpose of tracking customer segments, product attributes, and timing of demand in Tanpin Kanri?",
+          "options": [
+            "To maximize revenue per shelf space by matching assortment and replenishment to granular local demand patterns",
+            "To reduce labor costs through workforce standardization",
+            "To eliminate the need for promotional pricing strategies",
+            "To centralize inventory planning across all 7-Eleven locations globally",
+            "To simplify vendor negotiation and payment terms"
+          ],
+          "answer": 0,
+          "topic": "tanpin-kanri",
+          "explain": "Tanpin Kanri (單品管理) — item-by-item management — focuses on optimizing each SKU individually. By understanding which customer segments buy what, when (time of day, day of week, season), and why, 7-Eleven can maximize revenue per limited shelf space. This is fundamentally a demand management philosophy, not a cost-cutting tool.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "How does 7-Eleven use weather data in its IT system to improve supply chain decisions?",
+          "options": [
+            "To forecast product demand patterns — hot days drive iced beverage sales, rainy days affect store foot traffic and assortment needs",
+            "To adjust delivery frequencies based on seasonal demand peaks",
+            "To optimize warehouse storage temperature controls",
+            "To determine supplier payment terms based on seasonal volatility",
+            "To set variable pricing for weather-sensitive products"
+          ],
+          "answer": 0,
+          "topic": "7eleven-it-evolution",
+          "explain": "Weather data was added to 7-Eleven's IT system in the 1990s alongside POS and inventory data. The implicit use case is demand pattern recognition: external factors like temperature, humidity, and precipitation correlate with which products sell. This data supports Tanpin Kanri decision-making — if rain is forecast, assortment and replenishment decisions shift.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the primary pitfall of ordering inventory based solely on POS (point-of-sale) data?",
+          "options": [
+            "POS data records only completed sales — it cannot capture lost sales from stockouts, leading to systematic under-ordering",
+            "POS data ignores supplier lead times and safety stock requirements",
+            "POS data is too slow to update in real time for fast-moving items",
+            "POS data includes returns and discounts that inflate demand signals",
+            "POS data does not account for promotional price elasticity"
+          ],
+          "answer": 0,
+          "topic": "pos-pitfalls",
+          "explain": "If an item is out of stock during the measurement period, POS shows zero sales — but actual demand may have been much higher (lost sales, frustrated customers). Ordering from historical POS data therefore systematically under-orders high-demand items, especially those that experienced stockouts. This is an exam trap because POS seems like 'real' data, but it is truncated by supply constraints.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which factor explains why POS data patterns differ from one store to another in 7-Eleven?",
+          "options": [
+            "Existing inventory levels — stockouts make sales appear lower than actual demand",
+            "Changes in assortment decisions — different product mix yields different sales patterns",
+            "Demand changes over time — historical POS may be irrelevant if trends shift",
+            "Discounts and weather — external factors distort recorded sales",
+            "Store manager training quality and education background"
+          ],
+          "answer": 0,
+          "topic": "pos-pitfalls",
+          "explain": "If inventory is depleted, POS records zero sales even though demand may have been strong. This inventory-demand mismatch is a core POS data pitfall. While other factors (assortment, trends, weather) also explain variations, the inventory effect is especially insidious because it creates negative feedback: low POS signals lead to lower replenishment, perpetuating understocking.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Zara's markdown rate (50% of items marked down) compared to the industry average (15%) reflects which strategic choice?",
+          "options": [
+            "Acceptance of rapid trend turnover and product obsolescence — high markdown is a cost of speed",
+            "Poor forecast accuracy and excess inventory",
+            "Oversized initial markups to absorb discounts later",
+            "Supplier quality issues requiring clearance sales",
+            "Market positioning as a discount or outlet brand"
+          ],
+          "answer": 0,
+          "topic": "zara-positioning",
+          "explain": "High markdown rates are a deliberate trade-off: Zara accepts rapid fashion obsolescence in exchange for trend-chasing speed. Small batches mean misses are limited in downside (only 10% fail vs. 1% industry average), but winners hit hard when identified and replenished. The markdown cost is budgeted as part of the responsiveness strategy, not a sign of failure.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "How does store-level decentralization of product mix decisions in Zara support its overall competitive strategy?",
+          "options": [
+            "Allows local store managers to tailor assortment to customer demographics and local trends, improving relevance and responsiveness",
+            "Reduces headquarters coordination costs and bureaucratic delays",
+            "Eliminates the need for centralized demand forecasting",
+            "Simplifies supply chain planning by standardizing inventory across regions",
+            "Shifts inventory risk entirely to store managers"
+          ],
+          "answer": 0,
+          "topic": "zara-store-operations",
+          "explain": "Store managers, not headquarters, decide the product mix for their location. This distributed decision-making keeps responsiveness high: a manager in Barcelona can note emerging local trends and request adjustments within the bi-weekly delivery cycle. It complements the closed-loop information system (Customer → Manager → Buyer → Designer) by empowering frontline intelligence.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the relationship between Zara's batch size strategy and customer visit frequency?",
+          "options": [
+            "Smaller batches create artificial scarcity, driving the 'buy now or never' psychology that generates 17 visits/year vs. 3 industry average",
+            "Smaller batches reduce inventory costs, lowering prices and attracting frequent shoppers",
+            "Smaller batches allow Zara to test designs and gradually scale successful ones",
+            "Smaller batches reduce markdown rates by matching supply more closely to demand",
+            "Smaller batches simplify warehouse operations and distribution logistics"
+          ],
+          "answer": 0,
+          "topic": "zara-positioning",
+          "explain": "Small batches deliberately create scarcity-driven urgency. Zara customers visit ~17 times/year (vs. ~3 industry average) because they fear missing out on limited items. This is a psychological lever, not a side effect. The strategy trades off operational efficiency (smaller batches = lower inventory) against psychological impact (scarcity creates urgency).",
+          "difficulty": "easy"
+        },
+        {
+          "q": "In Zara's manufacturing strategy, what is the economic rationale for outsourcing 34% to Asia and 14% to Europe for basic items, while keeping 49% (high-fashion) in proximity (Spain/Portugal/Morocco)?",
+          "options": [
+            "Asia and Europe handle commodity items with stable demand; proximity manufacturing handles fashion items requiring speed",
+            "Proximity manufacturing guarantees higher quality for premium items",
+            "Asia and Europe suppliers are contracted with long lead-time agreements",
+            "Proximity manufacturing reduces total inventory costs globally",
+            "Asia and Europe have stricter labor regulations for commodity production"
+          ],
+          "answer": 0,
+          "topic": "zara-positioning",
+          "explain": "Basic items (socks, basics) have stable demand and long lead times — they can be made in low-cost Asia months in advance. High-fashion items are unpredictable and require fast turnarounds (design feedback to store in 1 week) — they're made in proximity despite higher labor costs. The manufacturing footprint is optimized by product risk profile and lead-time requirements, not cost alone.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "How does 7-Eleven's temperature-controlled distribution strategy support its supply chain responsiveness?",
+          "options": [
+            "It enables separate, frequent delivery runs for frozen, chilled, ambient, and hot items — improving freshness and reducing forced assortment compromises",
+            "It reduces spoilage and extends shelf life, lowering inventory costs",
+            "It eliminates the need for centralized warehousing",
+            "It allows stores to pre-stage inventory for predictable seasonal demand",
+            "It consolidates multiple supplier deliveries into single trucks"
+          ],
+          "answer": 0,
+          "topic": "7eleven-strategy",
+          "explain": "Separate temperature zones require separate delivery runs. This increases frequency (not decreases it) and enables precise fresh-item management per zone. A store can order just-in-time for hot foods (which spoil quickest) while ordering frozen items on longer cycles. It's a trade-off: higher logistics complexity for higher freshness and better demand matching.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which supply chain metric best captures the outcome of Zara's design-to-store operations in the 7-season model?",
+          "options": [
+            "Design-to-store lead time as fast as 1 week — enabling rapid response to trend signals",
+            "Inventory turnover ratio — how many times inventory is sold and replaced",
+            "Markdown rate — percentage of items discounted",
+            "Order-fill rate — percentage of orders fulfilled on-time",
+            "Safety stock levels — inventory held to prevent stockouts"
+          ],
+          "answer": 0,
+          "topic": "zara-production-planning",
+          "explain": "The 7-season model's strategic outcome is a 1-week design-to-store lead time, which directly enables Zara's trend-chasing model. This speed is the operationalized responsiveness. While turnover and markdown are influenced by the model, they are not the primary success metric. Lead time is the capability that enables all downstream competitive advantages.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What does the closed-loop information flow (Customer → Store Manager → Buyer → Designer → Production Manager) reveal about Zara's organizational structure?",
+          "options": [
+            "It integrates front-line customer intelligence directly into design and production planning — flattening traditional functional silos",
+            "It is highly centralized, with all decisions made by the production manager",
+            "It segregates sales from operations to maintain quality control",
+            "It requires multiple levels of approval, slowing decision-making",
+            "It relies on consumer research panels rather than in-store observation"
+          ],
+          "answer": 0,
+          "topic": "zara-closed-loop",
+          "explain": "The information loop is intentionally short and direct: customer feedback reaches the designer and production manager in hours, not months. This is a structural choice that tightens the feedback loop, reducing latency. It contrasts sharply with traditional fashion (where designers work in isolation). The structure embodies the responsiveness philosophy.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "If 7-Eleven observes that early-season sales (20% of the selling period) for an unpredictable item are strong, which capacity allocation decision should it make?",
+          "options": [
+            "Reserve reactive capacity to fulfill additional demand in the remaining 80% of the season",
+            "Increase speculative capacity for that item in the remaining 80% of the season",
+            "Reduce all further production to avoid overstocking",
+            "Immediately mark down prices to liquidate early inventory",
+            "Switch to a competitor's equivalent product"
+          ],
+          "answer": 0,
+          "topic": "reactive-capacity-accurate-response",
+          "explain": "Strong early-season sales (20% signal) suggest robust actual demand. The correct response is to allocate reactive capacity (reserved for high-risk items) to fulfill the remaining 80% of the season based on this clarified demand signal. This minimizes the risk of both overstocking (if demand drops) and stockouts (if it continues strong).",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Why does 7-Eleven cluster store growth densely in one region before expanding to the next, rather than spreading stores thinly across many regions?",
+          "options": [
+            "To achieve economies of scale in shared distribution infrastructure — a dense cluster supports efficient hub-and-spoke logistics and justifies IT investment",
+            "To build brand awareness through advertising saturation",
+            "To reduce competition from rival convenience store chains",
+            "To simplify financial reporting across geographic units",
+            "To comply with real estate zoning regulations"
+          ],
+          "answer": 0,
+          "topic": "7eleven-strategy",
+          "explain": "Clustered growth (集群成長) enables 7-Eleven to share distribution centers, temperature-controlled vehicles, and IT systems across many nearby stores. A thinly spread network would require multiple, inefficient distribution nodes. Clustering is a structural choice that makes the responsive, multi-temperature delivery model economically viable.",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Lecture 11: Revenue Management and Pricing Decisions: Supply Chain Issues, and Multi-Product Cases",
+      "questions": [
+        {
+          "q": "In the double marginalization model with c = $7, what is the supplier's optimal wholesale price (w*)?",
+          "options": [
+            "$14.00",
+            "$21.00",
+            "$28.50",
+            "$35.00",
+            "$42.00"
+          ],
+          "answer": 2,
+          "topic": "double-marginalization",
+          "explain": "The supplier maximizes π_s = (w − 7)q*, where q* = 50 − w. Solving the first-order condition yields w* = $28.5. Students often confuse this with marginal cost ($7) or guess a linear interpolation; the correct answer comes from profit-maximization, not cost recovery.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Under double marginalization with w* = $28.5 and c = $7, what is the resulting retail price?",
+          "options": [
+            "$25.00",
+            "$28.50",
+            "$32.75",
+            "$39.25",
+            "$46.50"
+          ],
+          "answer": 3,
+          "topic": "double-marginalization",
+          "explain": "The retailer's first-order condition is p* = 25 + w/2 = 25 + 14.25 = $39.25. A common trap is choosing the supply-chain-optimal price ($28.5) or the wholesale price itself; both are incorrect because the retailer still adds its margin.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "What is the total channel profit under decentralized double marginalization versus the integrated supply-chain optimum?",
+          "options": [
+            "$693.38 vs. $924.50",
+            "$924.50 vs. $693.38",
+            "$462.25 vs. $693.38",
+            "$231.13 vs. $462.25",
+            "$462.25 vs. $924.50"
+          ],
+          "answer": 0,
+          "topic": "double-marginalization",
+          "explain": "Decentralized profit is $693.38; integrated optimum is $924.50. The efficiency loss of ~25% occurs because each party externalizes costs onto the other. Reversing these numbers or using the individual retailer/supplier profits leads to the wrong answer.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Why does double marginalization result in both the wholesale AND retail price being above supply-chain-optimal levels?",
+          "options": [
+            "Only the retailer adds margin; the supplier has no choice",
+            "The supplier ignores the retailer's lost revenue; the retailer ignores the supplier's foregone profit",
+            "Retail competition forces prices up equally",
+            "The demand curve is inelastic at high prices",
+            "Consumer willingness to pay increases with price"
+          ],
+          "answer": 1,
+          "topic": "double-marginalization-mechanism",
+          "explain": "The root cause is externality: each party ignores the cost it imposes on the other. The supplier raises w without considering the retailer's response (lower demand); the retailer raises p without considering the supplier's margin squeeze. This exam trap catches students who think only the retailer is at fault.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Under the two-part tariff remedial mechanism, how does the supplier recover profit if the wholesale price is set to marginal cost?",
+          "options": [
+            "Through per-unit price increases over time",
+            "Via a fixed franchise fee charged to the retailer",
+            "By exclusive dealing restrictions",
+            "Through quantity rebates",
+            "By controlling the retail price directly"
+          ],
+          "answer": 1,
+          "topic": "remedial-measures",
+          "explain": "The two-part tariff combines w = c (zero per-unit margin) with a fixed fee F that the supplier charges upfront. This restores incentive compatibility because the retailer now maximizes as if vertically integrated. High demand uncertainty breaks this mechanism because the fixed fee may over/undercompensate.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "Which remedial measure for double marginalization is LEAST effective when demand uncertainty is high?",
+          "options": [
+            "Vertical integration",
+            "Marginal cost pricing with franchise fee",
+            "Quantity discounts",
+            "Retail competition",
+            "Buy-backs"
+          ],
+          "answer": 1,
+          "topic": "remedial-measures",
+          "explain": "The two-part tariff (franchise fee) requires that the fixed fee can be calibrated to split value fairly. Under high demand uncertainty, the realized demand may be far from expected, making the fixed fee either too high or too low, breaking coordination. Buy-backs, by contrast, shift risk and work better under uncertainty.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "When two competing retailers source from the same supplier, how does retail competition affect the supply-chain profit versus the single-retailer case?",
+          "options": [
+            "It decreases profit from $693.38 to $631.12",
+            "It increases profit from $693.38 to $821.78",
+            "It has no effect on wholesale or retail prices",
+            "It decreases profit to supply-chain optimal $924.50",
+            "It increases profit to $950.00"
+          ],
+          "answer": 1,
+          "topic": "competition-effect",
+          "explain": "With competing retailers, the supply-chain profit rises to $821.78 from the single-retailer level of $693.38 (still below integrated optimum of $924.50). Competition erodes each retailer's margin but increases total volume and channel efficiency. Students often assume competition raises prices or has no effect.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the primary insight of the seven core concepts of revenue management regarding cost versus price?",
+          "options": [
+            "Cost-based pricing always maximizes profit",
+            "Focus on price rather than costs when balancing supply and demand",
+            "Marginal cost should equal marginal revenue at all times",
+            "Costs should be transparent to customers",
+            "Price and cost always move together"
+          ],
+          "answer": 1,
+          "topic": "seven-core-concepts",
+          "explain": "Concept #1 explicitly states: replace cost-based pricing with market-based pricing (i.e., focus on price). This shift is fundamental to revenue management — the value customers will pay, not the cost to serve, drives profit. Students who focus on cost containment miss the primary lever.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "In the single-price demand example with a linear curve from 1 to 99 units, what is the profit-maximizing price and quantity?",
+          "options": [
+            "$25 per unit, 75 units sold",
+            "$50 per unit, 50 units sold",
+            "$60 per unit, 40 units sold",
+            "$75 per unit, 25 units sold",
+            "$100 per unit, 1 unit sold"
+          ],
+          "answer": 1,
+          "topic": "single-price-vs-segmented",
+          "explain": "At the single price of $50, the firm sells 50 units for revenue of $2,500. This is the profit-maximizing point on a linear demand curve. Segmented pricing (four tiers: $20, $40, $60, $80) sells 80 units, yielding ~60% higher revenue despite lower per-unit prices.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "What does consumer surplus represent in the context of single-price versus segmented pricing?",
+          "options": [
+            "The total profit the firm earns from a customer",
+            "Willingness to Pay minus the Offered Price",
+            "The cost of producing the good",
+            "The difference between retail and wholesale prices",
+            "The total revenue divided by units sold"
+          ],
+          "answer": 1,
+          "topic": "single-price-vs-segmented",
+          "explain": "Consumer surplus = WTP − Offered Price. Under a single price, high-valuation customers earn surplus; low-valuation customers are rejected. Segmented pricing reduces both forms of waste by capturing more of the willingness to pay. This is a definition question; students often confuse it with firm profit.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "When segmented pricing is introduced with four price tiers ($20, $40, $60, $80), how many units are sold compared to the single $50 price?",
+          "options": [
+            "50 units (no change)",
+            "65 units (~30% increase)",
+            "80 units (~60% increase)",
+            "100 units (all units)",
+            "40 units (fewer than single price)"
+          ],
+          "answer": 2,
+          "topic": "single-price-vs-segmented",
+          "explain": "Segmented pricing sells ~80 units versus 50 under the single average price — a 60% increase in volume and revenue. This refers to revenue/volume, not profit margin. Students sometimes confuse this with a 60% profit margin improvement, which is an exam trap.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In the booking limit problem, when capacity is insufficient for both customer segments, what does the critical ratio determine?",
+          "options": [
+            "The percentage of seats to oversell",
+            "How many seats to reserve for the high-value customer type",
+            "The maximum price the firm can charge",
+            "The break-even point for demand",
+            "The daily occupancy rate needed"
+          ],
+          "answer": 1,
+          "topic": "booking-limits",
+          "explain": "The critical ratio CR = (p_H − p_L) / p_H tells the firm how many seats to reserve for H-type customers. A higher ratio means higher underage cost (lost H revenue) relative to overage cost (lost L revenue), justifying more reserves. This follows the newsvendor framework.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the overage cost in the booking limit framework?",
+          "options": [
+            "Zero — an empty seat has no cost",
+            "The marginal cost of operating the flight",
+            "The revenue lost from not selling an L-type seat",
+            "The price paid by the H-type customer",
+            "The difference between H and L prices"
+          ],
+          "answer": 2,
+          "topic": "booking-limits",
+          "explain": "The overage cost = p_L (revenue foregone by not selling the L-type seat if you reserve it for H). A common exam trap is setting overage cost to zero, which artificially inflates the optimal reserve quantity. The cost is opportunity cost, not actual outlay.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "When the critical ratio equals 0.5 (equal underage and overage costs), what is the optimal booking limit for L-type customers?",
+          "options": [
+            "Reserve mean H demand, no z-score adjustment",
+            "Reserve mean H demand plus one standard deviation",
+            "Reserve half of total capacity",
+            "Reserve based on L-type demand distribution only",
+            "Reserve all remaining capacity after H demand"
+          ],
+          "answer": 0,
+          "topic": "booking-limits-examples",
+          "explain": "When CR = 0.5, underage cost = overage cost, so you reserve exactly the mean H demand (NORMSINV(0.5) = 0, yielding mean + 0×stdev). The L-type booking limit is then Capacity − Mean H demand. No z-adjustment is needed because costs are symmetric.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In the booking limit example with p_H = $1,500, p_L = $500, what is the critical ratio and how does it affect the reserve quantity?",
+          "options": [
+            "0.50; reserve mean H demand",
+            "0.67; reserve mean H demand plus NORMSINV(0.67)×stdev",
+            "0.75; reserve 75% of capacity",
+            "1.00; reserve all capacity for H",
+            "0.33; reserve one-third of capacity"
+          ],
+          "answer": 1,
+          "topic": "booking-limits-examples",
+          "explain": "CR = ($1,500 − $500) / $1,500 = $1,000 / $1,500 ≈ 0.667 ≈ 2/3. Because underage cost ($1,000) exceeds overage cost ($500), you reserve more than mean — specifically, mean + NORMSINV(2/3)×stdev of H demand. This reflects higher penalty for turning away H customers.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "Which of the following is NOT listed as a remedial mechanism for double marginalization in the lecture notes?",
+          "options": [
+            "Vertical integration",
+            "Marginal cost pricing",
+            "Quantity discounts",
+            "Aggressive advertising to increase demand",
+            "Buy-backs"
+          ],
+          "answer": 3,
+          "topic": "remedial-measures",
+          "explain": "The lecture lists seven mechanisms: vertical integration, marginal cost pricing, franchise fee/two-part tariff, quantity discounts, supplier-set retail price, competition, and buy-backs. Aggressive advertising is not among them. This recall question tests student attention to the specific list.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "How does dynamic pricing differ from willingness-to-pay pricing in the revenue management toolkit?",
+          "options": [
+            "Dynamic pricing uses real-time inventory/demand; WTP pricing is a static segment-based approach",
+            "Willingness-to-pay pricing adjusts inventory; dynamic pricing is cost-based",
+            "Both are identical terms used interchangeably",
+            "Dynamic pricing only applies to airlines; WTP applies to software",
+            "Dynamic pricing ignores demand; WTP ignores price"
+          ],
+          "answer": 0,
+          "topic": "other-pricing-mechanisms",
+          "explain": "Dynamic pricing adjusts price continuously in response to inventory levels and evolving demand (real-time). Willingness-to-pay pricing estimates each segment's maximum price and sets price accordingly (static per segment). They are distinct mechanisms for capturing value.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is overbooking in the context of revenue management?",
+          "options": [
+            "Charging customers multiple times for one booking",
+            "Intentionally selling more than capacity to hedge against cancellations",
+            "Reserving capacity without allowing bookings",
+            "Forcing customers to upgrade to higher-priced products",
+            "Reducing prices to fill unused capacity"
+          ],
+          "answer": 1,
+          "topic": "other-pricing-mechanisms",
+          "explain": "Overbooking is deliberate overselling to compensate for expected cancellations. Airlines use this to maintain high load factors. Students sometimes confuse it with fraud or capacity constraints; it is a legitimate revenue management tactic.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "In multi-product revenue management, what is the primary challenge when multiple customer segments can freely self-select across products?",
+          "options": [
+            "All segments will choose the cheapest product",
+            "Incentive compatibility requires adjusting prices downward on higher-tier products to prevent profitable defection",
+            "The firm has no way to segment customers",
+            "Segments will always choose the product with highest development cost",
+            "Demand uncertainty makes pricing impossible"
+          ],
+          "answer": 1,
+          "topic": "multi-product-objectives",
+          "explain": "If you price Advanced at each segment's full valuation ($2,500 for Large Corps), they may defect to a lower-priced product if it yields positive surplus. Incentive-compatible pricing requires strategic price cuts on premium products. This exam trap catches students who simply charge maximum WTP per segment.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "According to the lecture, how many customer segments are involved in the multi-product revenue management case study?",
+          "options": [
+            "2 segments",
+            "3 segments",
+            "4 segments",
+            "5 segments",
+            "6 segments"
+          ],
+          "answer": 3,
+          "topic": "multi-product-rm",
+          "explain": "The case lists five segments: Consultants, Small Businesses, Large Corporations, Laboratories, and Students. Each has different willingness to pay and market size. This is a straightforward recall question testing student attention to the multi-product setup.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "In the multi-product case, what special pricing consideration applies to the Students segment?",
+          "options": [
+            "They have the highest willingness to pay",
+            "They must pay at least marginal cost",
+            "They face a 40% bookstore commission, reducing net price received",
+            "They are price-insensitive",
+            "They can purchase unlimited quantities"
+          ],
+          "answer": 2,
+          "topic": "multi-product-valuations",
+          "explain": "The Students segment notes '40% bookstore commission,' meaning the firm receives only 60% of the selling price. This impacts profitability calculations and optimal pricing. Students often overlook this detail when analyzing multi-product strategies.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What is the development cost for the Advanced product in the multi-product case?",
+          "options": [
+            "$100,000",
+            "$150,000",
+            "$200,000",
+            "$300,000",
+            "$500,000"
+          ],
+          "answer": 4,
+          "topic": "multi-product-products",
+          "explain": "The Advanced product has a $500,000 development cost with $35/unit marginal cost. Basic is $100,000; Professional is $200,000. This determines the minimum revenue needed to justify each product's existence. Students should memorize these fixed costs when evaluating profitability.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "For the Large Corporations segment, which product do they value most highly in the multi-product case?",
+          "options": [
+            "Basic ($150 valuation)",
+            "Professional ($1,200 valuation)",
+            "Advanced ($2,500 valuation)",
+            "All products equally",
+            "None — large corporations prefer wholesale pricing"
+          ],
+          "answer": 2,
+          "topic": "multi-product-valuations",
+          "explain": "Large Corporations value Advanced at $2,500, Professional at $1,200, and Basic at $150. Their high valuation for premium products suggests these customers would benefit most from advanced features. This ranking is critical to understanding segment behavior.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "Which market segment has the largest potential market size in the multi-product case?",
+          "options": [
+            "Consultants (20,000 units)",
+            "Small Businesses (15,000 units)",
+            "Large Corporations (5,000 units)",
+            "Laboratories (2,000 units)",
+            "Students (500,000 units)"
+          ],
+          "answer": 4,
+          "topic": "multi-product-segments",
+          "explain": "Students represent 500,000 units of potential demand, dwarfing all other segments. However, their low valuation ($50–$100 per product) and bookstore commission make per-unit profit margins very thin. Volume versus margin is the trade-off here.",
+          "difficulty": "easy"
+        },
+        {
+          "q": "In the context of second-degree price discrimination (two-tier pricing), what does 'second-degree' refer to?",
+          "options": [
+            "Pricing that is illegal in most jurisdictions",
+            "Pricing by quantity or product version, not by customer identity",
+            "Pricing that only affects the second-largest segment",
+            "Pricing that charges different rates in different time periods",
+            "Pricing that is lower than first-degree discrimination"
+          ],
+          "answer": 1,
+          "topic": "multi-product-objectives",
+          "explain": "Second-degree price discrimination separates customers through product design or quantity (e.g., Basic vs. Professional), allowing customers to self-select. First-degree (perfect discrimination) charges each customer their max WTP; third-degree charges different groups different prices by identity. This is a conceptual question on discrimination types.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What condition must be satisfied for the two-part tariff to effectively coordinate the supply chain?",
+          "options": [
+            "Demand must be perfectly elastic",
+            "Demand uncertainty must be low",
+            "Demand must be perfectly inelastic",
+            "The supplier must own the retailer",
+            "The retailer must have perfect foresight"
+          ],
+          "answer": 1,
+          "topic": "remedial-measures",
+          "explain": "The two-part tariff works when demand uncertainty is LOW because the fixed fee F is calibrated to split expected profits. High uncertainty means actual demand diverges significantly from the forecast, rendering F either too high or too low, breaking coordination. This is a direct consequence of the fee structure.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "When comparing single-price to segmented pricing on a linear demand curve from 1 to 99 units, what is the main source of the ~60% revenue increase?",
+          "options": [
+            "Higher profit margins on each unit sold",
+            "Serving rejected low-valuation customers and capturing high-valuation surplus",
+            "Reduction in production costs due to scale",
+            "Elimination of competition",
+            "Regulatory approval for premium pricing"
+          ],
+          "answer": 1,
+          "topic": "single-price-vs-segmented",
+          "explain": "Segmented pricing increases revenue by selling to both high-valuation customers (who were earning surplus under single price) and previously rejected low-valuation customers. At $50, only 50 units sell; at tiered prices, 80 units sell. The increase is in volume and value capture, not margin per unit.",
+          "difficulty": "hard"
+        },
+        {
+          "q": "How many business development cost categories are included in the multi-product case?",
+          "options": [
+            "One cost category for all segments",
+            "One per product (Basic, Professional, Advanced)",
+            "One per segment (Consultants, Small Businesses, etc.)",
+            "One for fixed costs and one for variable costs",
+            "One for each combination of product and segment"
+          ],
+          "answer": 2,
+          "topic": "multi-product-segments",
+          "explain": "The case lists a business development cost for each of the five segments (Consultants $200k, Small Businesses $200k, Large Corporations $150k, Laboratories $100k, Students $300k), reflecting the effort to penetrate each market. These are separate from product development costs.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "In the booking limit problem, how is the underage cost defined?",
+          "options": [
+            "The revenue lost from selling a seat to L-type instead of H-type",
+            "The cost of operating an empty seat",
+            "The cost of bumping a customer",
+            "The difference between fixed and variable costs",
+            "The tax on unsold inventory"
+          ],
+          "answer": 0,
+          "topic": "booking-limits",
+          "explain": "Underage cost = p_H − p_L, the foregone revenue from not reserving enough seats for H-type customers (turning them away when you later sell to L-type). This contrasts with overage cost (p_L, opportunity cost of unsold seat). Students sometimes reverse these or set underage to zero.",
+          "difficulty": "medium"
+        },
+        {
+          "q": "What does the newsvendor framework in the booking limit context represent?",
+          "options": [
+            "A supply chain decision where a news vendor sets wholesale prices",
+            "A problem where overstock (overage) and understock (underage) costs must be balanced",
+            "A model that applies only to retail inventory management",
+            "A demand forecasting method used exclusively for newspapers",
+            "A fixed price decision with no dynamic adjustment"
+          ],
+          "answer": 1,
+          "topic": "booking-limits",
+          "explain": "The newsvendor model mirrors the booking limit problem: reserve too many seats for H → overage cost (unsold capacity); reserve too few → underage cost (turned-away H customers). The critical ratio balances these two costs. This is the conceptual foundation of the booking limit approach.",
+          "difficulty": "medium"
+        }
+      ]
+    }
+  ],
+  "topicSectionMap": {
+    "7": {
+      "forecast-basics": 0,
+      "good-forecast-attributes": 0,
+      "forecasting-approaches": 0,
+      "qualitative-methods": 1,
+      "time-series-basics": 2,
+      "time-series-behaviors": 2,
+      "naive-forecast": 3,
+      "moving-average": 3,
+      "weighted-moving-average": 3,
+      "exponential-smoothing": 3,
+      "linear-trend": 4,
+      "seasonality-models": 4,
+      "forecast-accuracy": 5,
+      "accuracy-metrics": 5,
+      "technique-selection": 5
+    },
+    "8": {
+      "revenue-management-concepts": 0,
+      "pricing-methods": 1,
+      "booking-limits-intro": 1,
+      "booking-limits-deployment": 2,
+      "booking-limits-implementation": 2,
+      "booking-limits-newsvendor": 3,
+      "booking-limits-formula": 3,
+      "willingness-to-pay": 4,
+      "price-segmentation": 4,
+      "multi-product-setup": 5,
+      "multi-product-objectives": 5
+    },
+    "9": {
+      "core-concepts": 0,
+      "pricing-methods": 0,
+      "booking-limits-structure": 1,
+      "booking-limits-conditions": 1,
+      "nested-control": 1,
+      "booking-limits-newsvendor": 2,
+      "booking-limits-example1": 2,
+      "booking-limits-example2": 2,
+      "wtp-single-price": 3,
+      "wtp-segmented": 3,
+      "multi-product-setup": 4,
+      "multi-product-objectives": 4
+    },
+    "10": {
+      "zara-positioning": 0,
+      "zara-store-operations": 0,
+      "zara-design-it": 1,
+      "zara-closed-loop": 1,
+      "zara-jit-postponement": 1,
+      "zara-production-planning": 1,
+      "push-pull-framework": 2,
+      "7eleven-strategy": 3,
+      "7eleven-supplier-relations": 3,
+      "7eleven-product-demand-matrix": 3,
+      "7eleven-hub-spoke": 3,
+      "responsiveness-capacity": 4,
+      "reactive-capacity-quick-response": 4,
+      "reactive-capacity-accurate-response": 4,
+      "7eleven-it-evolution": 5,
+      "tanpin-kanri": 5,
+      "pos-pitfalls": 5
+    },
+    "11": {
+      "double-marginalization": 0,
+      "double-marginalization-mechanism": 0,
+      "remedial-measures": 1,
+      "competition-effect": 1,
+      "seven-core-concepts": 2,
+      "single-price-vs-segmented": 2,
+      "booking-limits": 3,
+      "booking-limits-examples": 3,
+      "other-pricing-mechanisms": 3,
+      "multi-product-rm": 4,
+      "multi-product-segments": 4,
+      "multi-product-products": 4,
+      "multi-product-valuations": 4,
+      "multi-product-objectives": 4
+    }
+  }
+}
