@@ -2123,7 +2123,7 @@ function renderHomeCards() {
   container.innerHTML = lectures.map(lec => {
     const titleHtml = escapeHtml(lec.title);
     return `
-    <div class="card ${delay}">
+    <div class="card">
       <div class="lec-row">
         <div class="lec-title">${titleHtml}</div>
         <div>
@@ -2192,7 +2192,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ===== PWA Service Worker (inline via Blob) =====
 if ('serviceWorker' in navigator) {
   const swCode = `
-    const CACHE = 'isom2800-v7';
+    const CACHE = 'isom2800-v8';
     self.addEventListener('install', e => { self.skipWaiting(); });
     self.addEventListener('activate', e => {
       e.waitUntil(

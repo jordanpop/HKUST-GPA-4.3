@@ -1475,16 +1475,6 @@ function renderGlobalReport() {
   document.getElementById('global-body').innerHTML = h;
 }
 
-  const obs = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { root:null, rootMargin:'0px', threshold:0.15 });
-  els.forEach(el => obs.observe(el));
-}
 
 function updateHomeStatus() {
   lectures.forEach(lec => {
@@ -1529,7 +1519,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // ===== PWA Service Worker (inline via Blob) =====
 if ('serviceWorker' in navigator) {
   const swCode = `
-    const CACHE = 'huma2921-v2';
+    const CACHE = 'huma2921-v3';
     self.addEventListener('install', e => { self.skipWaiting(); });
     self.addEventListener('activate', e => { e.waitUntil(self.clients.claim()); });
     self.addEventListener('fetch', e => {
