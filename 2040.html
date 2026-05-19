@@ -65,11 +65,6 @@ th{background:var(--accent-soft)}
 .review-card .q-text{color:var(--wrong)}
 .memorize ol{padding-left:24px}
 .memorize li{margin:6px 0}
-.reveal-on-scroll{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.4,0,.2,1);will-change:opacity,transform}
-.reveal-on-scroll.is-visible{opacity:1;transform:translateY(0)}
-.reveal-delay-1{transition-delay:.1s}
-.reveal-delay-2{transition-delay:.2s}
-.reveal-delay-3{transition-delay:.3s}
 .submit-q{margin-top:10px}
 .quiz-settings{margin-top:12px;padding:10px 14px;background:var(--accent-soft);border-radius:4px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:.92em}
 .quiz-settings label{display:flex;align-items:center;gap:6px;color:var(--ink)}
@@ -132,11 +127,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-11" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(11)">Clear Highlights</button>
   <h1>Lecture 11: The Nucleus II</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     The nucleus is sealed off from the cytoplasm by the nuclear envelope, yet it must constantly exchange proteins and RNA through the nuclear pore complex (核孔複合體). This lecture explains how the cell selectively imports nuclear proteins and exports RNA by using signal sequences, receptor proteins called importins and exportins, and the small GTPase Ran to set the direction of transport. Understanding this machinery matters because misregulation of nuclear transport underlies diseases ranging from viral infections to cancer.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Nuclear Transport: Overview and Directionality</h2>
     <p data-topic="nuclear-transport-overview">
       <ul>
@@ -153,7 +148,7 @@ tr.weak-highlight{box-shadow:none}
     </p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Experimental Methods to Study Nuclear Import</h2>
     <p data-topic="nuclear-import-methods">
       The lecture presents three experimental strategies used to dissect the mechanism of nuclear transport, following a hypothesis-driven scientific approach: Question → Hypothesis → Experimental design → Results → Conclusions → Textbook knowledge.
@@ -197,7 +192,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="nuclear-import-methods"><b>Exam trap:</b> The in vitro reconstitution experiment shows transport requires cytosolic factors, NOT just the nuclear envelope or the NLS alone. Buffer + receptor gives 0× transport, proving receptor alone is insufficient without cytosol.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Nuclear Localization Signals (NLS) and Importins</h2>
     <p data-topic="nls-importins">
       <ul>
@@ -281,7 +276,7 @@ tr.weak-highlight{box-shadow:none}
     </div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Nuclear Export and the Role of Ran GTPase in Directionality</h2>
     <p data-topic="nuclear-export-ran">
       <strong>Nuclear export</strong> 核輸出 mirrors import but in reverse:
@@ -361,7 +356,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="nuclear-export-ran"><b>Exam trap:</b> Ran-GTP promotes RELEASE of importin cargo in the nucleus AND STABILIZES the exportin–cargo complex in the nucleus — opposite effects depending on import vs. export receptor. A drug blocking GEF (blocking GDP→GTP exchange) would prevent importins from releasing cargo in the nucleus.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Regulation of Nuclear Transport</h2>
     <p data-topic="transport-regulation">
       Transport through the NPC can be regulated by three general mechanisms:
@@ -407,7 +402,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="nfat-regulation"><b>Exam trap:</b> In resting T cells NF-AT is phosphorylated → cytoplasmic (NES exposed). Upon activation, calcineurin dephosphorylates NF-AT → NLS exposed → nuclear. Phosphorylation here promotes EXPORT (not import) — the opposite of what students may assume.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. Visualizing Ran-GTP: FRET-Based Molecular Probe</h2>
     <p data-topic="fret-ran-visualization">
       <strong>Fluorescence resonance energy transfer (FRET)</strong> 螢光共振能量轉移 is a technique to detect molecular proximity 分子接近性:
@@ -446,7 +441,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="fret-ran-visualization"><b>Exam trap:</b> A LOW I<sub>FRET</sub>/I<sub>CFP</sub> ratio means HIGH Ran-GTP (probe is open, no FRET). Students may intuitively assume high signal = high Ran-GTP — the logic is inverted for this probe.</div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>Trypsin digestion of gold-particle protein coat proves the <em>protein motif</em>, not particle size alone, is responsible for nuclear entry.</li>
@@ -463,7 +458,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li><strong>NLS</strong> = short, positively charged amino acid sequence (Lys/Arg-rich) — necessary AND sufficient for nuclear import; remains on protein after import.</li>
@@ -487,11 +482,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-12" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(12)">Clear Highlights</button>
   <h1>Lecture 12: Vesicular Traffic, Secretion and Endocytosis-I</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Eukaryotic cells are divided into membrane-bound compartments, creating a logistical challenge: how do proteins and molecules move from where they are made to where they are needed? This lecture introduces vesicular transport — the cell's delivery system — and establishes the secretory pathway roadmap (ER → Golgi → plasma membrane) discovered by George Palade. It then dissects the molecular principles underlying each step: how coat proteins deform membranes to bud vesicles, how dynamin pinches them off, how microtubules serve as tracks, and how Rab proteins, tethering factors, and SNAREs ensure vesicles dock and fuse only with the correct target compartment.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Introduction: Why Vesicular Transport Matters</h2>
 
     <p data-topic="compartmentalization-problem">
@@ -515,7 +510,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="compartmentalization-problem"><b>Exam trap:</b> The secretory pathway and endocytic pathway are both mediated by vesicular carriers — do not confuse them. Secretory = inside to outside (or to organelles); endocytic = outside to inside.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. The Secretory Pathway Roadmap</h2>
 
     <p data-topic="secretory-roadmap">
@@ -560,7 +555,7 @@ tr.weak-highlight{box-shadow:none}
     </div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Essential Steps of Vesicular Transport</h2>
 
     <p data-topic="vesicular-transport-steps">
@@ -575,7 +570,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="vesicular-transport-steps"><b>Exam trap:</b> All three steps — budding, transport, and fusion — are required for vesicular traffic. Missing any one step blocks cargo delivery entirely.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Vesicle Budding: Coat Proteins, Clathrin, and Dynamin</h2>
 
     <p data-topic="coat-proteins-types">
@@ -617,7 +612,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="coat-proteins-types"><b>Exam trap:</b> COPI mediates <em>retrograde</em> (Golgi to ER) traffic; COPII mediates <em>anterograde</em> (ER to Golgi) traffic; clathrin mediates endocytosis and Golgi-to-endosome traffic. Do not mix up directions.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Vesicle Transport and Fusion: Rab Proteins, Tethering Factors, and SNAREs</h2>
 
     <p data-topic="vesicle-transport-microtubules">
@@ -680,7 +675,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="snare-specificity"><b>Exam trap:</b> SNARE pairing is specific — v-SNARE on the vesicle must match the t-SNARE on the target. This specificity, not just physical proximity, determines which vesicle fuses with which compartment.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. Summary: Complete Vesicular Transport Machinery</h2>
 
     <p data-topic="transport-machinery-summary">
@@ -763,7 +758,7 @@ tr.weak-highlight{box-shadow:none}
     </p>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>The secretory pathway moves proteins <em>inside to outside</em>; the endocytic pathway moves molecules <em>outside to inside</em> — never confuse the directions.</li>
@@ -777,7 +772,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Secretory pathway route: ER → Golgi → Plasma membrane (Palade, Nobel 1974).</li>
@@ -800,12 +795,12 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-13" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(13)">Clear Highlights</button>
   <h1>Lecture 13: Vesicular Traffic, Secretion and Endocytosis-II</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Vesicular transport moves proteins through two major highways: the secretory pathway (ER → Golgi → plasma membrane) and the endocytic pathway (plasma membrane → endosomes → lysosome). Coat proteins — COPII, COPI, and clathrin — select cargo and sculpt vesicle buds at specific membrane compartments, while sorting signals encoded in protein sequences direct each cargo to its correct destination. The trans-Golgi network (TGN 反式高爾基體網路) acts as the central dispatch hub from which cargoes diverge to lysosomes, secretory vesicles, or the cell surface. Endocytosis, exemplified by clathrin-mediated uptake of LDL-cholesterol, allows cells to efficiently import extracellular molecules using receptor-based selectivity.
   </div>
 
   <!-- SECTION 1 -->
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Coat Proteins and Sorting Signals in the Secretory Pathway</h2>
 
     <p data-topic="coat-proteins-overview">
@@ -834,7 +829,7 @@ tr.weak-highlight{box-shadow:none}
   </section>
 
   <!-- SECTION 2 -->
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. COPII-Mediated ER-to-Golgi Transport</h2>
 
     <p data-topic="copii-er-to-golgi">
@@ -859,7 +854,7 @@ tr.weak-highlight{box-shadow:none}
   </section>
 
   <!-- SECTION 3 -->
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Golgi Apparatus Structure and COPI Retrieval</h2>
 
     <p data-topic="golgi-structure-copi">
@@ -904,7 +899,7 @@ tr.weak-highlight{box-shadow:none}
   </section>
 
   <!-- SECTION 4 -->
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Golgi-to-Plasma Membrane: TGN as Sorting Hub and Polarised Cells</h2>
 
     <p data-topic="tgn-sorting-polarised">
@@ -940,7 +935,7 @@ tr.weak-highlight{box-shadow:none}
   </section>
 
   <!-- SECTION 5 -->
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Endocytic Pathway: Types, Road Map, and LDL-Cholesterol Uptake</h2>
 
     <p data-topic="endocytic-pathway-overview">
@@ -973,7 +968,7 @@ tr.weak-highlight{box-shadow:none}
   </section>
 
   <!-- SECTION 6 -->
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. Receptor-Mediated Endocytosis of Cholesterol (LDL Pathway)</h2>
 
     <p data-topic="ldl-receptor-endocytosis">
@@ -1071,7 +1066,7 @@ tr.weak-highlight{box-shadow:none}
   </section>
 
   <!-- BONUS SECTION: SARS-CoV-2 (not tested in final exam) -->
-  <section class="reveal-on-scroll" data-sec="6">
+  <section data-sec="6">
     <h2>7. How SARS-CoV-2 Hijacks the Trafficking Machinery <span style="font-size:0.75em;color:#888;">(not tested in final exam)</span></h2>
 
     <p data-topic="sars-cov2-trafficking">
@@ -1091,7 +1086,7 @@ tr.weak-highlight{box-shadow:none}
     </p>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>COPII = ER→Golgi (anterograde/forward); COPI = Golgi→ER (retrograde) AND intra-Golgi — never mix these up</li>
@@ -1106,7 +1101,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top Things to Memorize</strong>
     <ol>
       <li>Three coat proteins and their directions: COPII (ER→Golgi), COPI (Golgi→ER + intra-Golgi), Clathrin (TGN→lysosome; PM→endosome)</li>
@@ -1130,12 +1125,12 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-14" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(14)">Clear Highlights</button>
   <h1>Lecture 14: Mechanisms of Cellular Homeostasis</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Cells constantly produce proteins that must eventually be degraded — whether they are misfolded, damaged, short-lived regulators, or entire organelles that have become dysfunctional. Two major cellular machines handle this task: the <strong>proteasome</strong>, a barrel-shaped protease complex distributed throughout the nucleus and cytoplasm, and the <strong>lysosome</strong>, an acidic organelle that receives cargo via endocytosis, phagocytosis, and autophagy. A small protein tag called <strong>ubiquitin</strong> acts as the universal "expired" stamp that routes proteins to either destination. Failure of these systems leads to accumulation of toxic protein aggregates and underlies devastating neurodegenerative diseases such as Alzheimer's, Parkinson's, and ALS.
   </div>
 
   <!-- SECTION 1 -->
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Why Protein Degradation Matters</h2>
     <p data-topic="protein-degradation-importance">
       <ul>
@@ -1183,7 +1178,7 @@ tr.weak-highlight{box-shadow:none}
   </section>
 
   <!-- SECTION 2 -->
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Two Major Sites of Protein Degradation</h2>
     <p data-topic="degradation-sites-overview">
       <ul>
@@ -1247,7 +1242,7 @@ tr.weak-highlight{box-shadow:none}
   </section>
 
   <!-- SECTION 3 -->
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. The Ubiquitin–Proteasome System</h2>
 
     <p data-topic="ubiquitin-structure">
@@ -1307,7 +1302,7 @@ tr.weak-highlight{box-shadow:none}
   </section>
 
   <!-- SECTION 4 -->
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. The Lysosome and Delivery Pathways</h2>
 
     <p data-topic="lysosome-structure">
@@ -1358,7 +1353,7 @@ tr.weak-highlight{box-shadow:none}
   </section>
 
   <!-- SECTION 5 -->
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Autophagy — Three Types and Macroautophagy in Detail</h2>
 
     <p data-topic="autophagy-overview">
@@ -1439,7 +1434,7 @@ tr.weak-highlight{box-shadow:none}
   </section>
 
   <!-- SECTION 6 -->
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. Autophagy and Cancer — a Double-Edged Role</h2>
 
     <p data-topic="autophagy-cancer">
@@ -1464,7 +1459,7 @@ tr.weak-highlight{box-shadow:none}
     </div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>Protein degradation IS important for regular protein turn-over — option (b) of the lecture practice question is the FALSE statement.</li>
@@ -1480,7 +1475,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Ubiquitin = 76 amino acids; 96% identity between human and yeast; 7 Lys residues</li>
@@ -1504,12 +1499,12 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-15" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(15)">Clear Highlights</button>
   <h1>Lecture 15: The Cytoskeleton and Cell Movement-I</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     The cytoskeleton (細胞骨架) is an intricate network of protein filaments that extends throughout the cytoplasm of eukaryotic cells, providing structural support, shape, and the machinery for intracellular transport and cell movement. Three distinct filament systems — intermediate filaments, microtubules, and actin filaments — each contribute unique mechanical and functional properties. Motor proteins (馬達蛋白) such as kinesin and dynein walk along microtubule tracks to ferry cargo across the cell, while specialized microtubule arrays in cilia and flagella generate coordinated beating motions essential for mucus clearance and sperm motility.
   </div>
 
   <!-- SECTION 1 -->
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Overview of the Three Cytoskeletal Filaments</h2>
     <p data-topic="cytoskeleton-overview">
       <ul>
@@ -1532,7 +1527,7 @@ tr.weak-highlight{box-shadow:none}
   </section>
 
   <!-- SECTION 2 -->
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Intermediate Filaments: Structure, Assembly, and Function</h2>
     <p data-topic="intermediate-filaments">
       <ul>
@@ -1581,7 +1576,7 @@ tr.weak-highlight{box-shadow:none}
   </section>
 
   <!-- SECTION 3 -->
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Microtubules: Structure, Polarity, and Dynamic Instability</h2>
     <p data-topic="microtubule-structure">
       <ul>
@@ -1651,7 +1646,7 @@ tr.weak-highlight{box-shadow:none}
   </section>
 
   <!-- SECTION 4 -->
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Microtubule Nucleation: MTOC, Centrosome, and γ-TuRC</h2>
     <p data-topic="mtoc-centrosome">
       <ul>
@@ -1679,7 +1674,7 @@ tr.weak-highlight{box-shadow:none}
   </section>
 
   <!-- SECTION 5 -->
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Motor Proteins: Kinesin and Dynein</h2>
     <p data-topic="motor-proteins-kinesin-dynein">
       <ul>
@@ -1710,7 +1705,7 @@ tr.weak-highlight{box-shadow:none}
   </section>
 
   <!-- SECTION 6 -->
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. Cilia and Flagella: Structure, Function, and Disease</h2>
     <p data-topic="cilia-flagella-structure">
       <ul>
@@ -1752,7 +1747,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="cilia-flagella-structure"><b>Exam trap:</b> The basal body and centriole have the same 9-triplet microtubule structure; the axoneme has a 9+2 arrangement (doublets, not triplets). Dynein in cilia/flagella is axonemal dynein — separate from cytoplasmic dynein that transports cargo. Sliding without linking proteins produces only translation, not bending; linking proteins are required to convert sliding into bending.</div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>Bacteria lack a true cytoskeleton — intermediate filaments and microtubules are eukaryote-only structures.</li>
@@ -1769,7 +1764,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Three cytoskeletal filaments and their diameters: actin ~7 nm, intermediate filaments ~10 nm, microtubules ~25 nm</li>
@@ -1792,11 +1787,11 @@ tr.weak-highlight{box-shadow:none}
   <a class="btn back" onclick="showPage('home')">← Home</a>
   <button id="clear-hl-16" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(16)">Clear Highlights</button>
   <h1>Lecture 16: The Cytoskeleton and Cell Movement-II</h1>
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     This lecture focuses on actin filaments as the third major cytoskeletal component, covering their structure, assembly dynamics, and the actin-binding proteins that regulate them. It then traces how actin polymerization drives cell migration through lamellipodia and filopodia, and how myosin motor proteins interact with actin to power contraction. The lecture concludes with the molecular events of skeletal muscle contraction, from sarcomere organization to calcium-triggered sliding filament mechanics controlled by the troponin-tropomyosin system.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Actin Filament Structure and Assembly Dynamics</h2>
     <p data-topic="actin-filament-structure">
       <ul>
@@ -1838,7 +1833,7 @@ tr.weak-highlight{box-shadow:none}
     </div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Actin-Binding Proteins Regulating Filament Behavior</h2>
     <p data-topic="actin-binding-proteins">
       <table style="width:100%;border-collapse:collapse;font-size:0.91em">
@@ -1904,7 +1899,7 @@ tr.weak-highlight{box-shadow:none}
     </div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Actin-Based Cell Migration</h2>
     <p data-topic="cell-migration-structures">
       <ul>
@@ -1939,7 +1934,7 @@ tr.weak-highlight{box-shadow:none}
     </div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Myosin Motor Proteins on Actin</h2>
     <p data-topic="myosin-types">
       <ul>
@@ -1985,7 +1980,7 @@ tr.weak-highlight{box-shadow:none}
     </div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Skeletal Muscle Structure: From Fiber to Sarcomere</h2>
     <p data-topic="muscle-hierarchy">
       <ul>
@@ -2019,7 +2014,7 @@ tr.weak-highlight{box-shadow:none}
     </div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. Calcium Regulation and the Sliding Filament Mechanism</h2>
     <p data-topic="excitation-contraction-coupling">
       <strong>Excitation-contraction coupling (興奮-收縮耦聯) — step by step:</strong>
@@ -2091,7 +2086,7 @@ tr.weak-highlight{box-shadow:none}
     </div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>ATP hydrolysis by actin weakens bonds and promotes depolymerization (not polymerization); same logic as GTP hydrolysis in tubulin.</li>
@@ -2107,7 +2102,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>G-actin (monomer, ATP-bound) → F-actin (polymer, ADP-bound after hydrolysis); nucleation is the rate-limiting step</li>
@@ -2131,11 +2126,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-17" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(17)">Clear Highlights</button>
   <h1>Lecture 17: Mechanisms of Cellular Communication-I</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Cells constantly exchange information to coordinate survival, growth, differentiation, and death. This lecture establishes the conceptual framework of signal transduction (訊號傳導): how an extracellular chemical signal is received by a target cell, relayed and amplified through intracellular signaling cascades, and converted into a specific cellular response. Four modes of intercellular communication are distinguished by distance, and three classes of cell-surface receptors are introduced alongside intracellular receptors used by lipid-soluble hormones. The HIPPO pathway provides a concrete example of how signaling controls organ size in vivo.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Why Cell Communication Matters and Four Modes of Signaling</h2>
     <p data-topic="cell-communication-importance">
       <ul>
@@ -2204,7 +2199,7 @@ tr.weak-highlight{box-shadow:none}
     </svg>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Three Phases of Signal Transduction</h2>
     <p data-topic="three-phases-transduction">
       <ul>
@@ -2246,7 +2241,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="signal-speed"><b>Exam trap:</b> Fast responses alter existing protein function; slow responses require new protein synthesis via altered gene expression. These are mechanistically distinct — do not describe both as "signal transduction" without specifying pathway type.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Reception: Intracellular vs. Cell-Surface Receptors</h2>
     <p data-topic="reception-receptor-types">
       <ul>
@@ -2285,7 +2280,7 @@ tr.weak-highlight{box-shadow:none}
     </svg>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Three Classes of Cell-Surface Receptors</h2>
     <p data-topic="cell-surface-receptor-classes">
       <table style="width:100%;border-collapse:collapse;font-size:0.93em">
@@ -2332,7 +2327,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="cell-surface-receptor-classes"><b>Exam trap:</b> For enzyme-coupled receptors, the signal molecule often acts as a dimer to cross-link two receptor monomers; a monomer signal cannot activate the receptor — specificity depends on this dimerization requirement.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Intracellular Signaling: Molecular Switches, Relay, and Feedback</h2>
     <p data-topic="molecular-switches">
       <strong>Molecular switches (分子開關):</strong>
@@ -2368,7 +2363,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="feedback-regulation"><b>Exam trap:</b> Feedback regulation is part of transduction, not a separate phase. It occurs within the signaling cascade, not after the response is complete.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. The HIPPO Pathway: A Case Study in Enzyme-Coupled Signaling</h2>
     <p data-topic="hippo-pathway">
       <ul>
@@ -2408,7 +2403,7 @@ tr.weak-highlight{box-shadow:none}
     </svg>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>Paracrine signals stay local and never enter the bloodstream — endocrine hormones do. Do not use them interchangeably.</li>
@@ -2425,7 +2420,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Four signaling modes: contact-dependent (Delta-Notch), paracrine (local mediators), endocrine (hormones via blood), synaptic (neurotransmitters via axon).</li>
@@ -2449,11 +2444,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-18" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(18)">Clear Highlights</button>
   <h1>Lecture 18: Mechanisms of Cellular Communication-II</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     This lecture continues the cell signaling framework by dissecting two major classes of cell-surface receptors: G-protein-coupled receptors (GPCRs) and enzyme-coupled receptors, with a focus on receptor tyrosine kinases (RTKs). Each receptor class activates a distinct set of intracellular cascades — GPCRs work through heterotrimeric G proteins to raise second messengers such as cAMP and Ca²⁺, while RTKs dimerize upon ligand binding and recruit signaling complexes via phosphotyrosine docking sites. Both pathways converge on profound changes in cell behavior, and their dysregulation underpins major diseases including cancer, making them prime therapeutic targets.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. G-Protein-Coupled Receptors (GPCRs): Structure and Activation</h2>
     <p data-topic="gpcr-intro">
       <ul>
@@ -2505,7 +2500,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="g-protein-activation"><b>Exam trap:</b> Signal duration is set by Gα's own GTPase (鳥苷三磷酸酶) activity, NOT by phosphatases or protein degradation. Cholera toxin locks Gα in GTP-bound active state by blocking this GTPase activity.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. GPCR Downstream Effector Pathways</h2>
     <p data-topic="g-protein-effectors">
       <b>Three major effectors activated by G proteins:</b>
@@ -2537,7 +2532,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="adenylyl-cyclase-camp-pka"><b>Exam trap:</b> cAMP activates PKA, not PKC. PKC is activated by DAG + Ca²⁺ from the PLC pathway, not the adenylyl cyclase pathway.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Enzyme-Coupled Receptors: Structure and Types</h2>
     <p data-topic="enzyme-coupled-receptors-intro">
       <ul>
@@ -2560,7 +2555,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="enzyme-coupled-receptors-intro"><b>Exam trap:</b> Enzyme-coupled receptors are single-pass (單次跨膜), not seven-pass like GPCRs. Mixing up transmembrane topology between GPCR and RTK is a very common error.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Receptor Tyrosine Kinases (RTKs): Activation and Signaling Complexes</h2>
     <p data-topic="rtk-activation-complex">
       <b>Activation mechanism:</b>
@@ -2617,7 +2612,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="rtk-activation-complex"><b>Exam trap:</b> RTK dimerization is induced by ligand binding — the receptor does NOT dimerize first and then bind ligand. Also: each phosphotyrosine is a specific docking site for a DIFFERENT protein, enabling pathway multiplexing from one receptor.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. RTK Downstream Pathways: Ras and PI3-Kinase</h2>
     <p data-topic="rtk-activates-ras">
       <b>Ras (Ras蛋白) pathway:</b>
@@ -2643,7 +2638,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="pi3k-akt-pathway"><b>Exam trap:</b> PI3-kinase phosphorylates a membrane LIPID (inositol phospholipid), not a protein. The product PIP₃ is a lipid-based second messenger that recruits Akt to the membrane.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. EGFR as a Cancer Target and Therapeutic Strategies</h2>
     <p data-topic="egfr-pathway">
       <b>EGFR (表皮生長因子受體, Epidermal Growth Factor Receptor) pathway overview:</b>
@@ -2683,7 +2678,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="egfr-tki-generations"><b>Exam trap:</b> Acquired resistance mutations (T790M, C797S) arise AFTER treatment — they are not present at baseline in most patients. The arms race of drug generations reflects sequential resistance acquisition.</div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>GPCRs are seven-pass transmembrane proteins; RTKs are single-pass — never mix these up.</li>
@@ -2700,7 +2695,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>GPCR = 7-pass transmembrane; heterotrimeric G protein (α, β, γ); Gα-GDP inactive → Gα-GTP active; signal off by Gα GTPase activity.</li>
@@ -2724,11 +2719,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-19" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(19)">Clear Highlights</button>
   <h1>Lecture 19: THE CELL DIVISION CYCLE</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     The cell division cycle (細胞分裂週期) is the fundamental process by which a eukaryotic cell duplicates its genetic material and divides into two daughter cells. This lecture explores the orchestrated stages of the cycle—growth, DNA replication, and mitosis—and the molecular control systems (cyclins 細胞週期素 and cyclin-dependent kinases) that ensure each step occurs in the correct order. Understanding these checkpoints and regulators is essential because failures in this system lead to uncontrolled cell division and cancer.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Overview of the Cell Division Cycle</h2>
     <p data-topic="cell-cycle-phases">
       • <b>Cell division cycle:</b> The repeating sequence of growth (G1, G2), DNA synthesis (S phase), and nuclear and cytoplasmic division (M phase) by which one cell becomes two identical daughter cells.
@@ -2751,7 +2746,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="cell-cycle-phases"><b>Exam trap:</b> G0 phase (cell cycle arrest) is withdrawal from the cycle, leading to terminal differentiation (終末分化); cells in G0 do not divide. Do not confuse G0 with G1, which is actively progressing toward S phase.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Cell Cycle Checkpoints and Control</h2>
     <p data-topic="g1-s-checkpoint">
       • <b>G1/S checkpoint:</b> A critical control point (檢驗點) where the cell assesses whether conditions are suitable for DNA replication.
@@ -2771,7 +2766,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="dna-damage-response"><b>Exam trap:</b> p53 does not directly stop the cell cycle; instead, it activates p21 transcription. p21 is the actual Cdk inhibitor. Also, X-rays cause DNA damage and activate p53, which is used as a model system in many exam questions.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Cyclins and Cyclin-Dependent Kinases (Cdks)</h2>
     <p data-topic="cyclin-cdk-complex">
       • <b>Cyclin-dependent kinase (Cdk) (週期蛋白依賴激酶):</b> A protein kinase that is inactive on its own; activation requires binding to a cyclin partner.
@@ -2800,7 +2795,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="cyclin-cdk-complex"><b>Exam trap:</b> Cdks are inactive without cyclins—cyclin binding is essential for activation. Also, cyclin concentration, not Cdk concentration, is what varies during the cycle. Cyclin degradation inactivates the Cdk.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Mitosis and Chromosome Segregation</h2>
     <p data-topic="prophase">
       • <b>Prophase:</b> Chromosomes condense (濃聚) into visible coils of chromatin. Centrosomes duplicate and move to opposite poles. The mitotic spindle (有絲分裂紡錘) assembles from microtubules (微管) emanating from centrosomes.
@@ -2839,7 +2834,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="anaphase"><b>Exam trap:</b> Separase must be activated by APC-mediated degradation of securin. If securin is not degraded, separase remains inactive and sister chromatids do not separate.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. DNA Replication and S Phase Preparation</h2>
     <p data-topic="dna-synthesis">
       • <b>DNA synthesis (S phase) (DNA合成):</b> The cell duplicates (複製) its entire genome, resulting in two identical copies of each chromosome.
@@ -2856,7 +2851,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="dna-synthesis"><b>Exam trap:</b> If S phase and M phase occur with no intervening growth (G1 and G2), cells would become progressively smaller without increasing in size. This is a common exam scenario.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. Coordination of the Cell Cycle Sequence</h2>
     <p data-topic="cycle-coordination">
       • <b>Why the sequence matters:</b> DNA must be duplicated first, then segregated (分離). Cells cannot divide properly if this order is reversed (反轉).
@@ -2873,7 +2868,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="cycle-coordination"><b>Exam trap:</b> The question "What happens if cells only undergo S phase and M phase with no G1 and G2?" tests understanding that cells would progressively decrease in size because there is no growth period to compensate for cell division.</div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>G0 is withdrawal from the cycle (terminal differentiation), not the same as G1 phase.</li>
@@ -2887,7 +2882,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Four phases of the cell cycle: G1 (growth), S (DNA synthesis), G2 (growth), M (mitosis and cytokinesis).</li>
@@ -2909,11 +2904,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-20" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(20)">Clear Highlights</button>
   <h1>Lecture 20: Sexual Reproduction & Genetics</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Sexual reproduction generates genetic diversity through the combination of paternal and maternal chromosomes, creating unique organisms better suited to adapt to changing environments. This lecture explores meiosis, the cellular process that produces haploid gametes, and Mendelian genetics, which explains how traits are inherited. Understanding these mechanisms reveals how genetic variation and recombination provide the raw material for evolution and disease resistance.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Asexual vs. Sexual Reproduction</h2>
     <p data-topic="asexual-reproduction">Asexual reproduction (無性生殖) — bacteria and some organisms divide through mitosis (有絲分裂), producing genetically identical clones; simple, efficient, no recombination (重組).</p>
     <p data-topic="sexual-reproduction">Sexual reproduction (有性生殖) — involves fusion (融合) of haploid gametes (配子) from two parents; produces diploid (二倍體) zygote (受精卵) containing unique maternal and paternal chromosomes (染色體).</p>
@@ -2922,7 +2917,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="asexual-sexual-distinction">Exam trap: Asexual reproduction = clones (identical DNA); sexual reproduction = variation. Don't confuse mitosis (somatic cells, identical) with meiosis (germ cells, haploid).</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Meiosis I and II: Generating Haploid Gametes</h2>
     <p data-topic="meiosis-overview">Meiosis (減數分裂) — two cell divisions that convert one diploid (2N) germ cell into four haploid (N) gametes; each gamete contains one copy of each chromosome.</p>
     <p data-topic="meiosis-i-stages">Meiosis I stages (第一次減數分裂): (1) Homologous chromosomes replicate and synapse (配對) to form bivalents (二價體); (2) Crossing-over (交叉互換) occurs between non-sister chromatids (姐妹染色質); (3) Duplicated homologs separate at anaphase, reducing chromosome number to N; (4) Sister chromatids remain attached.</p>
@@ -2931,7 +2926,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="meiosis-stages">Exam trap: In Meiosis I, homologous chromosomes (not sister chromatids) separate — DNA content drops from 4N to 2N. In Meiosis II, sister chromatids separate — 2N becomes N. Crossing-over happens in Meiosis I, not II.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Homologous Recombination and Genetic Variation</h2>
     <p data-topic="homologous-recombination">Homologous recombination (同源重組) — two similar DNA sequences exchange genetic information between non-sister chromatids of homologous chromosomes; major source of genetic variation in sexual reproduction.</p>
     <p data-topic="crossing-over-mechanism">Crossing-over mechanism (交叉互換機制): (1) Recombination proteins (蛋白質) create double-strand breaks (雙鏈斷裂) in DNA; (2) Nuclease digests (降解) 5&apos; ends; (3) Second strand is captured (捕獲); (4) DNA synthesis and ligation (連接) complete the exchange; produces novel allele (對位基因) assortments.</p>
@@ -2940,7 +2935,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="recombination-vs-assortment">Exam trap: Recombination = genes on same chromosome swap places (local change); independent assortment = whole chromosomes randomly inherited (genome-wide change). Both create variation, but through different mechanisms.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Aneuploidy and Chromosome Nondisjunction</h2>
     <p data-topic="nondisjunction">Nondisjunction (不分離) — failure of homologous chromosomes (Meiosis I) or sister chromatids (Meiosis II) to separate; produces aneuploid (非整倍體) gametes with extra or missing copies of a chromosome.</p>
     <p data-topic="down-syndrome">Down syndrome (唐氏症) — trisomy 21; child receives 3 copies of Chromosome 21 instead of 2; results from maternal nondisjunction during Meiosis I or II; associated with maternal age (年齡) — risk increases significantly in pregnancies of women over 35.</p>
@@ -2948,7 +2943,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="nondisjunction-timing">Exam trap: Nondisjunction in Meiosis I affects both products of that division; nondisjunction in Meiosis II affects only one product. Timing determines how many aneuploid gametes are produced.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Mendel&apos;s Laws of Inheritance</h2>
     <p data-topic="mendel-first-law">Mendel&apos;s first law (分離律, law of segregation) — two alleles (對位基因) for each trait separate during gamete formation and reunite randomly at fertilization; diploid organisms inherit one allele from each parent.</p>
     <p data-topic="mendel-monohybrid">Monohybrid cross (單因子雜交) example: yellow-seeded (YY) × green-seeded (yy) parent plants produce F₁ yellow-seeded (Yy) offspring; F₁ self-fertilization yields F₂ ratio of 3:1 (yellow:green) or 1:2:1 (YY:Yy:yy) genotype ratio.</p>
@@ -2958,7 +2953,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="mendel-laws-limitations">Exam trap: Mendel&apos;s laws apply only to nuclear genes with simple dominance (顯性). Linked genes (連鎖基因) violate independent assortment; incomplete dominance, codominance, and epistasis (上位性) modify ratios; organellar genes (細胞器官基因) show maternal inheritance (母本繼承).</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. Genetics as an Experimental Tool</h2>
     <p data-topic="mutagenesis-screens">Forward genetics (正向遺傳) approach — mutagenize (誘變) cells, screen (篩選) for mutant phenotypes; temperature-sensitive mutants (溫度敏感突變體) identify genes regulating behavior; example: identifying genes controlling social feeding vs. solitary behavior in colonies (菌落).</p>
     <p data-topic="mutation-types">Chromosome structural mutations (染色體結構突變): duplication (重複), inversion (倒位), deletion (缺失), insertion (插入), translocation (易位); each alters gene dosage (基因劑量) or gene order (基因順序), affecting phenotype.</p>
@@ -2968,7 +2963,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="mutation-phenotype">Exam trap: Not all mutations cause disease; same mutation can have different effects (variable penetrance and expressivity). Sickle-cell heterozygotes (Ss) have malaria resistance without severe anemia — context matters for phenotypic outcome.</div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>Asexual vs. sexual: Mitosis creates clones; meiosis creates variation.</li>
@@ -2982,7 +2977,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Meiosis produces 4 haploid gametes from 1 diploid cell; Meiosis I reduces chromosome number (homolog separation), Meiosis II separates sister chromatids.</li>
@@ -3005,11 +3000,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-23" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(23)">Clear Highlights</button>
   <h1>Lecture 23: Stem Cell Biology and Cancer</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     This lecture covers two connected topics: stem cell biology (幹細胞生物學) — the biology of cells capable of self-renewal and differentiation — and cancer (癌症), the disease that arises when normal growth controls break down. Understanding how stem cells replenish tissues and how oncogenes and tumor suppressors regulate proliferation explains both regenerative medicine and the multi-step process that drives malignancy. The central throughline is that controlled cell division is essential for life, and its disruption — whether exploited therapeutically or corrupted by mutation — defines both fields.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Stem Cell Types and Potency</h2>
     <p data-topic="stem-cell-types">
       <ul>
@@ -3040,7 +3035,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="stem-cell-types"><b>Exam trap:</b> "Totipotent" applies to embryonic stem cells only — adult stem cells are at most multipotent, never totipotent. Do not confuse multipotent (幾種組織) with pluripotent (多種組織, used in iPS context).</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Embryonic Stem Cells: Source and Applications</h2>
     <p data-topic="es-cells">
       <ul>
@@ -3062,7 +3057,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="es-cells"><b>Exam trap:</b> ES cells come from the ICM of the blastocyst, NOT from the trophoblast — the trophoblast is the feeder/support layer.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Solving ES Cell Limitations: Nuclear Transfer and iPS Cells</h2>
     <p data-topic="nuclear-transfer">
       <b>Somatic cell nuclear transfer (體細胞核移植, SCNT)</b> — the technology used to clone Dolly the sheep (1996):
@@ -3090,7 +3085,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="ips-cells"><b>Exam trap:</b> iPS cells are created by introducing key transcription factor genes into adult cells — NOT by nuclear transplantation and NOT from embryonic stem cells. Confusing iPS with SCNT is a common exam error.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Adult Stem Cells and Therapeutic Applications</h2>
     <p data-topic="adult-stem-cells">
       <ul>
@@ -3124,7 +3119,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="adult-stem-cells"><b>Exam trap:</b> Red blood cells lose their nucleus during differentiation — this is unique among blood cells and is a common MCQ point. Also note: hematopoietic stem cells are multipotent, epidermal/liver stem cells are unipotent.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Cancer: Characteristics, Classification, and Causes</h2>
     <p data-topic="cancer-overview">
       <b>Cancer (癌症)</b> epidemiology:
@@ -3182,7 +3177,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="cancer-classification"><b>Exam trap:</b> Leukemia and lymphoma both arise from blood-forming cells. Carcinoma is from epithelial cells — most common cancers (e.g. lung, breast, colon) are carcinomas, not sarcomas.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. Oncogenes, Tumor Suppressors, and Cancer Treatment</h2>
     <p data-topic="oncogenes">
       <b>Proto-oncogene (原癌基因) → Oncogene (癌基因):</b>
@@ -3240,7 +3235,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="immunotherapy"><b>Exam trap:</b> Tumour cells overexpress PD-L1 (the ligand) to suppress T cells, not PD-1 (the receptor). Anti-PD-L1 therapy restores T-cell killing — it does NOT directly activate T cells; it removes the suppression.</div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>"Totipotent" applies only to embryonic stem cells — adult stem cells are at most multipotent, never totipotent.</li>
@@ -3256,7 +3251,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Potency hierarchy: ES cells = totipotent; hematopoietic stem cells = multipotent; epidermal/liver stem cells = unipotent.</li>
@@ -3278,11 +3273,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-22" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(22)">Clear Highlights</button>
   <h1>Lecture 22: Cell Communities, Tissue Formation, and Apoptosis</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Multicellular life depends on cells cooperating as organised communities — held together by specialised junctions (連接), organised into tissues (組織), and regulated by a balance between proliferation (增殖) and programmed cell death. This lecture covers how epithelial cells form coherent sheets using five distinct junction types, how tissues maintain themselves through constant cell turnover (細胞更新), and how apoptosis (細胞凋亡) — the cellular suicide programme mediated by caspase cascades (半胱天冬蛋白酶連鎖反應) and the mitochondrial intrinsic pathway — keeps tissue homeostasis and eliminates damaged or surplus cells.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Levels of Organisation and Epithelial Tissue</h2>
     <p data-topic="tissue-organisation">
       Biological complexity is nested: molecules → intracellular compartments (細胞內隔室) → cells → tissues → organs → organ systems → organism. Epithelial tissue (上皮組織) is the most widespread tissue type and performs a wide range of specialised functions:
@@ -3299,7 +3294,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="epithelial-polarity"><b>Exam trap:</b> "Basal lamina" is extracellular matrix secreted by the epithelium — do not confuse it with "basement membrane" (基底膜), which also includes connective tissue beneath.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Cell Junctions in Epithelial Sheets</h2>
     <p data-topic="cell-junctions-overview">
       Five major junction types (連接類型) organise and mechanically reinforce epithelial sheets. They differ in cytoskeletal linkage (細胞骨架連接), protein composition, and function. Animal cells use four; plants use plasmodesmata (胞間連絲) instead of gap junctions.
@@ -3364,7 +3359,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="adherens-desmosome"><b>Exam trap:</b> Both adherens junctions and desmosomes use cadherin-family proteins, but they link different cytoskeletal filaments: adherens → actin; desmosomes → keratin intermediate filaments.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Tissue Organisation and Renewal</h2>
     <p data-topic="tissue-types">
       Every tissue is a mixture of cell types coexisting in a shared environment (共同環境). Four major animal tissue types:
@@ -3389,7 +3384,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="tissue-renewal"><b>Exam trap:</b> "Tissue renewal" does not mean all cells divide continuously. Neurons are largely non-dividing; their numbers are maintained by preventing apoptosis, not by replacement.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Apoptosis: Programmed Cell Death</h2>
     <p data-topic="apoptosis-overview">
       Apoptosis (細胞凋亡) is programmed cellular suicide (程序性細胞自殺) — an active, genetically controlled process distinct from necrosis (壞死). Key morphological (形態學) features:
@@ -3426,7 +3421,7 @@ tr.weak-highlight{box-shadow:none}
     </p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Caspase Cascade and the Intrinsic Apoptotic Pathway</h2>
     <p data-topic="caspase-cascade">
       Caspases (半胱天冬蛋白酶) are cysteine proteases (半胱氨酸蛋白酶) that cleave substrates after aspartate residues (天冬氨酸殘基). They exist as inactive procaspases (前半胱天冬蛋白酶); cleavage removes the prodomain (前結構域) to yield an active heterotetramer (異四聚體) of two large and two small subunits.
@@ -3503,7 +3498,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="intrinsic-pathway"><b>Exam trap:</b> The intrinsic pathway is initiated by mitochondria (粒線體), not the ER, lysosomes, or peroxisomes. The key signal is cytochrome c release from the mitochondrial intermembrane space.</div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>Tight junctions seal intercellular space and maintain polarity — they do NOT provide mechanical strength.</li>
@@ -3518,7 +3513,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Five junction types, their key proteins, cytoskeletal links, and functions (tight → occludin/claudin/actin; adherens → cadherin/actin; desmosome → cadherin/keratin; hemidesmosome → integrin/keratin/basal lamina; gap → connexon/ions)</li>
@@ -3538,11 +3533,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-21" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(21)">Clear Highlights</button>
   <h1>Lecture 21: The Extracellular Matrix (ECM)</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Every cell in a multicellular organism lives within a scaffold of its own making — the extracellular matrix (細胞外基質). This lecture examines how the ECM is built from collagen, proteoglycans, and adhesion proteins such as fibronectin; how cells anchor to it and sense its mechanical properties via integrin receptors; and how the ECM controls everything from stem-cell differentiation and milk-protein expression in mammary glands to cancer progression and metastasis. The key insight from Prof. Mina Bissell's work is that context — the ECM — is as instructive as the genome.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. ECM Overview: Composition, Location, and Functions</h2>
     <p data-topic="ecm-overview">
       <ul>
@@ -3589,7 +3584,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="ecm-overview"><b>Exam trap:</b> The basal lamina and the basement membrane are NOT the same thing. The basement membrane includes both the basal lamina and the reticular lamina beneath it.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Collagen: Structure, Synthesis, and Assembly</h2>
     <p data-topic="collagen-structure">
       <strong>Key facts:</strong>
@@ -3638,7 +3633,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="collagen-synthesis"><b>Exam trap:</b> Procollagen propeptides are cleaved OUTSIDE the cell, not inside. Assembly into fibrils occurs only in the extracellular space — this is the regulatory mechanism preventing intracellular fibril formation.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Fibronectin and Integrin: Linking ECM to Cytoskeleton</h2>
     <p data-topic="fibronectin">
       <strong>Fibronectin (纖維連結蛋白):</strong>
@@ -3694,7 +3689,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="integrin"><b>Exam trap:</b> Integrins do NOT have enzymatic activity themselves — they relay signals via adaptor proteins that connect to the actin cytoskeleton and downstream kinase cascades.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Proteoglycans and Glycosaminoglycans (GAGs)</h2>
     <p data-topic="proteoglycan">
       <strong>Glycosaminoglycans (GAGs) (糖胺聚醣):</strong>
@@ -3720,7 +3715,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="proteoglycan"><b>Exam trap:</b> GAGs are covalently attached to core proteins — proteoglycans are NOT pure polysaccharides. Hyaluronan (a GAG) is an exception: it is NOT covalently attached to protein and is not technically a proteoglycan.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. ECM and Cancer Progression</h2>
     <p data-topic="ecm-cancer">
       <strong>ECM remodelling in the tumour microenvironment (腫瘤微環境):</strong>
@@ -3754,7 +3749,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="ecm-cancer"><b>Exam trap:</b> The β1-integrin antibody experiment shows phenotypic reversion, NOT genetic correction — the tumour cell genome is unchanged. This is evidence that ECM context regulates cell behaviour independently of genetic mutations.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. Plant Cell Wall</h2>
     <p data-topic="plant-cell-wall">
       <strong>Composition of the plant cell wall (植物細胞壁):</strong>
@@ -3773,7 +3768,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="plant-cell-wall"><b>Exam trap:</b> The middle lamella is the outermost shared layer between adjacent plant cells — it is NOT part of one cell's wall alone. It consists mainly of pectin, not cellulose.</div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>Basal lamina ≠ basement membrane: basement membrane = basal lamina + reticular lamina.</li>
@@ -3786,7 +3781,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>ECM functions: structural support, anchorage site (stem cell differentiation, tissue polarity), migration track/barrier, signal reservoir/co-receptor/presenter.</li>
@@ -3865,7 +3860,6 @@ function showPage(id) {
     const lid = parseInt(id.split('-')[1]);
     applyWeakHighlights(lid);
   }
-  setTimeout(initReveal, 50);
 }
 
 function computeWeakSections(lid) {
@@ -4043,7 +4037,7 @@ function renderQuiz(lid) {
   let h = '';
   state.filteredIndices.forEach((qi, displayIdx) => {
     const q = lec.questions[qi];
-    h += '<div class="q-block reveal-on-scroll" id="q-'+lid+'-'+qi+'">';
+    h += '<div class="q-block" id="q-'+lid+'-'+qi+'">';
     h += '<div class="q-num">Question ' + (displayIdx+1) + ' of ' + state.filteredIndices.length + ' <span style="margin-left:8px;padding:1px 6px;background:var(--accent-soft);border-radius:3px;font-size:.85em">'+q.difficulty+'</span></div>';
     h += '<div class="q-text">' + escapeHtml(q.q) + '</div>';
     q.options.forEach((opt, oi) => {
@@ -4181,7 +4175,7 @@ function renderPostQuiz(lid) {
   });
   const themes = Object.keys(themeCount).sort((a,b)=>themeCount[b]-themeCount[a]);
 
-  let h = '<div class="summary reveal-on-scroll reveal-delay-1">';
+  let h = '<div class="summary">';
   h += '<h2>Summary Report</h2>';
 
   // Add progress ring visualization
@@ -4224,8 +4218,8 @@ function renderPostQuiz(lid) {
     s.wrongQuestions.forEach((qi, idx) => {
       const q = lec.questions[qi];
       const chosen = s.choices[qi];
-      const delay = ['','reveal-delay-1','reveal-delay-2','reveal-delay-3'][idx%4];
-      h += '<div class="review-card reveal-on-scroll '+delay+'">';
+      const delay = ['','','',''][idx%4];
+      h += '<div class="review-card '+delay+'">';
       h += '<div class="q-num">Question '+(qi+1)+'</div>';
       h += '<div class="q-text">'+escapeHtml(q.q)+'</div>';
       q.options.forEach((opt, oi) => {
@@ -4239,7 +4233,6 @@ function renderPostQuiz(lid) {
     });
   }
   document.getElementById('postquiz-'+lid).innerHTML = h;
-  setTimeout(initReveal, 50);
 }
 
 function showGlobalReport(){ showPage('global-report'); }
@@ -4319,24 +4312,6 @@ function renderGlobalReport() {
   document.getElementById('global-body').innerHTML = h;
 }
 
-// ===== Reveal-on-scroll =====
-function initReveal() {
-  const els = document.querySelectorAll('.reveal-on-scroll:not(.is-visible)');
-  if (!('IntersectionObserver' in window)) {
-    els.forEach(el => el.classList.add('is-visible'));
-    return;
-  }
-  const obs = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { root:null, rootMargin:'0px', threshold:0.15 });
-  els.forEach(el => obs.observe(el));
-}
-
 // ===== Init on load =====
 function updateHomeStatus() {
   lectures.forEach(lec => {
@@ -4360,12 +4335,10 @@ function updateHomeStatus() {
 function renderHomeCards() {
   const container = document.getElementById('lecture-cards');
   if (!container) return;
-  const delays = ['reveal-delay-1','reveal-delay-2','reveal-delay-3'];
-  container.innerHTML = lectures.map((lec, idx) => {
-    const delay = delays[idx % 3];
+  container.innerHTML = lectures.map(lec => {
     const titleHtml = escapeHtml(lec.title);
     return `
-    <div class="card reveal-on-scroll ${delay}">
+    <div class="card ${delay}">
       <div class="lec-row">
         <div class="lec-title">${titleHtml}</div>
         <div>
@@ -4424,7 +4397,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       saveState();
       updateHomeStatus();
-      initReveal();
     })
     .catch(err => {
       console.error('Failed to load data/2040.json:', err);

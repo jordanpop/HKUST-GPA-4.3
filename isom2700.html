@@ -66,11 +66,6 @@ th{background:var(--accent-soft)}
 .review-card .q-text{color:var(--wrong)}
 .memorize ol{padding-left:24px}
 .memorize li{margin:6px 0}
-.reveal-on-scroll{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.4,0,.2,1);will-change:opacity,transform}
-.reveal-on-scroll.is-visible{opacity:1;transform:translateY(0)}
-.reveal-delay-1{transition-delay:.1s}
-.reveal-delay-2{transition-delay:.2s}
-.reveal-delay-3{transition-delay:.3s}
 .submit-q{margin-top:10px}
 .quiz-settings{margin-top:12px;padding:10px 14px;background:var(--accent-soft);border-radius:4px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:.92em}
 .quiz-settings label{display:flex;align-items:center;gap:6px;color:var(--ink)}
@@ -129,11 +124,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-5" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(5)">Clear Highlights</button>
   <h1>Lecture 5: Revenue Management</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Revenue management (收益管理) is the discipline of selling the right product to the right customer at the right time for the right price. It combines dynamic pricing, capacity control, and overbooking to squeeze maximum revenue out of fixed or perishable capacity. The core insight is that uniform pricing leaves money on the table: customers differ in willingness to pay, and demand accumulates over time in predictable patterns that firms can exploit.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Dynamic Pricing and Willingness to Pay</h2>
     <p data-topic="dynamic-pricing">
       Dynamic pricing (動態定價) treats price as a management control variable rather than a fixed parameter.
@@ -181,7 +176,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="wtp-optimization"><b>Exam trap:</b> The revenue-maximizing price is NOT always the highest WTP. You must compute price × cumulative demand at every candidate price and compare — the optimum is often a mid-range price where cumulative demand is large enough to compensate for the lower price.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Capacity Control and Protection Levels</h2>
     <p data-topic="capacity-control">
       Capacity control (產能控制) allocates limited seats or rooms across fare classes (票價等級) to maximize total revenue. Airlines routinely sell the same physical seat at multiple price points depending on when and how the ticket is booked.
@@ -241,7 +236,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="newsvendor-protection"><b>Exam trap:</b> In capacity control, C_o = f_L (the discount fare, not zero) and C_u = f_H − f_L (the revenue difference, not the full fare). Students commonly set C_o = 0 or C_u = f_H — both are wrong. The seat is not worthless unsold if a discount buyer existed; the opportunity cost is f_L.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Overbooking</h2>
     <p data-topic="overbooking-concept">
       Overbooking (超額預訂) means selling more reservations than actual capacity to hedge against no-shows (未出現) and cancellations (取消). Because no-show quantity is random, the firm must choose an overbooking quantity Q that balances the two error costs.
@@ -293,7 +288,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="overbooking-approach3"><b>Exam trap:</b> The net overage cost in overbooking problems is often C_o = (total denied-boarding cost) − (ticket price already paid), not the full stated compensation. For example, if denied-boarding total cost = $405 and ticket = $105, then net C_o = $300. Always subtract the ticket price already received.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Marginal Analysis — General Framework</h2>
     <p data-topic="marginal-analysis-general">
       The newsvendor (報童模型) / marginal analysis (邊際分析) framework unifies capacity control and overbooking. It answers: how much of a scarce resource (稀缺資源) should I commit to a use, given uncertain demand?
@@ -337,7 +332,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="critical-factor-implications"><b>Exam trap:</b> The critical factor formula is always C_u / (C_u + C_o) — not C_u / C_o and not C_o / (C_u + C_o). Mixing up numerator and denominator gives a complementary probability, leading to a Q* on the wrong side of the distribution.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Revenue Management Strategy and Framework</h2>
     <p data-topic="rm-framework">
       Revenue management (RM) sits at the intersection of strategic and operational decisions. The framework organises decisions into two tiers:
@@ -391,7 +386,7 @@ tr.weak-highlight{box-shadow:none}
     </svg>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>The revenue-maximizing price is NOT always the highest WTP — compute price × cumulative demand at every price point; the optimum is often a mid-range price.</li>
@@ -404,7 +399,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Revenue = price × min{demand, capacity}; optimal price maximizes this product, not the unit price alone.</li>
@@ -427,11 +422,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-4" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(4)">Clear Highlights</button>
   <h1>Lecture 4: Managing Short Life Cycle Products – Newsvendor Model</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     When products perish, go out of season, or become obsolete quickly, the usual replenishment logic breaks down: you must commit to an order quantity before you know actual demand, and any surplus or shortage carries a direct cost. The Newsvendor Model (報攤模型) gives a principled answer to this one-shot ordering decision by balancing the cost of over-ordering against the cost of under-ordering through a single number called the Critical Ratio (臨界比率). Mastering this model means understanding both the formula and the two computational approaches — marginal analysis for discrete demand and the normal-distribution formula for continuous demand.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. The Newsvendor Problem: Setup and Motivation</h2>
     <p data-topic="newsvendor-definition">
       The newsvendor problem (報攤問題) captures any situation with three features simultaneously:
@@ -462,7 +457,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="newsvendor-tradeoff"><b>Exam trap:</b> Students often assume ordering the average demand is always optimal. It is not — optimal quantity shifts above or below the mean depending on whether underage or overage cost dominates.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Cost Structure and the Critical Ratio</h2>
     <p data-topic="cost-structure">
       Define the two unit mismatch costs (不匹配成本):
@@ -530,7 +525,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="critical-ratio"><b>Exam trap:</b> C<sub>u</sub> and C<sub>o</sub> are defined as per-unit mismatch costs, not total revenue or total cost. Always derive them as incremental values: C<sub>o</sub> = purchase cost − salvage; C<sub>u</sub> = selling price − purchase cost.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Solution Approach 1 — Payoff Table (Discrete Demand)</h2>
     <p data-topic="payoff-table">
       Used when demand is discrete (離散需求) with a small number of possible values. Steps:
@@ -588,7 +583,7 @@ tr.weak-highlight{box-shadow:none}
     </svg>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Solution Approach 2 — Marginal Analysis (Discrete Demand)</h2>
     <p data-topic="marginal-analysis">
       Marginal analysis (邊際分析) asks: should we stock the (Q+1)th unit? Stop increasing Q when expected marginal cost ≥ expected marginal benefit.
@@ -629,7 +624,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="marginal-analysis-procedure"><b>Exam trap:</b> When using a discrete cumulative table, select the smallest Q where P(D ≤ Q) is at least (≥) the Critical Ratio — not strictly greater than. If P(D ≤ Q) exactly equals CR, that Q is already optimal; do not move to the next level.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Solution Approach 3 — Normal Distribution (Continuous Demand)</h2>
     <p data-topic="normal-distribution-approach">
       When demand is approximately normally distributed (常態分佈) — typically when the number of possible demand values is large — use the standard normal formula:
@@ -719,7 +714,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="normal-distribution-approach"><b>Exam trap:</b> For Mr. Choi's newspaper problem, the critical ratio is 3/(3+4) = 0.4286, giving z = −0.18 and Q* = 100 + (−0.18)(12) = 97.84 ≈ 98 copies — below the mean. Students often force z to be positive or round incorrectly. A negative z is valid and means ordering below average is optimal.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. Choosing the Right Solution Approach</h2>
     <p data-topic="solution-approach-selection">
       The three approaches cover different data situations:
@@ -765,7 +760,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>Ordering the average demand is NOT optimal unless C<sub>u</sub> = C<sub>o</sub> exactly.</li>
@@ -778,7 +773,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Critical Ratio formula: CR = C<sub>u</sub> / (C<sub>u</sub> + C<sub>o</sub>), where C<sub>u</sub> = price − cost, C<sub>o</sub> = cost − salvage.</li>
@@ -802,11 +797,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-3" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(3)">Clear Highlights</button>
   <h1>Lecture 3: Inventory Management</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Inventory management (存貨管理) is the discipline of deciding how much stock to hold and when to replenish it so that operations run without interruption while costs are minimised. Every firm faces a core tension: holding too little risks stockouts and lost sales, yet holding too much ties up capital, hides operational problems, and generates waste. This lecture builds from the basic role of inventory through practical classification and counting methods to four quantitative models — EOQ, EPQ, quantity-discount EOQ, and probabilistic EOQ — each suited to a different demand environment.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. The Role and Purpose of Inventory</h2>
     <p data-topic="inventory-definition">
       Inventory (存貨) is the stock of any item or resource used in an organisation, encompassing:
@@ -846,7 +841,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Inventory Management Practices</h2>
     <p data-topic="abc-classification">ABC classification (ABC分類法) applies the 80/20 principle (二八原則, "critical few, trivial many") to rank stock-keeping units (SKUs) by annual dollar usage (年度美元用量):</p>
 
@@ -923,7 +918,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. EOQ Model — Basic Economic Order Quantity</h2>
     <p data-topic="inventory-control-questions">Two fundamental inventory control questions (庫存控制問題):</p>
     <ul>
@@ -1022,7 +1017,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="eoq-formula"><b>Exam trap:</b> At the EOQ optimum, annual setup cost equals annual holding cost. Students often forget this equality and try to minimise by calculus alone — but recognising the equality is the fastest check.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. EPQ Model — Economic Production Quantity and Make vs. Buy</h2>
     <p data-topic="make-vs-buy">Make vs. buy break-even analysis (自製vs外購損益平衡分析):</p>
     <ul>
@@ -1065,7 +1060,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="epq-formulas"><b>Exam trap:</b> In EPQ, maximum inventory is NOT equal to Q. It equals Q × (p−d)/p because inventory is built up gradually during the production phase, not received all at once as in EOQ.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. EOQ with Quantity Discounts</h2>
     <p data-topic="quantity-discount-assumptions">Quantity discount (數量折扣) EOQ — same assumptions as basic EOQ except product unit cost C is a function of order quantity Q (price breaks at certain volume thresholds).</p>
 
@@ -1129,7 +1124,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="quantity-discount-procedure"><b>Exam trap:</b> Always evaluate the feasible EOQ AND all higher price break-points. Do NOT stop at the feasible EOQ — a break-point with a lower unit price frequently yields a lower total cost despite higher holding costs.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. Probabilistic EOQ — Safety Stock and Service Level</h2>
     <p data-topic="probabilistic-demand">When demand during lead time (前置時間需求) fluctuates, the classic reorder point R = dL understates the stock needed. The probabilistic EOQ (概率性EOQ) model retains the EOQ formula for Q* but adjusts the reorder point.</p>
 
@@ -1181,7 +1176,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="safety-stock"><b>Exam trap:</b> σ_L is not simply L × σ_d. It is √L × σ_d because independent daily demands add in variance (方差), not standard deviation. Squaring then taking the square root is essential.</div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>Safety stock vs. cycle stock — safety stock buffers uncertainty; cycle stock results from economies of scale. Do not mix them up.</li>
@@ -1194,7 +1189,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>EOQ formula: Q* = √(2DS/H); at Q* annual setup cost = annual holding cost</li>
@@ -1218,11 +1213,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-7" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(7)">Clear Highlights</button>
   <h1>Lecture 7: Just in Time System</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Just-in-Time (JIT) is a management philosophy originating from Toyota's post-WWII production system that targets the elimination of all forms of waste by producing only what is needed, when it is needed, and in the exact quantity needed. It operates as a demand-pull system that exposes hidden operational problems rather than masking them with excess inventory. Its principles now extend beyond manufacturing to supply chain delivery, purchasing, and service operations, making it one of the most influential operations management frameworks in modern industry.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Lean Production and the Concept of Waste</h2>
     <p data-topic="lean-production-waste">
       Lean production (精益生產) is a systematic focus on eliminating as much waste (浪費) as possible while operating with precision and remaining responsive to demand. It traces its roots to Henry Ford's mass production system and Toyota's continuous improvement (持續改善) efforts after World War II.
@@ -1278,7 +1273,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="lean-production-waste"><b>Exam trap:</b> Students often confuse "non-value-added but required" (business value-added) with pure waste. Business value-added activities cannot simply be eliminated — they are legally or operationally necessary, unlike true waste. Do not lump them together.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. JIT Philosophy and the Toyota Production System (TPS)</h2>
     <p data-topic="jit-tps-principles">
       Just-in-Time (及時生產) is both a management philosophy (管理哲學) and a production control approach. Also known as the Toyota Production System (豐田生產方式, TPS), it attacks waste systematically and exposes hidden operational problems by removing the inventory buffer that conceals them.
@@ -1332,7 +1327,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="jit-tps-principles"><b>Exam trap:</b> JIT and TPS are often used interchangeably, but TPS is the specific Toyota implementation. JIT is the broader philosophy. Also, the pull system responds to actual orders — not forecasts. A push system uses forecasts.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Inventory as a Problem-Hider and JIT Exposure Logic</h2>
     <p data-topic="inventory-hides-problems">
       Inventory acts like water in a river: it hides rocks (operational problems) beneath the surface. The JIT approach deliberately reduces inventory (water level) so that problems become visible and can be resolved.
@@ -1393,7 +1388,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="inventory-hides-problems"><b>Exam trap:</b> JIT does not simply remove inventory to save cost — its deeper purpose is to surface hidden problems so they can be fixed. Treating inventory reduction as purely a cost-saving measure misses the diagnostic logic of JIT.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. JIT Implementation Requirements</h2>
     <p data-topic="jit-implementation">
       Implementing JIT requires coordinated changes across five areas: process design, quality improvement, production scheduling, vendor relationships, and inventory/product design.
@@ -1446,7 +1441,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Kanban System</h2>
     <p data-topic="kanban-system">
       Kanban (看板) means card, sign, or instruction card in Japanese. It is the mechanism by which JIT implements demand-pull control across a plant and its supplier network, regulating inventory levels and production quantities through the physical movement of cards.
@@ -1487,7 +1482,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="kanban-system"><b>Exam trap:</b> A Kanban card does not authorize unlimited production — it authorizes production of the exact quantity written on the card. The total inventory in the system is capped by the total number of cards. Increasing cards increases WIP; reducing cards forces problem-solving.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. Small Lot Sizes, Levelled Scheduling, and JIT Resilience</h2>
     <p data-topic="small-lots-levelling">
       JIT production targets small batch sizes to reduce work-in-process (在製品) inventory and stabilize work schedules. This is only feasible when setup / changeover times (換模時間) are drastically reduced.
@@ -1558,7 +1553,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="small-lots-levelling"><b>Exam trap:</b> Levelled scheduling is often mistaken for capacity reduction. The lecture explicitly states that level schedules require no significant loss of capacity or added cost. The benefit is inventory reduction, not capacity sacrifice.</div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>Business value-added (non-value-added but required) activities are NOT the same as waste — they cannot simply be eliminated.</li>
@@ -1572,7 +1567,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>7 forms of waste: Defects, Overproduction, Inventory, Waiting, Excess motion, Over-processing, Transportation.</li>
@@ -1596,11 +1591,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-6" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(6)">Clear Highlights</button>
   <h1>Lecture 6: Supply Chain Management</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Supply chain management (供應鏈管理) coordinates the flow of goods, information, and finances from raw material procurement to final customer delivery. The central challenge is aligning demand signals with supply capacity so that costs stay low and customers stay satisfied. Two structural decisions dominate the field: where to place the push-pull boundary, and how tightly to integrate the chain's tiers. Technology increasingly enables the real-time visibility and automation that make both decisions executable.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Supply Chain Management Fundamentals</h2>
     <p data-topic="scm-definition">
       Supply chain management (SCM) (供應鏈管理) encompasses the management of goods (貨物), information (資訊), and financial flows (資金流動) related to a product or service, from raw material procurement (原材料採購) to final delivery.
@@ -1638,7 +1633,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="scm-definition"><b>Exam trap:</b> Cash flow runs <em>upstream</em> (from customer to supplier), not downstream like the physical product flow. Information flow is the only bidirectional flow.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. The Bullwhip Effect</h2>
     <p data-topic="bullwhip-definition">
       The bullwhip effect (長鞭效應) describes how small fluctuations in customer demand get progressively amplified as orders move upstream through the supply chain — from retailer (零售商) to wholesaler (批發商) to distributor (分銷商) to factory (工廠/啤酒廠).
@@ -1685,7 +1680,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="bullwhip-definition"><b>Exam trap:</b> The bullwhip effect is not caused by actual demand being volatile — daily demand in the Beer Game follows a stable Poisson distribution (mean = 1 unit per retailer). The amplification is entirely systemic, caused by information lag and independent decision-making, not by real demand swings.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Push vs. Pull Supply Chain Models</h2>
     <p data-topic="push-pull-definition">
       Supply chains choose between two fundamental operating philosophies based on whether production is triggered by forecasts or by actual customer demand.
@@ -1811,7 +1806,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="push-pull-boundary"><b>Exam trap:</b> Zara is often cited as a pure pull company, but it is actually a hybrid. Fabric (generic, low-cost) is pushed; the final garment (cut, dye, assembly) is pulled. Do not classify companies as purely push or pull without checking where their boundary sits.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Supply Chain Integration</h2>
     <p data-topic="integration-types">
       Supply chain integration (供應鏈整合) refers to the degree of coordination and ownership across chain tiers. Two major forms:
@@ -1839,7 +1834,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="outsourcing-decision"><b>Exam trap:</b> The outsourcing decision tree requires ALL three conditions (strategic importance, specialized knowledge, superior performance) to favor keeping an activity in-house. If even one is absent, outsourcing may be appropriate — but "significant performance improvement likely" can override poor current performance.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Technology Impacts on Supply Chain Management</h2>
     <p data-topic="scm-pain-points">
       Common pain points in traditional SCM environments:
@@ -1944,7 +1939,7 @@ tr.weak-highlight{box-shadow:none}
     </svg>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>Cash flow runs upstream (customer to supplier); information flow is the only bidirectional flow. Physical flow is downstream.</li>
@@ -1956,7 +1951,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Three SCM flows: Physical (downstream), Cash (upstream), Information (bidirectional)</li>
@@ -1980,11 +1975,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-2" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(2)">Clear Highlights</button>
   <h1>Lecture 2: Demand Management and Forecasting – Forecasting Models</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     This lecture covers the core quantitative models used to forecast demand over time. Starting from simple averages, it builds toward exponential smoothing and linear regression, each model adding a layer of sophistication to handle trends and noise. The central throughline is the trade-off between responsiveness and stability: no single parameter choice is universally optimal, and selecting the right model requires understanding what pattern the demand data actually exhibits.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Simple Moving Average</h2>
     <p data-topic="simple-moving-average">Simple moving average (簡單移動平均) is appropriate when demand (需求) is stable — no rapid growth, no decline, and no seasonal fluctuations (季節性波動). The forecast for period t is the arithmetic mean of the n most recent actual demand values.</p>
     <ul>
@@ -2042,7 +2037,7 @@ tr.weak-highlight{box-shadow:none}
     </svg>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Weighted Moving Average</h2>
     <p data-topic="weighted-moving-average">Weighted moving average (加權移動平均) assigns different weights (權重) to each past period, allowing the most recent data to carry more influence. All weights must sum to 1.</p>
     <ul>
@@ -2083,7 +2078,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="weighted-moving-average"><b>Exam trap:</b> In WMA, the weights must sum exactly to 1. If a question gives weights that do not sum to 1, the formula is invalid. Also, "most recent" week uses weight w<sub>1</sub> applied to A<sub>t−1</sub>, not A<sub>t</sub> — the current period's actual demand is not yet known when forming the forecast.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Simple Exponential Smoothing (SES)</h2>
     <p data-topic="ses-concept">Simple exponential smoothing (簡單指數平滑法) provides an exponentially weighted moving average of all previously observed values. It is appropriate for data with no predictable upward or downward trend (趨勢). The aim is to estimate the current level and use it as the forecast of the next period.</p>
 
@@ -2144,7 +2139,7 @@ tr.weak-highlight{box-shadow:none}
     </svg>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Exponential Smoothing with Trend Adjustment (Holt's Method)</h2>
     <p data-topic="holts-method">Holt's method (霍爾特法) extends SES to handle data with a trend component (趨勢成分). It maintains two smoothing equations: one for the level (水平) F and one for the trend T, combining them into a trend-adjusted forecast FIT.</p>
 
@@ -2174,7 +2169,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="holts-method"><b>Exam trap:</b> In Holt's method, the trend T is updated using (F<sub>t</sub> − FIT<sub>t−1</sub>), not (A<sub>t</sub> − FIT<sub>t−1</sub>). Do not substitute actual demand into the trend update equation.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Simple Linear Regression for Forecasting</h2>
     <p data-topic="linear-regression-concept">Simple linear regression (簡單線性回歸) is a statistical technique used to describe the relationship between a dependent variable (因變量) y and one independent variable (自變量) x. When applied to time-series demand, x = time period t.</p>
 
@@ -2222,7 +2217,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="regression-formulas"><b>Exam trap:</b> The "n" in the regression formulas refers to the number of observations (e.g. 6 months), not the period length of a moving average. Also, t̄ is the mean of the time indices (1,2,3…n), not the mean of demand — mixing up t̄ and ȳ in the formula leads to wrong b and a values.</div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>Simple moving average assigns equal weight to all n periods — it does NOT favor recent data.</li>
@@ -2234,7 +2229,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>SMA formula: F<sub>t</sub> = (A<sub>t−1</sub> + … + A<sub>t−n</sub>) / n; shorter n = more responsive, longer n = smoother</li>
@@ -2256,11 +2251,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-1" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(1)">Clear Highlights</button>
   <h1>Lecture 1: Demand Management and Forecasting</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Demand management sits at the heart of supply chain operations: a firm must decide how much to sell, at what price, and how much capacity to maintain — all before customer orders arrive. Forecasting (預測) provides the quantitative foundation for these decisions, translating past demand patterns into actionable estimates of the future. The lecture covers what makes forecasting hard, how to measure forecast accuracy, and which quantitative models suit which data patterns.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Demand Management</h2>
     <p data-topic="demand-management">Demand management (需求管理) is the process of optimizing customer demand against available capacity to maximize a company's profit. It has two dimensions:</p>
     <ul>
@@ -2290,7 +2285,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="demand-management"><b>Exam trap:</b> "Demand management" is not the same as "demand forecasting." Forecasting is a tool within demand management; management also includes active tactics like pricing and promotions to shape demand.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Principles of Demand Forecasting</h2>
     <p data-topic="forecasting-principles">Five foundational principles govern any forecasting exercise:</p>
     <ul>
@@ -2328,7 +2323,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="forecasting-principles"><b>Exam trap:</b> Aggregate forecasts are more accurate than individual forecasts — not the other way around. Exam questions sometimes invert this to test awareness.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Measuring Forecast Accuracy</h2>
     <p data-topic="forecast-error">Forecast error (預測誤差) is defined as: <b>Error = Actual − Forecast</b>. Three higher-level measures build on this:</p>
     <table>
@@ -2386,7 +2381,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="tracking-signal"><b>Exam trap:</b> A low MAD alone does not mean a forecast is unbiased. Method 2 has the same MAD as Method 1 by month 5 ($40M), yet its tracking signal reveals strong positive bias. Always check both MAD and TS.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Qualitative vs. Quantitative Forecasting</h2>
     <p data-topic="qualitative-forecasting">Qualitative forecasting (定性預測) relies on expert judgment when historical data are scarce or unavailable.</p>
     <ul>
@@ -2420,7 +2415,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="quantitative-forecasting"><b>Exam trap:</b> Simple moving average and simple exponential smoothing handle stationary patterns only — they cannot capture trends or seasonality. Applying them to trended data will produce a lagging, biased forecast.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Time Series Components</h2>
     <p data-topic="time-series-components">Every time series (時間序列) can be decomposed into four components:</p>
     <table>
@@ -2461,7 +2456,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="time-series-components"><b>Exam trap:</b> The cyclical component is often confused with the seasonal component. Seasonal patterns repeat within a fixed 12-month window; cyclical swings span 2–10 years and vary in intensity and length.</div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>"Demand management" encompasses both forecasting and active demand-shaping tactics; forecasting alone is not demand management.</li>
@@ -2472,7 +2467,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Forecast Error = Actual − Forecast (positive = under-forecast; negative = over-forecast)</li>
@@ -2552,7 +2547,6 @@ function showPage(id) {
     const lid = parseInt(id.split('-')[1]);
     applyWeakHighlights(lid);
   }
-  requestAnimationFrame(() => requestAnimationFrame(initReveal));
 }
 
 function computeWeakSections(lid) {
@@ -2730,7 +2724,7 @@ function renderQuiz(lid) {
   let h = '';
   state.filteredIndices.forEach((qi, displayIdx) => {
     const q = lec.questions[qi];
-    h += '<div class="q-block reveal-on-scroll" id="q-'+lid+'-'+qi+'">';
+    h += '<div class="q-block" id="q-'+lid+'-'+qi+'">';
     h += '<div class="q-num">Question ' + (displayIdx+1) + ' of ' + state.filteredIndices.length + ' <span style="margin-left:8px;padding:1px 6px;background:var(--accent-soft);border-radius:3px;font-size:.85em">'+q.difficulty+'</span></div>';
     h += '<div class="q-text">' + escapeHtml(q.q) + '</div>';
     q.options.forEach((opt, oi) => {
@@ -2868,7 +2862,7 @@ function renderPostQuiz(lid) {
   });
   const themes = Object.keys(themeCount).sort((a,b)=>themeCount[b]-themeCount[a]);
 
-  let h = '<div class="summary reveal-on-scroll reveal-delay-1">';
+  let h = '<div class="summary">';
   h += '<h2>Summary Report</h2>';
 
   // Add progress ring visualization
@@ -2911,8 +2905,8 @@ function renderPostQuiz(lid) {
     s.wrongQuestions.forEach((qi, idx) => {
       const q = lec.questions[qi];
       const chosen = s.choices[qi];
-      const delay = ['','reveal-delay-1','reveal-delay-2','reveal-delay-3'][idx%4];
-      h += '<div class="review-card reveal-on-scroll '+delay+'">';
+      const delay = ['','','',''][idx%4];
+      h += '<div class="review-card '+delay+'">';
       h += '<div class="q-num">Question '+(qi+1)+'</div>';
       h += '<div class="q-text">'+escapeHtml(q.q)+'</div>';
       q.options.forEach((opt, oi) => {
@@ -2926,7 +2920,6 @@ function renderPostQuiz(lid) {
     });
   }
   document.getElementById('postquiz-'+lid).innerHTML = h;
-  requestAnimationFrame(() => requestAnimationFrame(initReveal));
 }
 
 function showGlobalReport(){ showPage('global-report'); }
@@ -3006,32 +2999,6 @@ function renderGlobalReport() {
   document.getElementById('global-body').innerHTML = h;
 }
 
-// ===== Reveal-on-scroll =====
-function initReveal() {
-  // Only observe elements inside the currently active page
-  const activePage = document.querySelector('.page.active');
-  const scope = activePage || document;
-  const els = scope.querySelectorAll('.reveal-on-scroll:not(.is-visible)');
-  if (!els.length) return;
-  if (!('IntersectionObserver' in window)) {
-    els.forEach(el => el.classList.add('is-visible'));
-    return;
-  }
-  const obs = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { root:null, rootMargin:'0px', threshold:0.1 });
-  els.forEach(el => obs.observe(el));
-  // Fallback: force-show any element still hidden after 600ms
-  setTimeout(() => {
-    els.forEach(el => el.classList.add('is-visible'));
-  }, 600);
-}
-
 // ===== Init on load =====
 function updateHomeStatus() {
   lectures.forEach(lec => {
@@ -3055,12 +3022,10 @@ function updateHomeStatus() {
 function renderHomeCards() {
   const container = document.getElementById('lecture-cards');
   if (!container) return;
-  const delays = ['reveal-delay-1','reveal-delay-2','reveal-delay-3'];
-  container.innerHTML = lectures.map((lec, idx) => {
-    const delay = delays[idx % 3];
+  container.innerHTML = lectures.map(lec => {
     const titleHtml = escapeHtml(lec.title);
     return `
-    <div class="card reveal-on-scroll ${delay}">
+    <div class="card ${delay}">
       <div class="lec-row">
         <div class="lec-title">${titleHtml}</div>
         <div>
@@ -3119,7 +3084,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       saveState();
       updateHomeStatus();
-      requestAnimationFrame(() => requestAnimationFrame(initReveal));
     })
     .catch(err => {
       console.error('Failed to load data/isom2700.json:', err);
@@ -3192,11 +3156,11 @@ if ('serviceWorker' in navigator) {
                  onclick="clearWeakHighlights(N)">Clear Highlights</button>
          <h1>Lecture N: Title</h1>
 
-         <div class="bigpic reveal-on-scroll">
+         <div class="bigpic">
            One-paragraph framing of why this topic matters.
          </div>
 
-         <section class="reveal-on-scroll" data-sec="0">
+         <section data-sec="0">
            <h2>1. Section heading</h2>
            <p data-topic="Topic name used in questions">Explanation...</p>
          </section>

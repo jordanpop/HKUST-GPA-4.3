@@ -66,11 +66,6 @@ th{background:var(--accent-soft)}
 .review-card .q-text{color:var(--wrong)}
 .memorize ol{padding-left:24px}
 .memorize li{margin:6px 0}
-.reveal-on-scroll{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.4,0,.2,1);will-change:opacity,transform}
-.reveal-on-scroll.is-visible{opacity:1;transform:translateY(0)}
-.reveal-delay-1{transition-delay:.1s}
-.reveal-delay-2{transition-delay:.2s}
-.reveal-delay-3{transition-delay:.3s}
 .submit-q{margin-top:10px}
 .quiz-settings{margin-top:12px;padding:10px 14px;background:var(--accent-soft);border-radius:4px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:.92em}
 .quiz-settings label{display:flex;align-items:center;gap:6px;color:var(--ink)}
@@ -187,7 +182,6 @@ function showPage(id) {
     const lid = parseInt(id.split('-')[1]);
     applyWeakHighlights(lid);
   }
-  setTimeout(initReveal, 50);
 }
 
 function computeWeakSections(lid) {
@@ -365,7 +359,7 @@ function renderQuiz(lid) {
   let h = '';
   state.filteredIndices.forEach((qi, displayIdx) => {
     const q = lec.questions[qi];
-    h += '<div class="q-block reveal-on-scroll" id="q-'+lid+'-'+qi+'">';
+    h += '<div class="q-block" id="q-'+lid+'-'+qi+'">';
     h += '<div class="q-num">Question ' + (displayIdx+1) + ' of ' + state.filteredIndices.length + ' <span style="margin-left:8px;padding:1px 6px;background:var(--accent-soft);border-radius:3px;font-size:.85em">'+q.difficulty+'</span></div>';
     h += '<div class="q-text">' + escapeHtml(q.q) + '</div>';
     q.options.forEach((opt, oi) => {
@@ -503,7 +497,7 @@ function renderPostQuiz(lid) {
   });
   const themes = Object.keys(themeCount).sort((a,b)=>themeCount[b]-themeCount[a]);
 
-  let h = '<div class="summary reveal-on-scroll reveal-delay-1">';
+  let h = '<div class="summary">';
   h += '<h2>Summary Report</h2>';
 
   // Add progress ring visualization
@@ -546,8 +540,7 @@ function renderPostQuiz(lid) {
     s.wrongQuestions.forEach((qi, idx) => {
       const q = lec.questions[qi];
       const chosen = s.choices[qi];
-      const delay = ['','reveal-delay-1','reveal-delay-2','reveal-delay-3'][idx%4];
-      h += '<div class="review-card reveal-on-scroll '+delay+'">';
+      h += '<div class="review-card">';
       h += '<div class="q-num">Question '+(qi+1)+'</div>';
       h += '<div class="q-text">'+escapeHtml(q.q)+'</div>';
       q.options.forEach((opt, oi) => {
@@ -561,7 +554,6 @@ function renderPostQuiz(lid) {
     });
   }
   document.getElementById('postquiz-'+lid).innerHTML = h;
-  setTimeout(initReveal, 50);
 }
 
 function showGlobalReport(){ showPage('global-report'); }
@@ -641,28 +633,6 @@ function renderGlobalReport() {
   document.getElementById('global-body').innerHTML = h;
 }
 
-// ===== Reveal-on-scroll =====
-function initReveal() {
-  const activePage = document.querySelector('.page.active');
-  const scope = activePage || document;
-  const els = scope.querySelectorAll('.reveal-on-scroll:not(.is-visible)');
-  if (!els.length) return;
-  if (!('IntersectionObserver' in window)) {
-    els.forEach(el => el.classList.add('is-visible'));
-    return;
-  }
-  const obs = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { root:null, rootMargin:'0px', threshold:0.1 });
-  els.forEach(el => obs.observe(el));
-  setTimeout(() => { els.forEach(el => el.classList.add('is-visible')); }, 600);
-}
-
 // ===== Init on load =====
 function updateHomeStatus() {
   lectures.forEach(lec => {
@@ -686,12 +656,10 @@ function updateHomeStatus() {
 function renderHomeCards() {
   const container = document.getElementById('lecture-cards');
   if (!container) return;
-  const delays = ['reveal-delay-1','reveal-delay-2','reveal-delay-3'];
-  container.innerHTML = lectures.map((lec, idx) => {
-    const delay = delays[idx % 3];
+  container.innerHTML = lectures.map(lec => {
     const titleHtml = escapeHtml(lec.title);
     return `
-    <div class="card reveal-on-scroll ${delay}">
+    <div class="card">
       <div class="lec-row">
         <div class="lec-title">${titleHtml}</div>
         <div>
@@ -750,7 +718,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       saveState();
       updateHomeStatus();
-      initReveal();
     })
     .catch(err => {
       console.error('Failed to load data/__JSON_NAME__.json:', err);
@@ -817,11 +784,11 @@ if ('serviceWorker' in navigator) {
                  onclick="clearWeakHighlights(N)">Clear Highlights</button>
          <h1>Lecture N: Title</h1>
 
-         <div class="bigpic reveal-on-scroll">
+         <div class="bigpic">
            One-paragraph framing of why this topic matters.
          </div>
 
-         <section class="reveal-on-scroll" data-sec="0">
+         <section data-sec="0">
            <h2>1. Section heading</h2>
            <p data-topic="Topic name used in questions">Explanation...</p>
          </section>

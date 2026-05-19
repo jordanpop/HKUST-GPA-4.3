@@ -64,11 +64,6 @@ th{background:var(--accent-soft)}
 .review-card .q-text{color:var(--wrong)}
 .memorize ol{padding-left:24px}
 .memorize li{margin:6px 0}
-.reveal-on-scroll{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.4,0,.2,1);will-change:opacity,transform}
-.reveal-on-scroll.is-visible{opacity:1;transform:translateY(0)}
-.reveal-delay-1{transition-delay:.1s}
-.reveal-delay-2{transition-delay:.2s}
-.reveal-delay-3{transition-delay:.3s}
 .submit-q{margin-top:10px}
 .quiz-settings{margin-top:12px;padding:10px 14px;background:var(--accent-soft);border-radius:4px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:.92em}
 .quiz-settings label{display:flex;align-items:center;gap:6px;color:var(--ink)}
@@ -90,7 +85,7 @@ tr.weak-highlight{box-shadow:none}
   <a class="btn back" onclick="window.location.href='index.html'">&#8592; Subjects</a>
   <h1>LIFS3040 Study Guide</h1>
   <div class="subtitle">LIFS3040 &mdash; Endocrine, GI &amp; Neuroscience, 8 Lectures</div>
-  <div class="card reveal-on-scroll reveal-delay-1">
+  <div class="card">
     <div class="lec-row">
       <div class="lec-title">Endo1_2: Overview of the Endocrine System &amp; Neuroendocrine Systems</div>
       <div>
@@ -105,7 +100,7 @@ tr.weak-highlight{box-shadow:none}
       <span id="status-1" style="color:var(--muted);font-size:.9em"></span>
     </div>
   </div>
-  <div class="card reveal-on-scroll reveal-delay-2">
+  <div class="card">
     <div class="lec-row">
       <div class="lec-title">Endo3_4: Metabolic &amp; Developmental Hormones + Water/Electrolyte Balance</div>
       <div>
@@ -120,7 +115,7 @@ tr.weak-highlight{box-shadow:none}
       <span id="status-2" style="color:var(--muted);font-size:.9em"></span>
     </div>
   </div>
-  <div class="card reveal-on-scroll reveal-delay-3">
+  <div class="card">
     <div class="lec-row">
       <div class="lec-title">Endo5: Reproductive Hormones</div>
       <div>
@@ -135,7 +130,7 @@ tr.weak-highlight{box-shadow:none}
       <span id="status-3" style="color:var(--muted);font-size:.9em"></span>
     </div>
   </div>
-  <div class="card reveal-on-scroll reveal-delay-1">
+  <div class="card">
     <div class="lec-row">
       <div class="lec-title">GI1: Overview of the Digestive System</div>
       <div>
@@ -150,7 +145,7 @@ tr.weak-highlight{box-shadow:none}
       <span id="status-4" style="color:var(--muted);font-size:.9em"></span>
     </div>
   </div>
-  <div class="card reveal-on-scroll reveal-delay-2">
+  <div class="card">
     <div class="lec-row">
       <div class="lec-title">GI2: Digestion — Mouth, Esophagus, Stomach, Pancreas &amp; Liver</div>
       <div>
@@ -165,7 +160,7 @@ tr.weak-highlight{box-shadow:none}
       <span id="status-5" style="color:var(--muted);font-size:.9em"></span>
     </div>
   </div>
-  <div class="card reveal-on-scroll reveal-delay-3">
+  <div class="card">
     <div class="lec-row">
       <div class="lec-title">GI3: Absorption — Small Intestine &amp; Large Intestine</div>
       <div>
@@ -180,7 +175,7 @@ tr.weak-highlight{box-shadow:none}
       <span id="status-6" style="color:var(--muted);font-size:.9em"></span>
     </div>
   </div>
-  <div class="card reveal-on-scroll reveal-delay-1">
+  <div class="card">
     <div class="lec-row">
       <div class="lec-title">Neuro1: Physiology of Nerve Cells — Ion Channels, Membrane Potential &amp; Action Potentials</div>
       <div>
@@ -195,7 +190,7 @@ tr.weak-highlight{box-shadow:none}
       <span id="status-7" style="color:var(--muted);font-size:.9em"></span>
     </div>
   </div>
-  <div class="card reveal-on-scroll reveal-delay-2">
+  <div class="card">
     <div class="lec-row">
       <div class="lec-title">Neuro2: Properties of Sensory Cells and Sensory Systems</div>
       <div>
@@ -223,11 +218,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-1" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(1)">Clear Highlights</button>
   <h1>Lecture 1: Endo1_2: Overview of the Endocrine System &amp; Neuroendocrine Systems</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     The endocrine system (內分泌系統) is a network of glands and cells that release hormones (荷爾蒙) into the bloodstream to regulate metabolism, growth, reproduction, homeostasis, and mood. Understanding this system has driven major advances in human health — from IVF and contraceptive pills to recombinant protein hormones and the ongoing challenge of endocrine-disrupting chemicals. This lecture establishes the chemical nature of hormones, their mechanisms of action, and the critical interface between the nervous and endocrine systems through the hypothalamic-pituitary axis.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. General Concepts of the Endocrine System</h2>
     <p data-topic="endocrine-system-overview">
       The endocrine system (內分泌系統) coordinates long-range physiological regulation through chemical messengers. Key concepts:
@@ -272,7 +267,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="endocrine-vs-nervous"><b>Exam trap:</b> The hypothalamus is part of the brain (神經組織), not a classical endocrine gland, yet it secretes neurohormones. Students confuse "neural stimulus" with "the nervous system does not interact with the endocrine system" — the two systems interact extensively.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Chemistry of Hormones</h2>
     <p data-topic="hormone-chemical-classes">Hormones fall into four chemical categories (四大化學類別):</p>
 
@@ -339,7 +334,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Mechanisms of Hormone Action</h2>
     <p data-topic="hormone-receptor-mechanisms">Mechanism depends on solubility (溶解性):</p>
     <ul>
@@ -403,7 +398,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="enzyme-coupled-receptors"><b>Exam trap:</b> Insulin is water-soluble, uses a receptor tyrosine kinase (NOT a GPCR), and is first synthesized as a larger precursor (proinsulin). Students commonly assume all peptide hormones use GPCRs. Amino acid derivatives are not all lipid-insoluble — thyroxine is lipid-soluble and acts via nuclear receptors.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Neuroendocrine Systems: General Concepts</h2>
     <p data-topic="neurosecretory-cells">Neurosecretory cells (神經分泌細胞) are specialized neurons that secrete neurohormones (神經荷爾蒙). Located in two main organs:</p>
     <ul>
@@ -435,7 +430,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="hypothalamus-pituitary"><b>Exam trap:</b> The anterior pituitary is true endocrine (glandular) tissue — NOT composed of axons. The posterior pituitary IS composed of axons of hypothalamic neurosecretory cells. Students frequently swap these two. Also: the hypothalamus secretes hormones TO the portal system — it does not receive hormones from the portal system. The hypothalamus is located below the thalamus (not above it).</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Anterior Pituitary Hormones and Hypothalamic Releasing Hormones</h2>
     <p data-topic="anterior-pituitary-hormones">The anterior pituitary secretes two categories of glandular hormones (前垂體腺體荷爾蒙):</p>
     <ul>
@@ -507,7 +502,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="hypothalamic-releasing-hormones"><b>Exam trap:</b> TRH stimulates BOTH TSH AND prolactin release. Dopamine (PIH) is an amine — the only non-peptide hypothalamic regulatory hormone. Prolactin is a direct-acting hormone from the anterior pituitary, not a neurohormone from the posterior pituitary.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. Posterior Pituitary Neurohormones</h2>
     <p data-topic="posterior-pituitary-hormones">Two neurohormones (神經荷爾蒙) synthesized in SON and PVN of the hypothalamus and released from the posterior pituitary:</p>
     <table>
@@ -542,7 +537,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="posterior-pituitary-hormones"><b>Exam trap:</b> Oxytocin stimulates milk ejection (射乳), NOT milk synthesis (乳汁合成) — prolactin stimulates milk protein synthesis. ADH acts via cAMP/adenylate cyclase, not a nuclear receptor, because it is a peptide (water-soluble). Growth hormone and prolactin are anterior pituitary hormones, not neurohormones — ADH (vasopressin) is the neurohormone.</div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>The hypothalamus is neural tissue but secretes neurohormones; the endocrine and nervous systems interact extensively — do not treat them as isolated.</li>
@@ -564,7 +559,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Four chemical categories of hormones: amino acid derivatives, polypeptides, steroids, prostaglandins. Glucose derivatives are NOT one.</li>
@@ -588,11 +583,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-2" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(2)">Clear Highlights</button>
   <h1>Lecture 2: Endo3_4: Metabolic & Developmental Hormones + Water/Electrolyte Balance</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     This lecture covers the six major metabolic and developmental hormones — epinephrine/norepinephrine, glucocorticoids, thyroid hormones, insulin/glucagon, growth hormone, and leptin — then pivots to the three hormones that govern water and electrolyte balance: ADH, aldosterone, and ANP. Together these systems coordinate the body's energy economy under stress, regulate growth across the lifespan, and maintain blood volume and osmolality. The throughline is homeostatic balance: every hormone introduced has a counterpart or feedback axis that prevents runaway effects.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Epinephrine &amp; Norepinephrine</h2>
     <p data-topic="catecholamine-synthesis">
       <ul>
@@ -649,7 +644,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="catecholamine-function"><b>Exam trap:</b> Epinephrine DECREASES insulin secretion and INCREASES glucagon secretion. Do not confuse with insulin's own effects. A statement that "epinephrine increases insulin secretion" is FALSE.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Glucocorticoids</h2>
     <p data-topic="glucocorticoid-basics">
       <ul>
@@ -679,7 +674,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="glucocorticoid-basics"><b>Exam trap:</b> Cortisol is also called hydrocortisone — these are the same compound. The major glucocorticoid in humans is cortisol (B/C in quiz). Corticosterone is a different, minor form. Do not select corticosterone as the "major" glucocorticoid.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Thyroid Hormones</h2>
     <p data-topic="thyroid-hormones">
       <ul>
@@ -702,7 +697,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="thyroid-actions"><b>Exam trap:</b> Hyperthyroidism causing increased cardiac contraction rate is due to sensitization of tissues to epinephrine — NOT direct stimulation of catecholamine secretion from the adrenal medulla. The mechanism is sensitization, not increased catecholamine release.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Insulin, Glucagon &amp; Diabetes</h2>
     <p data-topic="insulin-glucagon-basics">
       <ul>
@@ -783,7 +778,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="diabetes"><b>Exam trap:</b> In Type 1 diabetes, glucagon levels are HIGH (not low) because insulin normally inhibits glucagon secretion — absence of insulin removes that brake. A question option "low glucagon level" is NOT associated with Type 1 diabetes mellitus.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Growth Hormone &amp; Leptin</h2>
     <p data-topic="growth-hormone-basics">
       <ul>
@@ -847,7 +842,7 @@ tr.weak-highlight{box-shadow:none}
     </p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. Water &amp; Electrolyte Balance: ADH, Aldosterone &amp; ANP</h2>
     <p data-topic="adh-basics">
       <ul>
@@ -944,7 +939,7 @@ tr.weak-highlight{box-shadow:none}
     </svg>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>The adrenal medulla secretes catecholamines ONLY — not glucocorticoids. "Medulla secretes glucocorticoids and catecholamines" is FALSE.</li>
@@ -961,7 +956,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Adrenal medulla (inner, neural, ectodermal) = catecholamines only; adrenal cortex (outer, mesodermal) = glucocorticoids + mineralocorticoids + androgens.</li>
@@ -985,11 +980,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-3" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(3)">Clear Highlights</button>
   <h1>Lecture 3: Endo5 — Reproductive Hormones</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Reproductive hormones coordinate the development of sex characteristics, the production of gametes, and the cyclical preparation of the uterus for pregnancy. The system operates through a shared steroid biosynthesis pathway — cholesterol to progesterone to androgens to estrogens — overlaid with peptide signals from the pituitary. Understanding the feedback logic (positive in the follicular phase, negative in the luteal phase) and the distinct roles of cell types such as Leydig cells and Sertoli cells in the male, and follicle and corpus luteum in the female, is the central throughline of this lecture.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Overview of Sex Hormones and Reproductive Organs</h2>
     <p data-topic="sex-characteristics">Primary vs. secondary sex characteristics (初級與次級性特徵):
       <ul>
@@ -1077,7 +1072,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="hormone-overview"><b>Exam trap:</b> Not all reproductive hormones are steroids — oxytocin (nonapeptide) and prolactin (peptide) are produced in the pituitary, not the gonads. Also, androgens are present in both males and females (adrenal cortex produces them in females); they are not exclusive to males.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Male Reproductive System and Spermatogenesis</h2>
     <p data-topic="male-anatomy">Male sex organs and associated structures:
       <ul>
@@ -1189,7 +1184,7 @@ tr.weak-highlight{box-shadow:none}
     </p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Female Reproductive System and Oogenesis</h2>
     <p data-topic="female-anatomy">Female sex organs:
       <ul>
@@ -1214,7 +1209,7 @@ tr.weak-highlight{box-shadow:none}
     </p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Reproductive Cycle — Ovarian and Uterine</h2>
     <p data-topic="reproductive-cycle">Overview:
       <ul>
@@ -1260,7 +1255,7 @@ tr.weak-highlight{box-shadow:none}
     </p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Female Reproductive Hormones — Effects and Clinical Applications</h2>
     <p data-topic="estrogen-effects">Effects of estrogen (雌激素的作用):
       <ul>
@@ -1311,7 +1306,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="gestational-diabetes"><b>Exam trap:</b> Gestational diabetes is caused by high estrogen producing insulin resistance — not by excessive carbohydrate ingestion, high progesterone, increased GI glucose absorption, or excessive glucagon. Estrogen is the direct cause via decreased peripheral insulin sensitivity.</div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>Not all reproductive hormones are steroids — oxytocin (nonapeptide) and prolactin (peptide) are pituitary-derived; androgens are also present in females via the adrenal cortex.</li>
@@ -1325,7 +1320,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Steroid biosynthesis order: Cholesterol → Progesterone → Androgens → Estrogens</li>
@@ -1349,11 +1344,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-4" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(4)">Clear Highlights</button>
   <h1>Lecture 4: GI1 — Overview of the Digestive System</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     The digestive system converts food into molecules the body can absorb — ingesting, digesting, absorbing, and excreting in a tightly coordinated sequence from mouth to anus. Understanding the four-segment plan (headgut, foregut, midgut, hindgut) and the layered wall structure explains why each region does what it does. Motility is not simple muscle movement but a regulated behaviour — peristalsis propels, segmentation mixes — both governed by the enteric nervous system, the "little brain in the gut."
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. General Concepts — Types of Digestion & Nutrient Classes</h2>
     <p data-topic="gi-general-concepts">The <strong>digestive system</strong> (消化系統) consists of the <strong>alimentary canal</strong> (消化道) plus <strong>accessory digestive organs</strong> (附屬消化器官), working together for ingestion (攝食), digestion (消化), and absorption (吸收).</p>
     <p data-topic="gi-general-concepts">Two types of digestion (消化):</p>
@@ -1372,7 +1367,7 @@ tr.weak-highlight{box-shadow:none}
     </table>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Human GI Tract — Anatomy & Organ Functions</h2>
     <p data-topic="gi-tract-anatomy">The generalized animal GI tract is divided into four functional segments, each with distinct roles:</p>
     <table data-topic="gi-tract-anatomy">
@@ -1401,7 +1396,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="gi-tract-anatomy"><b>Exam trap:</b> The stomach performs <em>no absorption</em> — it only stores, mixes, and partially digests. Absorption begins in the small intestine.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Microscopic Structure of the GI Wall</h2>
     <p data-topic="gi-wall-structure">Four concentric layers from lumen outward:</p>
     <ul data-topic="gi-wall-structure">
@@ -1436,7 +1431,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="gi-wall-structure"><b>Exam trap:</b> The myenteric (Auerbach's) plexus lies <em>between</em> the longitudinal and circular muscle layers — not in the submucosa. The submucosal (Meissner's) plexus is in the submucosa.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Types of GI Motility — Peristalsis & Segmentation</h2>
     <p data-topic="gi-motility-types">Three functions of GI movement (運動): (1) translocate food from point A to B, (2) mechanical breakdown of food, (3) mix food for continual renewal of material in contact with secreting and absorbing surfaces. Food moves down the GI tract even in the absence of gravity — GI mobility requires muscle involvement.</p>
     <table data-topic="gi-motility-types">
@@ -1452,7 +1447,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="gi-motility-types"><b>Exam trap:</b> Segmentation does NOT involve the longitudinal muscle — only the circular muscle contracts asynchronously. Do not confuse it with peristalsis, which uses both muscle layers.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Control of Motility — Enteric Nervous System & Innervation</h2>
     <p data-topic="gi-motility-control">Two levels of control (控制):</p>
     <ul data-topic="gi-motility-control">
@@ -1474,7 +1469,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="gi-motility-control"><b>Exam trap:</b> Sympathetic = inhibitory for GI; parasympathetic = excitatory. "Fight or flight" shuts the gut down; "rest and digest" activates it. Many students mistakenly flip these.</div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>Stomach has <em>no absorption</em> — absorption begins in the small intestine (midgut).</li>
@@ -1484,7 +1479,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Two digestion types: mechanical (tears/grinds/mixes) vs. chemical (enzymes break bonds)</li>
@@ -1505,11 +1500,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-5" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(5)">Clear Highlights</button>
   <h1>Lecture 5: GI2 — Digestion: Mouth, Esophagus, Stomach, Pancreas & Liver</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     GI Lecture 2 traces the path of food through each digestive organ from mouth to duodenum, covering the mechanical and chemical processes at each site. Every structure — from salivary amylase to the parietal cell's proton pump — is precisely specialized, and understanding their secretions and regulation explains why clinical conditions such as GERD, H. pylori ulcers, and gallstones arise exactly where they do.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Mouth & Salivary Glands</h2>
     <p data-topic="mouth-saliva">The mouth (口腔 / buccal cavity 頰腔) contains three main structures:</p>
     <ul data-topic="mouth-saliva">
@@ -1541,7 +1536,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="mouth-saliva"><b>Exam trap:</b> Sympathetic stimulation of salivary glands still produces saliva, but it is more viscous and mucin-rich — not absent. The subjective sensation is dry mouth because of less total fluid.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Pharynx, Esophagus & Swallowing</h2>
     <p data-topic="pharynx-esophagus">The <strong>pharynx</strong> (咽) has three parts: nasopharynx (鼻咽, air only), oropharynx (口咽), laryngopharynx (喉咽). It is a common passageway for food, fluids, and air; the external muscle layer contains two skeletal muscle layers (<strong>pharyngeal constrictor muscles</strong> 咽縮肌) involved in the swallowing reflex.</p>
     <p data-topic="pharynx-esophagus">Swallowing reflex (吞嚥反射 / deglutition 吞嚥) — sequential steps:</p>
@@ -1582,7 +1577,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="pharynx-esophagus"><b>Exam trap:</b> The epiglottis covers the glottis (trachea opening) — not the esophagus — during swallowing. The esophageal sphincter relaxes to allow food entry. These two events happen simultaneously but are mechanically distinct.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Stomach — Structure & Gastric Juice</h2>
     <p data-topic="stomach-structure">The <strong>stomach</strong> (胃) is a J-shaped enlargement of the GI tract connecting the esophagus to the duodenum (十二指腸). Four functions: (1) food reservoir (食物儲存庫), (2) mechanical fragmentation (機械性分解), (3) mix food with gastric secretion → <strong>chyme</strong> (食糜), (4) empty gastric contents into small intestine at a controlled rate.</p>
     <p data-topic="stomach-structure">Gross structure (大體結構):</p>
@@ -1622,7 +1617,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="stomach-structure"><b>Exam trap:</b> Pepsinogen requires pH &lt; 5 for conversion to pepsin, but pepsin's <em>optimal activity</em> is at pH ~2. Do not confuse conversion pH with optimal activity pH.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Gastric Acid Regulation & H. pylori</h2>
     <p data-topic="gastric-acid-regulation">Three major stimuli for gastric acid secretion (all synergistic 協同; all act via cAMP or Ca²⁺ signaling → stimulate H⁺/K⁺ ATPase):</p>
     <table data-topic="gastric-acid-regulation">
@@ -1644,7 +1639,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="gastric-acid-regulation"><b>Exam trap:</b> The three stimuli (histamine, ACh, gastrin) are <em>synergistic</em> — their combined effect is greater than the sum of individual effects. Blocking just one (e.g. histamine via cimetidine) can substantially reduce total acid output.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Pancreas & Liver/Bile</h2>
     <p data-topic="pancreas-liver">The <strong>pancreas</strong> (胰腺) is a soft oblong gland ~6 in. long / 1 in. thick; posterior to the greater curvature of the stomach; connected to the duodenum by pancreatic (duct of Wirsung 胰管) and accessory ducts (duct of Santorini) via the <strong>sphincter of Oddi</strong> (奧迪括約肌).</p>
     <p data-topic="pancreas-liver">Dual function: <strong>endocrine</strong> (內分泌, ~1% of gland = islets of Langerhans 蘭格漢斯島: α/β/δ cells for glucagon/insulin/somatostatin) and <strong>exocrine</strong> (外分泌, 99% = acinar cells + duct cells).</p>
@@ -1680,7 +1675,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="pancreas-liver"><b>Exam trap:</b> Enteropeptidase (腸激酶) is an intestinal brush border enzyme — not a pancreatic enzyme. It initiates the activation cascade by converting trypsinogen → trypsin. Without enteropeptidase, no pancreatic zymogens are activated.</div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>Sympathetic → dry mouth (viscous, mucin-rich saliva, less total volume); parasympathetic → watery saliva (more volume).</li>
@@ -1693,7 +1688,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Saliva: 1.5 L/day; functions — lubrication, dental protection (defensins, alkaline pH), amylase for starch</li>
@@ -1716,11 +1711,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-6" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(6)">Clear Highlights</button>
   <h1>Lecture 6: GI3 — Absorption: Small Intestine & Large Intestine</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     GI Lecture 3 focuses on absorption — the transfer of digested nutrients from the intestinal lumen into the bloodstream or lymph. The small intestine is extraordinarily specialized for this, amplifying its surface area ~600-fold through circular folds, villi, and microvilli. Each nutrient class uses a distinct molecular strategy: sugars ride a sodium gradient, amino acids and dipeptides use active transporters, and lipids are packaged into micelles before being reassembled as chylomicrons for lymphatic export.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Small Intestine — Structure & General Absorption</h2>
     <p data-topic="small-intestine-structure"><strong>Absorption</strong> (吸收) is the process by which molecules are transported through the epithelial cells (上皮細胞) lining the GI tract → enter the blood (血液) or lymph (淋巴). Key principles:</p>
     <ul data-topic="small-intestine-structure">
@@ -1752,7 +1747,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="small-intestine-structure"><b>Exam trap:</b> Microvilli amplify surface area ×20, villi ×10, circular folds ×3 — students often confuse the order. Remember: smaller structure = bigger relative amplification factor.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Carbohydrate Absorption</h2>
     <p data-topic="carb-absorption">Dietary carbohydrates (碳水化合物) in two categories:</p>
     <ul data-topic="carb-absorption">
@@ -1809,7 +1804,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="carb-absorption"><b>Exam trap:</b> ORT works because of SGLT1 — glucose is essential to drive Na⁺ (and therefore water) absorption. A solution of water + salt alone without glucose is far less effective because it cannot use SGLT1-mediated cotransport.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Amino Acid & Peptide Absorption</h2>
     <p data-topic="protein-absorption">Proteins (蛋白質) are mainly digested by pancreatic proteases (胰蛋白酶類); brush border of SI has peptidases (肽酶) that cleave oligopeptides (寡肽) into amino acids (AA 氨基酸), dipeptides (二肽), and tripeptides (三肽).</p>
     <p data-topic="protein-absorption">Two main absorption pathways:</p>
@@ -1828,7 +1823,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="protein-absorption"><b>Exam trap:</b> Dipeptides and tripeptides are the <em>major</em> pathway for protein absorption — not free amino acids. Free AAs are absorbed more slowly via Na⁺-dependent transporters. Students often assume the simplest molecule (free AA) takes the most efficient path, but the opposite is true.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Lipid Absorption</h2>
     <p data-topic="lipid-absorption">Dietary lipids: triglycerides (三酸甘油酯, TG) account for ~90%; the rest = cholesterol esters (膽固醇酯), phospholipids (磷脂), fat-soluble vitamins (脂溶性維生素 A, D, E, K).</p>
     <p data-topic="lipid-absorption">Digestion: TG emulsified (乳化) by bile salts → digested by gastric lipase + pancreatic lipase → free fatty acids (游離脂肪酸, FFA) + monoglycerides (單酸甘油酯, MG).</p>
@@ -1870,7 +1865,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="lipid-absorption"><b>Exam trap:</b> Chylomicrons enter the <em>lacteal</em> (lymph), not the portal blood — they are too large for capillaries. Short-chain FAs go directly to the portal vein. Many students assume all lipids take the same route.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Vitamin Absorption</h2>
     <p data-topic="vitamin-absorption">Vitamins are divided into two categories based on solubility, which determines their absorption mechanism:</p>
     <table data-topic="vitamin-absorption">
@@ -1891,7 +1886,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="vitamin-absorption"><b>Exam trap:</b> Vitamin B12 is water-soluble but requires intrinsic factor — it cannot be absorbed by carrier proteins alone. Loss of gastric parietal cells (e.g. in autoimmune gastritis) causes B12 deficiency (pernicious anaemia 惡性貧血) even if dietary intake is normal.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. Mineral Absorption</h2>
     <p data-topic="mineral-absorption"><strong>Sodium (Na⁺)</strong> is absorbed along the <em>entire</em> intestine, with the highest absorption rate in the <strong>jejunum</strong> (空腸) and slower rates in the ileum and colon.</p>
     <ul data-topic="mineral-absorption">
@@ -1922,7 +1917,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="mineral-absorption"><b>Exam trap:</b> Calcitriol (active vitamin D) regulates <em>all three steps</em> of transcellular Ca²⁺ absorption — channel entry, calbindin shuttling, and basolateral pump extrusion. Vitamin D deficiency therefore impairs Ca²⁺ absorption at all three points simultaneously.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="6">
+  <section data-sec="6">
     <h2>7. Water Absorption &amp; the Large Intestine</h2>
     <p data-topic="water-absorption"><strong>Water absorption</strong> (水吸收): very little net water absorption occurs in the duodenum (十二指腸); the main site is the <strong>jejunum</strong> (空腸). Water moves by osmosis (滲透作用), following the transport of "osmotically active" solutes — primarily Na⁺, sugars, and amino acids. Water can pass through:</p>
     <ul data-topic="water-absorption">
@@ -1941,7 +1936,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="large-intestine"><b>Exam trap:</b> The ascending and transverse colons absorb and secrete; the descending and sigmoid colons only store. Students often assume the entire colon is just a storage tube — but the proximal half is still functionally active in absorption.</div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>Microvilli ×20 &gt; villi ×10 &gt; circular folds ×3 — smaller structure, bigger amplification factor.</li>
@@ -1958,7 +1953,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>SI dimensions: ~6 m long, ~4 cm diameter; 3 segments: duodenum (26 cm), jejunum (2.5 m), ileum (3.5 m)</li>
@@ -1985,12 +1980,12 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-7" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(7)">Clear Highlights</button>
   <h1>Lecture 7: Neuro1: Physiology of Nerve Cells — Ion Channels, Membrane Potential &amp; Action Potentials</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Neurons communicate electrically by maintaining steep ion gradients across their membranes and gating selective ion channels to produce rapid voltage changes. This lecture covers how ion channels work, how the resting membrane potential is set, how action potentials are generated and propagated, and how chemical synapses transmit signals from one neuron to the next. Together these mechanisms form the physical basis of all neural signalling in the nervous system.
   </div>
 
   <!-- Section 0: Ion Channels -->
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Ion Channels — Structure, Properties &amp; Types</h2>
     <p data-topic="ion-channel-basics">Ion channels (離子通道) are pore-forming membrane proteins (膜孔蛋白) that allow ions to pass through the channel pore (孔道) down their electrochemical gradient (電化學梯度) without metabolic energy input.</p>
 
@@ -2118,7 +2113,7 @@ tr.weak-highlight{box-shadow:none}
   </section>
 
   <!-- Section 1: Membrane Potential & Passive Properties -->
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Membrane Potential &amp; Passive Properties</h2>
     <p data-topic="resting-membrane-potential">The resting membrane potential (靜息膜電位, V<sub>rest</sub>) is the stable voltage difference across the plasma membrane (質膜) at rest, typically around -70 to -80 mV in neurons, negative inside relative to outside.</p>
 
@@ -2228,7 +2223,7 @@ tr.weak-highlight{box-shadow:none}
   </section>
 
   <!-- Section 2: Action Potential -->
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Action Potential — Generation &amp; Phases</h2>
     <p data-topic="ap-phases">An action potential (動作電位, AP) is a rapid, all-or-none (全有或全無) change in membrane voltage lasting 1–2 ms. It requires a depolarizing trigger (去極化觸發) above threshold (閾值).</p>
 
@@ -2284,7 +2279,7 @@ tr.weak-highlight{box-shadow:none}
   </section>
 
   <!-- Section 3: Refractory Periods & AP Propagation -->
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Refractory Periods &amp; AP Propagation</h2>
     <p data-topic="refractory-periods">After an AP, Na<sup>+</sup> channels (鈉通道) pass through inactivated states that create refractory periods (不應期) governing when and how well a second AP can be generated.</p>
 
@@ -2353,7 +2348,7 @@ tr.weak-highlight{box-shadow:none}
   </section>
 
   <!-- Section 4: Synaptic Transmission -->
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Synaptic Transmission</h2>
     <p data-topic="chemical-synapse">At a chemical synapse (化學突觸), an AP in the presynaptic neuron (突觸前神經元) triggers neurotransmitter (神經遞質) release into the synaptic cleft (突觸間隙), which binds postsynaptic receptors (突觸後受體) to produce electrical changes.</p>
 
@@ -2436,7 +2431,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="snare-mechanism"><b>Exam trap:</b> Ca<sup>2+</sup> is required for vesicle fusion and exocytosis (胞吐) — without Ca<sup>2+</sup> influx into the presynaptic terminal, no transmitter is released even if an AP arrives.</div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>Channels are passive because ions move down the electrochemical gradient — not because the channel protein is inert; carriers can also be passive.</li>
@@ -2450,7 +2445,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Two features of ion channels vs carriers: rate &gt;10<sup>6</sup> ions/sec; passive (no ATP), along electrochemical gradient.</li>
@@ -2474,11 +2469,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-8" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(8)">Clear Highlights</button>
   <h1>Lecture 8: Neuro2: Properties of Sensory Cells and Sensory Systems</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Sensory physiology explains how specialized receptor cells convert (轉換) environmental stimuli into electrical signals the brain can interpret. Each receptor type is tuned to a specific energy form, and the signal passes through a defined neural pathway before reaching conscious awareness. This lecture covers the core principles of sensory transduction, coding, and the specific properties of somatic touch, temperature, pain, and hearing receptors. Understanding these principles is foundational for linking receptor biology to clinical conditions such as hearing loss, chronic pain, and proprioceptive deficits.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Sensory Receptor Types and Transmission Patterns</h2>
 
     <p data-topic="sensory-receptor-types">
@@ -2528,7 +2523,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="transmission-types"><b>Exam trap:</b> Type 1 and Type 2 both involve neural receptors, but only Type 2 has a chemical synapse between receptor membrane and the afferent axon. Type 3 uses a non-neural receptor cell — the receptor itself never fires an action potential; only the downstream neuron does.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Sensory Transduction and Sensory Coding</h2>
 
     <p data-topic="sensory-transduction">
@@ -2600,7 +2595,7 @@ tr.weak-highlight{box-shadow:none}
     </p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Somatic Senses: Touch, Proprioception, Temperature, and Nociception</h2>
 
     <p data-topic="somatosensory-modalities">
@@ -2700,7 +2695,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="somatosensory-pathway"><b>Exam trap:</b> All secondary sensory neurons cross the midline — sensations from the left body are processed in the right hemisphere. The crossing happens at different levels for different modalities but the rule is universal for somatosensory signals.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Hearing: A Special Sense</h2>
 
     <p data-topic="hearing-basics">
@@ -2786,7 +2781,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="cochlea-structure"><b>Exam trap:</b> IHCs (3,000) are the primary sensory transducers with nearly 10:1 fiber-to-IHC innervation by cochlear nerve fibers; OHCs (12,000) are amplifiers via electromotility, not the primary signal senders. Most cochlear nerve fibers (30,000+) innervate IHCs, not OHCs. Do not confuse the larger number of OHCs with greater innervation.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Auditory Transduction, Hair Cell Mechanisms, and Frequency Coding</h2>
 
     <p data-topic="hair-cell-transduction">
@@ -2843,7 +2838,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="place-theory"><b>Exam trap:</b> Place theory maps frequency to basilar membrane location — high frequency near the BASE, low frequency near the APEX. Students commonly reverse this. The base is narrower and stiffer, resonating at high frequencies; the apex is wider and more flexible, resonating at low frequencies.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. Conscious vs. Subconscious Sensory Processing and Overview</h2>
 
     <p data-topic="conscious-subconscious-sensory">
@@ -2890,7 +2885,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>Type 1 vs. Type 2 transmission: both use neural receptors, but only Type 2 has a chemical synapse between the receptor membrane and afferent neuron; Type 3 uses a non-neural receptor cell that never fires its own AP.</li>
@@ -2904,7 +2899,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Three transmission types: Type 1 (neural, no synapse), Type 2 (neural, chemical synapse), Type 3 (non-neural receptor cell)</li>
@@ -3070,8 +3065,7 @@ function showPage(id) {
     const lid = parseInt(id.split('-')[1]);
     applyWeakHighlights(lid);
   }
-  if (el) el.querySelectorAll('.reveal-on-scroll').forEach(e => e.classList.add('is-visible'));
-  setTimeout(initReveal, 50);
+  if (el) el.querySelectorAll('.').forEach(e => e.classList.add('is-visible'));
 }
 
 function computeWeakSections(lid) {
@@ -3251,7 +3245,7 @@ function renderQuiz(lid) {
   state.filteredIndices.forEach((qi, displayIdx) => {
     const q = lec.questions[qi];
     const order = getOptionOrder(lid, qi);
-    h += '<div class="q-block reveal-on-scroll" id="q-'+lid+'-'+qi+'">';
+    h += '<div class="q-block" id="q-'+lid+'-'+qi+'">';
     h += '<div class="q-num">Question ' + (displayIdx+1) + ' of ' + state.filteredIndices.length + ' <span style="margin-left:8px;padding:1px 6px;background:var(--accent-soft);border-radius:3px;font-size:.85em">'+q.difficulty+'</span></div>';
     h += '<div class="q-text">' + escapeHtml(q.q) + '</div>';
     order.forEach((origIdx, displayPos) => {
@@ -3369,7 +3363,7 @@ function renderPostQuiz(lid) {
   });
   const themes = Object.keys(themeCount).sort((a,b)=>themeCount[b]-themeCount[a]);
 
-  let h = '<div class="summary reveal-on-scroll reveal-delay-1">';
+  let h = '<div class="summary">';
   h += '<h2>Summary Report</h2>';
   h += '<div class="score-big">'+s.correct+' / '+total+' ('+pct+'%)</div>';
   h += '<div class="verdict">'+verdict+'</div>';
@@ -3391,8 +3385,8 @@ function renderPostQuiz(lid) {
       const chosen = s.choices[qi];
       const order = s.optionOrders[qi] || q.options.map((_,i)=>i);
       const correctPos = order.indexOf(q.answer);
-      const delay = ['','reveal-delay-1','reveal-delay-2','reveal-delay-3'][idx%4];
-      h += '<div class="review-card reveal-on-scroll '+delay+'">';
+      const delay = ['','','',''][idx%4];
+      h += '<div class="review-card '+delay+'">';
       h += '<div class="q-num">Question '+(qi+1)+'</div>';
       h += '<div class="q-text">'+escapeHtml(q.q)+'</div>';
       order.forEach((origIdx, displayPos) => {
@@ -3407,7 +3401,6 @@ function renderPostQuiz(lid) {
     });
   }
   document.getElementById('postquiz-'+lid).innerHTML = h;
-  setTimeout(initReveal, 50);
 }
 
 function showGlobalReport(){ showPage('global-report'); }
@@ -3442,24 +3435,6 @@ function renderGlobalReport() {
     h += '<p>No weak topics across completed quizzes.</p>';
   }
   document.getElementById('global-body').innerHTML = h;
-}
-
-// ===== Reveal-on-scroll =====
-function initReveal() {
-  const els = document.querySelectorAll('.reveal-on-scroll:not(.is-visible)');
-  if (!('IntersectionObserver' in window)) {
-    els.forEach(el => el.classList.add('is-visible'));
-    return;
-  }
-  const obs = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { root:null, rootMargin:'0px', threshold:0.15 });
-  els.forEach(el => obs.observe(el));
 }
 
 // ===== Init on load =====
@@ -3497,7 +3472,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       saveState();
       updateHomeStatus();
-      initReveal();
     })
     .catch(err => {
       console.error('Failed to load data/3040.json:', err);

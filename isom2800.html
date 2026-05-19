@@ -66,11 +66,6 @@ th{background:var(--accent-soft)}
 .review-card .q-text{color:var(--wrong)}
 .memorize ol{padding-left:24px}
 .memorize li{margin:6px 0}
-.reveal-on-scroll{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.4,0,.2,1);will-change:opacity,transform}
-.reveal-on-scroll.is-visible{opacity:1;transform:translateY(0)}
-.reveal-delay-1{transition-delay:.1s}
-.reveal-delay-2{transition-delay:.2s}
-.reveal-delay-3{transition-delay:.3s}
 .submit-q{margin-top:10px}
 .quiz-settings{margin-top:12px;padding:10px 14px;background:var(--accent-soft);border-radius:4px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:.92em}
 .quiz-settings label{display:flex;align-items:center;gap:6px;color:var(--ink)}
@@ -129,11 +124,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-11" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(11)">Clear Highlights</button>
   <h1>Lecture 11: Revenue Management and Pricing Decisions: Supply Chain Issues, and Multi-Product Cases</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     When a supplier and retailer each set prices independently, both end up charging too much — a phenomenon called double marginalization (雙重加價). This lecture traces why decentralized supply chains destroy value, surveys the remedies available, then extends revenue management to booking limits and multi-product pricing where customer segments differ in their willingness to pay.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Double Marginalization and Supply Chain Inefficiency</h2>
     <p data-topic="double-marginalization">
       The base model has three parameters: marginal cost (邊際成本) c = $7, wholesale price (批發價格) w set by the supplier, and retail price (零售價格) p set by the retailer. Consumer demand (消費者需求) follows q = 100 − 2p.
@@ -173,7 +168,7 @@ tr.weak-highlight{box-shadow:none}
     </svg>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Remedial Measures for Double Marginalization</h2>
     <p data-topic="remedial-measures">
       Several coordination mechanisms (協調機制) can restore supply-chain efficiency, each with different assumptions about information and enforceability.
@@ -204,7 +199,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Seven Core Concepts of Revenue Management</h2>
     <p data-topic="seven-core-concepts">
       Revenue management (收益管理) reframes pricing away from cost-recovery toward value capture across differentiated customer segments (差異化顧客細分).
@@ -228,7 +223,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="single-price-vs-segmented"><b>Exam trap:</b> "60% increase" refers to revenue/units sold from segmented pricing vs. a single average price — not a 60% increase in profit margin. Remember the calculation basis.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Booking Limits and the Newsvendor Framework</h2>
     <p data-topic="booking-limits">
       Booking limits (預訂限額) apply when capacity is insufficient for all demand segments. The airline seats two customer types: H (高價) at price p<sub>H</sub> and L (低價) at price p<sub>L</sub>. The carrier reserves seats for H-type customers while selling remaining seats to L-type.
@@ -264,7 +259,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="booking-limits"><b>Exam trap:</b> The overage cost in the booking limit problem is p<sub>L</sub> (revenue lost from an empty seat that could have been sold to an L-type), NOT zero. Students often set overage cost to zero, inflating the optimal reserve quantity.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Multi-Product Revenue Management</h2>
     <p data-topic="multi-product-rm">
       When a firm offers multiple product versions (產品版本) — Basic, Professional, Advanced — to multiple customer segments (顧客細分), pricing decisions interact across products and segments.
@@ -320,7 +315,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="multi-product-objectives"><b>Exam trap:</b> When segments can self-select, the firm cannot simply price each product at each segment's full valuation. Setting Advanced at $2,500 for Large Corporations would cause them to defect to a lower-priced product if that also yields positive surplus. Incentive-compatible pricing (激勵相容定價) requires a downward adjustment.</div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>Double marginalization raises BOTH the wholesale price and the retail price above supply-chain-optimal levels — both parties price too high, not just the retailer.</li>
@@ -332,7 +327,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Double marginalization formula: decentralized w* = (c + monopoly_markup)/2, causing both w and p to exceed integrated optimum.</li>
@@ -355,11 +350,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-10" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(10)">Clear Highlights</button>
   <h1>Lecture 10: What is Common Between Zara and 7-Eleven: Supply Chain Management Best Practices</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     This lecture uses Zara and 7-Eleven as twin case studies to illustrate how world-class supply chains are built around speed, responsiveness, and information. Both firms reject the traditional model of forecasting far in advance and instead use fast feedback loops, tight distribution control, and deliberate inventory strategies to stay ahead of demand uncertainty. The key throughline is that operational design choices — batch size, lead time, postponement, and IT architecture — directly determine competitive position in fashion and convenience retail.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Zara's Positioning and Operations Model</h2>
 
     <p data-topic="zara-positioning">Zara occupies the "cheap chic" (廉價時尚) quadrant: fashion quality closer to Banana Republic, price closer to Old Navy. It is a trend follower (潮流跟隨者) — a fashion imitator, not an originator. Key competitors in fast fashion (快時尚) include Forever 21, Uniqlo, and Renner (Brazil).</p>
@@ -423,7 +418,7 @@ tr.weak-highlight{box-shadow:none}
     </table>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Zara's Product Design, IT, and JIT/Postponement</h2>
 
     <p data-topic="zara-design-it">Cross-functional design and development teams (跨職能設計開發團隊) at Zara span product design, merchandise planning, global sourcing, vendor management, and distribution. Prototypes can be examined, a design chosen, and resources committed in a few hours if necessary.</p>
@@ -479,7 +474,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="zara-jit-postponement"><b>Exam trap:</b> Postponement is NOT about delaying production entirely — it means keeping a portion of inputs (fabrics) in an uncommitted (undyed) state so final configuration can happen after demand is clearer. JIT and postponement are complementary, not the same concept.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Push vs. Pull Supply Chain Frameworks</h2>
 
     <p data-topic="push-pull-framework">Supply chain strategies (供應鏈策略) differ based on where demand information drives production and inventory decisions. The four key archetypes are mapped by SKU variety and demand predictability.</p>
@@ -530,7 +525,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="push-pull-framework"><b>Exam trap:</b> "JIT-Push" is not a contradiction — the "push" refers to how components are supplied to the assembly stage based on schedules, while JIT refers to timing. Do not conflate JIT with pure pull systems in all contexts.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. 7-Eleven's Supply Chain Strategy</h2>
 
     <p data-topic="7eleven-strategy">7-Eleven (日本711) operates 47,000+ stores globally (2014 data); Japan alone had 12,105 stores in 2007. Its supply chain is built around convenience (便利性), freshness (新鮮度), and dense store clustering (集群擴張).</p>
@@ -566,7 +561,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Achieving Greater Responsiveness: Reactive and Speculative Capacity</h2>
 
     <p data-topic="responsiveness-capacity">Responsiveness (響應性) in supply chains depends on how and when capacity commitments (產能承諾) are made relative to demand information arrival.</p>
@@ -619,7 +614,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="responsiveness-capacity"><b>Exam trap:</b> Speculative capacity does NOT mean reckless overproduction — it is capacity committed under the best available probabilistic forecast. Reactive capacity is NOT always better; it typically requires higher unit costs or shorter lead-time supply agreements.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. 7-Eleven's IT Evolution and Tanpin Kanri</h2>
 
     <p data-topic="7eleven-it-evolution">7-Eleven Japan evolved its IT system (資訊系統) across three generations to build an increasingly sophisticated demand intelligence platform.</p>
@@ -672,7 +667,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="pos-pitfalls"><b>Exam trap:</b> POS data records only completed transactions — it cannot capture lost sales from stockouts. Ordering purely from POS data therefore systematically under-orders high-demand items, especially when stock was already depleted during the measurement period.</div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>Zara's proximity manufacturing (Spain/Portugal/Morocco) is for lead-time speed, NOT cost savings — labor there is far more expensive than Asia.</li>
@@ -683,7 +678,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Zara key numbers: marketing 0.3% vs 3.5%, markdown 50% vs 15%, fail rate 10% vs 1%, store visits 17 vs 3/year, design-to-store as fast as 1 week</li>
@@ -707,11 +702,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-9" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(9)">Clear Highlights</button>
   <h1>Lecture 9: Revenue Management and Pricing Part I</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Revenue management (收益管理) is the practice of selling the right product to the right customer at the right price and time to maximize total revenue. This lecture establishes the seven core concepts underpinning revenue and profit management, then applies the newsvendor framework to booking limits — the mechanism by which airlines, hotels, and events ration capacity across fare classes. It also introduces customer willingness-to-pay segmentation and multi-product pricing as tools to capture consumer surplus (消費者剩餘) that a single average price inevitably leaves on the table.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Seven Core Concepts of Revenue Management</h2>
     <p data-topic="core-concepts">Revenue management (收益管理) rests on seven operating principles that shift a firm's mindset from cost-focus to market-focus:</p>
     <ul>
@@ -736,7 +731,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="core-concepts"><b>Exam trap:</b> Concept 1 says focus on <em>price</em>, not costs, when balancing supply and demand — do not confuse this with cutting costs as a lever for balance.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Booking Limits — Structure and Deployment</h2>
     <p data-topic="booking-limits-structure">A booking limit (預訂限額) caps how many units of a product can be sold at a given price tier, rationing capacity across multiple fare classes (票價等級) from low to high.</p>
 
@@ -790,7 +785,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="nested-control"><b>Exam trap:</b> Nested control means higher fare classes can always use remaining lower-class seats — a full-fare passenger is never blocked. Do not think of fare classes as separate, non-overlapping buckets.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Booking Limits and the Newsvendor Framework</h2>
     <p data-topic="booking-limits-newsvendor">The capacity reservation decision (容量預留決策) Q — how many seats to protect for high-fare (H) passengers — must be made before uncertain demand (不確定需求) D is realized. This maps directly onto the newsvendor problem (報童問題).</p>
 
@@ -838,7 +833,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="booking-limits-newsvendor"><b>Exam trap:</b> The overage cost is p<sub>L</sub> (the revenue foregone by not selling to an L customer), NOT p<sub>H</sub>. The underage cost is p<sub>H</sub> − p<sub>L</sub>, not p<sub>H</sub> alone.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Willingness to Pay and Consumer Surplus</h2>
     <p data-topic="wtp-single-price">A demand curve (需求曲線) shows the relationship between price and quantity sold. A single average price cannot capture all market segments (市場細分).</p>
 
@@ -872,7 +867,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="wtp-single-price"><b>Exam trap:</b> Consumer surplus is the gap between WTP and offered price — it belongs to the customer, not the firm. Revenue management aims to convert surplus into firm revenue, not to eliminate buyer welfare as a policy goal.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Multi-Product Revenue Management</h2>
     <p data-topic="multi-product-setup">When a firm serves multiple segments with multiple products, pricing and product-line decisions interact. The goal is to choose which products to offer and at what prices, accounting for segment valuations (細分市場估值) and development costs.</p>
 
@@ -930,7 +925,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>Core Concept 1 says balance supply and demand via <em>price</em>, not cost-cutting — do not conflate the two.</li>
@@ -944,7 +939,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Seven core concepts of revenue management — especially Concept 1 (price, not cost) and Concept 3 (micro-markets)</li>
@@ -968,11 +963,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-8" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(8)">Clear Highlights</button>
   <h1>Lecture 8: Fundamentals of Inventory Management</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Revenue management (收益管理) is the discipline of pricing and allocating limited capacity so that the right product reaches the right customer at the right price. It shifts the firm's focus from cost-based thinking to market-based thinking, using demand uncertainty as the central challenge. The lecture covers booking limits modeled as a newsvendor problem, the revenue loss from single-price selling, and multi-product pricing when customers differ in willingness to pay.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Seven Core Concepts of Revenue Management</h2>
     <p data-topic="revenue-management-concepts">Revenue management (收益管理) is built on seven strategic principles that together shift a firm from cost-centric to market-centric decision-making:</p>
     <ul>
@@ -987,7 +982,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="revenue-management-concepts"><b>Exam trap:</b> Revenue management is NOT just about lowering prices to fill capacity. Core concept #1 says to focus on price over costs, and concept #4 says to save capacity for high-value customers — both imply charging more, not less, in the right contexts.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Pricing Methods and Booking Limits Overview</h2>
     <p data-topic="pricing-methods">Three pricing approaches (定價方法) apply when inventory or capacity is limited:</p>
     <ul>
@@ -1019,7 +1014,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="booking-limits-intro"><b>Exam trap:</b> Booking limits are only relevant when total demand likely exceeds capacity. If capacity is always sufficient, booking limits add no value — you would simply sell to every customer at their segment price.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Booking Limits: When Deployed and How Implemented</h2>
     <p data-topic="booking-limits-deployment">Conditions (部署條件) required before booking limits are appropriate:</p>
     <ul>
@@ -1063,7 +1058,7 @@ tr.weak-highlight{box-shadow:none}
     </svg>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Booking Limits as a Newsvendor Problem</h2>
     <p data-topic="booking-limits-newsvendor">The booking limit decision maps directly onto the newsvendor framework (報童框架):</p>
     <ul>
@@ -1113,7 +1108,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="booking-limits-formula"><b>Exam trap:</b> The underage cost is NOT p<sub>H</sub>. It is p<sub>H</sub> − p<sub>L</sub>, because a seat not protected for H can still be sold to L; the true loss is only the fare difference. The overage cost is p<sub>L</sub> (the revenue forgone by leaving that seat empty instead of selling it at the low fare).</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Willingness to Pay, Consumer Surplus, and Revenue Loss from Single-Price Selling</h2>
     <p data-topic="willingness-to-pay">A demand curve (需求曲線) shows how many units are sold at each price. Using a single average price (單一均價) leaves revenue on the table:</p>
     <ul>
@@ -1157,7 +1152,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="price-segmentation"><b>Exam trap:</b> The 60% revenue increase from four-price segmentation compares to the single-price revenue of $2,500, not to any cost figure. The gain is purely from capturing consumer surplus — costs are not mentioned in this model.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. Multi-Product Revenue Management</h2>
     <p data-topic="multi-product-setup">A multi-product (多產品) pricing problem involves choosing which products to offer and at what price, given heterogeneous (異質) customer segments with different valuations (估值):</p>
     <ul>
@@ -1204,7 +1199,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="multi-product-objectives"><b>Exam trap:</b> When segments can cross over (自由跨越) to cheaper products, you cannot independently optimize price for each segment. A high price on Advanced may push Large Corporations to buy Professional instead — inter-product cannibalization must be modeled explicitly.</div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>Revenue management is NOT just about lowering prices. Core concepts #1 and #4 imply raising prices for high-value customers and rationing capacity for them.</li>
@@ -1218,7 +1213,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Seven core concepts of revenue management — especially: price over costs (#1), micro-markets (#3), save for valuable customers (#4).</li>
@@ -1241,11 +1236,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-7" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(7)">Clear Highlights</button>
   <h1>Lecture 7: Demand Forecasting Methods</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Forecasting (預測) is the process of projecting future values of a variable — most commonly demand — to support informed business decisions. This lecture surveys the full forecasting toolkit: qualitative judgment-based approaches and quantitative time-series methods including naive forecasts, moving averages, exponential smoothing, linear trend equations, and seasonality models. Accuracy measurement ties the toolkit together, giving managers a principled way to choose among competing techniques.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Forecasting Fundamentals</h2>
     <p data-topic="forecast-basics">
       <ul>
@@ -1272,7 +1267,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="forecasting-approaches"><b>Exam trap:</b> Qualitative methods are not inferior — they are appropriate when data are unavailable or when soft factors (human judgment, expert opinion) dominate. Do not equate "quantitative" with "better".</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Qualitative Forecasting Methods</h2>
     <p data-topic="qualitative-methods">
       Qualitative methods use subjective inputs from people rather than historical data patterns.
@@ -1319,7 +1314,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="qualitative-methods"><b>Exam trap:</b> The Delphi method was developed by RAND Corp. in the 1950s — not the 1960s or 1970s. Iterative rounds + anonymity are its defining features.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Time-Series Concepts and Behaviors</h2>
     <p data-topic="time-series-basics">
       <ul>
@@ -1372,7 +1367,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="time-series-behaviors"><b>Exam trap:</b> Irregular variation and random variation are not the same. Irregular variation is caused by identifiable unusual events (strike, natural disaster); random variation is truly unexplained residual noise.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Time-Series Forecasting Methods</h2>
     <p data-topic="naive-forecast">
       <strong>Naive Forecast (樸素預測法):</strong>
@@ -1446,7 +1441,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="exponential-smoothing"><b>Exam trap:</b> Exponential smoothing is a special case of weighted moving average, not a completely separate method. Also, a higher α means MORE weight on the most recent observation — students often confuse the direction.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Linear Trend and Seasonality</h2>
     <p data-topic="linear-trend">
       <strong>Linear Trend Equation (線性趨勢方程):</strong>
@@ -1493,7 +1488,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="seasonality-models"><b>Exam trap:</b> In the additive model, the seasonal component has the same absolute magnitude regardless of the level of the series. In the multiplicative model, the seasonal swing grows proportionally as the average grows — a common mix-up in exam questions.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. Forecast Accuracy and Technique Selection</h2>
     <p data-topic="forecast-accuracy">
       <ul>
@@ -1558,7 +1553,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="accuracy-metrics"><b>Exam trap:</b> MSE divides by (n−1) in theory, but Excel divides by n — the question may specify which to use. MAPE is the only metric that expresses error as a percentage, making it useful for comparing accuracy across series with different scales.</div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>Qualitative methods are not inferior to quantitative ones — they are appropriate when soft information dominates or historical data are unavailable.</li>
@@ -1572,7 +1567,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Four attributes of a good forecast: Accurate, Reliable, Meaningful, Effective</li>
@@ -1652,7 +1647,6 @@ function showPage(id) {
     const lid = parseInt(id.split('-')[1]);
     applyWeakHighlights(lid);
   }
-  setTimeout(initReveal, 50);
 }
 
 function computeWeakSections(lid) {
@@ -1830,7 +1824,7 @@ function renderQuiz(lid) {
   let h = '';
   state.filteredIndices.forEach((qi, displayIdx) => {
     const q = lec.questions[qi];
-    h += '<div class="q-block reveal-on-scroll" id="q-'+lid+'-'+qi+'">';
+    h += '<div class="q-block" id="q-'+lid+'-'+qi+'">';
     h += '<div class="q-num">Question ' + (displayIdx+1) + ' of ' + state.filteredIndices.length + ' <span style="margin-left:8px;padding:1px 6px;background:var(--accent-soft);border-radius:3px;font-size:.85em">'+q.difficulty+'</span></div>';
     h += '<div class="q-text">' + escapeHtml(q.q) + '</div>';
     q.options.forEach((opt, oi) => {
@@ -1968,7 +1962,7 @@ function renderPostQuiz(lid) {
   });
   const themes = Object.keys(themeCount).sort((a,b)=>themeCount[b]-themeCount[a]);
 
-  let h = '<div class="summary reveal-on-scroll reveal-delay-1">';
+  let h = '<div class="summary">';
   h += '<h2>Summary Report</h2>';
 
   // Add progress ring visualization
@@ -2011,8 +2005,8 @@ function renderPostQuiz(lid) {
     s.wrongQuestions.forEach((qi, idx) => {
       const q = lec.questions[qi];
       const chosen = s.choices[qi];
-      const delay = ['','reveal-delay-1','reveal-delay-2','reveal-delay-3'][idx%4];
-      h += '<div class="review-card reveal-on-scroll '+delay+'">';
+      const delay = ['','','',''][idx%4];
+      h += '<div class="review-card '+delay+'">';
       h += '<div class="q-num">Question '+(qi+1)+'</div>';
       h += '<div class="q-text">'+escapeHtml(q.q)+'</div>';
       q.options.forEach((opt, oi) => {
@@ -2026,7 +2020,6 @@ function renderPostQuiz(lid) {
     });
   }
   document.getElementById('postquiz-'+lid).innerHTML = h;
-  setTimeout(initReveal, 50);
 }
 
 function showGlobalReport(){ showPage('global-report'); }
@@ -2106,28 +2099,6 @@ function renderGlobalReport() {
   document.getElementById('global-body').innerHTML = h;
 }
 
-// ===== Reveal-on-scroll =====
-function initReveal() {
-  const activePage = document.querySelector('.page.active');
-  const scope = activePage || document;
-  const els = scope.querySelectorAll('.reveal-on-scroll:not(.is-visible)');
-  if (!els.length) return;
-  if (!('IntersectionObserver' in window)) {
-    els.forEach(el => el.classList.add('is-visible'));
-    return;
-  }
-  const obs = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { root:null, rootMargin:'0px', threshold:0.1 });
-  els.forEach(el => obs.observe(el));
-  setTimeout(() => { els.forEach(el => el.classList.add('is-visible')); }, 600);
-}
-
 // ===== Init on load =====
 function updateHomeStatus() {
   lectures.forEach(lec => {
@@ -2151,12 +2122,10 @@ function updateHomeStatus() {
 function renderHomeCards() {
   const container = document.getElementById('lecture-cards');
   if (!container) return;
-  const delays = ['reveal-delay-1','reveal-delay-2','reveal-delay-3'];
-  container.innerHTML = lectures.map((lec, idx) => {
-    const delay = delays[idx % 3];
+  container.innerHTML = lectures.map(lec => {
     const titleHtml = escapeHtml(lec.title);
     return `
-    <div class="card reveal-on-scroll ${delay}">
+    <div class="card ${delay}">
       <div class="lec-row">
         <div class="lec-title">${titleHtml}</div>
         <div>
@@ -2215,7 +2184,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       saveState();
       updateHomeStatus();
-      initReveal();
     })
     .catch(err => {
       console.error('Failed to load data/isom2800.json:', err);
@@ -2282,11 +2250,11 @@ if ('serviceWorker' in navigator) {
                  onclick="clearWeakHighlights(N)">Clear Highlights</button>
          <h1>Lecture N: Title</h1>
 
-         <div class="bigpic reveal-on-scroll">
+         <div class="bigpic">
            One-paragraph framing of why this topic matters.
          </div>
 
-         <section class="reveal-on-scroll" data-sec="0">
+         <section data-sec="0">
            <h2>1. Section heading</h2>
            <p data-topic="Topic name used in questions">Explanation...</p>
          </section>

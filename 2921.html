@@ -64,11 +64,6 @@ th{background:var(--accent-soft)}
 .review-card .q-text{color:var(--wrong)}
 .memorize ol{padding-left:24px}
 .memorize li{margin:6px 0}
-.reveal-on-scroll{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.4,0,.2,1);will-change:opacity,transform}
-.reveal-on-scroll.is-visible{opacity:1;transform:translateY(0)}
-.reveal-delay-1{transition-delay:.1s}
-.reveal-delay-2{transition-delay:.2s}
-.reveal-delay-3{transition-delay:.3s}
 .submit-q{margin-top:10px}
 .quiz-settings{margin-top:12px;padding:10px 14px;background:var(--accent-soft);border-radius:4px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:.92em}
 .quiz-settings label{display:flex;align-items:center;gap:6px;color:var(--ink)}
@@ -91,7 +86,7 @@ tr.weak-highlight{box-shadow:none}
   <h1>Ethical Theories Study Guide</h1>
   <div class="subtitle">HUMA2921 — Ethical Theories and Contemporary Issues, Lectures 3–11</div>
 
-  <div class="card reveal-on-scroll reveal-delay-1">
+  <div class="card">
     <div class="lec-row">
       <div class="lec-title">Lecture 3: Moral Relativism</div>
       <div>
@@ -107,7 +102,7 @@ tr.weak-highlight{box-shadow:none}
     </div>
   </div>
 
-  <div class="card reveal-on-scroll reveal-delay-2">
+  <div class="card">
     <div class="lec-row">
       <div class="lec-title">Lecture 4: Natural Law Theory</div>
       <div>
@@ -123,7 +118,7 @@ tr.weak-highlight{box-shadow:none}
     </div>
   </div>
 
-  <div class="card reveal-on-scroll reveal-delay-3">
+  <div class="card">
     <div class="lec-row">
       <div class="lec-title">Lecture 5: Utilitarianism</div>
       <div>
@@ -139,7 +134,7 @@ tr.weak-highlight{box-shadow:none}
     </div>
   </div>
 
-  <div class="card reveal-on-scroll reveal-delay-1">
+  <div class="card">
     <div class="lec-row">
       <div class="lec-title">Lecture 6: Objections to Utilitarianism</div>
       <div>
@@ -155,7 +150,7 @@ tr.weak-highlight{box-shadow:none}
     </div>
   </div>
 
-  <div class="card reveal-on-scroll reveal-delay-2">
+  <div class="card">
     <div class="lec-row">
       <div class="lec-title">Lecture 7: Ethical Egoism</div>
       <div>
@@ -171,7 +166,7 @@ tr.weak-highlight{box-shadow:none}
     </div>
   </div>
 
-  <div class="card reveal-on-scroll reveal-delay-3">
+  <div class="card">
     <div class="lec-row">
       <div class="lec-title">Lecture 8: Kantian Ethics</div>
       <div>
@@ -187,7 +182,7 @@ tr.weak-highlight{box-shadow:none}
     </div>
   </div>
 
-  <div class="card reveal-on-scroll reveal-delay-1">
+  <div class="card">
     <div class="lec-row">
       <div class="lec-title">Lecture 10: Virtue Ethics and Care Ethics</div>
       <div>
@@ -203,7 +198,7 @@ tr.weak-highlight{box-shadow:none}
     </div>
   </div>
 
-  <div class="card reveal-on-scroll reveal-delay-2">
+  <div class="card">
     <div class="lec-row">
       <div class="lec-title">Lecture 11: Moral Particularism</div>
       <div>
@@ -232,30 +227,30 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-3" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(3)">Clear Highlights</button>
   <h1>Lecture 3: Moral Relativism</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Moral relativism (道德相對主義, MR) says that what is right or wrong for the members of a culture is ultimately determined by the basic moral norms of that culture. The lecture builds up MR from the moral diversity thesis, examines two versions of the anthropologist's argument and the objections they face, distinguishes context sensitivity (CS) from MR, and ends with a restricted version of MR plus its relationship to tolerance.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Relativist Theory of Right Conduct</h2>
     <p data-topic="right-conduct">For a member of culture C: action A is <strong>obligatory</strong> iff A is required by the basic moral norms of C; <strong>wrong</strong> iff A is prohibited by those norms; <strong>optional</strong> iff A is neither required nor prohibited by those norms.</p>
     <p data-topic="right-conduct">The rightness/wrongness of A is defined entirely by what C's moral code says. There is no further "culture-independent" standard.</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Context Sensitivity vs Moral Objectivism</h2>
     <p data-topic="context-sensitivity"><strong>Context Sensitivity (CS)</strong>: what is right or wrong for someone to do often depends on circumstances, including facts about their culture. The expert-swimmer and non-swimmer example shows different agents in different situations may be required to do different things.</p>
     <p data-topic="moral-objectivism"><strong>Moral Objectivism (MO)</strong>: at least some moral norms are correct independently of what any culture accepts; they apply to all cultures.</p>
     <div class="exam-trap-inline" data-topic="context-sensitivity"><b>Exam trap:</b> CS is NOT equivalent to MR. CS is compatible with MO — a single objective principle ("help those in need when you can do so without serious risk") can prescribe different actions to different agents because the non-moral facts differ.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Moral Diversity Thesis (MD)</h2>
     <p data-topic="moral-diversity"><strong>MD</strong> (道德多樣性): the moral codes of some cultures include basic moral norms that conflict with basic moral norms of other cultures, and such fundamental conflicts are widespread.</p>
     <p data-topic="moral-diversity">MR does not entail MD. Even if all cultures happened to share the same basic norms, MR could still be true (analogy: everyone driving on the right is still a matter of convention).</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Anthropologist's Argument — Version 1 and Its Problems</h2>
     <p data-topic="anthropologist-v1"><strong>Version 1</strong>: (P1) Different cultures have different moral codes (= MD). (P2) If MD is true, there are no objectively true moral norms applying to all cultures. (P3) If there are no universally valid norms, MR is true. Therefore MR is true.</p>
     <p data-topic="challenge-p2"><strong>Challenge to P2</strong>: mere difference of belief about an issue does not show there is no single correct belief about it. Compare historical disagreement over the shape of the earth.</p>
@@ -264,19 +259,19 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="challenge-p1"><b>Exam trap:</b> MD requires widespread <em>fundamental</em> disagreement, not just observed differences. Most cross-cultural disputes can be re-described as nonfundamental, so MD is far from firmly established.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Anthropologist's Argument — Version 2</h2>
     <p data-topic="anthropologist-v2"><strong>Version 2</strong>: (P1) Different cultures have different moral codes (= MD). (P2) Such conflicts cannot be resolved by rational means. (P3) The best explanation for widespread, rationally irresolvable conflicts is that there are no objectively true moral norms applying to all cultures. (P4) If there are no such norms (denial of MO), then MR is true. Therefore MR is true.</p>
     <p data-topic="objectivist-response"><strong>Objectivist response (the "chicken pull" case)</strong>: if someone shares all the non-moral beliefs about animals yet his code lacks any norm prohibiting cruelty, the appropriate response is to insist he is mistaken and urge him to exercise sympathy. Disagreement does not show there is no fact of the matter.</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. Problems of Formulation</h2>
     <p data-topic="consistency-problem"><strong>Consistency</strong>: Susan belongs both to the Roman Catholic Church (forbids abortion) and the Democratic Party (permits abortion). On MR her abortion would be both right and wrong — contradictory.</p>
     <p data-topic="usability-determinacy"><strong>Usability &amp; Determinacy</strong>: MR presupposes a determinate account of what counts as a "culture." Is culture fixed by language, ethnicity, religion, political affiliation? Without an answer, MR cannot tell us what makes any action right or wrong.</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="6">
+  <section data-sec="6">
     <h2>7. Intercultural &amp; Intracultural Evaluation; Moral Reformer</h2>
     <p data-topic="intercultural-evaluation"><strong>Intercultural evaluation</strong>: on MR, a culture's basic norms set the standard, so it makes no sense to question their correctness from outside. But it clearly does make sense.</p>
     <p data-topic="intracultural-evaluation"><strong>Intracultural evaluation</strong>: we routinely say morality has improved (e.g., on race and gender) or declined. MR cannot easily make sense of these comparative judgments because the standard of evaluation itself changes with the code.</p>
@@ -284,7 +279,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="moral-reformer"><b>Exam trap:</b> The intercultural-evaluation problem, the intracultural-evaluation problem, and the moral-reformer problem are three distinct objections to MR, even though they all turn on the fact that MR makes a culture's current norms the final standard.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="7">
+  <section data-sec="7">
     <h2>8. Internal Support, Explanatory Power, Restricted MR</h2>
     <p data-topic="internal-support">A culture's basic moral norms may conflict with one's own considered moral beliefs (e.g., Nazi Germany's antisemitism). MR's failure to provide internal support is at the same time a failure of explanatory power.</p>
     <p data-topic="restricted-mr"><strong>Restricted Moral Relativism</strong> (受限道德相對主義): what is right and wrong for the members of a culture depends on its basic norms, <em>only insofar as</em> those norms are consistent with universal constraints that reflect the functions of morality and facts about human nature.</p>
@@ -292,14 +287,14 @@ tr.weak-highlight{box-shadow:none}
     <p data-topic="restricted-mr">The interpersonal function yields a norm of <strong>reciprocity</strong> (returning good for good), encourages other-regarding behaviour, leaves room for personal freedom, and requires norms to be <strong>justifiable</strong>. Restricted MR is <strong>pluralistic</strong>: different codes can be equally correct provided they satisfy the constraints — but not anything goes.</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="8">
+  <section data-sec="8">
     <h2>9. Relativism and Tolerance</h2>
     <p data-topic="tolerance"><strong>Principle of Tolerance</strong>: it is morally wrong for any culture to interfere with the moral practices of another culture.</p>
     <p data-topic="tolerance">MR is often thought to commit one to tolerance, but unrestricted MR is actually <em>incompatible</em> with it — because tolerance is presented as a universally applicable norm, which MR cannot accommodate. Only restricted MR is compatible with the principle. Also note: rejecting MR does not commit one to intolerance.</p>
     <div class="exam-trap-inline" data-topic="tolerance"><b>Exam trap:</b> "MR supports tolerance" is a common mistake. Unrestricted MR cannot endorse a universal principle of tolerance without contradicting itself.</div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary — Lecture 3</strong>
     <ul>
       <li>CS ≠ MR; CS is compatible with MO.</li>
@@ -311,7 +306,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Definitions: MR, MO, CS, MD.</li>
@@ -322,7 +317,7 @@ tr.weak-highlight{box-shadow:none}
     </ol>
   </div>
 
-  <div class="lower-yield reveal-on-scroll reveal-delay-3">
+  <div class="lower-yield">
     <strong>Lower-yield / skip if short on time</strong>
     <ul>
       <li>The driving-on-the-right analogy for MR-without-MD.</li>
@@ -338,35 +333,35 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-4" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(4)">Clear Highlights</button>
   <h1>Lecture 4: Natural Law Theory</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Natural Law Theory (自然法理論, NLT), in the Thomistic tradition, grounds morality in human nature understood teleologically. Its three components are a perfectionist theory of value, the principle of double effect (PDE) for resolving cases of moral conflict, and a commitment to moral absolutism. The lecture sets out the theory, applies it to hard cases (hysterectomy, craniotomy, euthanasia, self-defence), then evaluates each component.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Two Senses of Law and the Three Components</h2>
     <p data-topic="senses-of-law">Law has a <strong>descriptive</strong> sense (regularities in nature) and a <strong>normative/prescriptive</strong> sense (norms for how people are supposed to behave). NLT calls moral laws "natural" because they are <em>grounded in human nature</em>, not because they describe physical regularities.</p>
     <p data-topic="three-components">Three components of NLT: (i) a <strong>perfectionist</strong> theory of value; (ii) the <strong>Principle of Double Effect</strong> (PDE); (iii) commitment to <strong>moral absolutism</strong> (MA).</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Aquinas's Perfectionism</h2>
     <p data-topic="aquinas-perfectionism">Aquinas links a thing's <strong>essence</strong> to its <strong>purpose</strong>: the value of a thing consists in the <strong>perfection</strong> of its state in performing its function. This is a <strong>teleological</strong> (目的論) worldview: all things in nature have purposes.</p>
     <p data-topic="aquinas-perfectionism">Human beings are rational agents with free will, so it is up to us to use reason to understand our essential nature and our good. The goodness of a human being is a matter of realizing the purposes characteristic of humans.</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Value Perfectionism &amp; Intrinsic Value</h2>
     <p data-topic="vp-mp"><strong>VP</strong> (價值完美主義): the goodness of a thing is a matter of that thing fully developing the capacities essential to it. <strong>MP</strong>: a perfectionist account of value is central to understanding right and wrong actions.</p>
     <p data-topic="intrinsic-value">A state of affairs S is <strong>intrinsically good</strong> (concerning humans) iff realizing S is part of what perfects human nature; <strong>intrinsically bad</strong> iff S hinders or destroys what perfects human nature; <strong>intrinsically value-neutral</strong> iff S neither perfects nor hinders human nature.</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Four Basic Human Goods</h2>
     <p data-topic="basic-goods">The four basic goods are <strong>Life, Procreation, Knowledge, Sociability</strong>. The Fundamental Principle of Right Conduct in NLT: <em>these are to be preserved and promoted; their hindrance and destruction are to be avoided</em>.</p>
     <p data-topic="basic-goods">Implications: an obligation to protect and promote one's own life and others' (Life); to have and raise children (Procreation); to pursue knowledge (Knowledge); to form friendships, marriage, and civil society (Sociability).</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Moral Conflict &amp; the Principle of Double Effect</h2>
     <p data-topic="moral-conflict">NLT faces conflict cases (self-defence killing, hysterectomy, lying to a would-be murderer). It rejects pure consequentialism: <em>intentions also count</em>, not just how much good or evil would result.</p>
     <p data-topic="pde"><strong>Principle of Double Effect (PDE)</strong> (雙重效果原則): whenever an action would produce at least one good effect and one evil effect, it is permitted iff <em>all</em> of the following hold:</p>
@@ -379,14 +374,14 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="pde"><b>Exam trap:</b> All three PDE conditions must be met. The bad effect being unintended is necessary but not sufficient; you still need intrinsic permissibility and proportionality.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. Moral Absolutism and the Theory of Right Conduct</h2>
     <p data-topic="moral-absolutism"><strong>MA</strong> (道德絕對主義): certain very general types of action are always morally wrong to perform, even when performing them would bring about good results. Paradigm case: the <em>intentional</em> taking of innocent human life is absolutely prohibited.</p>
     <p data-topic="direct-indirect">NLT distinguishes <strong>direct</strong> from <strong>indirect</strong> violations of basic values. Direct: the action seriously hinders or destroys a basic value AND cannot be justified by PDE. Indirect: hinders/destroys a basic value but CAN be justified by PDE.</p>
     <p data-topic="right-conduct-nlt">Right conduct in NLT: A is <strong>obligatory</strong> iff failing to perform A would result in a direct violation of one or more basic goods; <strong>wrong</strong> iff performing A would result in a direct violation; <strong>optional</strong> iff neither performing nor failing to perform A would result in a direct violation.</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="6">
+  <section data-sec="6">
     <h2>7. Applications: Craniotomy, Euthanasia, Self-Defence</h2>
     <p data-topic="craniotomy"><strong>Craniotomy</strong>: crushing the skull of a child to save the mother. Here the death of the unborn is the <em>means</em> of saving the mother's life — so the bad effect is intended. PDE fails on Non-intentionality → <strong>direct violation</strong>, morally wrong.</p>
     <p data-topic="euthanasia"><strong>End-of-life</strong>: active euthanasia (intentional killing) is morally wrong. But prescribing a life-shortening drug that eases the patient's pain can be permissible — the shortening is a foreseen but unintended side effect.</p>
@@ -394,21 +389,21 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="craniotomy"><b>Exam trap:</b> Hysterectomy and craniotomy can have the same physical outcome (mother lives, child dies), yet NLT permits the first and forbids the second. The difference lies in whether the child's death is a means or a side effect.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="7">
+  <section data-sec="7">
     <h2>8. Evaluation — Initial Appeal, Absolutism, PDE Innateness</h2>
     <p data-topic="evaluation-appeal"><strong>Initial appeal</strong>: NLT fits common beliefs about morality (grounded in human nature, principles are objective), arguably satisfies consistency and determinacy, but usability requires understanding the elements of PDE.</p>
     <p data-topic="evaluation-ma"><strong>Against MA</strong>: is there any exceptionless moral rule? Cases like active voluntary euthanasia, assisted suicide, and the case of Tony Bland strike many as morally justified, putting pressure on absolutism.</p>
     <p data-topic="pde-innate"><strong>Is PDE innate?</strong> The <strong>bystander case</strong> (pull a lever to divert a trolley onto a sidetrack with one worker — judged permissible) and the <strong>footbridge case</strong> (push a large man off a bridge to stop the trolley — judged wrong) differ in intuitive verdict even though both kill one to save five. Harman (1999) suggests the responsible principle (PDE-like) is "built into" people's morality in advance.</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="8">
+  <section data-sec="8">
     <h2>9. Evaluation — The Core</h2>
     <p data-topic="grounding-project"><strong>The Grounding Project</strong> — Aquinas: all things to which man has a natural inclination are naturally apprehended as good. Two problems: (i) <strong>logical gap</strong> between non-moral facts and value statements; (ii) <strong>circularity</strong> — not all inclinations are good, and to identify the "good" inclinations you must already presuppose what the human good is.</p>
     <p data-topic="conflict-resolution"><strong>Moral conflict without MA/PDE</strong>: two options — (i) find a non-arbitrary rank ordering of rules; (ii) appeal to the details of the case and use good moral judgement to decide which rule applies.</p>
     <p data-topic="moral-perfectionism"><strong>Moral perfectionism</strong> as a separable thesis: one can agree that considerations of value come before considerations of rightness without holding that the morally central value is perfectionistic (e.g., welfare/well-being could play that role instead).</p>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary — Lecture 4</strong>
     <ul>
       <li>All three PDE conditions are required; failing any one is sufficient for impermissibility.</li>
@@ -420,7 +415,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>The three components of NLT: perfectionism, PDE, MA.</li>
@@ -431,7 +426,7 @@ tr.weak-highlight{box-shadow:none}
     </ol>
   </div>
 
-  <div class="lower-yield reveal-on-scroll reveal-delay-3">
+  <div class="lower-yield">
     <strong>Lower-yield / skip if short on time</strong>
     <ul>
       <li>The Tony Bland case as a counterexample to MA — name and the broad point are enough.</li>
@@ -448,42 +443,42 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-5" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(5)">Clear Highlights</button>
   <h1>Lecture 5: Utilitarianism</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Lecture 5 introduces classical utilitarianism as the leading form of consequentialism. The right action is the one whose consequences produce as high a utility as any alternative. The lecture distinguishes hedonistic and qualitative versions, examines Mill's "proof" of the principle of utility (and its three fallacies), and addresses practical objections by introducing distinctions between actual vs expected consequences and between subjective and objective rightness.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Three Theses of Consequentialism</h2>
     <p data-topic="three-theses">Consequentialism's three theses: (i) <strong>value is independent of the right</strong> — value can be specified without reference to rightness; (ii) <strong>explanatory priority of value</strong> — the right is to be explained in terms of the good; (iii) <strong>personal value alone is relevant</strong> — the value that matters morally is value for persons. To make consequentialism precise we must answer: which theory of value? and how is right action related to value?</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Classical Act Utilitarianism</h2>
     <p data-topic="classical-au">Classical Act Utilitarianism combines: <strong>act</strong> utilitarianism (each act evaluated directly), a <strong>maximizing</strong> conception of right action (right = greatest total amount of value), <strong>welfarism</strong> (welfare is the fundamental value), <strong>universalism</strong> (the welfare of all affected individuals counts), and <strong>impartialism</strong> (agent-neutral — no special weighting for oneself or one's group).</p>
     <p data-topic="utility"><strong>Utility</strong> = the values of the consequences of actions: the positive value of effects on those positively affected, minus the negative value on those negatively affected.</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Theory of Right Conduct &amp; the Generic Principle of Utility</h2>
     <p data-topic="right-conduct-au">For A performed in C: A is <strong>obligatory</strong> iff A in C would produce a <em>higher</em> level of utility than any alternative; <strong>wrong</strong> iff A would produce <em>less</em> utility than some alternative; <strong>optional</strong> iff in terms of utility production A is tied for first place with at least one other action.</p>
     <p data-topic="generic-pu"><strong>Generic Principle of Utility (PU)</strong>: A in C is right iff doing A would produce as high a utility as any alternative the agent could perform instead.</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Hedonistic Utilitarianism (Bentham)</h2>
     <p data-topic="hedonism">Bentham and Mill accept: (i) one's welfare is a matter of one's level of <strong>happiness</strong>; (ii) happiness consists in experiences of pleasure and absence of pain. Pleasure is intrinsically good; pain intrinsically bad.</p>
     <p data-topic="eh-phu"><strong>Ethical Hedonism (EH)</strong>: experiences of pleasure are intrinsically good and pain intrinsically bad, and they are the only items of intrinsic value relevant to ethics. <strong>PHU</strong>: A in C is right iff doing A produces at least as high an <em>overall balance of pleasure over pain</em> as any alternative.</p>
     <p data-topic="felicific-calculus"><strong>Bentham's felicific calculus</strong>: features for calculating utilities — intensity, duration, certainty/uncertainty, propinquity/remoteness, fecundity, purity, extent.</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Mill's Qualitative Hedonism &amp; Two Objections</h2>
     <p data-topic="qualitative-hedonism"><strong>Mill</strong> refines Bentham by recognizing that some pleasures are higher in <strong>quality</strong>, not just quantity. Test of quality: if those competently acquainted with both prefer pleasure P1 to P2 even when P1 involves more discontent, P1 is superior in quality.</p>
     <p data-topic="obj-qualitative-1"><strong>Objection 1</strong>: either quality concerns the intrinsic nature of pleasurable mental states or it does not. If it does, the only basis for distinguishing pleasures is intensity and duration — back to quantitative hedonism. If it does not, Mill has abandoned hedonism.</p>
     <p data-topic="obj-qualitative-2"><strong>Objection 2</strong>: to judge quality competently one must have developed capacities for both types of pleasure — but how can Mill be sure such "expert judges" will reach universal agreement?</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. Mill's "Proof" and Its Diagnosis</h2>
     <p data-topic="mills-proof">Mill grants that "questions of ultimate ends do not admit of proof" but offers a three-stage consideration:</p>
     <ol>
@@ -497,27 +492,27 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="mills-proof"><b>Exam trap:</b> Stage 1 is equivocation; Stage 2 is composition; Stage 3 is a separate worry about how individually-desired ends could all be "parts" of happiness. Don't confuse the three.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="6">
+  <section data-sec="6">
     <h2>7. Practical Objections; Actual vs Expected Consequences</h2>
     <p data-topic="problem-of-ignorance"><strong>Problem of ignorance</strong>: to apply PHU one would have to figure out the utilities of all alternatives. Without access to the future and to others' experiences, this is not feasible. Response: PU is a <strong>moral criterion of rightness</strong>, not a <strong>decision procedure</strong>.</p>
     <p data-topic="acu-ecu"><strong>ECU (Expected-Consequences Utilitarianism)</strong>: A in C is right iff A has as high an <em>expected</em> utility as any alternative. ECU contrasts with <strong>ACU (Actual-Consequences Utilitarianism)</strong> which evaluates actual outcomes. Each version exerts pull in different scenarios.</p>
     <p data-topic="mine-shafts"><strong>Mine Shafts case (Parfit)</strong>: 100 miners trapped, equally likely in shaft A or B. Closing gate 1 saves 100 if A, 0 if B; gate 2 saves 0 if A, 100 if B; gate 3 saves 90 either way. Expected utilities: gate 1 = 50, gate 2 = 50, gate 3 = 90. Intuitively Phil ought to close gate 3 — but if the miners were actually in A, he later judges "I ought to have closed gate 1."</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="7">
+  <section data-sec="7">
     <h2>8. Subjective vs Objective Rightness</h2>
     <p data-topic="spu"><strong>SPU (Subjective Principle of Utility)</strong>: A performed in C is <em>presumptively</em> subjectively right <strong>if</strong> (not iff!) the agent <em>believes</em> A has as high an expected utility as any alternative she believes is open to her. The action judged to have the highest expected utility is subjectively obligatory; all others subjectively wrong.</p>
     <p data-topic="spu">SPU states only a <strong>sufficient</strong> condition, and only a <strong>presumptively</strong> sufficient one — without beliefs about expected outcomes, SPU won't guide action, and sometimes having such beliefs still doesn't warrant subjective rightness. Example: if closing gate 3 would save only 50 regardless of shaft, all three options have expected utility 50, yet closing gate 3 is still intuitively the subjectively right act.</p>
     <div class="exam-trap-inline" data-topic="spu"><b>Exam trap:</b> SPU uses "if," not "iff," and the condition is only <em>presumptively</em> sufficient. Watch for this in MCQs.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="8">
+  <section data-sec="8">
     <h2>9. Blame, Praise &amp; Two Levels of Moral Thought</h2>
     <p data-topic="blame-praise"><strong>Blame-worthiness/praise-worthiness ≠ objective wrongness/rightness</strong>. Praise and blame are sensitive to how morally conscientious the agent was. In Mine Shafts, Phil is not blameworthy even though he performed an objectively wrong act — a case of <strong>blameless wrongdoing</strong>. Symmetrically there can be <strong>praiseless rightdoing</strong>.</p>
     <p data-topic="two-levels"><strong>Two levels of moral thought</strong>: <em>intuitive level</em> — proceeds by moral rules learned early; <em>critical level</em> — where ordinary moral rules conflict and we must deliberate. Not all situations allow for deliberation, and this two-level structure helps utilitarianism accommodate ordinary moral life.</p>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary — Lecture 5</strong>
     <ul>
       <li>Classical AU is direct + maximizing + welfarist + universalist + impartialist.</li>
@@ -530,7 +525,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>The five features of classical AU (act, maximizing, welfarist, universalist, impartialist).</li>
@@ -542,7 +537,7 @@ tr.weak-highlight{box-shadow:none}
     </ol>
   </div>
 
-  <div class="lower-yield reveal-on-scroll reveal-delay-3">
+  <div class="lower-yield">
     <strong>Lower-yield / skip if short on time</strong>
     <ul>
       <li>Memorising all seven features of Bentham's felicific calculus by name; recognising them in a list is enough.</li>
@@ -580,11 +575,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-6" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(6)">Clear Highlights</button>
   <h1>Lecture 6: Objections to Utilitarianism</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Classical utilitarianism — direct, maximising, and impartialist — faces powerful objections drawn from cases where its verdicts clash dramatically with our moral intuitions about justice, rights, personal relationships, and what morality can reasonably demand of us. Understanding these objections, and the utilitarian responses to them, is the core skill of this lecture.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Cases Clashing with Intuitions about Justice and Rights</h2>
     <p data-topic="punishment">The <strong>punishment case</strong> (懲罰): police can prevent riots by framing an innocent, socially isolated person with a criminal record. Utilitarianism appears to require (功利主義看似要求) this because framing maximises utility.</p>
     <p data-topic="medical-sacrifice">The <strong>medical sacrifice case</strong> (醫療犧牲): a utilitarian physician should sacrifice one healthy patient to harvest organs for three dying patients. Utilitarianism appears to require this.</p>
@@ -592,7 +587,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="punishment"><b>Exam trap:</b> The objections are not just about the outcomes being bad — they reveal structural features of utilitarianism (impartialism, maximising) that generate systematic conflicts with intuitions about rights.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Cases Clashing with What Morality Can Demand</h2>
     <p data-topic="promising">The <strong>promising case</strong> (承諾): if the beneficiary of a deathbed promise no longer needs the money and the agent is impoverished, utilitarianism may require breaking the promise to use the money better.</p>
     <p data-topic="demandingness">The <strong>demandingness objection</strong> (要求過高): utilitarianism requires the agent to volunteer rather than garden on Sunday whenever doing so produces more overall utility — it demands the sacrifice of personal projects.</p>
@@ -600,20 +595,20 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="demandingness"><b>Exam trap:</b> The demandingness objection and the special obligations objection target the impartiality of utilitarianism, not just its maximising character.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Direct Responses: Bold Denial and Remote Effects</h2>
     <p data-topic="bold-denial"><strong>Bold denial</strong> (大膽否認): accept the counterintuitive verdict and challenge the reliability of moral intuitions. Joshua Greene argues that strong moral feelings are emotional responses dressed in rational clothing — not reliable guides.</p>
     <p data-topic="remote-effects"><strong>Remote effects</strong> (遠期效應): challenge the stipulated facts. Is it really true that framing the innocent maximises utility? Realistically, such behaviour would erode public trust and produce catastrophic long-term disutility. De Lazari-Radek and Singer acknowledge the surgeon should kill the one to save the four (bold denial), but note the action would not be recommended publicly due to its effects on social order.</p>
     <div class="exam-trap-inline" data-topic="bold-denial"><b>Exam trap:</b> Bold denial and remote effects are distinct responses. Bold denial questions the moral intuition; remote effects questions the empirical premise that utility is actually maximised.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Satisficing Consequentialism</h2>
     <p data-topic="satisficing"><strong>Satisficing consequentialism (SC)</strong> (滿足後果主義) replaces "maximising" with "satisficing" (滿足): an action is right if its utility meets or exceeds a specified threshold, even if an alternative would produce more utility.</p>
     <p data-topic="satisficing">Problems with SC: (1) A charity collector who keeps some donations but still exceeds the threshold acts permissibly under SC — but this is theft. (2) A helicopter pilot who saves 2 instead of 6 when saving 6 costs no more does nothing wrong under SC — but this is counterintuitive.</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Rule Consequentialism</h2>
     <p data-topic="rule-consequentialism"><strong>Rule consequentialism (RC)</strong> (規則後果主義): an action is right iff it is not prohibited by an ideal code of rules — a set of rules whose acceptance utility (效用接受值) is at least as great as any alternative code.</p>
     <p data-topic="rule-consequentialism">RC handles the cases: a rule permitting medical sacrifice has lower acceptance utility than a prohibiting rule. A rule of strict impartiality is too costly to internalise. RC allows partiality indirectly.</p>
@@ -621,14 +616,14 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="rule-consequentialism"><b>Exam trap:</b> RC retains maximising at the level of rule-selection but not at the level of individual action — it is indirect, not direct, consequentialism.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. Alternative Theories of Value</h2>
     <p data-topic="alternative-theories">Nozick's <strong>experience machine</strong> (體驗機器) challenges hedonism: if welfare is just subjective experience, we should plug in — but most of us would not. This suggests welfare is not reducible to experience.</p>
     <p data-topic="alternative-theories"><strong>Desire fulfillment consequentialism</strong> (慾望實現後果主義): an action is right iff it maximises general desire fulfillment. Problems: not all desire fulfillment contributes to welfare; fulfilling monstrous desires has no intrinsic value.</p>
     <p data-topic="alternative-theories"><strong>Perfectionist consequentialism</strong> (完善主義後果主義): certain objective states make life good independent of welfare — bringing act consequentialism closer to Aquinas's natural law theory.</p>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>Distinguish bold denial (questioning intuitions) from remote effects (questioning empirical premises).</li>
@@ -639,7 +634,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Three structural features: direct, maximising, impartialist.</li>
@@ -652,7 +647,7 @@ tr.weak-highlight{box-shadow:none}
     </ol>
   </div>
 
-  <div class="lower-yield reveal-on-scroll reveal-delay-3">
+  <div class="lower-yield">
     <strong>Lower-yield / skip if short on time</strong>
     <ul>
       <li>De Lazari-Radek and Singer's exact wording of the surgeon case.</li>
@@ -667,11 +662,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-7" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(7)">Clear Highlights</button>
   <h1>Lecture 7: Ethical Egoism</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Ethical egoism holds that an action is right if and only if it maximises the agent's own utility. It is consequentialist and maximising like utilitarianism, but agent-relative (代理人相對) rather than impartialist. This lecture also covers psychological egoism — the empirical claim that all deliberate action is ultimately self-motivated — and the argument from psychological to ethical egoism.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Ethical Egoism (EE)</h2>
     <p data-topic="ethical-egoism"><strong>EE</strong>: An action A by P in C is right iff P's performing A would produce at least as much <strong>agent utility</strong> (代理人效用) — utility accruing to the agent P — as any alternative.</p>
     <p data-topic="ethical-egoism">EE is: consequentialist, welfarist, <strong>agent-relative</strong> (only the agent's own welfare counts), maximising, and <strong>prudentialist</strong> (what is good for the agent determines rightness).</p>
@@ -680,13 +675,13 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="ethical-egoism"><b>Exam trap:</b> EE is not the same as "always do what you feel like." It requires maximising agent utility, which may require sacrificing short-term pleasure for long-term self-interest.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Rational Egoism and the Complaint That EE Is Not a Moral Theory</h2>
     <p data-topic="rational-egoism"><strong>Rational egoism (RE)</strong>: An action is rationally permissible iff it maximises agent utility. RE asks what is rational; EE asks what is morally right — they are distinct but related questions.</p>
     <p data-topic="rational-egoism">A common assumption: it is always rational to do what is morally right. This makes RE directly relevant to the defence of EE — EE competes with any theory that claims morally right action need not be self-interested.</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. Psychological Egoism (PE) and Altruism</h2>
     <p data-topic="psychological-egoism"><strong>PE</strong>: Any deliberate action a human agent performs always has self-interest as its ultimate (終極) motive. PE is a descriptive, empirical claim — it says how people in fact are motivated.</p>
     <p data-topic="psychological-egoism">PE differs from psychological hedonism (心理享樂主義): PE allows ultimate motives beyond pleasure (e.g., power, legacy). PE does not require conscious awareness of self-interest, and distinguishes short-term from long-term motivation.</p>
@@ -696,7 +691,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="psychological-egoism"><b>Exam trap:</b> PE is descriptive; EE is normative. Batson's empirical findings challenge PE, but do not directly refute EE (a normative claim).</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Evaluation of EE</h2>
     <p data-topic="evaluation-ee"><strong>Consistency</strong>: EE appears to conflict with the Principle of Non-Interference (PNI) — that it is wrong to interfere with someone performing their duty. EE may require such interference whenever it serves agent utility. Resolvable by qualifying PNI.</p>
     <p data-topic="evaluation-ee"><strong>Determinacy</strong>: EE faces the same uncertainty problem as utilitarianism. Response: operate on expected agent utility; apply critical vs. intuitive levels of moral reasoning.</p>
@@ -704,7 +699,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="evaluation-ee"><b>Exam trap:</b> The "What You Most Want" argument confuses the liking sense of "want" with the explanatory sense. Acting on a desire to help another is not self-interested just because it is what the agent "wants."</div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>PE is descriptive; EE is normative — Batson refutes PE, not EE directly.</li>
@@ -715,7 +710,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>EE formula and the distinction from optional actions.</li>
@@ -728,7 +723,7 @@ tr.weak-highlight{box-shadow:none}
     </ol>
   </div>
 
-  <div class="lower-yield reveal-on-scroll reveal-delay-3">
+  <div class="lower-yield">
     <strong>Lower-yield / skip if short on time</strong>
     <ul>
       <li>SEE (subjective ethical egoism) details beyond its basic definition.</li>
@@ -743,11 +738,11 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-8" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(8)">Clear Highlights</button>
   <h1>Lecture 8: Kantian Ethics</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Kant grounds morality not in consequences or desires but in pure practical reason (純粹實踐理性). The categorical imperative — unconditional moral command — has two main formulations: the Formula of Humanity (respect persons as ends) and the Formula of Universal Law (act only on universalizable maxims). These generate a system of perfect and imperfect duties and culminate in postulates about the soul and God required for moral coherence.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Duty and Practical Reason</h2>
     <p data-topic="kant-duty">Moral law must hold with absolute necessity for all rational beings (理性存在者) — including non-human rational beings if they exist. Its ground must be in pure reason, not in contingent facts about human nature.</p>
     <p data-topic="kant-duty"><strong>Practical reason</strong> (實踐理性): the capacity to deliberate and make free choices. It is both the source and the authority of the moral law.</p>
@@ -756,7 +751,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="ci-vs-hi"><b>Exam trap:</b> Morality cannot be a doctrine of personal happiness because happiness is contingently desired — making obligations hypothetical (dependent on wanting to be happy). Kant requires unconditional obligations.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>2. Formula of Humanity (FH)</h2>
     <p data-topic="formula-humanity">Kant distinguishes ends adopted based on desire from <strong>ends in themselves</strong> (自身目的): things with unconditional, non-instrumental value. Rational nature is the paradigmatic end in itself.</p>
     <p data-topic="formula-humanity"><strong>Autonomy</strong> (自律) — the capacity to give oneself the moral law through reason — is the ground of human <strong>dignity</strong> (尊嚴) and unconditional worth.</p>
@@ -766,7 +761,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="formula-humanity"><b>Exam trap:</b> "Treating as a means" is not the same as "treating as merely a means." All daily transactions involve using others as means — this is not automatically wrong.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>3. Formula of Universal Law (FUL) and the Universalizability Test</h2>
     <p data-topic="formula-universal-law"><strong>FUL</strong>: "Act only according to that maxim through which you can at the same time will that it become a universal law." (G, 4:421)</p>
     <p data-topic="formula-universal-law"><strong>FLN</strong> (variant): act as if the maxim were a universal law of nature.</p>
@@ -777,7 +772,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="objections-ful"><b>Exam trap:</b> False negative — FUL can prohibit morally neutral actions (stock market withdrawal). False positive — a hyper-specific maxim may be universalizable yet intuitively wrong.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>4. Kant's System of Duties</h2>
     <p data-topic="kant-duties"><strong>Perfect duties</strong> (完全義務): must always/never be performed without exception. <strong>Imperfect duties</strong> (不完全義務): must be fulfilled sometimes and to some extent, with latitude in how.</p>
     <p data-topic="kant-duties">Duties to oneself: self-perfection (developing talents and powers). Duties to others: promoting their happiness. These derive from the positive requirement of FH.</p>
@@ -785,14 +780,14 @@ tr.weak-highlight{box-shadow:none}
     <p data-topic="kant-duties"><strong>Lizbeth's lie</strong>: lying to murderers to protect an innocent person. Kant's principle: "the stronger ground of obligation prevails." Saving innocent life outweighs honesty here.</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>5. Moral Worth and the Highest Good</h2>
     <p data-topic="moral-worth"><strong>Moral worth</strong> (道德價值): requires (1) a <strong>good will</strong> — disposed to act from duty as the sole motive; and (2) inner strength to consistently resist temptation. Rational nature gives all persons equal dignity, even a vicious person retains some respect as a human being.</p>
     <p data-topic="highest-good">The <strong>highest good</strong> (最高善, summum bonum): virtue plus happiness proportionate to virtue. Nothing in the natural world guarantees this, requiring two practical postulates:</p>
     <p data-topic="highest-good"><strong>Immortality of the soul</strong> (靈魂不朽): perfect virtue requires endless moral progress, possible only if the soul continues indefinitely. <strong>God</strong> (上帝): a cause adequate to ensure happiness proportionate to virtue. Both are postulates — practically necessary but not theoretically cognisable.</p>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>FH criterion vs. FUL decision procedure — different roles.</li>
@@ -804,7 +799,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>CI vs. HI and why morality must be categorical.</li>
@@ -817,7 +812,7 @@ tr.weak-highlight{box-shadow:none}
     </ol>
   </div>
 
-  <div class="lower-yield reveal-on-scroll reveal-delay-3">
+  <div class="lower-yield">
     <strong>Lower-yield / skip if short on time</strong>
     <ul>
       <li>Exact CPR citations for immortality and God postulates.</li>
@@ -832,17 +827,17 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-10" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(10)">Clear Highlights</button>
   <h1>Lecture 10: Virtue Ethics and Care Ethics</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Virtue ethics (德性倫理學) shifts moral focus from right action to virtuous character: what kind of person should I be? Aristotle's account grounds virtues in human function and eudaimonia. Care ethics (關懷倫理學), inspired by Carol Gilligan, grounds morality in relationships of care and dependency, offering a distinct picture of the self and moral reasoning.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. What Is Virtue?</h2>
     <p data-topic="virtue-definition">A <strong>virtue</strong> (德性) is a relatively fixed character trait involving dispositions to think, reason, feel, and act in certain ways across varied circumstances. It has three components: (1) <strong>intellectual</strong> — correct beliefs about when the trait is appropriate; (2) <strong>affective</strong> — appropriate emotional responses; (3) <strong>motivational-behavioural</strong> — disposition to act accordingly.</p>
     <p data-topic="virtue-definition">Virtues are acquired by practice and exercise — not naturally endowed. <strong>Cardinal virtues</strong> (主德) are not dependent on other virtues; Greek cardinal virtues: wisdom, courage, temperance, justice. Christian adds: faith, hope, and love.</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Aristotle on Virtue and the Good Life</h2>
     <p data-topic="eudaimonia">The <strong>Function Argument</strong>: all activities aim at some good; the highest good is most choice-worthy (unconditionally complete and self-sufficient); the distinctive function of humans is rationality; the good of a thing is performing its function well; therefore the human good is rational activity of the soul guided by virtue — <strong>eudaimonia</strong> (幸福/繁盛).</p>
     <p data-topic="eudaimonia">Eudaimonia is a <em>moralized</em> concept: it requires virtue (unlike ordinary happiness which is subjective). For Aristotle, virtue is necessary but not sufficient — external goods are also required. For the Stoics, virtue is both necessary and sufficient.</p>
@@ -851,21 +846,21 @@ tr.weak-highlight{box-shadow:none}
     <p data-topic="unity-of-virtues"><strong>Unity of Virtues</strong> (德性統一): virtues mutually require each other. Example: being truly just in rationing requires also being temperate — without temperance one is disposed to take more than one's share.</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. The Formal Theory of Virtue Ethics (VE)</h2>
     <p data-topic="virtue-ethics-definition">VE holds that facts about virtuous agents are more basic than facts about right conduct and explain why actions are right or wrong. Uses a <strong>qualified agent</strong> standard — an ideally virtuous agent who possesses all morally significant virtues and consistently acts on them.</p>
     <p data-topic="virtue-ethics-definition">Formal definition: A in C is <em>obligatory</em> iff any ideally virtuous agent would not fail to do A; <em>wrong</em> iff no ideally virtuous agent would do A; <em>optional</em> iff some ideally virtuous agent might or might not do A.</p>
     <p data-topic="virtue-ethics-definition">VE generates virtue rules (e.g., "be kind") but features multiple cardinal virtues, so conflicts arise when virtue considerations are incompatible.</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Evaluation of VE</h2>
     <p data-topic="evaluation-ve">The <strong>mendacious person</strong> counterexample: a compulsive liar who decides to reform must take concrete steps (tracking lies, rewarding honesty) that an ideally virtuous person would never need. VE's standard cannot guide moral improvement.</p>
     <p data-topic="evaluation-ve">Modified VE: an action is obligatory iff any ideally virtuous agent would advise one to do it. The <strong>obstinate person</strong> counterexample: a virtuous agent might strategically advise the wrong action to prompt the right one in an obstinate person — generating the wrong verdict.</p>
     <div class="exam-trap-inline" data-topic="evaluation-ve"><b>Exam trap:</b> The two counterexamples target VE in different ways — the first targets action-guidance in self-development; the second targets the advisory modification.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Care Ethics</h2>
     <p data-topic="care-ethics">Inspired by Carol Gilligan's <em>In a Different Voice</em> (1982). The <strong>justice vs. care</strong> contrast: justice sees self as individual, inequality as central moral problem, and uses impartial reasoning; care sees self as constituted by relationships, disconnection/abandonment as central problem, and uses contextually sensitive reasoning.</p>
     <p data-topic="care-ethics">Two senses of care: <strong>caring about</strong> (being invested in someone/something — an attitude); <strong>caring for</strong> (actively meeting needs — an action).</p>
@@ -873,14 +868,14 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="care-ethics"><b>Exam trap:</b> Not all forms of care are morally valuable — care that stifles development or autonomy is problematic.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. Care Ethics and Moral Theory</h2>
     <p data-topic="care-ethics-limits">Stephanie Collins: care ethics is not a complete moral theory — it does not cover all of morality (e.g., duties not to harm, promise-keeping). It is complementary to, not a replacement for, broader theories.</p>
     <p data-topic="care-ethics-principles"><strong>Dependency principle</strong> (依賴原則, Collins): when an important interest is unfulfilled, you are capable of fulfilling it, and doing so is not too costly, you have a responsibility to fulfill it. Extends care obligations beyond existing personal relationships.</p>
     <p data-topic="care-ethics-principles"><strong>Principle of subsidiarity</strong> (輔助原則, Engster): care should be delivered at the most local and personal level possible; we should enable self-care wherever possible. Both principles are guided by emotional attunement.</p>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>Eudaimonia requires virtue (Aristotle) but also external goods — unlike Stoics for whom virtue is sufficient.</li>
@@ -891,7 +886,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Three components of a virtue: intellectual, affective, motivational-behavioural.</li>
@@ -904,7 +899,7 @@ tr.weak-highlight{box-shadow:none}
     </ol>
   </div>
 
-  <div class="lower-yield reveal-on-scroll reveal-delay-3">
+  <div class="lower-yield">
     <strong>Lower-yield / skip if short on time</strong>
     <ul>
       <li>Christian cardinal virtues beyond the Greek four.</li>
@@ -919,31 +914,31 @@ tr.weak-highlight{box-shadow:none}
   <button id="clear-hl-11" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(11)">Clear Highlights</button>
   <h1>Lecture 11: Moral Particularism</h1>
 
-  <div class="bigpic reveal-on-scroll">
+  <div class="bigpic">
     Moral particularism (道德特殊主義) challenges the generalist assumption that morality depends on principles. By showing that the moral contribution of features can vary, reverse, or be silenced across contexts, particularism challenges both the existence and the practical primacy of moral principles. The lecture traces generalist responses and the resulting holistic generalism as a middle ground.
   </div>
 
-  <section class="reveal-on-scroll" data-sec="0">
+  <section data-sec="0">
     <h2>1. Generalism vs. Particularism</h2>
     <p data-topic="generalism-particularism"><strong>Generalism</strong> (普遍主義): morality depends on principles. <strong>Particularism</strong> (特殊主義): morality depends on the morally relevant features of particular cases, and these features may not behave in a fixed, principle-like way.</p>
     <p data-topic="generalism-particularism">Particularism does not mean: (1) moral judgment is just personal feeling; (2) all moral generalizations are false.</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="1">
+  <section data-sec="1">
     <h2>2. Forms of Particularism</h2>
     <p data-topic="particularism-forms"><strong>Principle Eliminativism (PE)</strong>: there are no correct moral principles — a metaphysical/semantic thesis about the existence of true principles.</p>
     <p data-topic="particularism-forms"><strong>Principle Abstinence (PA)</strong>: a morally committed agent seeking correct verdicts should not rely on principles for guidance — a practical/methodological thesis.</p>
     <p data-topic="particularism-forms">PE and PA are logically independent: one can hold PE without PA or PA without PE.</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="2">
+  <section data-sec="2">
     <h2>3. The Generalist Picture and Types of Principles</h2>
     <p data-topic="types-of-principles"><strong>Absolute principles</strong> (絕對原則): a feature always generates a fixed, decisive verdict (exceptionless). <strong>Contributory principles</strong> (貢獻性原則): a feature counts for or against but can be outweighed (defeasible).</p>
     <p data-topic="generalist-picture">The Generalist Picture has three theses: (1) <strong>Generic Generalist Thesis (GGT)</strong> — a small set of fundamental features explains right/wrong; (2) <strong>Universal Relevance Thesis (URT)</strong> — a feature morally relevant in one case is relevant wherever it appears; (3) <strong>Polarity Thesis (PT)</strong> — a feature that counts in favour always counts in favour.</p>
     <p data-topic="reasons-atomism-holism"><strong>Reasons atomism</strong> (理由原子論): the contribution of a feature is fixed independently of context — its moral charge is intrinsic. Atomists allow reasons to outweigh but not reverse each other.</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="3">
+  <section data-sec="3">
     <h2>4. Reasons Holism, Reversal, and Silencing</h2>
     <p data-topic="reasons-atomism-holism"><strong>Reasons holism</strong> (理由整體論) / <em>variability of reasons</em>: the moral contribution of a feature depends on context. A feature that supports an action in one context may oppose it or be irrelevant in another.</p>
     <p data-topic="reversal-silencing"><strong>Reversal</strong> (逆轉): a feature's moral polarity changes across contexts — not merely outweighed but actively contributing in the opposite direction. Example (McNaughton): in the public execution case, sadistic pleasure may count <em>against</em> reintroducing executions, not merely be outweighed.</p>
@@ -953,14 +948,14 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="reversal-silencing"><b>Exam trap:</b> Reversal is not the same as outweighing. The particularist says the pleasure here does not count positively at all — its polarity has changed. A Rossian would say it counts positively but is outweighed.</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="4">
+  <section data-sec="4">
     <h2>5. Generalist Responses</h2>
     <p data-topic="generalist-responses"><strong>Atomistic Specification</strong>: when a principle faces a counterexample, add conditions to avoid it (e.g., "keep promises unless coerced, unless the act is immoral, unless..."). Makes principles more complex.</p>
     <p data-topic="particularist-challenge">Particularist reply: the added conditions are not <em>reasons</em> — they are <strong>enablers</strong> (conditions allowing a consideration to function as a reason) or <strong>disablers</strong> (conditions preventing it). The specified principle conflates reasons with enabling/disabling conditions. It would be odd to say "I should go because my promise was not extracted under duress."</p>
     <p data-topic="generalist-responses"><strong>Holistic Accommodation</strong>: accept reasons holism but insist principles are still possible. Yields <strong>holistic generalism (HG)</strong>.</p>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="5">
+  <section data-sec="5">
     <h2>6. Holistic Generalism</h2>
     <p data-topic="holistic-generalism">A <strong>holistic principle</strong> has three components: (1) a morally significant feature; (2) a <strong>holism clause</strong> — acknowledging potential silencing, reversal, disabling; (3) an <strong>overriding clause</strong> — allowing outweighing by opposing reasons. This is called <strong>double defeasibility</strong> (雙重可廢除性).</p>
     <p data-topic="holistic-generalism">HG explains by <strong>subsumption</strong> (涵攝) — showing that the action falls under a holistic principle. Particularism explains by <strong>narration</strong> — showing how the features of this concrete situation add up here.</p>
@@ -968,7 +963,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="holistic-generalism"><b>Exam trap:</b> Double defeasibility: holistic principles are defeasible in two ways — by context altering the feature's contribution (holism clause) and by outweighing (overriding clause).</div>
   </section>
 
-  <section class="reveal-on-scroll" data-sec="6">
+  <section data-sec="6">
     <h2>7. The Particularist Claim and Moral Discernment</h2>
     <p data-topic="particularist-claim">The particularist does not deny all moral generalizations. But principles are not the foundation of moral explanation. The practical consequence is Principle Abstinence: principles can distort attention and cause <strong>premature closure</strong> (過早結論) on the wrong verdict.</p>
     <p data-topic="particularist-claim">Principles are useful as heuristics in professional contexts (medical ethics: informed consent, non-maleficence; public service: fairness, accountability) but should not replace discernment.</p>
@@ -978,7 +973,7 @@ tr.weak-highlight{box-shadow:none}
     <div class="exam-trap-inline" data-topic="particularist-claim"><b>Exam trap:</b> Particularism does not reject moral learning. It endorses learning patterns of relevance from cases — a practical grammar model rather than a rule-memorisation model.</div>
   </section>
 
-  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+  <div class="exam-traps-summary">
     <strong>Exam Traps Summary</strong>
     <ul>
       <li>PE (no true principles) and PA (don't rely on principles) are logically independent.</li>
@@ -989,7 +984,7 @@ tr.weak-highlight{box-shadow:none}
     </ul>
   </div>
 
-  <div class="memorize reveal-on-scroll reveal-delay-2">
+  <div class="memorize">
     <strong>Top things to memorize</strong>
     <ol>
       <li>Generalism vs. particularism: principle-based vs. case-based.</li>
@@ -1003,7 +998,7 @@ tr.weak-highlight{box-shadow:none}
     </ol>
   </div>
 
-  <div class="lower-yield reveal-on-scroll reveal-delay-3">
+  <div class="lower-yield">
     <strong>Lower-yield / skip if short on time</strong>
     <ul>
       <li>McNaughton's exact wording of the public execution example.</li>
@@ -1114,8 +1109,7 @@ function showPage(id) {
     const lid = parseInt(id.split('-')[1]);
     applyWeakHighlights(lid);
   }
-  if (el) el.querySelectorAll('.reveal-on-scroll').forEach(e => e.classList.add('is-visible'));
-  setTimeout(initReveal, 50);
+  if (el) el.querySelectorAll('.').forEach(e => e.classList.add('is-visible'));
 }
 
 function computeWeakSections(lid) {
@@ -1291,7 +1285,7 @@ function renderQuiz(lid) {
   state.filteredIndices.forEach((qi, displayIdx) => {
     const q = lec.questions[qi];
     const order = getOptionOrder(lid, qi);
-    h += '<div class="q-block reveal-on-scroll" id="q-'+lid+'-'+qi+'">';
+    h += '<div class="q-block" id="q-'+lid+'-'+qi+'">';
     h += '<div class="q-num">Question ' + (displayIdx+1) + ' of ' + state.filteredIndices.length + ' <span style="margin-left:8px;padding:1px 6px;background:var(--accent-soft);border-radius:3px;font-size:.85em">'+q.difficulty+'</span></div>';
     h += '<div class="q-text">' + escapeHtml(q.q) + '</div>';
     order.forEach((origIdx, displayPos) => {
@@ -1313,7 +1307,6 @@ function renderQuiz(lid) {
   if (state.completed) {
     renderPostQuiz(lid);
   }
-  setTimeout(initReveal, 50);
 }
 
 function restoreAnswered(lid, qi) {
@@ -1408,7 +1401,7 @@ function renderPostQuiz(lid) {
   });
   const themes = Object.keys(themeCount).sort((a,b)=>themeCount[b]-themeCount[a]);
 
-  let h = '<div class="summary reveal-on-scroll reveal-delay-1">';
+  let h = '<div class="summary">';
   h += '<h2>Summary Report</h2>';
   h += '<div class="score-big">'+s.correct+' / '+total+' ('+pct+'%)</div>';
   h += '<div class="verdict">'+verdict+'</div>';
@@ -1430,8 +1423,8 @@ function renderPostQuiz(lid) {
       const chosen = s.choices[qi];
       const order = s.optionOrders[qi] || q.options.map((_,i)=>i);
       const correctPos = order.indexOf(q.answer);
-      const delay = ['','reveal-delay-1','reveal-delay-2','reveal-delay-3'][idx%4];
-      h += '<div class="review-card reveal-on-scroll '+delay+'">';
+      const delay = ['','','',''][idx%4];
+      h += '<div class="review-card '+delay+'">';
       h += '<div class="q-num">Question '+(qi+1)+'</div>';
       h += '<div class="q-text">'+escapeHtml(q.q)+'</div>';
       order.forEach((origIdx, displayPos) => {
@@ -1446,7 +1439,6 @@ function renderPostQuiz(lid) {
     });
   }
   document.getElementById('postquiz-'+lid).innerHTML = h;
-  setTimeout(initReveal, 50);
 }
 
 function showGlobalReport(){ showPage('global-report'); }
@@ -1483,12 +1475,6 @@ function renderGlobalReport() {
   document.getElementById('global-body').innerHTML = h;
 }
 
-function initReveal() {
-  const els = document.querySelectorAll('.reveal-on-scroll:not(.is-visible)');
-  if (!('IntersectionObserver' in window)) {
-    els.forEach(el => el.classList.add('is-visible'));
-    return;
-  }
   const obs = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -1533,7 +1519,6 @@ window.addEventListener('DOMContentLoaded', () => {
       });
       saveState();
       updateHomeStatus();
-      initReveal();
     })
     .catch(err => {
       console.error('Failed to load data/2921.json:', err);
