@@ -1763,7 +1763,7 @@ function showPage(id) {
     const lid = parseInt(id.split('-')[1]);
     applyWeakHighlights(lid);
   }
-  setTimeout(initReveal, 50);
+  requestAnimationFrame(() => requestAnimationFrame(initReveal));
 }
 
 function computeWeakSections(lid) {
@@ -2137,7 +2137,7 @@ function renderPostQuiz(lid) {
     });
   }
   document.getElementById('postquiz-'+lid).innerHTML = h;
-  setTimeout(initReveal, 50);
+  requestAnimationFrame(() => requestAnimationFrame(initReveal));
 }
 
 function showGlobalReport(){ showPage('global-report'); }
@@ -2328,7 +2328,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       saveState();
       updateHomeStatus();
-      initReveal();
+      requestAnimationFrame(() => requestAnimationFrame(initReveal));
     })
     .catch(err => {
       console.error('Failed to load data/mgmt2110.json:', err);
@@ -2339,7 +2339,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ===== PWA Service Worker (inline via Blob) =====
 if ('serviceWorker' in navigator) {
   const swCode = `
-    const CACHE = 'mgmt2110-v11';
+    const CACHE = 'mgmt2110-v12';
     self.addEventListener('install', e => { self.skipWaiting(); });
     self.addEventListener('activate', e => {
       e.waitUntil(
