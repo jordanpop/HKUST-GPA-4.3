@@ -1826,9 +1826,8 @@ function renderQuiz(lid) {
     h += '<div class="q-num">Question ' + (displayIdx+1) + ' of ' + state.filteredIndices.length + ' <span style="margin-left:8px;padding:1px 6px;background:var(--accent-soft);border-radius:3px;font-size:.85em">'+q.difficulty+'</span></div>';
     h += '<div class="q-text">' + escapeHtml(q.q) + '</div>';
     q.options.forEach((opt, oi) => {
-      h += '<label class="opt" id="opt-'+lid+'-'+qi+'-'+oi+'"><input type="radio" name="q-'+lid+'-'+qi+'" value="'+oi+'"> '+String.fromCharCode(65+oi)+'. '+escapeHtml(opt)+'</label>';
+      h += '<label class="opt" id="opt-'+lid+'-'+qi+'-'+oi+'"><input type="radio" name="q-'+lid+'-'+qi+'" value="'+oi+'" onchange="submitQ('+lid+','+qi+')"> '+String.fromCharCode(65+oi)+'. '+escapeHtml(opt)+'</label>';
     });
-    h += '<button class="btn submit-q" onclick="submitQ('+lid+','+qi+')">Submit</button>';
     h += '<div class="explain" id="exp-'+lid+'-'+qi+'" style="display:none"></div>';
     h += '</div>';
   });
@@ -1866,8 +1865,6 @@ function restoreAnswered(lid, qi) {
     exp.style.display = 'block';
     exp.innerHTML = '<b>'+(chosen===q.answer?"Correct.":"Incorrect.")+'</b> '+escapeHtml(q.explain);
   }
-  const btn = document.querySelector('#q-'+lid+'-'+qi+' .submit-q');
-  if (btn) { btn.disabled = true; btn.textContent = 'Submitted'; }
 }
 
 function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
@@ -1905,7 +1902,7 @@ function submitQ(lid, qi) {
   const radios = document.getElementsByName('q-'+lid+'-'+qi);
   let chosen = -1;
   radios.forEach(r => { if (r.checked) chosen = parseInt(r.value); });
-  if (chosen === -1) { alert("Please select an option."); return; }
+  if (chosen === -1) return;
   state.choices[qi] = chosen;
   state.answered += 1;
   for (let oi=0; oi<q.options.length; oi++) {
@@ -1919,9 +1916,6 @@ function submitQ(lid, qi) {
   const exp = document.getElementById('exp-'+lid+'-'+qi);
   exp.style.display = 'block';
   exp.innerHTML = '<b>'+(chosen===q.answer?"Correct.":"Incorrect.")+'</b> '+escapeHtml(q.explain);
-  const btn = document.querySelector('#q-'+lid+'-'+qi+' .submit-q');
-  btn.disabled = true;
-  btn.textContent = 'Submitted';
   updateScoreBar(lid);
   saveState();
   if (state.answered === state.total) {
@@ -2192,7 +2186,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ===== PWA Service Worker (inline via Blob) =====
 if ('serviceWorker' in navigator) {
   const swCode = `
-    const CACHE = 'isom2800-v9';
+    const CACHE = 'isom2800-v10';
     self.addEventListener('install', e => { self.skipWaiting(); });
     self.addEventListener('activate', e => {
       e.waitUntil(
