@@ -12,16 +12,6 @@
       "questions": []
     },
     {
-      "id": 6,
-      "title": "Lecture 6: Supply Chain Management",
-      "questions": []
-    },
-    {
-      "id": 7,
-      "title": "Lecture 7: Just in Time System",
-      "questions": []
-    },
-    {
       "id": 3,
       "title": "Lecture 3: Inventory Management",
       "questions": []
@@ -34,6 +24,16 @@
     {
       "id": 5,
       "title": "Lecture 5: Revenue Management",
+      "questions": []
+    },
+    {
+      "id": 6,
+      "title": "Lecture 6: Supply Chain Management",
+      "questions": []
+    },
+    {
+      "id": 7,
+      "title": "Lecture 7: Just in Time System",
       "questions": []
     }
   ],

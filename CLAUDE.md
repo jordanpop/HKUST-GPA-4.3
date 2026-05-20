@@ -78,8 +78,8 @@ Notes:
 The canonical workflow is the `/process-pdf-notes` slash command. It handles OCR, spawns notes + MCQ agents in parallel, merges drafts into `data/{code}.json`, bumps the service-worker cache, and pushes. See the skill definition for full details.
 
 Prompt files used by the workflow (all in `prompts/`):
-- `notes-agent-template.md` + `notes-agent.md` + `notes-format.md` — notes agent
-- `mcq-agent-template.md` + `mcq-agent.md` + `mcq-format.md` — MCQ agent
+- `notes-agent-template.md` + `notes-agent.md` — notes agent (format rules merged into notes-agent.md)
+- `mcq-agent-template.md` + `mcq-agent.md` — MCQ agent (format rules merged into mcq-agent.md)
 - `detect-pdf-titles-template.md` — title detection agent
 
 Scripts in `scripts/`:
@@ -112,10 +112,6 @@ For brand-new subjects: copy `template.html`, replace the five `__PLACEHOLDER__`
   <ol>...</ol>
 </div>
 
-<div class="lower-yield">
-  <strong>Lower-yield / skip if short on time</strong>
-  <ul>...</ul>
-</div>
 ```
 
 - Add Traditional Chinese terms in parentheses on first mention of each technical term
@@ -172,23 +168,21 @@ Font: Georgia / Times New Roman, serif. Beige/green palette. No external librari
 ## Content Status
 | Subject | File | Notes | Questions |
 |---------|------|-------|-----------|
-| LIFS2040 | 2040.html + data/2040.json | ✅ Complete (L11–L20) | ✅ Complete (300 Qs) |
-| LIFS3040 | 3040.html + data/3040.json | ✅ Complete (L1–L10) | ✅ Complete (300 Qs) |
-| HUMA2921 | 2921.html + data/2921.json | 🚧 Placeholder (L3,4,5) | 🚧 Empty arrays |
-
-### LIFS2040 Lecture Breakdown
-| Lecture | Topic |
-|---------|-------|
-| L11–L18 | (Previously generated) |
-| L19 | Cell Division Cycle |
-| L20 | Sexual Reproduction & Genetics |
+| LIFS2040 | 2040.html + data/2040.json | ✅ Complete (L11–L23, 13 lectures) | ✅ Complete (390 Qs) |
+| LIFS3040 | 3040.html + data/3040.json | ✅ Complete (L1–L8, 8 lectures) | ✅ Complete (240 Qs) |
+| HUMA2921 | 2921.html + data/2921.json | ✅ Complete (L3–L8, L10, L11 — 8 lectures) | ✅ Complete (240 Qs) |
+| MGMT2110 | mgmt2110.html + data/mgmt2110.json | ✅ Complete (Class 11–16, 6 lectures) | ❌ Empty arrays (0 Qs) |
+| ISOM2700 | isom2700.html + data/isom2700.json | ✅ Complete (L1–L7, 7 lectures) | ❌ Empty arrays (0 Qs) |
+| ISOM2800 | isom2800.html + data/isom2800.json | ✅ Complete (L7–L11, 5 lectures) | ✅ Complete (150 Qs) |
 
 ### LIFS3040 Lecture Breakdown
 | Lecture | Topic | Source |
 |---------|-------|--------|
-| L1–L5 | Endocrine System | Endo1_2-26.pdf, Endo3&4-26.pdf, Endo5-26.pdf |
-| L6 | GI Overview & Upper GI | GI1-26.pdf |
-| L7 | GI Digestion — Pancreas & Liver | GI2-26.pdf |
-| L8 | GI Absorption — Small & Large Intestine | GI3-26.pdf |
-| L9 | Neurons, Glia & Membrane Potentials | Neuro1-26.pdf |
-| L10 | Synaptic Transmission & Neural Circuits | Neuro2-26.pdf |
+| L1 | Endo1_2: Endocrine System & Neuroendocrine Systems | Endo1_2-26.pdf |
+| L2 | Endo3_4: Metabolic/Developmental Hormones + Water/Electrolyte | Endo3&4-26.pdf |
+| L3 | Endo5: Reproductive Hormones | Endo5-26.pdf |
+| L4 | GI1: Overview of the Digestive System | GI1-26.pdf |
+| L5 | GI2: Digestion — Mouth, Esophagus, Stomach, Pancreas & Liver | GI2-26.pdf |
+| L6 | GI3: Absorption — Small Intestine & Large Intestine | GI3-26.pdf |
+| L7 | Neuro1: Physiology of Nerve Cells | Neuro1-26.pdf |
+| L8 | Neuro2: Properties of Sensory Cells and Sensory Systems | Neuro2-26.pdf |
