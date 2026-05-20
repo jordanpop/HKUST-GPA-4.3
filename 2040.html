@@ -4338,7 +4338,7 @@ function renderHomeCards() {
   container.innerHTML = lectures.map(lec => {
     const titleHtml = escapeHtml(lec.title);
     return `
-    <div class="card ${delay}">
+    <div class="card">
       <div class="lec-row">
         <div class="lec-title">${titleHtml}</div>
         <div>
@@ -4407,7 +4407,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ===== PWA Service Worker (inline via Blob) =====
 if ('serviceWorker' in navigator) {
   const swCode = `
-    const CACHE = 'lifs2040-v8';
+    const CACHE = 'lifs2040-v9';
     self.addEventListener('install', e => { self.skipWaiting(); });
     self.addEventListener('activate', e => { e.waitUntil(self.clients.claim()); });
     self.addEventListener('fetch', e => {
