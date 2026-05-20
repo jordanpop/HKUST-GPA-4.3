@@ -3065,7 +3065,6 @@ function showPage(id) {
     const lid = parseInt(id.split('-')[1]);
     applyWeakHighlights(lid);
   }
-  if (el) el.querySelectorAll('.').forEach(e => e.classList.add('is-visible'));
 }
 
 function computeWeakSections(lid) {
@@ -3482,7 +3481,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ===== PWA Service Worker (inline via Blob) =====
 if ('serviceWorker' in navigator) {
   const swCode = `
-    const CACHE = 'endo-study-v11';
+    const CACHE = 'endo-study-v12';
     self.addEventListener('install', e => { self.skipWaiting(); });
     self.addEventListener('activate', e => { e.waitUntil(self.clients.claim()); });
     self.addEventListener('fetch', e => {
