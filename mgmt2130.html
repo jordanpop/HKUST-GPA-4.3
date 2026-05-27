@@ -1,0 +1,2681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Managing Organisations and Human Resources — MGMT2130</title>
+<style>
+:root{
+  --bg:#faf6ef; --paper:#fffdf7; --ink:#2b2a26; --muted:#6b6a63;
+  --accent:#4a6b4a; --accent-soft:#d9e4d3;
+  --wrong:#b85042; --wrong-soft:#f3dad6; --border:#d8d2c4;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.6;}
+.wrap{max-width:760px;margin:0 auto;padding:40px 24px 120px;}
+.page{display:none}
+.page.active{display:block}
+h1{font-size:2.2em;margin:0 0 8px;letter-spacing:.5px}
+h2{font-size:1.5em;color:var(--accent);border-bottom:1px solid var(--border);padding-bottom:6px;margin-top:38px}
+h3{font-size:1.15em;color:var(--ink);margin-top:24px}
+.subtitle{color:var(--muted);font-style:italic;margin-bottom:30px}
+.card{background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:22px;margin:14px 0;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.lec-row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.lec-title{font-size:1.15em;font-weight:bold}
+.btn{display:inline-block;padding:8px 18px;border:1px solid var(--accent);background:var(--paper);color:var(--accent);font-family:inherit;font-size:.95em;cursor:pointer;border-radius:4px;text-decoration:none;transition:all .2s}
+.btn:hover{background:var(--accent);color:var(--paper)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn-primary{background:var(--accent);color:var(--paper)}
+.btn-primary:hover{background:#3a5439}
+.back{margin-bottom:20px;font-size:.9em}
+.bigpic{background:var(--accent-soft);border-left:4px solid var(--accent);padding:14px 18px;margin:18px 0;font-style:italic}
+.callout{background:#fdf4d9;border-left:4px solid #c9a227;padding:14px 18px;margin:20px 0;border-radius:3px}
+.callout-title{font-weight:bold;color:#7a5e0a;margin-bottom:6px;font-style:normal}
+table{border-collapse:collapse;width:100%;margin:14px 0;background:var(--paper)}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--accent-soft)}
+.exam-trap-inline{background:#fdf4d9;border-left:3px solid #c9a227;padding:6px 12px;margin:10px 0;font-size:.92em}
+.exam-trap-inline b{color:#7a5e0a}
+.preview-q{background:var(--accent-soft);border-radius:4px;padding:14px 18px;margin:10px 0}
+.preview-q ol{margin:0;padding-left:22px}
+.lower-yield{color:var(--muted);font-size:.93em;border-top:1px dashed var(--border);padding-top:14px;margin-top:24px}
+.lower-yield ul{margin-top:6px}
+.score-bar{position:sticky;top:0;background:var(--paper);border:1px solid var(--border);padding:12px 18px;margin-bottom:20px;border-radius:4px;font-weight:bold;z-index:10;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.q-block{background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:20px;margin:18px 0}
+.q-num{color:var(--muted);font-size:.88em;margin-bottom:6px}
+.q-text{font-weight:bold;margin-bottom:14px}
+.opt{display:block;padding:10px 14px;margin:6px 0;border:1px solid var(--border);border-radius:4px;cursor:pointer;background:var(--paper);transition:background .15s}
+.opt:hover{background:var(--accent-soft)}
+.opt input{margin-right:10px}
+.opt.correct{background:var(--accent-soft);border-color:var(--accent);animation:slideIn .3s ease}
+.opt.wrong{background:var(--wrong-soft);border-color:var(--wrong);animation:slideIn .3s ease}
+.opt.disabled{cursor:default;opacity:.85}
+@keyframes slideIn{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:translateX(0)}}
+.opt.disabled:hover{background:var(--paper)}
+.opt.disabled.correct:hover{background:var(--accent-soft)}
+.opt.disabled.wrong:hover{background:var(--wrong-soft)}
+.explain{margin-top:12px;padding:12px;background:#f4efe2;border-radius:4px;font-size:.94em;color:var(--ink)}
+.explain b{color:var(--accent)}
+.summary{background:var(--paper);border:2px solid var(--accent);border-radius:6px;padding:24px;margin:30px 0}
+.summary h2{margin-top:0;color:var(--accent);border-bottom:none}
+.score-big{font-size:2.5em;color:var(--accent);font-weight:bold}
+.verdict{font-size:1.1em;margin:10px 0;font-style:italic}
+.theme-list{margin:12px 0}
+.theme-list li{margin:4px 0}
+.review-card{background:var(--paper);border:1px solid var(--wrong);border-radius:6px;padding:18px;margin:14px 0}
+.review-card .q-text{color:var(--wrong)}
+.memorize ol{padding-left:24px}
+.memorize li{margin:6px 0}
+.submit-q{margin-top:10px}
+.quiz-settings{margin-top:12px;padding:10px 14px;background:var(--accent-soft);border-radius:4px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:.92em}
+.quiz-settings label{display:flex;align-items:center;gap:6px;color:var(--ink)}
+.quiz-settings select{font-family:inherit;font-size:.95em;padding:4px 8px;border:1px solid var(--border);border-radius:3px;background:var(--paper);color:var(--ink)}
+.reset-zone{text-align:center;margin-top:20px}
+.btn-danger{border-color:var(--wrong);color:var(--wrong)}
+.btn-danger:hover{background:var(--wrong);color:var(--paper)}
+.weak-highlight{background:rgba(253,222,90,.45);border-radius:3px;transition:background .3s;box-shadow:inset 3px 0 0 #c9a227}
+p.weak-highlight,li.weak-highlight,ul.weak-highlight,ol.weak-highlight,div.weak-highlight,table.weak-highlight{padding:6px 10px;margin:4px 0}
+tr.weak-highlight td,tr.weak-highlight th{background:rgba(253,222,90,.45)}
+tr.weak-highlight{box-shadow:none}
+.weak-h2{background:linear-gradient(transparent 60%,rgba(253,222,90,.55) 60%);padding:0 6px;border-radius:2px}
+/* Progress Ring + Chart Styles */
+.progress-ring-container{position:relative;width:120px;height:120px;margin:20px auto}
+.progress-ring-container svg{width:100%;height:100%}
+.progress-ring-label{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none}
+.progress-percentage{font-size:1.8em;font-weight:bold;color:var(--ink);line-height:1.2}
+.progress-score{font-size:0.9em;color:var(--muted);margin-top:4px}
+.chart-container{margin:20px 0;padding:20px;background:var(--paper);border-radius:6px}
+.bar-chart-item{display:flex;align-items:center;margin:14px 0;gap:12px}
+.bar-chart-label{width:140px;font-size:0.95em;color:var(--ink);flex-shrink:0}
+.bar-chart-bar{flex:1;height:24px;background:var(--accent-soft);border-radius:3px;position:relative;overflow:hidden;border:1px solid var(--accent)}
+.bar-chart-fill{height:100%;background:var(--accent);border-radius:2px;transition:width .6s ease;display:flex;align-items:center;justify-content:flex-end;padding-right:8px}
+.bar-chart-count{font-size:0.85em;color:var(--paper);font-weight:bold}
+.progress-badge{display:inline-block;font-size:0.85em;padding:4px 10px;background:var(--accent-soft);border-radius:4px;color:var(--ink);font-weight:500}
+.verdict-excellent{color:#2d5a2d}
+.verdict-good{color:#4a6b4a}
+.verdict-review{color:#7a6b3a}
+.verdict-weak{color:var(--wrong)}
+@media(max-width:600px){.progress-ring-container{width:100px;height:100px}.progress-percentage{font-size:1.4em}.bar-chart-label{width:100px;font-size:0.88em}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div id="home" class="page active">
+  <a class="btn back" onclick="window.location.href='index.html'">← Subjects</a>
+  <h1>Managing Organisations and Human Resources</h1>
+  <div class="subtitle">MGMT2130 — Organisational Behaviour & HR Management</div>
+
+  <!-- Lecture cards are generated by JS from data/mgmt2130.json (see renderHomeCards). -->
+  <div id="lecture-cards"></div>
+
+  <div style="text-align:center;margin-top:40px">
+    <button id="globalReportBtn" class="btn" disabled onclick="showGlobalReport()">Full Summary Report</button>
+  </div>
+  <div class="reset-zone">
+    <button class="btn btn-danger" onclick="resetAllProgress()">Reset All Progress</button>
+  </div>
+</div>
+
+<!-- NOTES PAGES go here -->
+<div id="notes-9" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-9" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(9)">Clear Highlights</button>
+  <h1>Lecture 9: Implementing Sustainability Strategy</h1>
+
+  <div class="bigpic">
+    This lecture examines the organizational challenges (組織挑戰) of turning sustainability goals into reality. It covers what is new in business sustainability, the mechanics of change management (變革管理) simulations, and two core frameworks — the Change Formula and Kotter's 8 Steps — that determine whether change initiatives succeed or fail.
+  </div>
+
+  <section data-sec="0">
+    <h2>1. What's New for Business in Sustainability</h2>
+    <p data-topic="new-sustainability-business">Key shifts in how businesses approach sustainability (可持續發展):</p>
+    <ul>
+      <li>New mindset (新思維) — e.g., systems thinking (系統思維) and life cycle assessment (生命週期評估) that considers environmental impact across an entire product's life</li>
+      <li>New ways of doing business — e.g., circular economy (循環經濟) that eliminates waste by keeping materials in use</li>
+      <li>New types of business — e.g., experiential business (體驗型商業) that shifts from selling products to selling services or experiences</li>
+    </ul>
+    <p data-topic="eco-certifications">Proliferation of eco-certifications (環保認證) reflects market demand for verified sustainability claims:</p>
+    <ul>
+      <li>Examples include: Cradle to Cradle Certified, B Corporation (社會與環境影響最高標準), Fair Trade Certified, EcoLogo, EPA WaterSense, Rainforest Alliance, Sustainable Forestry Initiative (SFI), Wildlife Friendly, GreenPower Accredited Renewable Energy</li>
+      <li>Multiple competing certification schemes exist across dimensions: water, energy, forestry, social equity, carbon, biodiversity</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="eco-certifications"><b>Exam trap:</b> Eco-certifications are not all equivalent — they cover different dimensions (water, energy, labor, forestry) and are issued by different bodies. Do not conflate them as a single category.</div>
+  </section>
+
+  <section data-sec="1">
+    <h2>2. Change Management Simulation — Setup and Levers</h2>
+    <p data-topic="simulation-setup">The Harvard Change Management Simulation (變革管理模擬) uses a company called Spectrum, where you play the Director of Product Innovation (產品創新總監):</p>
+    <ul>
+      <li>Sustainability goals: (1) eliminate 25% of waste by redesigning the manufacturing process (製造流程); (2) reduce greenhouse gas (溫室氣體) emissions by 15%; (3) create a new product line using entirely environmentally benign (無害環境) materials</li>
+      <li>Goals are described as aggressive but achievable within two years</li>
+      <li>You have 20 adopters (採納者) to persuade; graded on speed to achieve 18 adopters and credibility level (信譽等級)</li>
+    </ul>
+    <p data-topic="change-levers">Change levers (變革槓桿) are actions available to the change agent, varying by reach, time, and impact:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Lever</th>
+          <th>Reach</th>
+          <th>Weeks</th>
+          <th>Impact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Get consultant's support</td><td>Entire org.</td><td>—</td><td>—</td></tr>
+        <tr><td>Get CEO's public support</td><td>Entire org.</td><td>2</td><td>6</td></tr>
+        <tr><td>Conduct private interviews</td><td>4 people</td><td>1</td><td>1</td></tr>
+        <tr><td>Issue e-mail notice</td><td>Entire org.</td><td>1</td><td>4</td></tr>
+        <tr><td>Hold town hall meetings</td><td>Entire org.</td><td>2</td><td>6</td></tr>
+        <tr><td>Provide internal skill-building</td><td>3 people</td><td>2</td><td>10</td></tr>
+        <tr><td>Provide external skill-building</td><td>3 people</td><td>—</td><td>12</td></tr>
+        <tr><td>Conduct pilot project</td><td>3 people</td><td>6</td><td>12</td></tr>
+        <tr><td>Post progress reports</td><td>Entire org.</td><td>1</td><td>2</td></tr>
+        <tr><td>Tell a 'success' story</td><td>3 people</td><td>1</td><td>1</td></tr>
+        <tr><td>Build a coalition of support</td><td>3 people</td><td>—</td><td>—</td></tr>
+        <tr><td>Recognize an adopter</td><td>1 person</td><td>3</td><td>10</td></tr>
+        <tr><td>Privately confront resister</td><td>1 person</td><td>1</td><td>4</td></tr>
+        <tr><td>Announce goals &amp; deadlines</td><td>Entire org.</td><td>—</td><td>10</td></tr>
+        <tr><td>Revise reward system</td><td>Entire org.</td><td>12</td><td>20</td></tr>
+      </tbody>
+    </table>
+    <p data-topic="lever-effectiveness">Lever deployment effectiveness (槓桿部署效果) depends on four factors:</p>
+    <ul>
+      <li>Urgency (緊迫性) of the situation</li>
+      <li>Change agent's formal authority (正式權力) and credibility (信譽)</li>
+      <li>Timing of deployment</li>
+      <li>Change target receptivity (接受度) — how open the individual is to change</li>
+    </ul>
+    <p data-topic="lever-disruptiveness">Levers also differ by credibility required and inherent disruptiveness (干擾性):</p>
+    <ul>
+      <li>Low disruptiveness levers (e.g., email notice, progress reports) require minimal credibility</li>
+      <li>High disruptiveness levers (e.g., revise reward system, conduct pilot project) require high credibility from the change agent</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="lever-effectiveness"><b>Exam trap:</b> Higher-impact levers are not always better — they require higher credibility and may take more weeks. Choosing a high-impact lever without sufficient credibility can backfire and lose adopters.</div>
+  </section>
+
+  <section data-sec="2">
+    <h2>3. Adoption Stages and Change Phases</h2>
+    <p data-topic="adoption-stages">Each target person moves through four individual adoption stages (採納階段) at different paces:</p>
+    <ul>
+      <li>Stage 1 — Awareness (意識): old routines are challenged; target becomes aware of the proposed change</li>
+      <li>Stage 2 — Interest (興趣): target becomes curious; becomes more open to new information</li>
+      <li>Stage 3 — Trial (試行): target experiments with the change; assesses costs and benefits and potential future success</li>
+      <li>Stage 4 — Adoption (採納): target replaces old routines with new routines; becomes an advocate (倡導者) for the change initiative</li>
+    </ul>
+    <p data-topic="change-phases">The simulation's organizational phases of adoption map to three macro stages:</p>
+    <ul>
+      <li>Mobilization phase (動員階段): make the case for the change initiative; build organizational capacity for change</li>
+      <li>Movement phase (推進階段): build momentum for the change initiative; build organizational capacity for change</li>
+      <li>Sustain phase (持續階段): institutionalize (制度化) the change initiative; preserve and continue to build organizational capacity</li>
+    </ul>
+
+    <svg width="500" height="80" viewBox="0 0 500 80" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:12px 0;">
+      <rect x="10" y="20" width="130" height="40" rx="6" fill="#c8e6c9" stroke="#388e3c" stroke-width="1.5"/>
+      <text x="75" y="44" text-anchor="middle" font-size="12" fill="#1b5e20">Mobilize</text>
+      <polygon points="140,40 155,25 155,55" fill="#388e3c"/>
+      <rect x="160" y="20" width="130" height="40" rx="6" fill="#a5d6a7" stroke="#388e3c" stroke-width="1.5"/>
+      <text x="225" y="44" text-anchor="middle" font-size="12" fill="#1b5e20">Movement</text>
+      <polygon points="290,40 305,25 305,55" fill="#388e3c"/>
+      <rect x="310" y="20" width="130" height="40" rx="6" fill="#66bb6a" stroke="#388e3c" stroke-width="1.5"/>
+      <text x="375" y="44" text-anchor="middle" font-size="12" fill="#fff">Sustain</text>
+    </svg>
+
+    <div class="exam-trap-inline" data-topic="adoption-stages"><b>Exam trap:</b> Stage 3 (Trial) is not Adoption — the person is still assessing costs and benefits and has not yet committed. Confusing Trial with Adoption is a common error.</div>
+  </section>
+
+  <section data-sec="3">
+    <h2>4. The Change Formula</h2>
+    <p data-topic="change-formula">The Change Formula (變革公式) specifies the condition under which change will occur:</p>
+    <ul>
+      <li>Formula: <strong>(D × M × P) &gt; Cost of Change</strong></li>
+      <li>D = dissatisfaction (不滿) with the status quo (現狀)</li>
+      <li>M = a new model (新模型) for the organization — a concrete vision of the desired future state</li>
+      <li>P = the process (流程) for change — practical first steps and a credible plan</li>
+      <li>All three factors are multiplicative (相乘的): if any one is zero, the product is zero and change will not occur</li>
+      <li>Sources: Beer &amp; Nohria (2000) "Cracking the Code of Change," Harvard Business Review; Beckhard &amp; Harris (1987) "Organizational Transitions," 2nd Edition, Prentice Hall</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="change-formula"><b>Exam trap:</b> The formula is multiplicative, not additive. High dissatisfaction alone is insufficient — without a clear model or a credible process, the product is still zero and change will not happen.</div>
+  </section>
+
+  <section data-sec="4">
+    <h2>5. Kotter's 8 Steps to Successful Change</h2>
+    <p data-topic="kotter-8-steps">Kotter's 8-Step model (科特八步驟模型) organizes change into three phases:</p>
+    <p data-topic="kotter-climate"><strong>Creating the climate for change (營造變革氛圍):</strong></p>
+    <ul>
+      <li>Step 1 — Create urgency (製造緊迫感): highlight the need for change by showing threats and opportunities</li>
+      <li>Step 2 — Form a powerful coalition (組建強大聯盟): assemble a guiding team with credibility, authority, and commitment</li>
+      <li>Step 3 — Create a vision for change (建立變革願景): develop a clear vision and strategy to guide the initiative</li>
+    </ul>
+    <p data-topic="kotter-engaging"><strong>Engaging and enabling the organization (讓組織參與並賦能):</strong></p>
+    <ul>
+      <li>Step 4 — Communicate the vision (傳達願景): use every possible channel to share and reinforce the vision</li>
+      <li>Step 5 — Empower action (賦予行動權力): remove obstacles, change systems that undermine the vision, encourage risk-taking</li>
+      <li>Step 6 — Create quick wins (創造速贏): plan for visible improvements; recognize and reward those who achieve them</li>
+    </ul>
+    <p data-topic="kotter-sustaining"><strong>Implementing and sustaining change (實施並持續變革):</strong></p>
+    <ul>
+      <li>Step 7 — Build on the change (鞏固變革成果): use credibility from quick wins to drive more change; reinvigorate the process</li>
+      <li>Step 8 — Make it stick (使變革根深蒂固): anchor new behaviors in the culture (企業文化); ensure leadership development aligns with the new approach</li>
+    </ul>
+  </section>
+
+  <section data-sec="5">
+    <h2>6. Group Presentation Evaluation Criteria</h2>
+    <p data-topic="presentation-evaluation">The group project presentation (小組報告) is assessed on the following rubric (評分標準), scored 1–5 for each dimension:</p>
+    <table>
+      <thead>
+        <tr><th>Category (Weight)</th><th>Dimension</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td rowspan="1">Presentation Style &amp; Balance (5%)</td><td>Clarity</td><td>Clear speech and ideas, organized materials, proper visual aids</td></tr>
+        <tr><td rowspan="3">Content (15%)</td><td>Problem Identification</td><td>Clear and concise snapshot of core issues; demonstrates solid understanding</td></tr>
+        <tr><td>Analysis</td><td>Directly addresses core issues; rich sources, benchmarking, deep insights</td></tr>
+        <tr><td>Recommendation</td><td>Directly addresses core issues; substantive impact; creativity and originality</td></tr>
+        <tr><td>Q&amp;A (5%)</td><td>Answers</td><td>Direct and clear answers; ability to think on feet; solid knowledge of focal firm</td></tr>
+      </tbody>
+    </table>
+    <ul>
+      <li>Total presentation time: 10 minutes presentation + 5 minutes Q&amp;A</li>
+      <li>Questions come from fellow students (同學提問)</li>
+    </ul>
+  </section>
+
+  <div class="exam-traps-summary">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Eco-certifications cover different dimensions (water, energy, labor, forestry) — do not conflate them as a single uniform category.</li>
+      <li>Higher-impact change levers require higher credibility; deploying them without sufficient credibility can lose adopters rather than gain them.</li>
+      <li>Stage 3 (Trial) is not Adoption — the person is still assessing costs/benefits and has not committed to the change.</li>
+      <li>The Change Formula (D × M × P) &gt; Cost is multiplicative: if dissatisfaction, model, or process is zero, no change occurs regardless of the other factors.</li>
+      <li>Kotter's 8 steps have a fixed phased order — you cannot skip to "create quick wins" without first building a coalition and communicating the vision.</li>
+    </ul>
+  </div>
+
+  <div class="memorize">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Change Formula: (D × M × P) &gt; Cost of Change; D = dissatisfaction, M = new model, P = process; all three are multiplicative</li>
+      <li>Kotter's 8 Steps in order: urgency → coalition → vision → communicate → empower → quick wins → build on change → make it stick</li>
+      <li>Four adoption stages: Awareness → Interest → Trial → Adoption; each person progresses at a different pace</li>
+      <li>Three organizational change phases: Mobilization → Movement → Sustain</li>
+      <li>Lever deployment effectiveness depends on: urgency, change agent authority/credibility, timing, and target receptivity</li>
+      <li>Spectrum simulation goals: 25% waste reduction, 15% GHG reduction, new eco-friendly product line — all within 2 years</li>
+      <li>Three "new" sustainability dimensions: new mindset (systems thinking/LCA), new ways (circular economy), new types of business (experiential)</li>
+      <li>High-disruptiveness levers (e.g., revise reward system, pilot project) require high credibility from the change agent</li>
+      <li>Presentation rubric weights: Presentation Style &amp; Balance 5%, Content 15%, Q&amp;A 5% — Content dominates</li>
+      <li>Trial stage (Stage 3): person experiments AND assesses costs/benefits — not yet committed; Adoption (Stage 4) is when old routines are replaced</li>
+    </ol>
+  </div>
+</div>
+
+<div id="notes-8" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-8" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(8)">Clear Highlights</button>
+  <h1>Lecture 8: Strategy and Innovation for Sustainability</h1>
+
+  <div class="bigpic">
+    This lecture examines how businesses can embed sustainability into core strategy and product design. It covers four strategic positions on the sustainability matrix, five circular economy business models, and three types of innovation, with particular attention to how circular thinking and subtraction-based design generate competitive advantage rather than merely reducing harm.
+  </div>
+
+  <section data-sec="0">
+    <h2>1. Sustainability Defined and Strategic Framing</h2>
+    <p data-topic="sustainability-definition">
+      <ul>
+        <li>Sustainable society (可持續社會) — meeting the needs of the present without compromising the ability of future generations to meet their own needs</li>
+        <li>Sustainable business (可持續企業) — thriving in perpetuity by meeting the triple bottom line (三重底線): People, Planet, Profit</li>
+        <li>Key link: by contributing to a sustainable society, a business can also sustain itself commercially</li>
+      </ul>
+    </p>
+    <p data-topic="sustainability-agree-disagree">
+      Three common debate positions addressed in the lecture:
+      <ul>
+        <li>"Most species ultimately become extinct, so sustainability is a false proposition" — challenges whether long-run sustainability is achievable at all</li>
+        <li>"Sustainability challenges are largely a problem of consumption (消費)" — locates responsibility with demand-side behavior</li>
+        <li>"Without new technology (新技術), it's virtually impossible to achieve sustainability" — highlights the role of innovation as a prerequisite</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="sustainability-definition"><b>Exam trap:</b> "Sustainable business" is not just about environmental protection — it specifically means thriving for perpetuity via the triple bottom line (people, planet, profit). Do not reduce it to environmental compliance alone.</div>
+  </section>
+
+  <section data-sec="1">
+    <h2>2. Four Strategies for Sustainable Business</h2>
+    <p data-topic="sustainability-strategies-matrix">
+      The strategies sit on a 2×2 matrix with axes Internal/External and Present/Future:
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Strategy</th>
+          <th>Axis</th>
+          <th>Focus</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Eco-efficiency (生態效率)</td>
+          <td>Internal / Present</td>
+          <td>Minimize waste and emissions from operations</td>
+        </tr>
+        <tr>
+          <td>Product Stewardship (產品管理)</td>
+          <td>External / Present</td>
+          <td>Integrate stakeholder (利益相關者) views into business processes</td>
+        </tr>
+        <tr>
+          <td>Clean Technology (清潔技術)</td>
+          <td>Internal / Future</td>
+          <td>Develop sustainable competencies for the future</td>
+        </tr>
+        <tr>
+          <td>Sustainability Vision (可持續願景)</td>
+          <td>External / Future</td>
+          <td>Create a shared roadmap for meeting unmet needs</td>
+        </tr>
+      </tbody>
+    </table>
+    <ul>
+      <li>Eco-efficiency — reduces operating cost while lowering environmental impact; the entry-level strategy for most firms</li>
+      <li>Product Stewardship — moves beyond operations to manage the full product lifecycle (產品生命週期) with stakeholder input</li>
+      <li>Clean Technology — requires R&D investment in entirely new processes and materials</li>
+      <li>Sustainability Vision — the most ambitious; reframes the company's purpose around solving large societal challenges</li>
+      <li>M&S "Plan A" slogan: "Because there is no Plan B" — illustrates Sustainability Vision positioning</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="sustainability-strategies-matrix"><b>Exam trap:</b> Eco-efficiency is Internal/Present, not External. Product Stewardship is External/Present. Students frequently swap the two.</div>
+  </section>
+
+  <section data-sec="2">
+    <h2>3. Business Model Innovation and the Circular Economy</h2>
+    <p data-topic="business-model-definition">
+      <ul>
+        <li>Business model (商業模式) — a document or strategy outlining how an organization delivers value to its target market; covers target market, customer needs, and the role of the firm's products/services</li>
+        <li>Business model innovation (商業模式創新) — adjusting the model at a fundamental level, e.g. new revenue streams (收入來源) or distribution channels (分銷渠道)</li>
+        <li>Experience economy (體驗經濟): commodity → good → service → experience; selling experiences commands higher value and generates less physical waste</li>
+        <li>Research finding: experiential purchases (體驗性購買) retain higher satisfaction over time than material purchases; at 4 weeks post-consumption, experiential score 5.42 vs material score 4.67 (scale 1–7)</li>
+      </ul>
+    </p>
+    <p data-topic="circular-economy">
+      <ul>
+        <li>Circular economy (循環經濟) — a regenerative system (再生系統) in which resource input and waste, emission, and energy leakage are minimized by slowing, closing, and narrowing material and energy loops</li>
+        <li>Contrasts with the linear economy (線性經濟): Take → Make → Use → Dispose</li>
+        <li>Circular flow replaces "dispose" with reverse logistics (逆向物流) and re-entry into the production cycle</li>
+      </ul>
+    </p>
+
+    <!-- SVG: Linear vs Circular Economy -->
+    <svg width="420" height="120" viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:1rem auto;">
+      <text x="10" y="20" font-size="12" fill="#555">Linear Economy</text>
+      <rect x="10" y="30" width="60" height="28" rx="4" fill="#c8e6c9" stroke="#388e3c"/>
+      <text x="40" y="49" font-size="10" text-anchor="middle" fill="#1b5e20">Take</text>
+      <line x1="70" y1="44" x2="100" y2="44" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+      <rect x="100" y="30" width="60" height="28" rx="4" fill="#c8e6c9" stroke="#388e3c"/>
+      <text x="130" y="49" font-size="10" text-anchor="middle" fill="#1b5e20">Make</text>
+      <line x1="160" y1="44" x2="190" y2="44" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+      <rect x="190" y="30" width="60" height="28" rx="4" fill="#c8e6c9" stroke="#388e3c"/>
+      <text x="220" y="49" font-size="10" text-anchor="middle" fill="#1b5e20">Use</text>
+      <line x1="250" y1="44" x2="280" y2="44" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+      <rect x="280" y="30" width="70" height="28" rx="4" fill="#ffcdd2" stroke="#c62828"/>
+      <text x="315" y="49" font-size="10" text-anchor="middle" fill="#b71c1c">Dispose</text>
+      <defs>
+        <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#555"/>
+        </marker>
+        <marker id="arr2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#388e3c"/>
+        </marker>
+      </defs>
+      <text x="10" y="85" font-size="12" fill="#555">Circular Economy</text>
+      <rect x="10" y="95" width="60" height="20" rx="4" fill="#c8e6c9" stroke="#388e3c"/>
+      <text x="40" y="109" font-size="9" text-anchor="middle" fill="#1b5e20">Make</text>
+      <line x1="70" y1="105" x2="100" y2="105" stroke="#388e3c" stroke-width="1.5" marker-end="url(#arr2)"/>
+      <rect x="100" y="95" width="60" height="20" rx="4" fill="#c8e6c9" stroke="#388e3c"/>
+      <text x="130" y="109" font-size="9" text-anchor="middle" fill="#1b5e20">Use</text>
+      <line x1="160" y1="105" x2="190" y2="105" stroke="#388e3c" stroke-width="1.5" marker-end="url(#arr2)"/>
+      <rect x="190" y="95" width="70" height="20" rx="4" fill="#c8e6c9" stroke="#388e3c"/>
+      <text x="225" y="109" font-size="9" text-anchor="middle" fill="#1b5e20">Recover</text>
+      <path d="M260,105 Q320,70 260,95" stroke="#388e3c" stroke-width="1.5" fill="none" marker-end="url(#arr2)"/>
+      <path d="M100,95 Q55,65 10,95" stroke="#388e3c" stroke-width="1.5" fill="none" stroke-dasharray="4,2"/>
+    </svg>
+
+  </section>
+
+  <section data-sec="3">
+    <h2>4. Five Circular Economy Business Models</h2>
+    <p data-topic="circular-business-models">
+      All five models are defined by Accenture research:
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Model</th>
+          <th>Core Mechanism</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Circular Supplies (循環供應)</td>
+          <td>Provide renewable (可再生), bio-based, or fully recyclable input materials to replace single-lifecycle inputs</td>
+          <td>Dell uses Ecovative mushroom-made packaging cushions</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Resource Recovery (資源回收)</td>
+          <td>Recover useful resources/energy from disposed products or by-products</td>
+          <td>Adidas x Parley: shoes made from ocean plastic; each pair prevents ~11 plastic bottles entering oceans</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Product Life Extension (產品壽命延長)</td>
+          <td>Extend working lifecycle through repair, upgrading, and reselling</td>
+          <td>Patagonia: Worn Wear free repair; 1% of sales donated; swap events; recycles old products</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Sharing Platforms (共享平台)</td>
+          <td>Increase utilization rate via shared use/access/ownership (zero, partial, or transient ownership)</td>
+          <td>Many examples (e.g. Airbnb, Uber); key: partial or zero ownership by users</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Product as a Service (產品即服務)</td>
+          <td>Offer product access while retaining ownership, internalizing benefits of circular resource productivity</td>
+          <td>Philips sells "light as a service" to Amsterdam Airport Schiphol; Philips pays electricity bills</td>
+        </tr>
+      </tbody>
+    </table>
+    <ul>
+      <li>Circular Supplies — substitutes virgin materials; mushroom packaging is compostable and removes petrochemical foam from the supply chain</li>
+      <li>Resource Recovery — converts waste streams into inputs; turns ocean plastic pollution (海洋塑料污染) into sellable product</li>
+      <li>Product Life Extension — fashion industry is the second most polluting industry (僅次於石油業); Patagonia's "slow fashion" directly counters the throwaway model</li>
+      <li>Sharing Platforms — the critical distinguishing feature is user ownership model: partial, transient, or zero — not the digital platform itself</li>
+      <li>Product as a Service — win-win-win: airport gains (no upfront investment, no maintenance hassle); Philips gains (incentive to make most energy-efficient lights, reuse recycled materials); environment gains (materials effectively recycled and reused)</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="circular-business-models"><b>Exam trap:</b> Product as a Service is NOT the same as a Sharing Platform. In PaaS the provider retains ownership and internalizes productivity benefits; in Sharing Platforms, users share access among themselves. Philips (PaaS) vs Airbnb (Sharing Platform).</div>
+  </section>
+
+  <section data-sec="4">
+    <h2>5. Types of Innovation for Sustainability</h2>
+    <p data-topic="types-of-innovation">
+      Three levels of innovation are ranked by value to business vs value to society:
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Innovation Type</th>
+          <th>Examples</th>
+          <th>Value Axis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Process Innovation (流程創新)</td>
+          <td>Supply chain certifications; renewable energy sourcing; transparency; high-performance buildings; air dyeing (25L water per shirt eliminated)</td>
+          <td>Value to Business</td>
+        </tr>
+        <tr>
+          <td>Product/Service Innovation (產品/服務創新)</td>
+          <td>Recycled content; concentrated laundry detergents; energy-efficient appliances; Tranlin's crop-straw paper &amp; fertilizer</td>
+          <td>Value to Business + Society</td>
+        </tr>
+        <tr>
+          <td>Business Model Innovation (商業模式創新)</td>
+          <td>Closed-loop systems; shared economy; product as service</td>
+          <td>Value to Society (highest)</td>
+        </tr>
+      </tbody>
+    </table>
+    <ul>
+      <li>Process example — air dyeing: traditional fabric dyeing uses 25 liters of water per shirt; air-dye technology eliminates this</li>
+      <li>Product example — Tranlin: makes paper and fertilizer (肥料) from crop straws (農作物秸稈), not forests; 100% compostable; restores soil</li>
+      <li>Business model innovation represents the deepest structural change and highest societal value</li>
+    </ul>
+    <p data-topic="augmentation-subtraction">
+      Product design innovation — three modes of augmentation (增強):
+      <ul>
+        <li>Augmentation by Addition (加法增強) — "now with even more features"; successive addition of features over time; common but can create bloat</li>
+        <li>Augmentation by Multiplication (乘法增強) — multiplying product variants/configurations; generates complexity and potential paradox of choice (選擇悖論)</li>
+        <li>Augmentation by Subtraction (減法增強) — removing features to solve the core problem more cleanly; subtraction is innovation too; Southwest Airlines example: stripped-down air travel at lower cost</li>
+      </ul>
+    </p>
+    <ul>
+      <li>Paradox of choice (選擇悖論): more options can reduce consumer satisfaction and waste design resources — referenced via Barry Schwartz TED Talk (2005)</li>
+      <li>Subtraction logic: a product is designed to solve a problem; anything additional may detract from the original solution and waste resources</li>
+      <li>Strategic question: how may a business compete and provide new value to customers by subtraction?</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="augmentation-subtraction"><b>Exam trap:</b> Subtraction is explicitly classified as a form of innovation in this lecture — not a cost-cutting retreat. Students often assume innovation always means adding features; the lecture directly challenges this assumption with the Southwest Airlines example.</div>
+  </section>
+
+  <div class="exam-traps-summary">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Sustainable business = thriving for perpetuity via triple bottom line (people, planet, profit) — not just environmental compliance</li>
+      <li>Eco-efficiency is Internal/Present; Product Stewardship is External/Present — these are commonly swapped</li>
+      <li>Product as a Service (Philips) differs from Sharing Platforms (Airbnb) — PaaS retains provider ownership; Sharing Platforms enable user-to-user shared access</li>
+      <li>Subtraction is a valid form of innovation — not merely a cost-cutting measure; Southwest Airlines is the canonical example</li>
+    </ul>
+  </div>
+
+  <div class="memorize">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Sustainable society definition: meeting present needs without compromising future generations</li>
+      <li>Triple bottom line: People, Planet, Profit</li>
+      <li>Four sustainability strategies: Eco-efficiency (Internal/Present), Product Stewardship (External/Present), Clean Technology (Internal/Future), Sustainability Vision (External/Future)</li>
+      <li>Circular economy definition: regenerative system minimizing resource input, waste, emission, and energy leakage</li>
+      <li>Five circular business models: Circular Supplies, Resource Recovery, Product Life Extension, Sharing Platforms, Product as a Service</li>
+      <li>Philips "light as a service" example and win-win-win benefits for airport, Philips, and environment</li>
+      <li>Patagonia: Worn Wear free repair + 1% of sales donated + fashion = 2nd most polluting industry</li>
+      <li>Adidas x Parley: each shoe prevents ~11 plastic bottles from entering oceans</li>
+      <li>Three innovation types ranked by societal value: Process → Product/Service → Business Model</li>
+      <li>Air dyeing eliminates 25 liters of water per shirt vs traditional dyeing</li>
+      <li>Augmentation by Subtraction is innovation — subtraction removes non-core features to better solve the original problem</li>
+      <li>Experience economy: experiential purchases score 5.42 vs material purchases 4.67 at 4 weeks post-consumption (1–7 scale)</li>
+    </ol>
+  </div>
+</div>
+
+<div id="notes-7" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-7" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(7)">Clear Highlights</button>
+  <h1>Lecture 7: Business and the Natural Environment</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    This lecture examines how businesses interact with the natural environment as a stakeholder, why greenwashing (漂綠) undermines genuine sustainability efforts, and why well-intentioned consumers still fail to act sustainably. The central throughline is that overcoming environmental inaction requires understanding both corporate communication failures and the deep psychological barriers that prevent pro-environmental behavior.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. The Natural Environment as a Stakeholder</h2>
+    <p data-topic="environment-as-stakeholder">The stakeholder (利益相關者) power-interest matrix classifies stakeholders by their influence over a firm and their interest in its activities. Applying this matrix to nature reveals an analytical challenge: nature has immense power (高權力) — it can collapse supply chains, destroy assets, impose regulatory costs — yet it cannot express "interest" in the human sense.</p>
+    <ul data-topic="environment-as-stakeholder">
+      <li>High Power, Low Interest quadrant — "Meet their needs, engage closely": nature could be placed here, given its leverage over businesses without having articulated preferences.</li>
+      <li>High Power, High Interest quadrant — "Key peer, engage closely": alternatively argued if we treat environmental advocates as proxies for nature's interests.</li>
+      <li>Low Power, Low Interest — "Minimal effort"; Low Power, High Interest — "Show consideration": these quadrants do not fit nature well.</li>
+      <li>The campaign <em>Nature Is Speaking</em> (自然在說話) by Conservation International frames nature (e.g., Mother Nature voiced by Julia Roberts) as an autonomous actor that does not need humans — humans need nature.</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="environment-as-stakeholder"><b>Exam trap:</b> The natural environment is not a conventional stakeholder because it has no legal standing or expressed interest — students often place it incorrectly in the High Power, High Interest quadrant without justification. The lecture leaves its correct quadrant open as a discussion question.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Global Environmental Issues</h2>
+    <p data-topic="global-env-issues">The lecture identifies five categories of global environmental challenges (全球環境問題) that businesses must contend with:</p>
+    <ul data-topic="global-env-issues">
+      <li>Climate change (氣候變化) — driven by emission of greenhouse gases (溫室氣體) including carbon dioxide (二氧化碳), methane (甲烷), and nitrous oxide (一氧化二氮).</li>
+      <li>Ozone depletion (臭氧層消耗) — increases ultraviolet (紫外線) UV radiation reaching Earth's surface, raising risks of skin cancer.</li>
+      <li>Resource scarcity (資源稀缺) — encompasses air, water, and land pollution (污染).</li>
+      <li>Decline of biodiversity (生物多樣性下降) — loss of species and ecosystems.</li>
+      <li>Threats to marine ecosystems (海洋生態系統威脅) — degradation of oceans, coral reefs, fisheries.</li>
+    </ul>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Greenwashing and How to Avoid It</h2>
+    <p data-topic="greenwashing-definition">Greenwashing (漂綠) is the practice of making an unsubstantiated (無根據的) or misleading claim about the environmental benefits of a product, service, technology, or company practice. It makes a company appear more environmentally friendly (環保) than it really is, harming both business credibility and actual environmental outcomes.</p>
+
+    <table data-topic="seven-sins-greenwashing">
+      <thead>
+        <tr><th>#</th><th>Sin</th><th>Description</th><th>Example</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Hidden Trade-Off (隱藏取捨)</td><td>Labels product eco-friendly on a narrow set of attributes while ignoring larger impacts.</td><td>Product made of recycled content but with high manufacturing energy use.</td></tr>
+        <tr><td>2</td><td>No Proof (無依據)</td><td>Environmental claim with no accessible evidence on label or website.</td><td>Light bulb touted as energy-efficient with no supporting data.</td></tr>
+        <tr><td>3</td><td>Vagueness (模糊性)</td><td>Terms too broad or poorly defined to be properly understood.</td><td>"All-natural" cleaner that still contains harmful naturally occurring ingredients.</td></tr>
+        <tr><td>4</td><td>Irrelevance (不相關性)</td><td>Technically true claim that is not a meaningful differentiator.</td><td>Advertised as "CFC-Free" — but CFCs are already banned by law.</td></tr>
+        <tr><td>5</td><td>Lesser of Two Evils (兩害取其輕)</td><td>Greener than others in a category that is inherently environmentally unfriendly.</td><td>Organic cigarette marketed as greener — it is still a cigarette.</td></tr>
+        <tr><td>6</td><td>Fibbing (造假)</td><td>Advertising something that is simply untrue.</td><td>Claims Energy Star Certified status without actually having it.</td></tr>
+        <tr><td>7</td><td>Worshipping False Labels (崇拜假標籤)</td><td>Implies third-party endorsement or certification that does not actually exist.</td><td>Use of fake certification labels on packaging.</td></tr>
+      </tbody>
+    </table>
+
+    <p data-topic="lca-systems-thinking">Life Cycle Assessment (生命周期評估, LCA) is the recommended systems thinking (系統思維) tool to avoid greenwashing. It evaluates all inputs and outputs across a product's full life cycle (產品生命周期).</p>
+    <ul data-topic="lca-systems-thinking">
+      <li>Inputs include: raw materials, fuel, electricity, and water at each stage.</li>
+      <li>Life cycle stages: raw material acquisition (原材料採集) → material processing (材料加工) → manufacture and assembly (製造與組裝) → use and service (使用與維護) → retirement and recovery (退役與回收) → treatment and disposal (處理與棄置).</li>
+      <li>Outputs include: solid waste (固體廢物), emissions (排放), waste water (廢水), and hazardous waste (危險廢物).</li>
+      <li>Impacts assessed include: global warming potential, human health risks.</li>
+      <li>Closed-loop recycling (閉環回收) and remanufacturing (再製造) can feed materials back into earlier stages.</li>
+      <li>Framework based on ISO 14040:2006 (Environmental Management — Life Cycle Assessment).</li>
+      <li>Tools used in practice include Deloitte sustainability services, Sustainable Minds, and SimaPro software.</li>
+    </ul>
+
+    <p data-topic="lca-hand-dryer-example">A comparative LCA example: electric hand dryers (電動乾手機) vs. paper towels (紙巾) across materials, manufacturing, transportation, use, and end-of-life stages — illustrating how full-cycle analysis can reveal non-obvious environmental winners (Joseph et al., 2015, <em>Science of the Total Environment</em>, Vols. 515–516, pp. 109–117).</p>
+
+    <p data-topic="innovation-cold-water">Innovation example — cold-water detergent (冷水洗衣液): if every U.S. household washed laundry in cold water for one year, energy saved would equal 4 years of Hoover Dam output and could power the Empire State Building for 444 years; CO₂ emissions could be reduced by up to 11 million metric tonnes per year. A single household switching would save enough energy to watch TV for 1,363 hours, play Xbox 360 for 684 hours, charge an iPhone 4S 30,861 times, or power a new refrigerator for nearly 4 months.</p>
+
+    <div class="exam-trap-inline" data-topic="lca-systems-thinking"><b>Exam trap:</b> LCA is not just about recycling — it spans the full product life cycle from raw material extraction to disposal. Students often reduce it to end-of-life management only.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Why Sustainable Products Don't Always Sell</h2>
+    <p data-topic="attitude-behavior-gap">Despite the clear energy and cost benefits of cold-water detergent, it received a "cold shoulder" (消費者冷淡回應) in the market (New York Times, 2011). Two key reasons explain the attitude-behavior gap (態度行為落差):</p>
+    <ul data-topic="attitude-behavior-gap">
+      <li>Consumer belief (消費者信念) — customers cling to the idea that hot water washes best, a belief passed down through generations, even though it squanders energy and contributes to greenhouse gas emissions.</li>
+      <li>Marketing mismatch (行銷不匹配) — messaging focused on environmental benefits is less effective; emphasizing stain removal, whiteness, performance, and price sells better.</li>
+    </ul>
+
+    <svg width="520" height="130" viewBox="0 0 520 130" xmlns="http://www.w3.org/2000/svg" data-topic="attitude-behavior-gap" style="display:block;margin:1rem auto;">
+      <rect x="10" y="30" width="130" height="60" rx="8" fill="#c8e6c9" stroke="#388e3c" stroke-width="1.5"/>
+      <text x="75" y="55" text-anchor="middle" font-size="13" fill="#1b5e20">Pro-environmental</text>
+      <text x="75" y="72" text-anchor="middle" font-size="13" fill="#1b5e20">Attitude</text>
+      <line x1="140" y1="60" x2="195" y2="60" stroke="#888" stroke-width="2" marker-end="url(#arr)"/>
+      <rect x="195" y="30" width="130" height="60" rx="8" fill="#ffccbc" stroke="#e64a19" stroke-width="1.5"/>
+      <text x="260" y="55" text-anchor="middle" font-size="13" fill="#bf360c">Psychological</text>
+      <text x="260" y="72" text-anchor="middle" font-size="13" fill="#bf360c">Barriers</text>
+      <line x1="325" y1="60" x2="380" y2="60" stroke="#888" stroke-width="2" marker-end="url(#arr)"/>
+      <rect x="380" y="30" width="130" height="60" rx="8" fill="#ffe0b2" stroke="#f57c00" stroke-width="1.5"/>
+      <text x="445" y="55" text-anchor="middle" font-size="13" fill="#e65100">No Sustainable</text>
+      <text x="445" y="72" text-anchor="middle" font-size="13" fill="#e65100">Action</text>
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#888"/>
+        </marker>
+      </defs>
+    </svg>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. Mental Barriers to Sustainable Behavior</h2>
+    <p data-topic="mental-barriers">Four psychological barriers (心理障礙) explain why pro-environmental intentions do not translate into action:</p>
+    <ul data-topic="mental-barriers">
+      <li>Status quo bias (現狀偏見) — the current baseline is treated as a reference point; any deviation is perceived as a loss. Because many unsustainable behaviors are the default, switching feels costly even when the new option is objectively better.</li>
+      <li>Discounting the distant future (折扣遙遠未來) — people perceive environmental problems as distant in time and distant in space, making them psychologically less urgent and motivating.</li>
+      <li>Public goods dilemma (公共財困境) — free-rider (搭便車) problem: "The greatest threat to our planet is the belief that someone else will save it." Each individual waits for collective action.</li>
+      <li>Green-feminine stereotype (環保女性化刻板印象) — studies show that caring for the environment is perceived as a feminine trait, creating inhibitions among male consumers.</li>
+    </ul>
+
+    <p data-topic="green-masculine-branding">Research by Brough and Wilkie (2017, <em>Scientific American</em>) found that men resist green behavior as "unmanly." A study on masculine branding (男性化品牌) tested donation likelihood to a green nonprofit:</p>
+    <ul data-topic="green-masculine-branding">
+      <li>Under conventional green branding (傳統環保品牌): men were less likely than women to donate (likelihood score ~4.05 for men vs. ~4.20 for women).</li>
+      <li>Under masculine green branding (男性化環保品牌): men and women donated at similarly high rates — the gender gap disappeared.</li>
+      <li>Implication: reframing green products with masculine identity cues reduces inhibitions and increases participation.</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="mental-barriers"><b>Exam trap:</b> Status quo bias is not simply "laziness" or "lack of information" — it is a framing effect where any change from the default is perceived as a loss, even if the alternative is objectively superior.</div>
+
+    <p data-topic="behavioral-change">To motivate behavioral change (行為改變), the lecture references TED research and highlights two mechanisms:</p>
+    <ul data-topic="behavioral-change">
+      <li>Immediate reward (即時獎勵) — short-term incentives that bridge the gap between future environmental benefits and present behavior.</li>
+      <li>Progress monitoring (進度監控) — feedback tools that make behavior change visible and tangible, reinforcing continued action.</li>
+    </ul>
+
+    <p data-topic="behavioral-change">HKUST example: water fountains on campus display the number of plastic bottles saved, providing real-time progress feedback to users.</p>
+
+    <p data-topic="customer-engagement">Discussion point: knowing these mental barriers, companies like Starbucks can engage customers in green efforts (e.g., recycling properly, using reusable tumblers, reducing food waste) by designing around biases rather than simply informing consumers.</p>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>The natural environment does not neatly fit any single quadrant of the power-interest matrix; placing it in High Power, High Interest without justification is incorrect.</li>
+      <li>LCA (Life Cycle Assessment) covers the full product life cycle from raw material extraction to disposal — not just the end-of-life or recycling phase.</li>
+      <li>The Seven Sins of Greenwashing are distinct — "Irrelevance" (technically true but unremarkable, e.g., CFC-free after CFCs are banned) is commonly confused with "Vagueness" (too broad to be understood).</li>
+      <li>Status quo bias is a framing/loss-aversion effect, not mere inertia or ignorance — any change from the default is perceived as a loss.</li>
+      <li>The green-feminine stereotype reduces green purchasing among male consumers; masculine branding can neutralize this effect, as demonstrated empirically.</li>
+      <li>Cold-water detergent failed in the market not because it lacked environmental benefit, but because environmental messaging is less persuasive than performance/price messaging.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Definition of greenwashing: unsubstantiated or misleading claim about environmental benefits of a product, service, technology, or practice.</li>
+      <li>Seven Sins of Greenwashing: Hidden Trade-Off, No Proof, Vagueness, Irrelevance, Lesser of Two Evils, Fibbing, Worshipping False Labels.</li>
+      <li>Life Cycle Assessment (LCA) — ISO 14040:2006 framework covering all inputs/outputs from raw material acquisition through disposal; tool to avoid greenwashing.</li>
+      <li>Four mental barriers to sustainability: status quo bias, discounting the distant future, public goods dilemma, green-feminine stereotype.</li>
+      <li>Masculine branding finding (Brough & Wilkie, 2017): conventional green branding suppresses male donation; masculine green branding eliminates the gender gap.</li>
+      <li>Five global environmental issues: climate change, ozone depletion, resource scarcity, biodiversity decline, marine ecosystem threats.</li>
+      <li>Two behavioral change mechanisms: immediate reward and progress monitoring.</li>
+      <li>Cold-water detergent case: superior energy savings did not translate to market success because consumer beliefs and hot-water habits dominate; effective selling requires emphasizing performance, not environment.</li>
+      <li>Nature Is Speaking campaign by Conservation International frames nature as not needing humans — humans need nature.</li>
+      <li>Public goods dilemma quote: "The greatest threat to our planet is the belief that someone else will save it."</li>
+    </ol>
+  </div>
+</div>
+
+<div id="notes-6" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-6" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(6)">Clear Highlights</button>
+  <h1>Lecture 6: Business and Communities</h1>
+
+  <div class="bigpic">
+    Businesses do not operate in isolation — they are embedded in communities (社區) that supply labour, infrastructure, and social licence to operate. This lecture examines why firms should engage communities as stakeholders (利益相關者), maps the main mechanisms of corporate philanthropy (企業慈善) and community engagement, and introduces the shared value (共享價值) framework as a higher-order alternative to charitable giving. The Link REIT case study anchors abstract concepts in the real tension between profit, gentrification, and social responsibility.
+  </div>
+
+  <section data-sec="0">
+    <h2>1. What Is a Community and Why Does It Matter?</h2>
+    <p data-topic="community-definition">
+      <ul>
+        <li>Community (社區) — an organization's area of local influence, plus any broader groups impacted by its actions.</li>
+        <li>Mutual dependence (相互依賴): business relies on community for services and infrastructure; community relies on business for civic support.</li>
+      </ul>
+    </p>
+    <p data-topic="community-types">
+      <strong>Community types:</strong>
+      <table>
+        <thead>
+          <tr><th>Type</th><th>Definition</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Site community (場址社區)</td><td>Geographical location of a company's operations, offices, or assets</td></tr>
+          <tr><td>Fence-line community (圍欄社區)</td><td>Immediate neighbors of operations</td></tr>
+          <tr><td>Virtual communities (虛擬社區)</td><td>People who buy from or follow the company online</td></tr>
+          <tr><td>Communities of interest (利益社群)</td><td>Groups that share a common interest with the company</td></tr>
+        </tbody>
+      </table>
+    </p>
+    <p data-topic="why-care-community">
+      <strong>Why should businesses care about communities?</strong>
+      <ul>
+        <li>Decision-making (決策): gaining community viewpoints, local knowledge, and innovative ideas.</li>
+        <li>Legitimacy (合法性): reducing conflict and controversy; enhancing firm credibility (信譽).</li>
+        <li>Competitiveness (競爭力): easier to attract workers; fewer lawsuits and operational obstacles.</li>
+        <li>Visibility and brand awareness (品牌知名度): community involvement increases long-run organizational benefits.</li>
+        <li>Fortune poll: 66% of millennials (千禧世代) and a majority of older generations seek employment at philanthropic (慈善) companies.</li>
+        <li>Cone/Echo Research: CSR was a consideration for 82% of consumers.</li>
+        <li>Social media loyalty: 53% of people who follow a brand online are more loyal to that brand.</li>
+        <li>Community health has a direct impact on business health — a prosperous community attracts higher-income residents and boosts tenant income.</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="why-care-community"><b>Exam trap:</b> The three business benefits of community relations are Decision-making, Legitimacy, and Competitiveness — not just reputation or PR. Students often list only one or two.</div>
+  </section>
+
+  <section data-sec="1">
+    <h2>2. Corporate Philanthropy</h2>
+    <p data-topic="philanthropy-definition">
+      <ul>
+        <li>Corporate philanthropy (企業慈善) — the act of a corporation promoting the welfare of others, generally through charitable donations (慈善捐款) of funds or time.</li>
+        <li>Corporate social responsibility (企業社會責任, CSR) describes the overall attitude toward society; philanthropy is a narrower subset of CSR.</li>
+      </ul>
+    </p>
+    <p data-topic="philanthropy-types">
+      <strong>Two orientation dimensions for philanthropic strategy:</strong>
+      <ul>
+        <li>Market orientation (市場導向): emphasises high stakeholder expectations — customers, employees, regulators, neighbors (e.g., Lufthansa enhancing relations with Frankfurt neighborhood).</li>
+        <li>Competence orientation (能力導向): aligns philanthropic initiatives with the company's abilities and core competencies (核心能力) (e.g., McKinsey providing free consulting for NGOs).</li>
+      </ul>
+    </p>
+    <p data-topic="priority-focus-areas">
+      <strong>Corporate priority focus area trends (2015–2017, three-year matched set):</strong>
+      <ul>
+        <li>Largest reported increases: Health/Wellbeing (+3%), STEM (+2%), Environment/Sustainability (+2%).</li>
+        <li>Largest reported decrease: Disaster Relief (−8%).</li>
+        <li>Other tracked areas: Cancer, Military/Veterans, Safety, Diversity and Inclusion, Workforce/Employment.</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="philanthropy-definition"><b>Exam trap:</b> CSR and corporate philanthropy are NOT the same. CSR is the broader attitude; philanthropy is one specific, narrower form of CSR expression.</div>
+  </section>
+
+  <section data-sec="2">
+    <h2>3. Alternative Ways of Community Engagement</h2>
+    <p data-topic="engagement-types">
+      <strong>Three Corporate Responsibility Action Types:</strong>
+      <table>
+        <thead>
+          <tr><th>Type</th><th>Emphasis</th><th>Example</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Philanthropy Type (慈善型)</td><td>Charity, sponsorship, employee voluntarism (義工)</td><td>Green medal awards, Hang Seng environmental awards</td></tr>
+          <tr><td>Integration Type (整合型)</td><td>Conducting existing business operations more responsibly</td><td>Mars raising CSR bar in supply chain</td></tr>
+          <tr><td>Innovation Type (創新型)</td><td>Developing new business models to solve social and environmental problems</td><td>Unilever's Project Shakti</td></tr>
+        </tbody>
+      </table>
+    </p>
+    <p data-topic="project-shakti">
+      <strong>Unilever's Project Shakti (案例):</strong>
+      <ul>
+        <li>Problem: Rural villages in India lacked access to hygiene products (衛生產品); women lacked income and lived under privilege.</li>
+        <li>Solution: Unilever recruited village women, provided microfinance loans (小額信貸), and trained them to sell soaps, detergents, and related products.</li>
+        <li>Represents the Innovation Type — a new business model (商業模式) that simultaneously addresses social needs and generates revenue.</li>
+      </ul>
+    </p>
+    <p data-topic="nan-fung-csr">
+      <strong>Nan Fung's Social Responsibility Actions (example of all three types):</strong>
+      <ul>
+        <li>Philanthropy Type: D.H. Chen Foundation; employee volunteering for WWF, Lifeline Express flag sales.</li>
+        <li>Integration Type: ISO 14001:2004 Environmental Management System; Indoor Air Quality Certificates; Wastewise Logo; BEAM (independent building sustainability assessments).</li>
+        <li>Innovation Type: The Mills (adaptive reuse of industrial heritage for creative industries).</li>
+      </ul>
+    </p>
+  </section>
+
+  <section data-sec="3">
+    <h2>4. Evolution of CSR and Shared Value</h2>
+    <p data-topic="csr-evolution">
+      <strong>Historical evolution of CSR (企業社會責任演進) by decade:</strong>
+      <ul>
+        <li>1970s — Defensive (防禦型): meeting legal requirements only.</li>
+        <li>1980s — Philanthropic (慈善型): corporate citizenship writing.</li>
+        <li>1990s — Cause-related marketing (公益行銷); marketing as masterbrand.</li>
+        <li>2000s — Strategic value: aligning CSR with business strategy.</li>
+        <li>2012 — Transformative management: "fusing assets and needs" for social impact.</li>
+      </ul>
+    </p>
+    <p data-topic="shared-value">
+      <strong>Creating Shared Value (共享價值創造, CSV) — Porter & Kramer, Harvard Business Review:</strong>
+      <ul>
+        <li>Definition: policies and practices (政策與實踐) that enhance a company's competitiveness while simultaneously advancing the economic, environmental, and social conditions in the communities where it operates, in a planned way.</li>
+        <li>Shared value IS NOT: sharing value already created (philanthropy), personal values, or accidental compliance.</li>
+        <li>Key insight: not all profit is equal — profits involving a social purpose represent a higher form of capitalism (資本主義).</li>
+        <li>Mindset shift: discard (拋棄) the concept of "externality" (外部性); treat societal problems as internal costs to the company.</li>
+        <li>CSV operates at the intersection of social needs, business opportunities, and corporate assets.</li>
+      </ul>
+    </p>
+
+    <svg width="340" height="160" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:1rem auto;">
+      <circle cx="120" cy="80" r="60" fill="#c8e6c9" fill-opacity="0.6" stroke="#388e3c" stroke-width="1.5"/>
+      <circle cx="220" cy="80" r="60" fill="#fff9c4" fill-opacity="0.6" stroke="#f9a825" stroke-width="1.5"/>
+      <text x="80" y="75" font-size="11" text-anchor="middle" fill="#1b5e20">Social</text>
+      <text x="80" y="89" font-size="11" text-anchor="middle" fill="#1b5e20">Needs</text>
+      <text x="260" y="75" font-size="11" text-anchor="middle" fill="#7b5e00">Business</text>
+      <text x="260" y="89" font-size="11" text-anchor="middle" fill="#7b5e00">Opps</text>
+      <text x="170" y="72" font-size="10" text-anchor="middle" fill="#333" font-weight="bold">Shared</text>
+      <text x="170" y="85" font-size="10" text-anchor="middle" fill="#333" font-weight="bold">Value</text>
+      <text x="170" y="130" font-size="10" text-anchor="middle" fill="#555">+ Corporate Assets</text>
+    </svg>
+
+    <div class="exam-trap-inline" data-topic="shared-value"><b>Exam trap:</b> Shared Value is NOT philanthropy. Philanthropy redistributes value already created; Shared Value creates new value by making societal improvement integral to competitive strategy.</div>
+  </section>
+
+  <section data-sec="4">
+    <h2>5. Case Study — Link REIT and Gentrification</h2>
+    <p data-topic="link-reit-background">
+      <strong>Background:</strong>
+      <ul>
+        <li>Link REIT (領展房產基金) — Hong Kong's largest real estate investment trust (房地產投資信託基金), operating retail markets and car parks inherited from public housing estates.</li>
+        <li>Renovation of wet markets necessitated rent increases, raising cost of living (生活成本) for vulnerable communities.</li>
+        <li>The pursuit of higher-income customers pushed out previous small tenants (小租戶) — fruits and vegetables vendors, etc.</li>
+        <li>General public regards Link REIT as an agent of gentrification (仕紳化) of Hong Kong communities.</li>
+        <li>City's chief executive labeled Link REIT's role as one of Hong Kong's "big three mountains" (三座大山) — a major burden on citizens.</li>
+      </ul>
+    </p>
+    <p data-topic="link-reit-stakeholders">
+      <strong>Link REIT's main stakeholders (主要利益相關者):</strong>
+      <ul>
+        <li>Shareholders — institutional investors (機構投資者) such as BlackRock.</li>
+        <li>Unit holders — individual investors who purchased units (e.g., at Hangzhou wet market).</li>
+        <li>Tenants — ranging from small fruit/vegetable stalls to large chains (e.g., McDonald's).</li>
+        <li>Customers — both the city's poor (低收入市民) and higher-income shoppers now targeted.</li>
+        <li>Municipal government (市政府) — charged with regulation.</li>
+        <li>General public, NGOs (non-governmental organizations) focused on city development, and media.</li>
+      </ul>
+    </p>
+    <p data-topic="link-reit-conflicts">
+      <strong>Q1 — Conflicting interests (利益衝突):</strong>
+      <ul>
+        <li>Renovation benefits institutional investors and unit holders (higher returns) but raises rents, damaging poor tenants and low-income customers.</li>
+        <li>Firm's market repositioning conflicts with the border community's (邊緣社區) access to affordable goods.</li>
+        <li>Prices rise and previous tenants are pushed out — direct community harm.</li>
+      </ul>
+    </p>
+    <p data-topic="link-reit-reasons">
+      <strong>Q2 — Reasons for taking social responsibility:</strong>
+      <ul>
+        <li>Public vilification (公眾譴責) as an agent of gentrification damages company image — social responsibility improves it.</li>
+        <li>Government pressure: being labeled a "big three mountain" damages the relationship with regulators; social responsibility improves government relations.</li>
+        <li>Long-term returns: a prosperous, inclusive community attracts high-income and educated residents, increasing tenant income and Link REIT revenue.</li>
+        <li>Community can foster both inclusive growth (包容性增長) and high long-term returns simultaneously.</li>
+      </ul>
+    </p>
+    <p data-topic="link-reit-resolution">
+      <strong>Q3 — Approaches to resolving conflicting interests:</strong>
+      <ul>
+        <li>Balance social interests with economic interests to secure the legitimacy (合法性) needed to operate.</li>
+        <li>Undertake shared value creation — define the intersection of social needs, business opportunities, and corporate assets.</li>
+        <li>Urban redevelopment (城市重建) should set predefined community standards encouraging rejuvenation (更新), plus a second model incorporating local stakeholders into the redevelopment process.</li>
+      </ul>
+    </p>
+    <div class="exam-trap-inline" data-topic="link-reit-background"><b>Exam trap:</b> The reason Link REIT should consider social responsibility is not purely ethical — it has direct business logic: improved image, better government relations, and higher long-term financial returns from a prosperous community.</div>
+  </section>
+
+  <div class="exam-traps-summary">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>The three business benefits of community relations are Decision-making, Legitimacy, and Competitiveness — not just reputation.</li>
+      <li>CSR and corporate philanthropy are NOT the same: CSR is the broader organizational attitude; philanthropy is a narrower subset.</li>
+      <li>Shared Value is NOT philanthropy: philanthropy redistributes existing value; Shared Value creates new value by integrating social improvement into competitive strategy.</li>
+      <li>The rationale for Link REIT taking social responsibility is business-driven (image, government relations, long-term revenue), not just ethical obligation.</li>
+    </ul>
+  </div>
+
+  <div class="memorize">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Four community types: site, fence-line, virtual, communities of interest.</li>
+      <li>Three business benefits of community relations: Decision-making, Legitimacy, Competitiveness.</li>
+      <li>Corporate philanthropy is narrower than CSR (CSR is the overall attitude; philanthropy is one mechanism).</li>
+      <li>Two philanthropy orientation dimensions: market orientation vs. competence orientation.</li>
+      <li>Three Corporate Responsibility Action Types: Philanthropy, Integration, Innovation.</li>
+      <li>Unilever Project Shakti: Innovation Type — microfinance loans + training for rural Indian women to sell hygiene products.</li>
+      <li>CSV definition: policies/practices enhancing competitiveness while simultaneously advancing economic, environmental, and social conditions in communities.</li>
+      <li>CSV is NOT philanthropy, personal values, or accidental compliance — it is planned and strategic.</li>
+      <li>CSV mindset: treat societal problems as internal costs, not externalities.</li>
+      <li>Link REIT stakeholder map: shareholders, unit holders, tenants (small and large), customers (poor and affluent), government, public, NGOs, media.</li>
+      <li>Link REIT gentrification conflict: rent increases from renovation hurt vulnerable communities while benefiting investors.</li>
+      <li>CSR evolution timeline: 1970s defensive → 1980s philanthropic → 1990s cause-related marketing → 2000s strategic → 2012 transformative/shared value.</li>
+    </ol>
+  </div>
+</div>
+
+<div id="notes-5" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-5" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(5)">Clear Highlights</button>
+  <h1>Lecture 5: Business and Suppliers</h1>
+
+  <div class="bigpic">
+    This lecture examines the ethical responsibilities a business holds toward its suppliers and the broader supply chain (供應鏈). It traces how corporations evolved from denying responsibility for supplier misconduct to proactively building responsible supply chains, and explores why contracts alone are insufficient — making trust (信任) the essential lubricant of commercial relationships.
+  </div>
+
+  <section data-sec="0">
+    <h2>1. Supply Chain Structure and Ethical Challenges</h2>
+    <p data-topic="supply-chain-overview">A supply chain (供應鏈) is a network between a company and its suppliers to produce and distribute a product to the final buyer; it includes activities, people, entities, information, and resources across every step from raw materials to the customer.</p>
+    <ul>
+      <li>Key actors in a typical chain: Supplier (供應商) — Manufacturer (製造商) — Distributor (分銷商) — Retailer (零售商) — Consumer (消費者)</li>
+      <li>Modern chains are multi-tiered: Nike example has Tier 2 suppliers (raw materials: rubber, fabric) feeding Tier 1 (shoe manufacturing and assembly), which feeds Nike's product development and marketing, then multiple retail channels (branded stores, catalog, online, sporting-goods stores)</li>
+      <li>Customer needs/wants feedback flows back upstream — the chain is circular, not purely linear</li>
+    </ul>
+    <p data-topic="supply-chain-ethics">Core ethical question: to what extent should a corporation be held responsible (負責任) for its suppliers' illegal or unethical practices — including labor abuses (勞工濫用), human trafficking (人口販賣), bribery (行賄), and pollution (污染)?</p>
+    <ul>
+      <li>Nike's initial response to sweatshop (血汗工廠) allegations: "Without an in-house manufacturing facility, the company simply could not be held responsible for the actions of independent contractors."</li>
+      <li>This defensive denial eventually backfired — reputation damage, campus backlash, and a 69% drop in earnings in fiscal year 1998 (worsened by Asian currency crisis, oversupply, and weak demand), forcing layoffs</li>
+      <li>Nike CEO Phil Knight publicly admitted wrongdoing in a May 1998 speech to the National Press Club — the financial loss achieved what hundreds of critical articles had not</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="supply-chain-ethics"><b>Exam trap:</b> Nike's initial defense was that it had no in-house manufacturing — do not confuse this with a valid legal shield; the course frames it as a failure of the duty of care (照料義務), not a legitimate escape from responsibility.</div>
+
+    <p data-topic="conflict-minerals">Conflict minerals (衝突礦產) are another supply chain challenge: minerals (e.g., tantalum, tungsten) mined in conflict zones and sold to finance armed groups — companies sourcing these become indirectly complicit in violence.</p>
+    <ul>
+      <li>The Dodd-Frank Act (United States) requires companies to file a Specialized Disclosure Report (Form SD) with the SEC disclosing their use of conflict minerals — a regulatory (監管) response to supply chain accountability</li>
+    </ul>
+  </section>
+
+  <section data-sec="1">
+    <h2>2. The Duty of Care</h2>
+    <p data-topic="duty-of-care">The duty of care (照料義務) principle, articulated by Auret van Heerden (Making Global Labor Fair), holds that corporations have a custodial (監護) duty to ensure that a product travels from its origin to the store in a way that allows consumers to use it without fear for their safety or having to sacrifice their conscience.</p>
+    <ul>
+      <li>This duty extends beyond legal compliance — it is a moral obligation (道德義務) to oversee the entire supply chain, not just the company's own operations</li>
+      <li>The "independent contractor" defense is explicitly rejected by this framework: outsourcing production does not outsource ethical responsibility (道德責任)</li>
+      <li>Consumers must be able to consume without fearing that their purchase funded labor abuse or human rights violations (人權侵害)</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="duty-of-care"><b>Exam trap:</b> The duty of care here is not the same as the legal tort standard — it is a broader ethical concept requiring corporations to protect both consumer safety and consumer conscience throughout the supply chain.</div>
+  </section>
+
+  <section data-sec="2">
+    <h2>3. Evolution of Corporate Attitude Toward Supplier Responsibility</h2>
+    <p data-topic="corporate-attitude-evolution">Zadek (2004) identifies five stages of corporate responsibility (企業責任) evolution that describe how companies progress from denial to leadership:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Stage</th>
+          <th>Label</th>
+          <th>Orientation</th>
+          <th>Key Behavior</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Defensive (防禦性)</td>
+          <td>Value protection</td>
+          <td>"It's not our job to fix that." — deny responsibility</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Compliance (合規)</td>
+          <td>Value protection</td>
+          <td>"We'll do just as much as we have to." — manage risks through policies</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Managerial (管理性)</td>
+          <td>Value protection → creation</td>
+          <td>"It's the stupid thing to do [not to act]." — incorporate responsibility into core business processes</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Strategic (策略性)</td>
+          <td>Value creation</td>
+          <td>"It gives us a competitive edge." — create value through innovative approaches</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Civil (公民)</td>
+          <td>Value creation</td>
+          <td>"We need to make sure everybody does it." — lead industry transformation</td>
+        </tr>
+      </tbody>
+    </table>
+    <ul>
+      <li>Nike in 1990 exemplified the Defensive stage; its post-1998 transition moved toward Compliance and eventually Managerial</li>
+      <li>The framework shows responsibility as a journey (歷程), not a binary switch — companies pass through stages over time</li>
+    </ul>
+  </section>
+
+  <section data-sec="3">
+    <h2>4. Recent Approaches to Responsible Supply Chain Management</h2>
+    <p data-topic="supply-chain-approaches">Three main contemporary approaches to building a responsible supply chain (負責任的供應鏈):</p>
+    <ul>
+      <li>Private regulation (私人監管) — supplier code of conduct (供應商行為準則): a written set of minimum standards the buying company requires all suppliers to follow (e.g., Swire Properties' Code of Conduct)</li>
+      <li>Supply chain auditing (供應鏈審計) — can be internal audit (內部審計), third-party audit (第三方審計), or crowdsourced audit (眾包審計); verifies compliance with standards</li>
+      <li>Supplier development and capability building (供應商發展與能力建設) — goes beyond policing; includes training, joint problem-solving, and root cause analysis (根本原因分析); e.g., Starbucks coffee beans sourcing program</li>
+    </ul>
+    <p data-topic="supplier-code-of-conduct">Swire Properties' Supplier Code of Conduct illustrates a real-world private regulation example:</p>
+    <ul>
+      <li>Legal and Regulatory Compliance (法律合規) — suppliers must comply with all applicable laws and regulations wherever they operate</li>
+      <li>Environment (環境) — suppliers must have systems to assess, measure, and reduce environmental impacts (環境影響) of their operations</li>
+      <li>Child Labour (童工) — no employee below local legal minimum age AND no employee below 16 years old (exceptions only for recognized professional apprenticeship programmes)</li>
+      <li>Forced Labour (強迫勞動) — no forced, coerced (脅迫), or bonded labour (債役勞動) permitted</li>
+      <li>Compensation and Working Hours (薪酬及工時) — written contracts required; minimum wage compliance; salary paid promptly, not more than one month in arrears; overtime compensated per law</li>
+    </ul>
+
+    <!-- SVG: Three approaches to supply chain responsibility -->
+    <svg viewBox="0 0 520 100" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:520px;display:block;margin:1rem auto;font-family:Georgia,serif">
+      <rect x="10" y="20" width="140" height="60" rx="6" fill="#e8f5e9" stroke="#388e3c" stroke-width="1.5"/>
+      <text x="80" y="44" text-anchor="middle" font-size="11" fill="#1b5e20">Private Regulation</text>
+      <text x="80" y="60" text-anchor="middle" font-size="10" fill="#388e3c">(Code of Conduct)</text>
+      <rect x="190" y="20" width="140" height="60" rx="6" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
+      <text x="260" y="44" text-anchor="middle" font-size="11" fill="#0d47a1">Supply Chain Auditing</text>
+      <text x="260" y="60" text-anchor="middle" font-size="10" fill="#1976d2">(Internal / 3rd Party / Crowd)</text>
+      <rect x="370" y="20" width="140" height="60" rx="6" fill="#fff3e0" stroke="#f57c00" stroke-width="1.5"/>
+      <text x="440" y="44" text-anchor="middle" font-size="11" fill="#e65100">Supplier Development</text>
+      <text x="440" y="60" text-anchor="middle" font-size="10" fill="#f57c00">(Training / Root Cause)</text>
+      <line x1="150" y1="50" x2="190" y2="50" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+      <line x1="330" y1="50" x2="370" y2="50" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+      <defs>
+        <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#888"/>
+        </marker>
+      </defs>
+    </svg>
+  </section>
+
+  <section data-sec="4">
+    <h2>5. Contracts, Transaction Costs, and Trust</h2>
+    <p data-topic="contractual-limits">Business relationships are primarily governed by contracts (合約), but contracts have three structural limitations that prevent them from fully addressing unethical behavior:</p>
+    <ul>
+      <li>Incompleteness (不完整性) — complex contracts cannot anticipate every contingency due to bounded rationality (有限理性): parties cannot foresee or specify every future state</li>
+      <li>Non-verifiability (不可核實性) — courts can only order specific outcomes that are objectively verifiable; many disputes involve information asymmetry (信息不對稱) that courts cannot resolve</li>
+      <li>Opportunism (機會主義) — a contract is a mere promise; without enforcement it is not self-enforcing because self-interested parties may exploit gaps</li>
+    </ul>
+    <p data-topic="transaction-costs">These limitations create transaction costs (交易成本) — the costs of economic exchange beyond the price of the good itself:</p>
+    <ul>
+      <li>Ex ante transaction costs (事前交易成本): costs incurred before the deal — searching, negotiating, writing the contract</li>
+      <li>Ex post transaction costs (事後交易成本): costs incurred after the deal — enforcing the contract, settling disputes (解決糾紛), addressing unfair exploitation by the transaction partner</li>
+    </ul>
+    <p data-topic="trust-efficiency">Trust (信任) increases efficiency by reducing transaction costs: when each party has faith that the other will act in a predictable and dependable manner, less time and money is spent on monitoring (監察), enforcement (執行), and dispute resolution (糾紛解決).</p>
+    <ul>
+      <li>Trustworthiness (可信賴性) = Competence (能力) + Reliability (可靠性) + Honesty/Integrity (誠信) — building all three is necessary for sustainable business relationships</li>
+      <li>Reference: Onora O'Neill's framework on trust — what we misunderstand is that trust should be earned through demonstrated trustworthiness, not granted by default</li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Contract Limitation</th>
+          <th>Root Cause</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Incompleteness (不完整性)</td>
+          <td>Bounded rationality (有限理性)</td>
+          <td>Gaps in contract coverage</td>
+        </tr>
+        <tr>
+          <td>Non-verifiability (不可核實性)</td>
+          <td>Information asymmetry</td>
+          <td>Limited court ordering of conflicts</td>
+        </tr>
+        <tr>
+          <td>Opportunism (機會主義)</td>
+          <td>Self-interest</td>
+          <td>Contract not self-enforcing</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="exam-trap-inline" data-topic="transaction-costs"><b>Exam trap:</b> Ex ante and ex post transaction costs are not the same — ex ante costs occur before the deal (search, negotiate, write); ex post costs occur after (enforce, settle disputes). Do not conflate them.</div>
+    <div class="exam-trap-inline" data-topic="trust-efficiency"><b>Exam trap:</b> Trust reduces transaction costs but does not eliminate the need for contracts — it complements contractual governance rather than replacing it.</div>
+  </section>
+
+  <section data-sec="5">
+    <h2>6. Strategic Decisions: Exit vs. Engagement</h2>
+    <p data-topic="exit-vs-engage">When a supplier engages in unethical behavior, a buying company faces two strategic choices: exit the contract (退出合約) or engage and help the supplier reform (協助改革).</p>
+    <ul>
+      <li>Exit is appropriate when: the supplier is replaceable, the ethical breach is severe and irreparable, or the reputational (聲譽) risk of continued association outweighs switching costs</li>
+      <li>Engagement is optimal when: the supplier is critical and hard to replace (e.g., Apple-Foxconn), the issue is systemic rather than willful misconduct, and investment in capability building yields long-term compliance</li>
+      <li>Apple vs. Nike comparison: Apple relies on Foxconn as a near-irreplaceable manufacturer — exiting would devastate Apple's supply capacity; engagement and auditing are more rational; Nike's suppliers are more numerous and interchangeable, giving it greater exit leverage</li>
+      <li>Vertical integration (垂直整合) — e.g., acquiring Foxconn — would guarantee compliance but introduces massive capital requirements, operational complexity, and loss of supply chain flexibility; generally not optimal purely for ethics enforcement</li>
+    </ul>
+  </section>
+
+  <div class="exam-traps-summary">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Nike's "independent contractor" defense is a real historical stance but the course frames it as ethically inadequate under the duty of care — not a valid legal escape.</li>
+      <li>The duty of care in supply chain ethics is broader than the tort law standard; it covers consumer conscience, not just consumer safety.</li>
+      <li>Zadek's five stages run Defensive → Compliance → Managerial → Strategic → Civil; do not reverse the order or conflate adjacent stages.</li>
+      <li>Ex ante costs occur before the deal; ex post costs occur after — they are categorically different components of transaction costs.</li>
+      <li>Trust reduces but does not replace contracts — the two mechanisms complement each other in governing business relationships.</li>
+      <li>Trustworthiness requires all three components (competence, reliability, honesty); lacking one undermines the whole even if the other two are strong.</li>
+      <li>Supplier development (training, root cause analysis) is distinct from auditing — auditing checks compliance, development builds capacity.</li>
+      <li>The Dodd-Frank Act conflict minerals provision is a disclosure requirement (Form SD), not a ban on sourcing conflict minerals.</li>
+    </ul>
+  </div>
+
+  <div class="memorize">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Zadek's 5 stages: Defensive → Compliance → Managerial → Strategic → Civil, and the motto associated with each</li>
+      <li>Three limitations of contracts: incompleteness (bounded rationality), non-verifiability (court limits), opportunism (not self-enforcing)</li>
+      <li>Trustworthiness = Competence + Reliability + Honesty/Integrity</li>
+      <li>Three approaches to responsible supply chain: private regulation, supply chain auditing, supplier development</li>
+      <li>Nike fiscal 1998: earnings fell 69% — financial impact drove the shift from Defensive to Compliance stage</li>
+      <li>Duty of care (Auret van Heerden): custodial duty to ensure product reaches consumer without safety fear or conscience sacrifice</li>
+      <li>Dodd-Frank Act → SEC Form SD: conflict minerals disclosure requirement for US-listed companies</li>
+      <li>Conflict minerals include tantalum and tungsten mined in conflict zones</li>
+      <li>Trust reduces transaction costs by enabling predictable, dependable behavior — decreasing monitoring and enforcement needs</li>
+      <li>Exit vs. engage decision: depends on supplier replaceability, severity of breach, and cost-benefit of capability investment</li>
+    </ol>
+  </div>
+</div>
+
+<div id="notes-3" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-3" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(3)">Clear Highlights</button>
+  <h1>Lecture 3: Business and Employees</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    This lecture examines the relationship between businesses and their employees through the lens of ethics and happiness (幸福感). It asks why people work, what conditions make work meaningful, and what mutual duties employers and employees owe each other. The central throughline is that meaning, engagement, and happiness are not soft extras — they are core drivers of performance and ethical responsibility.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Why Do We Work?</h2>
+    <p data-topic="why-we-work">Barry Schwartz (巴里·施瓦茨), a psychologist and TED speaker, argues that the question "why do we work?" appears simple but is surprisingly complex and urgent. His core claim: the assumptions organisations make about worker motivation shape workplace design, and those designs in turn reinforce — or undermine — those very assumptions.</p>
+    <ul>
+      <li>Most institutions assume workers are primarily motivated by money (財務動機) — this shapes job design toward control and measurement.</li>
+      <li>When work is stripped of autonomy (自主性) and meaning, workers do in fact work only for money — confirming the original assumption in a self-fulfilling cycle.</li>
+      <li>Simon Sinek (賽門·西奈克) echoes this: "If you hire people just because they can do a job, they'll work for your money. But if you hire people who believe what you believe, they'll work for you with blood and sweat and tears."</li>
+      <li>The implication for business ethics: how a firm structures work is a moral choice, not just a management decision.</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="why-we-work"><b>Exam trap:</b> Students often treat motivation as purely a management/HR topic. In this course it is framed as an ethics question — the design of work affects employee dignity (尊嚴) and well-being, making it an ethical responsibility of the employer.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. The Career Sweet Spot</h2>
+    <p data-topic="career-sweet-spot">The "Career Sweet Spot" (職涯甜蜜點) framework identifies three overlapping conditions that together produce deeply fulfilling work. All three must overlap; having only one or two produces an incomplete experience.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Dimension</th>
+          <th>Question</th>
+          <th>Label</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Reward (報酬)</td>
+          <td>Will others pay / value you for it?</td>
+          <td>"Might do"</td>
+        </tr>
+        <tr>
+          <td>Strength (優勢)</td>
+          <td>Does it use your gifts and abilities?</td>
+          <td>"Can do"</td>
+        </tr>
+        <tr>
+          <td>Passion (熱情)</td>
+          <td>Does it ignite you emotionally?</td>
+          <td>"Want to do"</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ul>
+      <li>The sweet spot is the intersection of all three — the highest point of personal contribution (最高貢獻點).</li>
+      <li>Sean Aiken's year-long "One Week Job" experiment illustrates this search: he tried 52 different jobs in 52 weeks.</li>
+      <li>His key insight: finding one singular passion is not the key to happiness; instead, two factors dominate — (1) the people you work with, and (2) the feeling that your work is significant (有意義).</li>
+    </ul>
+
+    <svg width="340" height="200" viewBox="0 0 340 200" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:1rem auto;">
+      <circle cx="130" cy="90" r="70" fill="rgba(100,160,100,0.25)" stroke="#5a9a5a" stroke-width="1.5"/>
+      <circle cx="210" cy="90" r="70" fill="rgba(160,100,100,0.25)" stroke="#9a5a5a" stroke-width="1.5"/>
+      <circle cx="170" cy="155" r="70" fill="rgba(100,100,160,0.25)" stroke="#5a5a9a" stroke-width="1.5"/>
+      <text x="85" y="72" font-size="11" fill="#333" text-anchor="middle">Strength</text>
+      <text x="85" y="84" font-size="10" fill="#555" text-anchor="middle">("can do")</text>
+      <text x="255" y="72" font-size="11" fill="#333" text-anchor="middle">Passion</text>
+      <text x="255" y="84" font-size="10" fill="#555" text-anchor="middle">("want to do")</text>
+      <text x="170" y="188" font-size="11" fill="#333" text-anchor="middle">Reward ("might do")</text>
+      <text x="170" y="116" font-size="12" fill="#222" font-weight="bold" text-anchor="middle">Sweet</text>
+      <text x="170" y="130" font-size="12" fill="#222" font-weight="bold" text-anchor="middle">Spot</text>
+    </svg>
+
+    <div class="exam-trap-inline" data-topic="career-sweet-spot"><b>Exam trap:</b> The sweet spot requires ALL three dimensions — reward, strength, and passion. Having only passion (熱情) without the others is not the sweet spot. Sean Aiken's lesson is specifically that co-workers and significance matter more than discovering a single passion.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Meaning at Work — The Foxconn Case</h2>
+    <p data-topic="foxconn-case">The Foxconn (富士康) employee suicide wave became a landmark case in business ethics. Foxconn manufactures components for major technology brands (including Apple iPhones). Employees described their work as meaningless (無意義): "Life is meaningless. Everyday, I repeat the same thing I did yesterday. We get yelled at all the time. It's very tough around here."</p>
+    <ul>
+      <li>Foxconn's initial responses were largely defensive and procedural rather than addressing the root cause of meaninglessness:</li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Response</th>
+          <th>Nature</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Raised salary twice in three months</td>
+          <td>Financial / extrinsic (外在激勵)</td>
+        </tr>
+        <tr>
+          <td>Asked employees to sign "no suicide" pledge</td>
+          <td>Administrative / contractual</td>
+        </tr>
+        <tr>
+          <td>Installed 1.5 million square meters of safety nets</td>
+          <td>Physical / preventive</td>
+        </tr>
+        <tr>
+          <td>Set up 24-hr hotlines; hired sociologists and psychiatrists</td>
+          <td>Support / reactive</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ul>
+      <li>Discussion question from the lecture: What meaning could Foxconn convincingly and realistically introduce? (e.g. craft identity, team belonging, visible impact on final product)</li>
+      <li>Should Foxconn be responsible for employees' search for meaning (意義感)? — This is the core ethical debate: is meaningful work a right, or a personal pursuit?</li>
+      <li>The "brainwashing" concern (Simon Sinek quote): hiring for shared beliefs builds loyalty, but raises the question of manipulation (操縱) versus authentic alignment.</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="foxconn-case"><b>Exam trap:</b> Foxconn's responses are often mistaken for adequate solutions. The lecture treats them as evidence that addressing symptoms (financial pay, physical barriers) without addressing meaninglessness (無意義感) is ethically insufficient.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Three Happy Lives and Flow</h2>
+    <p data-topic="three-happy-lives">Martin Seligman's framework identifies three distinct paths to happiness (幸福), each valid but different in quality and sustainability.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Life Type</th>
+          <th>Chinese</th>
+          <th>Mechanism</th>
+          <th>Work Analog</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>The Meaningful Life</td>
+          <td>有意義的生活</td>
+          <td>Affiliation; sense of purpose beyond oneself</td>
+          <td>Work that contributes to a cause</td>
+        </tr>
+        <tr>
+          <td>The Pleasant Life</td>
+          <td>愉快的生活</td>
+          <td>Enjoyment; pursuit of positive experiences and pleasure</td>
+          <td>Work that is enjoyable day-to-day</td>
+        </tr>
+        <tr>
+          <td>The Good Life</td>
+          <td>美好的生活</td>
+          <td>Engagement; absorption (投入) via flow state</td>
+          <td>Work that fully absorbs and stretches skills</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p data-topic="flow-state">Flow (心流) is the mental state of operation in which a person performing an activity is fully immersed in a feeling of energised focus, full involvement, and enjoyment in the process.</p>
+    <ul>
+      <li>Flow was identified by psychologist Mihaly Csikszentmihalyi (米哈里·契克森米哈伊).</li>
+      <li>Flow occurs surprisingly often at work — not just leisure — as long as three conditions are met:</li>
+      <ol>
+        <li>Clear goals (明確目標)</li>
+        <li>Immediate feedback (即時回饋)</li>
+        <li>Challenge level matches skill level (挑戰與技能匹配)</li>
+      </ol>
+      <li>Work that provides these three conditions enables the Good Life, even in routine-seeming roles.</li>
+    </ul>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. The Happiness Advantage and Employer-Employee Duties</h2>
+    <p data-topic="happiness-advantage">Shawn Achor's Happiness Advantage (幸福優勢) challenges the traditional performance formula and has direct implications for what employers owe employees.</p>
+    <ul>
+      <li>Old formula: work hard → be successful → become happy. Achor argues this is "broken... it is backward."</li>
+      <li>Revised formula: happiness (幸福) and optimism (樂觀) fuel performance and achievement — happiness comes first.</li>
+      <li>"Happiness is a work ethic" — treating positive emotions as a professional discipline, not a reward.</li>
+      <li>Implication for employers: creating conditions for employee happiness is not just compassionate, it is strategically rational and ethically required.</li>
+    </ul>
+
+    <p data-topic="employer-employee-duties">The lecture's agenda question — "What duties do employer and employee have for each other?" — is answered across all sections:</p>
+    <ul>
+      <li>Employer duties (雇主責任): design work that enables meaning, flow, and autonomy; hire for values alignment, not just skills; address well-being proactively (not reactively as Foxconn did).</li>
+      <li>Employee duties (員工責任): engage authentically; pursue the sweet spot; take ownership of finding significance in their role.</li>
+      <li>The personal reflection exercise ("Be the observer of your own decisions and feelings, not somebody else's") reinforces that self-awareness is the starting point for both parties.</li>
+    </ul>
+
+    <div class="exam-trap-inline" data-topic="happiness-advantage"><b>Exam trap:</b> The old formula (hard work → success → happiness) is explicitly labelled backward in this framework. Do not reproduce it as correct. The causal direction is reversed: happiness drives (推動) performance, not the other way around.</div>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Motivation as ethics: structuring work without regard for meaning is an ethical failing, not just a management inefficiency.</li>
+      <li>Sweet spot requires all three dimensions (reward + strength + passion); passion alone is not sufficient.</li>
+      <li>Sean Aiken's conclusion: co-workers and significance matter more than finding one singular passion.</li>
+      <li>Foxconn's responses (salary raise, nets, pledge) are treated as ethically insufficient — they address symptoms, not meaninglessness.</li>
+      <li>The Happiness Advantage reverses the traditional formula — happiness precedes and enables success, not vice versa.</li>
+      <li>Flow requires all three conditions: clear goals, immediate feedback, and challenge-skill match. Missing any one prevents the flow state.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Career Sweet Spot: three dimensions — Reward ("might do"), Strength ("can do"), Passion ("want to do"); all three must overlap.</li>
+      <li>Sean Aiken's finding: happiness at work depends most on (1) the people you work with and (2) feeling your work is significant.</li>
+      <li>Three Happy Lives: Meaningful Life (affiliation/purpose), Pleasant Life (enjoyment/pleasure), Good Life (engagement/flow).</li>
+      <li>Flow (心流) conditions: clear goals + immediate feedback + challenge matches skill.</li>
+      <li>Happiness Advantage: happiness → performance (not performance → happiness); old formula is "backward."</li>
+      <li>Foxconn's four responses and why they are ethically insufficient (address symptoms, not meaninglessness).</li>
+      <li>Simon Sinek's hiring principle: hire for shared beliefs, not just ability — people work with "blood and sweat and tears."</li>
+      <li>Employer duty: proactively design work for meaning, flow, and autonomy — not reactive damage control.</li>
+      <li>Barry Schwartz's self-fulfilling cycle: assume workers are money-motivated → strip autonomy → workers become money-motivated.</li>
+    </ol>
+  </div>
+</div>
+
+<div id="notes-4" class="page">
+  <a class="btn back" onclick="showPage('home')">&#8592; Home</a>
+  <button id="clear-hl-4" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(4)">Clear Highlights</button>
+  <h1>Lecture 4: Business and Customers</h1>
+
+  <div class="bigpic">
+    This lecture examines the ethical obligations businesses have toward their customers, covering consumer rights, methods of consumer protection, and how firms should handle crises that damage customer trust. The central throughline is that treating customers ethically is not just a legal requirement but a strategic asset. The Haidilao case illustrates how transparent, rapid, and accountable crisis management can actually strengthen a brand.
+  </div>
+
+  <section data-sec="0">
+    <h2>1. Consumer Rights and Legal Obligations</h2>
+    <p data-topic="consumer-rights">Businesses must protect four core consumer rights (消費者權利):</p>
+    <ul>
+      <li><b>Right to choose</b> (選擇權) — consumers must not be coerced; includes the right not to buy</li>
+      <li><b>Right to be safe</b> (安全權) — product safety (產品安全) and privacy (私隱) protection</li>
+      <li><b>Right to be informed</b> (知情權) — truthful advertising (廣告), full disclosure (披露) of product information</li>
+      <li><b>Right to be heard</b> (申訴權) — appropriate methods for addressing conflict and seeking redress (補救)</li>
+    </ul>
+    <p data-topic="hk-consumer-protection">Consumer protection (消費者保護) examples from Hong Kong:</p>
+    <ul>
+      <li>Supermarkets using misleading price comparison tricks on promotional goods — flagged by the Consumer Council (消費者委員會)</li>
+      <li>Customs uncovering short-weight (缺斤少両) malpractices at ~100 outlets (restaurants, seafood stalls, fruit stands)</li>
+      <li>Gym workers jailed for trapping students into health club memberships — first imprisonment under Hong Kong sales law (銷售法)</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="consumer-rights"><b>Exam trap:</b> Students often list only two or three consumer rights. There are four: choose, safe, informed, and heard. "To be heard" (申訴權) is the most commonly forgotten.</div>
+  </section>
+
+  <section data-sec="1">
+    <h2>2. Methods of Protecting Consumers</h2>
+    <p data-topic="advertising-code">The ICC Advertising and Marketing Communications Code (廣告及市場傳播守則) sets baseline standards:</p>
+    <ul>
+      <li>All marketing communication (市場傳播) must be legal (合法), decent (得體), honest (誠實), and truthful (真實)</li>
+      <li>Must not offend prevailing standards of decency (體面標準) in the relevant country and culture</li>
+      <li>Must not abuse consumers' trust (信任) or exploit their lack of experience or knowledge</li>
+    </ul>
+    <p data-topic="self-regulation">Self-regulation (自律) as a business opportunity — privacy-focused (私隱為重) companies that treat ethical compliance as a competitive differentiator (競爭差異化):</p>
+    <table>
+      <thead>
+        <tr><th>Company</th><th>Product</th><th>Privacy Mechanism</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>DuckDuckGo</td><td>Private Search Engine &amp; Browser</td><td>Anonymous search, tracker blocking</td></tr>
+        <tr><td>Tresorit</td><td>Encrypted File Storage</td><td>End-to-end encryption (端對端加密) for cloud files</td></tr>
+        <tr><td>Brave</td><td>Privacy Browser</td><td>Blocks ads, trackers, data abuse</td></tr>
+        <tr><td>Threema</td><td>Encrypted Chat App</td><td>End-to-end encryption, minimal metadata (元數據) retention</td></tr>
+        <tr><td>ProtonVPN</td><td>Virtual Private Network</td><td>Hides location, defends connection</td></tr>
+        <tr><td>ProtonMail</td><td>Encrypted Email</td><td>Swiss-based, ad-free, end-to-end encrypted</td></tr>
+      </tbody>
+    </table>
+    <div class="exam-trap-inline" data-topic="self-regulation"><b>Exam trap:</b> Self-regulation (自律) is often treated as purely altruistic. The lecture frames it as a business opportunity (商業機會) — privacy protection can be a revenue-generating differentiator, not just a cost or obligation.</div>
+  </section>
+
+  <section data-sec="2">
+    <h2>3. Crisis Management in Business</h2>
+    <p data-topic="crisis-stats">Key statistics on business crises (商業危機):</p>
+    <ul>
+      <li>59% of businesses have experienced a crisis, but only 54% have a plan (危機應對計劃) to deal with one</li>
+      <li>One negative article (負面文章) on the first page of search results can cost a business 22% of its customers</li>
+    </ul>
+    <p data-topic="haidilao-crisis">Haidilao (海底撈) hygiene crisis (衛生危機) case, August 2017:</p>
+    <ul>
+      <li>Haidilao is China's best-known hotpot (火鍋) chain, known for exceptional customer service (顧客服務) and employee welfare (員工福利)</li>
+      <li>On Aug. 25, 2017: news broke of rats found in the kitchen; dustpan (畚箕) used in kitchen also used to wash plates</li>
+      <li>Company issued 2 public statements (公開聲明) within 7 hours</li>
+    </ul>
+    <p data-topic="haidilao-response">Haidilao's crisis response (危機回應) actions:</p>
+    <ul>
+      <li>Apologized and admitted management (管理層) was at fault for the lapses (失誤)</li>
+      <li>Shut down the two implicated branches (分店) immediately</li>
+      <li>Conducted comprehensive checks (全面檢查) at all branches; committed to reporting findings to government</li>
+      <li>Welcomed monitoring (監察) by customers, media, and government</li>
+      <li>Engaged 3rd-party pest controllers (第三方害蟲防治公司)</li>
+      <li>Extended checks to overseas branches (海外分店)</li>
+      <li>Assured employees at the two branches not to panic; board of directors (董事會) shouldered key responsibilities</li>
+      <li>Committed to following local laws and regulations (法律法規)</li>
+      <li>Released names of staffers in charge (負責人員) publicly</li>
+      <li>Reopened branches with livestreaming (直播) from kitchen to demonstrate transparency (透明度)</li>
+    </ul>
+  </section>
+
+  <section data-sec="3">
+    <h2>4. Principles of Crisis Management</h2>
+    <p data-topic="crisis-principles">Three core principles (核心原則) of crisis management (危機管理):</p>
+    <ul>
+      <li><b>Care</b> (關懷) — demonstrate that the company cares about the public's interests or problems; not just legal compliance</li>
+      <li><b>Communication</b> (溝通) — consolidate communication channels (溝通渠道) to ensure timely (及時) and accurate (準確) messaging</li>
+      <li><b>Control</b> (控制) — respond quickly to maintain some control of crisis development (危機發展); prevents narrative from being set entirely by external parties</li>
+    </ul>
+
+    <svg width="480" height="100" viewBox="0 0 480 100" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:12px auto;">
+      <rect x="10" y="25" width="120" height="50" rx="8" fill="#c8e6c9" stroke="#388e3c" stroke-width="1.5"/>
+      <text x="70" y="55" text-anchor="middle" font-size="14" font-family="Georgia,serif" fill="#1b5e20">Care (關懷)</text>
+      <line x1="130" y1="50" x2="168" y2="50" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+      <rect x="170" y="25" width="140" height="50" rx="8" fill="#c8e6c9" stroke="#388e3c" stroke-width="1.5"/>
+      <text x="240" y="55" text-anchor="middle" font-size="14" font-family="Georgia,serif" fill="#1b5e20">Communication (溝通)</text>
+      <line x1="310" y1="50" x2="348" y2="50" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+      <rect x="350" y="25" width="120" height="50" rx="8" fill="#c8e6c9" stroke="#388e3c" stroke-width="1.5"/>
+      <text x="410" y="55" text-anchor="middle" font-size="14" font-family="Georgia,serif" fill="#1b5e20">Control (控制)</text>
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+        </marker>
+      </defs>
+    </svg>
+
+    <div class="exam-trap-inline" data-topic="crisis-principles"><b>Exam trap:</b> "Communication" in the 3 Cs of crisis management refers to consolidating channels for accuracy and speed — it does NOT mean simply "talk more." The goal includes maintaining narrative control (控制危機敘述), not just transparency.</div>
+  </section>
+
+  <section data-sec="4">
+    <h2>5. Corporate Apology</h2>
+    <p data-topic="corporate-apology">A perfect corporate apology (完整企業道歉) contains five elements:</p>
+    <ul>
+      <li><b>Acknowledges the mistake or wrongdoing</b> (承認錯誤) — states specifically what went wrong</li>
+      <li><b>Accepts responsibility</b> (接受責任) — does not deflect blame to external factors</li>
+      <li><b>Expresses regret</b> (表達遺憾) — shows genuine concern for harm caused</li>
+      <li><b>Provides assurance</b> (保證) that the offense will not be repeated — outlines corrective measures (糾正措施)</li>
+      <li><b>Is well timed</b> (時機適當) — issued promptly; a delayed apology loses credibility (公信力)</li>
+    </ul>
+    <p data-topic="cover-up-psychology">The VW emissions scandal (大眾汽車排放醜聞) illustrates why leaders sometimes choose cover-up (掩蓋) over admission:</p>
+    <ul>
+      <li>Former VW CEO's first reaction was to deny and conceal</li>
+      <li>Key question: why do people lack the courage (勇氣) to admit mistakes, even when cover-ups make outcomes far worse?</li>
+      <li>Psychological factors include fear of legal liability (法律責任), reputational loss (聲譽損失), and sunk-cost reasoning (沉沒成本思維)</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="corporate-apology"><b>Exam trap:</b> An apology that only expresses regret but does not accept responsibility (接受責任) is incomplete. All five elements are required for a "perfect apology" — missing even one weakens its credibility and effectiveness.</div>
+  </section>
+
+  <div class="exam-traps-summary">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>There are four consumer rights, not three — "to be heard" (申訴權) is the most commonly forgotten.</li>
+      <li>Self-regulation (自律) is framed as a business opportunity (商業機會), not just an ethical duty — privacy can be a revenue differentiator.</li>
+      <li>"Communication" in the 3 Cs of crisis management means consolidating channels for speed and accuracy, not simply "communicate more"; it also serves narrative control.</li>
+      <li>A perfect corporate apology requires all five elements; expressing regret alone without accepting responsibility is insufficient.</li>
+      <li>The 59%/54% crisis statistics are the reverse of what students expect: more businesses have experienced a crisis (59%) than have a plan for one (54%).</li>
+    </ul>
+  </div>
+
+  <div class="memorize">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Four consumer rights: choose, safe, informed, heard</li>
+      <li>ICC Code requirement: legal, decent, honest, truthful</li>
+      <li>59% of businesses have faced a crisis; only 54% have a plan</li>
+      <li>One negative search result can cost 22% of potential customers</li>
+      <li>Haidilao issued 2 public statements within 7 hours of the hygiene crisis</li>
+      <li>Three Cs of crisis management: Care, Communication, Control</li>
+      <li>Five elements of a perfect apology: acknowledge, accept responsibility, express regret, assure no recurrence, well timed</li>
+      <li>Haidilao reopened with kitchen livestreaming to demonstrate transparency</li>
+      <li>Self-regulation as business opportunity: privacy-focused firms (DuckDuckGo, Proton, Brave, etc.) as competitive differentiators</li>
+      <li>VW emissions scandal: cover-up chosen over admission; illustrates courage deficit in acknowledging mistakes</li>
+    </ol>
+  </div>
+</div>
+
+<div id="notes-2" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-2" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(2)">Clear Highlights</button>
+  <h1>Lecture 2: The Psychology of Corporate (Ir)responsibility</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    This lecture asks why well-resourced, code-of-conduct-holding organizations still produce massive ethical failures. The answer lies in how time perspective (時間觀) distorts individual judgment, how groupthink (群體思維) silences dissent inside teams, and how five psychological drivers — Pleasure, Power, Pride, Priorities, and Pressure — push otherwise good managers toward bad decisions. The Volkswagen emissions scandal serves as the running case throughout.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Time Perspectives and Decision Making</h2>
+    <p data-topic="time-perspective">Time perspective (時間觀) is a fundamental psychological dimension that emerges from cognitive processes (認知過程) partitioning human experience into past, present, and future.</p>
+    <ul>
+      <li>Decisions and their consequences are largely a function of how individuals perceive the past, present, and future — not just objective facts.</li>
+      <li>The Marshmallow Experiment illustrates delayed gratification (延遲滿足): children who resist eating one marshmallow immediately receive two later, demonstrating that future-oriented thinking predicts better long-term outcomes.</li>
+    </ul>
+    <p data-topic="happiness-pleasure-meaning">Happiness has two components that map onto time orientation:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th>Time Horizon</th>
+          <th>Description</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pleasure (愉悅)</td>
+          <td>Present benefit</td>
+          <td>Current enjoyment</td>
+          <td>"Eating pizza on a Sunday afternoon"</td>
+        </tr>
+        <tr>
+          <td>Meaning (意義)</td>
+          <td>Future benefit</td>
+          <td>Sense of purpose</td>
+          <td>"Having goals to run for"</td>
+        </tr>
+      </tbody>
+    </table>
+    <ul>
+      <li>Zimbardo Time Perspective Inventory (ZTPI) — standardized tool for measuring an individual's time orientation across past-negative, past-positive, present-hedonistic, present-fatalistic, and future dimensions.</li>
+      <li>Philip Zimbardo's book "The Time Paradox" (時間悖論) argues that balanced time perspective — drawing on positive past, moderate present enjoyment, and future planning — is optimal for well-being and ethical decision making.</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="time-perspective"><b>Exam trap:</b> Time perspective is not about age or culture by default — it is a cognitive dimension that varies between individuals and can shift situationally (e.g. under competitive pressure, a future-oriented engineer may narrow to short-term gain).</div>
+    <p data-topic="vw-time-perspective">VW emissions scandal application: one explanation for engineers installing defeat software is that their time perspectives were out of balance — a narrow focus on short-term gain (meeting emissions targets quickly) rather than long-term consequences (reputational and legal damage).</p>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. The Volkswagen Emissions Scandal</h2>
+    <p data-topic="vw-scandal-facts">VW's 2009 Jetta TDI was awarded Green Car of the Year by Green Car Journal for its "groundbreaking clean diesel" engine that appeared to meet US emissions standards. The scandal (醜聞) later revealed that defeat device software had been installed by a group of VW engineers to cheat emissions tests.</p>
+    <ul>
+      <li>CEO Martin Winterkorn stated he was unaware of the engineers' decision — raising questions about leadership accountability (領導問責) and organizational oversight.</li>
+      <li>Ferdinand Piech was identified as the man most responsible for the modern Volkswagen's culture and direction.</li>
+      <li>VW had access to rival (competitor) technology — Daimler's alternative clean diesel solution — yet chose not to adopt it, making the decision to cheat a deliberate choice rather than a technical constraint.</li>
+    </ul>
+    <p data-topic="vw-code-of-conduct">VW's own Code of Conduct (行為準則) explicitly stated two corporate principles:</p>
+    <ul>
+      <li>Legal compliance: "It is not only our statutory duty but also our mission to comply with laws and regulations... We make no compromises on that."</li>
+      <li>Environmental responsibility (環境責任): "We bear responsibility for the environmental compatibility and sustainability of our products... we manage natural resources carefully."</li>
+    </ul>
+    <p data-topic="vw-true-values">Key insight from McCoy's "The Parable of the Sadhu" (薩都寓言): true organizational values (真正的組織價值觀) are revealed under stress, not in printed codes. Stories people tell — not formal documents — transmit actual conceptions of proper behavior. Organizations with genuine values that transcend managers' personal interests will act differently under pressure.</p>
+    <div class="exam-trap-inline" data-topic="vw-scandal-facts"><b>Exam trap:</b> Having a code of conduct does not guarantee ethical behavior — the VW scandal is a direct example of a company with a detailed written code that was nonetheless disregarded. Codes are necessary but not sufficient.</div>
+
+    <!-- SVG: VW scandal causal chain -->
+    <svg viewBox="0 0 560 80" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;display:block;margin:12px auto">
+      <rect x="0" y="20" width="110" height="40" rx="6" fill="#e8f5e9" stroke="#4caf50"/>
+      <text x="55" y="38" text-anchor="middle" font-size="11" fill="#2e7d32">Short-term</text>
+      <text x="55" y="52" text-anchor="middle" font-size="11" fill="#2e7d32">time focus</text>
+      <polygon points="115,40 130,35 130,45" fill="#888"/>
+      <line x1="110" y1="40" x2="130" y2="40" stroke="#888"/>
+      <rect x="133" y="20" width="110" height="40" rx="6" fill="#fff3e0" stroke="#ff9800"/>
+      <text x="188" y="38" text-anchor="middle" font-size="11" fill="#e65100">Defeat device</text>
+      <text x="188" y="52" text-anchor="middle" font-size="11" fill="#e65100">installed</text>
+      <polygon points="248,40 263,35 263,45" fill="#888"/>
+      <line x1="243" y1="40" x2="263" y2="40" stroke="#888"/>
+      <rect x="266" y="20" width="110" height="40" rx="6" fill="#fce4ec" stroke="#e91e63"/>
+      <text x="321" y="38" text-anchor="middle" font-size="11" fill="#880e4f">Scandal</text>
+      <text x="321" y="52" text-anchor="middle" font-size="11" fill="#880e4f">exposed</text>
+      <polygon points="381,40 396,35 396,45" fill="#888"/>
+      <line x1="376" y1="40" x2="396" y2="40" stroke="#888"/>
+      <rect x="399" y="20" width="155" height="40" rx="6" fill="#ede7f6" stroke="#9c27b0"/>
+      <text x="476" y="38" text-anchor="middle" font-size="11" fill="#4a148c">Reputational +</text>
+      <text x="476" y="52" text-anchor="middle" font-size="11" fill="#4a148c">legal damage</text>
+    </svg>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. Groupthink</h2>
+    <p data-topic="groupthink-definition">Groupthink (群體思維) occurs when group members strive to agree for the sake of unanimity (一致性) and thus at the expense of accurate assessment of information relevant to a decision.</p>
+    <p data-topic="group-decision-advantages-disadvantages">Group decision making has both advantages and disadvantages:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Advantages</th>
+          <th>Disadvantages</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Greater pool of knowledge (Wisdom of the crowds 群眾智慧)</td>
+          <td>Problematic group dynamics (Groupthink)</td>
+        </tr>
+        <tr>
+          <td>Intellectual stimulation (智識激發)</td>
+          <td>Time consuming</td>
+        </tr>
+        <tr>
+          <td>Greater commitment to decisions</td>
+          <td>Diffusion of responsibility (責任分散)</td>
+        </tr>
+      </tbody>
+    </table>
+    <p data-topic="groupthink-symptoms">Four key symptoms (症狀) of groupthink:</p>
+    <ul>
+      <li>Illusion of invulnerability (無懈可擊的幻覺) — group members discount negative information or warnings, believing the group cannot fail.</li>
+      <li>Peer pressure (同儕壓力) — when members disagree, pressure leads others to question the loyalty or judgment of the dissenters (異見者).</li>
+      <li>Self-censorship (自我審查) — members restrain themselves from expressing ideas that deviate from the group consensus (群體共識).</li>
+      <li>Illusion of unanimity (一致性幻覺) — silence by a member is interpreted as consent, creating a false impression that all agree.</li>
+    </ul>
+    <p data-topic="groupthink-avoidance">How to avoid groupthink: critically identify and evaluate all reasons that might make the "preferred" alternative unacceptable before committing to it.</p>
+    <ul>
+      <li>Real-world example: the decision to launch the Challenger space shuttle was a classic groupthink failure — dissenting engineers' warnings were suppressed under schedule and authority pressure.</li>
+      <li>VW application: the two unsolved puzzles are (1) why VW engineers colluded on such a massive deception, and (2) why nobody stood up to stop the obvious wrongdoing — both are consistent with groupthink dynamics.</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="groupthink-symptoms"><b>Exam trap:</b> "Diffusion of responsibility" (責任分散) is listed as a disadvantage of group decision making, not a symptom of groupthink specifically. Do not conflate the two lists — symptoms are illusion of invulnerability, peer pressure, self-censorship, and illusion of unanimity.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. Why Good People Make Bad Decisions — The 5 Ps</h2>
+    <p data-topic="five-ps">John C. Maxwell's framework identifies five psychological drivers (心理驅動因素) that lead otherwise good managers toward unethical corporate decisions:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Driver</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pleasure (享樂)</td>
+          <td>Short-term benefits; "quick money" for material life</td>
+        </tr>
+        <tr>
+          <td>Power (權力)</td>
+          <td>Misuse of authority; lack of checks-and-balances (制衡機制)</td>
+        </tr>
+        <tr>
+          <td>Pride (自尊/驕傲)</td>
+          <td>"Ego"; protective obsession with self and image; initial high promise creates pressure to maintain reputation</td>
+        </tr>
+        <tr>
+          <td>Priorities (優先順序)</td>
+          <td>Core values misaligned; inadequate consideration of stakeholders' (利益相關者) interests</td>
+        </tr>
+        <tr>
+          <td>Pressure (壓力)</td>
+          <td>Competition, peer pressure, authority figures, and time constraints driving rushed decisions</td>
+        </tr>
+      </tbody>
+    </table>
+    <ul>
+      <li>Dan Ariely's research on moral code (道德準則) — behavioral economist's work shows that human moral reasoning is "buggy": people consistently overestimate their own ethical behavior and underestimate situational triggers for cheating.</li>
+      <li>Ariely's own personal experience (being badly burned as a teenager) shaped his interest in irrational and ethical behavior — illustrating how lived experience influences how researchers frame moral questions.</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="five-ps"><b>Exam trap:</b> All five Ps are psychological/individual-level factors. Do not confuse them with organizational-level causes (e.g. weak governance structures, regulatory gaps) — those are separate explanations. The 5 Ps explain the individual manager's decision, not the system failure.</div>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>Time perspective is a cognitive dimension varying between individuals — not determined by age or culture alone; it can shift under situational pressure.</li>
+      <li>Having a written code of conduct does not guarantee ethical behavior — VW had detailed codes yet still committed massive fraud.</li>
+      <li>"Diffusion of responsibility" is a disadvantage of group decision making, not one of the four named symptoms of groupthink.</li>
+      <li>The four groupthink symptoms are: illusion of invulnerability, peer pressure, self-censorship, illusion of unanimity — memorize all four.</li>
+      <li>The 5 Ps (Pleasure, Power, Pride, Priorities, Pressure) are individual-level psychological drivers — distinct from organizational or systemic causes of unethical decisions.</li>
+      <li>True organizational values are revealed under stress, not in printed materials — stories told inside the organization transmit actual behavioral norms.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Definition of groupthink: striving to agree for unanimity at the expense of accurate information assessment.</li>
+      <li>Four symptoms of groupthink: illusion of invulnerability, peer pressure, self-censorship, illusion of unanimity.</li>
+      <li>The 5 Ps framework: Pleasure, Power, Pride, Priorities, Pressure.</li>
+      <li>Time perspective definition: cognitive partitioning of experience into past, present, future — shapes decisions and consequences.</li>
+      <li>Happiness = Pleasure (present benefit) + Meaning (future benefit).</li>
+      <li>VW scandal: defeat device installed by engineers; CEO claimed unawareness; rival technology (Daimler) existed but was unused.</li>
+      <li>Code of conduct is necessary but not sufficient — true values revealed under organizational stress.</li>
+      <li>Advantages of group decisions: knowledge pool, intellectual stimulation, greater commitment. Disadvantages: groupthink, time, diffusion of responsibility.</li>
+      <li>Groupthink avoidance strategy: critically evaluate all reasons the preferred alternative might be unacceptable.</li>
+      <li>Challenger space shuttle launch decision — textbook example of groupthink in a real organizational context.</li>
+    </ol>
+  </div>
+</div>
+
+<div id="notes-1" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <button id="clear-hl-1" class="btn btn-danger" style="display:none;float:right" onclick="clearWeakHighlights(1)">Clear Highlights</button>
+  <h1>Lecture 1: Introduction</h1>
+
+  <div class="bigpic reveal-on-scroll">
+    MGMT 2130 Business Ethics and Social Responsibility (商業倫理與社會責任) asks who is affected when businesses act, and who should bear responsibility when things go wrong. The course uses real dilemmas — competitive intelligence theft, a fatal bus crash — to build awareness and judgment rather than rigid frameworks. Two competing worldviews, shareholder (股東) versus stakeholder (持份者), anchor every debate. By the end, students are expected to analyse sustainability strategy, not just recite definitions.
+  </div>
+
+  <section class="reveal-on-scroll" data-sec="0">
+    <h2>1. Course Motivation — Three Opening Questions</h2>
+    <p data-topic="course-motivation">The lecturer opens with three questions to surface students' existing assumptions:</p>
+    <ul>
+      <li>Why are you here? — surfaces personal motivation</li>
+      <li>What do you care about in this course? — identifies prior interests</li>
+      <li>How much do you know? — calibrates baseline knowledge</li>
+    </ul>
+    <p data-topic="course-motivation">Core premise: no one is an island (孤島); every professional decision unavoidably affects others, and unclear thinking leads to suboptimal (次優) decisions and serious consequences.</p>
+    <div class="exam-trap-inline" data-topic="course-motivation"><b>Exam trap:</b> The course does NOT teach a single correct ethical framework to apply mechanically. It develops awareness and mindset (心態) — not formula-based answers.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="1">
+    <h2>2. Case Studies — Ethics in Action</h2>
+    <p data-topic="pg-case">P&G Competitive Intelligence (競爭情報) Case (Spring 2001):</p>
+    <ul>
+      <li>P&G's analysis department obtained ~80 documents detailing Unilever's U.S. hair-care plans for the next three years</li>
+      <li>Method: "dumpster diving" (翻垃圾桶) by a contractor — legal but ethically contested</li>
+      <li>Unilever had not discovered the breach and might never have found out</li>
+      <li>P&G Chairman's response: immediately halted the campaign, fired three responsible managers, confessed directly to Unilever, reached a multi-million dollar settlement</li>
+      <li>John E. Pepper's statement: "I have been personally involved in ensuring that none of the information has been or will be used in any P&G plans."</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="pg-case"><b>Exam trap:</b> Dumpster diving was NOT illegal — the ethical issue arose precisely because the action was legal yet still harmful; legality (合法性) and ethics (倫理) are not the same.</div>
+    <p data-topic="bus-case">Speeding Bus Case — Hong Kong (巴士超速致命事故):</p>
+    <ul>
+      <li>A speeding bus killed 19 people</li>
+      <li>Media framing attributed driver's behavior partly to passenger impatience at the racecourse (賽馬場)</li>
+      <li>Discussion focuses on: who bears responsibility (責任), and how should the driver have responded to passengers in rage (憤怒)?</li>
+      <li>Connects to the concept of "ability to respond" — a precondition for responsibility (責任能力)</li>
+    </ul>
+    <p data-topic="case-similarities">Both cases share a common structure: decisions with significant impact on multiple stakeholders (持份者), where legal compliance alone is insufficient as an ethical guide.</p>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="2">
+    <h2>3. WHAT — Scope of Business Ethics</h2>
+    <p data-topic="what-scope">Three defining features of the subject matter:</p>
+    <ul>
+      <li>Issues involving different demands from various stakeholders (持份者)</li>
+      <li>Business decisions (商業決策) with significant social or environmental impacts</li>
+      <li>Situations where potential conflicts (衝突) arise among different aspects</li>
+    </ul>
+    <p data-topic="stakeholder-definition">Stakeholder (持份者) — formal definition:</p>
+    <ul>
+      <li>A person, group, or organization that has interest or concern in an organization</li>
+      <li>Can affect OR be affected by the organization's actions, objectives, and policies</li>
+      <li>Key examples: creditors (債權人), directors (董事), employees (員工), government and agencies, owners/shareholders (股東), suppliers (供應商), unions (工會), the community from which the business draws resources</li>
+    </ul>
+    <div class="exam-trap-inline" data-topic="stakeholder-definition"><b>Exam trap:</b> Stakeholders are not limited to shareholders (股東). The definition is broader — it includes anyone who can affect or be affected by the organization, even if they hold no equity.</div>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="3">
+    <h2>4. WHY — Shareholder vs. Stakeholder Approach</h2>
+    <p data-topic="shareholder-vs-stakeholder">Two dominant views on corporate purpose (企業目的):</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Dimension</th>
+          <th>Shareholder Approach (股東取向)</th>
+          <th>Stakeholder Approach (持份者取向)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Core objective</td>
+          <td>Profit-driving is firms' nature; increase shareholders' value</td>
+          <td>Goes beyond profit-making; firms are part of society</td>
+        </tr>
+        <tr>
+          <td>View of CSR spending</td>
+          <td>Spending money elsewhere dilutes (分散) firms' attention; CSR is not firms' competence</td>
+          <td>Firms should concern themselves with wellbeing of all stakeholders</td>
+        </tr>
+        <tr>
+          <td>Who is relevant</td>
+          <td>Shareholders only</td>
+          <td>All entities relevant: customers, suppliers, employees, the public, governments</td>
+        </tr>
+        <tr>
+          <td>Geographic origin</td>
+          <td>Originated in the U.S.</td>
+          <td>Prevalent in Europe</td>
+        </tr>
+      </tbody>
+    </table>
+    <p data-topic="shareholder-vs-stakeholder">CSR (企業社會責任, Corporate Social Responsibility) is the practical expression of the stakeholder approach — it asks how firms respond to social and environmental obligations beyond profit.</p>
+    <svg viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px;display:block;margin:1rem auto">
+      <rect x="10" y="30" width="140" height="60" rx="8" fill="#e8f5e9" stroke="#4caf50" stroke-width="1.5"/>
+      <text x="80" y="55" text-anchor="middle" font-size="12" fill="#2e7d32" font-weight="bold">Shareholder</text>
+      <text x="80" y="72" text-anchor="middle" font-size="11" fill="#2e7d32">Approach</text>
+      <text x="80" y="88" text-anchor="middle" font-size="10" fill="#555">Profit to owners</text>
+      <line x1="150" y1="60" x2="200" y2="60" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+      <rect x="200" y="30" width="120" height="60" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="1.5"/>
+      <text x="260" y="55" text-anchor="middle" font-size="12" fill="#e65100" font-weight="bold">Corporate</text>
+      <text x="260" y="72" text-anchor="middle" font-size="11" fill="#e65100">Purpose</text>
+      <line x1="320" y1="60" x2="370" y2="60" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+      <rect x="350" y="30" width="140" height="60" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+      <text x="420" y="55" text-anchor="middle" font-size="12" fill="#0d47a1" font-weight="bold">Stakeholder</text>
+      <text x="420" y="72" text-anchor="middle" font-size="11" fill="#0d47a1">Approach</text>
+      <text x="420" y="88" text-anchor="middle" font-size="10" fill="#555">Broader obligations</text>
+      <defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#888"/></marker></defs>
+    </svg>
+  </section>
+
+  <section class="reveal-on-scroll" data-sec="4">
+    <h2>5. HOW — Course Pedagogy and Structure</h2>
+    <p data-topic="course-pedagogy">Teaching method (教學方法):</p>
+    <ul>
+      <li>Dilemmatic scenarios (兩難情境) discussed in class — no single correct answer</li>
+      <li>Mindful observation (正念觀察) of how we and others respond</li>
+      <li>Reflection on observations and feelings</li>
+      <li>Goal: develop awareness (意識), perspectives (視角), and mindset — not academic frameworks</li>
+    </ul>
+    <p data-topic="course-structure">Course structure (課程結構) — three broad phases:</p>
+    <ul>
+      <li>Foundations: Introduction, Psychology of Corporate (Ir)responsibility</li>
+      <li>Stakeholders: Business and Employees, Customers, Suppliers, Communities, Natural Environment</li>
+      <li>Strategies: Strategy and Innovation for Sustainability, Implementing Sustainability Strategy</li>
+    </ul>
+    <p data-topic="course-materials">Course materials:</p>
+    <ul>
+      <li>12 class meetings total; Sessions 11 and 12 are group presentations</li>
+      <li>No textbook; internet resources via Canvas; class notes downloadable; news, videos, articles</li>
+    </ul>
+    <p data-topic="assessment">Assessment breakdown (評核方式):</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Assessment Task</th>
+          <th>Weight</th>
+          <th>Due Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Attendance and participation</td>
+          <td>15%</td>
+          <td>Every class</td>
+        </tr>
+        <tr>
+          <td>In-course case analysis</td>
+          <td>20%</td>
+          <td>26/03/2026</td>
+        </tr>
+        <tr>
+          <td>Simulation game</td>
+          <td>15%</td>
+          <td>23/04/2026</td>
+        </tr>
+        <tr>
+          <td>Group project</td>
+          <td>25%</td>
+          <td>30/04/2026 &amp; 07/05/2026</td>
+        </tr>
+        <tr>
+          <td>Final examination</td>
+          <td>25%</td>
+          <td>TBA</td>
+        </tr>
+      </tbody>
+    </table>
+    <p data-topic="participation">Attendance (出席率) sub-components:</p>
+    <ul>
+      <li>Attendance (5%): taken after add/drop; randomly selected sessions; illness/family emergency excusable with proof</li>
+      <li>Participation (10%): 5 participation cards distributed to each student; student decides when to submit; card must state the main speaking point for grading memory</li>
+    </ul>
+    <p data-topic="participation">Participation scoring rubric (0–4 scale):</p>
+    <ul>
+      <li>0 — absent or disruptive</li>
+      <li>1 — present, not disruptive; tries when called on but offers little; very infrequent involvement</li>
+      <li>2 — offers straightforward information from material without elaboration; sporadic involvement; contributes moderately when called on</li>
+      <li>3 — offers interpretations and analysis; responds to other students; thinks through own points; constructive questioning; consistent ongoing involvement</li>
+      <li>4 — offers analysis, synthesis, and evaluation; keeps analysis focused; responds thoughtfully; builds cooperative argument; suggests alternative approaches; ongoing very active involvement</li>
+    </ul>
+    <p data-topic="group-project">Group Project (小組專題研習) details:</p>
+    <ul>
+      <li>Role: business consultants (商業顧問) reviewing a firm's sustainability strategy (可持續發展策略)</li>
+      <li>Firm must be listed on HKEX (香港交易所)</li>
+      <li>Three guiding questions: (1) social/environmental challenges to the industry; (2) measures the firm has taken; (3) recommendations for further improvement</li>
+      <li>Company choice: email first, first served; group assigned by lecturer</li>
+      <li>Presentation: 10-minute oral with 3–5 minute Q&A open to whole class; peer review (同儕評審) conducted; sequence by lucky draw</li>
+    </ul>
+    <p data-topic="final-exam">Final Exam (期末考試) format:</p>
+    <ul>
+      <li>Multiple-choice questions (選擇題)</li>
+      <li>Open-ended questions (開放式題目)</li>
+      <li>Details to be confirmed later</li>
+    </ul>
+    <p data-topic="in-course-case">In-Course Case Analysis (20%):</p>
+    <ul>
+      <li>Mini case distributed in class on March 26</li>
+      <li>3 questions to answer based on the case</li>
+      <li>1.5 hours total; closed-book (閉卷)</li>
+    </ul>
+    <p data-topic="simulation">Simulation Game (模擬遊戲) (15%):</p>
+    <ul>
+      <li>Played in groups in class on April 23</li>
+      <li>Pre-familiarisation with materials required; register on the website beforehand</li>
+      <li>Graded on speed of task completion</li>
+    </ul>
+  </section>
+
+  <div class="exam-traps-summary reveal-on-scroll reveal-delay-1">
+    <strong>Exam Traps Summary</strong>
+    <ul>
+      <li>The course builds mindset and awareness, NOT a single mechanical ethical framework to apply to every case.</li>
+      <li>Dumpster diving is legal — the P&G case shows that legality and ethics are separate; legal actions can still be unethical.</li>
+      <li>Stakeholders are NOT limited to shareholders; the definition includes anyone who can affect or be affected by the organization.</li>
+      <li>The shareholder approach originated in the U.S.; the stakeholder approach is prevalent in Europe — do not confuse the two geographic associations.</li>
+      <li>CSR spending is viewed as a distraction under the shareholder approach, but as an obligation under the stakeholder approach.</li>
+      <li>Participation is graded via 5 cards the student submits — it is NOT purely attendance; the card must include the speaking point.</li>
+    </ul>
+  </div>
+
+  <div class="memorize reveal-on-scroll reveal-delay-2">
+    <strong>Top things to memorize</strong>
+    <ol>
+      <li>Stakeholder definition: any person, group, or organization that can affect or be affected by the organization's actions, objectives, and policies</li>
+      <li>Shareholder approach: profit-maximization, shareholders only, CSR dilutes focus, originated in the U.S.</li>
+      <li>Stakeholder approach: beyond profit, firms part of society, all relevant entities included, prevalent in Europe</li>
+      <li>Legality ≠ Ethics — P&G dumpster diving was legal but unethical; this distinction is a core course theme</li>
+      <li>Course goal: develop awareness, perspectives, mindset — NOT academic frameworks</li>
+      <li>Assessment weights: Attendance/participation 15%, Case analysis 20%, Simulation 15%, Group project 25%, Final exam 25%</li>
+      <li>Group project firm must be listed on HKEX; three guiding questions cover challenges, current measures, and future recommendations</li>
+      <li>In-course case analysis: March 26, closed-book, 1.5 hours, 3 questions</li>
+      <li>Participation scoring: 5 cards per student; 0–4 scale from disruptive/absent to ongoing very active analysis and synthesis</li>
+      <li>Course structure: Foundations → Stakeholder relationships (employees, customers, suppliers, communities, environment) → Strategies</li>
+    </ol>
+  </div>
+</div>
+
+
+<!-- Quiz containers are generated by JS (see renderQuizContainers). -->
+<div id="quiz-containers"></div>
+
+<div id="global-report" class="page">
+  <a class="btn back" onclick="showPage('home')">← Home</a>
+  <h1>Full Summary Report</h1>
+  <div id="global-body"></div>
+</div>
+
+</div>
+<script>
+// ===== Data + state (loaded from data/3040.json) =====
+let lectures = [];
+let STORAGE_KEY = "endoQuizState";
+let quizState = {};
+let TOPIC_SECTION_MAP = {};
+
+function initQuizStateFromLectures() {
+  lectures.forEach(l => {
+    quizState[l.id] = { answered:0, correct:0, wrongQuestions:[], completed:false, choices:{}, filteredIndices:null, total:30, weakSections:[], weakTopics:[] };
+  });
+}
+
+function saveState() {
+  try {
+    const out = {};
+    Object.keys(quizState).forEach(k => {
+      const s = quizState[k];
+      out[k] = { answered:s.answered, correct:s.correct, wrongQuestions:s.wrongQuestions, completed:s.completed, choices:s.choices, filteredIndices:s.filteredIndices, total:s.total, weakSections:s.weakSections, weakTopics:s.weakTopics };
+    });
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(out));
+  } catch(e){ console.warn("save failed", e); }
+}
+
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return;
+    const data = JSON.parse(raw);
+    Object.keys(data).forEach(k => {
+      if (quizState[k]) Object.assign(quizState[k], data[k]);
+    });
+  } catch(e){ console.warn("load failed", e); }
+}
+
+function resetAllProgress() {
+  if (!confirm("Reset ALL quiz progress? This cannot be undone.")) return;
+  localStorage.removeItem(STORAGE_KEY);
+  location.reload();
+}
+
+// ===== Navigation =====
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const el = document.getElementById(id);
+  if (el) el.classList.add('active');
+  window.scrollTo(0,0);
+  if (id === 'global-report') renderGlobalReport();
+  if (id.startsWith('notes-')) {
+    const lid = parseInt(id.split('-')[1]);
+    applyWeakHighlights(lid);
+  }
+}
+
+function computeWeakSections(lid) {
+  const s = quizState[lid];
+  const lec = lectures.find(l => l.id === lid);
+  const map = TOPIC_SECTION_MAP[lid] || {};
+  const topicSet = new Set();
+  const secSet = new Set();
+  s.wrongQuestions.forEach(qi => {
+    const t = lec.questions[qi].topic;
+    if (t) topicSet.add(t);
+    if (map[t] !== undefined) secSet.add(map[t]);
+  });
+  s.weakTopics = Array.from(topicSet);
+  s.weakSections = Array.from(secSet).sort((a,b)=>a-b);
+}
+
+function applyWeakHighlights(lid) {
+  const s = quizState[lid];
+  const weakTopics = new Set(s.weakTopics || []);
+  const weakSecs = new Set(s.weakSections || []);
+  const page = document.getElementById('notes-'+lid);
+  if (!page) return;
+
+  // Clear existing highlights
+  page.querySelectorAll('.weak-highlight, .weak-h2').forEach(el => {
+    el.classList.remove('weak-highlight');
+    el.classList.remove('weak-h2');
+  });
+
+  // Per-element highlighting: substring match of any wrong topic name in the data-topic attribute
+  page.querySelectorAll('[data-topic]').forEach(el => {
+    const attr = el.getAttribute('data-topic') || '';
+    for (const t of weakTopics) {
+      if (attr.includes(t)) { el.classList.add('weak-highlight'); break; }
+    }
+  });
+
+  // Fallback: if a weak section has no inner match, lightly mark its h2
+  page.querySelectorAll('section[data-sec]').forEach(sec => {
+    const idx = parseInt(sec.dataset.sec);
+    if (!weakSecs.has(idx)) return;
+    if (sec.querySelector('.weak-highlight')) return;
+    const h = sec.querySelector('h2');
+    if (h) h.classList.add('weak-h2');
+  });
+
+  const clearBtn = document.getElementById('clear-hl-'+lid);
+  if (clearBtn) clearBtn.style.display = (weakTopics.size > 0 || weakSecs.size > 0) ? 'inline-block' : 'none';
+}
+
+function clearWeakHighlights(lid) {
+  quizState[lid].weakSections = [];
+  quizState[lid].weakTopics = [];
+  saveState();
+  applyWeakHighlights(lid);
+}
+
+function startQuiz(lid) {
+  const state = quizState[lid];
+  const countSel = document.getElementById('count-'+lid);
+  const desiredCount = countSel ? parseInt(countSel.value)||30 : 30;
+
+  // If there is saved progress AND requested count differs from saved, prompt to restart
+  const hasProgress = state.answered > 0 && state.filteredIndices && state.filteredIndices.length > 0;
+  let needNew = !state.filteredIndices;
+  if (hasProgress) {
+    if (state.filteredIndices.length !== desiredCount) {
+      if (confirm("You have saved progress for this lecture with a different question count. Start a new quiz with the new count? (This will erase saved progress for this lecture.)")) {
+        resetLectureState(lid);
+        needNew = true;
+      }
+    }
+  } else if (state.answered === 0) {
+    needNew = true;
+  }
+
+  if (needNew) {
+    const picked = buildBalancedSet(lid, desiredCount);
+    state.filteredIndices = picked;
+    state.total = picked.length;
+    state.answered = 0;
+    state.correct = 0;
+    state.wrongQuestions = [];
+    state.choices = {};
+    state.completed = false;
+    state.weakSections = [];
+    state.weakTopics = [];
+    saveState();
+    const body = document.getElementById('quizbody-'+lid);
+    if (body) body.dataset.rendered = "";
+    const post = document.getElementById('postquiz-'+lid);
+    if (post) post.innerHTML = '';
+  }
+
+  showPage('quiz-'+lid);
+  renderQuiz(lid);
+}
+
+function resetLectureState(lid) {
+  quizState[lid] = { answered:0, correct:0, wrongQuestions:[], completed:false, choices:{}, filteredIndices:null, total:30, weakSections:[], weakTopics:[] };
+  saveState();
+}
+
+// Balanced sampling across easy/medium/hard. Target ratios:
+//   10 → 3 easy, 3 medium, 4 hard
+//   20 → 7 easy, 7 medium, 6 hard
+//   30 → 10 easy, 10 medium, 10 hard
+function buildBalancedSet(lid, count) {
+  const lec = lectures.find(l => l.id === lid);
+  const pools = { easy: [], medium: [], hard: [] };
+  lec.questions.forEach((q, i) => {
+    if (pools[q.difficulty]) pools[q.difficulty].push(i);
+  });
+  shuffle(pools.easy); shuffle(pools.medium); shuffle(pools.hard);
+
+  let targets;
+  if (count <= 10) targets = { easy: 3, medium: 3, hard: 4 };
+  else if (count <= 20) targets = { easy: 7, medium: 7, hard: 6 };
+  else targets = { easy: 10, medium: 10, hard: 10 };
+
+  // Scale targets if requested count differs from preset
+  if (count !== 10 && count !== 20 && count !== 30) {
+    const total = targets.easy + targets.medium + targets.hard;
+    targets = {
+      easy:   Math.round(targets.easy   * count / total),
+      medium: Math.round(targets.medium * count / total),
+      hard:   Math.round(targets.hard   * count / total),
+    };
+  }
+
+  const picked = [];
+  const taken = { easy: 0, medium: 0, hard: 0 };
+  ['easy','medium','hard'].forEach(d => {
+    const want = Math.min(targets[d], pools[d].length);
+    for (let i = 0; i < want; i++) picked.push(pools[d][i]);
+    taken[d] = want;
+  });
+
+  // If short of target count (some pool too small), fill from leftovers
+  const leftovers = [];
+  ['easy','medium','hard'].forEach(d => {
+    for (let i = taken[d]; i < pools[d].length; i++) leftovers.push(pools[d][i]);
+  });
+  shuffle(leftovers);
+  while (picked.length < count && leftovers.length > 0) picked.push(leftovers.shift());
+
+  picked.sort((a,b)=>a-b);
+  return picked;
+}
+
+function shuffle(arr) {
+  for (let i=arr.length-1; i>0; i--) {
+    const j = Math.floor(Math.random()*(i+1));
+    [arr[i],arr[j]] = [arr[j],arr[i]];
+  }
+  return arr;
+}
+
+// ===== Quiz rendering =====
+function renderQuiz(lid) {
+  const lec = lectures.find(l => l.id === lid);
+  const body = document.getElementById('quizbody-' + lid);
+  const state = quizState[lid];
+  if (!state.filteredIndices || state.filteredIndices.length === 0) {
+    // fallback: all 30
+    state.filteredIndices = lec.questions.map((_,i)=>i);
+    state.total = 30;
+  }
+  if (body.dataset.rendered === "1") {
+    updateScoreBar(lid);
+    return;
+  }
+  body.dataset.rendered = "1";
+  let h = '';
+  state.filteredIndices.forEach((qi, displayIdx) => {
+    const q = lec.questions[qi];
+    h += '<div class="q-block" id="q-'+lid+'-'+qi+'">';
+    h += '<div class="q-num">Question ' + (displayIdx+1) + ' of ' + state.filteredIndices.length + ' <span style="margin-left:8px;padding:1px 6px;background:var(--accent-soft);border-radius:3px;font-size:.85em">'+q.difficulty+'</span></div>';
+    h += '<div class="q-text">' + escapeHtml(q.q) + '</div>';
+    q.options.forEach((opt, oi) => {
+      h += '<label class="opt" id="opt-'+lid+'-'+qi+'-'+oi+'"><input type="radio" name="q-'+lid+'-'+qi+'" value="'+oi+'" onchange="submitQ('+lid+','+qi+')"> '+String.fromCharCode(65+oi)+'. '+escapeHtml(opt)+'</label>';
+    });
+    h += '<div class="explain" id="exp-'+lid+'-'+qi+'" style="display:none"></div>';
+    h += '</div>';
+  });
+  body.innerHTML = h;
+
+  // Restore answered states from saved choices
+  state.filteredIndices.forEach(qi => {
+    if (state.choices[qi] !== undefined) restoreAnswered(lid, qi);
+  });
+
+  updateScoreBar(lid);
+
+  if (state.completed) {
+    renderPostQuiz(lid);
+  }
+}
+
+function restoreAnswered(lid, qi) {
+  const state = quizState[lid];
+  const lec = lectures.find(l => l.id === lid);
+  const q = lec.questions[qi];
+  const chosen = state.choices[qi];
+  for (let oi=0; oi<q.options.length; oi++) {
+    const el = document.getElementById('opt-'+lid+'-'+qi+'-'+oi);
+    if (!el) continue;
+    el.classList.add('disabled');
+    if (oi === q.answer) el.classList.add('correct');
+    if (oi === chosen && chosen !== q.answer) el.classList.add('wrong');
+    const input = el.querySelector('input');
+    if (input) input.checked = (oi === chosen);
+    if (input) input.disabled = true;
+  }
+  const exp = document.getElementById('exp-'+lid+'-'+qi);
+  if (exp) {
+    exp.style.display = 'block';
+    exp.innerHTML = '<b>'+(chosen===q.answer?"Correct.":"Incorrect.")+'</b> '+escapeHtml(q.explain);
+  }
+}
+
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+
+// ===== SVG Progress Ring Generator =====
+function createProgressRing(percent, size = 120) {
+  const radius = (size - 12) / 2;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (percent / 100) * circumference;
+  const cx = size / 2;
+  const cy = size / 2;
+
+  return `
+    <svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" style="transform: rotate(-90deg)">
+      <circle cx="${cx}" cy="${cy}" r="${radius}" fill="none" stroke="var(--accent-soft)" stroke-width="6"/>
+      <circle cx="${cx}" cy="${cy}" r="${radius}" fill="none" stroke="var(--accent)" stroke-width="6"
+              stroke-dasharray="${circumference}" stroke-dashoffset="${offset}" stroke-linecap="round"
+              style="transition: stroke-dashoffset 0.6s ease"/>
+    </svg>
+  `;
+}
+
+function getVerdictClass(pct) {
+  if (pct >= 90) return 'verdict-excellent';
+  if (pct >= 75) return 'verdict-good';
+  if (pct >= 60) return 'verdict-review';
+  return 'verdict-weak';
+}
+
+function submitQ(lid, qi) {
+  const state = quizState[lid];
+  if (state.choices[qi] !== undefined) return;
+  const lec = lectures.find(l => l.id === lid);
+  const q = lec.questions[qi];
+  const radios = document.getElementsByName('q-'+lid+'-'+qi);
+  let chosen = -1;
+  radios.forEach(r => { if (r.checked) chosen = parseInt(r.value); });
+  if (chosen === -1) return;
+  state.choices[qi] = chosen;
+  state.answered += 1;
+  for (let oi=0; oi<q.options.length; oi++) {
+    const el = document.getElementById('opt-'+lid+'-'+qi+'-'+oi);
+    el.classList.add('disabled');
+    if (oi === q.answer) el.classList.add('correct');
+    if (oi === chosen && chosen !== q.answer) el.classList.add('wrong');
+  }
+  if (chosen === q.answer) state.correct += 1;
+  else state.wrongQuestions.push(qi);
+  const exp = document.getElementById('exp-'+lid+'-'+qi);
+  exp.style.display = 'block';
+  exp.innerHTML = '<b>'+(chosen===q.answer?"Correct.":"Incorrect.")+'</b> '+escapeHtml(q.explain);
+  updateScoreBar(lid);
+  saveState();
+  if (state.answered === state.total) {
+    state.completed = true;
+    computeWeakSections(lid);
+    saveState();
+    document.getElementById('globalReportBtn').disabled = false;
+    renderPostQuiz(lid);
+    setTimeout(() => {
+      document.getElementById('postquiz-'+lid).scrollIntoView({behavior:'smooth'});
+    }, 200);
+  }
+}
+
+function updateScoreBar(lid) {
+  const s = quizState[lid];
+  const totalAvail = s.filteredIndices ? s.filteredIndices.length : 30;
+  document.getElementById('scorebar-'+lid).textContent = "Score: " + s.correct + " / " + s.answered + " (of " + totalAvail + " filtered)";
+}
+
+function renderPostQuiz(lid) {
+  const lec = lectures.find(l => l.id === lid);
+  const s = quizState[lid];
+  const total = s.total || 30;
+  const pct = Math.round((s.correct/total)*100);
+  let verdict;
+  if (pct >= 90) verdict = "Excellent. You have mastered this lecture.";
+  else if (pct >= 75) verdict = "Solid grasp. A few targeted reviews and you are exam-ready.";
+  else if (pct >= 60) verdict = "Reasonable foundation. Revisit the weak topics below.";
+  else verdict = "Needs more review. Go back to the notes for the topics flagged below.";
+
+  const themeCount = {};
+  s.wrongQuestions.forEach(qi => {
+    const t = lec.questions[qi].topic;
+    themeCount[t] = (themeCount[t] || 0) + 1;
+  });
+  const themes = Object.keys(themeCount).sort((a,b)=>themeCount[b]-themeCount[a]);
+
+  let h = '<div class="summary">';
+  h += '<h2>Summary Report</h2>';
+
+  // Add progress ring visualization
+  h += '<div class="progress-ring-container">';
+  h += createProgressRing(pct);
+  h += '<div class="progress-ring-label">';
+  h += '<div class="progress-percentage">'+pct+'%</div>';
+  h += '<div class="progress-score">'+s.correct+'/'+total+'</div>';
+  h += '</div></div>';
+
+  h += '<div class="verdict '+getVerdictClass(pct)+'">'+verdict+'</div>';
+
+  // Add wrong topics bar chart
+  if (themes.length) {
+    h += '<h3>Wrong Topics Breakdown</h3>';
+    h += '<div class="chart-container">';
+    const maxWrong = Math.max(...themes.map(t => themeCount[t]));
+    themes.forEach(t => {
+      const count = themeCount[t];
+      const pctBar = Math.round((count / maxWrong) * 100);
+      h += '<div class="bar-chart-item">';
+      h += '<div class="bar-chart-label">'+escapeHtml(t)+'</div>';
+      h += '<div class="bar-chart-bar">';
+      h += '<div class="bar-chart-fill" style="width:'+pctBar+'%"><span class="bar-chart-count">'+count+'</span></div>';
+      h += '</div></div>';
+    });
+    h += '</div>';
+    h += '<h3>Topics to Revisit</h3><ul class="theme-list">';
+    themes.forEach(t => { h += '<li><b>'+escapeHtml(t)+'</b> — '+themeCount[t]+' wrong</li>'; });
+    h += '</ul>';
+  } else {
+    h += '<p>No weak topics — perfect run.</p>';
+  }
+  h += '<p style="color:var(--muted);font-style:italic">Take a short break, then revisit the notes for any flagged topic before moving on.</p>';
+  h += '</div>';
+  h += '<h2>Wrong Answer Review</h2>';
+  if (s.wrongQuestions.length === 0) {
+    h += '<p>No wrong answers to review. Great job.</p>';
+  } else {
+    s.wrongQuestions.forEach((qi, idx) => {
+      const q = lec.questions[qi];
+      const chosen = s.choices[qi];
+      h += '<div class="review-card">';
+      h += '<div class="q-num">Question '+(qi+1)+'</div>';
+      h += '<div class="q-text">'+escapeHtml(q.q)+'</div>';
+      q.options.forEach((opt, oi) => {
+        let cls = "opt disabled";
+        if (oi === q.answer) cls += " correct";
+        if (oi === chosen && chosen !== q.answer) cls += " wrong";
+        h += '<div class="'+cls+'">'+String.fromCharCode(65+oi)+'. '+escapeHtml(opt)+'</div>';
+      });
+      h += '<div class="explain"><b>Explanation:</b> '+escapeHtml(q.explain)+'</div>';
+      h += '</div>';
+    });
+  }
+  document.getElementById('postquiz-'+lid).innerHTML = h;
+}
+
+function showGlobalReport(){ showPage('global-report'); }
+
+function renderGlobalReport() {
+  let totalCorrect = 0, totalAnswered = 0;
+  const allThemes = {};
+  const lectureScores = [];
+
+  lectures.forEach(lec => {
+    const s = quizState[lec.id];
+    if (s.answered > 0) {
+      totalCorrect += s.correct;
+      totalAnswered += s.answered;
+      const pct = s.answered ? Math.round(s.correct/s.answered*100) : 0;
+      lectureScores.push({ title: lec.title, correct: s.correct, answered: s.answered, pct });
+      s.wrongQuestions.forEach(qi => {
+        const t = lec.questions[qi].topic;
+        allThemes[t] = (allThemes[t]||0)+1;
+      });
+    }
+  });
+
+  const overallPct = totalAnswered ? Math.round(totalCorrect/totalAnswered*100) : 0;
+
+  let h = '<p style="color:var(--muted);font-style:italic">Shows saved quiz data (persisted across reloads).</p>';
+
+  // Overall progress ring
+  h += '<h2>Overall Score</h2>';
+  h += '<div class="progress-ring-container">';
+  h += createProgressRing(overallPct, 140);
+  h += '<div class="progress-ring-label">';
+  h += '<div class="progress-percentage">'+overallPct+'%</div>';
+  h += '<div class="progress-score">'+totalCorrect+'/'+totalAnswered+'</div>';
+  h += '</div></div>';
+  h += '<p style="text-align:center;color:var(--ink)"><b>'+totalCorrect+' / '+totalAnswered+'</b> across all completed quizzes</p>';
+
+  // Lecture breakdown bar chart
+  if (lectureScores.length) {
+    h += '<h2>Lecture Breakdown</h2>';
+    h += '<div class="chart-container">';
+    lectureScores.forEach(lec => {
+      const pctBar = lec.pct;
+      const verdictClass = getVerdictClass(lec.pct);
+      h += '<div class="bar-chart-item">';
+      h += '<div class="bar-chart-label" title="'+escapeHtml(lec.title)+'">'+escapeHtml(lec.title.substring(0, 25))+'...</div>';
+      h += '<div class="bar-chart-bar">';
+      h += '<div class="bar-chart-fill '+verdictClass+'" style="width:'+pctBar+'%"><span class="bar-chart-count">'+lec.pct+'%</span></div>';
+      h += '</div></div>';
+    });
+    h += '</div>';
+  }
+
+  // Weak topics summary
+  const sortedThemes = Object.keys(allThemes).sort((a,b)=>allThemes[b]-allThemes[a]);
+  if (sortedThemes.length) {
+    h += '<h2>Topics to Revisit (Combined)</h2>';
+    h += '<div class="chart-container">';
+    const maxThemeWrong = Math.max(...sortedThemes.map(t => allThemes[t]));
+    sortedThemes.slice(0, 8).forEach(t => {
+      const count = allThemes[t];
+      const pctBar = Math.round((count / maxThemeWrong) * 100);
+      h += '<div class="bar-chart-item">';
+      h += '<div class="bar-chart-label">'+escapeHtml(t)+'</div>';
+      h += '<div class="bar-chart-bar">';
+      h += '<div class="bar-chart-fill" style="width:'+pctBar+'%"><span class="bar-chart-count">'+count+'</span></div>';
+      h += '</div></div>';
+    });
+    h += '</div>';
+    if (sortedThemes.length > 8) {
+      h += '<p style="color:var(--muted);font-size:0.9em">... and '+(sortedThemes.length-8)+' more topics</p>';
+    }
+  } else {
+    h += '<p>No weak topics across completed quizzes.</p>';
+  }
+
+  document.getElementById('global-body').innerHTML = h;
+}
+
+// ===== Init on load =====
+function updateHomeStatus() {
+  lectures.forEach(lec => {
+    const s = quizState[lec.id];
+    const el = document.getElementById('status-'+lec.id);
+    const progressEl = document.getElementById('progress-'+lec.id);
+    if (!el) return;
+    if (s.answered > 0 && s.total) {
+      const pct = Math.round((s.correct/s.total)*100);
+      el.textContent = "Saved: "+s.correct+"/"+s.answered+" of "+s.total+(s.completed?" (completed)":"");
+      if (progressEl) {
+        progressEl.innerHTML = '<div class="progress-badge">'+pct+'% ('+s.correct+'/'+s.total+')</div>';
+      }
+      if (s.completed) document.getElementById('globalReportBtn').disabled = false;
+    }
+  });
+}
+
+
+// ===== Dynamic card / quiz container generation =====
+function renderHomeCards() {
+  const container = document.getElementById('lecture-cards');
+  if (!container) return;
+  container.innerHTML = lectures.map(lec => {
+    const titleHtml = escapeHtml(lec.title);
+    return `
+    <div class="card">
+      <div class="lec-row">
+        <div class="lec-title">${titleHtml}</div>
+        <div>
+          <button class="btn" onclick="showPage('notes-${lec.id}')">Notes</button>
+          <button class="btn btn-primary" onclick="startQuiz(${lec.id})">Quiz</button>
+        </div>
+      </div>
+      <div class="quiz-settings">
+        <label>Questions:
+          <select id="count-${lec.id}"><option value="10">10</option><option value="20">20</option><option value="30" selected>30</option></select>
+        </label>
+        <span id="progress-${lec.id}"></span>
+        <span id="status-${lec.id}" style="color:var(--muted);font-size:.9em"></span>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderQuizContainers() {
+  const container = document.getElementById('quiz-containers');
+  if (!container) return;
+  container.innerHTML = lectures.map(lec => {
+    const titleHtml = escapeHtml(lec.title);
+    return `
+    <div id="quiz-${lec.id}" class="page">
+      <a class="btn back" onclick="showPage('home')">← Home</a>
+      <h1>${titleHtml} — Quiz</h1>
+      <div class="score-bar" id="scorebar-${lec.id}">Score: 0 / 0 (of 30)</div>
+      <div id="quizbody-${lec.id}"></div>
+      <div id="postquiz-${lec.id}"></div>
+    </div>`;
+  }).join('');
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  fetch('data/mgmt2130.json')
+    .then(r => {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(data => {
+      lectures = data.lectures || [];
+      STORAGE_KEY = data.storageKey || STORAGE_KEY;
+      TOPIC_SECTION_MAP = data.topicSectionMap || {};
+      initQuizStateFromLectures();
+      renderHomeCards();
+      renderQuizContainers();
+      loadState();
+      // Migrate older saved states: recompute weak topics/sections if missing
+      lectures.forEach(lec => {
+        const s = quizState[lec.id];
+        const hasTopics = s.weakTopics && s.weakTopics.length > 0;
+        if (s.completed && !hasTopics && s.wrongQuestions.length > 0) {
+          computeWeakSections(lec.id);
+        }
+      });
+      saveState();
+      updateHomeStatus();
+    })
+    .catch(err => {
+      console.error('Failed to load data/mgmt2130.json:', err);
+      alert('Failed to load lecture data. If you opened this file directly (file://), please serve via a local HTTP server. See CLAUDE.md.');
+    });
+});
+
+// ===== PWA Service Worker (inline via Blob) =====
+if ('serviceWorker' in navigator) {
+  const swCode = `
+    const CACHE = 'mgmt2130-v1-v10';
+    self.addEventListener('install', e => { self.skipWaiting(); });
+    self.addEventListener('activate', e => { e.waitUntil(self.clients.claim()); });
+    self.addEventListener('fetch', e => {
+      if (e.request.method !== 'GET') return;
+      e.respondWith(
+        caches.open(CACHE).then(cache =>
+          cache.match(e.request).then(cached => {
+            const fetchPromise = fetch(e.request).then(resp => {
+              if (resp && resp.status === 200 && resp.type === 'basic') cache.put(e.request, resp.clone());
+              return resp;
+            }).catch(() => cached);
+            return cached || fetchPromise;
+          })
+        )
+      );
+    });
+  `;
+  try {
+    const blob = new Blob([swCode], {type:'application/javascript'});
+    navigator.serviceWorker.register(URL.createObjectURL(blob)).catch(e => console.warn('SW reg failed', e));
+  } catch(e) { console.warn('SW setup failed', e); }
+}
+</script>
+
+<!--
+  ============================================================================
+  TEMPLATE INSTRUCTIONS — READ BEFORE EDITING
+  ============================================================================
+
+  This file is a universal subject template. To create a new subject:
+
+  1. Copy this file to a new subject HTML, e.g.  cp template.html 3015.html
+  2. In the copy, find-and-replace these placeholders:
+       Managing Organisations and Human Resources     e.g. "Endocrine Study Guide"
+       MGMT2130      e.g. "LIFS3040"
+       Organisational Behaviour & HR Management  e.g. "Endocrine, GI & Neuroscience, Lectures 1-10"
+       mgmt2130         e.g. "3040"  (matches data/3040.json — appears TWICE)
+       mgmt2130-v1        e.g. "lifs3040"  (service-worker cache namespace)
+  3. Create data/{mgmt2130}.json with this shape (see CLAUDE.md for full schema):
+       {
+         "storageKey": "lifs3040_quiz_state",
+         "lectures": [
+           { "id": 1, "title": "Lecture 1: ...", "questions": [ ... 30 question objects ... ] }
+         ],
+         "topicSectionMap": { "1": { "topic-name": 0 } }
+       }
+  4. For EACH lecture you add to the JSON, also add a notes page block to THIS HTML,
+     placed where the comment "NOTES PAGES go here" is above. Use this pattern:
+
+       <div id="notes-N" class="page">
+         <a class="btn back" onclick="showPage('home')">← Home</a>
+         <button id="clear-hl-N" class="btn btn-danger" style="display:none;float:right"
+                 onclick="clearWeakHighlights(N)">Clear Highlights</button>
+         <h1>Lecture N: Title</h1>
+
+         <div class="bigpic">
+           One-paragraph framing of why this topic matters.
+         </div>
+
+         <section data-sec="0">
+           <h2>1. Section heading</h2>
+           <p data-topic="Topic name used in questions">Explanation...</p>
+         </section>
+
+         (More sections with data-sec="1", "2", ...)
+
+         <div class="memorize">
+           <strong>Top things to memorize</strong>
+           <ol>...</ol>
+         </div>
+       </div>
+
+  5. Add a subject card linking to this HTML on index.html.
+  6. Add this subject to CLAUDE.md's Content Status table.
+
+  WHAT NOT TO DO:
+  - Do NOT hand-write the home page lecture cards or quiz containers — they are
+    generated by renderHomeCards() / renderQuizContainers() from JSON.
+  - Do NOT rename question schema fields. Canonical: q, options, answer, explain,
+    topic, difficulty. The renderQuiz / submitQ functions assume these exact names.
+  - Do NOT use the field name `name` for lecture titles — always `title`.
+
+  CACHE INVALIDATION:
+  When you change data/JSON or this HTML, bump mgmt2130-v1-v1 → v2 in the
+  service worker block above so returning users do not get the old version.
+  ============================================================================
+-->
+
+</body>
+</html>
